@@ -340,6 +340,43 @@ body {
   100% { box-shadow: 0 0 0 14px rgba(232, 65, 60, 0); }
 }
 
+/* ニュースの吹き出し：新聞の網点風・角ばった形・NEWSタグ */
+.is-news .bubble {
+  border-radius: 6px;
+  background-color: #fffdf2;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.13) 1px, transparent 1.2px);
+  background-size: 6px 6px;
+  max-width: 230px;
+}
+
+.is-news .bubble::after { border-top-color: #fffdf2; }
+
+.is-news .bubble-icon {
+  background: #fff;
+  border-radius: 4px;
+}
+
+.news-tag {
+  align-self: flex-start;
+  margin-bottom: 2px;
+  padding: 0 5px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.is-news .bubble-title {
+  border-bottom-color: var(--accent);
+  font-size: 13px;
+}
+
+.is-news .pin { background: var(--accent); }
+.is-news .dot { background: #fff; border-radius: 6px; }
+.zoom-far .news-tag { display: none; }
+
 /* ---------- パネル ---------- */
 .panel {
   position: absolute;
@@ -455,6 +492,58 @@ body {
 .list-sub { font-size: 0.78rem; color: var(--muted); }
 
 .empty-note { padding: 12px; color: var(--muted); font-size: 0.9rem; }
+
+.news-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 12px 0;
+  padding: 6px 8px 6px 10px;
+  background: #fffdf2;
+  border: 2px dashed var(--ink);
+  border-radius: 10px;
+}
+
+.news-status-text {
+  flex: 1;
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.news-refresh {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper);
+  cursor: pointer;
+}
+.news-refresh:disabled { opacity: 0.5; cursor: wait; }
+
+.topic-list li.is-news .list-icon { border-radius: 6px; background: #fff; }
+.topic-list li.is-news .list-title { font-weight: 700; font-size: 0.88rem; line-height: 1.35; }
+
+.news-meta {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.news-link {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 8px 16px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--accent);
+}
+.news-link:hover { background: #333; }
 
 /* 詳細 */
 .category-badge {

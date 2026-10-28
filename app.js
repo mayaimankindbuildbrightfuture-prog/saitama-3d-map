@@ -8,6 +8,10 @@
   const STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
   const DEM_TILES = 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png';
   const DATA_URL = 'data/topics.json';
+  const NEWS_URL = 'data/news.json';
+  const NEWS_REFRESH_MS = 15 * 60 * 1000; // 開いたままでも15分ごとに news.json を読み直す
+  const NEWS_NEARBY_KM = 1.5;
+  const NEWS_CATEGORY = { label: 'ニュース', color: '#111111', icon: '📰' };
 
   // 初期視点：さいたま市全域（10区）が見えるように斜め上から
   const INITIAL_VIEW = {
@@ -37,6 +41,7 @@
     query: '',
     activeId: null,
     collisionFrame: 0,
+    newsMeta: null, // { generatedAt, sources }
   };
 
   const $ = (sel) => document.querySelector(sel);
@@ -48,9 +53,10 @@
   });
 
   async function init() {
-    const [data, style] = await Promise.all([loadJSON(DATA_URL), loadStyle()]);
+    const [data, style, news] = await Promise.all([loadJSON(DATA_URL), loadStyle(), loadNews()]);
     state.data = data;
-    state.topics = data.topics;
+    data.categories.news = NEWS_CATEGORY;
+    state.topics = data.topics.slice();
     state.topics.forEach((t) => state.byId.set(t.id, t));
     Object.keys(data.categories).forEach((c) => state.activeCategories.add(c));
 
@@ -59,6 +65,8 @@
     buildWardSelect();
     buildList();
     bindUI();
+    state.pendingNews = news;
+    setInterval(refreshNews, NEWS_REFRESH_MS);
   }
 
   async function loadJSON(url) {
@@ -103,6 +111,7 @@
       add3DBuildings(map);
       addTerrain(map);
       buildMarkers();
+      if (state.pendingNews) setNews(state.pendingNews);
       updateZoomClass();
       scheduleCollision();
       openFromHash();
@@ -209,54 +218,63 @@
 
   // ---------- 吹き出しマーカー ----------
   function buildMarkers() {
-    state.topics.forEach((topic) => {
-      const cat = state.data.categories[topic.category];
-      const el = document.createElement('div');
-      el.className = 'topic-marker';
-      el.dataset.id = topic.id;
-      el.style.setProperty('--cat', cat.color);
-
-      const inner = document.createElement('div');
-      inner.className = 'marker-inner';
-
-      const bubble = document.createElement('button');
-      bubble.type = 'button';
-      bubble.className = 'bubble';
-      bubble.setAttribute('aria-label', `${topic.title}（${cat.label}）の詳細を見る`);
-      bubble.innerHTML = `
-        <span class="bubble-icon" aria-hidden="true">${cat.icon}</span>
-        <span class="bubble-text">
-          <span class="bubble-title"></span>
-          <span class="bubble-line"></span>
-        </span>`;
-      bubble.querySelector('.bubble-title').textContent = topic.title;
-      bubble.querySelector('.bubble-line').textContent = topic.bubble;
-
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'dot';
-      dot.title = topic.title;
-      dot.setAttribute('aria-label', `${topic.title}の詳細を見る`);
-      dot.textContent = cat.icon;
-
-      const pin = document.createElement('span');
-      pin.className = 'pin';
-
-      inner.append(bubble, dot, pin);
-      el.appendChild(inner);
-
-      el.addEventListener('click', (ev) => {
-        ev.stopPropagation();
-        selectTopic(topic.id);
-      });
-
-      const marker = new maplibregl.Marker({ element: el, anchor: 'bottom', offset: [0, 7] })
-        .setLngLat([topic.lng, topic.lat])
-        .addTo(state.map);
-
-      state.markers.set(topic.id, { marker, el, bubble, topic });
-    });
+    state.topics.forEach(createMarker);
+    state.markersReady = true;
     applyFilter();
+  }
+
+  function createMarker(topic) {
+    const cat = state.data.categories[topic.category];
+    const el = document.createElement('div');
+    el.className = topic.news ? 'topic-marker is-news' : 'topic-marker';
+    el.dataset.id = topic.id;
+    el.style.setProperty('--cat', cat.color);
+
+    const inner = document.createElement('div');
+    inner.className = 'marker-inner';
+
+    const bubble = document.createElement('button');
+    bubble.type = 'button';
+    bubble.className = 'bubble';
+    bubble.setAttribute('aria-label', `${topic.title}（${cat.label}）の詳細を見る`);
+    bubble.innerHTML = `
+      <span class="bubble-icon" aria-hidden="true">${cat.icon}</span>
+      <span class="bubble-text">
+        <span class="bubble-title"></span>
+        <span class="bubble-line"></span>
+      </span>`;
+    if (topic.news) {
+      const tag = document.createElement('span');
+      tag.className = 'news-tag';
+      tag.textContent = 'NEWS';
+      bubble.querySelector('.bubble-text').prepend(tag);
+    }
+    bubble.querySelector('.bubble-title').textContent = topic.title;
+    bubble.querySelector('.bubble-line').textContent = topic.bubble;
+
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'dot';
+    dot.title = topic.title;
+    dot.setAttribute('aria-label', `${topic.title}の詳細を見る`);
+    dot.textContent = cat.icon;
+
+    const pin = document.createElement('span');
+    pin.className = 'pin';
+
+    inner.append(bubble, dot, pin);
+    el.appendChild(inner);
+
+    el.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      selectTopic(topic.id);
+    });
+
+    const marker = new maplibregl.Marker({ element: el, anchor: 'bottom', offset: [0, 7] })
+      .setLngLat([topic.lng, topic.lat])
+      .addTo(state.map);
+
+    state.markers.set(topic.id, { marker, el, bubble, topic });
   }
 
   function updateZoomClass() {
@@ -381,7 +399,16 @@
 
     const body = $('#detail-body');
     body.replaceChildren();
+    if (topic.news) renderNewsBody(body, topic);
+    else renderTopicBody(body, topic);
 
+    panel.hidden = false;
+    body.scrollTop = 0;
+    // スマホでは一覧と詳細を同時に開かない
+    if (MOBILE_QUERY.matches) setListOpen(false);
+  }
+
+  function renderTopicBody(body, topic) {
     body.append(
       el('h2', { className: 'detail-title', id: 'detail-title' }, topic.title),
       el('p', { className: 'detail-ward' }, `📍 さいたま市${topic.ward}`),
@@ -411,19 +438,58 @@
     }
 
     const relatedIds = new Set([topic.id, ...(topic.related || [])]);
-    const nearby = state.topics
-      .filter((t) => !relatedIds.has(t.id))
-      .map((t) => ({ t, d: distanceKm(topic, t) }))
-      .sort((a, b) => a.d - b.d)
-      .slice(0, 3);
+    const nearby = nearest(topic, (t) => !t.news && !relatedIds.has(t.id), 3);
     if (nearby.length) {
-      body.append(section('🧭 近くのトピック', nearby.map(({ t }) => relatedItem(t, topic))));
+      body.append(section('🧭 近くのトピック', nearby.map((t) => relatedItem(t, topic))));
     }
 
-    panel.hidden = false;
-    body.scrollTop = 0;
-    // スマホでは一覧と詳細を同時に開かない
-    if (MOBILE_QUERY.matches) setListOpen(false);
+    const news = nearest(topic, (t) => t.news && distanceKm(topic, t) <= NEWS_NEARBY_KM, 5);
+    if (news.length) {
+      body.append(section('📰 この付近のニュース', news.map((t) => relatedItem(t, topic))));
+    }
+  }
+
+  function renderNewsBody(body, topic) {
+    const n = topic.news;
+    const placeText = n.placeKind === 'city'
+      ? '📍 さいたま市全体のニュース（地図上は市役所付近に表示）'
+      : `📍 ${n.place}${n.ward && !n.place.endsWith(n.ward) ? `（${n.ward}）` : ''}付近`;
+    body.append(
+      el('h2', { className: 'detail-title news-title', id: 'detail-title' }, n.title),
+      el('p', { className: 'detail-ward' }, placeText),
+      el('p', { className: 'news-meta' }, `${n.source}｜${formatDate(n.published)}`),
+    );
+    if (n.summary) body.append(el('p', { className: 'detail-desc' }, n.summary));
+
+    body.append(el('a', { className: 'news-link', href: n.url, target: '_blank', rel: 'noopener noreferrer' },
+      '記事を読む（外部サイト）'));
+
+    const dl = el('dl', { className: 'info-table' });
+    const addRow = (k, v) => { if (v) dl.append(el('dt', {}, k), el('dd', {}, v)); };
+    addRow('配信元', n.source);
+    addRow('配信日時', formatDate(n.published));
+    addRow('位置の推定', n.matched
+      ? `記事中の「${n.matched}」から推定（実際の場所と異なる場合があります）`
+      : '地名が見つからないため、市全体のニュースとして表示');
+    body.append(dl);
+
+    const nearby = nearest(topic, (t) => !t.news, 3);
+    if (nearby.length) {
+      body.append(section('🧭 近くのトピック', nearby.map((t) => relatedItem(t, topic))));
+    }
+    const others = nearest(topic, (t) => t.news && t.id !== topic.id && distanceKm(topic, t) <= NEWS_NEARBY_KM, 5);
+    if (others.length) {
+      body.append(section('📰 この付近の他のニュース', others.map((t) => relatedItem(t, topic))));
+    }
+  }
+
+  function nearest(from, pred, limit) {
+    return state.topics
+      .filter((t) => t.id !== from.id && pred(t))
+      .map((t) => ({ t, d: distanceKm(from, t) }))
+      .sort((a, b) => a.d - b.d)
+      .slice(0, limit)
+      .map(({ t }) => t);
   }
 
   function section(title, items) {
@@ -438,7 +504,7 @@
       el('span', { className: 'list-icon', 'aria-hidden': 'true' }, cat.icon),
       el('span', { className: 'list-text' },
         el('span', { className: 'list-title' }, t.title),
-        el('span', { className: 'list-sub' }, `${cat.label}・${t.ward}`)),
+        el('span', { className: 'list-sub' }, t.news ? t.bubble : `${cat.label}・${t.ward}`)),
       el('span', { className: 'distance' }, formatDistance(distanceKm(from, t))));
     btn.style.setProperty('--cat', cat.color);
     btn.addEventListener('click', () => selectTopic(t.id));
@@ -465,9 +531,8 @@
   function buildFilters() {
     const wrap = $('#category-filters');
     Object.entries(state.data.categories).forEach(([key, cat]) => {
-      const count = state.topics.filter((t) => t.category === key).length;
       const chip = el('button', { type: 'button', className: 'chip', 'aria-pressed': 'true' },
-        `${cat.icon} ${cat.label}`, el('span', { className: 'chip-count' }, String(count)));
+        `${cat.icon} ${cat.label}`, el('span', { className: 'chip-count' }, ''));
       chip.dataset.category = key;
       chip.style.setProperty('--cat', cat.color);
       chip.title = `${cat.label}の表示を切り替え（ダブルクリックでこのカテゴリだけ表示）`;
@@ -484,6 +549,14 @@
       });
       wrap.append(chip);
     });
+    updateChipCounts();
+  }
+
+  function updateChipCounts() {
+    document.querySelectorAll('.chip').forEach((chip) => {
+      const count = state.topics.filter((t) => t.category === chip.dataset.category).length;
+      chip.querySelector('.chip-count').textContent = String(count);
+    });
   }
 
   function syncChips() {
@@ -495,7 +568,7 @@
   function buildWardSelect() {
     const select = $('#ward-select');
     state.data.wards.forEach((w) => {
-      const count = state.topics.filter((t) => t.ward.includes(w.name)).length;
+      const count = state.topics.filter((t) => !t.news && t.ward.includes(w.name)).length;
       select.append(el('option', { value: w.name }, `${w.name}（${count}件）`));
     });
     select.addEventListener('change', () => {
@@ -509,21 +582,108 @@
 
   function buildList() {
     const ul = $('#topic-list');
-    state.topics.forEach((t) => {
-      const cat = state.data.categories[t.category];
-      const btn = el('button', { type: 'button', className: 'topic-list-item' },
-        el('span', { className: 'list-icon', 'aria-hidden': 'true' }, cat.icon),
-        el('span', { className: 'list-text' },
-          el('span', { className: 'list-title' }, t.title),
-          el('span', { className: 'list-sub' }, `${cat.label}・${t.ward}｜${t.bubble}`)));
-      btn.style.setProperty('--cat', cat.color);
-      btn.dataset.id = t.id;
-      btn.addEventListener('click', () => selectTopic(t.id));
-      const li = el('li', {}, btn);
-      li.dataset.id = t.id;
-      ul.append(li);
-    });
+    state.topics.forEach((t) => ul.append(createListItem(t)));
     ul.append(el('li', { className: 'empty-note', id: 'list-empty', hidden: true }, '該当するトピックがありません。'));
+  }
+
+  function createListItem(t) {
+    const cat = state.data.categories[t.category];
+    const sub = t.news ? `${t.bubble}｜${t.news.place}` : `${cat.label}・${t.ward}｜${t.bubble}`;
+    const btn = el('button', { type: 'button', className: 'topic-list-item' },
+      el('span', { className: 'list-icon', 'aria-hidden': 'true' }, cat.icon),
+      el('span', { className: 'list-text' },
+        el('span', { className: 'list-title' }, t.title),
+        el('span', { className: 'list-sub' }, sub)));
+    btn.style.setProperty('--cat', cat.color);
+    btn.dataset.id = t.id;
+    btn.addEventListener('click', () => selectTopic(t.id));
+    const li = el('li', { className: t.news ? 'is-news' : '' }, btn);
+    li.dataset.id = t.id;
+    return li;
+  }
+
+  // ---------- ニュース ----------
+  // data/news.json は GitHub Actions（scripts/fetch_news.py）が定期的に更新する
+  async function loadNews() {
+    try {
+      return await loadJSON(`${NEWS_URL}?t=${Date.now()}`);
+    } catch (err) {
+      console.warn('ニュースを読み込めませんでした:', err);
+      return null;
+    }
+  }
+
+  async function refreshNews() {
+    const btn = $('#news-refresh');
+    if (btn) btn.disabled = true;
+    const news = await loadNews();
+    if (btn) btn.disabled = false;
+    if (news) setNews(news);
+    else showToast('ニュースを読み込めませんでした。');
+  }
+
+  function setNews(news) {
+    const items = Array.isArray(news.items) ? news.items : [];
+    const activeId = state.activeId;
+
+    // 以前のニュースを取り除く
+    state.topics.filter((t) => t.news).forEach((t) => {
+      const m = state.markers.get(t.id);
+      if (m) m.marker.remove();
+      state.markers.delete(t.id);
+      state.byId.delete(t.id);
+      document.querySelector(`#topic-list li[data-id="${t.id}"]`)?.remove();
+    });
+    state.topics = state.topics.filter((t) => !t.news);
+
+    const entries = items
+      .filter((n) => Number.isFinite(n.lat) && Number.isFinite(n.lng) && n.title && n.url)
+      .map((n) => ({
+        id: n.id,
+        category: 'news',
+        title: n.title,
+        bubble: `${n.source}・${formatRelative(n.published)}`,
+        description: n.summary,
+        ward: n.ward || '',
+        lat: n.lat,
+        lng: n.lng,
+        priority: 2.5,
+        news: n,
+      }));
+
+    // 一覧ではニュースを先頭に（新しい順）
+    const ul = $('#topic-list');
+    const firstTopic = ul.querySelector('li[data-id]');
+    entries.forEach((t) => {
+      state.topics.push(t);
+      state.byId.set(t.id, t);
+      if (state.markersReady) createMarker(t);
+      ul.insertBefore(createListItem(t), firstTopic);
+    });
+
+    state.newsMeta = { generatedAt: news.generatedAt, sources: news.sources || [] };
+    renderNewsStatus(entries.length);
+    updateChipCounts();
+    applyFilter();
+
+    if (activeId && state.byId.has(activeId)) {
+      state.markers.get(activeId)?.el.classList.add('active');
+      highlightListItem(activeId);
+    } else if (activeId) {
+      closeDetail();
+    }
+  }
+
+  function renderNewsStatus(count) {
+    const box = $('#news-status-text');
+    if (!box) return;
+    const meta = state.newsMeta;
+    if (!meta || !meta.generatedAt) {
+      box.textContent = '📰 ニュースはまだ取得されていません（GitHub Actions で自動取得されます）';
+      return;
+    }
+    const names = meta.sources.map((s) => s.name).join('、');
+    box.textContent = `📰 ニュース ${count}件｜${formatDate(meta.generatedAt)} 更新${names ? `｜出典: ${names}` : ''}`;
   }
 
   function matchesQuery(t, q) {
@@ -587,6 +747,7 @@
       if (e.key === 'Escape' && !$('#detail-panel').hidden) closeDetail();
     });
     window.addEventListener('hashchange', openFromHash);
+    $('#news-refresh').addEventListener('click', refreshNews);
 
     // 操作ヒントは最初の操作後に消す
     const hint = $('#help-hint');
@@ -618,6 +779,25 @@
     const dLng = rad(b.lng - a.lng);
     const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
     return 2 * R * Math.asin(Math.sqrt(h));
+  }
+
+  function formatDate(iso) {
+    const d = iso ? new Date(iso) : null;
+    if (!d || Number.isNaN(d.getTime())) return '日時不明';
+    return d.toLocaleString('ja-JP', {
+      timeZone: 'Asia/Tokyo', year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit',
+    });
+  }
+
+  function formatRelative(iso) {
+    const d = iso ? new Date(iso) : null;
+    if (!d || Number.isNaN(d.getTime())) return '日時不明';
+    const min = Math.round((Date.now() - d.getTime()) / 60000);
+    if (min < 1) return 'たった今';
+    if (min < 60) return `${min}分前`;
+    if (min < 60 * 24) return `${Math.floor(min / 60)}時間前`;
+    if (min < 60 * 24 * 7) return `${Math.floor(min / 1440)}日前`;
+    return d.toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric' });
   }
 
   function formatDistance(km) {

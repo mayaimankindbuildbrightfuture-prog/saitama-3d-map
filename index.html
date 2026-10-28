@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>さいたま市 3Dトピックマップ</title>
-  <meta name="description" content="埼玉県さいたま市の名所・歴史・イベント・グルメ・自然・スポーツを、3Dマップと漫画の吹き出しで紹介します。">
+  <meta name="description" content="埼玉県さいたま市の名所・歴史・イベント・グルメ・自然・スポーツと最新ニュースを、3Dマップと漫画の吹き出しで紹介します。">
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,10 +31,14 @@
 
     <aside id="list-panel" class="panel list-panel" aria-label="トピック一覧" hidden>
       <div class="panel-head">
-        <h2>トピック一覧</h2>
+        <h2>トピック・ニュース一覧</h2>
         <button type="button" class="close-btn" data-close="list-panel" aria-label="一覧を閉じる">✕</button>
       </div>
       <input id="search-input" class="search-input" type="search" placeholder="キーワードで検索（例：神社、桜、サッカー）" autocomplete="off">
+      <div class="news-status">
+        <p id="news-status-text" class="news-status-text">📰 ニュースを読み込み中…</p>
+        <button type="button" id="news-refresh" class="news-refresh" title="ニュースを読み直す" aria-label="ニュースを読み直す">🔄</button>
+      </div>
       <p id="list-count" class="list-count"></p>
       <ul id="topic-list" class="topic-list"></ul>
     </aside>

@@ -1,6 +1,6 @@
 # saitama-3d-map
 
-埼玉県さいたま市（全10区）を **3Dマップ** で表示し、名所・歴史・文化・イベント・グルメ・自然・スポーツにゆかりのある場所に、**漫画の吹き出し** でトピックを表示するWebアプリです。
+埼玉県さいたま市（全10区）を **3Dマップ** で表示し、名所・歴史・文化・イベント・グルメ・自然・スポーツにゆかりのある場所に、**漫画の吹き出し** でトピックを表示するWebアプリです。さいたま市の **最新ニュース** も自動で取得し、記事に出てくる地名の場所に吹き出しで表示します。
 
 - ビルド不要の静的サイト（`index.html` + `app.js` + `style.css` + `data/topics.json`）
 - **APIキー不要・無料サービスのみ** で動作します
@@ -18,6 +18,7 @@
 - **カテゴリフィルタ**：ヘッダーのボタンで表示を切り替えます。ダブルクリックするとそのカテゴリだけを表示します。
 - **一覧・検索**：キーワードでトピックを絞り込めます。Enterで先頭の結果へ移動します。
 - **区へ移動**：10区それぞれの付近へ視点を移動します。
+- **最新ニュース**：GitHub Actions が3時間ごとにニュースを取得し、`data/news.json` を更新します。新聞風の吹き出し（NEWSタグ付き）で地図に表示し、クリックすると見出し・配信元・日時・記事へのリンクを表示します。トピックの詳細には「この付近のニュース」も出ます。ヘッダーの「📰 ニュース」をダブルクリックすると、ニュースだけを表示できます。
 - **URL共有**：`#topic=railway-museum` のようなURLで、特定のトピックを開いた状態で表示できます。
 
 ## 起動方法（ローカル）
@@ -37,21 +38,55 @@ python -m http.server 8000
 
 ## GitHub Pages での公開方法
 
-1. このリポジトリを GitHub にプッシュします。
+1. このリポジトリを GitHub にプッシュします（`main` ブランチ）。
 2. リポジトリの **Settings → Pages** を開きます。
-3. **Build and deployment** の **Source** を「Deploy from a branch」にします。
-4. **Branch** で `main`、フォルダで `/ (root)` を選んで **Save** を押します。
+3. **Build and deployment** の **Source** を「**GitHub Actions**」にします。
+4. **Actions** タブで「ニュース更新と公開」を **Run workflow** で実行します（以後は `main` へのプッシュ時と3時間ごとに自動で実行されます）。
 5. 数分後に `https://<ユーザー名>.github.io/saitama-3d-map/` で公開されます。
 
-ビルド工程は無いので、ファイルをプッシュするだけで更新されます。非公開リポジトリで GitHub Pages を使うには、有料プラン（GitHub Pro など）が必要な場合があります。
+ビルド工程は無いので、ファイルをプッシュするだけで更新されます。Pages を使わない場合も、ワークフローは `data/news.json` の更新だけを行います。定期実行（schedule）はデフォルトブランチ（`main`）にワークフローがあるときだけ動きます。非公開リポジトリで GitHub Pages を使うには、有料プラン（GitHub Pro など）が必要な場合があります。
+
+## 最新ニュースの仕組み
+
+ブラウザから直接ニュースサイトを読み込むことはできない（CORSの制限）ため、次のように取得しています。APIキーは使いません。
+
+1. `.github/workflows/update-news.yml` が **3時間ごと**（と手動実行・`main` へのプッシュ時）に動きます。
+2. `scripts/fetch_news.py` が `scripts/news_sources.json` に書かれたRSSを取得します。初期設定は Googleニュースの「さいたま市」「大宮 さいたま」「浦和 さいたま」の検索結果（直近7日）です。
+3. 見出し・概要に出てくる地名を `scripts/places.json` の地名辞書と照合して、位置を推定します。優先順位は「施設」＞「駅」＞「地域名・区名」です。どれにも当てはまらない記事は「市全体のニュース」として市役所付近に表示します。
+4. 重複している記事・14日より古い記事・さいたま市と無関係な記事を除き、最大40件を `data/news.json` に保存してコミットします。
+5. 同じワークフローで GitHub Pages に公開するので、サイトにも自動で反映されます。開いたままの画面も15分ごとに読み直します（一覧の🔄ボタンでも読み直せます）。
+
+位置は地名から機械的に推定しているので、実際の場所と異なることがあります（詳細パネルに「記事中の『○○』から推定」と表示されます）。
+
+### 手動でニュースを更新する
+
+- GitHub の **Actions** タブ →「ニュース更新と公開」→ **Run workflow**
+- 手元で実行する場合（Python 3.9以上、追加ライブラリ不要）:
+
+```bash
+python3 scripts/fetch_news.py            # data/news.json を更新
+python3 scripts/fetch_news.py --dry-run  # 書き込まずに結果だけ表示
+python3 -m unittest discover -s tests    # テスト（ネットワーク不要）
+```
+
+### 取得元・地名を追加する
+
+- `scripts/news_sources.json` の `sources` に、RSS 2.0 または Atom のURLを追加できます（例：さいたま市や区の公式サイトの新着情報フィード）。
+- `scripts/places.json` に `{"name": "...", "kind": "facility", "lat": ..., "lng": ..., "aliases": ["..."]}` を追加すると、その地名を含む記事がその場所に表示されます。
 
 ## ファイル構成
 
 ```
 index.html        画面の骨組み（MapLibre・Google Fonts を固定バージョン／URLで読み込み）
 style.css         吹き出し・パネル・スマホ用下部シートなどのスタイル
-app.js            地図の初期化、3D建物・地形、吹き出しマーカー、重なり回避、詳細表示、検索・フィルタ
+app.js            地図の初期化、3D建物・地形、吹き出しマーカー、重なり回避、詳細表示、検索・フィルタ、ニュース表示
 data/topics.json  カテゴリ・区・トピックのデータ
+data/news.json    最新ニュース（GitHub Actions が自動更新）
+scripts/fetch_news.py     ニュースの取得と位置推定（Python 標準ライブラリのみ）
+scripts/news_sources.json ニュースの取得元（RSS/Atom）
+scripts/places.json       位置推定に使う地名辞書
+tests/                    fetch_news.py のテスト
+.github/workflows/update-news.yml  定期取得と GitHub Pages への公開
 ```
 
 ## トピックデータの形式（`data/topics.json`）
@@ -111,5 +146,6 @@ data/topics.json  カテゴリ・区・トピックのデータ
 
 - [MapLibre GL JS](https://maplibre.org/)（BSD-3-Clause）
 - 地図：[OpenFreeMap](https://openfreemap.org/)（© [OpenMapTiles](https://www.openmaptiles.org/)、データ © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright)）
+- ニュース：[Googleニュース](https://news.google.com/) のRSS（各記事の著作権は配信元に帰属します。地図には見出しとリンクだけを表示します）
 - 地形：[AWS Terrain Tiles](https://registry.opendata.aws/terrain-tiles/)
 - フォント：[Yusei Magic](https://fonts.google.com/specimen/Yusei+Magic)、[Zen Maru Gothic](https://fonts.google.com/specimen/Zen+Maru+Gothic)（SIL Open Font License）
