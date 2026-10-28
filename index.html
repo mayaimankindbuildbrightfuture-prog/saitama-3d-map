@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>さいたま市 3Dトピックマップ</title>
+  <meta name="description" content="埼玉県さいたま市の名所・歴史・イベント・グルメ・自然・スポーツを、3Dマップと漫画の吹き出しで紹介します。">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Maru+Gothic:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title"><span class="app-title-main">さいたま市</span> 3Dトピックマップ</h1>
+    <div class="header-tools">
+      <button type="button" id="list-toggle" class="tool-btn" aria-expanded="false" aria-controls="list-panel">📋 一覧・検索</button>
+      <label class="ward-select-label">
+        <span class="visually-hidden">区へ移動</span>
+        <select id="ward-select" class="tool-select">
+          <option value="">区へ移動…</option>
+        </select>
+      </label>
+    </div>
+    <div id="category-filters" class="category-filters" role="group" aria-label="カテゴリで絞り込み"></div>
+  </header>
+
+  <main class="app-main">
+    <div id="map" aria-label="さいたま市の3Dマップ"></div>
+
+    <aside id="list-panel" class="panel list-panel" aria-label="トピック一覧" hidden>
+      <div class="panel-head">
+        <h2>トピック一覧</h2>
+        <button type="button" class="close-btn" data-close="list-panel" aria-label="一覧を閉じる">✕</button>
+      </div>
+      <input id="search-input" class="search-input" type="search" placeholder="キーワードで検索（例：神社、桜、サッカー）" autocomplete="off">
+      <p id="list-count" class="list-count"></p>
+      <ul id="topic-list" class="topic-list"></ul>
+    </aside>
+
+    <aside id="detail-panel" class="panel detail-panel" aria-label="トピックの詳細" aria-live="polite" hidden>
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <div class="panel-head">
+        <span id="detail-category" class="category-badge"></span>
+        <button type="button" class="close-btn" data-close="detail-panel" aria-label="詳細を閉じる">✕</button>
+      </div>
+      <div id="detail-body" class="detail-body"></div>
+    </aside>
+
+    <div id="toast" class="toast" role="status" hidden></div>
+    <p class="help-hint" id="help-hint">右ドラッグ（またはCtrl＋ドラッグ）で回転・傾き／ホイールで拡大縮小／吹き出しをクリックで詳細</p>
+  </main>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
