@@ -47,6 +47,9 @@
     return Math.max(10.6, Math.min(12.1, 12 + Math.log2(w / 1100)));
   }
 
+  // 地形の陰に入ったと判定された吹き出しは薄く表示されるが、さいたま市は平らで誤判定が多いため常に濃く表示する
+  const MARKER_OPTIONS = { opacity: '1', opacityWhenCovered: '1' };
+
   const FOCUS_ZOOM = 16;
   const FOCUS_PITCH = 60;
   const MOBILE_QUERY = window.matchMedia('(max-width: 720px)');
@@ -66,6 +69,8 @@
     savedView: null, // トピックを開く前の視点
     livecams: null, // data/livecams.json
     camMarkers: [], // [{ marker, el, cam }]
+    camClusterMarkers: [], // 近いカメラをまとめたボタン
+    camImageTimer: 0,
     camsVisible: false,
     activeCamId: null,
     hazardVisible: false,
@@ -156,7 +161,7 @@
     });
 
     map.on('zoom', updateZoomClass);
-    map.on('zoom', updateCamMarkers);
+    map.on('moveend', updateCamMarkers);
     map.on('move', scheduleCollision);
     map.on('moveend', scheduleCollision);
     map.on('error', (e) => {
@@ -426,9 +431,7 @@
     }
     if (visible && !state.camMarkers.length) {
       cams.forEach(createCamMarker);
-      createCamCluster(cams);
     }
-    state.camMode = null; // 表示を作り直す
     updateCamMarkers();
     if (visible && fit) {
       fitToCams();
@@ -438,8 +441,33 @@
     }
   }
 
-  // 市全体を見ているときはカメラ同士が重なって押せないため、1つにまとめたボタンを出す
-  const CAM_CLUSTER_ZOOM = 13;
+  // 画面上で近いカメラ同士は重なって押せないため、まとめたボタン（📹 N）にする。押すとその範囲へ寄る
+  const CAM_CLUSTER_PX = 56;
+
+  function updateCamMarkers() {
+    if (!state.map) return;
+    state.camClusterMarkers.forEach((m) => m.remove());
+    state.camClusterMarkers = [];
+    if (!state.camsVisible) {
+      state.camMarkers.forEach(({ marker }) => marker.remove());
+      return;
+    }
+    const groups = [];
+    state.camMarkers.forEach((item) => {
+      const p = state.map.project([item.cam.lng, item.cam.lat]);
+      const g = groups.find((gr) => Math.hypot(gr.x - p.x, gr.y - p.y) < CAM_CLUSTER_PX);
+      if (g) g.items.push(item);
+      else groups.push({ x: p.x, y: p.y, items: [item] });
+    });
+    groups.forEach((g) => {
+      if (g.items.length === 1) {
+        g.items[0].marker.addTo(state.map);
+        return;
+      }
+      g.items.forEach(({ marker }) => marker.remove());
+      state.camClusterMarkers.push(createCamCluster(g.items.map((i) => i.cam)));
+    });
+  }
 
   function createCamCluster(cams) {
     const el = document.createElement('div');
@@ -452,32 +480,16 @@
     btn.append(`ライブカメラ ${cams.length}`);
     btn.addEventListener('click', (ev) => {
       ev.stopPropagation();
-      fitToCams();
+      fitToCams(cams, { zoomIn: true });
     });
     el.appendChild(btn);
     const lng = cams.reduce((a, c) => a + c.lng, 0) / cams.length;
     const lat = cams.reduce((a, c) => a + c.lat, 0) / cams.length;
-    state.camCluster = new maplibregl.Marker({ element: el, anchor: 'bottom' }).setLngLat([lng, lat]);
+    return new maplibregl.Marker({ element: el, anchor: 'bottom', ...MARKER_OPTIONS }).setLngLat([lng, lat]).addTo(state.map);
   }
 
-  function updateCamMarkers() {
-    if (!state.map) return;
-    const mode = !state.camsVisible ? 'hidden'
-      : state.map.getZoom() < CAM_CLUSTER_ZOOM && state.camMarkers.length > 1 ? 'cluster' : 'each';
-    if (mode === state.camMode) return;
-    state.camMode = mode;
-    state.camMarkers.forEach(({ marker }) => {
-      if (mode === 'each') marker.addTo(state.map);
-      else marker.remove();
-    });
-    if (state.camCluster) {
-      if (mode === 'cluster') state.camCluster.addTo(state.map);
-      else state.camCluster.remove();
-    }
-  }
-
-  function fitToCams() {
-    const cams = state.livecams.cameras;
+  // zoomIn: まとめたボタンから呼ばれたとき。範囲が狭くても今より必ず寄る
+  function fitToCams(cams = state.livecams.cameras, { zoomIn = false } = {}) {
     const bounds = new maplibregl.LngLatBounds();
     cams.forEach((c) => bounds.extend([c.lng, c.lat]));
     const h = state.map.getContainer().clientHeight;
@@ -486,9 +498,9 @@
     const padding = mobile
       ? { top: 70, bottom: Math.round(h * 0.25), left: 50, right: 70 }
       : { top: 120, bottom: Math.round(h * 0.25), left: 200, right: 200 };
-    const cam = state.map.cameraForBounds(bounds, { padding, maxZoom: 14.5 });
-    // 必ずカメラが1つずつに分かれて見えるズームまで寄る
-    const zoom = Math.max(cam ? cam.zoom : 0, CAM_CLUSTER_ZOOM + 0.6);
+    const cam = state.map.cameraForBounds(bounds, { padding, maxZoom: 16 });
+    let zoom = cam ? cam.zoom : state.map.getZoom() + 1;
+    if (zoomIn) zoom = Math.max(zoom, state.map.getZoom() + 1);
     state.map.flyTo({ center: cam ? cam.center : bounds.getCenter(), zoom, pitch: 35, duration: 1400, essential: true });
   }
 
@@ -500,8 +512,9 @@
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'cam-pin';
-    btn.setAttribute('aria-label', `${cam.title}の映像を見る`);
-    btn.innerHTML = '<span class="cam-pin-icon" aria-hidden="true">📹</span><span class="cam-pin-label"></span>';
+    btn.setAttribute('aria-label', `${cam.title}を見る`);
+    btn.innerHTML = `<span class="cam-pin-icon" aria-hidden="true">${CAM_ICONS[cam.type] || '📹'}</span><span class="cam-pin-label"></span>`;
+    btn.classList.add(`cam-type-${cam.type || 'youtube'}`);
     btn.querySelector('.cam-pin-label').textContent = cam.title;
     if (yt.live) btn.classList.add('is-live');
     btn.addEventListener('click', (ev) => {
@@ -509,18 +522,92 @@
       openCam(cam.id);
     });
     el.appendChild(btn);
-    const marker = new maplibregl.Marker({ element: el, anchor: 'bottom' }).setLngLat([cam.lng, cam.lat]);
+    const marker = new maplibregl.Marker({ element: el, anchor: 'bottom', ...MARKER_OPTIONS }).setLngLat([cam.lng, cam.lat]);
     state.camMarkers.push({ marker, el, cam });
   }
+
+  // カメラの種類ごとのピンのアイコン（youtube: 動画、image: 静止画、links/link: 配信元へのリンク）
+  const CAM_ICONS = { youtube: '📹', image: '📷', links: '☁️', link: '🔗' };
+  const CAM_IMAGE_REFRESH_MS = 60 * 1000;
 
   function camEmbedUrl(cam) {
     const yt = cam.youtube || {};
     // enablejsapi: 再生できないときのエラーを YouTube の IFrame Player API で受け取るため
     const params = `autoplay=1&mute=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
-    // 配信ごとに動画IDが変わるので、チャンネルの「今の配信」を埋め込むのを優先する
-    if (yt.channelId) return `https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(yt.channelId)}&${params}`;
-    if (yt.videoId) return `https://www.youtube.com/embed/${encodeURIComponent(yt.videoId)}?${params}`;
+    // 自動の確認で見つけた配信中の動画を優先する（同じチャンネルが別の場所を配信していることがあるため）
+    if (yt.live && yt.videoId) return `https://www.youtube.com/embed/${encodeURIComponent(yt.videoId)}?${params}`;
+    // タイトルで配信を選ぶカメラは、チャンネルの「今の配信」だと別の場所が映るおそれがあるので使わない
+    if (yt.channelId && !(yt.titleKeywords || []).length) {
+      return `https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(yt.channelId)}&${params}`;
+    }
     return '';
+  }
+
+  function renderYouTubeCam(box, cam) {
+    const yt = cam.youtube || {};
+    if (yt.live && yt.embeddable === false) {
+      showCamError(cam, 150);
+      return;
+    }
+    const src = camEmbedUrl(cam);
+    if (!src) {
+      showCamError(cam, yt.channelId ? 100 : null);
+      return;
+    }
+    const frame = el('iframe', {
+      id: 'cam-frame',
+      src,
+      title: `${cam.title}（ライブ映像）`,
+      allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen',
+      allowfullscreen: '',
+      referrerpolicy: 'strict-origin-when-cross-origin',
+    });
+    box.append(frame);
+    watchYouTubeErrors(frame, cam);
+  }
+
+  // 定期的に更新される静止画（国土交通省の道路カメラなど）。上り・下りなど複数あるときは切り替えボタンを出す
+  function renderImageCam(box, cam) {
+    const wrap = el('div', { className: 'cam-image-wrap' });
+    const img = el('img', { className: 'cam-image', alt: `${cam.title}の最新の画像` });
+    const tabs = el('div', { className: 'cam-tabs' });
+    let current = 0;
+    const show = () => {
+      // 同じURLのまま新しい画像を読み込むため、時刻を付けてキャッシュを避ける
+      const url = cam.images[current].url;
+      img.src = `${url}${url.includes('?') ? '&' : '?'}t=${Math.floor(Date.now() / CAM_IMAGE_REFRESH_MS)}`;
+      [...tabs.children].forEach((b, i) => b.setAttribute('aria-pressed', String(i === current)));
+    };
+    img.addEventListener('error', () => {
+      if (img.isConnected) showCamError(cam, 'image');
+    });
+    if (cam.images.length > 1) {
+      cam.images.forEach((im, i) => {
+        const b = el('button', { type: 'button', className: 'cam-tab', 'aria-pressed': 'false' }, im.label);
+        b.addEventListener('click', () => { current = i; show(); });
+        tabs.append(b);
+      });
+      wrap.append(tabs);
+    }
+    wrap.append(img, el('p', { className: 'cam-credit' }, `画像: ${cam.provider}（約1分ごとに読み直します）`));
+    box.append(wrap);
+    show();
+    clearInterval(state.camImageTimer);
+    state.camImageTimer = setInterval(() => {
+      if (img.isConnected) show();
+      else clearInterval(state.camImageTimer);
+    }, CAM_IMAGE_REFRESH_MS);
+  }
+
+  // 配信元のページでしか見られないカメラ（利用規約で転載できない、埋め込みが許可されていないなど）
+  function renderLinkCam(box, cam) {
+    const links = cam.type === 'links' ? cam.links : [{ label: `${cam.title}（${cam.provider}）`, url: cam.siteUrl }];
+    const list = el('ul', { className: 'cam-link-list' });
+    links.forEach((l) => list.append(el('li', {}, el('a', {
+      className: 'cam-btn cam-open-site', href: l.url, target: '_blank', rel: 'noopener',
+    }, `▶ ${l.label}`))));
+    box.append(el('div', { className: 'cam-empty cam-links' },
+      el('p', {}, 'このカメラは配信元のサイトで見られます。'), list));
   }
 
   function openCam(id) {
@@ -540,28 +627,20 @@
 
     const box = $('#cam-video');
     box.replaceChildren();
-    const src = camEmbedUrl(cam);
-    if (src) {
-      const frame = el('iframe', {
-        id: 'cam-frame',
-        src,
-        title: `${cam.title}（ライブ映像）`,
-        allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen',
-        allowfullscreen: '',
-        referrerpolicy: 'strict-origin-when-cross-origin',
-      });
-      box.append(frame);
-      watchYouTubeErrors(frame, cam);
-    } else {
-      showCamError(cam, null);
-    }
+    clearInterval(state.camImageTimer);
+    const type = cam.type || 'youtube';
+    if (type === 'youtube') renderYouTubeCam(box, cam);
+    else if (type === 'image') renderImageCam(box, cam);
+    else renderLinkCam(box, cam);
 
     const checked = state.livecams.checkedAt ? formatDate(state.livecams.checkedAt) : '';
-    // 「配信していない」は自動の確認で正しく判定できないことがあるため、配信中と分かったときだけ書く
-    const status = checked && yt.live ? `${checked} 時点で配信中でした。` : '配信時間外は映像が出ません。';
+    let status = '';
+    if (type === 'youtube') {
+      status = checked && yt.live ? `${checked} 時点で配信中でした。` : '配信時間外は映像が出ません。';
+    }
     const note = $('#cam-note');
     note.replaceChildren(
-      el('span', {}, `📍 ${cam.ward}付近・配信: ${cam.provider}。${status}`),
+      el('span', {}, `📍 ${cam.ward}付近（地図上の位置はおおよそ）・配信: ${cam.provider}。${status}`),
       el('br'),
       el('span', {}, cam.description),
     );
@@ -615,7 +694,9 @@
   function showCamError(cam, code) {
     const box = $('#cam-video');
     let msg;
-    if (code === 101 || code === 150 || code === 152) {
+    if (code === 'image') {
+      msg = '画像を読み込めませんでした（点検などで更新が止まっていることがあります）。';
+    } else if (code === 101 || code === 150 || code === 152) {
       msg = 'このカメラは、配信元の設定により、このサイトの中では再生できません。YouTube で直接見てください。';
     } else if (code === 100) {
       msg = '今は配信していないか、配信が見つかりませんでした。配信時間外の可能性があります。';
@@ -629,6 +710,7 @@
   }
 
   function closeCam() {
+    clearInterval(state.camImageTimer);
     $('#cam-panel').hidden = true;
     $('#cam-video').replaceChildren(); // 映像を止める
     $('.app-main').classList.remove('cam-open');
@@ -696,7 +778,7 @@
       selectTopic(topic.id);
     });
 
-    const marker = new maplibregl.Marker({ element: el, anchor: 'bottom', offset: [0, 7] })
+    const marker = new maplibregl.Marker({ element: el, anchor: 'bottom', offset: [0, 7], ...MARKER_OPTIONS })
       .setLngLat([topic.lng, topic.lat])
       .addTo(state.map);
 
