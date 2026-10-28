@@ -1,9 +1,12 @@
-/* さいたま市 3Dトピックマップ
+/* 3Dトピックマップ（さいたま市・仙台市で共通）
+ * 市ごとの違いは city.js（window.CITY）に書く。
  * MapLibre GL JS + OpenFreeMap（ベクタータイル）+ AWS Terrain Tiles（DEM）
  * いずれもAPIキー不要。
  */
 (() => {
   'use strict';
+
+  const CITY = window.CITY;
 
   const STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
   const DEM_TILES = 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png';
@@ -27,27 +30,27 @@
   };
   // 起動時にオンにしておくカテゴリ（ほかはボタンでオンにする）
   const DEFAULT_CATEGORIES = ['news'];
-  const POLICE_URL = 'https://www.police.pref.saitama.lg.jp/';
   const FLYER_SITES = [
     { label: 'Shufoo!', url: 'https://www.shufoo.net/' },
     { label: 'トクバイ', url: 'https://tokubai.co.jp/' },
   ];
 
-  // 初期視点：さいたま市全域（10区）が見えるように斜め上から
+  // 初期視点：市全域が見えるように斜め上から
   const INITIAL_VIEW = {
-    center: [139.652, 35.893],
+    center: CITY.view.center,
     zoom: initialZoom(),
-    pitch: 55,
-    bearing: -18,
+    pitch: CITY.view.pitch,
+    bearing: CITY.view.bearing,
   };
 
-  // 画面幅に合わせて、市域（東西約20km）が収まるズームにする
+  // 画面幅に合わせて、市域が収まるズームにする
   function initialZoom() {
     const w = window.innerWidth || 1200;
-    return Math.max(10.6, Math.min(12.1, 12 + Math.log2(w / 1100)));
+    const v = CITY.view;
+    return Math.max(v.minZoom, Math.min(v.maxZoom, v.zoom + Math.log2(w / v.widthRef)));
   }
 
-  // 地形の陰に入ったと判定された吹き出しは薄く表示されるが、さいたま市は平らで誤判定が多いため常に濃く表示する
+  // 地形の陰に入ったと判定された吹き出しは薄く表示されるが、誤判定が多いため常に濃く表示する
   const MARKER_OPTIONS = { opacity: '1', opacityWhenCovered: '1' };
 
   const FOCUS_ZOOM = 16;
@@ -146,7 +149,7 @@
       ...INITIAL_VIEW,
       maxPitch: 75,
       minZoom: 9,
-      maxBounds: [[139.2, 35.65], [140.1, 36.15]],
+      maxBounds: CITY.maxBounds,
       attributionControl: { compact: true },
     });
     state.map = map;
@@ -230,8 +233,7 @@
           'hillshade-shadow-color': '#5a4a3a',
         },
       }, firstSymbol && firstSymbol.id);
-      // さいたま市は平坦なので少し強調する
-      map.setTerrain({ source: 'terrain-dem', exaggeration: 1.8 });
+      map.setTerrain({ source: 'terrain-dem', exaggeration: CITY.terrainExaggeration });
       if (typeof map.setSky === 'function') {
         map.setSky({
           'sky-color': '#9fd3ff',
@@ -266,8 +268,8 @@
   }
 
   // ---------- ハザードマップ（乗算で重ねる） ----------
-  // 国土交通省「重ねるハザードマップ」の公開タイル（APIキー不要）。さいたま市を流れる荒川・芝川・鴻沼川などの
-  // 浸水想定区域や、内水・土砂災害の区域が含まれる。
+  // 国土交通省「重ねるハザードマップ」の公開タイル（APIキー不要）。河川の浸水想定区域や、
+  // 内水・土砂災害の区域が含まれる。
   const HAZARD_TILE_BASE = 'https://disaportaldata.gsi.go.jp/raster/';
   const HAZARD_ATTRIBUTION = 'ハザード: <a href="https://disaportal.gsi.go.jp/" target="_blank" rel="noopener">ハザードマップポータルサイト（国土交通省）</a>';
   const FLOOD_DEPTH_LEGEND = [
@@ -411,19 +413,13 @@
         el('a', { href: 'https://disaportal.gsi.go.jp/', target: '_blank', rel: 'noopener' }, 'ハザードマップポータルサイト'),
         ' の凡例をご覧ください。'));
     }
-    $('#hazard-source').innerHTML = `${HAZARD_ATTRIBUTION}。地図の色と<b>乗算</b>で重ねています。避難の判断には <a href="https://www.city.saitama.lg.jp/" target="_blank" rel="noopener">さいたま市</a> の最新のハザードマップも確認してください。`;
+    $('#hazard-source').innerHTML = `${HAZARD_ATTRIBUTION}。地図の色と<b>乗算</b>で重ねています。避難の判断には <a href="${CITY.cityUrl}" target="_blank" rel="noopener">${CITY.name}</a> の最新のハザードマップも確認してください。`;
   }
 
   // ---------- 天気（雨雲レーダー・天気予報・警報・洗濯指数・地震） ----------
   // 気象庁の公開データ（bosai）と Open-Meteo を使う。どちらも APIキー不要で、ブラウザから直接読める（CORS 許可あり）。
   const JMA = 'https://www.jma.go.jp/bosai';
   const JMA_PAGE = 'https://www.jma.go.jp/bosai/nowc/';
-  const SAITAMA_FORECAST_OFFICE = '110000'; // 埼玉県
-  const SAITAMA_SOUTH_AREA = '110010'; // 埼玉県南部（さいたま市を含む予報区）
-  const SAITAMA_TEMP_POINT = '43241'; // 気温の地点「さいたま」
-  const SAITAMA_CITY_AREA = '1110000'; // 警報・注意報の「さいたま市」
-  const SAITAMA_WARD_CODES = ['1110100', '1110200', '1110300', '1110400', '1110500', '1110600', '1110700', '1110800', '1110900', '1111000'];
-  const SAITAMA_POINT = { lat: 35.8617, lng: 139.6455 }; // 市役所付近
   const WEATHER_REFRESH_MS = 5 * 60 * 1000;
 
   // 雨雲などのナウキャストの種類。targets は時刻一覧のファイル（N1: 実況、N2: 降水の予報、N3: 雷・竜巻）
@@ -435,14 +431,19 @@
     { id: 'tornado', label: '🌪 竜巻（竜巻発生確度）', element: 'trns', targets: ['targetTimes_N3.json'] },
   ];
 
-  // 気象庁の警報・注意報のコード（防災情報XMLのコード表と同じ）
+  // 気象庁の警報・注意報のコード。2026年5月下旬からの新しい防災気象情報では、大雨・土砂災害・高潮に
+  // 警戒レベル（２〜５）が付き、レベル４の「危険警報」が加わった（気象庁の警報・注意報のページのコード表と同じ）
   const WARNING_NAMES = {
-    '02': '暴風雪警報', '03': '大雨警報', '04': '洪水警報', '05': '暴風警報', '06': '大雪警報', '07': '波浪警報', '08': '高潮警報',
-    10: '大雨注意報', 12: '大雪注意報', 13: '風雪注意報', 14: '雷注意報', 15: '強風注意報', 16: '波浪注意報', 17: '融雪注意報',
-    18: '洪水注意報', 19: '高潮注意報', 20: '濃霧注意報', 21: '乾燥注意報', 22: 'なだれ注意報', 23: '低温注意報', 24: '霜注意報',
-    25: '着氷注意報', 26: '着雪注意報', 32: '暴風雪特別警報', 33: '大雨特別警報', 35: '暴風特別警報', 36: '大雪特別警報',
-    37: '波浪特別警報', 38: '高潮特別警報',
+    33: 'レベル５大雨特別警報', 43: 'レベル４大雨危険警報', '03': 'レベル３大雨警報', 10: 'レベル２大雨注意報',
+    39: 'レベル５土砂災害特別警報', 49: 'レベル４土砂災害危険警報', '09': 'レベル３土砂災害警報', 29: 'レベル２土砂災害注意報',
+    38: 'レベル５高潮特別警報', 48: 'レベル４高潮危険警報', '08': 'レベル３高潮警報', 19: 'レベル２高潮注意報',
+    35: '暴風特別警報', '05': '暴風警報', 15: '強風注意報', 32: '暴風雪特別警報', '02': '暴風雪警報', 13: '風雪注意報',
+    36: '大雪特別警報', '06': '大雪警報', 12: '大雪注意報', 37: '波浪特別警報', '07': '波浪警報', 16: '波浪注意報',
+    14: '雷注意報', 17: '融雪注意報', 20: '濃霧注意報', 21: '乾燥注意報', 22: 'なだれ注意報', 23: '低温注意報',
+    24: '霜注意報', 25: '着氷注意報', 26: '着雪注意報',
   };
+  // 発表中として扱わない状態
+  const WARNING_INACTIVE = ['解除', '発表警報・注意報はなし'];
 
   class WeatherControl {
     onAdd() {
@@ -610,13 +611,14 @@
   }
 
   async function loadForecastInfo() {
-    const om = `https://api.open-meteo.com/v1/forecast?latitude=${SAITAMA_POINT.lat}&longitude=${SAITAMA_POINT.lng}`
+    const om = `https://api.open-meteo.com/v1/forecast?latitude=${CITY.point.lat}&longitude=${CITY.point.lng}`
       + '&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation_probability,precipitation,sunshine_duration'
       + '&daily=sunshine_duration,precipitation_sum,precipitation_probability_max,temperature_2m_max'
       + '&timezone=Asia%2FTokyo&forecast_days=2&wind_speed_unit=ms';
     const [forecast, warning, meteo] = await Promise.allSettled([
-      loadJSON(`${JMA}/forecast/data/forecast/${SAITAMA_FORECAST_OFFICE}.json?t=${Date.now()}`),
-      loadJSON(`${JMA}/warning/data/warning/${SAITAMA_FORECAST_OFFICE}.json?t=${Date.now()}`),
+      loadJSON(`${JMA}/forecast/data/forecast/${CITY.jma.office}.json?t=${Date.now()}`),
+      // 新しい防災気象情報（2026年5月下旬から）のデータ。以前の warning/data/warning/ は更新が止まっている
+      loadJSON(`${JMA}/warning/data/r8/${CITY.jma.office}.json?t=${Date.now()}`),
       loadJSON(om),
     ]);
     renderForecast(forecast.status === 'fulfilled' ? forecast.value : null);
@@ -631,9 +633,9 @@
       return;
     }
     const series = data[0].timeSeries;
-    const area = series[0].areas.find((a) => a.area.code === SAITAMA_SOUTH_AREA) || series[0].areas[0];
-    const pops = (series[1].areas.find((a) => a.area.code === SAITAMA_SOUTH_AREA) || series[1].areas[0]);
-    const temps = (series[2].areas.find((a) => a.area.code === SAITAMA_TEMP_POINT) || series[2].areas[0]);
+    const area = series[0].areas.find((a) => a.area.code === CITY.jma.forecastArea) || series[0].areas[0];
+    const pops = (series[1].areas.find((a) => a.area.code === CITY.jma.forecastArea) || series[1].areas[0]);
+    const temps = (series[2].areas.find((a) => a.area.code === CITY.jma.tempPoint) || series[2].areas[0]);
     const rows = series[0].timeDefines.slice(0, 2).map((t, i) => {
       const date = new Date(t);
       const label = i === 0 ? '今日' : '明日';
@@ -641,17 +643,18 @@
       const popVals = series[1].timeDefines.map((pt, j) => [pt, pops.pops[j]])
         .filter(([pt]) => new Date(pt).toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' }) === dayKey)
         .map(([, v]) => v).filter((v) => v !== '');
-      // 気温は 0時の値が最低、9時の値が最高。昼の発表では今日の最低が無くなり、最高と同じ値が入る
-      const tempAt = (hour) => {
-        const j = series[2].timeDefines.findIndex((tt) => {
-          const d = new Date(tt);
-          return d.toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' }) === dayKey
-            && Number(d.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour: 'numeric', hour12: false }).replace(/\D/g, '')) === hour;
-        });
-        return j >= 0 && temps.temps[j] !== '' ? Number(temps.temps[j]) : null;
-      };
-      const tMin = tempAt(0);
-      const tMax = tempAt(9);
+      // 気温は 0時の値が最低、9時の値が最高。昼・夕方の発表では、今日の分は 9時→0時 の順に並び、
+      // この 0時の値は最低気温ではない（最高と同じ値などが入る）ので使わない
+      const indexAt = (hour) => series[2].timeDefines.findIndex((tt) => {
+        const d = new Date(tt);
+        return d.toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' }) === dayKey
+          && Number(d.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour: 'numeric', hour12: false }).replace(/\D/g, '')) === hour;
+      });
+      const valueAt = (j) => (j >= 0 && temps.temps[j] !== '' ? Number(temps.temps[j]) : null);
+      const iMin = indexAt(0);
+      const iMax = indexAt(9);
+      const tMin = iMax >= 0 && iMin > iMax ? null : valueAt(iMin);
+      const tMax = valueAt(iMax);
       const tempText = [tMin != null && tMin !== tMax ? `最低 ${tMin}℃` : '', tMax != null ? `最高 ${tMax}℃` : ''].filter(Boolean).join('／');
       return el('li', { className: 'wx-day' },
         el('span', { className: 'wx-day-label' }, label),
@@ -659,30 +662,45 @@
         el('span', { className: 'wx-sub' }, [popVals.length ? `降水確率 ${popVals.map((v) => `${v}%`).join('・')}` : '', tempText].filter(Boolean).join('　')));
     });
     box.replaceChildren(el('ul', { className: 'wx-days' }, ...rows),
-      el('p', { className: 'wx-note' }, `${formatDate(data[0].reportDatetime)} ${data[0].publishingOffice}発表（埼玉県南部・気温は「さいたま」）`));
+      el('p', { className: 'wx-note' }, `${formatDate(data[0].reportDatetime)} ${data[0].publishingOffice}発表（${CITY.jma.forecastAreaName}・気温は「${CITY.jma.tempPointName}」）`));
   }
 
+  // data: 気象庁の報（大雨、風、波などの種類ごと）の配列。どの報も、区域ごとに今発表中のものが書かれている
   function renderWarnings(data) {
     const box = $('#wx-warnings');
-    if (!data) {
+    if (!Array.isArray(data)) {
       box.replaceChildren(el('p', { className: 'wx-note' }, '警報・注意報を読み込めませんでした。'));
       return;
     }
-    let area = null;
-    data.areaTypes.forEach((at) => at.areas.forEach((a) => { if (a.code === SAITAMA_CITY_AREA) area = a; }));
-    const active = ((area && area.warnings) || []).filter((w) => w.code && w.status !== '解除');
-    if (!active.length) {
-      box.replaceChildren(el('p', { className: 'wx-ok' }, '✅ さいたま市に発表中の警報・注意報はありません'));
+    // 仙台市のように市が「東部」「西部」などに分かれて発表されることがあるので、区域ごとに集める
+    const areas = CITY.jma.warningAreas;
+    const rows = areas.map((x) => {
+      const codes = new Set();
+      data.forEach((report) => ((report.warning && report.warning.class20Items) || []).forEach((item) => {
+        if (item.areaCode !== x.code) return;
+        item.kinds.forEach((k) => { if (k.code && !WARNING_INACTIVE.includes(k.status)) codes.add(k.code); });
+      }));
+      return { ...x, codes: [...codes] };
+    }).filter((x) => x.codes.length);
+    const latest = data.map((r) => r.reportDatetime).filter(Boolean).sort().pop();
+    if (!rows.length) {
+      box.replaceChildren(el('p', { className: 'wx-ok' }, `✅ ${CITY.name}に発表中の警報・注意報はありません`),
+        el('p', { className: 'wx-note' }, `${formatDate(latest)} までの発表を確認。`));
       return;
     }
-    const chips = active.map((w) => {
-      const name = WARNING_NAMES[w.code] || WARNING_NAMES[Number(w.code)] || `コード${w.code}`;
-      const kind = name.includes('特別警報') ? 'special' : name.includes('警報') ? 'warning' : 'advisory';
+    const chips = (codes) => codes.map((code) => {
+      const name = WARNING_NAMES[code] || WARNING_NAMES[Number(code)] || `コード${code}`;
+      const kind = name.includes('特別警報') ? 'special' : name.includes('危険警報') ? 'danger'
+        : name.includes('警報') ? 'warning' : 'advisory';
       return el('li', { className: `wx-warning is-${kind}` }, name);
     });
-    box.replaceChildren(el('p', { className: 'wx-subtitle' }, '⚠️ さいたま市に発表中'), el('ul', { className: 'wx-warning-list' }, ...chips),
-      el('p', { className: 'wx-note' }, `${formatDate(data.reportDatetime)} 発表。`,
-        el('a', { href: `${JMA}/warning/#area_type=class20s&area_code=${SAITAMA_CITY_AREA}`, target: '_blank', rel: 'noopener' }, '気象庁で詳しく見る')));
+    const lists = rows.flatMap((x) => [
+      ...(areas.length > 1 ? [el('p', { className: 'wx-sub' }, x.name)] : []),
+      el('ul', { className: 'wx-warning-list' }, ...chips(x.codes)),
+    ]);
+    box.replaceChildren(el('p', { className: 'wx-subtitle' }, `⚠️ ${CITY.name}に発表中`), ...lists,
+      el('p', { className: 'wx-note' }, `${formatDate(latest)} 発表。`,
+        el('a', { href: `${JMA}/warning/#area_type=class20s&area_code=${rows[0].code}`, target: '_blank', rel: 'noopener' }, '気象庁で詳しく見る')));
   }
 
   function renderLaundry(om) {
@@ -716,10 +734,10 @@
   const INTENSITY_LABELS = { 1: '1', 2: '2', 3: '3', 4: '4', '5-': '5弱', '5+': '5強', '6-': '6弱', '6+': '6強', 7: '7' };
   const INTENSITY_ORDER = ['1', '2', '3', '4', '5-', '5+', '6-', '6+', '7'];
 
-  function saitamaIntensity(q) {
+  function cityIntensity(q) {
     let best = null;
     (q.int || []).forEach((p) => (p.city || []).forEach((c) => {
-      if (SAITAMA_WARD_CODES.includes(c.code) && (!best || INTENSITY_ORDER.indexOf(c.maxi) > INTENSITY_ORDER.indexOf(best))) best = c.maxi;
+      if (CITY.jma.wardCodes.includes(c.code) && (!best || INTENSITY_ORDER.indexOf(c.maxi) > INTENSITY_ORDER.indexOf(best))) best = c.maxi;
     }));
     return best;
   }
@@ -742,30 +760,30 @@
     const all = [...byEvent.values()];
     const quakes = all.slice(0, 15);
     state.quakes = quakes;
-    const lastFelt = all.find((q) => saitamaIntensity(q));
+    const lastFelt = all.find((q) => cityIntensity(q));
     const items = quakes.map((q) => {
-      const local = saitamaIntensity(q);
+      const local = cityIntensity(q);
       const ep = parseEpicenter(q.cod);
       const li = el('li', { className: `wx-quake${local ? ' felt' : ''}` },
         el('span', { className: `wx-shindo s${(q.maxi || '').replace('+', 'p').replace('-', 'm')}` }, INTENSITY_LABELS[q.maxi] || '-'),
         el('span', { className: 'wx-quake-text' },
           el('b', {}, q.anm), ` M${q.mag}${ep && ep.depthKm != null ? `・深さ${Math.round(ep.depthKm)}km` : ''}`, el('br'),
-          el('span', { className: 'wx-sub' }, `${formatDate(q.at)}　${local ? `さいたま市の震度 ${INTENSITY_LABELS[local]}` : 'さいたま市では震度1以上なし'}`)));
+          el('span', { className: 'wx-sub' }, `${formatDate(q.at)}　${local ? `${CITY.name}の震度 ${INTENSITY_LABELS[local]}` : `${CITY.name}では震度1以上なし`}`)));
       return li;
     });
     const feltLine = lastFelt
-      ? el('p', { className: 'wx-felt' }, `🏠 直近でさいたま市が揺れた地震: ${formatDate(lastFelt.at)} ${lastFelt.anm} M${lastFelt.mag}（さいたま市の震度 ${INTENSITY_LABELS[saitamaIntensity(lastFelt)]}）`)
-      : el('p', { className: 'wx-felt' }, '🏠 最近の情報の中に、さいたま市で震度1以上の地震はありません。');
+      ? el('p', { className: 'wx-felt' }, `🏠 直近で${CITY.name}が揺れた地震: ${formatDate(lastFelt.at)} ${lastFelt.anm} M${lastFelt.mag}（${CITY.name}の震度 ${INTENSITY_LABELS[cityIntensity(lastFelt)]}）`)
+      : el('p', { className: 'wx-felt' }, `🏠 最近の情報の中に、${CITY.name}で震度1以上の地震はありません。`);
     box.replaceChildren(
       feltLine,
       el('p', { className: 'wx-subtitle' }, '最近の地震（全国・左の数字は最大震度）'),
       el('ul', { className: 'wx-quake-list' }, ...items),
-      el('p', { className: 'wx-note' }, '気象庁の地震情報。さいたま市の震度は市内10区のうち最も大きいもの。',
+      el('p', { className: 'wx-note' }, `気象庁の地震情報。${CITY.name}の震度は${CITY.wardsText}のうち最も大きいもの。`,
         el('a', { href: `${JMA}/map.html#contents=earthquake_map`, target: '_blank', rel: 'noopener' }, '気象庁で詳しく見る')));
     renderQuakeMarkers(quakes);
   }
 
-  // 地図に映る範囲（関東南部）に震源がある地震だけ、震源の印を出す
+  // 地図に映る範囲に震源がある地震だけ、震源の印を出す
   function renderQuakeMarkers(quakes) {
     (state.quakeMarkers || []).forEach((m) => m.remove());
     state.quakeMarkers = [];
@@ -1370,7 +1388,7 @@
   function renderTopicBody(body, topic) {
     body.append(
       el('h2', { className: 'detail-title', id: 'detail-title' }, topic.title),
-      el('p', { className: 'detail-ward' }, `📍 さいたま市${topic.ward}`),
+      el('p', { className: 'detail-ward' }, `📍 ${CITY.name}${topic.ward}`),
       el('p', { className: 'detail-quote' }, topic.bubble),
       el('p', { className: 'detail-desc' }, topic.description),
     );
@@ -1411,7 +1429,7 @@
   function renderNewsBody(body, topic) {
     const n = topic.news;
     const placeText = n.placeKind === 'city'
-      ? '📍 さいたま市全体の記事（地図上は市役所付近に表示）'
+      ? `📍 ${CITY.name}全体の記事（地図上は市役所付近に表示）`
       : `📍 ${n.place}${n.ward && !n.place.endsWith(n.ward) ? `（${n.ward}）` : ''}付近`;
     body.append(
       el('h2', { className: 'detail-title news-title', id: 'detail-title' }, n.title),
@@ -1423,10 +1441,10 @@
     }
     if (n.summary) body.append(el('p', { className: 'detail-desc' }, n.summary));
     if (topic.category === 'crime') {
-      const police = el('a', { href: POLICE_URL, target: '_blank', rel: 'noopener' }, '埼玉県警察の公式サイト');
+      const police = el('a', { href: CITY.police.url, target: '_blank', rel: 'noopener' }, `${CITY.police.name}の公式サイト`);
       body.append(el('p', { className: 'crime-note' },
         '報道機関が伝えた警察発表などの情報です。地図の位置は記事中の地名からの推定で、事件の正確な発生場所ではありません。最新の正確な防犯情報は ',
-        police, '（犯罪情報官NEWS など）で確認してください。'));
+        police, `${CITY.police.note || ''}で確認してください。`));
     }
     if (topic.category === 'supermarket') {
       const links = [];
@@ -1440,7 +1458,7 @@
     }
     if (topic.category === 'reviews') {
       body.append(el('p', { className: 'crime-note' },
-        'SNS（Bluesky・Misskey・Mastodon）に公開されている投稿を、地名の検索やハッシュタグ（#さいたま など）から集めたものです。投稿者がさいたま市に住んでいるとは限らず、内容は投稿者個人の感想です。地図の位置は本文中の地名からの推定です。'));
+        `SNS（Bluesky・Misskey・Mastodon）に公開されている投稿を、地名の検索やハッシュタグ（${CITY.reviewsTag} など）から集めたものです。投稿者が${CITY.name}に住んでいるとは限らず、内容は投稿者個人の感想です。地図の位置は本文中の地名からの推定です。`));
     }
 
     body.append(el('a', { className: 'news-link', href: n.url, target: '_blank', rel: 'noopener noreferrer' },

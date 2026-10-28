@@ -1,0 +1,719 @@
+{
+  "categories": {
+    "landmark": {
+      "label": "名所",
+      "color": "#e8413c",
+      "icon": "🏙️"
+    },
+    "history": {
+      "label": "歴史",
+      "color": "#8a5a2b",
+      "icon": "⛩️"
+    },
+    "culture": {
+      "label": "文化",
+      "color": "#8e44ad",
+      "icon": "🎨"
+    },
+    "event": {
+      "label": "イベント",
+      "color": "#f39c12",
+      "icon": "🎉"
+    },
+    "gourmet": {
+      "label": "グルメ",
+      "color": "#d35400",
+      "icon": "🍽️"
+    },
+    "nature": {
+      "label": "自然",
+      "color": "#27ae60",
+      "icon": "🌿"
+    },
+    "sports": {
+      "label": "スポーツ",
+      "color": "#2471c8",
+      "icon": "⚽"
+    }
+  },
+  "wards": [
+    {
+      "name": "青葉区",
+      "lat": 38.26908,
+      "lng": 140.87045
+    },
+    {
+      "name": "宮城野区",
+      "lat": 38.26619,
+      "lng": 140.90991
+    },
+    {
+      "name": "若林区",
+      "lat": 38.24414,
+      "lng": 140.90082
+    },
+    {
+      "name": "太白区",
+      "lat": 38.22432,
+      "lng": 140.87715
+    },
+    {
+      "name": "泉区",
+      "lat": 38.32627,
+      "lng": 140.88132
+    }
+  ],
+  "topics": [
+    {
+      "id": "sendai-castle",
+      "category": "history",
+      "title": "仙台城跡（青葉城址）",
+      "bubble": "政宗公の騎馬像が街を見守る！",
+      "ward": "青葉区",
+      "lat": 38.25328,
+      "lng": 140.85679,
+      "priority": 1,
+      "era": "慶長年間（江戸時代初め）に築城",
+      "description": "伊達政宗が慶長年間に築いた仙台藩の居城の跡で、雅称は青葉城。国の史跡です。広瀬川と青葉山の断崖を守りに生かした城で、約270年にわたり伊達氏代々の居城でした。本丸跡には伊達政宗公騎馬像が立ち、仙台の市街地を見渡せます。",
+      "access": "地下鉄東西線 国際センター駅から南へ直線で約800m／観光循環バス「るーぷる仙台」で「仙台城跡」下車",
+      "url": "https://www.city.sendai.jp/shisekichosa/sendaijoqa.html",
+      "related": [
+        "city-museum",
+        "zuihoden",
+        "hirosegawa"
+      ]
+    },
+    {
+      "id": "zuihoden",
+      "category": "history",
+      "title": "瑞鳳殿",
+      "bubble": "豪華絢爛な政宗公の霊廟",
+      "ward": "青葉区",
+      "lat": 38.25047,
+      "lng": 140.86671,
+      "priority": 1,
+      "era": "江戸時代（再建は戦後）",
+      "description": "仙台藩祖・伊達政宗の霊廟です。広瀬川をはさんで仙台城の本丸跡と向かい合う経ヶ峯にあります。もとの建物は仙台空襲で焼失し、戦後に再建されました。周辺には二代忠宗の感仙殿、三代綱宗の善応殿もあり、一帯は「経ヶ峯伊達家墓所」として仙台市の史跡です。",
+      "access": "地下鉄東西線 大町西公園駅から南へ直線で約1.0km／観光循環バス「るーぷる仙台」で「瑞鳳殿入口」下車",
+      "url": "https://www.zuihoden.com/",
+      "related": [
+        "sendai-castle",
+        "hirosegawa"
+      ]
+    },
+    {
+      "id": "osaki-hachimangu",
+      "category": "history",
+      "title": "大崎八幡宮",
+      "bubble": "国宝の社殿はきらびやか！",
+      "ward": "青葉区",
+      "lat": 38.27164,
+      "lng": 140.84485,
+      "priority": 1,
+      "era": "社殿は江戸時代初めの造営",
+      "description": "伊達政宗が造営した社殿（本殿・石の間・拝殿）は国宝に指定されています。1月14日の「どんと祭（松焚祭）」は宮城県最大規模のどんと祭として知られ、正月飾りを焼く御神火と、白装束で参拝する「裸参り」が見られます。",
+      "access": "JR仙山線 東北福祉大前駅から南へ直線で約1.0km／観光循環バス「るーぷる仙台」で「大崎八幡宮前」下車",
+      "related": [
+        "donto-sai",
+        "sendai-castle"
+      ]
+    },
+    {
+      "id": "toshogu",
+      "category": "history",
+      "title": "仙台東照宮",
+      "bubble": "唐門と本殿は国の重要文化財",
+      "ward": "青葉区",
+      "lat": 38.28023,
+      "lng": 140.88511,
+      "priority": 2,
+      "era": "承応3年（1654年）創建",
+      "description": "徳川家康をまつる神社で、承応3年（1654年）に仙台藩二代藩主・伊達忠宗が創建しました。唐門・本殿など4棟と鳥居1基が国の重要文化財に指定されています。",
+      "access": "JR仙山線 東照宮駅から北へ直線で約300m",
+      "related": [
+        "osaki-hachimangu"
+      ]
+    },
+    {
+      "id": "mutsu-kokubunji",
+      "category": "history",
+      "title": "陸奥国分寺 薬師堂",
+      "bubble": "奈良時代からの国分寺",
+      "ward": "若林区",
+      "lat": 38.2513,
+      "lng": 140.90284,
+      "priority": 2,
+      "era": "奈良時代創建／薬師堂は1607年",
+      "description": "聖武天皇の発願で奈良時代の740年代ごろに創建された陸奥国の国分寺です。17世紀の初めに伊達政宗が再興し、1607年に建てられた薬師堂は国の重要文化財、古代の寺院跡は国の史跡に指定されています。",
+      "access": "地下鉄東西線 薬師堂駅から北西へ直線で約200m",
+      "related": [
+        "arahama-school"
+      ]
+    },
+    {
+      "id": "arahama-school",
+      "category": "history",
+      "title": "震災遺構 仙台市立荒浜小学校",
+      "bubble": "津波の脅威と教訓を伝える",
+      "ward": "若林区",
+      "lat": 38.22234,
+      "lng": 140.98056,
+      "priority": 2,
+      "era": "2017年に震災遺構として公開",
+      "description": "東日本大震災の津波で被災した荒浜小学校の校舎を、震災遺構として2017年5月から公開しています。校舎には当時の被害の跡が残され、津波の脅威や避難の大切さを伝えています。小学校は1873年から2016年まで、この地にありました。",
+      "access": "地下鉄東西線 荒井駅から南東へ直線で約3.7km",
+      "url": "https://www.city.sendai.jp/kankyo/shisetsu/ruin_arahama_elementaryschool.html",
+      "related": [
+        "mutsu-kokubunji"
+      ]
+    },
+    {
+      "id": "jogi-nyorai",
+      "category": "history",
+      "title": "定義如来 西方寺",
+      "bubble": "門前町の三角あぶらあげも名物",
+      "ward": "青葉区",
+      "lat": 38.36509,
+      "lng": 140.66783,
+      "priority": 2,
+      "description": "正式には極楽山西方寺という浄土宗の寺院で、一般に「定義如来（じょうげにょらい）」と呼ばれます。年間約100万人が訪れる山あいの観光地で、門前町の三角形の厚い油揚げが名物として知られています。",
+      "access": "仙台駅から北西へ直線で約22.0km（バス・車）",
+      "related": [
+        "sakunami-onsen"
+      ]
+    },
+    {
+      "id": "sendai-station",
+      "category": "landmark",
+      "title": "JR仙台駅",
+      "bubble": "東北の玄関口！",
+      "ward": "青葉区",
+      "lat": 38.26035,
+      "lng": 140.88239,
+      "priority": 1,
+      "description": "JR東日本と仙台市地下鉄の駅で、東北新幹線を含め、駅を通るすべての営業列車が停車する仙台市の代表駅です。西口のペデストリアンデッキは、街の玄関口として親しまれています。",
+      "access": "JR・地下鉄南北線・東西線",
+      "related": [
+        "gyutan",
+        "aer",
+        "asaichi"
+      ]
+    },
+    {
+      "id": "aer",
+      "category": "landmark",
+      "title": "アエル 展望テラス",
+      "bubble": "31階から杜の都を一望（無料）",
+      "ward": "青葉区",
+      "lat": 38.26263,
+      "lng": 140.88145,
+      "priority": 2,
+      "era": "1998年完成",
+      "description": "仙台駅の北側にある地上31階・高さ145.5mの超高層ビルで、1998年に完成しました。最上階の31階には無料で入れる展望テラスがあり、仙台の市街地や太平洋側を見渡せます。",
+      "access": "JR・地下鉄 仙台駅から北へ直線で約300m",
+      "related": [
+        "sendai-station"
+      ]
+    },
+    {
+      "id": "jozenji-dori",
+      "category": "landmark",
+      "title": "定禅寺通",
+      "bubble": "ケヤキ並木の「杜の都」",
+      "ward": "青葉区",
+      "lat": 38.26655,
+      "lng": 140.87358,
+      "priority": 1,
+      "description": "4列のケヤキ並木が続く大通りで、青葉通とともに「杜の都」仙台を象徴する景観です。今の長い大通りになったのは戦後の戦災復興によるもので、1982年に公募で愛称が付けられました。秋のジャズフェスや冬の光のページェントの会場にもなります。",
+      "access": "地下鉄南北線 勾当台公園駅から東へ直線で約200m",
+      "related": [
+        "jazz-festival",
+        "pageant",
+        "mediatheque"
+      ]
+    },
+    {
+      "id": "city-hall",
+      "category": "landmark",
+      "title": "仙台市役所",
+      "bubble": "勾当台公園のとなり",
+      "ward": "青葉区",
+      "lat": 38.2682,
+      "lng": 140.86946,
+      "priority": 2,
+      "description": "仙台市の本庁舎です。勾当台公園の西側にあり、周辺には宮城県庁や国の出先機関などが集まっています。",
+      "access": "地下鉄南北線 勾当台公園駅から北西へ直線で約200m",
+      "url": "https://www.city.sendai.jp/",
+      "related": [
+        "kotodai-park"
+      ]
+    },
+    {
+      "id": "kotodai-park",
+      "category": "nature",
+      "title": "勾当台公園",
+      "bubble": "街なかのお祭り会場",
+      "ward": "青葉区",
+      "lat": 38.26678,
+      "lng": 140.87112,
+      "priority": 2,
+      "description": "宮城県庁・仙台市役所のそばにある都市公園です。仙台・青葉まつりや定禅寺ストリートジャズフェスティバルなど、街なかのイベントの会場として使われます。",
+      "access": "地下鉄南北線 勾当台公園駅からすぐ",
+      "related": [
+        "aoba-matsuri",
+        "city-hall"
+      ]
+    },
+    {
+      "id": "umino-mori",
+      "category": "landmark",
+      "title": "仙台うみの杜水族館",
+      "bubble": "三陸の海をまるごと体感",
+      "ward": "宮城野区",
+      "lat": 38.27106,
+      "lng": 140.98047,
+      "priority": 2,
+      "era": "2015年開館",
+      "description": "2015年に開館した水族館で、松島町にあったマリンピア松島水族館の後継館です。公式キャラクターはペンギンの「モーリー」です。",
+      "access": "JR仙石線 中野栄駅から南西へ直線で約1.1km",
+      "url": "https://www.uminomori.jp/",
+      "related": []
+    },
+    {
+      "id": "benny-land",
+      "category": "landmark",
+      "title": "八木山ベニーランド",
+      "bubble": "1968年開園の遊園地",
+      "ward": "太白区",
+      "lat": 38.24691,
+      "lng": 140.84902,
+      "priority": 2,
+      "era": "1968年開園",
+      "description": "八木山にある遊園地で、1968年に開園しました。八木山動物公園とは道路をはさんで向かい合っています。冬は休園や土日祝のみの開園の期間があります。",
+      "access": "地下鉄東西線 八木山動物公園駅から北東へ直線で約600m",
+      "related": [
+        "yagiyama-zoo"
+      ]
+    },
+    {
+      "id": "mediatheque",
+      "category": "culture",
+      "title": "せんだいメディアテーク",
+      "bubble": "伊東豊雄の名建築",
+      "ward": "青葉区",
+      "lat": 38.26551,
+      "lng": 140.86555,
+      "priority": 1,
+      "era": "2001年開館",
+      "description": "定禅寺通沿いにある公共施設で、仙台市民図書館やギャラリー、スタジオなどが入っています。2001年1月に開館し、チューブ状の柱で床を支える特殊な構造は、建築家・伊東豊雄の代表作の一つとして知られます。",
+      "access": "地下鉄南北線 勾当台公園駅から西へ直線で約500m",
+      "url": "https://www.smt.jp/",
+      "related": [
+        "jozenji-dori"
+      ]
+    },
+    {
+      "id": "city-museum",
+      "category": "culture",
+      "title": "仙台市博物館",
+      "bubble": "伊達家の宝がずらり",
+      "ward": "青葉区",
+      "lat": 38.25599,
+      "lng": 140.85686,
+      "priority": 2,
+      "era": "1961年開館",
+      "description": "伊達家が仙台市に寄贈した文化財を保管・研究するため、1961年に開館した博物館です。仙台藩に関する史料や美術工芸品が充実しています。仙台城の三の丸跡にあります。",
+      "access": "地下鉄東西線 国際センター駅から南へ直線で約500m",
+      "url": "https://www.city.sendai.jp/museum/",
+      "related": [
+        "sendai-castle"
+      ]
+    },
+    {
+      "id": "miyagi-art",
+      "category": "culture",
+      "title": "宮城県美術館",
+      "bubble": "前川國男設計の美術館",
+      "ward": "青葉区",
+      "lat": 38.26387,
+      "lng": 140.85516,
+      "priority": 2,
+      "era": "1981年開館",
+      "description": "本館は建築家・前川國男の設計で1981年に開館しました。1990年には彫刻家・佐藤忠良の作品を展示する佐藤忠良記念館も開館しています。宮城県や東北地方にゆかりのある作家の作品が収蔵の中心です。",
+      "access": "地下鉄東西線 国際センター駅から北へ直線で約400m",
+      "url": "https://www.pref.miyagi.jp/site/mmoa/",
+      "related": [
+        "city-museum"
+      ]
+    },
+    {
+      "id": "chitei-no-mori",
+      "category": "culture",
+      "title": "地底の森ミュージアム",
+      "bubble": "2万年前の森がそのまま",
+      "ward": "太白区",
+      "lat": 38.22278,
+      "lng": 140.87254,
+      "priority": 2,
+      "era": "1996年開館",
+      "description": "富沢遺跡で見つかった約2万年前（旧石器時代）の森の跡や、人の活動の跡を、発掘された状態のまま保存・展示している博物館です。1996年に開館しました。",
+      "access": "地下鉄南北線 長町南駅から南西へ直線で約400m",
+      "related": []
+    },
+    {
+      "id": "observatory",
+      "category": "culture",
+      "title": "仙台市天文台",
+      "bubble": "プラネタリウムと大望遠鏡",
+      "ward": "青葉区",
+      "lat": 38.25695,
+      "lng": 140.75526,
+      "priority": 2,
+      "era": "1955年開台／2008年移転",
+      "description": "1955年に開台し、翌年に仙台市へ寄付された天文台です。2008年に錦ケ丘の現在地へ移転し、2023年春にプラネタリウムがリニューアルされました。",
+      "access": "JR仙山線 愛子駅から南へ直線で約1.8km",
+      "url": "https://www.sendai-astro.jp/",
+      "related": []
+    },
+    {
+      "id": "science-museum",
+      "category": "culture",
+      "title": "HOKUSHU仙台市科学館",
+      "bubble": "台原森林公園の科学館",
+      "ward": "青葉区",
+      "lat": 38.29868,
+      "lng": 140.88321,
+      "priority": 2,
+      "era": "1968年開館",
+      "description": "1968年に開館した仙台市の科学館で、台原森林公園の中にあります。2025年4月から愛称が「HOKUSHU仙台市科学館」になりました。",
+      "access": "地下鉄南北線 台原駅から北へ直線で約1.2km",
+      "related": []
+    },
+    {
+      "id": "tanabata",
+      "category": "event",
+      "title": "仙台七夕まつり",
+      "bubble": "東北三大祭りの華やかな吹き流し",
+      "ward": "青葉区",
+      "lat": 38.2604,
+      "lng": 140.8725,
+      "priority": 1,
+      "era": "毎年8月6日〜8日",
+      "description": "青森ねぶた祭・秋田竿燈まつりとともに東北三大祭りの一つです。毎年8月6日から8日まで、一番町や中央通りなどのアーケード街を中心に、豪華な七夕飾りが飾られます。前夜の8月5日には仙台七夕花火祭が開かれます。",
+      "access": "地下鉄東西線 青葉通一番町駅からすぐ",
+      "url": "https://www.sendaitanabata.com/",
+      "related": [
+        "jozenji-dori"
+      ]
+    },
+    {
+      "id": "jazz-festival",
+      "category": "event",
+      "title": "定禅寺ストリートジャズフェスティバル",
+      "bubble": "街じゅうがステージ！",
+      "ward": "青葉区",
+      "lat": 38.26605,
+      "lng": 140.87005,
+      "priority": 2,
+      "era": "例年9月・1991年から",
+      "description": "1991年に始まった音楽祭で、例年9月の第2日曜日とその前日に開かれます。定禅寺通や勾当台公園など街なかの約100か所にステージが設けられ、ジャズに限らずさまざまなジャンルのバンドが演奏します。",
+      "access": "地下鉄南北線 勾当台公園駅からすぐ",
+      "url": "https://j-streetjazz.com/",
+      "related": [
+        "jozenji-dori"
+      ]
+    },
+    {
+      "id": "pageant",
+      "category": "event",
+      "title": "SENDAI光のページェント",
+      "bubble": "ケヤキ並木に光の街路",
+      "ward": "青葉区",
+      "lat": 38.26585,
+      "lng": 140.86785,
+      "priority": 2,
+      "era": "毎年12月",
+      "description": "定禅寺通と青葉通のケヤキ並木に、数十万にのぼるLEDを取り付けて点灯するイルミネーションです。毎年12月上旬から下旬にかけて開かれます。",
+      "access": "地下鉄南北線 勾当台公園駅から西へ直線で約300m",
+      "related": [
+        "jozenji-dori"
+      ]
+    },
+    {
+      "id": "aoba-matsuri",
+      "category": "event",
+      "title": "仙台・青葉まつり",
+      "bubble": "すずめ踊りと山鉾巡行",
+      "ward": "青葉区",
+      "lat": 38.2655,
+      "lng": 140.8728,
+      "priority": 2,
+      "era": "毎年5月・1985年から",
+      "description": "毎年5月の第3日曜日とその前日の2日間に開かれる祭りです。伊達政宗の没後350年にあたる1985年に、かつての祭りを復活させる形で始まりました。",
+      "access": "地下鉄南北線 勾当台公園駅から南東へ直線で約200m",
+      "url": "https://www.aoba-matsuri.com/",
+      "related": [
+        "kotodai-park"
+      ]
+    },
+    {
+      "id": "donto-sai",
+      "category": "event",
+      "title": "どんと祭（松焚祭）",
+      "bubble": "正月飾りを焼く御神火",
+      "ward": "青葉区",
+      "lat": 38.27125,
+      "lng": 140.8459,
+      "priority": 2,
+      "era": "毎年1月14日",
+      "description": "小正月の火祭りで、正月飾りを焼いた御神火にあたり、一年の無病息災などを祈ります。大崎八幡宮の「松焚祭」は宮城県最大規模のどんと祭で、1849年にはすでに恒例行事となっていました。",
+      "access": "JR仙山線 東北福祉大前駅から南へ直線で約1.1km",
+      "related": [
+        "osaki-hachimangu"
+      ]
+    },
+    {
+      "id": "gyutan",
+      "category": "gourmet",
+      "title": "牛たん焼き（仙台駅 牛たん通り）",
+      "bubble": "仙台名物といえばコレ！",
+      "ward": "青葉区",
+      "lat": 38.25985,
+      "lng": 140.88195,
+      "priority": 1,
+      "description": "仙台名物の牛たん焼きは、戦後の仙台で始まったとされます。麦飯とテールスープを合わせた定食が定番です。仙台駅の3階には牛たんの店が並ぶ「牛たん通り」があります。",
+      "access": "JR・地下鉄 仙台駅からすぐ",
+      "related": [
+        "sendai-station",
+        "zunda"
+      ]
+    },
+    {
+      "id": "zunda",
+      "category": "gourmet",
+      "title": "ずんだ餅",
+      "bubble": "枝豆のあまい緑のあん",
+      "ward": "青葉区",
+      "lat": 38.2611,
+      "lng": 140.8833,
+      "priority": 2,
+      "description": "すりつぶした枝豆（ずんだ）をあんにした餅菓子で、宮城県を中心とした南東北の郷土菓子です。仙台駅や市内の和菓子店などで味わえます。",
+      "access": "JR・地下鉄 仙台駅からすぐ",
+      "related": [
+        "gyutan"
+      ]
+    },
+    {
+      "id": "asaichi",
+      "category": "gourmet",
+      "title": "仙台朝市",
+      "bubble": "「仙台の台所」",
+      "ward": "青葉区",
+      "lat": 38.25862,
+      "lng": 140.87851,
+      "priority": 2,
+      "description": "仙台駅の近くにある常設の市場で、「仙台の台所」とも呼ばれます。一般的な朝市と違い、平日の朝から夕方まで営業しています。ビルの谷間に古い市場の風情が残り、約70の店が加盟しています（2020年時点）。",
+      "access": "JR・地下鉄 仙台駅から南西へ直線で約400m",
+      "related": [
+        "sendai-station",
+        "bunka-yokocho"
+      ]
+    },
+    {
+      "id": "bunka-yokocho",
+      "category": "gourmet",
+      "title": "文化横丁・壱弐参横丁",
+      "bubble": "レトロな飲み屋の路地",
+      "ward": "青葉区",
+      "lat": 38.25889,
+      "lng": 140.8733,
+      "priority": 2,
+      "description": "一番町にある、小さな飲食店が軒を連ねる昔ながらの路地です。文化横丁と壱弐参（いろは）横丁が近くにあり、仙台の夜の散策スポットとして親しまれています。",
+      "access": "地下鉄東西線 青葉通一番町駅から南東へ直線で約200m",
+      "related": [
+        "kokubuncho",
+        "asaichi"
+      ]
+    },
+    {
+      "id": "kokubuncho",
+      "category": "gourmet",
+      "title": "国分町",
+      "bubble": "東北一の繁華街",
+      "ward": "青葉区",
+      "lat": 38.26415,
+      "lng": 140.86865,
+      "priority": 2,
+      "description": "居酒屋や飲食店が集まる、東北地方を代表する繁華街です。牛たんや海の幸、地酒など、仙台の夜を楽しむ人でにぎわいます。",
+      "access": "地下鉄南北線 勾当台公園駅から南西へ直線で約400m",
+      "related": [
+        "bunka-yokocho"
+      ]
+    },
+    {
+      "id": "hirosegawa",
+      "category": "nature",
+      "title": "広瀬川",
+      "bubble": "街なかを流れる清流",
+      "ward": "青葉区",
+      "lat": 38.25817,
+      "lng": 140.86008,
+      "priority": 2,
+      "description": "仙台の中心市街地を流れる一級河川で、都市の川でありながら段丘の崖と緑が調和した景観が残り、アユも暮らしています。伊達政宗は広瀬川を外堀として仙台城を築き、その河岸段丘に城下町が発展しました。地図の位置は大橋付近です。",
+      "access": "地下鉄東西線 大町西公園駅から西へ直線で約400m",
+      "related": [
+        "nishi-park",
+        "sendai-castle"
+      ]
+    },
+    {
+      "id": "nishi-park",
+      "category": "nature",
+      "title": "西公園",
+      "bubble": "1875年開園の最古の公園",
+      "ward": "青葉区",
+      "lat": 38.25969,
+      "lng": 140.86165,
+      "priority": 2,
+      "era": "1875年開園",
+      "description": "広瀬川の左岸沿いにある、仙台市で最も古い都市公園です。1875年に開園し、当初は「桜ケ岡公園」と呼ばれていました。桜の名所としても知られます。",
+      "access": "地下鉄東西線 大町西公園駅から西へ直線で約300m",
+      "related": [
+        "hirosegawa"
+      ]
+    },
+    {
+      "id": "tsutsujigaoka",
+      "category": "nature",
+      "title": "榴岡公園",
+      "bubble": "藩主が植えた桜の名所",
+      "ward": "宮城野区",
+      "lat": 38.26031,
+      "lng": 140.89688,
+      "priority": 2,
+      "description": "古くから「榴ヶ岡」「宮城野」と呼ばれた歌枕の地にある公園です。江戸時代に仙台藩主・伊達綱村が桜を植えて民衆に開放して以来、花見の名所となっています。",
+      "access": "JR仙石線 宮城野原駅から西へ直線で約700m",
+      "related": []
+    },
+    {
+      "id": "yagiyama-zoo",
+      "category": "nature",
+      "title": "八木山動物公園 フジサキの杜",
+      "bubble": "街を見下ろす丘の動物園",
+      "ward": "太白区",
+      "lat": 38.24339,
+      "lng": 140.84601,
+      "priority": 2,
+      "era": "1965年開園",
+      "description": "1965年に開園した仙台市立の動物園で、都心部を見下ろす八木山にあります。2020年4月からは「八木山動物公園 フジサキの杜」の愛称が使われています。",
+      "access": "地下鉄東西線 八木山動物公園駅から東へ直線で約200m",
+      "url": "https://www.city.sendai.jp/zoo/",
+      "related": [
+        "benny-land"
+      ]
+    },
+    {
+      "id": "akiu-otaki",
+      "category": "nature",
+      "title": "秋保大滝",
+      "bubble": "落差55mの名瀑",
+      "ward": "太白区",
+      "lat": 38.27488,
+      "lng": 140.60282,
+      "priority": 2,
+      "description": "名取川の上流にある、落差55m・幅6mの滝です。国の名勝で、日本の滝百選の一つにも数えられます。厳冬期には滝が凍ることもあります。",
+      "access": "秋保温泉の温泉街から北西へ直線で約10.8km",
+      "related": [
+        "akiu-onsen"
+      ]
+    },
+    {
+      "id": "akiu-onsen",
+      "category": "nature",
+      "title": "秋保温泉",
+      "bubble": "「名取の御湯」と呼ばれた名湯",
+      "ward": "太白区",
+      "lat": 38.22904,
+      "lng": 140.71241,
+      "priority": 2,
+      "description": "鳴子温泉・飯坂温泉とともに奥州三名湯の一つに数えられる温泉です。古くは「名取の御湯」と呼ばれました。仙台の都心から近く、日帰り入浴にも利用されています。",
+      "access": "仙台駅から西へ直線で約15.2km（バス・車）",
+      "related": [
+        "akiu-otaki"
+      ]
+    },
+    {
+      "id": "sakunami-onsen",
+      "category": "nature",
+      "title": "作並温泉",
+      "bubble": "広瀬川上流の山あいの湯",
+      "ward": "青葉区",
+      "lat": 38.32896,
+      "lng": 140.61744,
+      "priority": 2,
+      "description": "仙台市青葉区の西部、広瀬川の上流にある温泉です。山形県との県境に近い山あいにあります。",
+      "access": "JR仙山線 作並駅から北西へ直線で約1.8km",
+      "related": [
+        "jogi-nyorai"
+      ]
+    },
+    {
+      "id": "izumigatake",
+      "category": "nature",
+      "title": "泉ヶ岳",
+      "bubble": "仙台の街から見える標高1175mの山",
+      "ward": "泉区",
+      "lat": 38.41153,
+      "lng": 140.71002,
+      "priority": 2,
+      "description": "泉区の北西部にある標高1175mの山で、船形連峰の東の端にあたる火山です。登山やスキーなど、四季を通じて楽しまれています。",
+      "access": "泉中央駅から北西へ直線で約17.8km（バス・車）",
+      "related": []
+    },
+    {
+      "id": "ballpark",
+      "category": "sports",
+      "title": "楽天モバイル 最強パーク宮城",
+      "bubble": "楽天イーグルスの本拠地！",
+      "ward": "宮城野区",
+      "lat": 38.2564,
+      "lng": 140.9027,
+      "priority": 1,
+      "era": "楽天の本拠地は2005年から",
+      "description": "宮城野原公園総合運動場にある野球場（正式名は宮城球場）で、2005年からプロ野球・東北楽天ゴールデンイーグルスの本拠地です。命名権による愛称は、これまでに何度か変わっています。",
+      "access": "JR仙石線 宮城野原駅から南へ直線で約500m",
+      "url": "https://www.rakuteneagles.jp/",
+      "related": [
+        "tsutsujigaoka"
+      ]
+    },
+    {
+      "id": "yurtec-stadium",
+      "category": "sports",
+      "title": "ユアテックスタジアム仙台",
+      "bubble": "ベガルタ仙台のホーム",
+      "ward": "泉区",
+      "lat": 38.31914,
+      "lng": 140.88187,
+      "priority": 2,
+      "description": "七北田公園の中にある球技専用スタジアム（正式名は仙台スタジアム）で、Jリーグのベガルタ仙台などのホームスタジアムです。2006年から「ユアテックスタジアム仙台（ユアスタ）」の愛称が使われています。",
+      "access": "地下鉄南北線 泉中央駅から南へ直線で約500m",
+      "url": "https://www.vegalta.co.jp/",
+      "related": []
+    },
+    {
+      "id": "xebio-arena",
+      "category": "sports",
+      "title": "ゼビオアリーナ仙台",
+      "bubble": "仙台89ERSのホーム",
+      "ward": "太白区",
+      "lat": 38.2303,
+      "lng": 140.88725,
+      "priority": 2,
+      "description": "あすと長町にある多目的アリーナで、プロバスケットボール・仙台89ERSのホームアリーナです。2025年6月に仙台市へ寄付されて正式名は「仙台市アリーナ」になり、愛称は従来どおり「ゼビオアリーナ仙台」です。",
+      "access": "JR・地下鉄南北線 長町駅から北東へ直線で約300m",
+      "url": "https://www.89ers.jp/",
+      "related": []
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""さいたま市の最新ニュース・オタク関連・事件/防犯・グルメ・スーパーの特売・地域の口コミを RSS から取得し、地名から位置を推定して data/news.json に書き出す。
+"""さいたま市（--city sendai なら仙台市）の最新ニュース・オタク関連・事件/防犯・グルメ・スーパーの特売・地域の口コミを RSS から取得し、地名から位置を推定して data/news.json に書き出す。
 
 記事は scripts/news_sources.json の categories に書いたキーワードでカテゴリ（と、グルメのジャンルや
 事件の種類などの細かい分類）に振り分ける。
@@ -9,6 +9,7 @@
 
     python3 scripts/fetch_news.py            # 取得して data/news.json を更新
     python3 scripts/fetch_news.py --dry-run  # 書き込まずに結果を表示
+    python3 scripts/fetch_news.py --city sendai  # 仙台市版（sendai/ 以下の設定とデータ）
 
 どのフィードからも1件も取得できなかった場合は、既存の data/news.json を残したまま終了する。
 """
@@ -39,8 +40,18 @@ OUTPUT_FILE = ROOT / "data" / "news.json"
 JST = timezone(timedelta(hours=9))
 USER_AGENT = "saitama-3d-map news fetcher (+https://github.com/)"
 
-# さいたま市に関係する記事かどうかの判定に使う語
+# 市に関係する記事かどうかの判定に使う語（news_sources.json の relevantWords で上書きできる）
 RELEVANT_WORDS = ("さいたま", "大宮", "浦和", "岩槻", "与野", "見沼")
+
+
+def use_city(city: str) -> None:
+    """設定とデータの置き場所を、<リポジトリ>/<city>/ 以下に切り替える（例: sendai）。空ならさいたま市（リポジトリ直下）。"""
+    global SOURCES_FILE, PLACES_FILE, TOPICS_FILE, OUTPUT_FILE
+    base = ROOT / city if city else ROOT
+    SOURCES_FILE = base / "scripts" / "news_sources.json"
+    PLACES_FILE = base / "scripts" / "places.json"
+    TOPICS_FILE = base / "data" / "topics.json"
+    OUTPUT_FILE = base / "data" / "news.json"
 
 # 位置推定の優先度（大きいほど具体的）
 KIND_RANK = {"facility": 3, "station": 2, "area": 1, "ward": 1}  # 地域名と区名は長い方（「岩槻」より「岩槻区」）を優先
@@ -463,7 +474,8 @@ def service_of(item: dict) -> str:
 
 def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_items: int, max_age_days: int,
                filters: dict[str, bool], exclude_sources: list[str] = (), exclude_words: list[str] = (),
-               similarity: float = 0.6, overlap: float = 0.7, categories: dict | None = None) -> list[dict]:
+               similarity: float = 0.6, overlap: float = 0.7, categories: dict | None = None,
+               relevant_words: tuple[str, ...] | list[str] = RELEVANT_WORDS) -> list[dict]:
     """取得した記事を絞り込み・重複除去・カテゴリ分けして、新しい順に並べる。
 
     max_items / max_age_days は、categories で個別に指定していないカテゴリに使う。
@@ -480,9 +492,9 @@ def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_
     for item in sorted(raw_items, key=lambda i: i["published"] or now, reverse=True):
         text = f'{item["title"]} {item["summary"]}'
         located = locate(text, places)
-        # さいたま市に関係する語も、辞書の地名も含まない記事は除く
+        # 市に関係する語も、辞書の地名も含まない記事は除く
         if (filters.get(item["feed"], True) and located is None
-                and not any(w in strip_place_ignore_words(text) for w in RELEVANT_WORDS)):
+                and not any(w in strip_place_ignore_words(text) for w in relevant_words)):
             continue
         if is_excluded(item, exclude_sources, exclude_words):
             continue
@@ -536,7 +548,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--dry-run", action="store_true", help="data/news.json を書き換えずに結果を表示する")
     ap.add_argument("--feed-file", action="append", default=[],
                     help="ネットワークの代わりにローカルのRSS/Atomファイルを読む（テスト用、複数指定可）")
+    ap.add_argument("--city", default="", help="市のフォルダ（例: sendai）。省略するとさいたま市")
     args = ap.parse_args(argv)
+    use_city(args.city)
 
     config = json.loads(SOURCES_FILE.read_text("utf-8"))
     places = load_places()
@@ -588,7 +602,8 @@ def main(argv: list[str] | None = None) -> int:
                       exclude_words=config.get("excludeWords", []),
                       similarity=config.get("duplicateSimilarity", 0.6),
                       overlap=config.get("duplicateOverlap", 0.7),
-                      categories=config.get("categories"))
+                      categories=config.get("categories"),
+                      relevant_words=config.get("relevantWords", RELEVANT_WORDS))
     out = {
         "generatedAt": now.astimezone(JST).isoformat(timespec="minutes"),
         "sources": used,
