@@ -4,7 +4,8 @@
     "sources: url（RSS/AtomのURL）または query（Googleニュースの検索語）を書く。category は検索の目的で、記事のカテゴリは categories のキーワードで最終的に決まる。filter=true のフィードは、さいたま市に関係する語か地名辞書の地名を含む記事だけを残す。",
     "categories: 上から順にキーワードを調べ、最初に当てはまったカテゴリに入れる（どれにも当てはまらなければ news）。types は細かい分類で、上から順に最初に当てはまったもの。maxItems・maxAgeDays はカテゴリごとの最大件数・何日前までの記事を残すか。",
     "excludeSources は配信元名の一部、excludeWords は見出し・概要に含まれる語で、当てはまる記事を除く。duplicateSimilarity（見出し全体の類似度）と duplicateOverlap（短い方の見出しがもう片方に含まれる割合）は0〜1で、どちらかがこの値以上なら重複として除く。",
-    "keepFeedCategory=true のカテゴリ（口コミ）は、その取得元の投稿を常にそのカテゴリにする。keywordGroups は「各グループから1語ずつ含む」と当てはまる条件、ignoreWords は判定の前に取り除く語、カテゴリ内の excludeWords はそのカテゴリだけで除く語。type=mastodon の取得元は instance と tag からハッシュタグのRSSのURLを作る。"
+    "keepFeedCategory=true のカテゴリ（口コミ）は、その取得元の投稿を常にそのカテゴリにする。keywordGroups は「各グループから1語ずつ含む」と当てはまる条件、ignoreWords は判定の前に取り除く語、カテゴリ内の excludeWords はそのカテゴリだけで除く語。type=mastodon の取得元は instance と tag からハッシュタグのRSSのURLを作る。",
+    "notWords はそのカテゴリに入れない語（例: グルメの「給食」）。"
   ],
   "maxItems": 40,
   "maxAgeDays": 14,
@@ -545,7 +546,13 @@
         "id": "other",
         "label": "その他のグルメ",
         "icon": "🍴"
-      }
+      },
+      "notWords": [
+        "給食",
+        "異物",
+        "選挙",
+        "ランチ会"
+      ]
     },
     "reviews": {
       "label": "口コミ",
@@ -868,38 +875,6 @@
       "category": "reviews",
       "type": "mastodon",
       "instance": "fedibird.com",
-      "tag": "大宮",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #さいたま（mastodon-japan.net）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "mastodon-japan.net",
-      "tag": "さいたま",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #さいたま市（mastodon-japan.net）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "mastodon-japan.net",
-      "tag": "さいたま市",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #浦和（mastodon-japan.net）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "mastodon-japan.net",
-      "tag": "浦和",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #大宮（mastodon-japan.net）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "mastodon-japan.net",
       "tag": "大宮",
       "filter": true
     }

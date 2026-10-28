@@ -177,6 +177,34 @@ class FetchNewsTest(unittest.TestCase):
         url = fetch_news.source_url({"type": "mastodon", "instance": "mstdn.jp", "tag": "さいたま"})
         self.assertEqual(url, "https://mstdn.jp/tags/%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE.rss")
 
+    def test_social_posts_are_cleaned(self):
+        def post(title, body, url):
+            return {"title": title, "rawTitle": title, "summary": body, "url": url,
+                    "published": NOW, "source": "", "feed": "Mastodon #さいたま"}
+        items = [
+            # <title> に投稿者名が入るサーバー: 名前は使わず本文から見出しを作る
+            post("someone@pixel.example: “<p>見沼田んぼ", "見沼田んぼの夕焼けがきれいだった #さいたま", "https://pixel.example/p/someone/1"),
+            # 記事を自動転載するアカウント（サーバー名・アカウント名で判定）
+            post("", "浦和が3得点で勝利 https:// blog.example.jp/archives/1", "https://rss-mstdn.example/@blog_soccer/2"),
+            post("", "大宮で新店オープン https://example.com/x", "https://social.example/@news/3"),
+            # リンクで始まる転載・リンクとハッシュタグだけの投稿
+            post("", "https://www. wacoca.example.com/news/1/ 聴き逃し配信", "https://social.example/@alice/4"),
+            post("", "https://example.com/a #さいたま #大宮", "https://social.example/@bob/5"),
+        ]
+        posts = fetch_news.clean_social_posts(items)
+        self.assertEqual([p["title"] for p in posts], ["見沼田んぼの夕焼けがきれいだった"])
+        self.assertEqual(posts[0]["source"], "Mastodon #さいたま")
+        self.assertEqual(fetch_news.remove_urls("駅前 https:// blog.example.jp/a/b すごい"), "駅前 すごい")
+
+    def test_not_words_and_place_ignore_words(self):
+        import json
+        categories = json.loads((ROOT / "scripts" / "news_sources.json").read_text("utf-8"))["categories"]
+        self.assertEqual(fetch_news.classify("給食に異物混入 パスタから金属 さいたま市", "news", categories)[0], "news")
+        self.assertEqual(fetch_news.classify("大宮で選挙関係のランチ会", "news", categories)[0], "news")
+        # 人名の「浦和希」は地名「浦和」として扱わない
+        self.assertIsNone(fetch_news.locate("声優・浦和希さんがイベントに出演", self.places))
+        self.assertEqual(fetch_news.locate("浦和希さんが浦和駅でイベント", self.places)["name"], "浦和駅")
+
     def test_atom_feed(self):
         atom = b"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>t</title>

@@ -123,15 +123,58 @@ def parse_feed(xml_bytes: bytes, source_name: str) -> list[dict]:
         })
 
     for i in items:
+        i["rawTitle"] = i["title"]
         # Mastodon の投稿などタイトルの無い項目は、本文の先頭を見出しにする
         if not i["title"] and i["summary"]:
             i["title"] = post_title(i["summary"])
     return [clean_item(i) for i in items if i["title"] and i["url"]]
 
 
+# 自動で記事やブログを転載しているアカウントの名前に含まれやすい語
+BOT_ACCOUNT_PATTERN = re.compile(r"rss|bot|feed|news|blog", re.IGNORECASE)
+
+
+def clean_social_posts(items: list[dict]) -> list[dict]:
+    """SNS（Mastodon）の投稿を口コミとして使える形にする。
+
+    - サーバーによっては <title> に「ユーザー名@サーバー: 本文」が入るため、見出しは本文から作り直し、
+      投稿者名は使わない
+    - 記事やブログを自動転載するアカウント、リンクの紹介だけの投稿は除く
+    """
+    posts = []
+    for it in items:
+        if BOT_ACCOUNT_PATTERN.search(post_account(it)):
+            continue
+        body = it["summary"]
+        if re.match(r"^(?:https?://|[\w.\-]+\.(?:com|net|org|jp|io|info)/)", body):  # リンクで始まる転載
+            continue
+        words = re.sub(r"#\S+", "", remove_urls(body)).strip()
+        if len(words) < 8:
+            continue
+        posts.append({**it, "summary": remove_urls(body), "title": post_title(body), "source": it["feed"]})
+    return posts
+
+
+def post_account(item: dict) -> str:
+    """投稿のアカウント（ユーザー名@サーバー）。<title> の「名前@サーバー:」か、投稿URLの /@名前 から取る。"""
+    m = re.match(r"^\s*([\w.\-]+@[\w.\-]+)\s*:", item.get("rawTitle", ""))
+    if m:
+        return m.group(1)
+    m = re.match(r"^https?://([^/]+)/@([\w.\-]+)", item.get("url", ""))
+    return f"{m.group(2)}@{m.group(1)}" if m else ""
+
+
+# Mastodon は長いURLを表示用のタグで分けるため、HTMLを外すと「https:// example.com/…」のように空白が入る
+URL_PATTERN = re.compile(r"https?://\s*(?:www\.\s*)?\S+|\b(?:www\.)?[\w\-]+(?:\.[\w\-]+)*\.(?:com|net|org|jp|io|info)/\S*")
+
+
+def remove_urls(text: str) -> str:
+    return re.sub(r"\s{2,}", " ", URL_PATTERN.sub("", text)).strip()
+
+
 def post_title(text: str, length: int = 60) -> str:
     """SNS投稿の本文から見出しを作る（末尾のハッシュタグの並びとURLを除く）。"""
-    text = re.sub(r"https?://\S+", "", text)
+    text = remove_urls(text)
     text = re.sub(r"(\s*#\S+)+\s*$", "", text).strip() or text.strip()
     return text if len(text) <= length else text[:length - 1] + "…"
 
@@ -166,11 +209,23 @@ def strip_title_suffix(title: str) -> str:
 
 # ---------- 位置推定 ----------
 
+# 地名と同じ文字を含むが地名ではない語（人名など）。scripts/places.json の ignoreWords から読み込む
+PLACE_IGNORE_WORDS: list[str] = []
+
+
+def strip_place_ignore_words(text: str) -> str:
+    for w in PLACE_IGNORE_WORDS:
+        text = text.replace(w, "")
+    return text
+
+
 def load_places() -> list[dict]:
+    config = json.loads(PLACES_FILE.read_text("utf-8"))
+    PLACE_IGNORE_WORDS[:] = config.get("ignoreWords", [])
     topics = {t["id"]: t for t in json.loads(TOPICS_FILE.read_text("utf-8"))["topics"]}
     wards = {w["name"]: w for w in json.loads(TOPICS_FILE.read_text("utf-8"))["wards"]}
     places = []
-    for p in json.loads(PLACES_FILE.read_text("utf-8"))["places"]:
+    for p in config["places"]:
         p = dict(p)
         if "topic" in p:
             t = topics[p["topic"]]
@@ -186,6 +241,7 @@ def load_places() -> list[dict]:
 
 def locate(text: str, places: list[dict]) -> dict | None:
     """本文中の地名のうち、最も具体的（同じ種類なら最も長い）ものを選ぶ。"""
+    text = strip_place_ignore_words(text)
     best, best_key = None, None
     for p in places:
         for alias in p["aliases"]:
@@ -295,9 +351,12 @@ def matches_category(text: str, cat: dict) -> bool:
     """keywords のどれかを含む、または keywordGroups の各グループから1語ずつ含めば当てはまる。
 
     ignoreWords の語（例: 「スーパーアリーナ」）は、判定の前に本文から取り除く。
+    notWords の語（例: グルメの「給食」）を含む場合は、そのカテゴリには入れない。
     """
     for w in cat.get("ignoreWords", []):
         text = text.replace(w, "")
+    if any(w in text for w in cat.get("notWords", [])):
+        return False
     keywords = cat.get("keywords") or []
     if keywords and any(k in text for k in keywords):
         return True
@@ -334,7 +393,8 @@ def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_
         text = f'{item["title"]} {item["summary"]}'
         located = locate(text, places)
         # さいたま市に関係する語も、辞書の地名も含まない記事は除く
-        if filters.get(item["feed"], True) and located is None and not any(w in text for w in RELEVANT_WORDS):
+        if (filters.get(item["feed"], True) and located is None
+                and not any(w in strip_place_ignore_words(text) for w in RELEVANT_WORDS)):
             continue
         if is_excluded(item, exclude_sources, exclude_words):
             continue
@@ -400,6 +460,8 @@ def main(argv: list[str] | None = None) -> int:
                     time.sleep(1)  # 取得元に負担をかけないよう間隔をあける
                 data = fetch(source_url(src))
             items = parse_feed(data, src["name"])
+            if src.get("type") == "mastodon":
+                items = clean_social_posts(items)
         except Exception as err:  # 1つのフィードの失敗で全体を止めない
             print(f"[warn] {src['name']}: {err}", file=sys.stderr)
             continue
