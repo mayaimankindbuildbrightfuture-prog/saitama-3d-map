@@ -205,6 +205,42 @@ class FetchNewsTest(unittest.TestCase):
         self.assertIsNone(fetch_news.locate("声優・浦和希さんがイベントに出演", self.places))
         self.assertEqual(fetch_news.locate("浦和希さんが浦和駅でイベント", self.places)["name"], "浦和駅")
 
+    def test_bluesky_and_misskey(self):
+        import json
+        bsky = json.dumps({"posts": [
+            {"uri": "at://did:plc:abc/app.bsky.feed.post/3kxyz", "author": {"handle": "taro.bsky.social"},
+             "record": {"text": "浦和駅の西口、\n夜はきれい", "createdAt": "2026-10-27T10:00:00.000Z"}},
+            {"uri": "at://did:plc:def/app.bsky.feed.post/3kabc", "author": {"handle": "saitama-news-bot.bsky.social"},
+             "record": {"text": "さいたま市で新店オープン https://example.com/a", "createdAt": "2026-10-27T10:00:00.000Z"}},
+        ]}).encode("utf-8")
+        posts = fetch_news.clean_social_posts(fetch_news.parse_bluesky(bsky, "Bluesky「浦和駅」"))
+        self.assertEqual([(p["title"], p["url"]) for p in posts],
+                         [("浦和駅の西口、 夜はきれい", "https://bsky.app/profile/taro.bsky.social/post/3kxyz")])
+
+        notes = json.dumps([
+            {"id": "a1", "text": "大宮公園の紅葉がきれい #さいたま", "createdAt": "2026-10-27T10:00:00.000Z",
+             "visibility": "public", "user": {"username": "hanako", "host": None, "isBot": False}},
+            {"id": "a2", "text": "定期投稿です #さいたま", "createdAt": "2026-10-27T10:00:00.000Z",
+             "visibility": "public", "user": {"username": "x", "host": None, "isBot": True}},
+            {"id": "a3", "text": "ネタバレ注意", "cw": "ネタバレ", "createdAt": "2026-10-27T10:00:00.000Z",
+             "visibility": "public", "user": {"username": "y", "host": None, "isBot": False}},
+            {"id": "a4", "text": None, "renoteId": "zz", "createdAt": "2026-10-27T10:00:00.000Z",
+             "visibility": "public", "user": {"username": "z", "host": None, "isBot": False}},
+        ]).encode("utf-8")
+        posts = fetch_news.clean_social_posts(fetch_news.parse_misskey(notes, "Misskey #さいたま", "misskey.io"))
+        self.assertEqual([(p["title"], p["url"]) for p in posts], [("大宮公園の紅葉がきれい", "https://misskey.io/notes/a1")])
+
+    def test_expand_sources(self):
+        srcs = fetch_news.expand_sources([
+            {"type": "mastodon", "instances": ["a.example", "b.example"], "tags": ["大宮", "浦和"], "category": "reviews"},
+            {"type": "bluesky", "queries": ["岩槻"], "category": "reviews"},
+            {"name": "x", "query": "さいたま"},
+        ])
+        self.assertEqual([s["name"] for s in srcs],
+                         ["Mastodon #大宮（a.example）", "Mastodon #浦和（a.example）", "Mastodon #大宮（b.example）",
+                          "Mastodon #浦和（b.example）", "Bluesky「岩槻」", "x"])
+        self.assertEqual(srcs[0]["category"], "reviews")
+
     def test_atom_feed(self):
         atom = b"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>t</title>

@@ -5,7 +5,8 @@
     "categories: 上から順にキーワードを調べ、最初に当てはまったカテゴリに入れる（どれにも当てはまらなければ news）。types は細かい分類で、上から順に最初に当てはまったもの。maxItems・maxAgeDays はカテゴリごとの最大件数・何日前までの記事を残すか。",
     "excludeSources は配信元名の一部、excludeWords は見出し・概要に含まれる語で、当てはまる記事を除く。duplicateSimilarity（見出し全体の類似度）と duplicateOverlap（短い方の見出しがもう片方に含まれる割合）は0〜1で、どちらかがこの値以上なら重複として除く。",
     "keepFeedCategory=true のカテゴリ（口コミ）は、その取得元の投稿を常にそのカテゴリにする。keywordGroups は「各グループから1語ずつ含む」と当てはまる条件、ignoreWords は判定の前に取り除く語、カテゴリ内の excludeWords はそのカテゴリだけで除く語。type=mastodon の取得元は instance と tag からハッシュタグのRSSのURLを作る。",
-    "notWords はそのカテゴリに入れない語（例: グルメの「給食」）。"
+    "notWords はそのカテゴリに入れない語（例: グルメの「給食」）。",
+    "type=mastodon・misskey は instances と tags、type=bluesky は queries を並べて書くと、組み合わせごとの取得元に展開する（Bluesky は公開検索API、Misskey は search-by-tag API。どちらもAPIキー不要）。"
   ],
   "maxItems": 40,
   "maxAgeDays": 14,
@@ -556,8 +557,8 @@
     },
     "reviews": {
       "label": "口コミ",
-      "maxItems": 40,
-      "maxAgeDays": 14,
+      "maxItems": 100,
+      "maxAgeDays": 30,
       "keepFeedCategory": true,
       "excludeWords": [
         "死ね",
@@ -572,7 +573,15 @@
         "シナ人",
         "R18",
         "NSFW",
-        "エロ"
+        "エロ",
+        "#PR",
+        "【PR】",
+        "アフィリエイト",
+        "楽天ROOM",
+        "フォロバ",
+        "相互フォロー",
+        "プレゼント企画",
+        "懸賞"
       ],
       "types": [
         {
@@ -815,68 +824,66 @@
       "filter": true
     },
     {
-      "name": "Mastodon #さいたま（mstdn.jp）",
-      "category": "reviews",
       "type": "mastodon",
-      "instance": "mstdn.jp",
-      "tag": "さいたま",
-      "filter": true
+      "category": "reviews",
+      "filter": true,
+      "instances": [
+        "mstdn.jp",
+        "fedibird.com",
+        "mastodon.social",
+        "pawoo.net"
+      ],
+      "tags": [
+        "さいたま",
+        "さいたま市",
+        "浦和",
+        "大宮",
+        "埼玉",
+        "与野",
+        "岩槻",
+        "見沼",
+        "北浦和",
+        "武蔵浦和",
+        "さいたま新都心",
+        "saitama"
+      ]
     },
     {
-      "name": "Mastodon #さいたま市（mstdn.jp）",
+      "type": "misskey",
       "category": "reviews",
-      "type": "mastodon",
-      "instance": "mstdn.jp",
-      "tag": "さいたま市",
-      "filter": true
+      "filter": true,
+      "instances": [
+        "misskey.io"
+      ],
+      "tags": [
+        "さいたま",
+        "さいたま市",
+        "浦和",
+        "大宮",
+        "埼玉",
+        "与野",
+        "岩槻",
+        "さいたま新都心"
+      ]
     },
     {
-      "name": "Mastodon #浦和（mstdn.jp）",
+      "type": "bluesky",
       "category": "reviews",
-      "type": "mastodon",
-      "instance": "mstdn.jp",
-      "tag": "浦和",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #大宮（mstdn.jp）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "mstdn.jp",
-      "tag": "大宮",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #さいたま（fedibird.com）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "fedibird.com",
-      "tag": "さいたま",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #さいたま市（fedibird.com）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "fedibird.com",
-      "tag": "さいたま市",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #浦和（fedibird.com）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "fedibird.com",
-      "tag": "浦和",
-      "filter": true
-    },
-    {
-      "name": "Mastodon #大宮（fedibird.com）",
-      "category": "reviews",
-      "type": "mastodon",
-      "instance": "fedibird.com",
-      "tag": "大宮",
-      "filter": true
+      "filter": true,
+      "queries": [
+        "さいたま市",
+        "大宮駅",
+        "浦和駅",
+        "浦和 さいたま",
+        "大宮 さいたま",
+        "岩槻",
+        "与野",
+        "さいたま新都心",
+        "見沼",
+        "北浦和",
+        "武蔵浦和",
+        "南浦和"
+      ]
     }
   ]
 }

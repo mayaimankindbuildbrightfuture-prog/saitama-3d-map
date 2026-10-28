@@ -62,6 +62,7 @@
     typeFilter: '', // 「カテゴリ:分類」（例 foodnews:curry）。空ならすべて
     collisionFrame: 0,
     newsMeta: null, // { generatedAt, sources }
+    savedView: null, // トピックを開く前の視点
   };
 
   const $ = (sel) => document.querySelector(sel);
@@ -232,7 +233,7 @@
   }
 
   function resetView() {
-    closeDetail();
+    closeDetail({ restoreView: false });
     state.map.flyTo({ ...INITIAL_VIEW, zoom: initialZoom(), duration: 1800, essential: true });
   }
 
@@ -392,6 +393,12 @@
 
     if (fly) {
       const map = state.map;
+      // 最初のトピックを開く前の視点を覚えておき、閉じたときに戻す（トピックからトピックへ移っても最初の視点のまま）
+      if (!state.savedView) {
+        state.savedView = {
+          center: map.getCenter(), zoom: map.getZoom(), pitch: map.getPitch(), bearing: map.getBearing(),
+        };
+      }
       const mobile = MOBILE_QUERY.matches;
       const detailW = $('#detail-panel').offsetWidth || 380;
       const ch = map.getContainer().clientHeight;
@@ -502,7 +509,7 @@
     }
     if (topic.category === 'reviews') {
       body.append(el('p', { className: 'crime-note' },
-        'SNS（Mastodon）に公開されている投稿を、ハッシュタグ（#さいたま など）から集めたものです。投稿者がさいたま市に住んでいるとは限らず、内容は投稿者個人の感想です。地図の位置は本文中の地名からの推定です。'));
+        'SNS（Bluesky・Misskey・Mastodon）に公開されている投稿を、地名の検索やハッシュタグ（#さいたま など）から集めたものです。投稿者がさいたま市に住んでいるとは限らず、内容は投稿者個人の感想です。地図の位置は本文中の地名からの推定です。'));
     }
 
     body.append(el('a', { className: 'news-link', href: n.url, target: '_blank', rel: 'noopener noreferrer' },
@@ -556,7 +563,9 @@
     return el('li', {}, btn);
   }
 
-  function closeDetail() {
+  // restoreView: トピックを開く前の視点（ズーム・傾き・向き）に戻すか
+  function closeDetail({ restoreView = true } = {}) {
+    const wasOpen = !$('#detail-panel').hidden;
     $('#detail-panel').hidden = true;
     if (state.activeId && state.markers.has(state.activeId)) {
       state.markers.get(state.activeId).el.classList.remove('active');
@@ -564,6 +573,10 @@
     state.activeId = null;
     highlightListItem(null);
     if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+    if (restoreView && wasOpen && state.savedView) {
+      state.map.flyTo({ ...state.savedView, duration: 1400, essential: true });
+    }
+    state.savedView = null;
     scheduleCollision();
   }
 
@@ -845,6 +858,7 @@
     });
     window.addEventListener('hashchange', openFromHash);
     $('#news-refresh').addEventListener('click', refreshNews);
+    bindThemeSelect();
     $('#type-select').addEventListener('change', (e) => {
       state.typeFilter = e.target.value;
       // 選んだ分類のカテゴリが非表示なら表示に戻す
@@ -861,6 +875,24 @@
     const hideHint = () => { hint.hidden = true; };
     setTimeout(hideHint, 12000);
     $('#map').addEventListener('pointerdown', hideHint, { once: true });
+  }
+
+  // ---------- デザインテーマ ----------
+  const THEMES = ['pop', 'cool', 'simple', 'nostalgic', 'gorgeous'];
+  const THEME_KEY = 'saitama3d-theme';
+
+  function bindThemeSelect() {
+    const select = $('#theme-select');
+    const current = document.documentElement.dataset.theme;
+    select.value = THEMES.includes(current) ? current : 'pop';
+    select.addEventListener('change', () => {
+      const theme = THEMES.includes(select.value) ? select.value : 'pop';
+      if (theme === 'pop') delete document.documentElement.dataset.theme;
+      else document.documentElement.dataset.theme = theme;
+      try { localStorage.setItem(THEME_KEY, theme); } catch (e) { /* 保存できなくても切り替えは有効 */ }
+      // 枠の太さや文字の大きさが変わるので、吹き出しの重なりを計算し直す
+      requestAnimationFrame(scheduleCollision);
+    });
   }
 
   // ---------- ユーティリティ ----------

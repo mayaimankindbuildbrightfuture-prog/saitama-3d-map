@@ -65,10 +65,90 @@ def source_url(src: dict) -> str:
 
 # ---------- 取得・解析 ----------
 
-def fetch(url: str, timeout: float = 20.0) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+def fetch(url: str, timeout: float = 20.0, body: dict | None = None) -> bytes:
+    """URLを取得する。body を渡すと JSON を POST する（Misskey の API 用）。"""
+    headers = {"User-Agent": USER_AGENT}
+    data = None
+    if body is not None:
+        data = json.dumps(body).encode("utf-8")
+        headers["Content-Type"] = "application/json"
+    req = urllib.request.Request(url, data=data, headers=headers)
     with urllib.request.urlopen(req, timeout=timeout) as res:
         return res.read()
+
+
+# ---------- SNS（Bluesky・Misskey）の公開API ----------
+# どちらも APIキー不要の公開エンドポイントを使う。仕様変更などで使えなくなっても、その取得元だけ失敗として飛ばす。
+
+BLUESKY_SEARCH = "https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?{query}"
+
+
+def bluesky_request(src: dict) -> tuple[str, dict | None]:
+    query = urllib.parse.urlencode({"q": src["query"], "lang": "ja", "sort": "latest", "limit": src.get("limit", 50)})
+    return BLUESKY_SEARCH.format(query=query), None
+
+
+def parse_bluesky(data: bytes, source_name: str) -> list[dict]:
+    items = []
+    for post in json.loads(data).get("posts", []):
+        record = post.get("record") or {}
+        text = (record.get("text") or "").strip()
+        handle = (post.get("author") or {}).get("handle", "")
+        rkey = post.get("uri", "").rsplit("/", 1)[-1]
+        if not text or not handle or not rkey:
+            continue
+        items.append({
+            "title": "", "rawTitle": "", "summary": re.sub(r"\s+", " ", text),
+            "url": f"https://bsky.app/profile/{handle}/post/{rkey}",
+            "published": parse_date(record.get("createdAt") or post.get("indexedAt")),
+            "source": "", "feed": source_name, "account": handle,
+        })
+    return items
+
+
+def misskey_request(src: dict) -> tuple[str, dict]:
+    return f"https://{src['instance']}/api/notes/search-by-tag", {"tag": src["tag"], "limit": src.get("limit", 50)}
+
+
+def parse_misskey(data: bytes, source_name: str, instance: str) -> list[dict]:
+    items = []
+    for note in json.loads(data):
+        user = note.get("user") or {}
+        text = (note.get("text") or "").strip()
+        # ボット、注意書き付き（CW）の投稿、本文の無いリノートは使わない
+        if not text or note.get("cw") or user.get("isBot") or note.get("visibility") not in (None, "public"):
+            continue
+        items.append({
+            "title": "", "rawTitle": "", "summary": re.sub(r"\s+", " ", text),
+            "url": f"https://{instance}/notes/{note.get('id')}",
+            "published": parse_date(note.get("createdAt")),
+            "source": "", "feed": source_name,
+            "account": f"{user.get('username', '')}@{user.get('host') or instance}",
+        })
+    return items
+
+
+def expand_sources(sources: list[dict]) -> list[dict]:
+    """複数のサーバー・タグ・検索語をまとめて書いた取得元を、1つずつに展開する。
+
+    例: {"type": "mastodon", "instances": ["mstdn.jp"], "tags": ["大宮", "浦和"], "category": "reviews"}
+    """
+    out = []
+    labels = {"mastodon": "Mastodon", "misskey": "Misskey", "bluesky": "Bluesky"}
+    for src in sources:
+        t = src.get("type")
+        if t in ("mastodon", "misskey") and "instances" in src:
+            for inst in src["instances"]:
+                for tag in src["tags"]:
+                    one = {k: v for k, v in src.items() if k not in ("instances", "tags")}
+                    out.append({**one, "instance": inst, "tag": tag, "name": f"{labels[t]} #{tag}（{inst}）"})
+        elif t == "bluesky" and "queries" in src:
+            for q in src["queries"]:
+                one = {k: v for k, v in src.items() if k != "queries"}
+                out.append({**one, "query": q, "name": f"Bluesky「{q}」"})
+        else:
+            out.append(src)
+    return out
 
 
 def strip_html(text: str) -> str:
@@ -157,6 +237,8 @@ def clean_social_posts(items: list[dict]) -> list[dict]:
 
 def post_account(item: dict) -> str:
     """投稿のアカウント（ユーザー名@サーバー）。<title> の「名前@サーバー:」か、投稿URLの /@名前 から取る。"""
+    if item.get("account"):
+        return item["account"]
     m = re.match(r"^\s*([\w.\-]+@[\w.\-]+)\s*:", item.get("rawTitle", ""))
     if m:
         return m.group(1)
@@ -449,18 +531,29 @@ def main(argv: list[str] | None = None) -> int:
     now = datetime.now(timezone.utc)
 
     raw, used, filters = [], [], {}
-    feeds = [{"name": Path(f).name, "file": f, "filter": True} for f in args.feed_file] or config["sources"]
+    feeds = ([{"name": Path(f).name, "file": f, "filter": True} for f in args.feed_file]
+             or expand_sources(config["sources"]))
     for i, src in enumerate(feeds):
         filters[src["name"]] = src.get("filter", True)
+        kind = src.get("type")
         try:
             if "file" in src:
                 data = Path(src["file"]).read_bytes()
             else:
                 if i:
                     time.sleep(1)  # 取得元に負担をかけないよう間隔をあける
-                data = fetch(source_url(src))
-            items = parse_feed(data, src["name"])
-            if src.get("type") == "mastodon":
+                if kind in ("bluesky", "misskey"):
+                    url, body = (bluesky_request if kind == "bluesky" else misskey_request)(src)
+                    data = fetch(url, body=body)
+                else:
+                    data = fetch(source_url(src))
+            if kind == "bluesky":
+                items = parse_bluesky(data, src["name"])
+            elif kind == "misskey":
+                items = parse_misskey(data, src["name"], src["instance"])
+            else:
+                items = parse_feed(data, src["name"])
+            if kind in ("mastodon", "bluesky", "misskey"):
                 items = clean_social_posts(items)
         except Exception as err:  # 1つのフィードの失敗で全体を止めない
             print(f"[warn] {src['name']}: {err}", file=sys.stderr)
@@ -470,7 +563,7 @@ def main(argv: list[str] | None = None) -> int:
             it["feedCategory"] = src.get("category", "news")
         raw.extend(items)
         used.append({"name": src["name"], "category": src.get("category", "news"),
-                     "url": src.get("url") or source_url(src) if "file" not in src else ""})
+                     "url": source_url(src) if "file" not in src and kind not in ("bluesky", "misskey") else ""})
 
     if not raw:
         print("[warn] ニュースを1件も取得できなかったため、既存のファイルを残します。", file=sys.stderr)

@@ -1,9 +1,30 @@
 :root {
+  /* デザインの基本値（テーマごとに下の [data-theme] で上書きする） */
   --ink: #161616;
+  --ink-soft: #333333;
   --paper: #ffffff;
+  --paper-translucent: rgba(255, 255, 255, 0.9);
   --bg: #fdf8ec;
   --muted: #5d5a52;
   --accent: #e8413c;
+  --hl: #fff6cf;
+  --hl-solid: #fff6cf; /* 選択中の吹き出しの背景（地図が透けないよう不透明） */
+  --hl-mid: #ffe98a;
+  --hl-strong: #ffd84d;
+  --news-paper: #fffdf2;
+  --link: #1659b3;
+  --note-bg: #eef2f6;
+  --bw: 3px;
+  --bw-sm: 2px;
+  --bs: solid;
+  --r-pill: 999px;
+  --r-bubble: 20px;
+  --r-panel: 16px;
+  --shadow-sm: 2px 2px 0 var(--ink);
+  --shadow-md: 3px 3px 0 var(--ink);
+  --shadow-lg: 5px 5px 0 var(--ink);
+  --shadow-sheet: 0 -4px 0 var(--ink);
+  --map-filter: none;
   --header-h: auto;
   --panel-w: 380px;
   --list-w: 320px;
@@ -44,7 +65,7 @@ body {
   gap: 8px 16px;
   padding: 8px 16px;
   background: var(--paper);
-  border-bottom: 3px solid var(--ink);
+  border-bottom: var(--bw) var(--bs) var(--ink);
   z-index: 5;
 }
 
@@ -58,7 +79,7 @@ body {
 }
 
 .app-title-main {
-  background: linear-gradient(transparent 60%, #ffd84d 60%);
+  background: linear-gradient(transparent 60%, var(--hl-strong) 60%);
 }
 
 .header-tools {
@@ -72,16 +93,16 @@ body {
   font: inherit;
   font-size: 0.9rem;
   padding: 6px 12px;
-  border: 2px solid var(--ink);
-  border-radius: 999px;
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-pill);
   background: var(--paper);
   color: var(--ink);
   cursor: pointer;
-  box-shadow: 2px 2px 0 var(--ink);
+  box-shadow: var(--shadow-sm);
 }
 
-.tool-btn:hover, .tool-select:hover { background: #fff6cf; }
-.tool-btn[aria-expanded="true"] { background: #ffd84d; }
+.tool-btn:hover, .tool-select:hover { background: var(--hl); }
+.tool-btn[aria-expanded="true"] { background: var(--hl-strong); }
 
 .category-filters {
   display: flex;
@@ -97,8 +118,8 @@ body {
   align-items: center;
   gap: 4px;
   padding: 4px 10px;
-  border: 2px solid var(--ink);
-  border-radius: 999px;
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-pill);
   background: var(--cat, #999);
   color: #fff;
   cursor: pointer;
@@ -110,13 +131,13 @@ body {
   font-size: 0.85rem;
   padding: 4px 10px;
   color: var(--ink);
-  background: #ffd84d;
-  border: 2px solid var(--ink);
-  border-radius: 999px;
+  background: var(--hl-strong);
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-pill);
   cursor: pointer;
-  box-shadow: 2px 2px 0 var(--ink);
+  box-shadow: var(--shadow-sm);
 }
-.chip-all:hover { background: #ffe98a; }
+.chip-all:hover { background: var(--hl-mid); }
 
 .chip[aria-pressed="false"] {
   background: var(--paper);
@@ -144,6 +165,9 @@ body {
   z-index: 0;
 }
 
+/* テーマに合わせて地図の色味を変える（吹き出しなどの要素には影響しない） */
+#map .maplibregl-canvas { filter: var(--map-filter); }
+
 .help-hint {
   position: absolute;
   left: 10px;
@@ -152,8 +176,8 @@ body {
   padding: 4px 10px;
   max-width: calc(100% - 20px);
   font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid var(--ink);
+  background: var(--paper-translucent);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 8px;
   pointer-events: none;
   z-index: 2;
@@ -166,10 +190,10 @@ body {
   transform: translateX(-50%);
   max-width: calc(100% - 32px);
   padding: 8px 14px;
-  background: #fff6cf;
-  border: 2px solid var(--ink);
+  background: var(--hl);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 10px;
-  box-shadow: 3px 3px 0 var(--ink);
+  box-shadow: var(--shadow-md);
   font-size: 0.85rem;
   z-index: 6;
 }
@@ -223,9 +247,9 @@ body {
   text-align: left;
   color: var(--ink);
   background: var(--paper);
-  border: 3px solid var(--ink);
-  border-radius: 20px;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.85);
+  border: var(--bw) var(--bs) var(--ink);
+  border-radius: var(--r-bubble);
+  box-shadow: var(--shadow-md);
   cursor: pointer;
   pointer-events: auto;
   transition: transform 0.12s ease-out, background 0.12s;
@@ -261,7 +285,7 @@ body {
   outline: none;
 }
 
-.bubble:focus-visible { box-shadow: 0 0 0 3px #ffd84d, 3px 3px 0 var(--ink); }
+.bubble:focus-visible { box-shadow: 0 0 0 3px var(--hl-strong), 3px 3px 0 var(--ink); }
 
 .bubble-icon {
   flex: none;
@@ -270,7 +294,7 @@ body {
   width: 30px;
   height: 30px;
   font-size: 16px;
-  border: 2px solid var(--ink);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 50%;
   background: var(--cat);
 }
@@ -293,7 +317,7 @@ body {
 .bubble-line {
   margin-top: 2px;
   font-size: 12px;
-  color: #333;
+  color: var(--ink-soft);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -302,10 +326,10 @@ body {
 .pin {
   width: 12px;
   height: 12px;
-  border: 2px solid var(--ink);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 50%;
   background: var(--cat);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 2px var(--paper-translucent);
 }
 
 /* 重なり回避時の小さな丸アイコン */
@@ -320,11 +344,11 @@ body {
   height: 28px;
   padding: 0;
   font-size: 14px;
-  border: 2px solid var(--ink);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 50%;
   background: var(--cat);
   cursor: pointer;
-  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: var(--shadow-sm);
   pointer-events: auto;
 }
 
@@ -343,10 +367,10 @@ body {
 
 /* 選択中 */
 .topic-marker.active .bubble {
-  background: #fff6cf;
+  background-color: var(--hl-solid);
   animation: pop 0.35s ease-out;
 }
-.topic-marker.active .bubble::after { border-top-color: #fff6cf; }
+.topic-marker.active .bubble::after { border-top-color: var(--hl-solid); }
 .topic-marker.active .pin {
   animation: pulse 1.4s ease-out infinite;
 }
@@ -365,16 +389,16 @@ body {
 /* ニュースの吹き出し：新聞の網点風・角ばった形・NEWSタグ */
 .is-news .bubble {
   border-radius: 6px;
-  background-color: #fffdf2;
+  background-color: var(--news-paper);
   background-image: radial-gradient(rgba(0, 0, 0, 0.13) 1px, transparent 1.2px);
   background-size: 6px 6px;
   max-width: 230px;
 }
 
-.is-news .bubble::after { border-top-color: #fffdf2; }
+.is-news .bubble::after { border-top-color: var(--news-paper); }
 
 .is-news .bubble-icon {
-  background: #fff;
+  background: var(--paper);
   border-radius: 4px;
 }
 
@@ -399,7 +423,7 @@ body {
 .topic-marker[data-category="news"] .news-tag { background: var(--accent); }
 .topic-marker[data-category="news"] .bubble-title { border-bottom-color: var(--accent); }
 .topic-marker[data-category="news"] .pin { background: var(--accent); }
-.is-news .dot { background: #fff; border-radius: 6px; }
+.is-news .dot { background: var(--paper); border-radius: 6px; }
 .zoom-far .news-tag { display: none; }
 
 /* ---------- パネル ---------- */
@@ -410,9 +434,9 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--paper);
-  border: 3px solid var(--ink);
-  border-radius: 16px;
-  box-shadow: 5px 5px 0 var(--ink);
+  border: var(--bw) var(--bs) var(--ink);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-lg);
   z-index: 4;
   overflow: hidden;
 }
@@ -449,12 +473,13 @@ body {
   width: 32px;
   height: 32px;
   font-size: 16px;
-  border: 2px solid var(--ink);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 50%;
+  color: var(--ink);
   background: var(--paper);
   cursor: pointer;
 }
-.close-btn:hover { background: #fff6cf; }
+.close-btn:hover { background: var(--hl); }
 
 .sheet-grip { display: none; }
 
@@ -462,7 +487,9 @@ body {
   margin: 0 12px;
   padding: 8px 12px;
   font: inherit;
-  border: 2px solid var(--ink);
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 10px;
 }
 
@@ -495,11 +522,11 @@ body {
 }
 
 .topic-list-item:hover, .topic-list-item:focus-visible {
-  background: #fff6cf;
+  background: var(--hl);
   outline: none;
 }
 
-.topic-list-item.active { background: #ffe98a; }
+.topic-list-item.active { background: var(--hl-mid); }
 
 .list-icon {
   flex: none;
@@ -507,7 +534,7 @@ body {
   place-items: center;
   width: 32px;
   height: 32px;
-  border: 2px solid var(--ink);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 50%;
   background: var(--cat);
 }
@@ -524,7 +551,7 @@ body {
   gap: 8px;
   margin: 8px 12px 0;
   padding: 6px 8px 6px 10px;
-  background: #fffdf2;
+  background: var(--news-paper);
   border: 2px dashed var(--ink);
   border-radius: 10px;
 }
@@ -540,14 +567,15 @@ body {
   flex: none;
   width: 30px;
   height: 30px;
-  border: 2px solid var(--ink);
+  border: var(--bw-sm) var(--bs) var(--ink);
   border-radius: 50%;
+  color: var(--ink);
   background: var(--paper);
   cursor: pointer;
 }
 .news-refresh:disabled { opacity: 0.5; cursor: wait; }
 
-.topic-list li.is-news .list-icon { border-radius: 6px; background: #fff; }
+.topic-list li.is-news .list-icon { border-radius: 6px; background: var(--paper); }
 .topic-list li.is-news .list-title { font-weight: 700; font-size: 0.88rem; line-height: 1.35; }
 
 .news-meta {
@@ -561,14 +589,14 @@ body {
   margin: 0 0 14px;
   padding: 8px 16px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   text-decoration: none;
   background: var(--ink);
-  border: 2px solid var(--ink);
-  border-radius: 999px;
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-pill);
   box-shadow: 3px 3px 0 var(--accent);
 }
-.news-link:hover { background: #333; }
+.news-link:hover { background: var(--ink-soft); }
 
 .type-badge {
   display: inline-block;
@@ -576,9 +604,9 @@ body {
   padding: 2px 10px;
   font-size: 0.85rem;
   font-weight: 700;
-  background: #fff;
+  background: var(--paper);
   border: 2px solid var(--cat);
-  border-radius: 999px;
+  border-radius: var(--r-pill);
 }
 
 .crime-note {
@@ -586,11 +614,11 @@ body {
   padding: 8px 10px;
   font-size: 0.82rem;
   line-height: 1.6;
-  background: #eef2f6;
+  background: var(--note-bg);
   border-left: 5px solid var(--cat);
   border-radius: 4px;
 }
-.crime-note a { color: #1659b3; }
+.crime-note a { color: var(--link); }
 
 /* 詳細 */
 .category-badge {
@@ -601,8 +629,8 @@ body {
   font-size: 0.85rem;
   color: #fff;
   background: var(--cat, #999);
-  border: 2px solid var(--ink);
-  border-radius: 999px;
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-pill);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
 }
 
@@ -631,9 +659,9 @@ body {
   padding: 10px 14px;
   font-family: var(--comic);
   font-size: 1.05rem;
-  background: #fff;
-  border: 3px solid var(--ink);
-  border-radius: 18px;
+  background: var(--paper);
+  border: var(--bw) var(--bs) var(--ink);
+  border-radius: var(--r-bubble);
 }
 
 .detail-quote::before,
@@ -652,7 +680,7 @@ body {
   bottom: -10px;
   left: 31px;
   border-width: 10px 6px 0 0;
-  border-color: #fff transparent transparent transparent;
+  border-color: var(--paper) transparent transparent transparent;
 }
 
 .detail-desc {
@@ -674,7 +702,7 @@ body {
 }
 .info-table dt { font-weight: 700; }
 .info-table dd { margin: 0; word-break: break-word; }
-.info-table a { color: #1659b3; }
+.info-table a { color: var(--link); }
 
 .detail-section h3 {
   margin: 14px 0 6px;
@@ -693,11 +721,11 @@ body {
 }
 
 .related-list .topic-list-item {
-  border: 2px solid var(--ink);
-  background: #fff;
+  border: var(--bw-sm) var(--bs) var(--ink);
+  background: var(--paper);
 }
 
-.related-list .topic-list-item:hover { background: #fff6cf; }
+.related-list .topic-list-item:hover { background: var(--hl); }
 
 .distance { margin-left: auto; font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
 
@@ -705,9 +733,9 @@ body {
 @media (max-width: 720px) {
   .app-header { padding: 6px 10px; gap: 6px 8px; }
   .app-title { font-size: 1.1rem; }
-  .header-tools { width: 100%; gap: 6px; }
+  .header-tools { width: 100%; gap: 6px; flex-wrap: wrap; }
   .tool-btn, .tool-select { padding: 5px 8px; font-size: 0.8rem; }
-  .ward-select-label { flex: 1; min-width: 0; }
+  .ward-select-label { flex: 1 1 28%; min-width: 0; }
   .ward-select-label .tool-select { width: 100%; text-overflow: ellipsis; }
   .category-filters {
     margin-left: 0;
@@ -727,7 +755,7 @@ body {
     max-height: 58%;
     border-radius: 18px 18px 0 0;
     border-bottom: 0;
-    box-shadow: 0 -4px 0 var(--ink);
+    box-shadow: var(--shadow-sheet);
   }
 
   .list-panel { width: auto; }
@@ -744,3 +772,161 @@ body {
 
   .help-hint { display: none; }
 }
+
+/* =====================================================================
+   デザインテーマ（html の data-theme で切り替え。既定はポップ）
+   ===================================================================== */
+
+/* ---------- クール：暗い背景にネオンの水色 ---------- */
+[data-theme="cool"] {
+  --hl-solid: #123047;
+  --ink: #dbeafe;
+  --ink-soft: #93c5fd;
+  --paper: #0f172a;
+  --paper-translucent: rgba(15, 23, 42, 0.88);
+  --bg: #020617;
+  --muted: #94a3b8;
+  --accent: #22d3ee;
+  --hl: rgba(34, 211, 238, 0.16);
+  --hl-mid: rgba(34, 211, 238, 0.28);
+  --hl-strong: #0e7490;
+  --news-paper: #111c33;
+  --link: #67e8f9;
+  --note-bg: #13213a;
+  --bw: 1.5px;
+  --bw-sm: 1px;
+  --r-bubble: 10px;
+  --r-panel: 12px;
+  --r-pill: 8px;
+  --shadow-sm: 0 0 8px rgba(34, 211, 238, 0.35);
+  --shadow-md: 0 0 12px rgba(34, 211, 238, 0.45);
+  --shadow-lg: 0 0 22px rgba(34, 211, 238, 0.35);
+  --shadow-sheet: 0 -2px 16px rgba(34, 211, 238, 0.35);
+  --comic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  --body: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  --map-filter: invert(1) hue-rotate(185deg) brightness(0.85) contrast(0.95) saturate(0.7);
+}
+[data-theme="cool"] .app-title { letter-spacing: 0.08em; }
+[data-theme="cool"] .app-title-main { background: none; color: var(--accent); text-shadow: 0 0 10px rgba(34, 211, 238, 0.6); }
+[data-theme="cool"] .bubble-title { font-weight: 700; }
+[data-theme="cool"] .is-news .bubble { background-image: none; }
+
+/* ---------- シンプル：白と細い線、飾りを少なく ---------- */
+[data-theme="simple"] {
+  --hl-solid: #eff6ff;
+  --ink: #1f2937;
+  --ink-soft: #4b5563;
+  --paper: #ffffff;
+  --bg: #f3f4f6;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --hl: #eff6ff;
+  --hl-mid: #dbeafe;
+  --hl-strong: #bfdbfe;
+  --news-paper: #ffffff;
+  --link: #2563eb;
+  --note-bg: #f3f4f6;
+  --bw: 1px;
+  --bw-sm: 1px;
+  --r-bubble: 8px;
+  --r-panel: 10px;
+  --r-pill: 6px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.12);
+  --shadow-sheet: 0 -4px 16px rgba(0, 0, 0, 0.12);
+  --comic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  --body: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  --map-filter: grayscale(0.55) brightness(1.04);
+}
+[data-theme="simple"] .app-title-main { background: none; }
+[data-theme="simple"] .is-news .bubble { background-image: none; }
+[data-theme="simple"] .bubble-title { border-bottom-width: 2px; }
+[data-theme="simple"] .chip { text-shadow: none; }
+
+/* ---------- ノスタルジック：セピアの紙と手書き風の文字 ---------- */
+[data-theme="nostalgic"] {
+  --hl-solid: #efdcb2;
+  --ink: #4a3523;
+  --ink-soft: #6b5139;
+  --paper: #f7eedb;
+  --paper-translucent: rgba(247, 238, 219, 0.92);
+  --bg: #ecdfc2;
+  --muted: #80694f;
+  --accent: #b5562b;
+  --hl: #efdcb2;
+  --hl-mid: #e6cb93;
+  --hl-strong: #ddb46c;
+  --news-paper: #f3e6c8;
+  --link: #8a3d1a;
+  --note-bg: #eadcbc;
+  --bw: 2px;
+  --bw-sm: 1.5px;
+  --r-bubble: 14px;
+  --r-panel: 6px;
+  --r-pill: 6px;
+  --shadow-sm: 2px 2px 0 rgba(74, 53, 35, 0.45);
+  --shadow-md: 3px 3px 0 rgba(74, 53, 35, 0.4);
+  --shadow-lg: 4px 4px 0 rgba(74, 53, 35, 0.35);
+  --shadow-sheet: 0 -3px 0 rgba(74, 53, 35, 0.4);
+  --comic: "Klee One", "Hiragino Mincho ProN", serif;
+  --body: "Klee One", "Hiragino Mincho ProN", serif;
+  --map-filter: sepia(0.7) saturate(0.75) contrast(0.95) brightness(1.02);
+}
+[data-theme="nostalgic"] body,
+[data-theme="nostalgic"] .panel,
+[data-theme="nostalgic"] .app-header {
+  /* 古い紙のような細かい横じま */
+  background-image: repeating-linear-gradient(0deg, rgba(74, 53, 35, 0.035) 0 1px, transparent 1px 4px);
+}
+[data-theme="nostalgic"] .app-title-main { background: linear-gradient(transparent 65%, var(--hl-strong) 65%); }
+[data-theme="nostalgic"] .chip { filter: sepia(0.45) saturate(0.8); }
+[data-theme="nostalgic"] .category-badge { filter: sepia(0.45) saturate(0.8); }
+
+/* ---------- 豪華：黒と金、明朝体 ---------- */
+[data-theme="gorgeous"] {
+  --hl-solid: #2c2210;
+  --ink: #d9b65d;
+  --ink-soft: #f1d996;
+  --paper: #15110a;
+  --paper-translucent: rgba(21, 17, 10, 0.9);
+  --bg: #0b0805;
+  --muted: #bda874;
+  --accent: #e8c15a;
+  --hl: rgba(217, 182, 93, 0.16);
+  --hl-mid: rgba(217, 182, 93, 0.3);
+  --hl-strong: #7a5c14;
+  --news-paper: #1c160c;
+  --link: #f3d27a;
+  --note-bg: #211a0e;
+  --bw: 4px;
+  --bw-sm: 3px;
+  --bs: double;
+  --r-bubble: 6px;
+  --r-panel: 4px;
+  --r-pill: 4px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.65), 0 0 10px rgba(217, 182, 93, 0.25);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 18px rgba(217, 182, 93, 0.2);
+  --shadow-sheet: 0 -6px 24px rgba(0, 0, 0, 0.7);
+  --comic: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  --body: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  --map-filter: invert(1) hue-rotate(180deg) sepia(0.75) saturate(1.3) brightness(0.7) contrast(1.05);
+}
+[data-theme="gorgeous"] .app-title {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, #b8892b, #f6e3a1, #c99a35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+[data-theme="gorgeous"] .app-title-main { background: none; }
+[data-theme="gorgeous"] .bubble,
+[data-theme="gorgeous"] .panel {
+  background-image: linear-gradient(160deg, rgba(217, 182, 93, 0.1), transparent 45%);
+}
+[data-theme="gorgeous"] .is-news .bubble { background-image: linear-gradient(160deg, rgba(217, 182, 93, 0.1), transparent 45%); }
+[data-theme="gorgeous"] .bubble-title,
+[data-theme="gorgeous"] .detail-title { font-weight: 700; }
+[data-theme="gorgeous"] .chip { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
