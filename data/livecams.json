@@ -1,6 +1,6 @@
 {
   "_comment": "さいたま市内のライブカメラ。lat/lng は映っている場所のおおよその位置。youtube.handle（@から始まるチャンネル名）か youtube.seedVideos（そのチャンネルの過去の配信の動画ID）から、scripts/fetch_livecams.py が channelId と今の配信（videoId・live）を調べて書き込む。",
-  "checkedAt": "2026-10-28T12:51+09:00",
+  "checkedAt": "2026-10-28T13:03+09:00",
   "cameras": [
     {
       "id": "kitaurawa-yono-rail",
