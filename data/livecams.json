@@ -1,0 +1,44 @@
+{
+  "_comment": "さいたま市内のライブカメラ。lat/lng は映っている場所のおおよその位置。youtube.handle（@から始まるチャンネル名）か youtube.seedVideos（そのチャンネルの過去の配信の動画ID）から、scripts/fetch_livecams.py が channelId と今の配信（videoId・live）を調べて書き込む。",
+  "checkedAt": null,
+  "cameras": [
+    {
+      "id": "kitaurawa-yono-rail",
+      "title": "北浦和〜与野 鉄道ライブカメラ",
+      "description": "JR北浦和駅と与野駅の間、東北本線と武蔵野線の分岐付近を見渡す鉄道ライブカメラです。京浜東北線・上野東京ライン・湘南新宿ラインなどの列車が映ります。",
+      "ward": "浦和区",
+      "lat": 35.8750,
+      "lng": 139.6440,
+      "provider": "かどりつ（YouTube）",
+      "siteUrl": "https://www.youtube.com/@kadoritsu44/live",
+      "youtube": { "handle": "@kadoritsu44" }
+    },
+    {
+      "id": "omiya-yard-shintoshin-rail",
+      "title": "大宮操車場・さいたま新都心 鉄道ライブカメラ",
+      "description": "大宮操車場とさいたま新都心駅付近を映す鉄道ライブカメラです。京浜東北線・東北本線・東北貨物線などが見えます。配信は1日2回（おおむね2時〜13時55分、14時〜翌1時45分）に分かれ、配信ごとにURLが変わります。",
+      "ward": "大宮区・中央区",
+      "lat": 35.9000,
+      "lng": 139.6285,
+      "provider": "くまくまくまチャンネル（YouTube）",
+      "siteUrl": "https://livecam.train-fan.com/",
+      "youtube": { "seedVideos": ["azZxJE3Zt7A", "WAEbmMuHkp8", "VHM0LJY7w3o"] }
+    },
+    {
+      "id": "omiya-daimoncho",
+      "title": "大宮駅東口・大門町中央通り お天気カメラ",
+      "description": "大宮駅東口の大門町中央通り付近を映すお天気カメラです。街の様子や天気の確認に使えます。",
+      "ward": "大宮区",
+      "lat": 35.9070,
+      "lng": 139.6268,
+      "provider": "FLAT（YouTube）",
+      "siteUrl": "https://www.youtube.com/@flat-sh/live",
+      "youtube": { "handle": "@flat-sh" }
+    }
+  ],
+  "officialLinks": [
+    { "label": "さいたま市 水位情報システム（市内河川のカメラ画像）", "url": "https://www.flood-info.city.saitama.jp/" },
+    { "label": "埼玉県 川の防災情報（河川監視カメラ）", "url": "https://suibo-river.pref.saitama.lg.jp/" },
+    { "label": "国土交通省 川の防災情報（荒川などのカメラ）", "url": "https://www.river.go.jp/" }
+  ]
+}

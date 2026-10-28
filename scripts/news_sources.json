@@ -6,7 +6,8 @@
     "excludeSources は配信元名の一部、excludeWords は見出し・概要に含まれる語で、当てはまる記事を除く。duplicateSimilarity（見出し全体の類似度）と duplicateOverlap（短い方の見出しがもう片方に含まれる割合）は0〜1で、どちらかがこの値以上なら重複として除く。",
     "keepFeedCategory=true のカテゴリ（口コミ）は、その取得元の投稿を常にそのカテゴリにする。keywordGroups は「各グループから1語ずつ含む」と当てはまる条件、ignoreWords は判定の前に取り除く語、カテゴリ内の excludeWords はそのカテゴリだけで除く語。type=mastodon の取得元は instance と tag からハッシュタグのRSSのURLを作る。",
     "notWords はそのカテゴリに入れない語（例: グルメの「給食」）。",
-    "type=mastodon・misskey は instances と tags、type=bluesky は queries を並べて書くと、組み合わせごとの取得元に展開する（Bluesky は公開検索API、Misskey は search-by-tag API。どちらもAPIキー不要）。"
+    "type=mastodon・misskey は instances と tags、type=bluesky は queries を並べて書くと、組み合わせごとの取得元に展開する（Bluesky は公開検索API、Misskey は search-by-tag API。どちらもAPIキー不要）。",
+    "maxPerService は、1つのサービス（Bluesky・Misskey・Mastodon など）から入れる最大件数。"
   ],
   "maxItems": 40,
   "maxAgeDays": 14,
@@ -414,9 +415,28 @@
         "飲食店",
         "レストラン",
         "テイクアウト",
-        "キッチンカー"
+        "キッチンカー",
+        "立ち飲み",
+        "立飲み",
+        "立呑み",
+        "角打ち",
+        "せんべろ",
+        "大衆酒場"
       ],
       "types": [
+        {
+          "id": "standing",
+          "label": "立ち飲み屋",
+          "icon": "🍶",
+          "keywords": [
+            "立ち飲み",
+            "立飲み",
+            "立呑み",
+            "立ち呑み",
+            "角打ち",
+            "せんべろ"
+          ]
+        },
         {
           "id": "buffet",
           "label": "食べ放題",
@@ -426,6 +446,18 @@
             "飲み放題",
             "ビュッフェ",
             "バイキング"
+          ]
+        },
+        {
+          "id": "izakaya",
+          "label": "居酒屋",
+          "icon": "🏮",
+          "keywords": [
+            "居酒屋",
+            "大衆酒場",
+            "酒場",
+            "焼き鳥居酒屋",
+            "飲み屋"
           ]
         },
         {
@@ -529,18 +561,6 @@
             "パン屋",
             "ベーカリー"
           ]
-        },
-        {
-          "id": "izakaya",
-          "label": "居酒屋・お酒",
-          "icon": "🍺",
-          "keywords": [
-            "居酒屋",
-            "酒場",
-            "ビール",
-            "日本酒",
-            "ワイン"
-          ]
         }
       ],
       "otherType": {
@@ -557,7 +577,7 @@
     },
     "reviews": {
       "label": "口コミ",
-      "maxItems": 100,
+      "maxItems": 150,
       "maxAgeDays": 30,
       "keepFeedCategory": true,
       "excludeWords": [
@@ -581,7 +601,33 @@
         "フォロバ",
         "相互フォロー",
         "プレゼント企画",
-        "懸賞"
+        "懸賞",
+        "メンズエステ",
+        "出勤情報",
+        "風俗",
+        "デリヘル",
+        "ソープ",
+        "キャバクラ",
+        "パパ活",
+        "セフレ",
+        "出会い系",
+        "アダルト",
+        "I'm at",
+        "Swarm",
+        "定刻",
+        "の周辺で雨",
+        "の周辺で雪",
+        "の周辺で雷",
+        "震度",
+        "地震情報",
+        "気象警報",
+        "自動投稿",
+        "セラピスト",
+        "立ちんぼ",
+        "10連ガチャ",
+        "運行情報がありました",
+        "今日の運行は終わりました",
+        "#乗車記録"
       ],
       "types": [
         {
@@ -700,7 +746,8 @@
         "id": "other",
         "label": "つぶやき",
         "icon": "💬"
-      }
+      },
+      "maxPerService": 60
     },
     "news": {
       "label": "ニュース",
@@ -806,6 +853,18 @@
       "filter": true
     },
     {
+      "name": "Googleニュース「さいたま市 居酒屋・立ち飲み」",
+      "category": "gourmet",
+      "query": "さいたま市 (居酒屋 OR 立ち飲み OR せんべろ OR 角打ち OR 大衆酒場) when:30d",
+      "filter": true
+    },
+    {
+      "name": "Googleニュース「大宮・浦和 居酒屋・立ち飲み」",
+      "category": "gourmet",
+      "query": "(大宮 OR 浦和) (居酒屋 OR 立ち飲み OR せんべろ OR 酒場) when:30d",
+      "filter": true
+    },
+    {
       "name": "Googleニュース「さいたま市 スーパー 特売」",
       "category": "supermarket",
       "query": "さいたま市 スーパー (特売 OR セール OR チラシ OR オープン OR リニューアル) when:14d",
@@ -841,7 +900,6 @@
         "埼玉",
         "与野",
         "岩槻",
-        "見沼",
         "北浦和",
         "武蔵浦和",
         "さいたま新都心",

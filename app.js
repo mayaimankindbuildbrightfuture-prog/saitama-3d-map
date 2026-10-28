@@ -9,6 +9,7 @@
   const DEM_TILES = 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png';
   const DATA_URL = 'data/topics.json';
   const NEWS_URL = 'data/news.json';
+  const LIVECAMS_URL = 'data/livecams.json';
   const NEWS_REFRESH_MS = 15 * 60 * 1000; // 開いたままでも15分ごとに news.json を読み直す
   const NEWS_NEARBY_KM = 1.5;
   // data/news.json の記事のカテゴリ（scripts/news_sources.json の categories に対応）。
@@ -63,6 +64,10 @@
     collisionFrame: 0,
     newsMeta: null, // { generatedAt, sources }
     savedView: null, // トピックを開く前の視点
+    livecams: null, // data/livecams.json
+    camMarkers: [], // [{ marker, el, cam }]
+    camsVisible: false,
+    activeCamId: null,
   };
 
   const $ = (sel) => document.querySelector(sel);
@@ -74,7 +79,11 @@
   });
 
   async function init() {
-    const [data, style, news] = await Promise.all([loadJSON(DATA_URL), loadStyle(), loadNews()]);
+    const [data, style, news, livecams] = await Promise.all([
+      loadJSON(DATA_URL), loadStyle(), loadNews(),
+      loadJSON(LIVECAMS_URL).catch((err) => { console.warn('ライブカメラの一覧を読み込めませんでした:', err); return null; }),
+    ]);
+    state.livecams = livecams;
     state.data = data;
     Object.assign(data.categories, FEED_CATEGORIES);
     state.topics = data.topics.slice();
@@ -126,6 +135,7 @@
 
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
     map.addControl(new ResetViewControl(), 'top-right');
+    map.addControl(new LiveCamControl(), 'top-right');
     map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-right');
 
     map.on('load', () => {
@@ -230,6 +240,148 @@
     onRemove() {
       this._container.remove();
     }
+  }
+
+  // ---------- ライブカメラ ----------
+  // 地図右上の 📹 ボタンで、ライブカメラの場所の表示・非表示を切り替える
+  class LiveCamControl {
+    onAdd() {
+      this._container = document.createElement('div');
+      this._container.className = 'maplibregl-ctrl maplibregl-ctrl-group livecam-ctrl';
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.id = 'livecam-toggle';
+      btn.title = 'ライブカメラの場所を表示';
+      btn.setAttribute('aria-label', 'ライブカメラの場所を表示');
+      btn.setAttribute('aria-pressed', 'false');
+      btn.textContent = '📹';
+      btn.addEventListener('click', () => setCamsVisible(!state.camsVisible));
+      this._container.appendChild(btn);
+      return this._container;
+    }
+    onRemove() {
+      this._container.remove();
+    }
+  }
+
+  function setCamsVisible(visible) {
+    const cams = (state.livecams && state.livecams.cameras) || [];
+    if (visible && !cams.length) {
+      showToast('ライブカメラの情報を読み込めませんでした。');
+      return;
+    }
+    state.camsVisible = visible;
+    const btn = $('#livecam-toggle');
+    if (btn) {
+      btn.setAttribute('aria-pressed', String(visible));
+      btn.title = visible ? 'ライブカメラの場所を隠す' : 'ライブカメラの場所を表示';
+    }
+    if (visible && !state.camMarkers.length) cams.forEach(createCamMarker);
+    state.camMarkers.forEach(({ marker }) => {
+      if (visible) marker.addTo(state.map);
+      else marker.remove();
+    });
+    if (visible) {
+      // カメラ同士が重ならないよう、すべてのカメラが入る範囲まで寄る
+      const bounds = new maplibregl.LngLatBounds();
+      cams.forEach((c) => bounds.extend([c.lng, c.lat]));
+      const mobile = MOBILE_QUERY.matches;
+      state.map.fitBounds(bounds, {
+        padding: mobile ? { top: 60, bottom: 60, left: 40, right: 60 } : { top: 120, bottom: 120, left: 160, right: 160 },
+        maxZoom: 14.5, pitch: 50, duration: 1400,
+      });
+      showToast(`📹 ライブカメラ ${cams.length}か所を表示しました。カメラを押すと映像が見られます。`);
+    } else {
+      closeCam();
+    }
+  }
+
+  function createCamMarker(cam) {
+    const yt = cam.youtube || {};
+    const el = document.createElement('div');
+    el.className = 'cam-marker';
+    el.dataset.id = cam.id;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cam-pin';
+    btn.setAttribute('aria-label', `${cam.title}の映像を見る`);
+    btn.innerHTML = '<span class="cam-pin-icon" aria-hidden="true">📹</span><span class="cam-pin-label"></span>';
+    btn.querySelector('.cam-pin-label').textContent = cam.title;
+    if (yt.live) btn.classList.add('is-live');
+    btn.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      openCam(cam.id);
+    });
+    el.appendChild(btn);
+    const marker = new maplibregl.Marker({ element: el, anchor: 'bottom' }).setLngLat([cam.lng, cam.lat]);
+    state.camMarkers.push({ marker, el, cam });
+  }
+
+  function camEmbedUrl(cam) {
+    const yt = cam.youtube || {};
+    const params = 'autoplay=1&mute=1&playsinline=1';
+    // 配信ごとに動画IDが変わるので、チャンネルの「今の配信」を埋め込むのを優先する
+    if (yt.channelId) return `https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(yt.channelId)}&${params}`;
+    if (yt.videoId) return `https://www.youtube.com/embed/${encodeURIComponent(yt.videoId)}?${params}`;
+    return '';
+  }
+
+  function openCam(id) {
+    const cam = state.livecams.cameras.find((c) => c.id === id);
+    if (!cam) return;
+    // スマホでは下部シートが重なるので、トピックの詳細は閉じる
+    if (MOBILE_QUERY.matches && !$('#detail-panel').hidden) closeDetail({ restoreView: false });
+    state.activeCamId = id;
+    state.camMarkers.forEach(({ el }) => el.classList.toggle('active', el.dataset.id === id));
+
+    const yt = cam.youtube || {};
+    $('#cam-title').textContent = cam.title;
+    $('#cam-live').hidden = !yt.live;
+    const site = $('#cam-site');
+    site.href = cam.siteUrl;
+    site.title = `${cam.provider} の配信ページを開く`;
+
+    const box = $('#cam-video');
+    box.replaceChildren();
+    const src = camEmbedUrl(cam);
+    if (src) {
+      box.append(el('iframe', {
+        src,
+        title: `${cam.title}（ライブ映像）`,
+        allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen',
+        allowfullscreen: '',
+        referrerpolicy: 'strict-origin-when-cross-origin',
+      }));
+    } else {
+      box.append(el('p', { className: 'cam-empty' }, '映像を読み込めませんでした。「↗ 配信サイトへ」から見てください。'));
+    }
+
+    const checked = state.livecams.checkedAt ? formatDate(state.livecams.checkedAt) : '';
+    const status = !checked ? '' : yt.live ? `${checked} 時点で配信中でした。` : `${checked} 時点では配信していませんでした（配信時間外の場合は映像が出ません）。`;
+    const note = $('#cam-note');
+    note.replaceChildren(
+      el('span', {}, `📍 ${cam.ward}付近・配信: ${cam.provider}。${status}`),
+      el('br'),
+      el('span', {}, cam.description),
+    );
+    const links = state.livecams.officialLinks || [];
+    if (links.length) {
+      note.append(el('br'), el('span', {}, '河川の監視カメラ（静止画）: '));
+      links.forEach((l, i) => {
+        if (i) note.append('・');
+        note.append(el('a', { href: l.url, target: '_blank', rel: 'noopener' }, l.label));
+      });
+    }
+    $('#cam-panel').hidden = false;
+    $('.app-main').classList.add('cam-open');
+  }
+
+  function closeCam() {
+    $('#cam-panel').hidden = true;
+    $('#cam-video').replaceChildren(); // 映像を止める
+    $('.app-main').classList.remove('cam-open');
+    state.activeCamId = null;
+    state.camMarkers.forEach(({ el }) => el.classList.remove('active'));
   }
 
   function resetView() {
@@ -432,8 +584,11 @@
 
     panel.hidden = false;
     body.scrollTop = 0;
-    // スマホでは一覧と詳細を同時に開かない
-    if (MOBILE_QUERY.matches) setListOpen(false);
+    // スマホでは一覧・ライブカメラと詳細を同時に開かない
+    if (MOBILE_QUERY.matches) {
+      setListOpen(false);
+      closeCam();
+    }
   }
 
   function renderTopicBody(body, topic) {
@@ -854,10 +1009,13 @@
       });
     });
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !$('#detail-panel').hidden) closeDetail();
+      if (e.key !== 'Escape') return;
+      if (!$('#detail-panel').hidden) closeDetail();
+      else if (!$('#cam-panel').hidden) closeCam();
     });
     window.addEventListener('hashchange', openFromHash);
     $('#news-refresh').addEventListener('click', refreshNews);
+    $('#cam-close').addEventListener('click', closeCam);
     bindThemeSelect();
     $('#type-select').addEventListener('change', (e) => {
       state.typeFilter = e.target.value;

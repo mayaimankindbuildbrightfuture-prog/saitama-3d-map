@@ -1,4 +1,4 @@
-# さいたま市の最新ニュースを定期的に取得して data/news.json を更新し、GitHub Pages に公開する。
+# さいたま市の最新ニュースとライブカメラの配信状況を定期的に調べて data/ を更新し、GitHub Pages に公開する。
 # APIキーやシークレットは不要（リポジトリ標準の GITHUB_TOKEN だけを使う）。
 name: ニュース更新と公開
 
@@ -33,15 +33,18 @@ jobs:
       - name: ニュースを取得
         run: python3 scripts/fetch_news.py
 
+      - name: ライブカメラの配信を確認
+        run: python3 scripts/fetch_livecams.py
+
       - name: 変更があればコミット
         run: |
-          if git diff --quiet -- data/news.json; then
-            echo "ニュースに変更はありません"
+          if git diff --quiet -- data/news.json data/livecams.json; then
+            echo "ニュース・ライブカメラに変更はありません"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json
+          git add data/news.json data/livecams.json
           git commit -m "ニュースを更新"
           git push
 

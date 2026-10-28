@@ -122,6 +122,9 @@ class FetchNewsTest(unittest.TestCase):
             ("飲食店で強盗 男を逮捕 さいたま市", "crime", "violent"),  # グルメ語を含んでも事件を優先
             ("見沼区で不審者の声かけ", "crime", "suspicious"),
             ("さいたま市で秋のまつり", "news", ""),
+            ("大宮駅前に立ち飲み屋がオープン", "gourmet", "standing"),
+            ("浦和のせんべろ酒場が人気", "gourmet", "standing"),
+            ("さいたま市の老舗居酒屋が閉店", "gourmet", "izakaya"),
         ]
         for text, cat, typ in cases:
             got_cat, kind = fetch_news.classify(text, "news", categories)
@@ -240,6 +243,33 @@ class FetchNewsTest(unittest.TestCase):
                          ["Mastodon #大宮（a.example）", "Mastodon #浦和（a.example）", "Mastodon #大宮（b.example）",
                           "Mastodon #浦和（b.example）", "Bluesky「岩槻」", "x"])
         self.assertEqual(srcs[0]["category"], "reviews")
+
+    def test_reviews_balance_and_filters(self):
+        import json
+        categories = json.loads((ROOT / "scripts" / "news_sources.json").read_text("utf-8"))["categories"]
+        categories["reviews"]["maxPerService"] = 2
+        bsky = ["大宮駅の東口でパン屋を見つけた", "大宮駅前の銀杏並木が色づいてきた", "大宮駅の新幹線ホームは風が強い",
+                "大宮駅ナカのカフェで作業中", "大宮駅から歩いて氷川神社へ"]
+        misskey = ["浦和のうなぎ屋さんで昼ごはん", "浦和駅西口の古本屋が好き", "浦和の図書館で勉強してきた"]
+        texts = [("Bluesky「大宮駅」", t) for t in bsky] + [("Misskey #さいたま（misskey.io）", t) for t in misskey]
+        texts += [
+            ("Bluesky「浦和駅」", "【出勤情報】武蔵浦和メンズエステ 本日のご案内"),
+            ("Bluesky「浦和駅」", "I'm at 大宮駅 in さいたま市 Swarm"),
+            ("Bluesky「さいたま市」", "16:00更新 #さいたま市 の周辺で雨が止んだようです。"),
+            ("Bluesky「浦和駅」", "今日は大宮駅から出勤、北浦和で乗り換え"),  # 普通の投稿は残す
+        ]
+        raw = [{"title": t, "rawTitle": "", "summary": t, "url": f"https://example.com/r/{i}",
+                "published": NOW - timedelta(minutes=i), "source": feed, "feed": feed, "feedCategory": "reviews"}
+               for i, (feed, t) in enumerate(texts)]
+        news = fetch_news.build_news(raw, self.places, now=NOW, max_items=40, max_age_days=30,
+                                     filters={}, categories=categories)
+        by_service = {}
+        for n in news:
+            by_service.setdefault(n["source"].split("「")[0].split(" ")[0], []).append(n["title"])
+        self.assertEqual(len(by_service["Bluesky"]), 2)
+        self.assertEqual(len(by_service["Misskey"]), 2)
+        titles = [n["title"] for n in news]
+        self.assertFalse(any("メンズエステ" in t or "Swarm" in t or "雨が止んだ" in t for t in titles))
 
     def test_atom_feed(self):
         atom = b"""<?xml version="1.0" encoding="utf-8"?>
