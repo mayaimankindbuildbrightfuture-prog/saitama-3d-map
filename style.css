@@ -168,15 +168,15 @@ body {
 /* テーマに合わせて地図の色味を変える（吹き出しなどの要素には影響しない） */
 #map > .maplibregl-canvas-container > .maplibregl-canvas { filter: var(--map-filter); }
 
-/* ハザードマップの重ね合わせ（乗算） */
-.hazard-overlay {
+/* ハザードマップ・天気の重ね合わせ（乗算） */
+.blend-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
   mix-blend-mode: multiply;
 }
-.hazard-overlay[hidden] { display: none; }
-.hazard-overlay .maplibregl-canvas { pointer-events: none; }
+.blend-overlay[hidden] { display: none; }
+.blend-overlay .maplibregl-canvas { pointer-events: none; }
 
 .help-hint {
   position: absolute;
@@ -459,7 +459,8 @@ body {
 }
 
 .detail-panel {
-  right: 56px;
+  /* 右上の地図のボタン（📹 カメラ・🌊 ハザード・🌦 天気）に重ならないよう空ける */
+  right: 104px;
   width: var(--panel-w);
 }
 
@@ -790,6 +791,130 @@ body {
 .hazard-source { margin: 4px 0 0; font-size: 0.7rem; line-height: 1.5; color: var(--muted); }
 .hazard-source a { color: var(--link); }
 
+/* ---------- 天気パネル ---------- */
+.weather-ctrl button {
+  width: auto;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.weather-ctrl button[aria-pressed="true"] { background: #c7f0d8; }
+
+.weather-panel {
+  position: absolute;
+  right: 104px;
+  bottom: 28px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  width: min(380px, calc(100% - 80px));
+  max-height: calc(100% - 60px);
+  padding: 8px 12px 10px;
+  background: var(--paper);
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-md);
+}
+.weather-panel[hidden] { display: none; }
+.weather-panel .wx-pane { overflow-y: auto; min-height: 0; }
+.weather-panel .wx-pane[hidden] { display: none; }
+
+.wx-tabs { display: flex; gap: 4px; margin: 6px 0 4px; }
+.wx-tab {
+  flex: 1;
+  padding: 4px 2px;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-pill);
+  cursor: pointer;
+}
+.wx-tab[aria-selected="true"] { background: var(--hl-strong); }
+
+.radar-time-row { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.radar-time-row input { flex: 1; }
+.radar-time { min-width: 6.5em; font-size: 0.85rem; font-weight: 700; text-align: right; }
+.radar-time.is-forecast { color: #b45309; }
+
+.wx-block { margin: 6px 0; }
+.wx-subtitle { margin: 8px 0 4px; font-family: var(--comic); font-size: 0.95rem; }
+.wx-note { margin: 4px 0 0; font-size: 0.7rem; line-height: 1.5; color: var(--muted); }
+.wx-note a { color: var(--link); }
+.wx-sub { display: block; font-size: 0.75rem; color: var(--muted); }
+.wx-ok { margin: 4px 0; font-size: 0.85rem; font-weight: 700; }
+.wx-felt { margin: 4px 0 6px; padding: 6px 8px; font-size: 0.82rem; font-weight: 700; background: var(--hl); border-radius: 8px; }
+
+.wx-days, .wx-laundry-list, .wx-quake-list, .wx-warning-list { margin: 0; padding: 0; list-style: none; }
+.wx-day { padding: 6px 0; border-bottom: 1px dashed var(--muted); }
+.wx-day-label { display: inline-block; min-width: 2.6em; font-weight: 700; }
+.wx-weather { font-weight: 700; }
+
+.wx-warning-list { display: flex; flex-wrap: wrap; gap: 4px; }
+.wx-warning { padding: 2px 10px; font-size: 0.82rem; font-weight: 700; border-radius: 999px; }
+.wx-warning.is-advisory { color: #111; background: #fde68a; }
+.wx-warning.is-warning { color: #fff; background: #dc2626; }
+.wx-warning.is-special { color: #fff; background: #4c0519; }
+
+.wx-laundry-card {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 2px 8px;
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: 10px;
+}
+.wx-laundry-card .wx-sub, .wx-laundry-card .wx-meter { grid-column: 1 / -1; }
+/* 背景色を付けるので、暗いテーマでも読めるよう文字色を固定する */
+.wx-laundry-card { color: #111; }
+.wx-laundry-card .wx-sub { color: #444; }
+.wx-laundry-icon { font-size: 1.4rem; }
+.wx-laundry-label { font-weight: 700; }
+.wx-laundry-card.level-5 { background: #fff7cc; }
+.wx-laundry-card.level-4 { background: #fffbe6; }
+.wx-laundry-card.level-2 { background: #eef2f7; }
+.wx-laundry-card.level-1 { background: #e2e8f0; }
+.wx-meter { display: flex; gap: 3px; }
+.wx-meter span { width: 22px; height: 6px; border-radius: 3px; background: #cbd5e1; }
+.wx-meter span.on { background: #f59e0b; }
+
+.wx-quake { display: flex; gap: 8px; align-items: flex-start; padding: 6px 0; border-bottom: 1px dashed var(--muted); font-size: 0.85rem; }
+.wx-quake.felt { background: var(--hl); }
+.wx-shindo {
+  flex: none;
+  display: grid;
+  place-items: center;
+  min-width: 2.2em;
+  height: 2.2em;
+  font-weight: 700;
+  color: #111;
+  background: #e5e7eb;
+  border-radius: 6px;
+}
+.wx-shindo.s3 { background: #93c5fd; }
+.wx-shindo.s4 { background: #fde047; }
+.wx-shindo.s5m, .wx-shindo.s5p { color: #fff; background: #f97316; }
+.wx-shindo.s6m, .wx-shindo.s6p { color: #fff; background: #dc2626; }
+.wx-shindo.s7 { color: #fff; background: #7e22ce; }
+
+.quake-marker {
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  font-weight: 700;
+  color: #dc2626;
+  border: 3px solid #dc2626;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
 /* ---------- ライブカメラ ---------- */
 .livecam-ctrl button {
   width: auto;
@@ -1039,6 +1164,7 @@ body {
   }
   .cam-open .list-panel { bottom: 42%; max-height: 50%; }
   .cam-btn { padding: 4px 8px; font-size: 0.75rem; }
+  .weather-panel { left: 0; right: 0; bottom: 0; width: auto; max-height: 60%; border-radius: var(--r-panel) var(--r-panel) 0 0; }
 }
 
 /* =====================================================================

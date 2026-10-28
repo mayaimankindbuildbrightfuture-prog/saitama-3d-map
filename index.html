@@ -92,6 +92,44 @@
       <p id="hazard-source" class="hazard-source"></p>
     </section>
 
+    <section id="weather-panel" class="weather-panel" aria-label="天気" hidden>
+      <div class="hazard-head">
+        <p class="hazard-title">🌦 さいたま市の天気</p>
+        <button type="button" id="weather-close" class="close-btn" aria-label="天気を閉じる">✕</button>
+      </div>
+      <div class="wx-tabs" role="tablist">
+        <button type="button" class="wx-tab" role="tab" data-tab="radar" aria-selected="true">☔ 雨雲レーダー</button>
+        <button type="button" class="wx-tab" role="tab" data-tab="forecast" aria-selected="false">🧺 天気・洗濯</button>
+        <button type="button" class="wx-tab" role="tab" data-tab="quake" aria-selected="false">🌐 地震</button>
+      </div>
+      <div class="wx-pane" data-pane="radar">
+        <label class="hazard-row">
+          <span class="visually-hidden">重ねる情報の種類</span>
+          <select id="weather-layer" class="tool-select"></select>
+        </label>
+        <div class="radar-time-row">
+          <button type="button" id="radar-play" class="cam-btn">▶ 再生</button>
+          <input id="radar-slider" type="range" min="0" max="0" value="0" aria-label="表示する時刻">
+          <span id="radar-time" class="radar-time">読み込み中…</span>
+        </div>
+        <label class="hazard-row hazard-strength">
+          <span>濃さ</span>
+          <input id="weather-strength" type="range" min="20" max="100" value="100">
+        </label>
+        <ul id="radar-legend" class="hazard-legend"></ul>
+        <p class="hazard-source">出典: <a href="https://www.jma.go.jp/bosai/nowc/" target="_blank" rel="noopener">気象庁 ナウキャスト</a>（5分ごとに更新・過去約3時間〜1時間先）。地図の色と<b>乗算</b>で重ねています。</p>
+      </div>
+      <div class="wx-pane" data-pane="forecast" hidden>
+        <div id="wx-warnings" class="wx-block"></div>
+        <div id="wx-forecast" class="wx-block"></div>
+        <p class="wx-subtitle">🧺 洗濯指数</p>
+        <div id="wx-laundry" class="wx-block"></div>
+      </div>
+      <div class="wx-pane" data-pane="quake" hidden>
+        <div id="wx-quakes" class="wx-block"></div>
+      </div>
+    </section>
+
     <section id="cam-panel" class="cam-panel" aria-label="ライブカメラの映像" hidden>
       <div class="cam-head">
         <p class="cam-title"><span class="cam-live" id="cam-live" hidden>● LIVE</span><span id="cam-title"></span></p>

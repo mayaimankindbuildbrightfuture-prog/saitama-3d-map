@@ -74,6 +74,15 @@
     camsVisible: false,
     activeCamId: null,
     hazardVisible: false,
+    weatherVisible: false,
+    weatherTab: 'radar',
+    weatherLayer: 'rain',
+    weatherMap: null,
+    weatherBox: null,
+    radarFrames: [], // [{ basetime, validtime, forecast }]
+    radarIndex: 0,
+    radarTimer: 0,
+    weatherRefreshTimer: 0,
     hazardLayer: 'flood_l2',
     hazardMap: null,
     hazardBox: null,
@@ -146,6 +155,7 @@
     map.addControl(new ResetViewControl(), 'top-right');
     map.addControl(new LiveCamControl(), 'top-right');
     map.addControl(new HazardControl(), 'top-right');
+    map.addControl(new WeatherControl(), 'top-right');
     map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-right');
 
     map.on('load', () => {
@@ -298,26 +308,25 @@
     return [`${HAZARD_TILE_BASE}${layer.path}/{z}/{x}/{y}.png`];
   }
 
-  // 本体の地図の上に、ハザードのタイルだけを描く透明な地図を重ね、CSS の mix-blend-mode: multiply（乗算）で合成する。
+  // 本体の地図の上に、タイルだけを描く透明な地図を重ね、CSS の mix-blend-mode: multiply（乗算）で合成する。
   // 視点は本体の地図に合わせて動かし、地形の高さもそろえて傾けたときのずれを防ぐ。
-  function ensureHazardMap() {
-    if (state.hazardMap) return state.hazardMap;
+  // ハザードと天気（雨雲など）でそれぞれ1枚ずつ使う。
+  function createOverlayMap({ className, tiles, maxzoom, resampling = 'nearest' }) {
     const main = state.map;
     const box = document.createElement('div');
-    box.className = 'hazard-overlay';
+    box.className = `blend-overlay ${className}`;
     box.setAttribute('aria-hidden', 'true');
     const canvasContainer = main.getCanvasContainer();
     canvasContainer.insertBefore(box, main.getCanvas().nextSibling);
-    const layer = HAZARD_LAYERS.find((l) => l.id === state.hazardLayer) || HAZARD_LAYERS[0];
     const overlay = new maplibregl.Map({
       container: box,
       style: {
         version: 8,
         sources: {
-          hazard: { type: 'raster', tiles: hazardTiles(layer), tileSize: 256, minzoom: 2, maxzoom: 17 },
+          tiles: { type: 'raster', tiles, tileSize: 256, minzoom: 2, maxzoom },
           'terrain-dem': { type: 'raster-dem', tiles: [DEM_TILES], encoding: 'terrarium', tileSize: 256, maxzoom: 14 },
         },
-        layers: [{ id: 'hazard', type: 'raster', source: 'hazard', paint: { 'raster-opacity': 1, 'raster-resampling': 'nearest' } }],
+        layers: [{ id: 'tiles', type: 'raster', source: 'tiles', paint: { 'raster-opacity': 1, 'raster-resampling': resampling } }],
         terrain: main.getTerrain() ? { source: 'terrain-dem', exaggeration: main.getTerrain().exaggeration } : undefined,
       },
       interactive: false,
@@ -329,15 +338,26 @@
       pitch: main.getPitch(),
       fadeDuration: 0,
     });
-    overlay.on('error', (e) => console.warn('hazard map error:', e && e.error ? e.error.message : e));
+    overlay.on('error', (e) => {
+      const err = e && e.error;
+      if (err && err.name === 'AbortError') return; // 地図を動かしたときの読み込みの取り消しは問題ない
+      console.warn(`${className} error:`, err ? err.message : e);
+    });
     const sync = () => overlay.jumpTo({
       center: main.getCenter(), zoom: main.getZoom(), bearing: main.getBearing(), pitch: main.getPitch(),
     });
     main.on('move', sync);
     main.on('resize', () => { overlay.resize(); sync(); });
-    state.hazardMap = overlay;
+    return { map: overlay, box };
+  }
+
+  function ensureHazardMap() {
+    if (state.hazardMap) return state.hazardMap;
+    const layer = HAZARD_LAYERS.find((l) => l.id === state.hazardLayer) || HAZARD_LAYERS[0];
+    const { map, box } = createOverlayMap({ className: 'hazard-overlay', tiles: hazardTiles(layer), maxzoom: 17 });
+    state.hazardMap = map;
     state.hazardBox = box;
-    return overlay;
+    return map;
   }
 
   function setHazardVisible(visible) {
@@ -362,7 +382,7 @@
     const layer = HAZARD_LAYERS.find((l) => l.id === id);
     if (!layer) return;
     state.hazardLayer = id;
-    const src = state.hazardMap && state.hazardMap.getSource('hazard');
+    const src = state.hazardMap && state.hazardMap.getSource('tiles');
     if (src && src.setTiles) src.setTiles(hazardTiles(layer));
     renderHazardPanel();
   }
@@ -392,6 +412,428 @@
         ' の凡例をご覧ください。'));
     }
     $('#hazard-source').innerHTML = `${HAZARD_ATTRIBUTION}。地図の色と<b>乗算</b>で重ねています。避難の判断には <a href="https://www.city.saitama.lg.jp/" target="_blank" rel="noopener">さいたま市</a> の最新のハザードマップも確認してください。`;
+  }
+
+  // ---------- 天気（雨雲レーダー・天気予報・警報・洗濯指数・地震） ----------
+  // 気象庁の公開データ（bosai）と Open-Meteo を使う。どちらも APIキー不要で、ブラウザから直接読める（CORS 許可あり）。
+  const JMA = 'https://www.jma.go.jp/bosai';
+  const JMA_PAGE = 'https://www.jma.go.jp/bosai/nowc/';
+  const SAITAMA_FORECAST_OFFICE = '110000'; // 埼玉県
+  const SAITAMA_SOUTH_AREA = '110010'; // 埼玉県南部（さいたま市を含む予報区）
+  const SAITAMA_TEMP_POINT = '43241'; // 気温の地点「さいたま」
+  const SAITAMA_CITY_AREA = '1110000'; // 警報・注意報の「さいたま市」
+  const SAITAMA_WARD_CODES = ['1110100', '1110200', '1110300', '1110400', '1110500', '1110600', '1110700', '1110800', '1110900', '1111000'];
+  const SAITAMA_POINT = { lat: 35.8617, lng: 139.6455 }; // 市役所付近
+  const WEATHER_REFRESH_MS = 5 * 60 * 1000;
+
+  // 雨雲などのナウキャストの種類。targets は時刻一覧のファイル（N1: 実況、N2: 降水の予報、N3: 雷・竜巻）
+  const WEATHER_LAYERS = [
+    { id: 'rain', label: '☔ 雨雲（降水ナウキャスト）', element: 'hrpns', targets: ['targetTimes_N1.json', 'targetTimes_N2.json'],
+      legend: [['#f2f2ff', '1mm/h未満'], ['#a0d2ff', '1〜5'], ['#218cff', '5〜10'], ['#0041ff', '10〜20'],
+        ['#faf500', '20〜30'], ['#ff9900', '30〜50'], ['#ff2800', '50〜80'], ['#b40068', '80以上']] },
+    { id: 'thunder', label: '⚡ 雷（雷ナウキャスト）', element: 'thns', targets: ['targetTimes_N3.json'] },
+    { id: 'tornado', label: '🌪 竜巻（竜巻発生確度）', element: 'trns', targets: ['targetTimes_N3.json'] },
+  ];
+
+  // 気象庁の警報・注意報のコード（防災情報XMLのコード表と同じ）
+  const WARNING_NAMES = {
+    '02': '暴風雪警報', '03': '大雨警報', '04': '洪水警報', '05': '暴風警報', '06': '大雪警報', '07': '波浪警報', '08': '高潮警報',
+    10: '大雨注意報', 12: '大雪注意報', 13: '風雪注意報', 14: '雷注意報', 15: '強風注意報', 16: '波浪注意報', 17: '融雪注意報',
+    18: '洪水注意報', 19: '高潮注意報', 20: '濃霧注意報', 21: '乾燥注意報', 22: 'なだれ注意報', 23: '低温注意報', 24: '霜注意報',
+    25: '着氷注意報', 26: '着雪注意報', 32: '暴風雪特別警報', 33: '大雨特別警報', 35: '暴風特別警報', 36: '大雪特別警報',
+    37: '波浪特別警報', 38: '高潮特別警報',
+  };
+
+  class WeatherControl {
+    onAdd() {
+      this._container = document.createElement('div');
+      this._container.className = 'maplibregl-ctrl maplibregl-ctrl-group weather-ctrl';
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.id = 'weather-toggle';
+      btn.title = '天気（雨雲レーダー・洗濯指数・地震）を表示';
+      btn.setAttribute('aria-label', '天気を表示');
+      btn.setAttribute('aria-pressed', 'false');
+      btn.textContent = '🌦 天気';
+      btn.addEventListener('click', () => setWeatherVisible(!state.weatherVisible));
+      this._container.appendChild(btn);
+      return this._container;
+    }
+    onRemove() {
+      this._container.remove();
+    }
+  }
+
+  function jmaTime(t) {
+    // 「20261028052000」（UTC）→ Date
+    return new Date(Date.UTC(+t.slice(0, 4), +t.slice(4, 6) - 1, +t.slice(6, 8), +t.slice(8, 10), +t.slice(10, 12)));
+  }
+
+  function hhmm(date) {
+    return date.toLocaleTimeString('ja-JP', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit' });
+  }
+
+  function radarTiles(frame, element) {
+    return [`${JMA}/jmatile/data/nowc/${frame.basetime}/none/${frame.validtime}/surf/${element}/{z}/{x}/{y}.png`];
+  }
+
+  async function loadRadarFrames(layer) {
+    const lists = await Promise.all(layer.targets.map((f) => loadJSON(`${JMA}/jmatile/data/nowc/${f}?t=${Date.now()}`)));
+    const frames = [];
+    const seen = new Set();
+    lists.flat().forEach((t) => {
+      if (!t.elements.includes(layer.element) || seen.has(t.validtime)) return;
+      seen.add(t.validtime);
+      frames.push({ basetime: t.basetime, validtime: t.validtime, forecast: t.basetime !== t.validtime });
+    });
+    frames.sort((a, b) => a.validtime.localeCompare(b.validtime));
+    return frames;
+  }
+
+  async function refreshRadar({ keepPosition = false } = {}) {
+    const layer = WEATHER_LAYERS.find((l) => l.id === state.weatherLayer) || WEATHER_LAYERS[0];
+    let frames;
+    try {
+      frames = await loadRadarFrames(layer);
+    } catch (err) {
+      console.warn('ナウキャストの時刻一覧を読み込めませんでした:', err);
+      $('#radar-time').textContent = '雨雲などの情報を読み込めませんでした';
+      return;
+    }
+    if (!frames.length) return;
+    const prev = state.radarFrames[state.radarIndex];
+    state.radarFrames = frames;
+    // 既定は「今」（実況の最新）。読み直したときは同じ時刻を保つ
+    const latestObs = frames.map((f) => !f.forecast).lastIndexOf(true);
+    const same = keepPosition && prev ? frames.findIndex((f) => f.validtime === prev.validtime) : -1;
+    state.radarIndex = same >= 0 ? same : Math.max(0, latestObs);
+    const slider = $('#radar-slider');
+    slider.max = String(frames.length - 1);
+    slider.value = String(state.radarIndex);
+    showRadarFrame();
+  }
+
+  function showRadarFrame() {
+    const layer = WEATHER_LAYERS.find((l) => l.id === state.weatherLayer) || WEATHER_LAYERS[0];
+    const frame = state.radarFrames[state.radarIndex];
+    if (!frame) return;
+    if (!state.weatherMap) {
+      const { map, box } = createOverlayMap({ className: 'weather-overlay', tiles: radarTiles(frame, layer.element), maxzoom: 10 });
+      state.weatherMap = map;
+      state.weatherBox = box;
+    } else {
+      const src = state.weatherMap.getSource('tiles');
+      if (src && src.setTiles) src.setTiles(radarTiles(frame, layer.element));
+    }
+    state.weatherBox.hidden = false;
+    const t = jmaTime(frame.validtime);
+    $('#radar-time').textContent = `${hhmm(t)}（${frame.forecast ? '予報' : '実況'}）`;
+    $('#radar-time').classList.toggle('is-forecast', frame.forecast);
+  }
+
+  function stopRadarAnimation() {
+    clearInterval(state.radarTimer);
+    state.radarTimer = 0;
+    const btn = $('#radar-play');
+    if (btn) btn.textContent = '▶ 再生';
+  }
+
+  function toggleRadarAnimation() {
+    if (state.radarTimer) {
+      stopRadarAnimation();
+      return;
+    }
+    $('#radar-play').textContent = '⏸ 停止';
+    state.radarTimer = setInterval(() => {
+      state.radarIndex = (state.radarIndex + 1) % state.radarFrames.length;
+      $('#radar-slider').value = String(state.radarIndex);
+      showRadarFrame();
+    }, 700);
+  }
+
+  function renderWeatherLegend() {
+    const layer = WEATHER_LAYERS.find((l) => l.id === state.weatherLayer) || WEATHER_LAYERS[0];
+    const legend = $('#radar-legend');
+    if (layer.legend) {
+      legend.replaceChildren(...layer.legend.map(([color, label]) => {
+        const sw = el('span', { className: 'hazard-swatch' });
+        sw.style.background = color;
+        return el('li', {}, sw, label);
+      }));
+    } else {
+      legend.replaceChildren(el('li', { className: 'hazard-legend-note' }, '色の意味は ',
+        el('a', { href: JMA_PAGE, target: '_blank', rel: 'noopener' }, '気象庁のナウキャスト'), ' の凡例をご覧ください。'));
+    }
+  }
+
+  // ---- 洗濯指数（このアプリ独自の目安） ----
+  // 日中（9〜15時）の気温・湿度・風・日照と、降水確率・降水量から 0〜100 の点数を出し、5段階にする。
+  function laundryScore(day) {
+    let score = 40;
+    score += (day.tempMax - 15) * 2;
+    score += (60 - day.humidity) * 0.8;
+    score += Math.min(day.wind, 6) * 3;
+    score += day.sunshineHours * 4;
+    score -= day.popMax * 0.6;
+    if (day.precip >= 1) score = Math.min(score, 30); // 雨が降る日はよくても「やや乾きにくい」まで
+    return Math.max(0, Math.min(100, Math.round(score)));
+  }
+
+  const LAUNDRY_LEVELS = [
+    { min: 80, level: 5, icon: '👕☀️', label: '大変よく乾く', note: '厚手のものも乾きやすい日です。' },
+    { min: 60, level: 4, icon: '👕', label: 'よく乾く', note: '外干しに向いています。' },
+    { min: 40, level: 3, icon: '🧺', label: '乾く', note: '厚手のものは乾きにくいかもしれません。' },
+    { min: 20, level: 2, icon: '🌥', label: 'やや乾きにくい', note: '部屋干しや乾燥機の併用がおすすめです。' },
+    { min: 0, level: 1, icon: '☔', label: '部屋干し推奨', note: '外干しには向かない日です。' },
+  ];
+
+  function laundryDays(om) {
+    const days = [];
+    om.daily.time.forEach((date, i) => {
+      const idx = om.hourly.time.map((t, j) => [t, j]).filter(([t]) => t.startsWith(date))
+        .filter(([t]) => { const h = +t.slice(11, 13); return h >= 9 && h <= 15; }).map(([, j]) => j);
+      const avg = (key) => idx.reduce((a, j) => a + om.hourly[key][j], 0) / Math.max(1, idx.length);
+      const day = {
+        date,
+        tempMax: om.daily.temperature_2m_max[i],
+        humidity: avg('relative_humidity_2m'),
+        wind: avg('wind_speed_10m'),
+        sunshineHours: idx.reduce((a, j) => a + om.hourly.sunshine_duration[j], 0) / 3600,
+        popMax: om.daily.precipitation_probability_max[i] ?? 0,
+        precip: om.daily.precipitation_sum[i] ?? 0,
+      };
+      day.score = laundryScore(day);
+      day.level = LAUNDRY_LEVELS.find((l) => day.score >= l.min);
+      days.push(day);
+    });
+    return days;
+  }
+
+  async function loadForecastInfo() {
+    const om = `https://api.open-meteo.com/v1/forecast?latitude=${SAITAMA_POINT.lat}&longitude=${SAITAMA_POINT.lng}`
+      + '&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation_probability,precipitation,sunshine_duration'
+      + '&daily=sunshine_duration,precipitation_sum,precipitation_probability_max,temperature_2m_max'
+      + '&timezone=Asia%2FTokyo&forecast_days=2&wind_speed_unit=ms';
+    const [forecast, warning, meteo] = await Promise.allSettled([
+      loadJSON(`${JMA}/forecast/data/forecast/${SAITAMA_FORECAST_OFFICE}.json?t=${Date.now()}`),
+      loadJSON(`${JMA}/warning/data/warning/${SAITAMA_FORECAST_OFFICE}.json?t=${Date.now()}`),
+      loadJSON(om),
+    ]);
+    renderForecast(forecast.status === 'fulfilled' ? forecast.value : null);
+    renderWarnings(warning.status === 'fulfilled' ? warning.value : null);
+    renderLaundry(meteo.status === 'fulfilled' ? meteo.value : null);
+  }
+
+  function renderForecast(data) {
+    const box = $('#wx-forecast');
+    if (!data) {
+      box.replaceChildren(el('p', { className: 'wx-note' }, '天気予報を読み込めませんでした。'));
+      return;
+    }
+    const series = data[0].timeSeries;
+    const area = series[0].areas.find((a) => a.area.code === SAITAMA_SOUTH_AREA) || series[0].areas[0];
+    const pops = (series[1].areas.find((a) => a.area.code === SAITAMA_SOUTH_AREA) || series[1].areas[0]);
+    const temps = (series[2].areas.find((a) => a.area.code === SAITAMA_TEMP_POINT) || series[2].areas[0]);
+    const rows = series[0].timeDefines.slice(0, 2).map((t, i) => {
+      const date = new Date(t);
+      const label = i === 0 ? '今日' : '明日';
+      const dayKey = date.toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' });
+      const popVals = series[1].timeDefines.map((pt, j) => [pt, pops.pops[j]])
+        .filter(([pt]) => new Date(pt).toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' }) === dayKey)
+        .map(([, v]) => v).filter((v) => v !== '');
+      // 気温は 0時の値が最低、9時の値が最高。昼の発表では今日の最低が無くなり、最高と同じ値が入る
+      const tempAt = (hour) => {
+        const j = series[2].timeDefines.findIndex((tt) => {
+          const d = new Date(tt);
+          return d.toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' }) === dayKey
+            && Number(d.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour: 'numeric', hour12: false }).replace(/\D/g, '')) === hour;
+        });
+        return j >= 0 && temps.temps[j] !== '' ? Number(temps.temps[j]) : null;
+      };
+      const tMin = tempAt(0);
+      const tMax = tempAt(9);
+      const tempText = [tMin != null && tMin !== tMax ? `最低 ${tMin}℃` : '', tMax != null ? `最高 ${tMax}℃` : ''].filter(Boolean).join('／');
+      return el('li', { className: 'wx-day' },
+        el('span', { className: 'wx-day-label' }, label),
+        el('span', { className: 'wx-weather' }, area.weathers[i].replace(/\s+/g, ' ')),
+        el('span', { className: 'wx-sub' }, [popVals.length ? `降水確率 ${popVals.map((v) => `${v}%`).join('・')}` : '', tempText].filter(Boolean).join('　')));
+    });
+    box.replaceChildren(el('ul', { className: 'wx-days' }, ...rows),
+      el('p', { className: 'wx-note' }, `${formatDate(data[0].reportDatetime)} ${data[0].publishingOffice}発表（埼玉県南部・気温は「さいたま」）`));
+  }
+
+  function renderWarnings(data) {
+    const box = $('#wx-warnings');
+    if (!data) {
+      box.replaceChildren(el('p', { className: 'wx-note' }, '警報・注意報を読み込めませんでした。'));
+      return;
+    }
+    let area = null;
+    data.areaTypes.forEach((at) => at.areas.forEach((a) => { if (a.code === SAITAMA_CITY_AREA) area = a; }));
+    const active = ((area && area.warnings) || []).filter((w) => w.code && w.status !== '解除');
+    if (!active.length) {
+      box.replaceChildren(el('p', { className: 'wx-ok' }, '✅ さいたま市に発表中の警報・注意報はありません'));
+      return;
+    }
+    const chips = active.map((w) => {
+      const name = WARNING_NAMES[w.code] || WARNING_NAMES[Number(w.code)] || `コード${w.code}`;
+      const kind = name.includes('特別警報') ? 'special' : name.includes('警報') ? 'warning' : 'advisory';
+      return el('li', { className: `wx-warning is-${kind}` }, name);
+    });
+    box.replaceChildren(el('p', { className: 'wx-subtitle' }, '⚠️ さいたま市に発表中'), el('ul', { className: 'wx-warning-list' }, ...chips),
+      el('p', { className: 'wx-note' }, `${formatDate(data.reportDatetime)} 発表。`,
+        el('a', { href: `${JMA}/warning/#area_type=class20s&area_code=${SAITAMA_CITY_AREA}`, target: '_blank', rel: 'noopener' }, '気象庁で詳しく見る')));
+  }
+
+  function renderLaundry(om) {
+    const box = $('#wx-laundry');
+    if (!om) {
+      box.replaceChildren(el('p', { className: 'wx-note' }, '洗濯指数の元になる予報を読み込めませんでした。'));
+      return;
+    }
+    const days = laundryDays(om);
+    const cards = days.map((d, i) => el('li', { className: `wx-laundry-card level-${d.level.level}` },
+      el('span', { className: 'wx-day-label' }, i === 0 ? '今日' : '明日'),
+      el('span', { className: 'wx-laundry-icon', 'aria-hidden': 'true' }, d.level.icon),
+      el('span', { className: 'wx-laundry-label' }, `${d.level.label}（指数 ${d.score}）`),
+      el('span', { className: 'wx-meter', 'aria-hidden': 'true' }, ...[1, 2, 3, 4, 5].map((n) => el('span', { className: n <= d.level.level ? 'on' : '' }))),
+      el('span', { className: 'wx-sub' }, d.level.note),
+      el('span', { className: 'wx-sub' }, `日中の湿度 ${Math.round(d.humidity)}%・風 ${d.wind.toFixed(1)}m/s・日照 ${d.sunshineHours.toFixed(1)}時間・最高 ${Math.round(d.tempMax)}℃・降水確率 ${d.popMax}%`)));
+    box.replaceChildren(el('ul', { className: 'wx-laundry-list' }, ...cards),
+      el('p', { className: 'wx-note' }, '洗濯指数はこのアプリ独自の目安です（',
+        el('a', { href: 'https://open-meteo.com/', target: '_blank', rel: 'noopener' }, 'Open-Meteo'),
+        ' の予報の気温・湿度・風・日照・降水から計算）。'));
+  }
+
+  // ---- 地震情報 ----
+  function parseEpicenter(cod) {
+    // 「+35.8+140.1-70000/」→ 緯度・経度・深さ(km)
+    const m = /^([+-]\d+(?:\.\d+)?)([+-]\d+(?:\.\d+)?)([+-]\d+)?/.exec(cod || '');
+    if (!m) return null;
+    return { lat: Number(m[1]), lng: Number(m[2]), depthKm: m[3] ? Math.abs(Number(m[3])) / 1000 : null };
+  }
+
+  const INTENSITY_LABELS = { 1: '1', 2: '2', 3: '3', 4: '4', '5-': '5弱', '5+': '5強', '6-': '6弱', '6+': '6強', 7: '7' };
+  const INTENSITY_ORDER = ['1', '2', '3', '4', '5-', '5+', '6-', '6+', '7'];
+
+  function saitamaIntensity(q) {
+    let best = null;
+    (q.int || []).forEach((p) => (p.city || []).forEach((c) => {
+      if (SAITAMA_WARD_CODES.includes(c.code) && (!best || INTENSITY_ORDER.indexOf(c.maxi) > INTENSITY_ORDER.indexOf(best))) best = c.maxi;
+    }));
+    return best;
+  }
+
+  async function loadQuakes() {
+    const box = $('#wx-quakes');
+    let list;
+    try {
+      list = await loadJSON(`${JMA}/quake/data/list.json?t=${Date.now()}`);
+    } catch (err) {
+      box.replaceChildren(el('p', { className: 'wx-note' }, '地震情報を読み込めませんでした。'));
+      return;
+    }
+    // 同じ地震（eid）の最新の情報だけを、震源と震度のそろったものから使う
+    const byEvent = new Map();
+    list.forEach((q) => {
+      if (!q.cod || !q.mag || !['震源・震度情報', '震源に関する情報'].includes(q.ttl)) return;
+      if (!byEvent.has(q.eid)) byEvent.set(q.eid, q);
+    });
+    const all = [...byEvent.values()];
+    const quakes = all.slice(0, 15);
+    state.quakes = quakes;
+    const lastFelt = all.find((q) => saitamaIntensity(q));
+    const items = quakes.map((q) => {
+      const local = saitamaIntensity(q);
+      const ep = parseEpicenter(q.cod);
+      const li = el('li', { className: `wx-quake${local ? ' felt' : ''}` },
+        el('span', { className: `wx-shindo s${(q.maxi || '').replace('+', 'p').replace('-', 'm')}` }, INTENSITY_LABELS[q.maxi] || '-'),
+        el('span', { className: 'wx-quake-text' },
+          el('b', {}, q.anm), ` M${q.mag}${ep && ep.depthKm != null ? `・深さ${Math.round(ep.depthKm)}km` : ''}`, el('br'),
+          el('span', { className: 'wx-sub' }, `${formatDate(q.at)}　${local ? `さいたま市の震度 ${INTENSITY_LABELS[local]}` : 'さいたま市では震度1以上なし'}`)));
+      return li;
+    });
+    const feltLine = lastFelt
+      ? el('p', { className: 'wx-felt' }, `🏠 直近でさいたま市が揺れた地震: ${formatDate(lastFelt.at)} ${lastFelt.anm} M${lastFelt.mag}（さいたま市の震度 ${INTENSITY_LABELS[saitamaIntensity(lastFelt)]}）`)
+      : el('p', { className: 'wx-felt' }, '🏠 最近の情報の中に、さいたま市で震度1以上の地震はありません。');
+    box.replaceChildren(
+      feltLine,
+      el('p', { className: 'wx-subtitle' }, '最近の地震（全国・左の数字は最大震度）'),
+      el('ul', { className: 'wx-quake-list' }, ...items),
+      el('p', { className: 'wx-note' }, '気象庁の地震情報。さいたま市の震度は市内10区のうち最も大きいもの。',
+        el('a', { href: `${JMA}/map.html#contents=earthquake_map`, target: '_blank', rel: 'noopener' }, '気象庁で詳しく見る')));
+    renderQuakeMarkers(quakes);
+  }
+
+  // 地図に映る範囲（関東南部）に震源がある地震だけ、震源の印を出す
+  function renderQuakeMarkers(quakes) {
+    (state.quakeMarkers || []).forEach((m) => m.remove());
+    state.quakeMarkers = [];
+    if (!state.weatherVisible || state.weatherTab !== 'quake') return;
+    const bounds = state.map.getMaxBounds();
+    quakes.forEach((q) => {
+      const ep = parseEpicenter(q.cod);
+      if (!ep || (bounds && !bounds.contains([ep.lng, ep.lat]))) return;
+      const elx = el('div', { className: 'quake-marker', title: `${q.anm} M${q.mag}` });
+      elx.style.setProperty('--size', `${14 + Number(q.mag) * 6}px`);
+      elx.append(el('span', {}, '×'));
+      state.quakeMarkers.push(new maplibregl.Marker({ element: elx, ...MARKER_OPTIONS }).setLngLat([ep.lng, ep.lat]).addTo(state.map));
+    });
+  }
+
+  function setWeatherTab(tab) {
+    state.weatherTab = tab;
+    document.querySelectorAll('.wx-tab').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === tab)));
+    document.querySelectorAll('.wx-pane').forEach((p) => { p.hidden = p.dataset.pane !== tab; });
+    // 雨雲の重ね合わせは「雨雲」タブのときだけ出す（ほかのタブでは地図を見やすく）
+    if (state.weatherBox) state.weatherBox.hidden = tab !== 'radar';
+    if (tab !== 'radar') stopRadarAnimation();
+    if (tab === 'radar') refreshRadar({ keepPosition: true });
+    if (tab === 'forecast') loadForecastInfo();
+    if (tab === 'quake') loadQuakes();
+    else renderQuakeMarkers([]);
+  }
+
+  function setWeatherVisible(visible) {
+    state.weatherVisible = visible;
+    const btn = $('#weather-toggle');
+    if (btn) btn.setAttribute('aria-pressed', String(visible));
+    $('#weather-panel').hidden = !visible;
+    clearInterval(state.weatherRefreshTimer);
+    if (visible) {
+      if (!$('#weather-layer').options.length) bindWeatherPanel();
+      setWeatherTab(state.weatherTab);
+      // 開いている間は5分ごとに読み直す（ナウキャストは5分ごとに更新される）
+      state.weatherRefreshTimer = setInterval(() => setWeatherTab(state.weatherTab), WEATHER_REFRESH_MS);
+    } else {
+      stopRadarAnimation();
+      if (state.weatherBox) state.weatherBox.hidden = true;
+      renderQuakeMarkers([]);
+    }
+  }
+
+  function bindWeatherPanel() {
+    const select = $('#weather-layer');
+    WEATHER_LAYERS.forEach((l) => select.append(el('option', { value: l.id }, l.label)));
+    select.value = state.weatherLayer;
+    select.addEventListener('change', () => {
+      state.weatherLayer = select.value;
+      stopRadarAnimation();
+      renderWeatherLegend();
+      refreshRadar();
+    });
+    $('#radar-slider').addEventListener('input', (e) => {
+      stopRadarAnimation();
+      state.radarIndex = Number(e.target.value);
+      showRadarFrame();
+    });
+    $('#radar-play').addEventListener('click', toggleRadarAnimation);
+    $('#weather-strength').addEventListener('input', (e) => {
+      if (state.weatherBox) state.weatherBox.style.opacity = String(Number(e.target.value) / 100);
+    });
+    document.querySelectorAll('.wx-tab').forEach((b) => b.addEventListener('click', () => setWeatherTab(b.dataset.tab)));
+    $('#weather-close').addEventListener('click', () => setWeatherVisible(false));
+    renderWeatherLegend();
   }
 
   // ---------- ライブカメラ ----------
@@ -894,7 +1336,7 @@
         pitch: FOCUS_PITCH,
         bearing: map.getBearing(),
         // パネルに隠れないよう中心をずらす（スマホは下部シートの分だけ上へ）
-        offset: mobile ? [0, -ch * 0.25] : [-(detailW + 56) / 2, 40],
+        offset: mobile ? [0, -ch * 0.25] : [-(detailW + 104) / 2, 40],
         speed: 1.1,
         curve: 1.5,
         essential: true,
