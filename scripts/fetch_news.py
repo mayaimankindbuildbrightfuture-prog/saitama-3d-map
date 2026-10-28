@@ -456,6 +456,11 @@ def classify_type(text: str, cat: dict) -> dict | None:
     return cat.get("otherType", {"id": "other", "label": "その他"})
 
 
+def service_of(item: dict) -> str:
+    """取得元の名前からサービス名を取り出す（例: 「Bluesky「大宮駅」」→ Bluesky、「Mastodon #浦和（mstdn.jp）」→ Mastodon）。"""
+    return re.split(r"[\s「#（]", item.get("feed", ""), maxsplit=1)[0]
+
+
 def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_items: int, max_age_days: int,
                filters: dict[str, bool], exclude_sources: list[str] = (), exclude_words: list[str] = (),
                similarity: float = 0.6, overlap: float = 0.7, categories: dict | None = None) -> list[dict]:
@@ -466,6 +471,7 @@ def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_
     categories = categories or {}
     kept_titles: list[tuple[str, set[str]]] = []
     counts: dict[str, int] = {}
+    service_counts: dict[tuple[str, str], int] = {}
     news = []
 
     def limit(cat_id: str, key: str, default):
@@ -487,12 +493,18 @@ def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_
             continue
         if counts.get(cat_id, 0) >= limit(cat_id, "maxItems", max_items):
             continue
+        # 口コミなどは、新しい投稿の多いSNSだけで埋まらないよう、サービスごとの上限を設ける
+        service = service_of(item)
+        per_service = limit(cat_id, "maxPerService", None)
+        if per_service and service_counts.get((cat_id, service), 0) >= per_service:
+            continue
         norm = normalize_title(item["title"])
         grams = bigrams(norm)
         if is_duplicate(norm, grams, kept_titles, similarity, overlap):
             continue
         kept_titles.append((norm, grams))
         counts[cat_id] = counts.get(cat_id, 0) + 1
+        service_counts[(cat_id, service)] = service_counts.get((cat_id, service), 0) + 1
 
         place = place_info(located, places)
         published = item["published"].astimezone(JST).isoformat(timespec="minutes") if item["published"] else None
@@ -541,7 +553,8 @@ def main(argv: list[str] | None = None) -> int:
                 data = Path(src["file"]).read_bytes()
             else:
                 if i:
-                    time.sleep(1)  # 取得元に負担をかけないよう間隔をあける
+                    # 取得元に負担をかけないよう間隔をあける（Misskey は短い間隔だと 429 を返すので長めに）
+                    time.sleep(3 if kind == "misskey" else 1)
                 if kind in ("bluesky", "misskey"):
                     url, body = (bluesky_request if kind == "bluesky" else misskey_request)(src)
                     data = fetch(url, body=body)

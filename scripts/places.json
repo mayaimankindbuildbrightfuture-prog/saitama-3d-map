@@ -1,6 +1,6 @@
 {
   "_comment": "ニュース記事の位置推定に使う地名辞書。aliases のどれかが記事の見出し・概要に含まれると、その座標に吹き出しを置く。kind の優先度は facility > station > area・ward（同じ優先度なら長い語）。topic を指定した項目は data/topics.json の座標を使う。ignoreWords は地名と同じ文字を含むが地名ではない語（人名など）で、位置の推定の前に取り除く。",
-  "ignoreWords": ["浦和希"],
+  "ignoreWords": ["浦和希", "見沼代親水公園"],
   "places": [
     { "name": "鉄道博物館", "kind": "facility", "topic": "railway-museum", "aliases": ["鉄道博物館", "てっぱく"] },
     { "name": "氷川神社", "kind": "facility", "topic": "hikawa-shrine", "aliases": ["氷川神社"] },
