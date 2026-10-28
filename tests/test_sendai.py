@@ -54,6 +54,29 @@ class SendaiNewsTest(unittest.TestCase):
         self.assertEqual(self.locate("大崎八幡宮でどんと祭"), "大崎八幡宮")
         self.assertEqual(self.locate("楽天モバイル 最強パーク宮城で試合"), "楽天モバイル 最強パーク宮城")
 
+    def test_area_beats_ward(self):
+        # 区名より、その中の地域名（クマの出没が多い西部の地名など）を選ぶ
+        self.assertEqual(self.locate("仙台市青葉区上愛子でクマ目撃"), "上愛子")
+        self.assertEqual(self.locate("仙台市泉区根白石でクマ"), "根白石")
+
+    def test_wildlife_category(self):
+        cats = self.config["categories"]
+
+        def cls(text):
+            cat, kind = fetch_news.classify(text, "news", cats)
+            return cat, kind and kind["label"]
+
+        # 「警察署によると」があっても、事件ではなく害獣出没に入れる
+        self.assertEqual(cls("仙台市青葉区でクマ出没 仙台北署によると"), ("wildlife", "クマ"))
+        self.assertEqual(cls("泉区でイノシシが目撃される"), ("wildlife", "イノシシ"))
+        self.assertEqual(cls("仙台・熊ヶ根でイノシシの食害"), ("wildlife", "イノシシ"))  # 「熊」ではない
+        self.assertEqual(cls("太白区秋保でカモシカ目撃"), ("wildlife", "シカ・カモシカ"))
+        # 動物の名前と似た語や、出没と関係のない記事は入れない
+        self.assertEqual(cls("熊本で地震、仙台からも支援")[0], "news")
+        self.assertEqual(cls("シカゴで仙台出身選手が活躍")[0], "news")
+        self.assertEqual(cls("クマのぬいぐるみが人気 仙台")[0], "news")
+        self.assertEqual(cls("仙台中央署 窃盗で男を逮捕")[0], "crime")
+
     def test_relevant_words_filter(self):
         raw = [item("仙台の新しい商業施設が開業", "https://example.com/1"),
                item("さいたま市で新店がオープン", "https://example.com/2")]

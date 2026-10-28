@@ -7,7 +7,8 @@
     "keepFeedCategory=true のカテゴリ（口コミ）は、その取得元の投稿を常にそのカテゴリにする。keywordGroups は「各グループから1語ずつ含む」と当てはまる条件、ignoreWords は判定の前に取り除く語、カテゴリ内の excludeWords はそのカテゴリだけで除く語。type=mastodon の取得元は instance と tag からハッシュタグのRSSのURLを作る。",
     "notWords はそのカテゴリに入れない語（例: グルメの「給食」）。",
     "type=mastodon・misskey は instances と tags、type=bluesky は queries を並べて書くと、組み合わせごとの取得元に展開する（Bluesky は公開検索API、Misskey は search-by-tag API。どちらもAPIキー不要）。",
-    "maxPerService は、1つのサービス（Bluesky・Misskey・Mastodon など）から入れる最大件数。"
+    "maxPerService は、1つのサービス（Bluesky・Misskey・Mastodon など）から入れる最大件数。",
+    "wildlife（害獣出没）は仙台市版だけのカテゴリ。動物の名前と「出没・目撃・捕獲」などの語の両方を含む記事を入れる。"
   ],
   "maxItems": 40,
   "maxAgeDays": 14,
@@ -31,6 +32,117 @@
     "レシピ"
   ],
   "categories": {
+    "wildlife": {
+      "label": "害獣出没",
+      "maxItems": 40,
+      "maxAgeDays": 21,
+      "ignoreWords": [
+        "熊本",
+        "熊谷",
+        "熊野",
+        "熊ヶ根",
+        "熊ケ根",
+        "くまモン",
+        "クマノミ",
+        "テディベア",
+        "シカゴ",
+        "鹿児島",
+        "鹿島",
+        "鹿嶋",
+        "猪苗代",
+        "サルベージ",
+        "リハーサル",
+        "ユニバーサル",
+        "サルサ",
+        "サルコペニア"
+      ],
+      "keywordGroups": [
+        [
+          "クマ",
+          "熊",
+          "ツキノワグマ",
+          "イノシシ",
+          "猪",
+          "シカ",
+          "ニホンジカ",
+          "カモシカ",
+          "サル",
+          "猿",
+          "ニホンザル",
+          "ハクビシン",
+          "アライグマ"
+        ],
+        [
+          "出没",
+          "目撃",
+          "足跡",
+          "痕跡",
+          "ふん",
+          "食害",
+          "農作物被害",
+          "捕獲",
+          "駆除",
+          "襲われ",
+          "人身被害",
+          "かまれ",
+          "注意報",
+          "警報",
+          "箱わな",
+          "わなを設置",
+          "緊急銃猟",
+          "侵入",
+          "居座",
+          "追い払い",
+          "注意喚起"
+        ]
+      ],
+      "types": [
+        {
+          "id": "bear",
+          "label": "クマ",
+          "icon": "🐻",
+          "keywords": [
+            "クマ",
+            "熊",
+            "ツキノワグマ"
+          ]
+        },
+        {
+          "id": "boar",
+          "label": "イノシシ",
+          "icon": "🐗",
+          "keywords": [
+            "イノシシ",
+            "猪"
+          ]
+        },
+        {
+          "id": "deer",
+          "label": "シカ・カモシカ",
+          "icon": "🦌",
+          "keywords": [
+            "シカ",
+            "ニホンジカ",
+            "カモシカ"
+          ]
+        },
+        {
+          "id": "monkey",
+          "label": "サル",
+          "icon": "🐒",
+          "keywords": [
+            "サル",
+            "猿",
+            "ニホンザル"
+          ]
+        }
+      ],
+      "otherType": {
+        "id": "other",
+        "label": "その他（ハクビシン・アライグマなど）",
+        "icon": "🦝"
+      }
+    },
     "crime": {
       "label": "事件・防犯",
       "maxItems": 30,
@@ -785,6 +897,24 @@
       "name": "Googleニュース「仙台 漫画・同人・ポップアップ」",
       "category": "otaku",
       "query": "仙台 (漫画 OR 同人 OR 原画展 OR ポップアップストア OR アニソン OR アイドル) when:30d",
+      "filter": true
+    },
+    {
+      "name": "Googleニュース「仙台 クマ出没」",
+      "category": "wildlife",
+      "query": "仙台 (クマ OR 熊) (出没 OR 目撃) when:14d",
+      "filter": true
+    },
+    {
+      "name": "Googleニュース「仙台市の区 クマ」",
+      "category": "wildlife",
+      "query": "(青葉区 OR 泉区 OR 太白区 OR 宮城野区 OR 若林区) 仙台 クマ when:14d",
+      "filter": true
+    },
+    {
+      "name": "Googleニュース「仙台 イノシシ・シカ・サル」",
+      "category": "wildlife",
+      "query": "仙台 (イノシシ OR シカ OR カモシカ OR サル OR ハクビシン) (出没 OR 目撃 OR 被害 OR 捕獲) when:30d",
       "filter": true
     },
     {

@@ -28,6 +28,15 @@
   const FEED_CATEGORY_OF = {
     news: 'news', otaku: 'otaku', crime: 'crime', gourmet: 'foodnews', supermarket: 'supermarket', reviews: 'reviews',
   };
+  // city.js の feedCategories で、その市だけのカテゴリ（仙台市の「害獣出没」など）を after のカテゴリの後ろに加える
+  Object.entries(CITY.feedCategories || {}).forEach(([id, { after, ...cat }]) => {
+    const entries = Object.entries(FEED_CATEGORIES);
+    const at = entries.findIndex(([k]) => k === after);
+    entries.splice(at >= 0 ? at + 1 : entries.length, 0, [id, cat]);
+    Object.keys(FEED_CATEGORIES).forEach((k) => delete FEED_CATEGORIES[k]);
+    entries.forEach(([k, v]) => { FEED_CATEGORIES[k] = v; });
+    FEED_CATEGORY_OF[id] = id;
+  });
   // 起動時にオンにしておくカテゴリ（ほかはボタンでオンにする）
   const DEFAULT_CATEGORIES = ['news'];
   const FLYER_SITES = [
@@ -1445,6 +1454,14 @@
       body.append(el('p', { className: 'crime-note' },
         '報道機関が伝えた警察発表などの情報です。地図の位置は記事中の地名からの推定で、事件の正確な発生場所ではありません。最新の正確な防犯情報は ',
         police, `${CITY.police.note || ''}で確認してください。`));
+    }
+    if (topic.category === 'wildlife' && CITY.wildlife) {
+      const links = [];
+      CITY.wildlife.links.forEach((l, i) => {
+        if (i) links.push('・');
+        links.push(el('a', { href: l.url, target: '_blank', rel: 'noopener' }, l.label));
+      });
+      body.append(el('p', { className: 'crime-note' }, CITY.wildlife.note, ' 最新の出没情報は ', ...links, ' で確認してください。'));
     }
     if (topic.category === 'supermarket') {
       const links = [];
