@@ -64,6 +64,49 @@ class FetchNewsTest(unittest.TestCase):
         self.assertEqual(dates, sorted(dates, reverse=True))
         self.assertTrue(dates[0].endswith("+09:00"))
 
+    def test_title_suffix_is_stripped(self):
+        strip = fetch_news.strip_title_suffix
+        self.assertEqual(strip("さいたま市で新しい図書館が開館（テスト新聞）"), "さいたま市で新しい図書館が開館")
+        self.assertEqual(strip("さいたま市で新しい図書館が開館 (テスト新聞)"), "さいたま市で新しい図書館が開館")
+        self.assertEqual(strip("さいたま市で新しい図書館が開館｜テスト新聞｜最新ニュース"), "さいたま市で新しい図書館が開館")
+        # 見出しの一部の括弧や、短すぎる前半は残す
+        self.assertEqual(strip("男性（70）が見つかる さいたま市"), "男性（70）が見つかる さいたま市")
+        self.assertEqual(strip("短い｜見出し"), "短い｜見出し")
+
+    def _build(self, items, **kw):
+        raw = [fetch_news.clean_item({"title": t, "url": f"https://example.com/d/{i}", "summary": "",
+                                      "published": NOW - timedelta(hours=i), "source": src, "feed": "f"})
+               for i, (t, src) in enumerate(items)]
+        return fetch_news.build_news(raw, self.places, now=NOW, max_items=40, max_age_days=14,
+                                     filters={"f": True}, **kw)
+
+    def test_near_duplicates_are_merged(self):
+        news = self._build([
+            ("さいたま市の小学校で給食に異物混入 原因を調査（テスト新聞）", "ポータル"),
+            ("さいたま市の小学校で給食に異物混入 原因を調査 (テスト新聞)", "ポータル"),
+            ("さいたま市の小学校で給食に異物混入 原因を調査｜テスト新聞｜地域の話題", "テスト新聞"),
+            ("さいたま市の同じ小学校で給食に異物混入", "別の放送局"),
+            ("さいたま市で秋の花火大会 来月開催", "テスト新聞"),
+        ])
+        self.assertEqual([n["title"] for n in news],
+                         ["さいたま市の小学校で給食に異物混入 原因を調査", "さいたま市で秋の花火大会 来月開催"])
+
+    def test_similar_but_different_news_are_kept(self):
+        news = self._build([
+            ("【さいたま市大宮区】氷川参道の歩行者専用区間が拡大", "テスト"),
+            ("【さいたま市大宮区】駅前に新しいカフェがオープン", "テスト"),
+        ])
+        self.assertEqual(len(news), 2)
+
+    def test_excluded_sources_and_words(self):
+        news = self._build([
+            ("イオンシネマ大宮(さいたま) の上映時間・上映スケジュール", "映画サイト"),
+            ("【さいたま市南区】あすの天気予報", "テスト"),
+            ("さいたま市で秋の花火大会 来月開催", "まとめ動画"),
+            ("さいたま市で新しい図書館が開館", "テスト新聞"),
+        ], exclude_sources=["まとめ動画"], exclude_words=["上映時間", "天気予報"])
+        self.assertEqual([n["title"] for n in news], ["さいたま市で新しい図書館が開館"])
+
     def test_atom_feed(self):
         atom = b"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>t</title>
