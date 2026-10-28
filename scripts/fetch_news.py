@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""さいたま市の最新ニュースを RSS から取得し、地名から位置を推定して data/news.json に書き出す。
+"""さいたま市の最新ニュース・オタク関連・事件/防犯・グルメ・スーパーの特売・地域の口コミを RSS から取得し、地名から位置を推定して data/news.json に書き出す。
+
+記事は scripts/news_sources.json の categories に書いたキーワードでカテゴリ（と、グルメのジャンルや
+事件の種類などの細かい分類）に振り分ける。
 
 標準ライブラリだけで動き、APIキーは不要。GitHub Actions（.github/workflows/update-news.yml）から
 定期的に実行する想定。手元では次のように実行できる:
@@ -20,6 +23,8 @@ import json
 import math
 import re
 import sys
+import time
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -44,6 +49,18 @@ KIND_RANK = {"facility": 3, "station": 2, "area": 1, "ward": 1}  # 地域名と�
 FALLBACK_PLACE_TOPIC = "city-hall"
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
+
+GOOGLE_NEWS_SEARCH = "https://news.google.com/rss/search?q={q}&hl=ja&gl=JP&ceid=JP%3Aja"
+
+
+def source_url(src: dict) -> str:
+    """取得元のURL。query だけなら Googleニュース検索、type=mastodon ならハッシュタグのRSSにする。"""
+    if src.get("url"):
+        return src["url"]
+    if src.get("type") == "mastodon":
+        # Mastodon のハッシュタグRSS（https://インスタンス/tags/タグ.rss）
+        return f"https://{src['instance']}/tags/{urllib.parse.quote(src['tag'])}.rss"
+    return GOOGLE_NEWS_SEARCH.format(q=urllib.parse.quote_plus(src["query"]))
 
 
 # ---------- 取得・解析 ----------
@@ -105,7 +122,18 @@ def parse_feed(xml_bytes: bytes, source_name: str) -> list[dict]:
             "feed": source_name,
         })
 
+    for i in items:
+        # Mastodon の投稿などタイトルの無い項目は、本文の先頭を見出しにする
+        if not i["title"] and i["summary"]:
+            i["title"] = post_title(i["summary"])
     return [clean_item(i) for i in items if i["title"] and i["url"]]
+
+
+def post_title(text: str, length: int = 60) -> str:
+    """SNS投稿の本文から見出しを作る（末尾のハッシュタグの並びとURLを除く）。"""
+    text = re.sub(r"https?://\S+", "", text)
+    text = re.sub(r"(\s*#\S+)+\s*$", "", text).strip() or text.strip()
+    return text if len(text) <= length else text[:length - 1] + "…"
 
 
 def clean_item(item: dict) -> dict:
@@ -237,12 +265,70 @@ def is_excluded(item: dict, exclude_sources: list[str], exclude_words: list[str]
     return any(w and w in text for w in exclude_words)
 
 
+# ---------- カテゴリ分け ----------
+
+def classify(text: str, feed_category: str, categories: dict) -> tuple[str, dict | None]:
+    """記事のカテゴリと細かい分類（types）を決める。
+
+    キーワードを持つカテゴリを categories に書かれた順に調べ、最初に当てはまったものにする。
+    どれにも当てはまらなければ一般の「news」。オタク・グルメなど専用の検索で拾った記事でも、
+    そのカテゴリのキーワードを含まなければ一般ニュース扱いにする（検索結果には関係の薄い記事も混ざるため）。
+    """
+    # 口コミのように「どこから取ったか」で決まるカテゴリは、キーワードより優先する
+    if categories.get(feed_category, {}).get("keepFeedCategory"):
+        return feed_category, classify_type(text, categories[feed_category])
+    for cat_id, cat in categories.items():
+        if cat.get("keepFeedCategory"):
+            continue
+        if matches_category(text, cat):
+            return cat_id, classify_type(text, cat)
+    if feed_category in categories and not has_keywords(categories[feed_category]):
+        return feed_category, classify_type(text, categories[feed_category])
+    return "news", None
+
+
+def has_keywords(cat: dict) -> bool:
+    return bool(cat.get("keywords") or cat.get("keywordGroups"))
+
+
+def matches_category(text: str, cat: dict) -> bool:
+    """keywords のどれかを含む、または keywordGroups の各グループから1語ずつ含めば当てはまる。
+
+    ignoreWords の語（例: 「スーパーアリーナ」）は、判定の前に本文から取り除く。
+    """
+    for w in cat.get("ignoreWords", []):
+        text = text.replace(w, "")
+    keywords = cat.get("keywords") or []
+    if keywords and any(k in text for k in keywords):
+        return True
+    groups = cat.get("keywordGroups") or []
+    return bool(groups) and all(any(k in text for k in g) for g in groups)
+
+
+def classify_type(text: str, cat: dict) -> dict | None:
+    types = cat.get("types") or []
+    if not types:
+        return None
+    for t in types:
+        if any(k in text for k in t.get("keywords", [])):
+            return t
+    return cat.get("otherType", {"id": "other", "label": "その他"})
+
+
 def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_items: int, max_age_days: int,
                filters: dict[str, bool], exclude_sources: list[str] = (), exclude_words: list[str] = (),
-               similarity: float = 0.6, overlap: float = 0.7) -> list[dict]:
-    cutoff = now - timedelta(days=max_age_days)
+               similarity: float = 0.6, overlap: float = 0.7, categories: dict | None = None) -> list[dict]:
+    """取得した記事を絞り込み・重複除去・カテゴリ分けして、新しい順に並べる。
+
+    max_items / max_age_days は、categories で個別に指定していないカテゴリに使う。
+    """
+    categories = categories or {}
     kept_titles: list[tuple[str, set[str]]] = []
+    counts: dict[str, int] = {}
     news = []
+
+    def limit(cat_id: str, key: str, default):
+        return categories.get(cat_id, {}).get(key, default)
 
     for item in sorted(raw_items, key=lambda i: i["published"] or now, reverse=True):
         text = f'{item["title"]} {item["summary"]}'
@@ -250,20 +336,30 @@ def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_
         # さいたま市に関係する語も、辞書の地名も含まない記事は除く
         if filters.get(item["feed"], True) and located is None and not any(w in text for w in RELEVANT_WORDS):
             continue
-        if item["published"] and item["published"] < cutoff:
-            continue
         if is_excluded(item, exclude_sources, exclude_words):
+            continue
+        cat_id, kind = classify(text, item.get("feedCategory", "news"), categories)
+        if any(w in text for w in limit(cat_id, "excludeWords", [])):
+            continue
+        if item["published"] and item["published"] < now - timedelta(days=limit(cat_id, "maxAgeDays", max_age_days)):
+            continue
+        if counts.get(cat_id, 0) >= limit(cat_id, "maxItems", max_items):
             continue
         norm = normalize_title(item["title"])
         grams = bigrams(norm)
         if is_duplicate(norm, grams, kept_titles, similarity, overlap):
             continue
         kept_titles.append((norm, grams))
+        counts[cat_id] = counts.get(cat_id, 0) + 1
 
         place = place_info(located, places)
         published = item["published"].astimezone(JST).isoformat(timespec="minutes") if item["published"] else None
         news.append({
             "id": "news-" + hashlib.sha1(item["url"].encode("utf-8")).hexdigest()[:10],
+            "category": cat_id,
+            "type": kind["id"] if kind else "",
+            "typeLabel": kind["label"] if kind else "",
+            "typeIcon": kind.get("icon", "") if kind else "",
             "title": item["title"],
             "summary": item["summary"],
             "source": item["source"],
@@ -276,8 +372,6 @@ def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_
             "lat": place["lat"],
             "lng": place["lng"],
         })
-        if len(news) >= max_items:
-            break
 
     spread(news)
     return news
@@ -296,17 +390,25 @@ def main(argv: list[str] | None = None) -> int:
 
     raw, used, filters = [], [], {}
     feeds = [{"name": Path(f).name, "file": f, "filter": True} for f in args.feed_file] or config["sources"]
-    for src in feeds:
+    for i, src in enumerate(feeds):
         filters[src["name"]] = src.get("filter", True)
         try:
-            data = Path(src["file"]).read_bytes() if "file" in src else fetch(src["url"])
+            if "file" in src:
+                data = Path(src["file"]).read_bytes()
+            else:
+                if i:
+                    time.sleep(1)  # 取得元に負担をかけないよう間隔をあける
+                data = fetch(source_url(src))
             items = parse_feed(data, src["name"])
         except Exception as err:  # 1つのフィードの失敗で全体を止めない
             print(f"[warn] {src['name']}: {err}", file=sys.stderr)
             continue
         print(f"[info] {src['name']}: {len(items)}件", file=sys.stderr)
+        for it in items:
+            it["feedCategory"] = src.get("category", "news")
         raw.extend(items)
-        used.append({"name": src["name"], "url": src.get("url", "")})
+        used.append({"name": src["name"], "category": src.get("category", "news"),
+                     "url": src.get("url") or source_url(src) if "file" not in src else ""})
 
     if not raw:
         print("[warn] ニュースを1件も取得できなかったため、既存のファイルを残します。", file=sys.stderr)
@@ -317,7 +419,8 @@ def main(argv: list[str] | None = None) -> int:
                       exclude_sources=config.get("excludeSources", []),
                       exclude_words=config.get("excludeWords", []),
                       similarity=config.get("duplicateSimilarity", 0.6),
-                      overlap=config.get("duplicateOverlap", 0.7))
+                      overlap=config.get("duplicateOverlap", 0.7),
+                      categories=config.get("categories"))
     out = {
         "generatedAt": now.astimezone(JST).isoformat(timespec="minutes"),
         "sources": used,
@@ -328,7 +431,10 @@ def main(argv: list[str] | None = None) -> int:
         print(text)
     else:
         OUTPUT_FILE.write_text(text, "utf-8")
-        print(f"[info] {OUTPUT_FILE.relative_to(ROOT)} に {len(news)} 件を書き出しました。", file=sys.stderr)
+        per_cat: dict[str, int] = {}
+        for n in news:
+            per_cat[n["category"]] = per_cat.get(n["category"], 0) + 1
+        print(f"[info] {OUTPUT_FILE.relative_to(ROOT)} に {len(news)} 件を書き出しました: {per_cat}", file=sys.stderr)
     return 0
 
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>さいたま市 3Dトピックマップ</title>
-  <meta name="description" content="埼玉県さいたま市の名所・歴史・イベント・グルメ・自然・スポーツと最新ニュースを、3Dマップと漫画の吹き出しで紹介します。">
+  <meta name="description" content="埼玉県さいたま市の名所・歴史・イベント・グルメ・自然・スポーツと、最新ニュース・オタク情報・事件/防犯情報・グルメ情報・スーパーの特売情報・地域の口コミを、3Dマップと漫画の吹き出しで紹介します。">
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,12 @@
           <option value="">区へ移動…</option>
         </select>
       </label>
+      <label class="ward-select-label">
+        <span class="visually-hidden">ジャンルで絞り込み</span>
+        <select id="type-select" class="tool-select" title="グルメのジャンルや事件の種類などで絞り込み">
+          <option value="">🍴 ジャンルで絞り込み…</option>
+        </select>
+      </label>
     </div>
     <div id="category-filters" class="category-filters" role="group" aria-label="カテゴリで絞り込み"></div>
   </header>
@@ -34,7 +40,7 @@
         <h2>トピック・ニュース一覧</h2>
         <button type="button" class="close-btn" data-close="list-panel" aria-label="一覧を閉じる">✕</button>
       </div>
-      <input id="search-input" class="search-input" type="search" placeholder="キーワードで検索（例：神社、桜、サッカー）" autocomplete="off">
+      <input id="search-input" class="search-input" type="search" placeholder="キーワードで検索（例：神社、カレー、アニメ）" autocomplete="off">
       <div class="news-status">
         <p id="news-status-text" class="news-status-text">📰 ニュースを読み込み中…</p>
         <button type="button" id="news-refresh" class="news-refresh" title="ニュースを読み直す" aria-label="ニュースを読み直す">🔄</button>

@@ -107,6 +107,76 @@ class FetchNewsTest(unittest.TestCase):
         ], exclude_sources=["まとめ動画"], exclude_words=["上映時間", "天気予報"])
         self.assertEqual([n["title"] for n in news], ["さいたま市で新しい図書館が開館"])
 
+    def test_categories_and_types(self):
+        import json
+        categories = json.loads((ROOT / "scripts" / "news_sources.json").read_text("utf-8"))["categories"]
+        cases = [
+            ("大宮駅前に新しいカレー専門店がオープン", "gourmet", "curry"),
+            ("浦和の町中華が移転", "gourmet", "chinese"),
+            ("さいたま新都心で焼肉食べ放題フェア", "gourmet", "buffet"),  # 焼肉より食べ放題を優先
+            ("岩槻の手打ちそば店", "gourmet", "japanese"),
+            ("大宮でつけ麺の新店", "gourmet", "ramen"),
+            ("さいたまスーパーアリーナで声優ライブ", "otaku", "vtuber"),
+            ("東大宮にアニメのコラボカフェ", "otaku", "anime"),  # コラボカフェでもグルメではなくオタク
+            ("浦和区で特殊詐欺の被害 埼玉県警が注意", "crime", "fraud"),
+            ("飲食店で強盗 男を逮捕 さいたま市", "crime", "violent"),  # グルメ語を含んでも事件を優先
+            ("見沼区で不審者の声かけ", "crime", "suspicious"),
+            ("さいたま市で秋のまつり", "news", ""),
+        ]
+        for text, cat, typ in cases:
+            got_cat, kind = fetch_news.classify(text, "news", categories)
+            self.assertEqual((got_cat, kind["id"] if kind else ""), (cat, typ), text)
+
+    def test_category_limits(self):
+        categories = {"crime": {"keywords": ["逮捕"], "maxItems": 1}, "news": {"maxItems": 5}}
+        raw = [fetch_news.clean_item({"title": t, "url": f"https://example.com/l/{i}", "summary": "",
+                                      "published": NOW - timedelta(hours=i), "source": "テスト", "feed": "f"})
+               for i, t in enumerate(["さいたま市で男を逮捕", "浦和区で女を逮捕", "大宮で祭り"])]
+        news = fetch_news.build_news(raw, self.places, now=NOW, max_items=40, max_age_days=14,
+                                     filters={"f": True}, categories=categories)
+        self.assertEqual([(n["category"], n["title"]) for n in news],
+                         [("crime", "さいたま市で男を逮捕"), ("news", "大宮で祭り")])
+
+    def test_mastodon_post_and_reviews(self):
+        import json
+        config = json.loads((ROOT / "scripts" / "news_sources.json").read_text("utf-8"))
+        rss = """<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>#さいたま</title>
+<item><guid>https://mstdn.example/@a/1</guid><link>https://mstdn.example/@a/1</link>
+<pubDate>__D__</pubDate>
+<description>&lt;p&gt;大宮駅の近くの新しいラーメン屋さん、美味しかった！ https://example.com/x &lt;a href="https://mstdn.example/tags/さいたま"&gt;#さいたま&lt;/a&gt;&lt;/p&gt;</description></item>
+<item><guid>https://mstdn.example/@b/2</guid><link>https://mstdn.example/@b/2</link>
+<pubDate>__D__</pubDate>
+<description>&lt;p&gt;浦和はクソみたいな街 #浦和&lt;/p&gt;</description></item>
+</channel></rss>""".replace("__D__", email.utils.format_datetime(NOW - timedelta(hours=1)))
+        raw = fetch_news.parse_feed(rss.encode("utf-8"), "Mastodon #さいたま")
+        self.assertEqual(raw[0]["title"], "大宮駅の近くの新しいラーメン屋さん、美味しかった！")
+        for r in raw:
+            r["feedCategory"] = "reviews"
+        news = fetch_news.build_news(raw, self.places, now=NOW, max_items=40, max_age_days=14,
+                                     filters={"Mastodon #さいたま": True}, categories=config["categories"])
+        # 「ラーメン」を含んでもグルメ記事ではなく口コミのまま。不適切な語を含む投稿は除く
+        self.assertEqual([(n["category"], n["type"], n["place"]) for n in news], [("reviews", "food", "大宮駅")])
+        self.assertEqual(news[0]["source"], "Mastodon #さいたま")
+
+    def test_supermarket(self):
+        import json
+        categories = json.loads((ROOT / "scripts" / "news_sources.json").read_text("utf-8"))["categories"]
+        cases = [
+            ("ヤオコー大宮店で特売セール", "supermarket", "sale"),
+            ("浦和にロピアがオープン", "supermarket", "opening"),
+            ("さいたま市のスーパーが閉店セール", "supermarket", "closing"),
+            ("さいたまスーパーアリーナでセール開催", "news", ""),  # スーパーアリーナはスーパーではない
+            ("業務スーパーの新店でカレーが人気", "supermarket", "opening"),  # グルメより先に判定
+        ]
+        for text, cat, typ in cases:
+            got_cat, kind = fetch_news.classify(text, "news", categories)
+            self.assertEqual((got_cat, kind["id"] if kind else ""), (cat, typ), text)
+
+    def test_mastodon_url(self):
+        url = fetch_news.source_url({"type": "mastodon", "instance": "mstdn.jp", "tag": "さいたま"})
+        self.assertEqual(url, "https://mstdn.jp/tags/%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE.rss")
+
     def test_atom_feed(self):
         atom = b"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>t</title>
