@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T14:42+09:00",
+  "generatedAt": "2026-10-28T16:04+09:00",
   "sources": [
     {
       "name": "Googleニュース「さいたま市」",
@@ -419,6 +419,60 @@
   ],
   "items": [
     {
+      "id": "news-0ea0c28482",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "博多南駅なんてあるんだ。新大阪駅とか南浦和駅みたいな地名の前になんかくっつける以外のパターンしか知らなかった。",
+      "summary": "博多南駅なんてあるんだ。新大阪駅とか南浦和駅みたいな地名の前になんかくっつける以外のパターンしか知らなかった。",
+      "source": "Bluesky「南浦和」",
+      "url": "https://bsky.app/profile/moskomule.bsky.social/post/3myw6b2zfhc2y",
+      "published": "2026-10-28T15:55+09:00",
+      "place": "浦和駅",
+      "placeKind": "station",
+      "matched": "浦和駅",
+      "ward": "",
+      "lat": 35.8587,
+      "lng": 139.6571
+    },
+    {
+      "id": "news-77dac7e6e0",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "さいたま市は90㎝までOKなので鋸持ってれば椅子とかもバラして一般ごみいけます",
+      "summary": "さいたま市は90㎝までOKなので鋸持ってれば椅子とかもバラして一般ごみいけます",
+      "source": "Bluesky「さいたま市」",
+      "url": "https://bsky.app/profile/anthly.bsky.social/post/3myw2tz2azsv2",
+      "published": "2026-10-28T14:54+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.8617,
+      "lng": 139.6455
+    },
+    {
+      "id": "news-c492bf56b6",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "【続報】はねられた自転車に乗っていた男性（70）死亡 トラック運転のさいたま市の男（32）逮捕 宮城・栗原市(ミヤギテ…",
+      "summary": "【続報】はねられた自転車に乗っていた男性（70）死亡 トラック運転のさいたま市の男（32）逮捕 宮城・栗原市(ミヤギテレビ) #Yahooニュース",
+      "source": "Bluesky「さいたま市」",
+      "url": "https://bsky.app/profile/tafrontsuper11.bsky.social/post/3myw2m6cxw22d",
+      "published": "2026-10-28T14:50+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.861368,
+      "lng": 139.645874
+    },
+    {
       "id": "news-4623947fc8",
       "category": "reviews",
       "type": "transport",
@@ -444,7 +498,7 @@
       "typeIcon": "💬",
       "title": "The battle between graffiti artists and municipal painting …",
       "summary": "The battle between graffiti artists and municipal painting crews at #OmiyaInterchange continues #Nishi ward #Saitama #Japan #日本 #埼玉県 #さいたま市 #西区 #大宮インターチェンジ",
-      "source": "Mastodon #さいたま市（mastodon.social）",
+      "source": "Mastodon #さいたま市（mstdn.jp）",
       "url": "https://pixelfed.social/p/Kantoman/1020929013763177660",
       "published": "2026-10-28T14:27+09:00",
       "place": "大宮",
@@ -595,8 +649,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.8587,
-      "lng": 139.6571
+      "lat": 35.858368,
+      "lng": 139.657474
     },
     {
       "id": "news-4372d6cfdd",
@@ -631,8 +685,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.858368,
-      "lng": 139.657474
+      "lat": 35.858756,
+      "lng": 139.65632
     },
     {
       "id": "news-ea870958fa",
@@ -649,8 +703,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.858756,
-      "lng": 139.65632
+      "lat": 35.859174,
+      "lng": 139.657861
     },
     {
       "id": "news-888d16d6a5",
@@ -667,8 +721,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.859174,
-      "lng": 139.657861
+      "lat": 35.857814,
+      "lng": 139.656907
     },
     {
       "id": "news-9055e00af5",
@@ -721,8 +775,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.8617,
-      "lng": 139.6455
+      "lat": 35.861756,
+      "lng": 139.64472
     },
     {
       "id": "news-19e3cee8bc",
@@ -739,8 +793,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861368,
-      "lng": 139.645874
+      "lat": 35.862174,
+      "lng": 139.646261
     },
     {
       "id": "news-a3f63c29dd",
@@ -775,8 +829,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861756,
-      "lng": 139.64472
+      "lat": 35.860814,
+      "lng": 139.645307
     },
     {
       "id": "news-63ba5ab99f",
@@ -811,8 +865,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862174,
-      "lng": 139.646261
+      "lat": 35.862549,
+      "lng": 139.644836
     },
     {
       "id": "news-371a8f12e3",
@@ -883,26 +937,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860814,
-      "lng": 139.645307
-    },
-    {
-      "id": "news-54d79d58fc",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "【続報】はねられた自転車に乗っていた男性（70）死亡 トラック運転のさいたま市の男（32）逮捕 宮城・栗原市",
-      "summary": "",
-      "source": "TVer",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1aY2NjOTE2cEpiOUN5UG9Mb2owbzN6dzRKdnVjWjgtdDRPbmJiUnRRdUxVZWRBM3JLSDRrblViVVpXN3pyWlREYmc0RQ?oc=5",
-      "published": "2026-10-28T08:20+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 35.862549,
-      "lng": 139.644836
+      "lat": 35.861414,
+      "lng": 139.646809
     },
     {
       "id": "news-6dd4dde242",
@@ -919,8 +955,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.857814,
-      "lng": 139.656907
+      "lat": 35.859549,
+      "lng": 139.656436
     },
     {
       "id": "news-b2493c7287",
@@ -937,8 +973,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.859549,
-      "lng": 139.656436
+      "lat": 35.858414,
+      "lng": 139.658409
     },
     {
       "id": "news-cfb015cd8f",
@@ -959,24 +995,6 @@
       "lng": 139.6298
     },
     {
-      "id": "news-d5b8b3abb2",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "大宮・氷川神社でライトアップ 楼門に光の絵巻、混雑緩和に優先入場券も",
-      "summary": "",
-      "source": "大宮経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE82dHYtVmsxdGpERko2MW9JVDNtaHRQUjdmSTIyWHNWLUczMmo1WUx5YnBNM3NqS0FNc0J0SjlfMWN2dkhnYzFpVTBDYWxUU2lM?oc=5",
-      "published": "2026-10-28T00:26+09:00",
-      "place": "氷川神社",
-      "placeKind": "facility",
-      "matched": "氷川神社",
-      "ward": "大宮区",
-      "lat": 35.915968,
-      "lng": 139.630174
-    },
-    {
       "id": "news-378f68bd32",
       "category": "reviews",
       "type": "other",
@@ -991,8 +1009,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861414,
-      "lng": 139.646809
+      "lat": 35.861151,
+      "lng": 139.6442
     },
     {
       "id": "news-9ec0dcfcfc",
@@ -1189,8 +1207,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.858414,
-      "lng": 139.658409
+      "lat": 35.858151,
+      "lng": 139.6558
     },
     {
       "id": "news-07437a8007",
@@ -1207,8 +1225,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.858151,
-      "lng": 139.6558
+      "lat": 35.859896,
+      "lng": 139.657637
     },
     {
       "id": "news-3a7331239d",
@@ -1225,8 +1243,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861151,
-      "lng": 139.6442
+      "lat": 35.862896,
+      "lng": 139.646037
     },
     {
       "id": "news-975fc66c63",
@@ -1243,8 +1261,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862896,
-      "lng": 139.646037
+      "lat": 35.860452,
+      "lng": 139.646134
     },
     {
       "id": "news-4fb6b2b28b",
@@ -1297,8 +1315,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860452,
-      "lng": 139.646134
+      "lat": 35.862303,
+      "lng": 139.643915
     },
     {
       "id": "news-0fa873a3ee",
@@ -1315,8 +1333,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862303,
-      "lng": 139.643915
+      "lat": 35.862147,
+      "lng": 139.647252
     },
     {
       "id": "news-8f786accf9",
@@ -1423,8 +1441,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.859896,
-      "lng": 139.657637
+      "lat": 35.857452,
+      "lng": 139.657734
     },
     {
       "id": "news-c8d4d22e2d",
@@ -1441,8 +1459,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862147,
-      "lng": 139.647252
+      "lat": 35.860351,
+      "lng": 139.644539
     },
     {
       "id": "news-13681c82b6",
@@ -1477,8 +1495,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860351,
-      "lng": 139.644539
+      "lat": 35.863285,
+      "lng": 139.645071
     },
     {
       "id": "news-9e0753c0b2",
@@ -1495,8 +1513,8 @@
       "placeKind": "facility",
       "matched": "氷川神社",
       "ward": "大宮区",
-      "lat": 35.916356,
-      "lng": 139.62902
+      "lat": 35.915968,
+      "lng": 139.630174
     },
     {
       "id": "news-9ba12940d8",
@@ -1603,8 +1621,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863285,
-      "lng": 139.645071
+      "lat": 35.860732,
+      "lng": 139.647194
     },
     {
       "id": "news-a764751270",
@@ -1621,8 +1639,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860732,
-      "lng": 139.647194
+      "lat": 35.861476,
+      "lng": 139.643374
     },
     {
       "id": "news-2fd0b7d60f",
@@ -1639,8 +1657,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.857452,
-      "lng": 139.657734
+      "lat": 35.859303,
+      "lng": 139.655515
     },
     {
       "id": "news-ff762efb78",
@@ -1657,8 +1675,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861476,
-      "lng": 139.643374
+      "lat": 35.863076,
+      "lng": 139.646927
     },
     {
       "id": "news-49066306f7",
@@ -1675,8 +1693,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.859303,
-      "lng": 139.655515
+      "lat": 35.859147,
+      "lng": 139.658852
     },
     {
       "id": "news-588a7bbd2e",
@@ -1693,8 +1711,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.859147,
-      "lng": 139.658852
+      "lat": 35.857351,
+      "lng": 139.656139
     },
     {
       "id": "news-9b6fa8861c",
@@ -1729,8 +1747,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.857351,
-      "lng": 139.656139
+      "lat": 35.860285,
+      "lng": 139.656671
     },
     {
       "id": "news-e423a8a3e5",
@@ -1747,8 +1765,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863076,
-      "lng": 139.646927
+      "lat": 35.859846,
+      "lng": 139.645594
     },
     {
       "id": "news-699cdbfbd5",
@@ -1765,8 +1783,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859846,
-      "lng": 139.645594
+      "lat": 35.863053,
+      "lng": 139.643843
     },
     {
       "id": "news-8ebd3f2419",
@@ -1783,8 +1801,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863053,
-      "lng": 139.643843
+      "lat": 35.86161,
+      "lng": 139.64791
     },
     {
       "id": "news-03caae6c70",
@@ -1801,8 +1819,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.86161,
-      "lng": 139.64791
+      "lat": 35.86041,
+      "lng": 139.6436
     },
     {
       "id": "news-4f183fd742",
@@ -1823,40 +1841,22 @@
       "lng": 139.622043
     },
     {
-      "id": "news-a575fc7922",
-      "category": "reviews",
-      "type": "nature",
-      "typeLabel": "公園・自然・季節",
-      "typeIcon": "🌳",
-      "title": "18:35更新 #さいたま市,#志木市,#富士見市,#三芳町 の周辺で【やや強い雨】、#越谷市,#久喜市,#吉川市,#…",
-      "summary": "18:35更新 #さいたま市,#志木市,#富士見市,#三芳町 の周辺で【やや強い雨】、#越谷市,#久喜市,#吉川市,#伊奈町,#越生町 の周辺で【並の雨】、#川島町,#吉見町 の周辺で【弱い雨】、",
-      "source": "Bluesky「さいたま市」",
-      "url": "https://bsky.app/profile/ameshsaitama.bsky.social/post/3myrgcpsfxx2b",
-      "published": "2026-10-26T18:36+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
+      "id": "news-5ed3e0ceec",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "低貸専門店へ屋号変更の『ミュー浦和西店』【エリアレポート さいたま市桜区・中央区周辺】 - p-johojima.jp",
+      "summary": "低貸専門店へ屋号変更の『ミュー浦和西店』【エリアレポート さいたま市桜区・中央区周辺】 p-johojima.jp",
+      "source": "p-johojima.jp",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5Zbzk0RmVsYk1VNUdfNWNzTmYtN0xXTjFCWmo3S0dsRS1ZS0lxbGIxMnRRaWNEMUg1V0VMVzhUQ0F6LVR1VHZDbnpCSC1lOGpDQlhXdg?oc=5",
+      "published": "2026-10-26T18:20+09:00",
+      "place": "浦和",
+      "placeKind": "area",
+      "matched": "浦和",
       "ward": "",
-      "lat": 35.86041,
-      "lng": 139.6436
-    },
-    {
-      "id": "news-ba641c7922",
-      "category": "reviews",
-      "type": "nature",
-      "typeLabel": "公園・自然・季節",
-      "typeIcon": "🌳",
-      "title": "18:30更新 #さいたま市,#鴻巣市,#桶川市,#北本市,#三芳町,#松伏町 の周辺で【並の雨】、#東松山市,#滑川…",
-      "summary": "18:30更新 #さいたま市,#鴻巣市,#桶川市,#北本市,#三芳町,#松伏町 の周辺で【並の雨】、#東松山市,#滑川町,#嵐山町,#鳩山町 の周辺で【弱い雨】、#加須市 の周辺で【より弱い雨】、",
-      "source": "Bluesky「さいたま市」",
-      "url": "https://bsky.app/profile/ameshsaitama.bsky.social/post/3myrfzpapl525",
-      "published": "2026-10-26T18:31+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 35.863744,
-      "lng": 139.645838
+      "lat": 35.857732,
+      "lng": 139.658794
     },
     {
       "id": "news-3d68e689da",
@@ -1891,8 +1891,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859968,
-      "lng": 139.646983
+      "lat": 35.863744,
+      "lng": 139.645838
     },
     {
       "id": "news-5b81b01295",
@@ -2003,6 +2003,24 @@
       "lng": 139.66
     },
     {
+      "id": "news-6e6f2cc0ce",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "さいたま新都心で極上シーフード大集合！10月31日開幕の「エビカニフェス2026」は何が食べられる？赤い服で行くと嬉し",
+      "summary": "",
+      "source": "ニコニコニュース",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yVzlBZkdOM1BBUGhJRzAtWHlNYkJtVDRqVHQtRXpKT25WRmNfVlpFenFRdEFsVlFZVWVtRnBKOExERUxyZEs2YzgxeVE2TW1PSnpGc2E1dU5KaklTQ3NXb2xYS2FsUG5NaU9LQzM1anEyOVNWMUd2SnA5QQ?oc=5",
+      "published": "2026-10-26T12:06+09:00",
+      "place": "さいたま新都心",
+      "placeKind": "area",
+      "matched": "さいたま新都心",
+      "ward": "中央区・大宮区",
+      "lat": 35.893474,
+      "lng": 139.635261
+    },
+    {
       "id": "news-6f7bcefdc5",
       "category": "news",
       "type": "",
@@ -2017,8 +2035,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.860285,
-      "lng": 139.656671
+      "lat": 35.858476,
+      "lng": 139.654974
     },
     {
       "id": "news-2dc4cc7771",
@@ -2035,8 +2053,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862174,
-      "lng": 139.64291
+      "lat": 35.859968,
+      "lng": 139.646983
     },
     {
       "id": "news-0b6365f73a",
@@ -2053,8 +2071,8 @@
       "placeKind": "area",
       "matched": "さいたま新都心",
       "ward": "中央区・大宮区",
-      "lat": 35.893474,
-      "lng": 139.635261
+      "lat": 35.892114,
+      "lng": 139.634307
     },
     {
       "id": "news-cc410cc07e",
@@ -2071,8 +2089,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862796,
-      "lng": 139.647853
+      "lat": 35.862174,
+      "lng": 139.64291
     },
     {
       "id": "news-0d6e1edcab",
@@ -2089,8 +2107,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859556,
-      "lng": 139.644659
+      "lat": 35.862796,
+      "lng": 139.647853
     },
     {
       "id": "news-001b3e2ca6",
@@ -2161,8 +2179,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.857732,
-      "lng": 139.658794
+      "lat": 35.860076,
+      "lng": 139.658527
     },
     {
       "id": "news-43f24b631e",
@@ -2179,8 +2197,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863783,
-      "lng": 139.644316
+      "lat": 35.859556,
+      "lng": 139.644659
     },
     {
       "id": "news-70c3f9fbdf",
@@ -2215,8 +2233,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.858476,
-      "lng": 139.654974
+      "lat": 35.856846,
+      "lng": 139.657194
     },
     {
       "id": "news-28f7f74e7b",
@@ -2233,8 +2251,8 @@
       "placeKind": "area",
       "matched": "さいたま新都心",
       "ward": "中央区・大宮区",
-      "lat": 35.892114,
-      "lng": 139.634307
+      "lat": 35.893849,
+      "lng": 139.633836
     },
     {
       "id": "news-6166f7eb80",
@@ -2413,8 +2431,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860797,
-      "lng": 139.648153
+      "lat": 35.863783,
+      "lng": 139.644316
     },
     {
       "id": "news-7a2d17b3c9",
@@ -2449,8 +2467,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860894,
-      "lng": 139.642744
+      "lat": 35.860797,
+      "lng": 139.648153
     },
     {
       "id": "news-85da8a6ee7",
@@ -2471,22 +2489,22 @@
       "lng": 139.62111
     },
     {
-      "id": "news-de4f725446",
+      "id": "news-c4c15400d0",
       "category": "news",
       "type": "",
       "typeLabel": "",
       "typeIcon": "",
-      "title": "木造アパート火災で男性1人死亡 さいたま市",
-      "summary": "木造アパート火災で男性1人死亡 さいたま市 (ABEMA TIMES) Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUHQ0clpCYk1EY3pWMGdTYlBDZzN5QVJvd05rS3VoRHF3MlpMS0xXbHoxb0ZBQUk4UVk0dlBZUEVHcGJzaFZJUjVtMk15LVd5SHN3dXVkSlBEOHhIaHRQZHRrN1RLUV9mdnhSUHNjY05oOFNpZTJEa1JmQzNYQ09RejY3TGwzYm1EMENLclJR?oc=5",
-      "published": "2026-10-25T00:15+09:00",
+      "title": "木造アパート火災で男性１人死亡 さいたま市",
+      "summary": "",
+      "source": "ABEMA",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBXdnZIRlJ6b1YzY0ppbVZ3MmtITTN4dEpkWC1NY2pYYXM1LXR6YmRKRldVVVVfR1R2RmxrZC1OdFl1bkpUWUpyQ25aYXc3UDR4NkJuM3B4b18xbkE?oc=5",
+      "published": "2026-10-25T00:27+09:00",
       "place": "市全体",
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863845,
-      "lng": 139.646886
+      "lat": 35.860894,
+      "lng": 139.642744
     },
     {
       "id": "news-2924842d08",
@@ -2505,6 +2523,24 @@
       "ward": "",
       "lat": 35.847556,
       "lng": 139.66822
+    },
+    {
+      "id": "news-b77eb8585f",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "さいたま市でアパート火事1人死亡",
+      "summary": "",
+      "source": "NHKニュース",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5pMTZycEF1bWNVaFhvX0hkb1l3cS1vRmVPQ2VQWEJ6dXJEekQzcWlPOUJGRmlaN2FlbkdBcTJXbU1QLWNHY1QzQUdBeEdlV1VUcWJ2NXZnSUVtSm03Zjhv?oc=5",
+      "published": "2026-10-24T22:29+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.863845,
+      "lng": 139.646886
     },
     {
       "id": "news-eaf8ff65ed",
@@ -2597,24 +2633,6 @@
       "lng": 139.669761
     },
     {
-      "id": "news-9e8b45806c",
-      "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "11年前の記録から。 奈良線を走る8000系8079+8078編成(B79+B78)他です。 撮影当時で稀に出現する3…",
-      "summary": "11年前の記録から。 奈良線を走る8000系8079+8078編成(B79+B78)他です。 撮影当時で稀に出現する3+3+2の組合せです。 撮った時はバリ順がいいな、と思いましたが今思うと晴れたら車体に太いケーブルの影が多々。 それを考えたら曇りでよかったな、と思う記録です。 2015年7月11日撮影。大和西大寺駅～新大宮駅間にて #近鉄8000系 #近鉄8000系b79 #平城跡 #青空写真部 #青空鉄道部 #ブルスカ写真部",
-      "source": "Bluesky「大宮駅」",
-      "url": "https://bsky.app/profile/mf11mf24.bsky.social/post/3myml2h2aus2m",
-      "published": "2026-10-24T20:18+09:00",
-      "place": "大宮駅",
-      "placeKind": "station",
-      "matched": "大宮駅",
-      "ward": "",
-      "lat": 35.908483,
-      "lng": 139.622516
-    },
-    {
       "id": "news-bb7114faa8",
       "category": "gourmet",
       "type": "cafe",
@@ -2633,40 +2651,22 @@
       "lng": 139.694234
     },
     {
-      "id": "news-54f6f56479",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "さいたま市南区でアパート火災 1人の遺体発見 消防車など12台出動し消火活動（FNNプライムオンライン（フジテレビ系））",
+      "id": "news-315b8dcccb",
+      "category": "gourmet",
+      "type": "cafe",
+      "typeLabel": "カフェ・スイーツ",
+      "typeIcon": "🍰",
+      "title": "大宮璃宮のカフェ＆レストラン四季庭がクリスマスディナー2026を12月19日より販売へ",
       "summary": "",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBDOWM4ZE1JR0laMHNKUXNURjQtQU12ZEt3VzNOLWtGNU5aMzA4S0Y3VjJFRXpYM21KeUlkVExpLVVvanFmMU1xd3hkd3dTNXphaUJpWnZXV1hXRWl3MHdpV0ltOXVFMl8tZUY1azdKMzJnOGZJWTJBM3Z6NW9pcEk?oc=5",
-      "published": "2026-10-24T19:13+09:00",
-      "place": "南区",
-      "placeKind": "ward",
-      "matched": "さいたま市南区",
-      "ward": "南区",
-      "lat": 35.845474,
-      "lng": 139.645761
-    },
-    {
-      "id": "news-b9dc29ebf9",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "さいたま市 介護・相続テーマの市民講座／埼玉県",
-      "summary": "さいたま市 介護・相続テーマの市民講座／埼玉県（テレ玉） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1TR2d0dHd3Q3p4VHAxbnNCTUFkaU1NRktrS0xjYkZOSG9jRTRMSjJWdXdEa3pkbjJ4X25FS3pqTHhDdTkwVmVWZmlkOWlQSEZQNkZKNmJoS21yVGp4WUpTSVdBb3lVRUMtYnJlWVNpc2xINkJ4dDZLNDlUZnJRakk?oc=5",
-      "published": "2026-10-24T17:50+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
+      "source": "Dellows News",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1UNlQ0LUxfWGltVHJTWG9OUXpGYTRoUmYzOEVPdFNKbmlQcTlmanBfSjZEOW1YOExhZXc2T2U3QjZLeU9nZVE?oc=5",
+      "published": "2026-10-24T17:58+09:00",
+      "place": "大宮",
+      "placeKind": "area",
+      "matched": "大宮",
       "ward": "",
-      "lat": 35.863055,
-      "lng": 139.642908
+      "lat": 35.908483,
+      "lng": 139.622516
     },
     {
       "id": "news-b5614ea216",
@@ -2719,8 +2719,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862131,
-      "lng": 139.648586
+      "lat": 35.863055,
+      "lng": 139.642908
     },
     {
       "id": "news-0338f5b154",
@@ -2755,8 +2755,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.860076,
-      "lng": 139.658527
+      "lat": 35.860053,
+      "lng": 139.655443
     },
     {
       "id": "news-9b96c70034",
@@ -2773,8 +2773,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.856846,
-      "lng": 139.657194
+      "lat": 35.85861,
+      "lng": 139.65951
     },
     {
       "id": "news-a8b4615c98",
@@ -2849,6 +2849,24 @@
       "lng": 139.624473
     },
     {
+      "id": "news-2e3b23edc5",
+      "category": "gourmet",
+      "type": "cafe",
+      "typeLabel": "カフェ・スイーツ",
+      "typeIcon": "🍰",
+      "title": "浦和美園にペットと過ごすアンティークカフェ　障害者の個性組み合わせ店作り",
+      "summary": "浦和美園にペットと過ごすアンティークカフェ 障害者の個性組み合わせ店作り ｄメニューニュース",
+      "source": "ｄメニューニュース",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE15Q1pqb3FFYzczRWNUV2o4WHd2ZnZGb3J3bEFJZDRuQ0trN0ptVGM2QnhGZ0p1VWY2UjY2S3FVLS0zaUZXbExKb21sYjloS2FUbkUteFhIa0dJVy16Qi1mWUVaTDg5azFOLU1PN1g4UjhGYlpQTWhYdjVn0gF_QVVfeXFMUHhkM0xZUWZEY3ZQd1BLdUdGdDJwWW5UeUZxVFJJWjBxZXI0NThYN2lIczZ2dG41VTVlaS1jY1J1cXNsVDBsLXVSbHgzUlNaQ1c2WWVXS0JfRFNuS2xiU1NkdV9VX0hrMG8yTmZqMEZETVlvaHg1N2lyaGlBeG1xWQ?oc=5",
+      "published": "2026-10-21T16:49+09:00",
+      "place": "浦和美園駅",
+      "placeKind": "station",
+      "matched": "浦和美園",
+      "ward": "",
+      "lat": 35.893556,
+      "lng": 139.72822
+    },
+    {
       "id": "news-01b7f6cb2a",
       "category": "reviews",
       "type": "other",
@@ -2863,8 +2881,8 @@
       "placeKind": "area",
       "matched": "さいたま新都心",
       "ward": "中央区・大宮区",
-      "lat": 35.893849,
-      "lng": 139.633836
+      "lat": 35.892714,
+      "lng": 139.635809
     },
     {
       "id": "news-4446d00dfa",
@@ -2917,8 +2935,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.860053,
-      "lng": 139.655443
+      "lat": 35.85741,
+      "lng": 139.6552
     },
     {
       "id": "news-31228f2260",
@@ -2953,8 +2971,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859656,
-      "lng": 139.643553
+      "lat": 35.862131,
+      "lng": 139.648586
     },
     {
       "id": "news-e8088e55cc",
@@ -2975,6 +2993,24 @@
       "lng": 139.6264
     },
     {
+      "id": "news-3dcc9782c7",
+      "category": "gourmet",
+      "type": "cafe",
+      "typeLabel": "カフェ・スイーツ",
+      "typeIcon": "🍰",
+      "title": "コラボメニュー「食事で巡るフィンランド」",
+      "summary": "コラボメニュー「食事で巡るフィンランド」（おふろカフェ提供） 大宮経済新聞",
+      "source": "大宮経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBZZmZxVGh1bzB2Mk54ZXlCU1NQUWVpWXdBSTRhV29JMEtET0Q5c05Ed3p2VWl1Nl8tZTUwRmY1Y2Y1b3poRGNQdnlaVUg2ZmVQSjUw?oc=5",
+      "published": "2026-10-16T17:03+09:00",
+      "place": "大宮",
+      "placeKind": "area",
+      "matched": "大宮",
+      "ward": "",
+      "lat": 35.904356,
+      "lng": 139.621753
+    },
+    {
       "id": "news-ffeb7fe8f8",
       "category": "gourmet",
       "type": "other",
@@ -2989,8 +3025,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.864315,
-      "lng": 139.645233
+      "lat": 35.859656,
+      "lng": 139.643553
+    },
+    {
+      "id": "news-51c8fde8fe",
+      "category": "gourmet",
+      "type": "cafe",
+      "typeLabel": "カフェ・スイーツ",
+      "typeIcon": "🍰",
+      "title": "大宮・おふろカフェ、フィンランド人アーティストと初コラボ グッズも",
+      "summary": "",
+      "source": "大宮経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1wYklkdFNNd2Frc0tyNUc4ek1rRG1UMTktcjFCNFdwcmFJLTlobFBFNjROVVFjeWQ0WGU1MWhLSVlFOTZlcWtKbUpybmhZcV9R?oc=5",
+      "published": "2026-10-16T16:00+09:00",
+      "place": "大宮",
+      "placeKind": "area",
+      "matched": "大宮",
+      "ward": "",
+      "lat": 35.909015,
+      "lng": 139.623433
     },
     {
       "id": "news-dd596fa125",
@@ -3011,6 +3065,24 @@
       "lng": 139.64472
     },
     {
+      "id": "news-d4213ace06",
+      "category": "gourmet",
+      "type": "cafe",
+      "typeLabel": "カフェ・スイーツ",
+      "typeIcon": "🍰",
+      "title": "蝦名さんと白井さんも製造を担当する「大宮太陽の家」のパウンドケーキ",
+      "summary": "",
+      "source": "浦和経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1MTlZuakZHdm9yMnYyM1ZlX2NoNlQ5OU1LdXY4Q3pkSnc4MGkwajlrYWQtMkh6bkpYYWFxeHVacmhvVHdnQ0ZjcHgwT3h5ZzlQQ2FV?oc=5",
+      "published": "2026-10-16T16:00+09:00",
+      "place": "大宮",
+      "placeKind": "area",
+      "matched": "大宮",
+      "ward": "",
+      "lat": 35.904592,
+      "lng": 139.626104
+    },
+    {
       "id": "news-d869fdc093",
       "category": "crime",
       "type": "other",
@@ -3025,8 +3097,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.904356,
-      "lng": 139.621753
+      "lat": 35.906413,
+      "lng": 139.620379
     },
     {
       "id": "news-de5916c616",
@@ -3043,116 +3115,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.909015,
-      "lng": 139.623433
-    },
-    {
-      "id": "news-13327de808",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "勾留中の複数容疑者から預かった100万円が不明 埼玉県警大宮署 [埼玉県]",
-      "summary": "",
-      "source": "朝日新聞",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5vSnppanlMNmUwd18tRGFxdnFGRTlsTjdRcVh3Q1YxYzdwLWtkLTNoVHBVNTVWUnR4cFhvQlNpcktqbjRfVHd1dVVaRFdBM0JNM0Zsd1QwTy1rS0h5a1Qwb0p6ZGJrSm8?oc=5",
-      "published": "2026-10-14T16:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.904592,
-      "lng": 139.626104
-    },
-    {
-      "id": "news-bedc7a913f",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "埼玉県警の大宮署内で預かり金100万円不足 署員が持ち出しか",
-      "summary": "埼玉県警の大宮署内で預かり金100万円不足 署員が持ち出しか（毎日新聞） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PaU5meExkTTUxT2xrVWlMNVAzM1YzVnVuVU4xNmlZZ0tBTi15d1FNdmtGTFF5MFNNNVJSU0M3Q3JIREdIQ1lBWHpKS3NDMmdWZ0RTNF9nRXBVbzVIQkw0WklUa0RON2M3aFM2MW55T2prdFRLbnpFblVpdVd4b3c?oc=5",
-      "published": "2026-10-14T16:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.906413,
-      "lng": 139.620379
-    },
-    {
-      "id": "news-8d50377ddb",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "警察署の金庫から「１００万円」消える、内部の人間が盗んだ疑い…埼玉県警大宮署・留置容疑者の現金保管",
-      "summary": "",
-      "source": "読売新聞",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE15YkI4elpDeE44VXd5ZHhYOWJfTXBTLUNXMVB5OExJRHY3TjNOMXlIMktzV1NuSS1KenZNQ1BFUkN1MmJVcDhLQ3dJbFo5bkNOSGN0UnJ5Y01qLUd2bDlOMXNCQTdfUQ?oc=5",
-      "published": "2026-10-14T16:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
       "lat": 35.908239,
       "lng": 139.626193
-    },
-    {
-      "id": "news-d9ed7d1048",
-      "category": "crime",
-      "type": "theft",
-      "typeLabel": "窃盗・盗難",
-      "typeIcon": "",
-      "title": "大宮署の金庫から100万円紛失 容疑者の預かり金…埼玉県警、窃盗も視野に捜査",
-      "summary": "",
-      "source": "東京新聞",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBNdVAwNTYwWmNqT0wyMzg0NlVQaUdCYzBzcUpKUnhDN19VMkxXb3ZwWGxrOU92QjhzY0FGZzV0WXBSVncwaWVNMTlhMWR1WjdXODA4?oc=5",
-      "published": "2026-10-14T16:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.903638,
-      "lng": 139.623386
-    },
-    {
-      "id": "news-0c43fb5d77",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "埼玉県警大宮署の金庫で100万円紛失 留置容疑者から預かり「鍵の管理不十分だった」",
-      "summary": "",
-      "source": "産経ニュース",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBLU09CUDRsMW9CN0JYZmphQV8tZEVwYmdsT25rQkVnSVQ0djl2R0JlSmdWeU9yRldzSW0zRVRIZnhNeHJQaDZFSldDb05UV3NpWUt4dm1GVUt1VWw2Z0F2eVpMemRMV2ZfbmZ1TzkxaXNGdTZtYXc?oc=5",
-      "published": "2026-10-14T16:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.908638,
-      "lng": 139.62161
-    },
-    {
-      "id": "news-b798b7e0db",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "容疑者から預かった１００万円紛失、「金庫内の現金の定期的な確認が不十分」と説明…埼玉県警大宮署",
-      "summary": "",
-      "source": "読売新聞",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5mRjAtRTY5aEFkVFprMXhiUTlLRUdDNWszQVZ6c0VCLXF0VTJwT3oxd0RuUEZiRXhJLWRSdU9XdkxZeDNvOFJVT0RDM3NicF9mdElwNEpwQlRzTHgxa3BsbDJ4SFRJdw?oc=5",
-      "published": "2026-10-14T16:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.905891,
-      "lng": 139.627144
     },
     {
       "id": "news-176dbdbcb8",
@@ -3187,8 +3151,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.904865,
-      "lng": 139.620701
+      "lat": 35.903638,
+      "lng": 139.623386
     },
     {
       "id": "news-733bed19b5",
@@ -3205,44 +3169,26 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.909213,
-      "lng": 139.624648
+      "lat": 35.908638,
+      "lng": 139.62161
     },
     {
-      "id": "news-8b834aeafc",
+      "id": "news-d1fa901b63",
       "category": "gourmet",
       "type": "cafe",
       "typeLabel": "カフェ・スイーツ",
       "typeIcon": "🍰",
       "title": "和カフェ「氷川茶庭」の『氷川福最中』が「第4回OH!土産グランプリ」で最高賞・さいたま市長賞を受賞！",
       "summary": "",
-      "source": "フーズチャネル",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5zU2Z5OHFWVm5vVUxwZ201UkktdGc5dmhyVC1XZzVueTlTa0YyX2k5YWRFV1VyZTFYYmcyaC1EN3U1OHFKQmNEN0tTaFZHbURkVTJWaS1n?oc=5",
-      "published": "2026-10-14T15:55+09:00",
+      "source": "PR TIMES",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5TNDIwS08zZmRmWThkZVllMExxQ1NMY1hiTG85Rml4a1ppQmZGcTdCVzFKZ25IV0tNVWhhemZjcjVuWFR3QVlYRmxhaTNvVEQ1a0lpdVQwY0tyTTFSeWFjNURtajkzNUVWNkE?oc=5",
+      "published": "2026-10-14T16:00+09:00",
       "place": "市全体",
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859892,
-      "lng": 139.647904
-    },
-    {
-      "id": "news-502be8bc4a",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "大宮署で容疑者から預かった現金100万円が金庫から消え、署員を聴取",
-      "summary": "大宮署で容疑者から預かった現金100万円が金庫から消え、署員を聴取 (2026年10月14日掲載) ライブドアニュース",
-      "source": "ライブドアニュース",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9DSEpqN3BIZmJ6WVV2N1NlelVMSl90QUtrcmxNMFF5STVlTGZ5eEZHMzRfZk1OZFYxd0VSeFV5c3hSY05ac1BGUlJ6a28xcjBldjdUNmY2OVFZYVowVEE?oc=5",
-      "published": "2026-10-14T15:17+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.903775,
-      "lng": 139.625358
+      "lat": 35.864315,
+      "lng": 139.645233
     },
     {
       "id": "news-1059aaca05",
@@ -3295,8 +3241,26 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.85861,
-      "lng": 139.65951
+      "lat": 35.860744,
+      "lng": 139.657438
+    },
+    {
+      "id": "news-5ba519028d",
+      "category": "gourmet",
+      "type": "cafe",
+      "typeLabel": "カフェ・スイーツ",
+      "typeIcon": "🍰",
+      "title": "【岩槻】ネルドリップとカスカラドリンクが楽しめる「カフェひまり」",
+      "summary": "",
+      "source": "au Webポータル",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1oeklsc2tvNHFmMHJacW5nYlVxeUlQeHdFV2Q0NkJfbnJqbEJwOTZDMGN5NmdiWjB3dnZLQVp3NzB6aGxEQU1tbDVrbUItT2dGVzVWQlJzUFVoTTBieEg3Q3pwQm5PcGJzTzc1bTRn?oc=5",
+      "published": "2026-10-13T16:00+09:00",
+      "place": "岩槻",
+      "placeKind": "area",
+      "matched": "岩槻",
+      "ward": "",
+      "lat": 35.950803,
+      "lng": 139.692015
     },
     {
       "id": "news-e92b7902e9",
@@ -3313,8 +3277,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.907437,
-      "lng": 139.620257
+      "lat": 35.905891,
+      "lng": 139.627144
     },
     {
       "id": "news-004c450ad1",
@@ -3331,8 +3295,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861713,
-      "lng": 139.642179
+      "lat": 35.859892,
+      "lng": 139.647904
     },
     {
       "id": "news-fcc5704a72",
@@ -3349,8 +3313,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863539,
-      "lng": 139.647993
+      "lat": 35.861713,
+      "lng": 139.642179
     },
     {
       "id": "news-90e3132457",
@@ -3367,26 +3331,26 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.85741,
-      "lng": 139.6552
+      "lat": 35.856968,
+      "lng": 139.658583
     },
     {
-      "id": "news-f8adb05c38",
+      "id": "news-093061721a",
       "category": "gourmet",
-      "type": "chinese",
-      "typeLabel": "中華",
-      "typeIcon": "🥟",
-      "title": "「みほさんの2026年10月の投稿」",
-      "summary": "「みほさんの2026年10月の投稿」 | 中華料理 牡丹亭 浦和店(中華)の口コミ ホットペッパーグルメ",
-      "source": "ホットペッパーグルメ",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQY3FZY05SY1Jzdzg4R1YwSjd1X24zay0yZFhodDR2dkdFMVM3M0hhUENWRkI2eTFSQ3k4NWJXdGVsY0RSNEo3X19yYzBfazlITnU4eHl5Vy1SalhVU1JJajF3cWZWMVd5aUlhcmZUUi14SUNoS1BldWpQS3RrQ2I4MExKRGZpbENrNTdN?oc=5",
+      "type": "cafe",
+      "typeLabel": "カフェ・スイーツ",
+      "typeIcon": "🍰",
+      "title": "【開店】大宮「ViSTA CAFE（ビスタカフェ）」10月13日（火）オープン！",
+      "summary": "",
+      "source": "au Webポータル",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA2NDRDSHpFTGpDRkR4SzZ5WVI0VmhjZEJmclRrUGY3S1R2cllKU2ZRY1FqbkF5aVNITkNJdW5EWjZjM29nS1FuTE84VG81OUE3a0NiQzJ3T0pzSWRUZkJPSWowaFh2V1VpdFZHc3N3?oc=5",
       "published": "2026-10-12T16:00+09:00",
-      "place": "浦和",
+      "place": "大宮",
       "placeKind": "area",
-      "matched": "浦和",
+      "matched": "大宮",
       "ward": "",
-      "lat": 35.860744,
-      "lng": 139.657438
+      "lat": 35.904865,
+      "lng": 139.620701
     },
     {
       "id": "news-5c85da2c59",
@@ -3403,8 +3367,26 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.856968,
-      "lng": 139.658583
+      "lat": 35.859174,
+      "lng": 139.65451
+    },
+    {
+      "id": "news-0cfa102a87",
+      "category": "gourmet",
+      "type": "izakaya",
+      "typeLabel": "居酒屋",
+      "typeIcon": "🏮",
+      "title": "「まりりさんの2026年10月の投稿」",
+      "summary": "「まりりさんの2026年10月の投稿」 | しゃぶしゃぶ但馬屋 浦和パルコ店(居酒屋)の口コミ ホットペッパーグルメ",
+      "source": "ホットペッパーグルメ",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYVpaYkhGSGh2X0RTbzJGaWZfRlRXNGtzaW04QnlLZFA5SmlfRWhmc1NCSVQ2WC11bWtZbi1fa2VITUhNYVZ2VlloZVIwaGZkbnpHUEo4ME9XNy01ZUZFeEJzV2haN1hBclgxakxDN3NGTEJGdnlKQmNvMjB0THcwUmRHN2xjTnpMaU4w?oc=5",
+      "published": "2026-10-11T16:00+09:00",
+      "place": "浦和",
+      "placeKind": "area",
+      "matched": "浦和",
+      "ward": "",
+      "lat": 35.859796,
+      "lng": 139.659453
     },
     {
       "id": "news-3e0b5b7441",
@@ -3425,24 +3407,6 @@
       "lng": 139.638874
     },
     {
-      "id": "news-ec90f1b7d8",
-      "category": "gourmet",
-      "type": "cafe",
-      "typeLabel": "カフェ・スイーツ",
-      "typeIcon": "🍰",
-      "title": "大宮で“バターのいとこ”オープンへ 店限定フレーバーのバターサンドクッキー新発売、あまりん使用 ラスク、ベイクドケーキも ソフトクリーム「森林ノ牧場」も注目",
-      "summary": "",
-      "source": "47NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE8zVnlNRlJjb2RiUC1ZSVFISXVnTS00TUIzcUJOUFROM3hGMko2VHJVa2dMeTJOS3ZSenQ5OGFyUzJnbFpkNTVWdlFhVQ?oc=5",
-      "published": "2026-10-09T16:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.907539,
-      "lng": 139.627139
-    },
-    {
       "id": "news-02b4c5e9a6",
       "category": "otaku",
       "type": "cafe",
@@ -3457,116 +3421,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.903642,
-      "lng": 139.622093
-    },
-    {
-      "id": "news-9144cd4233",
-      "category": "gourmet",
-      "type": "other",
-      "typeLabel": "その他のグルメ",
-      "typeIcon": "🍴",
-      "title": "さいたま新都心で「さいたまフードフェス」 飲食店やキッチンカー集結",
-      "summary": "",
-      "source": "大宮経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBiV05WaUVjUzI2UkRFWGlyZC04U21rLUs3b09GN1NjSkhONVZiUmhycldYNE5VWjJvTHppNEV6TXluSjNsQ0RNdWpfNVJTMF9K?oc=5",
-      "published": "2026-10-09T16:00+09:00",
-      "place": "さいたま新都心",
-      "placeKind": "area",
-      "matched": "さいたま新都心",
-      "ward": "中央区・大宮区",
-      "lat": 35.892714,
-      "lng": 139.635809
-    },
-    {
-      "id": "news-a88101e2bd",
-      "category": "gourmet",
-      "type": "western",
-      "typeLabel": "洋食・イタリアン",
-      "typeIcon": "🍝",
-      "title": "【さいたま市緑区】「ガスト 東川口店」が11月4日をもって閉店へ。市内2店舗目となる「イタリアン リゾート ペルティカ」へ業態変更します",
-      "summary": "",
-      "source": "地域ニュースサイト号外NET",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNa0dSaXMwZG00clBCRjZWRkFsZ25VaVJuWi16V2hETFJXSFBBU29kU0xrQVc3MHJ5b09yTnhaS3JEQW5iR3llWGRYeU5keEh5MEtPUjBqa0RuS3JOVk90WFNMNklwNi1ac3BBcWl4QlN0RjBtcGVLNG5jczRzQ2E0dmRpaFhHc3VEdE8yUHY1eDN4czRnOVE?oc=5",
-      "published": "2026-10-09T16:00+09:00",
-      "place": "緑区",
-      "placeKind": "ward",
-      "matched": "さいたま市緑区",
-      "ward": "緑区",
-      "lat": 35.877668,
-      "lng": 139.690374
-    },
-    {
-      "id": "news-4897c9a4ad",
-      "category": "gourmet",
-      "type": "buffet",
-      "typeLabel": "食べ放題",
-      "typeIcon": "🍽️",
-      "title": "獅子舞に餅つき、マジックやガチャみくじも！元日のお正月ビュッフェが埼玉・浦和に",
-      "summary": "",
-      "source": "いこーよニュース",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1IV05ENTdFMzVibVdNOEdDbkJlclBtOEcycGNmQlNTTkxaRDFQY181WFhjcUo0UU8xUl9vVGV3d2dlb056NXpkWXhfLVpNTTRrUEE?oc=5",
-      "published": "2026-10-08T16:00+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.859174,
-      "lng": 139.65451
-    },
-    {
-      "id": "news-11cee43d0a",
-      "category": "gourmet",
-      "type": "buffet",
-      "typeLabel": "食べ放題",
-      "typeIcon": "🍽️",
-      "title": "【ロイヤルパインズホテル浦和】お正月に美味しく楽しめるビュッフェイベント「ニューイヤーファミリービュッフェ2027～獅子舞・餅つき・ガチャみくじで楽しむお正月～」を2027年1月1日（元日）に開催！",
-      "summary": "",
-      "source": "PR TIMES",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE43WmxwS3FrSFZYN284eHpBWFF0cm9UV21FSUVoWHdfZFNGekV2Wmltdy1qSXBYX0JwQ1FKc1d5dERnOWpsT3JOU2dhVXVGSWN2TWt4U0VaNXZwdVZaUXcwd2o5SHdmSkNJaUE?oc=5",
-      "published": "2026-10-08T16:00+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.859796,
-      "lng": 139.659453
-    },
-    {
-      "id": "news-636d437ccd",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "【埼玉・与野駅すぐ】大和公認の佐野ラーメン系「手揉み麺 与野日和」が9/26オープン",
-      "summary": "",
-      "source": "ぐんぐるブログ",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1QV3V0V25jQUdqVGdLbnRxUFA2UjA0NHAtSEpsN1ZISVc5anlIaTBtNnpPaWVqdVN3NXhsR2JwR1B3WDdWcldSVmpSTXNscEhfTWljTmEybU9CSlZEOXlvQUt5MkQ?oc=5",
-      "published": "2026-10-07T16:00+09:00",
-      "place": "与野",
-      "placeKind": "area",
-      "matched": "与野",
-      "ward": "",
-      "lat": 35.884056,
-      "lng": 139.62522
-    },
-    {
-      "id": "news-80b4840a67",
-      "category": "gourmet",
-      "type": "izakaya",
-      "typeLabel": "居酒屋",
-      "typeIcon": "🏮",
-      "title": "【開店】西浦和「海鮮居酒屋 でいず」10月1日（木）オープン！",
-      "summary": "",
-      "source": "au Webポータル",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9xRW00ajVRUWcwS2NqckQ3Nm9RZGhrWTBRUXE4ZURMRGFDajlVYno4V29kTS1UV2ZnTjNmSU5PZEJfaTl3aTV0ZEJ5MUc2OGxqT2l0V0tkRHJRZ2ZtSVFlUFF5WEpKbkZSUVdiTkln?oc=5",
-      "published": "2026-10-07T16:00+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.856556,
-      "lng": 139.656259
+      "lat": 35.909213,
+      "lng": 139.624648
     },
     {
       "id": "news-78157c1ab2",
@@ -3583,8 +3439,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.909348,
-      "lng": 139.622581
+      "lat": 35.903775,
+      "lng": 139.625358
     },
     {
       "id": "news-305d47ee48",
@@ -3637,8 +3493,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.858938,
-      "lng": 139.645186
+      "lat": 35.863539,
+      "lng": 139.647993
     }
   ]
 }
