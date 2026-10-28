@@ -126,6 +126,8 @@ body {
 #map {
   position: absolute;
   inset: 0;
+  /* 吹き出しの z-index を地図の中に閉じ込め、パネルより上に出ないようにする */
+  z-index: 0;
 }
 
 .help-hint {
