@@ -142,6 +142,8 @@
       add3DBuildings(map);
       addTerrain(map);
       buildMarkers();
+      // ライブカメラの場所は最初から地図に出しておく（📹 カメラ のボタンで隠せる）
+      setCamsVisible(true, { fit: false });
       if (state.pendingNews) setNews(state.pendingNews);
       updateZoomClass();
       scheduleCollision();
@@ -149,6 +151,7 @@
     });
 
     map.on('zoom', updateZoomClass);
+    map.on('zoom', updateCamMarkers);
     map.on('move', scheduleCollision);
     map.on('moveend', scheduleCollision);
     map.on('error', (e) => {
@@ -254,7 +257,7 @@
       btn.title = 'ライブカメラの場所を表示';
       btn.setAttribute('aria-label', 'ライブカメラの場所を表示');
       btn.setAttribute('aria-pressed', 'false');
-      btn.textContent = '📹';
+      btn.textContent = '📹 カメラ';
       btn.addEventListener('click', () => setCamsVisible(!state.camsVisible));
       this._container.appendChild(btn);
       return this._container;
@@ -264,10 +267,11 @@
     }
   }
 
-  function setCamsVisible(visible) {
+  // fit: すべてのカメラが入る範囲まで寄るか（起動時は寄らない）
+  function setCamsVisible(visible, { fit = true } = {}) {
     const cams = (state.livecams && state.livecams.cameras) || [];
     if (visible && !cams.length) {
-      showToast('ライブカメラの情報を読み込めませんでした。');
+      if (fit) showToast('ライブカメラの情報を読み込めませんでした。');
       return;
     }
     state.camsVisible = visible;
@@ -276,24 +280,72 @@
       btn.setAttribute('aria-pressed', String(visible));
       btn.title = visible ? 'ライブカメラの場所を隠す' : 'ライブカメラの場所を表示';
     }
-    if (visible && !state.camMarkers.length) cams.forEach(createCamMarker);
-    state.camMarkers.forEach(({ marker }) => {
-      if (visible) marker.addTo(state.map);
-      else marker.remove();
-    });
-    if (visible) {
-      // カメラ同士が重ならないよう、すべてのカメラが入る範囲まで寄る
-      const bounds = new maplibregl.LngLatBounds();
-      cams.forEach((c) => bounds.extend([c.lng, c.lat]));
-      const mobile = MOBILE_QUERY.matches;
-      state.map.fitBounds(bounds, {
-        padding: mobile ? { top: 60, bottom: 60, left: 40, right: 60 } : { top: 120, bottom: 120, left: 160, right: 160 },
-        maxZoom: 14.5, pitch: 50, duration: 1400,
-      });
+    if (visible && !state.camMarkers.length) {
+      cams.forEach(createCamMarker);
+      createCamCluster(cams);
+    }
+    state.camMode = null; // 表示を作り直す
+    updateCamMarkers();
+    if (visible && fit) {
+      fitToCams();
       showToast(`📹 ライブカメラ ${cams.length}か所を表示しました。カメラを押すと映像が見られます。`);
-    } else {
+    } else if (!visible) {
       closeCam();
     }
+  }
+
+  // 市全体を見ているときはカメラ同士が重なって押せないため、1つにまとめたボタンを出す
+  const CAM_CLUSTER_ZOOM = 13;
+
+  function createCamCluster(cams) {
+    const el = document.createElement('div');
+    el.className = 'cam-marker cam-cluster';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cam-pin';
+    btn.setAttribute('aria-label', `ライブカメラ ${cams.length}か所。押すと近づいて表示します`);
+    btn.innerHTML = '<span class="cam-pin-icon" aria-hidden="true">📹</span>';
+    btn.append(`ライブカメラ ${cams.length}`);
+    btn.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      fitToCams();
+    });
+    el.appendChild(btn);
+    const lng = cams.reduce((a, c) => a + c.lng, 0) / cams.length;
+    const lat = cams.reduce((a, c) => a + c.lat, 0) / cams.length;
+    state.camCluster = new maplibregl.Marker({ element: el, anchor: 'bottom' }).setLngLat([lng, lat]);
+  }
+
+  function updateCamMarkers() {
+    if (!state.map) return;
+    const mode = !state.camsVisible ? 'hidden'
+      : state.map.getZoom() < CAM_CLUSTER_ZOOM && state.camMarkers.length > 1 ? 'cluster' : 'each';
+    if (mode === state.camMode) return;
+    state.camMode = mode;
+    state.camMarkers.forEach(({ marker }) => {
+      if (mode === 'each') marker.addTo(state.map);
+      else marker.remove();
+    });
+    if (state.camCluster) {
+      if (mode === 'cluster') state.camCluster.addTo(state.map);
+      else state.camCluster.remove();
+    }
+  }
+
+  function fitToCams() {
+    const cams = state.livecams.cameras;
+    const bounds = new maplibregl.LngLatBounds();
+    cams.forEach((c) => bounds.extend([c.lng, c.lat]));
+    const h = state.map.getContainer().clientHeight;
+    const mobile = MOBILE_QUERY.matches;
+    // 傾けると手前（画面下）が広がるので、下の余白を多めにとる
+    const padding = mobile
+      ? { top: 70, bottom: Math.round(h * 0.25), left: 50, right: 70 }
+      : { top: 120, bottom: Math.round(h * 0.25), left: 200, right: 200 };
+    const cam = state.map.cameraForBounds(bounds, { padding, maxZoom: 14.5 });
+    // 必ずカメラが1つずつに分かれて見えるズームまで寄る
+    const zoom = Math.max(cam ? cam.zoom : 0, CAM_CLUSTER_ZOOM + 0.6);
+    state.map.flyTo({ center: cam ? cam.center : bounds.getCenter(), zoom, pitch: 35, duration: 1400, essential: true });
   }
 
   function createCamMarker(cam) {
@@ -357,7 +409,8 @@
     }
 
     const checked = state.livecams.checkedAt ? formatDate(state.livecams.checkedAt) : '';
-    const status = !checked ? '' : yt.live ? `${checked} 時点で配信中でした。` : `${checked} 時点では配信していませんでした（配信時間外の場合は映像が出ません）。`;
+    // 「配信していない」は自動の確認で正しく判定できないことがあるため、配信中と分かったときだけ書く
+    const status = checked && yt.live ? `${checked} 時点で配信中でした。` : '配信時間外は映像が出ません。';
     const note = $('#cam-note');
     note.replaceChildren(
       el('span', {}, `📍 ${cam.ward}付近・配信: ${cam.provider}。${status}`),
