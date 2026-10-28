@@ -8,8 +8,15 @@
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Maru+Gothic:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Maru+Gothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@400;700&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // 前回選んだデザインを、画面が描かれる前に反映する（ちらつき防止）
+    try {
+      var savedTheme = localStorage.getItem('saitama3d-theme');
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (e) { /* 保存できない環境では既定のデザイン */ }
+  </script>
 </head>
 <body>
   <header class="app-header">
@@ -26,6 +33,16 @@
         <span class="visually-hidden">ジャンルで絞り込み</span>
         <select id="type-select" class="tool-select" title="グルメのジャンルや事件の種類などで絞り込み">
           <option value="">🍴 ジャンルで絞り込み…</option>
+        </select>
+      </label>
+      <label class="ward-select-label">
+        <span class="visually-hidden">デザインを切り替え</span>
+        <select id="theme-select" class="tool-select" title="画面のデザインを切り替え">
+          <option value="pop">🎈 ポップ</option>
+          <option value="cool">🧊 クール</option>
+          <option value="simple">◻️ シンプル</option>
+          <option value="nostalgic">📻 ノスタルジック</option>
+          <option value="gorgeous">👑 豪華</option>
         </select>
       </label>
     </div>
