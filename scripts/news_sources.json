@@ -1,7 +1,11 @@
 {
-  "_comment": "ニュースの取得元（RSS 2.0 / Atom）。APIキー不要のフィードを追加できる。filter=true のフィードは、さいたま市に関係する語を含む記事だけを残す。",
+  "_comment": "ニュースの取得元（RSS 2.0 / Atom）。APIキー不要のフィードを追加できる。filter=true のフィードは、さいたま市に関係する語を含む記事だけを残す。excludeSources は配信元名の一部、excludeWords は見出し・概要に含まれる語で、当てはまる記事を除く。duplicateSimilarity（見出し全体の類似度）と duplicateOverlap（短い方の見出しがもう片方に含まれる割合）は0〜1で、どちらかがこの値以上なら重複として除く。",
   "maxItems": 40,
   "maxAgeDays": 14,
+  "duplicateSimilarity": 0.6,
+  "duplicateOverlap": 0.7,
+  "excludeSources": ["MOVIE WALKER PRESS", "tenki.jp", "健美家", "Unisba Media"],
+  "excludeWords": ["上映時間", "上映スケジュール", "の天気", "天気予報", "【朝版】", "【夕版】", "区分マンション", "利回り"],
   "sources": [
     {
       "name": "Googleニュース「さいたま市」",

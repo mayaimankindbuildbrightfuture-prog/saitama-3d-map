@@ -114,11 +114,26 @@ def clean_item(item: dict) -> dict:
     m = re.match(r"^(.*\S)\s+-\s+([^-]{1,40})$", title)
     if m and (not source or m.group(2).strip() == source):
         title, source = m.group(1), m.group(2).strip()
+    title = strip_title_suffix(title)
     summary = item["summary"]
     # 概要が見出し（＋媒体名）の繰り返しだけなら捨てる
     if summary and (summary.startswith(title) or title.startswith(summary)) and len(summary) <= len(title) + len(source) + 4:
         summary = ""
     return {**item, "title": title, "source": source or item["feed"], "summary": summary[:200]}
+
+
+def strip_title_suffix(title: str) -> str:
+    """見出しの末尾に付く媒体名やサイト名を取り除く。
+
+    例: 「見出し（埼玉新聞）」「見出し (埼玉新聞)」「見出し｜埼玉新聞｜埼玉の最新ニュース」
+    """
+    # 「｜」「 | 」以降はサイト名であることが多い（前半が十分長い場合のみ切る）
+    m = re.match(r"^(.{12,}?)\s*(?:｜| \| ).*$", title)
+    if m:
+        title = m.group(1)
+    # 末尾の（媒体名）。中身が短いものだけを対象にし、本文の一部の括弧は残す
+    title = re.sub(r"\s*[（(][^（）()]{1,20}[）)]$", "", title)
+    return title.strip()
 
 
 # ---------- 位置推定 ----------
@@ -185,13 +200,48 @@ def spread(items: list[dict]) -> None:
 # ---------- まとめ ----------
 
 def normalize_title(title: str) -> str:
-    return re.sub(r"[\s　「」『』【】、。！!？?・…]", "", title).lower()
+    return re.sub(r"[\s　「」『』【】、。！!？?・…,，.．:：;；\-ー〜~／/]", "", title).lower()
+
+
+def bigrams(text: str) -> set[str]:
+    return {text[i:i + 2] for i in range(len(text) - 1)}
+
+
+def is_duplicate(norm: str, grams: set[str], kept: list[tuple[str, set[str]]], threshold: float,
+                 overlap: float = 0.7) -> bool:
+    """次のどれかに当てはまれば重複とみなす。
+
+    - 同じ見出し、または片方がもう片方の先頭部分
+    - 文字の2文字組の Dice 係数が threshold 以上（言い回しがほぼ同じ）
+    - 短い方の見出しの2文字組のうち overlap 以上がもう片方に含まれる（同じ出来事を別の媒体が報じた場合など）
+    """
+    for other, other_grams in kept:
+        if norm == other:
+            return True
+        short, long_ = sorted((norm, other), key=len)
+        if len(short) >= 15 and long_.startswith(short):
+            return True
+        if grams and other_grams:
+            common = len(grams & other_grams)
+            if 2 * common / (len(grams) + len(other_grams)) >= threshold:
+                return True
+            if min(len(grams), len(other_grams)) >= 10 and common / min(len(grams), len(other_grams)) >= overlap:
+                return True
+    return False
+
+
+def is_excluded(item: dict, exclude_sources: list[str], exclude_words: list[str]) -> bool:
+    if any(src and src in item["source"] for src in exclude_sources):
+        return True
+    text = f'{item["title"]} {item["summary"]}'
+    return any(w and w in text for w in exclude_words)
 
 
 def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_items: int, max_age_days: int,
-               filters: dict[str, bool]) -> list[dict]:
+               filters: dict[str, bool], exclude_sources: list[str] = (), exclude_words: list[str] = (),
+               similarity: float = 0.6, overlap: float = 0.7) -> list[dict]:
     cutoff = now - timedelta(days=max_age_days)
-    seen_titles = set()
+    kept_titles: list[tuple[str, set[str]]] = []
     news = []
 
     for item in sorted(raw_items, key=lambda i: i["published"] or now, reverse=True):
@@ -202,10 +252,13 @@ def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_
             continue
         if item["published"] and item["published"] < cutoff:
             continue
-        norm = normalize_title(item["title"])
-        if norm in seen_titles:
+        if is_excluded(item, exclude_sources, exclude_words):
             continue
-        seen_titles.add(norm)
+        norm = normalize_title(item["title"])
+        grams = bigrams(norm)
+        if is_duplicate(norm, grams, kept_titles, similarity, overlap):
+            continue
+        kept_titles.append((norm, grams))
 
         place = place_info(located, places)
         published = item["published"].astimezone(JST).isoformat(timespec="minutes") if item["published"] else None
@@ -260,7 +313,11 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if OUTPUT_FILE.exists() else 1
 
     news = build_news(raw, places, now=now, max_items=config.get("maxItems", 40),
-                      max_age_days=config.get("maxAgeDays", 14), filters=filters)
+                      max_age_days=config.get("maxAgeDays", 14), filters=filters,
+                      exclude_sources=config.get("excludeSources", []),
+                      exclude_words=config.get("excludeWords", []),
+                      similarity=config.get("duplicateSimilarity", 0.6),
+                      overlap=config.get("duplicateOverlap", 0.7))
     out = {
         "generatedAt": now.astimezone(JST).isoformat(timespec="minutes"),
         "sources": used,
