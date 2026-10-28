@@ -105,6 +105,19 @@ body {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
 }
 
+.chip-all {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  color: var(--ink);
+  background: #ffd84d;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.chip-all:hover { background: #ffe98a; }
+
 .chip[aria-pressed="false"] {
   background: var(--paper);
   color: var(--muted);
@@ -703,7 +716,7 @@ body {
     overflow-x: auto;
     padding-bottom: 2px;
   }
-  .chip { flex: none; }
+  .chip, .chip-all { flex: none; }
 
   .panel {
     top: auto;

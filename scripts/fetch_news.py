@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""さいたま市の最新ニュース・オタク関連・事件/防犯・グルメ情報を RSS から取得し、地名から位置を推定して data/news.json に書き出す。
+"""さいたま市の最新ニュース・オタク関連・事件/防犯・グルメ・スーパーの特売・地域の口コミを RSS から取得し、地名から位置を推定して data/news.json に書き出す。
 
 記事は scripts/news_sources.json の categories に書いたキーワードでカテゴリ（と、グルメのジャンルや
 事件の種類などの細かい分類）に振り分ける。
@@ -54,9 +54,12 @@ GOOGLE_NEWS_SEARCH = "https://news.google.com/rss/search?q={q}&hl=ja&gl=JP&ceid=
 
 
 def source_url(src: dict) -> str:
-    """取得元のURL。query だけが書かれていれば Googleニュース検索のRSSにする。"""
+    """取得元のURL。query だけなら Googleニュース検索、type=mastodon ならハッシュタグのRSSにする。"""
     if src.get("url"):
         return src["url"]
+    if src.get("type") == "mastodon":
+        # Mastodon のハッシュタグRSS（https://インスタンス/tags/タグ.rss）
+        return f"https://{src['instance']}/tags/{urllib.parse.quote(src['tag'])}.rss"
     return GOOGLE_NEWS_SEARCH.format(q=urllib.parse.quote_plus(src["query"]))
 
 
@@ -119,7 +122,18 @@ def parse_feed(xml_bytes: bytes, source_name: str) -> list[dict]:
             "feed": source_name,
         })
 
+    for i in items:
+        # Mastodon の投稿などタイトルの無い項目は、本文の先頭を見出しにする
+        if not i["title"] and i["summary"]:
+            i["title"] = post_title(i["summary"])
     return [clean_item(i) for i in items if i["title"] and i["url"]]
+
+
+def post_title(text: str, length: int = 60) -> str:
+    """SNS投稿の本文から見出しを作る（末尾のハッシュタグの並びとURLを除く）。"""
+    text = re.sub(r"https?://\S+", "", text)
+    text = re.sub(r"(\s*#\S+)+\s*$", "", text).strip() or text.strip()
+    return text if len(text) <= length else text[:length - 1] + "…"
 
 
 def clean_item(item: dict) -> dict:
@@ -260,13 +274,35 @@ def classify(text: str, feed_category: str, categories: dict) -> tuple[str, dict
     どれにも当てはまらなければ一般の「news」。オタク・グルメなど専用の検索で拾った記事でも、
     そのカテゴリのキーワードを含まなければ一般ニュース扱いにする（検索結果には関係の薄い記事も混ざるため）。
     """
+    # 口コミのように「どこから取ったか」で決まるカテゴリは、キーワードより優先する
+    if categories.get(feed_category, {}).get("keepFeedCategory"):
+        return feed_category, classify_type(text, categories[feed_category])
     for cat_id, cat in categories.items():
-        keywords = cat.get("keywords") or []
-        if keywords and any(k in text for k in keywords):
+        if cat.get("keepFeedCategory"):
+            continue
+        if matches_category(text, cat):
             return cat_id, classify_type(text, cat)
-    if feed_category in categories and not categories[feed_category].get("keywords"):
+    if feed_category in categories and not has_keywords(categories[feed_category]):
         return feed_category, classify_type(text, categories[feed_category])
     return "news", None
+
+
+def has_keywords(cat: dict) -> bool:
+    return bool(cat.get("keywords") or cat.get("keywordGroups"))
+
+
+def matches_category(text: str, cat: dict) -> bool:
+    """keywords のどれかを含む、または keywordGroups の各グループから1語ずつ含めば当てはまる。
+
+    ignoreWords の語（例: 「スーパーアリーナ」）は、判定の前に本文から取り除く。
+    """
+    for w in cat.get("ignoreWords", []):
+        text = text.replace(w, "")
+    keywords = cat.get("keywords") or []
+    if keywords and any(k in text for k in keywords):
+        return True
+    groups = cat.get("keywordGroups") or []
+    return bool(groups) and all(any(k in text for k in g) for g in groups)
 
 
 def classify_type(text: str, cat: dict) -> dict | None:
@@ -303,6 +339,8 @@ def build_news(raw_items: list[dict], places: list[dict], *, now: datetime, max_
         if is_excluded(item, exclude_sources, exclude_words):
             continue
         cat_id, kind = classify(text, item.get("feedCategory", "news"), categories)
+        if any(w in text for w in limit(cat_id, "excludeWords", [])):
+            continue
         if item["published"] and item["published"] < now - timedelta(days=limit(cat_id, "maxAgeDays", max_age_days)):
             continue
         if counts.get(cat_id, 0) >= limit(cat_id, "maxItems", max_items):

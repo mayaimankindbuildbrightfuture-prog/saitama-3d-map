@@ -18,9 +18,19 @@
     otaku: { label: 'オタク', color: '#e84393', icon: '🎮', tag: 'OTAKU' },
     crime: { label: '事件・防犯', color: '#2c3e50', icon: '🚨', tag: '事件・防犯' },
     foodnews: { label: 'グルメ情報', color: '#e67e22', icon: '🍜', tag: 'GOURMET' },
+    supermarket: { label: 'スーパー特売', color: '#16a085', icon: '🛒', tag: 'SALE' },
+    reviews: { label: '口コミ', color: '#6c5ce7', icon: '💬', tag: '口コミ' },
   };
-  const FEED_CATEGORY_OF = { news: 'news', otaku: 'otaku', crime: 'crime', gourmet: 'foodnews' };
+  const FEED_CATEGORY_OF = {
+    news: 'news', otaku: 'otaku', crime: 'crime', gourmet: 'foodnews', supermarket: 'supermarket', reviews: 'reviews',
+  };
+  // 起動時にオンにしておくカテゴリ（ほかはボタンでオンにする）
+  const DEFAULT_CATEGORIES = ['news'];
   const POLICE_URL = 'https://www.police.pref.saitama.lg.jp/';
+  const FLYER_SITES = [
+    { label: 'Shufoo!', url: 'https://www.shufoo.net/' },
+    { label: 'トクバイ', url: 'https://tokubai.co.jp/' },
+  ];
 
   // 初期視点：さいたま市全域（10区）が見えるように斜め上から
   const INITIAL_VIEW = {
@@ -68,7 +78,7 @@
     Object.assign(data.categories, FEED_CATEGORIES);
     state.topics = data.topics.slice();
     state.topics.forEach((t) => state.byId.set(t.id, t));
-    Object.keys(data.categories).forEach((c) => state.activeCategories.add(c));
+    DEFAULT_CATEGORIES.forEach((c) => state.activeCategories.add(c));
 
     buildMap(style);
     buildFilters();
@@ -480,9 +490,23 @@
         '報道機関が伝えた警察発表などの情報です。地図の位置は記事中の地名からの推定で、事件の正確な発生場所ではありません。最新の正確な防犯情報は ',
         police, '（犯罪情報官NEWS など）で確認してください。'));
     }
+    if (topic.category === 'supermarket') {
+      const links = [];
+      FLYER_SITES.forEach((f, i) => {
+        if (i) links.push('・');
+        links.push(el('a', { href: f.url, target: '_blank', rel: 'noopener' }, f.label));
+      });
+      body.append(el('p', { className: 'crime-note' },
+        'スーパーのセール・新店などを伝える記事です。お店の毎週のチラシや特売の内容は、各店の公式サイトやチラシサイト（',
+        ...links, '）で確認してください。'));
+    }
+    if (topic.category === 'reviews') {
+      body.append(el('p', { className: 'crime-note' },
+        'SNS（Mastodon）に公開されている投稿を、ハッシュタグ（#さいたま など）から集めたものです。投稿者がさいたま市に住んでいるとは限らず、内容は投稿者個人の感想です。地図の位置は本文中の地名からの推定です。'));
+    }
 
     body.append(el('a', { className: 'news-link', href: n.url, target: '_blank', rel: 'noopener noreferrer' },
-      '記事を読む（外部サイト）'));
+      topic.category === 'reviews' ? '投稿を見る（外部サイト）' : '記事を読む（外部サイト）'));
 
     const dl = el('dl', { className: 'info-table' });
     const addRow = (k, v) => { if (v) dl.append(el('dt', {}, k), el('dd', {}, v)); };
@@ -551,6 +575,16 @@
   // ---------- フィルタ・一覧・検索 ----------
   function buildFilters() {
     const wrap = $('#category-filters');
+    const allBtn = el('button', { type: 'button', className: 'chip-all', id: 'chip-all' }, '');
+    allBtn.addEventListener('click', () => {
+      const all = Object.keys(state.data.categories);
+      state.activeCategories = all.every((c) => state.activeCategories.has(c))
+        ? new Set(DEFAULT_CATEGORIES)
+        : new Set(all);
+      syncChips();
+      applyFilter();
+    });
+    wrap.append(allBtn);
     Object.entries(state.data.categories).forEach(([key, cat]) => {
       const chip = el('button', { type: 'button', className: 'chip', 'aria-pressed': 'true' },
         `${cat.icon} ${cat.label}`, el('span', { className: 'chip-count' }, ''));
@@ -571,6 +605,7 @@
       wrap.append(chip);
     });
     updateChipCounts();
+    syncChips();
   }
 
   function updateChipCounts() {
@@ -584,6 +619,11 @@
     document.querySelectorAll('.chip').forEach((chip) => {
       chip.setAttribute('aria-pressed', String(state.activeCategories.has(chip.dataset.category)));
     });
+    const allBtn = $('#chip-all');
+    if (allBtn) {
+      const allOn = Object.keys(state.data.categories).every((c) => state.activeCategories.has(c));
+      allBtn.textContent = allOn ? '📰 ニュースだけに戻す' : '✅ すべて表示';
+    }
   }
 
   function buildWardSelect() {
