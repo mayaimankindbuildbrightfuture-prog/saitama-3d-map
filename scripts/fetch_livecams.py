@@ -10,6 +10,7 @@ YouTube のライブ配信は配信ごとに動画IDが変わるため、チャ�
 
     python3 scripts/fetch_livecams.py            # 調べて data/livecams.json を更新
     python3 scripts/fetch_livecams.py --dry-run  # 書き込まずに結果を表示
+    python3 scripts/fetch_livecams.py --city sendai  # 仙台市版（sendai/data/livecams.json）
 """
 
 from __future__ import annotations
@@ -164,13 +165,15 @@ def update_cameras(data: dict, get=fetch_text, now: datetime | None = None) -> d
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--city", default="", help="市のフォルダ（例: sendai）。省略するとさいたま市")
     args = ap.parse_args(argv)
-    data = update_cameras(json.loads(CAMS_FILE.read_text("utf-8")))
+    cams_file = ROOT / args.city / "data" / "livecams.json" if args.city else CAMS_FILE
+    data = update_cameras(json.loads(cams_file.read_text("utf-8")))
     text = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
     if args.dry_run:
         print(text)
     else:
-        CAMS_FILE.write_text(text, "utf-8")
+        cams_file.write_text(text, "utf-8")
     return 0
 
 
