@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>東京23区 3Dトピックマップ</title>
+  <meta name="description" content="東京23区の名所・歴史・イベント・グルメ・自然・スポーツと、最新ニュース・オタク情報・事件/防犯情報・グルメ情報・スーパーの特売情報・地域の口コミを、3Dマップと漫画の吹き出しで紹介します。">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Maru+Gothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@400;700&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // 前回選んだデザインを、画面が描かれる前に反映する（ちらつき防止）
+    try {
+      var savedTheme = localStorage.getItem('saitama3d-theme');
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (e) { /* 保存できない環境では既定のデザイン */ }
+  </script>
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title"><span class="app-title-main">東京23区</span> 3Dトピックマップ</h1>
+    <div class="header-tools">
+      <button type="button" id="list-toggle" class="tool-btn" aria-expanded="false" aria-controls="list-panel">📋 一覧・検索</button>
+      <label class="ward-select-label">
+        <span class="visually-hidden">ほかの地域のマップを開く</span>
+        <select id="city-select" class="tool-select" title="ほかの地域の3Dトピックマップを開く">
+          <option value="">🗺 ほかの地域…</option>
+          <option value="../">さいたま市</option>
+          <option value="../sendai/">仙台市</option>
+        </select>
+      </label>
+      <label class="ward-select-label">
+        <span class="visually-hidden">区へ移動</span>
+        <select id="ward-select" class="tool-select">
+          <option value="">区へ移動…</option>
+        </select>
+      </label>
+      <label class="ward-select-label">
+        <span class="visually-hidden">ジャンルで絞り込み</span>
+        <select id="type-select" class="tool-select" title="グルメのジャンルや事件の種類などで絞り込み">
+          <option value="">🍴 ジャンルで絞り込み…</option>
+        </select>
+      </label>
+      <label class="ward-select-label">
+        <span class="visually-hidden">デザインを切り替え</span>
+        <select id="theme-select" class="tool-select" title="画面のデザインを切り替え">
+          <option value="pop">🎈 ポップ</option>
+          <option value="cool">🧊 クール</option>
+          <option value="simple">◻️ シンプル</option>
+          <option value="nostalgic">📻 ノスタルジック</option>
+          <option value="gorgeous">👑 豪華</option>
+        </select>
+      </label>
+    </div>
+    <div id="category-filters" class="category-filters" role="group" aria-label="カテゴリで絞り込み"></div>
+  </header>
+
+  <main class="app-main">
+    <div id="map" aria-label="東京23区の3Dマップ"></div>
+
+    <aside id="list-panel" class="panel list-panel" aria-label="トピック一覧" hidden>
+      <div class="panel-head">
+        <h2>トピック・ニュース一覧</h2>
+        <button type="button" class="close-btn" data-close="list-panel" aria-label="一覧を閉じる">✕</button>
+      </div>
+      <input id="search-input" class="search-input" type="search" placeholder="キーワードで検索（例：浅草、もんじゃ、アニメ）" autocomplete="off">
+      <div class="news-status">
+        <p id="news-status-text" class="news-status-text">📰 ニュースを読み込み中…</p>
+        <button type="button" id="news-refresh" class="news-refresh" title="ニュースを読み直す" aria-label="ニュースを読み直す">🔄</button>
+      </div>
+      <p id="list-count" class="list-count"></p>
+      <ul id="topic-list" class="topic-list"></ul>
+    </aside>
+
+    <aside id="detail-panel" class="panel detail-panel" aria-label="トピックの詳細" aria-live="polite" hidden>
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <div class="panel-head">
+        <span id="detail-category" class="category-badge"></span>
+        <button type="button" class="close-btn" data-close="detail-panel" aria-label="詳細を閉じる">✕</button>
+      </div>
+      <div id="detail-body" class="detail-body"></div>
+    </aside>
+
+    <section id="hazard-panel" class="hazard-panel" aria-label="ハザードマップ" hidden>
+      <div class="hazard-head">
+        <p class="hazard-title">🌊 ハザードマップ</p>
+        <button type="button" id="hazard-close" class="close-btn" aria-label="ハザードマップを消す">✕</button>
+      </div>
+      <label class="hazard-row">
+        <span class="visually-hidden">表示する災害の種類</span>
+        <select id="hazard-select" class="tool-select"></select>
+      </label>
+      <label class="hazard-row hazard-strength">
+        <span>濃さ</span>
+        <input id="hazard-strength" type="range" min="20" max="100" value="100">
+      </label>
+      <ul id="hazard-legend" class="hazard-legend"></ul>
+      <p id="hazard-source" class="hazard-source"></p>
+    </section>
+
+    <section id="weather-panel" class="weather-panel" aria-label="天気" hidden>
+      <div class="hazard-head">
+        <p class="hazard-title">🌦 東京23区の天気</p>
+        <button type="button" id="weather-close" class="close-btn" aria-label="天気を閉じる">✕</button>
+      </div>
+      <div class="wx-tabs" role="tablist">
+        <button type="button" class="wx-tab" role="tab" data-tab="radar" aria-selected="true">☔ 雨雲レーダー</button>
+        <button type="button" class="wx-tab" role="tab" data-tab="forecast" aria-selected="false">🧺 天気・洗濯</button>
+        <button type="button" class="wx-tab" role="tab" data-tab="quake" aria-selected="false">🌐 地震</button>
+      </div>
+      <div class="wx-pane" data-pane="radar">
+        <label class="hazard-row">
+          <span class="visually-hidden">重ねる情報の種類</span>
+          <select id="weather-layer" class="tool-select"></select>
+        </label>
+        <div class="radar-time-row">
+          <button type="button" id="radar-play" class="cam-btn">▶ 再生</button>
+          <input id="radar-slider" type="range" min="0" max="0" value="0" aria-label="表示する時刻">
+          <span id="radar-time" class="radar-time">読み込み中…</span>
+        </div>
+        <label class="hazard-row hazard-strength">
+          <span>濃さ</span>
+          <input id="weather-strength" type="range" min="20" max="100" value="100">
+        </label>
+        <ul id="radar-legend" class="hazard-legend"></ul>
+        <p class="hazard-source">出典: <a href="https://www.jma.go.jp/bosai/nowc/" target="_blank" rel="noopener">気象庁 ナウキャスト</a>（5分ごとに更新・過去約3時間〜1時間先）。地図の色と<b>乗算</b>で重ねています。</p>
+      </div>
+      <div class="wx-pane" data-pane="forecast" hidden>
+        <div id="wx-warnings" class="wx-block"></div>
+        <div id="wx-forecast" class="wx-block"></div>
+        <p class="wx-subtitle">🧺 洗濯指数</p>
+        <div id="wx-laundry" class="wx-block"></div>
+      </div>
+      <div class="wx-pane" data-pane="quake" hidden>
+        <div id="wx-quakes" class="wx-block"></div>
+      </div>
+    </section>
+
+    <section id="cam-panel" class="cam-panel" aria-label="ライブカメラの映像" hidden>
+      <div class="cam-head">
+        <p class="cam-title"><span class="cam-live" id="cam-live" hidden>● LIVE</span><span id="cam-title"></span></p>
+        <div class="cam-actions">
+          <a id="cam-site" class="cam-btn" href="#" target="_blank" rel="noopener">↗ 配信サイトへ</a>
+          <button type="button" id="cam-close" class="cam-btn" aria-label="ライブカメラの映像を閉じる">✕ 閉じる</button>
+        </div>
+      </div>
+      <div class="cam-video" id="cam-video"></div>
+      <p class="cam-note" id="cam-note"></p>
+    </section>
+
+    <div id="toast" class="toast" role="status" hidden></div>
+    <p class="help-hint" id="help-hint">右ドラッグ（またはCtrl＋ドラッグ）で回転・傾き／ホイールで拡大縮小／吹き出しをクリックで詳細</p>
+  </main>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="city.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>

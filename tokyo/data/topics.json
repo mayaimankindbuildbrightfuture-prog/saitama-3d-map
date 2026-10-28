@@ -1,0 +1,1004 @@
+{
+  "categories": {
+    "landmark": {
+      "label": "名所",
+      "color": "#e8413c",
+      "icon": "🏙️"
+    },
+    "history": {
+      "label": "歴史",
+      "color": "#8a5a2b",
+      "icon": "⛩️"
+    },
+    "culture": {
+      "label": "文化",
+      "color": "#8e44ad",
+      "icon": "🎨"
+    },
+    "event": {
+      "label": "イベント",
+      "color": "#f39c12",
+      "icon": "🎉"
+    },
+    "gourmet": {
+      "label": "グルメ",
+      "color": "#d35400",
+      "icon": "🍽️"
+    },
+    "nature": {
+      "label": "自然",
+      "color": "#27ae60",
+      "icon": "🌿"
+    },
+    "sports": {
+      "label": "スポーツ",
+      "color": "#2471c8",
+      "icon": "⚽"
+    }
+  },
+  "wards": [
+    {
+      "name": "千代田区",
+      "lat": 35.69416,
+      "lng": 139.75356
+    },
+    {
+      "name": "中央区",
+      "lat": 35.6706,
+      "lng": 139.77198
+    },
+    {
+      "name": "港区",
+      "lat": 35.65804,
+      "lng": 139.75156
+    },
+    {
+      "name": "新宿区",
+      "lat": 35.69386,
+      "lng": 139.70345
+    },
+    {
+      "name": "文京区",
+      "lat": 35.70796,
+      "lng": 139.75227
+    },
+    {
+      "name": "台東区",
+      "lat": 35.71263,
+      "lng": 139.77977
+    },
+    {
+      "name": "墨田区",
+      "lat": 35.71071,
+      "lng": 139.80145
+    },
+    {
+      "name": "江東区",
+      "lat": 35.67264,
+      "lng": 139.8173
+    },
+    {
+      "name": "品川区",
+      "lat": 35.60921,
+      "lng": 139.7302
+    },
+    {
+      "name": "目黒区",
+      "lat": 35.64141,
+      "lng": 139.69827
+    },
+    {
+      "name": "大田区",
+      "lat": 35.56139,
+      "lng": 139.71608
+    },
+    {
+      "name": "世田谷区",
+      "lat": 35.64653,
+      "lng": 139.65325
+    },
+    {
+      "name": "渋谷区",
+      "lat": 35.66376,
+      "lng": 139.69781
+    },
+    {
+      "name": "中野区",
+      "lat": 35.70888,
+      "lng": 139.66292
+    },
+    {
+      "name": "杉並区",
+      "lat": 35.69962,
+      "lng": 139.63635
+    },
+    {
+      "name": "豊島区",
+      "lat": 35.72611,
+      "lng": 139.71672
+    },
+    {
+      "name": "北区",
+      "lat": 35.75278,
+      "lng": 139.73368
+    },
+    {
+      "name": "荒川区",
+      "lat": 35.73704,
+      "lng": 139.78341
+    },
+    {
+      "name": "板橋区",
+      "lat": 35.75098,
+      "lng": 139.7093
+    },
+    {
+      "name": "練馬区",
+      "lat": 35.7358,
+      "lng": 139.65184
+    },
+    {
+      "name": "足立区",
+      "lat": 35.77487,
+      "lng": 139.80451
+    },
+    {
+      "name": "葛飾区",
+      "lat": 35.74345,
+      "lng": 139.84724
+    },
+    {
+      "name": "江戸川区",
+      "lat": 35.70685,
+      "lng": 139.86844
+    }
+  ],
+  "topics": [
+    {
+      "id": "kokyo",
+      "category": "history",
+      "title": "皇居・皇居東御苑",
+      "bubble": "江戸城の跡に広がる緑",
+      "ward": "千代田区",
+      "lat": 35.6867,
+      "lng": 139.7574,
+      "priority": 1,
+      "era": "江戸城（江戸時代）／1948年から「皇居」",
+      "description": "皇居は旧江戸城の跡にあり、天皇の住まいと宮内庁がある場所です。総面積は千代田区のおよそ1割にあたります。旧本丸・二の丸などの一部は皇居東御苑として公開されています。",
+      "access": "二重橋前駅から北西へ直線で約800m",
+      "related": [
+        "tokyo-station",
+        "budokan"
+      ]
+    },
+    {
+      "id": "kanda-myojin",
+      "category": "history",
+      "title": "神田明神（神田神社）",
+      "bubble": "神田祭の総氏神",
+      "ward": "千代田区",
+      "lat": 35.70194,
+      "lng": 139.76774,
+      "priority": 2,
+      "description": "正式名称は神田神社。神田・日本橋・秋葉原・大手町・丸の内など108か町会の総氏神です。秋葉原と御茶ノ水の間にあり、神田祭を行う神社として知られます。",
+      "access": "秋葉原駅から北西へ直線で約700m",
+      "related": [
+        "kanda-matsuri",
+        "akihabara",
+        "yushima-tenjin"
+      ]
+    },
+    {
+      "id": "yushima-tenjin",
+      "category": "history",
+      "title": "湯島天満宮",
+      "bubble": "梅の名所・湯島天神",
+      "ward": "文京区",
+      "lat": 35.70769,
+      "lng": 139.76805,
+      "priority": 2,
+      "description": "菅原道真を含む二柱の祭神をまつる天満宮で、通称は湯島天神です。境内は梅の名所として知られています。",
+      "access": "湯島駅から西へ直線で約200m",
+      "related": [
+        "kanda-myojin",
+        "ueno-park"
+      ]
+    },
+    {
+      "id": "sensoji",
+      "category": "history",
+      "title": "浅草寺",
+      "bubble": "都内最古の寺・雷門",
+      "ward": "台東区",
+      "lat": 35.7134,
+      "lng": 139.79553,
+      "priority": 1,
+      "description": "正式には金龍山浅草寺といい、都内最古の寺とされます。聖観世音菩薩を本尊とし「浅草観音」とも呼ばれます。初詣の参拝客数は毎年全国トップ10に入る、全国有数の観光地です。",
+      "access": "浅草駅から北西へ直線で約300m",
+      "related": [
+        "sanja-matsuri",
+        "kappabashi",
+        "skytree"
+      ]
+    },
+    {
+      "id": "zojoji",
+      "category": "history",
+      "title": "増上寺",
+      "bubble": "東京タワーと並ぶ浄土宗の寺",
+      "ward": "港区",
+      "lat": 35.65728,
+      "lng": 139.74834,
+      "priority": 2,
+      "description": "芝公園にある浄土宗の寺院で、正式には三縁山広度院増上寺と称します。境内から東京タワーを間近に望めます。",
+      "access": "大門駅から西へ直線で約400m",
+      "related": [
+        "tokyo-tower"
+      ]
+    },
+    {
+      "id": "sengakuji",
+      "category": "history",
+      "title": "泉岳寺",
+      "bubble": "赤穂浪士ゆかりの寺",
+      "ward": "港区",
+      "lat": 35.63864,
+      "lng": 139.74011,
+      "priority": 2,
+      "description": "高輪にある曹洞宗の寺院で、青松寺・総泉寺とともに曹洞宗の江戸三箇寺の一つに数えられます。赤穂浪士の墓所があることで知られます。",
+      "access": "泉岳寺駅からすぐ",
+      "related": [
+        "zojoji"
+      ]
+    },
+    {
+      "id": "meiji-jingu",
+      "category": "history",
+      "title": "明治神宮",
+      "bubble": "都心の大きな杜",
+      "ward": "渋谷区",
+      "lat": 35.67484,
+      "lng": 139.69963,
+      "priority": 1,
+      "era": "1920年創建",
+      "description": "明治天皇と昭憲皇太后をまつる神社で、1920年11月1日に創建されました。旧社格は官幣大社で、勅祭社です。",
+      "access": "原宿駅から北西へ直線で約500m",
+      "related": [
+        "yoyogi-park",
+        "shibuya-crossing"
+      ]
+    },
+    {
+      "id": "gotokuji",
+      "category": "history",
+      "title": "豪徳寺",
+      "bubble": "招き猫がずらり",
+      "ward": "世田谷区",
+      "lat": 35.65041,
+      "lng": 139.64732,
+      "priority": 2,
+      "description": "曹洞宗の寺院で、一説には招き猫発祥の地とされます。寺では招き猫を「招福猫児」と呼び、境内には参拝者が奉納した1万体以上の招き猫が並んでいます。",
+      "access": "宮の坂駅から北東へ直線で約400m",
+      "related": [
+        "todoroki"
+      ]
+    },
+    {
+      "id": "itabashi-juku",
+      "category": "history",
+      "title": "中山道 板橋宿",
+      "bubble": "中山道の最初の宿場",
+      "ward": "板橋区",
+      "lat": 35.75731,
+      "lng": 139.7089,
+      "priority": 2,
+      "era": "江戸時代",
+      "description": "江戸時代に栄えた宿場町で、中山道六十九次のうち日本橋から数えて1番目の宿場でした。川越街道の起点でもあります。今の板橋区本町・仲宿・板橋一〜三丁目のあたりで、地図の位置は地名の由来とされる石神井川の橋「板橋」です。",
+      "access": "板橋駅から北西へ直線で約1.5km",
+      "related": []
+    },
+    {
+      "id": "nishiarai-daishi",
+      "category": "history",
+      "title": "西新井大師（總持寺）",
+      "bubble": "「関東の高野山」",
+      "ward": "足立区",
+      "lat": 35.77987,
+      "lng": 139.78026,
+      "priority": 2,
+      "description": "正式には五智山遍照院總持寺という真言宗豊山派の寺で、西新井大師の通称で知られます。古くから「関東の高野山」とも呼ばれ、毎月21日には縁日が開かれます。",
+      "access": "大師前駅から北西へ直線で約200m",
+      "related": []
+    },
+    {
+      "id": "shibamata",
+      "category": "history",
+      "title": "柴又帝釈天（題経寺）",
+      "bubble": "参道の門前町が人気",
+      "ward": "葛飾区",
+      "lat": 35.75845,
+      "lng": 139.87877,
+      "priority": 2,
+      "description": "正式には経栄山題経寺という日蓮宗の寺院で、地元では「帝釈天」の名で親しまれています。柴又七福神の一つです。",
+      "access": "柴又駅から北東へ直線で約400m",
+      "related": []
+    },
+    {
+      "id": "tokyo-station",
+      "category": "landmark",
+      "title": "JR東京駅",
+      "bubble": "プラットホームの数は日本一",
+      "ward": "千代田区",
+      "lat": 35.68084,
+      "lng": 139.76448,
+      "priority": 1,
+      "description": "JR東日本・JR東海・東京メトロの駅で、新幹線各線が発着するターミナル駅です。プラットホームの数は日本一多く、丸の内・大手町・八重洲・日本橋などのビジネス街の中心にあります。",
+      "access": "JR・東京メトロ丸ノ内線",
+      "related": [
+        "kokyo",
+        "nihonbashi"
+      ]
+    },
+    {
+      "id": "tokyo-tower",
+      "category": "landmark",
+      "title": "東京タワー",
+      "bubble": "1958年完成、東京のシンボル",
+      "ward": "港区",
+      "lat": 35.65845,
+      "lng": 139.74554,
+      "priority": 1,
+      "era": "1958年竣工",
+      "description": "芝公園にある総合電波塔で、1958年12月23日に竣工しました。東京のシンボルとして親しまれる観光名所です。",
+      "access": "赤羽橋駅から北へ直線で約400m",
+      "related": [
+        "zojoji",
+        "roppongi-hills"
+      ]
+    },
+    {
+      "id": "skytree",
+      "category": "landmark",
+      "title": "東京スカイツリー",
+      "bubble": "高さ634m、タワーで世界一",
+      "ward": "墨田区",
+      "lat": 35.71005,
+      "lng": 139.81071,
+      "priority": 1,
+      "era": "2012年開業",
+      "description": "2012年5月22日に開業した電波塔で、高さ634mはタワーとして世界第1位です。商業施設「東京ソラマチ」などとともに東京スカイツリータウンを構成しています。",
+      "access": "押上駅から西へ直線で約300m",
+      "related": [
+        "sensoji",
+        "sumidagawa-fireworks"
+      ]
+    },
+    {
+      "id": "roppongi-hills",
+      "category": "landmark",
+      "title": "六本木ヒルズ",
+      "bubble": "森タワーを中心にした街",
+      "ward": "港区",
+      "lat": 35.6602,
+      "lng": 139.72983,
+      "priority": 2,
+      "description": "森ビルによる六本木六丁目の再開発で生まれた複合施設です。高さ238mの六本木ヒルズ森タワーを中心に、住宅・ホテル・テレビ朝日の本社・映画館などが集まっています。",
+      "access": "六本木駅から南西へ直線で約400m",
+      "related": [
+        "tokyo-tower"
+      ]
+    },
+    {
+      "id": "rainbow-bridge",
+      "category": "landmark",
+      "title": "レインボーブリッジ",
+      "bubble": "芝浦とお台場を結ぶ吊橋",
+      "ward": "港区",
+      "lat": 35.63638,
+      "lng": 139.76393,
+      "priority": 2,
+      "era": "1993年開通",
+      "description": "芝浦と台場を結ぶ全長約800mの二階建ての吊橋で、1993年8月26日に開通しました。上は首都高速11号台場線、下はゆりかもめと一般道路・歩道です。正式名称は東京港連絡橋で、愛称は一般公募で決まりました。",
+      "access": "お台場海浜公園駅から北西へ直線で約1.5km",
+      "related": []
+    },
+    {
+      "id": "city-hall",
+      "category": "landmark",
+      "title": "東京都庁",
+      "bubble": "西新宿の超高層庁舎",
+      "ward": "新宿区",
+      "lat": 35.68974,
+      "lng": 139.693,
+      "priority": 2,
+      "description": "東京都庁の庁舎で、第一本庁舎・第二本庁舎・都議会議事堂からなります。",
+      "access": "都庁前駅からすぐ",
+      "url": "https://www.metro.tokyo.lg.jp/",
+      "related": [
+        "kabukicho",
+        "shinjuku-gyoen"
+      ]
+    },
+    {
+      "id": "shibuya-crossing",
+      "category": "landmark",
+      "title": "渋谷スクランブル交差点",
+      "bubble": "「世界で最も有名な交差点」",
+      "ward": "渋谷区",
+      "lat": 35.6595,
+      "lng": 139.7005,
+      "priority": 1,
+      "description": "正式名称は渋谷駅前交差点です。1回の青信号で1000人以上が行き交うともいわれ、テレビ中継でもおなじみの、東京を象徴する場所です。",
+      "access": "渋谷駅から西へ直線で約200m",
+      "related": [
+        "meiji-jingu",
+        "yoyogi-park"
+      ]
+    },
+    {
+      "id": "kabukicho",
+      "category": "landmark",
+      "title": "歌舞伎町",
+      "bubble": "眠らない繁華街",
+      "ward": "新宿区",
+      "lat": 35.69454,
+      "lng": 139.70271,
+      "priority": 2,
+      "description": "新宿区の町名で、今の行政地名は歌舞伎町一丁目・二丁目です。飲食店や映画館などが集まる、日本を代表する繁華街の一つです。",
+      "access": "新宿駅から北東へ直線で約400m",
+      "related": [
+        "city-hall"
+      ]
+    },
+    {
+      "id": "ginza",
+      "category": "landmark",
+      "title": "銀座",
+      "bubble": "日本を代表する高級商業地",
+      "ward": "中央区",
+      "lat": 35.67122,
+      "lng": 139.76504,
+      "priority": 2,
+      "description": "中央区の地名で、ブランドショップなどが立ち並ぶ日本を代表する繁華街です。繁華街の売上高は日本一とされます。地図の位置は銀座四丁目交差点です。",
+      "access": "東銀座駅から北西へ直線で約400m",
+      "related": [
+        "kabukiza",
+        "tsukiji"
+      ]
+    },
+    {
+      "id": "nihonbashi",
+      "category": "landmark",
+      "title": "日本橋",
+      "bubble": "五街道の起点",
+      "ward": "中央区",
+      "lat": 35.68407,
+      "lng": 139.7745,
+      "priority": 2,
+      "description": "日本橋川に架かる橋で、周辺の地名「日本橋」の由来になっています。江戸時代には五街道の起点でした。橋の上を首都高速道路が通っています。",
+      "access": "日本橋駅から北西へ直線で約300m",
+      "related": [
+        "tokyo-station",
+        "itabashi-juku"
+      ]
+    },
+    {
+      "id": "haneda",
+      "category": "landmark",
+      "title": "羽田空港（東京国際空港）",
+      "bubble": "日本最大のハブ空港",
+      "ward": "大田区",
+      "lat": 35.54569,
+      "lng": 139.7761,
+      "priority": 2,
+      "description": "正式名称は東京国際空港で、通称は羽田空港です。日本最大のハブ空港として知られ、成田国際空港とともに首都圏と日本の空の玄関口です。",
+      "access": "羽田空港第1・第2ターミナル駅から南西へ直線で約1.0km",
+      "related": []
+    },
+    {
+      "id": "sunshine-city",
+      "category": "landmark",
+      "title": "池袋サンシャインシティ",
+      "bubble": "サンシャイン60がそびえる",
+      "ward": "豊島区",
+      "lat": 35.72885,
+      "lng": 139.71955,
+      "priority": 2,
+      "description": "超高層ビル「サンシャイン60」を中心とした複合商業施設で、1970年代に巣鴨拘置所の跡地を再開発して建設されました。",
+      "access": "東池袋駅から北へ直線で約300m",
+      "related": [
+        "nakano-broadway"
+      ]
+    },
+    {
+      "id": "arakawa-yuen",
+      "category": "landmark",
+      "title": "あらかわ遊園",
+      "bubble": "路面電車で行く区立遊園地",
+      "ward": "荒川区",
+      "lat": 35.75332,
+      "lng": 139.75856,
+      "priority": 2,
+      "description": "荒川区立の遊園地です。2018年12月から工事のため長期休園していましたが、2022年4月21日に再開園しました。近くを都電荒川線（東京さくらトラム）が走っています。",
+      "access": "都電荒川線（東京さくらトラム）「荒川遊園地前」停留場が最寄り",
+      "related": [
+        "asukayama"
+      ]
+    },
+    {
+      "id": "warner-studio",
+      "category": "landmark",
+      "title": "ワーナー ブラザース スタジオツアー東京",
+      "bubble": "ハリー・ポッターの世界へ",
+      "ward": "練馬区",
+      "lat": 35.74562,
+      "lng": 139.64575,
+      "priority": 2,
+      "era": "2023年開業",
+      "description": "「ワーナー ブラザース スタジオツアー東京 - メイキング・オブ・ハリー・ポッター」は、2020年8月末に閉園した「としまえん」の跡地に、2023年6月16日に開業した施設です。ロンドンに次ぐ世界で2か所目のスタジオツアーです。",
+      "access": "豊島園駅から北西へ直線で約500m",
+      "related": []
+    },
+    {
+      "id": "kabukiza",
+      "category": "culture",
+      "title": "歌舞伎座",
+      "bubble": "日本で唯一の歌舞伎専用劇場",
+      "ward": "中央区",
+      "lat": 35.66966,
+      "lng": 139.76811,
+      "priority": 2,
+      "description": "東銀座にある、日本で唯一の歌舞伎専用の劇場です。",
+      "access": "東銀座駅からすぐ",
+      "related": [
+        "ginza"
+      ]
+    },
+    {
+      "id": "tnm",
+      "category": "culture",
+      "title": "東京国立博物館",
+      "bubble": "1872年創設、日本最古で最大の博物館",
+      "ward": "台東区",
+      "lat": 35.71904,
+      "lng": 139.77597,
+      "priority": 1,
+      "era": "1872年創設",
+      "description": "1872年に創設された日本最古かつ最大の博物館で、上野恩賜公園の中にあります。国宝89件・重要文化財653件を含む約12万件を収蔵しています（2025年4月時点）。",
+      "access": "上野駅から北へ直線で約600m",
+      "url": "https://www.tnm.jp/",
+      "related": [
+        "ueno-park",
+        "nmwa"
+      ]
+    },
+    {
+      "id": "nmwa",
+      "category": "culture",
+      "title": "国立西洋美術館",
+      "bubble": "ル・コルビュジエの世界遺産",
+      "ward": "台東区",
+      "lat": 35.71555,
+      "lng": 139.77594,
+      "priority": 2,
+      "description": "西洋の美術作品を専門とする美術館です。本館は「ル・コルビュジエの建築作品」の構成資産として世界文化遺産に登録されています。",
+      "access": "上野駅から北西へ直線で約200m",
+      "url": "https://www.nmwa.go.jp/",
+      "related": [
+        "tnm",
+        "ueno-park"
+      ]
+    },
+    {
+      "id": "akihabara",
+      "category": "culture",
+      "title": "秋葉原",
+      "bubble": "電気街とサブカルチャーの街",
+      "ward": "千代田区",
+      "lat": 35.69889,
+      "lng": 139.77404,
+      "priority": 1,
+      "description": "秋葉原駅の周辺、主に千代田区外神田・神田佐久間町と台東区秋葉原のあたりを指す地域名です。電気街として知られ、アニメ・ゲームなどのサブカルチャーの店も集まっています。",
+      "access": "秋葉原駅からすぐ",
+      "related": [
+        "kanda-myojin"
+      ]
+    },
+    {
+      "id": "nakano-broadway",
+      "category": "culture",
+      "title": "中野ブロードウェイ",
+      "bubble": "サブカルチャーの発信基地",
+      "ward": "中野区",
+      "lat": 35.70924,
+      "lng": 139.66569,
+      "priority": 2,
+      "description": "ショッピングセンターと集合住宅を合わせた複合商業ビルで、日本初の形式の建築とされます。まんだらけの本店があり、アニメや漫画などサブカルチャーの発信基地として知られます。",
+      "access": "中野駅から北へ直線で約400m",
+      "related": [
+        "koenji-awaodori"
+      ]
+    },
+    {
+      "id": "budokan",
+      "category": "culture",
+      "title": "日本武道館",
+      "bubble": "武道とライブの聖地",
+      "ward": "千代田区",
+      "lat": 35.69336,
+      "lng": 139.74987,
+      "priority": 2,
+      "description": "北の丸公園にある武道館で、日本の伝統の武道を広めることを設立の趣旨としています。武道のほか、屋内競技やコンサートの会場としても使われます。",
+      "access": "九段下駅から南西へ直線で約300m",
+      "related": [
+        "kokyo"
+      ]
+    },
+    {
+      "id": "sanja-matsuri",
+      "category": "event",
+      "title": "三社祭",
+      "bubble": "浅草の初夏を彩る例大祭",
+      "ward": "台東区",
+      "lat": 35.71481,
+      "lng": 139.7975,
+      "priority": 2,
+      "era": "毎年5月",
+      "description": "浅草神社の例大祭で、毎年5月第3週の金・土・日曜日に行われます。名前は浅草神社の旧名「三社大権現社」などに由来します。",
+      "access": "浅草駅から北へ直線で約400m",
+      "related": [
+        "sensoji"
+      ]
+    },
+    {
+      "id": "kanda-matsuri",
+      "category": "event",
+      "title": "神田祭",
+      "bubble": "江戸三大祭の一つ",
+      "ward": "千代田区",
+      "lat": 35.70194,
+      "lng": 139.76674,
+      "priority": 2,
+      "era": "5月中旬",
+      "description": "神田明神の祭礼で、山王祭・深川八幡祭とともに江戸三大祭の一つとされます。祭礼は5月中旬に行われます。",
+      "access": "秋葉原駅から北西へ直線で約700m",
+      "related": [
+        "kanda-myojin"
+      ]
+    },
+    {
+      "id": "sumidagawa-fireworks",
+      "category": "event",
+      "title": "隅田川花火大会",
+      "bubble": "夏の夜空に大輪の花",
+      "ward": "墨田区",
+      "lat": 35.7152,
+      "lng": 139.8012,
+      "priority": 2,
+      "era": "毎年7月最終土曜日",
+      "description": "隅田川沿いの台東区浅草・墨田区向島の周辺で、毎年7月最終土曜日に行われる花火大会です。江戸川区花火大会とともに東京二大花火大会の一つに数えられます。地図の位置は浅草付近の隅田川です。",
+      "access": "浅草駅から北東へ直線で約500m",
+      "related": [
+        "skytree",
+        "sensoji"
+      ]
+    },
+    {
+      "id": "koenji-awaodori",
+      "category": "event",
+      "title": "東京高円寺阿波おどり",
+      "bubble": "約1万人が踊る晩夏の風物詩",
+      "ward": "杉並区",
+      "lat": 35.70534,
+      "lng": 139.65,
+      "priority": 2,
+      "era": "毎年8月下旬",
+      "description": "毎年8月下旬（最終の土曜・日曜）に高円寺で開かれる阿波踊りで、東京周辺では最大規模です。高円寺駅前から新高円寺駅にかけての商店街などが舞台です。",
+      "access": "高円寺駅からすぐ",
+      "related": [
+        "nakano-broadway"
+      ]
+    },
+    {
+      "id": "comiket",
+      "category": "event",
+      "title": "コミックマーケット（東京ビッグサイト）",
+      "bubble": "世界最大の同人誌即売会",
+      "ward": "江東区",
+      "lat": 35.62976,
+      "lng": 139.79398,
+      "priority": 2,
+      "era": "年2回（8月・12月）",
+      "description": "1975年に始まった世界最大の同人誌即売会で、夏は8月、冬は12月の年2回開かれます。会場の東京ビッグサイト（東京国際展示場）では、ほかにも多くの展示会が開かれます。",
+      "access": "国際展示場駅から南へ直線で約500m",
+      "related": [
+        "toyosu"
+      ]
+    },
+    {
+      "id": "tsukiji",
+      "category": "gourmet",
+      "title": "築地場外市場",
+      "bubble": "市場移転後も続く食の街",
+      "ward": "中央区",
+      "lat": 35.66539,
+      "lng": 139.77047,
+      "priority": 1,
+      "description": "築地市場は1935年から2018年まで使われた公設の卸売市場で、2018年10月に豊洲市場へ移転しました。隣接する築地場外市場は今も営業し、海産物や食の店が集まっています。",
+      "access": "築地駅から南西へ直線で約400m",
+      "related": [
+        "toyosu",
+        "ginza"
+      ]
+    },
+    {
+      "id": "toyosu",
+      "category": "gourmet",
+      "title": "豊洲市場",
+      "bubble": "築地から移転した中央卸売市場",
+      "ward": "江東区",
+      "lat": 35.64215,
+      "lng": 139.78272,
+      "priority": 2,
+      "era": "2018年開場",
+      "description": "築地市場の代わりに建設された公設の卸売市場で、2018年10月11日に取引を始めました。競りの見学や飲食店などは一般の人や観光客も利用できます。",
+      "access": "市場前駅から南西へ直線で約500m",
+      "related": [
+        "tsukiji"
+      ]
+    },
+    {
+      "id": "ameyoko",
+      "category": "gourmet",
+      "title": "アメ横（アメヤ横丁）",
+      "bubble": "御徒町〜上野の約400店",
+      "ward": "台東区",
+      "lat": 35.71002,
+      "lng": 139.77454,
+      "priority": 2,
+      "description": "JR御徒町駅と上野駅の間の高架橋の西側と高架下、約500〜600mを中心に約400店が並ぶ商店街です。",
+      "access": "御徒町駅から北へ直線で約300m",
+      "related": [
+        "ueno-park"
+      ]
+    },
+    {
+      "id": "kappabashi",
+      "category": "gourmet",
+      "title": "かっぱ橋道具街",
+      "bubble": "食品サンプルも揃う道具の問屋街",
+      "ward": "台東区",
+      "lat": 35.71306,
+      "lng": 139.7885,
+      "priority": 2,
+      "description": "浅草と上野の間にある問屋街で、食器・調理器具・食品サンプル・包材などを扱う店が集まります。「合羽橋」は行政上の地名ではありません。",
+      "access": "浅草駅から西へ直線で約900m",
+      "related": [
+        "sensoji"
+      ]
+    },
+    {
+      "id": "tsukishima-monja",
+      "category": "gourmet",
+      "title": "月島もんじゃストリート",
+      "bubble": "もんじゃ焼きの店が集まる",
+      "ward": "中央区",
+      "lat": 35.66428,
+      "lng": 139.78246,
+      "priority": 2,
+      "description": "月島の西仲通り商店街は「もんじゃストリート」と呼ばれ、もんじゃ焼きの店が数多く集まっています。",
+      "access": "月島駅から西へ直線で約200m",
+      "related": [
+        "tsukiji"
+      ]
+    },
+    {
+      "id": "togoshi-ginza",
+      "category": "gourmet",
+      "title": "戸越銀座商店街",
+      "bubble": "全長約1.3kmの商店街",
+      "ward": "品川区",
+      "lat": 35.61391,
+      "lng": 139.72018,
+      "priority": 2,
+      "description": "戸越銀座通りに沿った3つの商店街からなり、全長約1.3km・約400店の関東有数の長さの商店街です。",
+      "access": "戸越銀座駅から南東へ直線で約500m",
+      "related": []
+    },
+    {
+      "id": "akabane",
+      "category": "gourmet",
+      "title": "赤羽一番街",
+      "bubble": "昼から飲める酒場の街",
+      "ward": "北区",
+      "lat": 35.78146,
+      "lng": 139.72007,
+      "priority": 2,
+      "description": "北区赤羽の赤羽駅の東側にある商店街で、駅周辺は繁華街になっています。大衆酒場などの飲食店が多い街として知られます。",
+      "access": "赤羽駅から北へ直線で約300m",
+      "related": [
+        "asukayama"
+      ]
+    },
+    {
+      "id": "ueno-park",
+      "category": "nature",
+      "title": "上野恩賜公園",
+      "bubble": "博物館と動物園の森",
+      "ward": "台東区",
+      "lat": 35.71402,
+      "lng": 139.77393,
+      "priority": 1,
+      "description": "「上野の山」とも呼ばれる約53ヘクタールの公園で、博物館や動物園など多くの文化施設があります。",
+      "access": "上野駅から西へ直線で約300m",
+      "related": [
+        "tnm",
+        "nmwa",
+        "ameyoko"
+      ]
+    },
+    {
+      "id": "shinjuku-gyoen",
+      "category": "nature",
+      "title": "新宿御苑",
+      "bubble": "都心の広大な庭園",
+      "ward": "新宿区",
+      "lat": 35.68507,
+      "lng": 139.70955,
+      "priority": 2,
+      "description": "新宿区と渋谷区にまたがる環境省所管の御苑です。江戸時代は信濃高遠藩内藤家の下屋敷があった場所で、1879年に新宿植物御苑が開設されました。戦後は一般に公開され、国民公園として親しまれています。",
+      "access": "新宿御苑前駅から南へ直線で約400m",
+      "related": [
+        "city-hall"
+      ]
+    },
+    {
+      "id": "koishikawa-korakuen",
+      "category": "nature",
+      "title": "小石川後楽園",
+      "bubble": "水戸徳川家の大名庭園",
+      "ward": "文京区",
+      "lat": 35.70536,
+      "lng": 139.74915,
+      "priority": 2,
+      "era": "江戸時代初期",
+      "description": "江戸時代初期に水戸徳川家の江戸上屋敷の中に造られた、築山泉水回遊式の日本庭園です。国の特別史跡・特別名勝に指定されています。",
+      "access": "後楽園駅から南西へ直線で約300m",
+      "related": [
+        "tokyo-dome"
+      ]
+    },
+    {
+      "id": "yoyogi-park",
+      "category": "nature",
+      "title": "代々木公園",
+      "bubble": "「代々木の原」の都立公園",
+      "ward": "渋谷区",
+      "lat": 35.67141,
+      "lng": 139.69517,
+      "priority": 2,
+      "description": "「代々木の原」と呼ばれてきた広い平地に設けられた都立の総合公園です。",
+      "access": "原宿駅から西へ直線で約700m",
+      "related": [
+        "meiji-jingu"
+      ]
+    },
+    {
+      "id": "meguro-river",
+      "category": "nature",
+      "title": "目黒川の桜並木",
+      "bubble": "川沿いの桜の名所",
+      "ward": "目黒区",
+      "lat": 35.6436,
+      "lng": 139.7006,
+      "priority": 2,
+      "description": "目黒川は世田谷区・目黒区・品川区を流れて東京湾に注ぐ川です。中目黒駅の周辺などの川沿いは、桜の名所として知られます。地図の位置は中目黒駅付近です。",
+      "access": "中目黒駅からすぐ",
+      "related": []
+    },
+    {
+      "id": "todoroki",
+      "category": "nature",
+      "title": "等々力渓谷",
+      "bubble": "23区にある渓谷",
+      "ward": "世田谷区",
+      "lat": 35.60684,
+      "lng": 139.6462,
+      "priority": 2,
+      "description": "世田谷区南部を流れる谷沢川にある渓谷で、豊かな自然で知られます。",
+      "access": "等々力駅から南西へ直線で約200m",
+      "related": [
+        "gotokuji"
+      ]
+    },
+    {
+      "id": "asukayama",
+      "category": "nature",
+      "title": "飛鳥山公園",
+      "bubble": "江戸時代からの桜の名所",
+      "ward": "北区",
+      "lat": 35.75034,
+      "lng": 139.73909,
+      "priority": 2,
+      "description": "江戸時代の享保年間に行楽地として整備され、1873年に日本最初の公園の一つに指定されました。都内の桜の名所の一つで、旧渋沢家飛鳥山邸の晩香廬と青淵文庫は国の重要文化財です。",
+      "access": "王子駅から南へ直線で約400m",
+      "related": [
+        "arakawa-yuen"
+      ]
+    },
+    {
+      "id": "kasai-rinkai",
+      "category": "nature",
+      "title": "葛西臨海公園",
+      "bubble": "東京湾に面した都立公園",
+      "ward": "江戸川区",
+      "lat": 35.64221,
+      "lng": 139.85948,
+      "priority": 2,
+      "description": "東京湾に面した都立公園で、葛西沖開発事業で造成されました。葛西渚橋で葛西海浜公園とつながっています。",
+      "access": "葛西臨海公園駅から南西へ直線で約300m",
+      "related": []
+    },
+    {
+      "id": "tokyo-dome",
+      "category": "sports",
+      "title": "東京ドーム",
+      "bubble": "巨人の本拠地、日本初のドーム球場",
+      "ward": "文京区",
+      "lat": 35.70557,
+      "lng": 139.75197,
+      "priority": 1,
+      "era": "1988年開場",
+      "description": "1988年3月18日に開場した日本初の屋根付き球場で、読売ジャイアンツの本拠地です。野球のほか、格闘技やコンサートにも使われます。",
+      "access": "水道橋駅から北へ直線で約400m",
+      "related": [
+        "koishikawa-korakuen"
+      ]
+    },
+    {
+      "id": "jingu-stadium",
+      "category": "sports",
+      "title": "明治神宮野球場",
+      "bubble": "神宮外苑の「神宮球場」",
+      "ward": "新宿区",
+      "lat": 35.67452,
+      "lng": 139.71721,
+      "priority": 2,
+      "description": "明治神宮外苑にある野球場で、明治神宮が所有しています。通称は「神宮球場」です。",
+      "access": "外苑前駅から北へ直線で約500m",
+      "related": [
+        "national-stadium"
+      ]
+    },
+    {
+      "id": "national-stadium",
+      "category": "sports",
+      "title": "国立競技場（MUFGスタジアム）",
+      "bubble": "東京2020のメイン会場",
+      "ward": "新宿区",
+      "lat": 35.67786,
+      "lng": 139.71351,
+      "priority": 2,
+      "description": "陸上競技と球技に使われる競技場で、2020年東京オリンピック・パラリンピックではメイン会場になりました。2026年からは命名権による「MUFGスタジアム」の呼称が使われています。",
+      "access": "国立競技場駅から南へ直線で約300m",
+      "related": [
+        "jingu-stadium"
+      ]
+    },
+    {
+      "id": "kokugikan",
+      "category": "sports",
+      "title": "両国国技館",
+      "bubble": "大相撲の本場所",
+      "ward": "墨田区",
+      "lat": 35.69688,
+      "lng": 139.79346,
+      "priority": 2,
+      "description": "大相撲の興行のための施設で、日本相撲協会が所有しています。正式な呼称は「国技館」です。プロレスやボクシング、コンサートなどにも使われます。",
+      "access": "両国駅からすぐ",
+      "related": [
+        "skytree"
+      ]
+    }
+  ]
+}

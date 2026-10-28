@@ -1,0 +1,1356 @@
+{
+  "_comment": "ニュース記事の位置推定に使う地名辞書（東京23区）。aliases のどれかが記事の見出し・概要に含まれると、その座標に吹き出しを置く。kind の優先度は facility > station > area・ward（同じ優先度なら長い語。区名と地域名が両方あれば地域名）。topic を指定した項目は tokyo/data/topics.json の座標を使う。中央区・港区・北区はほかの市にもあるので「東京都中央区」などの形だけを使う。人名と紛らわしい地名（上野・大塚・青山・大泉など）は駅名などの形だけにする。ignoreWords は位置の推定の前に取り除く語（ほかの都市の同じ地名、全国の政治の記事に多い語など）。",
+  "ignoreWords": [
+    "大阪・日本橋",
+    "大阪日本橋",
+    "名古屋・丸の内",
+    "名古屋市中区丸の内",
+    "名古屋丸の内",
+    "岡山・表参道",
+    "有明海",
+    "仙台市中央区",
+    "銀座線",
+    "浅草線",
+    "日比谷線",
+    "新宿線",
+    "有楽町線",
+    "羽田雄一郎",
+    "羽田圭介",
+    "渋谷すばる",
+    "渋谷凪咲",
+    "福岡市中央区赤坂",
+    "福岡・赤坂",
+    "岡山後楽園",
+    "岡山・後楽園"
+  ],
+  "places": [
+    {
+      "name": "皇居",
+      "kind": "facility",
+      "topic": "kokyo",
+      "aliases": [
+        "皇居",
+        "東御苑",
+        "二重橋"
+      ]
+    },
+    {
+      "name": "神田明神",
+      "kind": "facility",
+      "topic": "kanda-myojin",
+      "aliases": [
+        "神田明神",
+        "神田神社"
+      ]
+    },
+    {
+      "name": "湯島天満宮",
+      "kind": "facility",
+      "topic": "yushima-tenjin",
+      "aliases": [
+        "湯島天満宮",
+        "湯島天神"
+      ]
+    },
+    {
+      "name": "浅草寺",
+      "kind": "facility",
+      "topic": "sensoji",
+      "aliases": [
+        "浅草寺",
+        "雷門",
+        "仲見世"
+      ]
+    },
+    {
+      "name": "増上寺",
+      "kind": "facility",
+      "topic": "zojoji",
+      "aliases": [
+        "増上寺"
+      ]
+    },
+    {
+      "name": "泉岳寺",
+      "kind": "facility",
+      "topic": "sengakuji",
+      "aliases": [
+        "泉岳寺"
+      ]
+    },
+    {
+      "name": "明治神宮",
+      "kind": "facility",
+      "topic": "meiji-jingu",
+      "aliases": [
+        "明治神宮"
+      ]
+    },
+    {
+      "name": "豪徳寺",
+      "kind": "facility",
+      "topic": "gotokuji",
+      "aliases": [
+        "豪徳寺"
+      ]
+    },
+    {
+      "name": "板橋宿",
+      "kind": "facility",
+      "topic": "itabashi-juku",
+      "aliases": [
+        "板橋宿",
+        "仲宿"
+      ]
+    },
+    {
+      "name": "西新井大師",
+      "kind": "facility",
+      "topic": "nishiarai-daishi",
+      "aliases": [
+        "西新井大師",
+        "西新井"
+      ]
+    },
+    {
+      "name": "柴又帝釈天",
+      "kind": "facility",
+      "topic": "shibamata",
+      "aliases": [
+        "柴又帝釈天",
+        "帝釈天",
+        "柴又"
+      ]
+    },
+    {
+      "name": "東京駅",
+      "kind": "facility",
+      "topic": "tokyo-station",
+      "aliases": [
+        "東京駅"
+      ]
+    },
+    {
+      "name": "東京タワー",
+      "kind": "facility",
+      "topic": "tokyo-tower",
+      "aliases": [
+        "東京タワー"
+      ]
+    },
+    {
+      "name": "東京スカイツリー",
+      "kind": "facility",
+      "topic": "skytree",
+      "aliases": [
+        "スカイツリー",
+        "ソラマチ"
+      ]
+    },
+    {
+      "name": "六本木ヒルズ",
+      "kind": "facility",
+      "topic": "roppongi-hills",
+      "aliases": [
+        "六本木ヒルズ"
+      ]
+    },
+    {
+      "name": "レインボーブリッジ",
+      "kind": "facility",
+      "topic": "rainbow-bridge",
+      "aliases": [
+        "レインボーブリッジ"
+      ]
+    },
+    {
+      "name": "東京都庁",
+      "kind": "facility",
+      "topic": "city-hall",
+      "aliases": [
+        "東京都庁",
+        "都庁"
+      ]
+    },
+    {
+      "name": "渋谷スクランブル交差点",
+      "kind": "facility",
+      "topic": "shibuya-crossing",
+      "aliases": [
+        "スクランブル交差点",
+        "ハチ公"
+      ]
+    },
+    {
+      "name": "歌舞伎町",
+      "kind": "facility",
+      "topic": "kabukicho",
+      "aliases": [
+        "歌舞伎町",
+        "トー横"
+      ]
+    },
+    {
+      "name": "銀座",
+      "kind": "facility",
+      "topic": "ginza",
+      "aliases": [
+        "銀座"
+      ]
+    },
+    {
+      "name": "日本橋",
+      "kind": "facility",
+      "topic": "nihonbashi",
+      "aliases": [
+        "日本橋"
+      ]
+    },
+    {
+      "name": "羽田空港",
+      "kind": "facility",
+      "topic": "haneda",
+      "aliases": [
+        "羽田空港",
+        "羽田"
+      ]
+    },
+    {
+      "name": "サンシャインシティ",
+      "kind": "facility",
+      "topic": "sunshine-city",
+      "aliases": [
+        "サンシャインシティ",
+        "サンシャイン60"
+      ]
+    },
+    {
+      "name": "あらかわ遊園",
+      "kind": "facility",
+      "topic": "arakawa-yuen",
+      "aliases": [
+        "あらかわ遊園"
+      ]
+    },
+    {
+      "name": "スタジオツアー東京",
+      "kind": "facility",
+      "topic": "warner-studio",
+      "aliases": [
+        "スタジオツアー東京",
+        "としまえん"
+      ]
+    },
+    {
+      "name": "歌舞伎座",
+      "kind": "facility",
+      "topic": "kabukiza",
+      "aliases": [
+        "歌舞伎座"
+      ]
+    },
+    {
+      "name": "東京国立博物館",
+      "kind": "facility",
+      "topic": "tnm",
+      "aliases": [
+        "東京国立博物館",
+        "東博"
+      ]
+    },
+    {
+      "name": "国立西洋美術館",
+      "kind": "facility",
+      "topic": "nmwa",
+      "aliases": [
+        "国立西洋美術館"
+      ]
+    },
+    {
+      "name": "秋葉原",
+      "kind": "facility",
+      "topic": "akihabara",
+      "aliases": [
+        "秋葉原",
+        "アキバ"
+      ]
+    },
+    {
+      "name": "中野ブロードウェイ",
+      "kind": "facility",
+      "topic": "nakano-broadway",
+      "aliases": [
+        "中野ブロードウェイ"
+      ]
+    },
+    {
+      "name": "日本武道館",
+      "kind": "facility",
+      "topic": "budokan",
+      "aliases": [
+        "日本武道館"
+      ]
+    },
+    {
+      "name": "浅草神社",
+      "kind": "facility",
+      "topic": "sanja-matsuri",
+      "aliases": [
+        "三社祭",
+        "浅草神社"
+      ]
+    },
+    {
+      "name": "隅田川",
+      "kind": "facility",
+      "topic": "sumidagawa-fireworks",
+      "aliases": [
+        "隅田川"
+      ]
+    },
+    {
+      "name": "高円寺",
+      "kind": "facility",
+      "topic": "koenji-awaodori",
+      "aliases": [
+        "高円寺"
+      ]
+    },
+    {
+      "name": "東京ビッグサイト",
+      "kind": "facility",
+      "topic": "comiket",
+      "aliases": [
+        "ビッグサイト",
+        "コミケ",
+        "コミックマーケット",
+        "国際展示場"
+      ]
+    },
+    {
+      "name": "築地",
+      "kind": "facility",
+      "topic": "tsukiji",
+      "aliases": [
+        "築地"
+      ]
+    },
+    {
+      "name": "豊洲市場",
+      "kind": "facility",
+      "topic": "toyosu",
+      "aliases": [
+        "豊洲市場"
+      ]
+    },
+    {
+      "name": "アメ横",
+      "kind": "facility",
+      "topic": "ameyoko",
+      "aliases": [
+        "アメ横",
+        "アメヤ横丁"
+      ]
+    },
+    {
+      "name": "かっぱ橋",
+      "kind": "facility",
+      "topic": "kappabashi",
+      "aliases": [
+        "かっぱ橋",
+        "合羽橋"
+      ]
+    },
+    {
+      "name": "月島",
+      "kind": "facility",
+      "topic": "tsukishima-monja",
+      "aliases": [
+        "月島",
+        "もんじゃストリート"
+      ]
+    },
+    {
+      "name": "戸越銀座",
+      "kind": "facility",
+      "topic": "togoshi-ginza",
+      "aliases": [
+        "戸越銀座"
+      ]
+    },
+    {
+      "name": "赤羽",
+      "kind": "facility",
+      "topic": "akabane",
+      "aliases": [
+        "赤羽"
+      ]
+    },
+    {
+      "name": "上野公園",
+      "kind": "facility",
+      "topic": "ueno-park",
+      "aliases": [
+        "上野公園",
+        "上野恩賜公園",
+        "上野動物園"
+      ]
+    },
+    {
+      "name": "新宿御苑",
+      "kind": "facility",
+      "topic": "shinjuku-gyoen",
+      "aliases": [
+        "新宿御苑"
+      ]
+    },
+    {
+      "name": "小石川後楽園",
+      "kind": "facility",
+      "topic": "koishikawa-korakuen",
+      "aliases": [
+        "小石川後楽園"
+      ]
+    },
+    {
+      "name": "代々木公園",
+      "kind": "facility",
+      "topic": "yoyogi-park",
+      "aliases": [
+        "代々木公園"
+      ]
+    },
+    {
+      "name": "目黒川",
+      "kind": "facility",
+      "topic": "meguro-river",
+      "aliases": [
+        "目黒川"
+      ]
+    },
+    {
+      "name": "等々力渓谷",
+      "kind": "facility",
+      "topic": "todoroki",
+      "aliases": [
+        "等々力渓谷"
+      ]
+    },
+    {
+      "name": "飛鳥山公園",
+      "kind": "facility",
+      "topic": "asukayama",
+      "aliases": [
+        "飛鳥山"
+      ]
+    },
+    {
+      "name": "葛西臨海公園",
+      "kind": "facility",
+      "topic": "kasai-rinkai",
+      "aliases": [
+        "葛西臨海公園",
+        "葛西臨海水族園"
+      ]
+    },
+    {
+      "name": "東京ドーム",
+      "kind": "facility",
+      "topic": "tokyo-dome",
+      "aliases": [
+        "東京ドーム"
+      ]
+    },
+    {
+      "name": "神宮球場",
+      "kind": "facility",
+      "topic": "jingu-stadium",
+      "aliases": [
+        "神宮球場",
+        "明治神宮野球場"
+      ]
+    },
+    {
+      "name": "国立競技場",
+      "kind": "facility",
+      "topic": "national-stadium",
+      "aliases": [
+        "国立競技場",
+        "MUFGスタジアム"
+      ]
+    },
+    {
+      "name": "両国国技館",
+      "kind": "facility",
+      "topic": "kokugikan",
+      "aliases": [
+        "国技館",
+        "両国"
+      ]
+    },
+    {
+      "name": "六本木",
+      "kind": "area",
+      "ward": "港区",
+      "lat": 35.66246,
+      "lng": 139.7335,
+      "aliases": [
+        "六本木"
+      ]
+    },
+    {
+      "name": "原宿",
+      "kind": "area",
+      "ward": "渋谷区",
+      "lat": 35.6687,
+      "lng": 139.70534,
+      "aliases": [
+        "原宿"
+      ]
+    },
+    {
+      "name": "表参道",
+      "kind": "area",
+      "ward": "渋谷区",
+      "lat": 35.6677,
+      "lng": 139.70721,
+      "aliases": [
+        "表参道"
+      ]
+    },
+    {
+      "name": "お台場",
+      "kind": "area",
+      "ward": "江東区",
+      "lat": 35.619,
+      "lng": 139.77936,
+      "aliases": [
+        "お台場",
+        "台場"
+      ]
+    },
+    {
+      "name": "豊洲",
+      "kind": "area",
+      "ward": "江東区",
+      "lat": 35.65014,
+      "lng": 139.79312,
+      "aliases": [
+        "豊洲"
+      ]
+    },
+    {
+      "name": "神楽坂",
+      "kind": "area",
+      "ward": "新宿区",
+      "lat": 35.70109,
+      "lng": 139.74123,
+      "aliases": [
+        "神楽坂"
+      ]
+    },
+    {
+      "name": "丸の内",
+      "kind": "area",
+      "ward": "千代田区",
+      "lat": 35.67907,
+      "lng": 139.7653,
+      "aliases": [
+        "丸の内"
+      ]
+    },
+    {
+      "name": "汐留",
+      "kind": "area",
+      "ward": "港区",
+      "lat": 35.66324,
+      "lng": 139.76027,
+      "aliases": [
+        "汐留"
+      ]
+    },
+    {
+      "name": "恵比寿駅",
+      "kind": "station",
+      "ward": "渋谷区",
+      "lat": 35.6464,
+      "lng": 139.7077,
+      "aliases": [
+        "恵比寿"
+      ]
+    },
+    {
+      "name": "自由が丘駅",
+      "kind": "station",
+      "ward": "目黒区",
+      "lat": 35.60783,
+      "lng": 139.66855,
+      "aliases": [
+        "自由が丘"
+      ]
+    },
+    {
+      "name": "下北沢駅",
+      "kind": "station",
+      "ward": "世田谷区",
+      "lat": 35.66127,
+      "lng": 139.66692,
+      "aliases": [
+        "下北沢",
+        "シモキタ"
+      ]
+    },
+    {
+      "name": "三軒茶屋駅",
+      "kind": "station",
+      "ward": "世田谷区",
+      "lat": 35.64373,
+      "lng": 139.67196,
+      "aliases": [
+        "三軒茶屋",
+        "三茶"
+      ]
+    },
+    {
+      "name": "二子玉川駅",
+      "kind": "station",
+      "ward": "世田谷区",
+      "lat": 35.61173,
+      "lng": 139.62911,
+      "aliases": [
+        "二子玉川",
+        "二子玉"
+      ]
+    },
+    {
+      "name": "阿佐ケ谷駅",
+      "kind": "station",
+      "ward": "杉並区",
+      "lat": 35.70497,
+      "lng": 139.63542,
+      "aliases": [
+        "阿佐ケ谷",
+        "阿佐ヶ谷"
+      ]
+    },
+    {
+      "name": "荻窪駅",
+      "kind": "station",
+      "ward": "杉並区",
+      "lat": 35.70418,
+      "lng": 139.62083,
+      "aliases": [
+        "荻窪"
+      ]
+    },
+    {
+      "name": "高田馬場駅",
+      "kind": "station",
+      "ward": "新宿区",
+      "lat": 35.71348,
+      "lng": 139.70447,
+      "aliases": [
+        "高田馬場"
+      ]
+    },
+    {
+      "name": "神保町駅",
+      "kind": "station",
+      "ward": "千代田区",
+      "lat": 35.69597,
+      "lng": 139.75839,
+      "aliases": [
+        "神保町"
+      ]
+    },
+    {
+      "name": "御茶ノ水駅",
+      "kind": "station",
+      "ward": "文京区",
+      "lat": 35.7004,
+      "lng": 139.76424,
+      "aliases": [
+        "御茶ノ水",
+        "お茶の水"
+      ]
+    },
+    {
+      "name": "有楽町駅",
+      "kind": "station",
+      "ward": "千代田区",
+      "lat": 35.67597,
+      "lng": 139.76214,
+      "aliases": [
+        "有楽町"
+      ]
+    },
+    {
+      "name": "新橋駅",
+      "kind": "station",
+      "ward": "港区",
+      "lat": 35.66602,
+      "lng": 139.76013,
+      "aliases": [
+        "新橋"
+      ]
+    },
+    {
+      "name": "大井町駅",
+      "kind": "station",
+      "ward": "品川区",
+      "lat": 35.60639,
+      "lng": 139.73488,
+      "aliases": [
+        "大井町"
+      ]
+    },
+    {
+      "name": "五反田駅",
+      "kind": "station",
+      "ward": "品川区",
+      "lat": 35.62627,
+      "lng": 139.72402,
+      "aliases": [
+        "五反田"
+      ]
+    },
+    {
+      "name": "目黒駅",
+      "kind": "station",
+      "ward": "品川区",
+      "lat": 35.63251,
+      "lng": 139.71577,
+      "aliases": [
+        "目黒駅"
+      ]
+    },
+    {
+      "name": "蒲田駅",
+      "kind": "station",
+      "ward": "大田区",
+      "lat": 35.56269,
+      "lng": 139.71785,
+      "aliases": [
+        "蒲田"
+      ]
+    },
+    {
+      "name": "北千住駅",
+      "kind": "station",
+      "ward": "足立区",
+      "lat": 35.75026,
+      "lng": 139.80439,
+      "aliases": [
+        "北千住"
+      ]
+    },
+    {
+      "name": "綾瀬駅",
+      "kind": "station",
+      "ward": "足立区",
+      "lat": 35.7619,
+      "lng": 139.82408,
+      "aliases": [
+        "綾瀬駅"
+      ]
+    },
+    {
+      "name": "錦糸町駅",
+      "kind": "station",
+      "ward": "墨田区",
+      "lat": 35.69675,
+      "lng": 139.81396,
+      "aliases": [
+        "錦糸町"
+      ]
+    },
+    {
+      "name": "亀戸駅",
+      "kind": "station",
+      "ward": "江東区",
+      "lat": 35.69733,
+      "lng": 139.8267,
+      "aliases": [
+        "亀戸"
+      ]
+    },
+    {
+      "name": "門前仲町駅",
+      "kind": "station",
+      "ward": "江東区",
+      "lat": 35.67229,
+      "lng": 139.79507,
+      "aliases": [
+        "門前仲町",
+        "門仲"
+      ]
+    },
+    {
+      "name": "勝どき駅",
+      "kind": "station",
+      "ward": "中央区",
+      "lat": 35.65893,
+      "lng": 139.77733,
+      "aliases": [
+        "勝どき"
+      ]
+    },
+    {
+      "name": "葛西駅",
+      "kind": "station",
+      "ward": "江戸川区",
+      "lat": 35.66425,
+      "lng": 139.87331,
+      "aliases": [
+        "葛西駅"
+      ]
+    },
+    {
+      "name": "小岩駅",
+      "kind": "station",
+      "ward": "江戸川区",
+      "lat": 35.73268,
+      "lng": 139.88217,
+      "aliases": [
+        "小岩"
+      ]
+    },
+    {
+      "name": "金町駅",
+      "kind": "station",
+      "ward": "葛飾区",
+      "lat": 35.76958,
+      "lng": 139.8707,
+      "aliases": [
+        "金町"
+      ]
+    },
+    {
+      "name": "巣鴨駅",
+      "kind": "station",
+      "ward": "豊島区",
+      "lat": 35.73341,
+      "lng": 139.73943,
+      "aliases": [
+        "巣鴨"
+      ]
+    },
+    {
+      "name": "大塚駅",
+      "kind": "station",
+      "ward": "豊島区",
+      "lat": 35.73145,
+      "lng": 139.72926,
+      "aliases": [
+        "大塚駅"
+      ]
+    },
+    {
+      "name": "日暮里駅",
+      "kind": "station",
+      "ward": "荒川区",
+      "lat": 35.72801,
+      "lng": 139.77138,
+      "aliases": [
+        "日暮里"
+      ]
+    },
+    {
+      "name": "町屋駅",
+      "kind": "station",
+      "ward": "荒川区",
+      "lat": 35.7427,
+      "lng": 139.78229,
+      "aliases": [
+        "町屋駅"
+      ]
+    },
+    {
+      "name": "練馬駅",
+      "kind": "station",
+      "ward": "練馬区",
+      "lat": 35.73605,
+      "lng": 139.65225,
+      "aliases": [
+        "練馬駅"
+      ]
+    },
+    {
+      "name": "石神井公園駅",
+      "kind": "station",
+      "ward": "練馬区",
+      "lat": 35.74345,
+      "lng": 139.60699,
+      "aliases": [
+        "石神井公園",
+        "石神井"
+      ]
+    },
+    {
+      "name": "大泉学園駅",
+      "kind": "station",
+      "ward": "練馬区",
+      "lat": 35.7495,
+      "lng": 139.58652,
+      "aliases": [
+        "大泉学園"
+      ]
+    },
+    {
+      "name": "成増駅",
+      "kind": "station",
+      "ward": "板橋区",
+      "lat": 35.77759,
+      "lng": 139.63293,
+      "aliases": [
+        "成増"
+      ]
+    },
+    {
+      "name": "高島平駅",
+      "kind": "station",
+      "ward": "板橋区",
+      "lat": 35.78891,
+      "lng": 139.66126,
+      "aliases": [
+        "高島平"
+      ]
+    },
+    {
+      "name": "赤坂見附駅",
+      "kind": "station",
+      "ward": "港区",
+      "lat": 35.67708,
+      "lng": 139.73687,
+      "aliases": [
+        "赤坂見附",
+        "赤坂"
+      ]
+    },
+    {
+      "name": "麻布十番駅",
+      "kind": "station",
+      "ward": "港区",
+      "lat": 35.65689,
+      "lng": 139.73515,
+      "aliases": [
+        "麻布十番",
+        "麻布台"
+      ]
+    },
+    {
+      "name": "虎ノ門駅",
+      "kind": "station",
+      "ward": "港区",
+      "lat": 35.67063,
+      "lng": 139.74963,
+      "aliases": [
+        "虎ノ門"
+      ]
+    },
+    {
+      "name": "四ツ谷駅",
+      "kind": "station",
+      "ward": "新宿区",
+      "lat": 35.68621,
+      "lng": 139.72948,
+      "aliases": [
+        "四ツ谷",
+        "四谷"
+      ]
+    },
+    {
+      "name": "代々木駅",
+      "kind": "station",
+      "ward": "渋谷区",
+      "lat": 35.68301,
+      "lng": 139.70207,
+      "aliases": [
+        "代々木駅"
+      ]
+    },
+    {
+      "name": "新大久保駅",
+      "kind": "station",
+      "ward": "新宿区",
+      "lat": 35.7013,
+      "lng": 139.70024,
+      "aliases": [
+        "新大久保"
+      ]
+    },
+    {
+      "name": "早稲田駅",
+      "kind": "station",
+      "ward": "新宿区",
+      "lat": 35.7058,
+      "lng": 139.72119,
+      "aliases": [
+        "早稲田"
+      ]
+    },
+    {
+      "name": "本郷三丁目駅",
+      "kind": "station",
+      "ward": "文京区",
+      "lat": 35.7066,
+      "lng": 139.75994,
+      "aliases": [
+        "本郷三丁目"
+      ]
+    },
+    {
+      "name": "浜松町駅",
+      "kind": "station",
+      "ward": "港区",
+      "lat": 35.65511,
+      "lng": 139.75706,
+      "aliases": [
+        "浜松町"
+      ]
+    },
+    {
+      "name": "品川駅",
+      "kind": "station",
+      "ward": "港区",
+      "lat": 35.62748,
+      "lng": 139.73777,
+      "aliases": [
+        "品川駅"
+      ]
+    },
+    {
+      "name": "新宿駅",
+      "kind": "station",
+      "ward": "新宿区",
+      "lat": 35.69218,
+      "lng": 139.6997,
+      "aliases": [
+        "新宿駅",
+        "新宿"
+      ]
+    },
+    {
+      "name": "渋谷駅",
+      "kind": "station",
+      "ward": "渋谷区",
+      "lat": 35.65995,
+      "lng": 139.70246,
+      "aliases": [
+        "渋谷駅",
+        "渋谷"
+      ]
+    },
+    {
+      "name": "池袋駅",
+      "kind": "station",
+      "ward": "豊島区",
+      "lat": 35.7302,
+      "lng": 139.71297,
+      "aliases": [
+        "池袋駅",
+        "池袋"
+      ]
+    },
+    {
+      "name": "上野駅",
+      "kind": "station",
+      "ward": "台東区",
+      "lat": 35.71404,
+      "lng": 139.77712,
+      "aliases": [
+        "上野駅"
+      ]
+    },
+    {
+      "name": "浅草駅",
+      "kind": "station",
+      "ward": "台東区",
+      "lat": 35.71135,
+      "lng": 139.79833,
+      "aliases": [
+        "浅草"
+      ]
+    },
+    {
+      "name": "中野駅",
+      "kind": "station",
+      "ward": "中野区",
+      "lat": 35.7055,
+      "lng": 139.66576,
+      "aliases": [
+        "中野駅"
+      ]
+    },
+    {
+      "name": "押上駅",
+      "kind": "station",
+      "ward": "墨田区",
+      "lat": 35.70952,
+      "lng": 139.81359,
+      "aliases": [
+        "押上"
+      ]
+    },
+    {
+      "name": "中目黒駅",
+      "kind": "station",
+      "ward": "目黒区",
+      "lat": 35.6439,
+      "lng": 139.6999,
+      "aliases": [
+        "中目黒"
+      ]
+    },
+    {
+      "name": "王子駅",
+      "kind": "station",
+      "ward": "北区",
+      "lat": 35.75405,
+      "lng": 139.73723,
+      "aliases": [
+        "王子駅"
+      ]
+    },
+    {
+      "name": "板橋駅",
+      "kind": "station",
+      "ward": "板橋区",
+      "lat": 35.7466,
+      "lng": 139.71956,
+      "aliases": [
+        "板橋駅"
+      ]
+    },
+    {
+      "name": "御徒町駅",
+      "kind": "station",
+      "ward": "台東区",
+      "lat": 35.70695,
+      "lng": 139.77463,
+      "aliases": [
+        "御徒町"
+      ]
+    },
+    {
+      "name": "水道橋駅",
+      "kind": "station",
+      "ward": "千代田区",
+      "lat": 35.70213,
+      "lng": 139.75221,
+      "aliases": [
+        "水道橋"
+      ]
+    },
+    {
+      "name": "千代田区",
+      "kind": "ward",
+      "ward": "千代田区",
+      "aliases": [
+        "東京都千代田区",
+        "千代田区"
+      ]
+    },
+    {
+      "name": "中央区",
+      "kind": "ward",
+      "ward": "中央区",
+      "aliases": [
+        "東京都中央区",
+        "東京・中央区",
+        "都内中央区"
+      ]
+    },
+    {
+      "name": "港区",
+      "kind": "ward",
+      "ward": "港区",
+      "aliases": [
+        "東京都港区",
+        "東京・港区",
+        "都内港区"
+      ]
+    },
+    {
+      "name": "新宿区",
+      "kind": "ward",
+      "ward": "新宿区",
+      "aliases": [
+        "東京都新宿区",
+        "新宿区"
+      ]
+    },
+    {
+      "name": "文京区",
+      "kind": "ward",
+      "ward": "文京区",
+      "aliases": [
+        "東京都文京区",
+        "文京区"
+      ]
+    },
+    {
+      "name": "台東区",
+      "kind": "ward",
+      "ward": "台東区",
+      "aliases": [
+        "東京都台東区",
+        "台東区"
+      ]
+    },
+    {
+      "name": "墨田区",
+      "kind": "ward",
+      "ward": "墨田区",
+      "aliases": [
+        "東京都墨田区",
+        "墨田区"
+      ]
+    },
+    {
+      "name": "江東区",
+      "kind": "ward",
+      "ward": "江東区",
+      "aliases": [
+        "東京都江東区",
+        "江東区"
+      ]
+    },
+    {
+      "name": "品川区",
+      "kind": "ward",
+      "ward": "品川区",
+      "aliases": [
+        "東京都品川区",
+        "品川区"
+      ]
+    },
+    {
+      "name": "目黒区",
+      "kind": "ward",
+      "ward": "目黒区",
+      "aliases": [
+        "東京都目黒区",
+        "目黒区"
+      ]
+    },
+    {
+      "name": "大田区",
+      "kind": "ward",
+      "ward": "大田区",
+      "aliases": [
+        "東京都大田区",
+        "大田区"
+      ]
+    },
+    {
+      "name": "世田谷区",
+      "kind": "ward",
+      "ward": "世田谷区",
+      "aliases": [
+        "東京都世田谷区",
+        "世田谷区"
+      ]
+    },
+    {
+      "name": "渋谷区",
+      "kind": "ward",
+      "ward": "渋谷区",
+      "aliases": [
+        "東京都渋谷区",
+        "渋谷区"
+      ]
+    },
+    {
+      "name": "中野区",
+      "kind": "ward",
+      "ward": "中野区",
+      "aliases": [
+        "東京都中野区",
+        "中野区"
+      ]
+    },
+    {
+      "name": "杉並区",
+      "kind": "ward",
+      "ward": "杉並区",
+      "aliases": [
+        "東京都杉並区",
+        "杉並区"
+      ]
+    },
+    {
+      "name": "豊島区",
+      "kind": "ward",
+      "ward": "豊島区",
+      "aliases": [
+        "東京都豊島区",
+        "豊島区"
+      ]
+    },
+    {
+      "name": "北区",
+      "kind": "ward",
+      "ward": "北区",
+      "aliases": [
+        "東京都北区",
+        "東京・北区",
+        "都内北区"
+      ]
+    },
+    {
+      "name": "荒川区",
+      "kind": "ward",
+      "ward": "荒川区",
+      "aliases": [
+        "東京都荒川区",
+        "荒川区"
+      ]
+    },
+    {
+      "name": "板橋区",
+      "kind": "ward",
+      "ward": "板橋区",
+      "aliases": [
+        "東京都板橋区",
+        "板橋区"
+      ]
+    },
+    {
+      "name": "練馬区",
+      "kind": "ward",
+      "ward": "練馬区",
+      "aliases": [
+        "東京都練馬区",
+        "練馬区"
+      ]
+    },
+    {
+      "name": "足立区",
+      "kind": "ward",
+      "ward": "足立区",
+      "aliases": [
+        "東京都足立区",
+        "足立区"
+      ]
+    },
+    {
+      "name": "葛飾区",
+      "kind": "ward",
+      "ward": "葛飾区",
+      "aliases": [
+        "東京都葛飾区",
+        "葛飾区"
+      ]
+    },
+    {
+      "name": "江戸川区",
+      "kind": "ward",
+      "ward": "江戸川区",
+      "aliases": [
+        "東京都江戸川区",
+        "江戸川区"
+      ]
+    }
+  ]
+}

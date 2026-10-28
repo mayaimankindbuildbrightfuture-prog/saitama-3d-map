@@ -1,4 +1,4 @@
-# さいたま市・仙台市の最新ニュースとライブカメラの配信状況を定期的に調べて data/ を更新し、GitHub Pages に公開する。
+# さいたま市・仙台市・東京23区の最新ニュースとライブカメラの配信状況を定期的に調べて data/ を更新し、GitHub Pages に公開する。
 # APIキーやシークレットは不要（リポジトリ標準の GITHUB_TOKEN だけを使う）。
 name: ニュース更新と公開
 
@@ -45,15 +45,21 @@ jobs:
       - name: 仙台市版のクマ目撃等情報（宮城県）を取得
         run: python3 scripts/fetch_bears.py
 
+      - name: 東京23区版のニュースを取得
+        run: python3 scripts/fetch_news.py --city tokyo
+
+      - name: 東京23区版のライブカメラの配信を確認
+        run: python3 scripts/fetch_livecams.py --city tokyo
+
       - name: 変更があればコミット
         run: |
-          if git diff --quiet -- data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json sendai/data/bears.json sendai/data/bear_places.json; then
+          if git diff --quiet -- data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json sendai/data/bears.json sendai/data/bear_places.json tokyo/data/news.json tokyo/data/livecams.json; then
             echo "ニュース・ライブカメラに変更はありません"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json sendai/data/bears.json sendai/data/bear_places.json
+          git add data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json sendai/data/bears.json sendai/data/bear_places.json tokyo/data/news.json tokyo/data/livecams.json
           git commit -m "ニュースを更新"
           git push
 
@@ -68,6 +74,8 @@ jobs:
           mkdir -p _site/sendai
           cp -r index.html city.js app.js style.css data _site/
           cp -r sendai/index.html sendai/city.js sendai/data _site/sendai/
+          mkdir -p _site/tokyo
+          cp -r tokyo/index.html tokyo/city.js tokyo/data _site/tokyo/
 
       - uses: actions/upload-pages-artifact@v3
         if: steps.pages.outcome == 'success'

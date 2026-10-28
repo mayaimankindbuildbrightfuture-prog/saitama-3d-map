@@ -23,7 +23,14 @@
     <h1 class="app-title"><span class="app-title-main">仙台市</span> 3Dトピックマップ</h1>
     <div class="header-tools">
       <button type="button" id="list-toggle" class="tool-btn" aria-expanded="false" aria-controls="list-panel">📋 一覧・検索</button>
-      <a class="tool-btn city-link" href="../" title="さいたま市の3Dトピックマップを開く">🗺 さいたま市版</a>
+      <label class="ward-select-label">
+        <span class="visually-hidden">ほかの地域のマップを開く</span>
+        <select id="city-select" class="tool-select" title="ほかの地域の3Dトピックマップを開く">
+          <option value="">🗺 ほかの地域…</option>
+          <option value="../">さいたま市</option>
+          <option value="../tokyo/">東京23区</option>
+        </select>
+      </label>
       <label class="ward-select-label">
         <span class="visually-hidden">区へ移動</span>
         <select id="ward-select" class="tool-select">
