@@ -730,7 +730,13 @@ body {
 .distance { margin-left: auto; font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
 
 /* ---------- ライブカメラ ---------- */
-.livecam-ctrl button { font-size: 16px; }
+.livecam-ctrl button {
+  width: auto;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
 .livecam-ctrl button[aria-pressed="true"] { background: var(--hl-strong); }
 
 .cam-marker {
@@ -739,6 +745,8 @@ body {
   z-index: 150000;
 }
 .cam-marker.active { z-index: 150001; }
+.cam-cluster .cam-pin { padding: 5px 12px 5px 8px; font-size: 13px; }
+.zoom-far .cam-cluster .cam-pin { padding: 5px 12px 5px 8px; }
 
 .cam-pin {
   display: flex;
