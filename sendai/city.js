@@ -15,7 +15,10 @@ window.CITY = {
   feedCategories: {
     wildlife: { label: '害獣出没', color: '#7c4a1e', icon: '🐻', tag: '出没', after: 'crime' },
   },
+  // ニュースと一緒に読み込む追加のデータ（scripts/fetch_bears.py が作る、宮城県のクマ目撃等情報のうち仙台市の直近30日分）
+  extraFeeds: ['data/bears.json'],
   wildlife: {
+    officialNote: '宮城県が市町村からの報告を取りまとめた、クマの目撃・痕跡の情報です（直近30日分）。地図の位置は地区名から推定した町・字のおおよその中心で、実際の発見地点ではありません。クマの存在や不在を証明するものではなく、情報が無い場所にもクマがいる可能性があります。',
     note: '報道機関が伝えたクマ・イノシシ・シカ・サルなどの出没情報です。地図の位置は記事中の地名からの推定で、実際の出没地点ではありません。',
     links: [
       { label: '仙台市のツキノワグマ対策（出没情報マップ・LINE/メールでの通知）', url: 'https://www.city.sendai.jp/kankyochose/kurashi/shizen/petto/yase/higai/tsukinowaguma.html' },

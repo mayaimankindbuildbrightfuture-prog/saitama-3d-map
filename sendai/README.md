@@ -27,6 +27,11 @@
 - 「〇〇警察署によると」と書かれた記事も、事件・防犯ではなくこちらに入れます。
 - 「ジャンルで絞り込み」で、クマ・イノシシ・シカ・カモシカ・サル・その他に絞れます。
 - 地図の位置は記事中の地名からの推定です。クマの出没が多い西部の地名（上愛子・芋沢・錦ケ丘・熊ヶ根・折立・根白石・実沢・西中山・南中山・坪沼など）を地名辞書に入れ、「青葉区上愛子」のように区名と地域名が両方あれば地域名の位置に置きます。
+- **宮城県のクマ目撃等情報（🐾）**：宮城県が市町村からの報告を取りまとめて公開している「クマ目撃等情報」（Excel）から、仙台市の直近30日分を 🐾 の吹き出しで表示します（`scripts/fetch_bears.py`、GitHub Actions が3時間ごとに更新）。発見日時・地区・頭数・目撃/痕跡・市街地判定が分かります。
+  - 出典：宮城県「令和8年度クマ目撃等情報」。宮城県はこのデータを「出典を明記することを条件に、自由に複製・加工・編集や頒布などの二次利用が可能」としています。
+  - 県のデータには座標が無いため、「地区」（例：芋沢字横向山18-2）から町・字の名前（芋沢）を取り出し、OpenStreetMap（Nominatim）で調べた **町・字のおおよその中心** に置きます。実際の発見地点ではありません。町・字が分からないものは区役所の位置に置きます。調べた結果は `sendai/data/bear_places.json` に保存し、同じ地名は二度と問い合わせません。
+  - 宮城県の「クマ出没注意報・警報」が仙台市に出ているときは、起動時にお知らせを出し、詳細パネルにも発令内容と期間を表示します。
+  - 仙台市の「クマ出没情報マップ」（せんだいくらしのマップ）は、利用規約で地図の内容の転載・二次利用が禁じられているため、データは使わず、仙台市のページへの案内だけにしています。
 - 最新の正確な出没地点は、[仙台市のツキノワグマ対策](https://www.city.sendai.jp/kankyochose/kurashi/shizen/petto/yase/higai/tsukinowaguma.html) の「クマ出没情報マップ」や、仙台市LINE公式アカウント・メール配信の「クマ出没情報」で確認してください。
 
 ## ライブカメラ
@@ -73,10 +78,12 @@ sendai/city.js                   仙台市の設定（初期視点・地図の�
 sendai/data/topics.json          カテゴリ・区・トピックのデータ
 sendai/data/news.json            最新ニュース（GitHub Actions が自動更新）
 sendai/data/livecams.json        ライブカメラの一覧と配信状況（GitHub Actions が自動更新）
+sendai/data/bears.json           宮城県のクマ目撃等情報（仙台市・直近30日）と出没注意報等の発令状況（GitHub Actions が自動更新）
+sendai/data/bear_places.json     クマ目撃等情報の町・字の座標（Nominatim で調べた結果の保存）
 sendai/scripts/news_sources.json ニュースの取得元とカテゴリ分けの設定
 sendai/scripts/places.json       位置推定に使う地名辞書
 ```
 
 ## 利用しているデータ
 
-さいたま市版と同じです（OpenFreeMap・OpenStreetMap、AWS Terrain Tiles、国土交通省 ハザードマップポータルサイト、気象庁、Open-Meteo、Googleニュース検索・Bluesky・Misskey・Mastodon、YouTube、ウェザーニュース）。トピックの位置の確認に OpenStreetMap（Nominatim）、事実の確認に Wikipedia を使いました。
+さいたま市版と同じです（OpenFreeMap・OpenStreetMap、AWS Terrain Tiles、国土交通省 ハザードマップポータルサイト、気象庁、Open-Meteo、Googleニュース検索・Bluesky・Misskey・Mastodon、YouTube、ウェザーニュース）と、宮城県「クマ目撃等情報」（出典を明記して二次利用）。トピックの位置の確認に OpenStreetMap（Nominatim）、事実の確認に Wikipedia を使いました。

@@ -171,9 +171,10 @@ data/news.json    最新ニュース（GitHub Actions が自動更新）
 data/livecams.json        ライブカメラの一覧と配信状況（GitHub Actions が自動更新）
 scripts/fetch_news.py     ニュースの取得と位置推定（Python 標準ライブラリのみ）
 scripts/fetch_livecams.py ライブカメラの YouTube チャンネルIDと今の配信を調べる
+scripts/fetch_bears.py    仙台市版：宮城県のクマ目撃等情報（Excel）と出没注意報等の発令状況を読む
 scripts/news_sources.json ニュースの取得元（RSS/Atom）
 scripts/places.json       位置推定に使う地名辞書
-tests/                    fetch_news.py・fetch_livecams.py・仙台市版のデータのテスト
+tests/                    fetch_news.py・fetch_livecams.py・fetch_bears.py・仙台市版のデータのテスト
 sendai/                   仙台市版（index.html・city.js・data/・scripts/ の設定。詳しくは sendai/README.md）
 .github/workflows/update-news.yml  定期取得と GitHub Pages への公開
 ```
