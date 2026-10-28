@@ -1,0 +1,67 @@
+# さいたま市の最新ニュースを定期的に取得して data/news.json を更新し、GitHub Pages に公開する。
+# APIキーやシークレットは不要（リポジトリ標準の GITHUB_TOKEN だけを使う）。
+name: ニュース更新と公開
+
+on:
+  schedule:
+    - cron: "17 */3 * * *" # 3時間ごと（UTC。毎時17分）
+  workflow_dispatch: # Actions タブから手動実行
+  push:
+    branches: [main]
+
+permissions:
+  contents: write # data/news.json のコミット
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-news
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: テスト
+        run: python3 -m unittest discover -s tests
+
+      - name: ニュースを取得
+        run: python3 scripts/fetch_news.py
+
+      - name: 変更があればコミット
+        run: |
+          if git diff --quiet -- data/news.json; then
+            echo "ニュースに変更はありません"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news.json
+          git commit -m "ニュースを更新"
+          git push
+
+      - name: Pages の設定
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true # Pages を使わない場合でもニュースの更新は続ける
+
+      - name: 公開用ファイルをまとめる
+        if: steps.pages.outcome == 'success'
+        run: |
+          mkdir -p _site
+          cp -r index.html app.js style.css data _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outcome == 'success'
+        with:
+          path: _site
+
+      - name: GitHub Pages へ公開
+        id: deployment
+        if: steps.pages.outcome == 'success'
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,22 @@
+{
+  "_comment": "ニュースの取得元（RSS 2.0 / Atom）。APIキー不要のフィードを追加できる。filter=true のフィードは、さいたま市に関係する語を含む記事だけを残す。",
+  "maxItems": 40,
+  "maxAgeDays": 14,
+  "sources": [
+    {
+      "name": "Googleニュース「さいたま市」",
+      "url": "https://news.google.com/rss/search?q=%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E5%B8%82+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
+      "filter": true
+    },
+    {
+      "name": "Googleニュース「大宮 さいたま」",
+      "url": "https://news.google.com/rss/search?q=%E5%A4%A7%E5%AE%AE+%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
+      "filter": true
+    },
+    {
+      "name": "Googleニュース「浦和 さいたま」",
+      "url": "https://news.google.com/rss/search?q=%E6%B5%A6%E5%92%8C+%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
+      "filter": true
+    }
+  ]
+}
