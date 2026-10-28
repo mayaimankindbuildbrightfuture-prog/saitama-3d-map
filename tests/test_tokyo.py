@@ -48,6 +48,8 @@ class TokyoNewsTest(unittest.TestCase):
         self.assertIsNone(self.locate("川崎・等々力で試合"))
         self.assertIsNone(self.locate("大阪日本橋の電気街"))
         self.assertIsNone(self.locate("銀座線が運転見合わせ"))  # 路線名の「銀座」は地名にしない
+        self.assertIsNone(self.locate("（京都）亀岡市大井町小金岐でクマ出没"))  # 京都府亀岡市の大井町
+        self.assertEqual(self.locate("大井町駅前に新店"), "大井町駅")
 
     def test_specific_place_wins(self):
         self.assertEqual(self.locate("練馬区石神井公園でイベント"), "石神井公園駅")
