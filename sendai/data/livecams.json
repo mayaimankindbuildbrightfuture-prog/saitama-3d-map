@@ -1,0 +1,473 @@
+{
+  "_comment": "仙台市内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・image（定期更新の静止画を表示）・links（配信元のページへのリンクの一覧）・link（配信元へのリンクのみ）。lat/lng はおおよその位置（ウェザーニュースは区役所の位置）。youtube は scripts/fetch_livecams.py --city sendai が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
+  "checkedAt": "2026-10-28T15:20+09:00",
+  "cameras": [
+    {
+      "id": "sendai-castle-cam",
+      "type": "youtube",
+      "title": "仙台城跡から望む仙台市街",
+      "description": "仙台城跡（青葉山）から、仙台の市街地を見渡すライブカメラです。",
+      "ward": "青葉区",
+      "lat": 38.2531,
+      "lng": 140.8562,
+      "provider": "Discover SENDAI（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=Ado_7_DMTdc",
+      "youtube": {
+        "handle": "@discoversendai3564",
+        "channelId": "UClaKuQ4CsCqpPQpIB-ieqIg",
+        "videoId": "Ado_7_DMTdc",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "仙台城跡 Live"
+        ]
+      }
+    },
+    {
+      "id": "ohashi-cam",
+      "type": "youtube",
+      "title": "大橋（広瀬川）",
+      "description": "仙台の市街地と仙台城跡をつなぐ、広瀬川に架かる大橋のライブカメラです。",
+      "ward": "青葉区",
+      "lat": 38.25817,
+      "lng": 140.86008,
+      "provider": "Discover SENDAI（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=vM5RkLiSn5E",
+      "youtube": {
+        "handle": "@discoversendai3564",
+        "channelId": "UClaKuQ4CsCqpPQpIB-ieqIg",
+        "videoId": "vM5RkLiSn5E",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "大橋"
+        ]
+      }
+    },
+    {
+      "id": "markone-cam",
+      "type": "youtube",
+      "title": "仙台マークワン屋上（仙台駅西口）",
+      "description": "仙台駅西口の仙台マークワンの屋上に設置された、ミヤギテレビの情報カメラです。",
+      "ward": "青葉区",
+      "lat": 38.26199,
+      "lng": 140.88155,
+      "provider": "ミヤテレNEWS NNN（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=rPAGOmumees",
+      "youtube": {
+        "handle": "@miyateleNEWSNNN",
+        "channelId": "UCp0vHbq1su20AqZoND_LH_Q",
+        "videoId": "rPAGOmumees",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "マークワン"
+        ]
+      }
+    },
+    {
+      "id": "izumichuo-cam",
+      "type": "youtube",
+      "title": "泉中央",
+      "description": "泉区の泉中央付近を映す、ミヤギテレビの情報カメラです。",
+      "ward": "泉区",
+      "lat": 38.3236,
+      "lng": 140.8812,
+      "provider": "ミヤテレNEWS NNN（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=wBvfPMPXOTA",
+      "youtube": {
+        "handle": "@miyateleNEWSNNN",
+        "channelId": "UCp0vHbq1su20AqZoND_LH_Q",
+        "videoId": "wBvfPMPXOTA",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "泉中央"
+        ]
+      }
+    },
+    {
+      "id": "kokubuncho-cam",
+      "type": "youtube",
+      "title": "国分町",
+      "description": "仙台の繁華街・国分町のライブカメラです。",
+      "ward": "青葉区",
+      "lat": 38.26415,
+      "lng": 140.86865,
+      "provider": "国分町ライブカメラ（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=RYQ-ktPCJE8",
+      "youtube": {
+        "handle": "@Buncho-c5y",
+        "channelId": "UC1rO0sBICCYQXCaFbl9-R5w",
+        "videoId": "RYQ-ktPCJE8",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "gobashi-cam",
+      "type": "youtube",
+      "title": "東二番丁（五橋）",
+      "description": "五橋付近の東二番丁通を映す、河北新報のライブカメラです。",
+      "ward": "青葉区・若林区",
+      "lat": 38.2522,
+      "lng": 140.8806,
+      "provider": "河北新報オンライン（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=9UNpXYB8rCQ",
+      "youtube": {
+        "handle": "@KAHOKUSHIMPO",
+        "channelId": "UCNt5Ctj5uR_A5jTn_yZ9mVQ",
+        "videoId": "9UNpXYB8rCQ",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "五橋"
+        ]
+      }
+    },
+    {
+      "id": "kamisugi-cam",
+      "type": "youtube",
+      "title": "愛宕上杉通（上杉）",
+      "description": "青葉区上杉付近の愛宕上杉通を映す、河北新報のライブカメラです。",
+      "ward": "青葉区",
+      "lat": 38.2739,
+      "lng": 140.8754,
+      "provider": "河北新報オンライン（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=MxgZz2Abc8k",
+      "youtube": {
+        "handle": "@KAHOKUSHIMPO",
+        "channelId": "UCNt5Ctj5uR_A5jTn_yZ9mVQ",
+        "videoId": "MxgZz2Abc8k",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "愛宕上杉通"
+        ]
+      }
+    },
+    {
+      "id": "minamiyoshinari-cam",
+      "type": "youtube",
+      "title": "北環状線（南吉成）",
+      "description": "青葉区南吉成付近の仙台北環状線を映す、河北新報のライブカメラです。",
+      "ward": "青葉区",
+      "lat": 38.285,
+      "lng": 140.81452,
+      "provider": "河北新報オンライン（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=2paFWVksZWo",
+      "youtube": {
+        "handle": "@KAHOKUSHIMPO",
+        "channelId": "UCNt5Ctj5uR_A5jTn_yZ9mVQ",
+        "videoId": "2paFWVksZWo",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "南吉成"
+        ]
+      }
+    },
+    {
+      "id": "kitane-kuromatsu-cam",
+      "type": "youtube",
+      "title": "県道22号 仙台泉線（北根黒松付近）",
+      "description": "県道22号仙台泉線の北根黒松付近を映す、お天気と道路の情報カメラです。",
+      "ward": "青葉区・泉区",
+      "lat": 38.2995,
+      "lng": 140.8805,
+      "provider": "とりっぴー小鳥用品専門店（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=UK9bAsWDwis",
+      "youtube": {
+        "handle": "@torippie",
+        "channelId": "UCtmMHYVblONASz9ayeLEmFA",
+        "videoId": "UK9bAsWDwis",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "北根黒松"
+        ]
+      }
+    },
+    {
+      "id": "aobayama-cam",
+      "type": "youtube",
+      "title": "東北大学 青葉山キャンパス",
+      "description": "東北大学 青葉山キャンパスのライブカメラです。",
+      "ward": "青葉区",
+      "lat": 38.25419,
+      "lng": 140.8407,
+      "provider": "東北大学未来科学技術共同研究センター（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=NuTt9nk5tMA",
+      "youtube": {
+        "handle": "@niche-tohoku-university",
+        "channelId": "UCnBjdXBa2mhbVOtehn13Y8w",
+        "videoId": "NuTt9nk5tMA",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "izumi-parktown-gc-cam",
+      "type": "youtube",
+      "title": "泉パークタウンゴルフ倶楽部",
+      "description": "泉区の泉パークタウンゴルフ倶楽部のライブカメラです。",
+      "ward": "泉区",
+      "lat": 38.34935,
+      "lng": 140.85302,
+      "provider": "泉パークタウンゴルフ倶楽部（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=pPWJU6Esj6c",
+      "youtube": {
+        "channelId": "UC8cLfYPcBAuTzYBWJXWU1Dw",
+        "videoId": "pPWJU6Esj6c",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "oroshimachi-cam",
+      "type": "youtube",
+      "title": "卸町大通（仙台測器社前）",
+      "description": "若林区卸町の卸町大通を映すライブカメラです。配信元の設定で、他のサイトでの再生（埋め込み）が許可されていないため、YouTube で見てください。",
+      "ward": "若林区",
+      "lat": 38.2516,
+      "lng": 140.9209,
+      "provider": "仙台測器社（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=Poe9pISeGYg",
+      "youtube": {
+        "channelId": "UCt76R3CP4XsgQoH5gPvHGTw",
+        "videoId": "Poe9pISeGYg",
+        "live": true,
+        "embeddable": false
+      }
+    },
+    {
+      "id": "oroshi-center-cam",
+      "type": "youtube",
+      "title": "卸町大通（卸商センター前）",
+      "description": "若林区卸町の卸商センター前交差点付近を映すライブカメラです。配信元の設定で埋め込みが許可されていないため、YouTube で見てください。",
+      "ward": "若林区",
+      "lat": 38.2532,
+      "lng": 140.9236,
+      "provider": "仙台測器社（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=nsEDK2JqX1Y",
+      "youtube": {
+        "channelId": "UCEdByZI_TwNNxo2PDcvVvKQ",
+        "videoId": "nsEDK2JqX1Y",
+        "live": true,
+        "embeddable": false
+      }
+    },
+    {
+      "id": "akiu-hananoyu-cam",
+      "type": "youtube",
+      "title": "秋保温泉 ホテル華乃湯",
+      "description": "秋保温泉のホテル華乃湯の駐車場付近と今の天気を映すライブカメラです。配信元の設定で埋め込みが許可されていないため、YouTube で見てください。",
+      "ward": "太白区",
+      "lat": 38.2285,
+      "lng": 140.715,
+      "provider": "秋保温泉 ホテル華乃湯（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=rkcbSwXhdYU",
+      "youtube": {
+        "channelId": "UCVZsYkJq4a2Sk9xsHI1gTPA",
+        "videoId": "rkcbSwXhdYU",
+        "live": true,
+        "embeddable": false,
+        "titleKeywords": [
+          "駐車場"
+        ]
+      }
+    },
+    {
+      "id": "mediatheque-cam",
+      "type": "link",
+      "title": "せんだいメディアテーク・定禅寺通",
+      "ward": "青葉区",
+      "lat": 38.2659,
+      "lng": 140.8662,
+      "description": "せんだいメディアテークから定禅寺通のケヤキ並木を映すライブカメラです。配信元のサイトで見てください。",
+      "provider": "せんだいメディアテーク",
+      "siteUrl": "https://www.smt.jp/livecam/"
+    },
+    {
+      "id": "atago-cam",
+      "type": "link",
+      "title": "愛宕神社から望む仙台市街",
+      "ward": "太白区",
+      "lat": 38.24588,
+      "lng": 140.87551,
+      "description": "太白区向山の愛宕神社から仙台の市街地を見渡すライブカメラです。配信元のサイトで見てください。",
+      "provider": "愛宕神社",
+      "siteUrl": "https://atago.org/atagolive/livecam/livecam01.html"
+    },
+    {
+      "id": "observatory-cam",
+      "type": "link",
+      "title": "仙台市天文台から見た空",
+      "ward": "青葉区",
+      "lat": 38.25695,
+      "lng": 140.75526,
+      "description": "仙台市天文台が公開している、空と太陽のライブ映像です。配信元のサイトで見てください。",
+      "provider": "仙台市天文台",
+      "siteUrl": "https://www.sendai-astro.jp/#home-live"
+    },
+    {
+      "id": "weathernews-青葉区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（青葉区・7か所）",
+      "ward": "青葉区",
+      "lat": 38.26908,
+      "lng": 140.87045,
+      "description": "ウェザーニュースが公開している青葉区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/",
+      "links": [
+        {
+          "label": "仙台市青葉区国見ケ丘",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907A5AC/"
+        },
+        {
+          "label": "仙台市青葉区愛子中央",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907C44A/"
+        },
+        {
+          "label": "仙台市青葉区落合",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907BB1C/"
+        },
+        {
+          "label": "仙台市上愛子",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE9089F40/"
+        },
+        {
+          "label": "仙台市青葉区(山側)",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/410003307/"
+        },
+        {
+          "label": "仙台市青葉区川平",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907C239/"
+        },
+        {
+          "label": "仙台市青葉区",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE905CDB1/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-宮城野区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（宮城野区・3か所）",
+      "ward": "宮城野区",
+      "lat": 38.26619,
+      "lng": 140.90991,
+      "description": "ウェザーニュースが公開している宮城野区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/",
+      "links": [
+        {
+          "label": "仙台市宮城野区",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE905CF17/"
+        },
+        {
+          "label": "仙台市宮城野区二の森",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907C247/"
+        },
+        {
+          "label": "仙台市宮城野区岩切",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE906F67E/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-若林区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（若林区・2か所）",
+      "ward": "若林区",
+      "lat": 38.24414,
+      "lng": 140.90082,
+      "description": "ウェザーニュースが公開している若林区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/",
+      "links": [
+        {
+          "label": "仙台市若林区古城",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907C492/"
+        },
+        {
+          "label": "宮城県仙台市若林区",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE906BFA9/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-太白区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（太白区・5か所）",
+      "ward": "太白区",
+      "lat": 38.22432,
+      "lng": 140.87715,
+      "description": "ウェザーニュースが公開している太白区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/",
+      "links": [
+        {
+          "label": "宮城県仙台市太白区八木山",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907C29B/"
+        },
+        {
+          "label": "仙台市太白区",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE9068362/"
+        },
+        {
+          "label": "仙台市太白区",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE9089543/"
+        },
+        {
+          "label": "仙台市太白区",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE9064537/"
+        },
+        {
+          "label": "仙台市太白区",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/410003306/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-泉区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（泉区・3か所）",
+      "ward": "泉区",
+      "lat": 38.32627,
+      "lng": 140.88132,
+      "description": "ウェザーニュースが公開している泉区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/",
+      "links": [
+        {
+          "label": "仙台市泉区住吉台東",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE908AF1F/"
+        },
+        {
+          "label": "仙台市泉区将監（遠くに東北学院榴ヶ岡高)",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907BE72/"
+        },
+        {
+          "label": "宮城県仙台市泉区住吉台",
+          "url": "https://weathernews.jp/onebox/livecam/tohoku/miyagi/7CDDE907D755/"
+        }
+      ]
+    }
+  ],
+  "officialLinks": [
+    {
+      "label": "国土交通省 仙台河川国道事務所（道路・河川のカメラ）",
+      "url": "https://www.thr.mlit.go.jp/sendai/livecamera/index.html"
+    },
+    {
+      "label": "国土交通省 川の防災情報（広瀬川・名取川などのカメラ）",
+      "url": "https://www.river.go.jp/"
+    },
+    {
+      "label": "カメ探（仙台市のライブカメラ一覧）",
+      "url": "https://www.cametan.com/city/04101.html"
+    }
+  ]
+}

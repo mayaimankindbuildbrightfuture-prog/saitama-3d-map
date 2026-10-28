@@ -1,0 +1,649 @@
+{
+  "_comment": "ニュース記事の位置推定に使う地名辞書（仙台市）。aliases のどれかが記事の見出し・概要に含まれると、その座標に吹き出しを置く。kind の優先度は facility > station > area・ward（同じ優先度なら長い語）。topic を指定した項目は sendai/data/topics.json の座標を使う。ignoreWords は地名と同じ文字を含むが仙台市の地名ではない語（横浜市の同名の区、相撲の部屋、人名など）で、位置の推定の前に取り除く。",
+  "ignoreWords": [
+    "横浜市青葉区",
+    "横浜・青葉区",
+    "横浜市泉区",
+    "横浜・泉区",
+    "青葉台",
+    "宮城野部屋",
+    "宮城野親方",
+    "宮城野関",
+    "長町武家屋敷",
+    "金沢市長町",
+    "千代田区一番町",
+    "西公園町",
+    "福岡市中央区西公園"
+  ],
+  "places": [
+    {
+      "name": "仙台城跡",
+      "kind": "facility",
+      "topic": "sendai-castle",
+      "aliases": [
+        "仙台城",
+        "青葉城",
+        "伊達政宗騎馬像",
+        "政宗公騎馬像"
+      ]
+    },
+    {
+      "name": "瑞鳳殿",
+      "kind": "facility",
+      "topic": "zuihoden",
+      "aliases": [
+        "瑞鳳殿"
+      ]
+    },
+    {
+      "name": "大崎八幡宮",
+      "kind": "facility",
+      "topic": "osaki-hachimangu",
+      "aliases": [
+        "大崎八幡宮",
+        "大崎八幡",
+        "松焚祭"
+      ]
+    },
+    {
+      "name": "仙台東照宮",
+      "kind": "facility",
+      "topic": "toshogu",
+      "aliases": [
+        "仙台東照宮"
+      ]
+    },
+    {
+      "name": "陸奥国分寺",
+      "kind": "facility",
+      "topic": "mutsu-kokubunji",
+      "aliases": [
+        "陸奥国分寺",
+        "国分寺薬師堂"
+      ]
+    },
+    {
+      "name": "荒浜小学校",
+      "kind": "facility",
+      "topic": "arahama-school",
+      "aliases": [
+        "荒浜小学校",
+        "荒浜小"
+      ]
+    },
+    {
+      "name": "定義如来",
+      "kind": "facility",
+      "topic": "jogi-nyorai",
+      "aliases": [
+        "定義如来",
+        "定義山"
+      ]
+    },
+    {
+      "name": "アエル",
+      "kind": "facility",
+      "topic": "aer",
+      "aliases": [
+        "アエル"
+      ]
+    },
+    {
+      "name": "定禅寺通",
+      "kind": "facility",
+      "topic": "jozenji-dori",
+      "aliases": [
+        "定禅寺通",
+        "定禅寺"
+      ]
+    },
+    {
+      "name": "仙台市役所",
+      "kind": "facility",
+      "topic": "city-hall",
+      "aliases": [
+        "仙台市役所",
+        "市役所本庁舎"
+      ]
+    },
+    {
+      "name": "勾当台公園",
+      "kind": "facility",
+      "topic": "kotodai-park",
+      "aliases": [
+        "勾当台公園",
+        "勾当台"
+      ]
+    },
+    {
+      "name": "仙台うみの杜水族館",
+      "kind": "facility",
+      "topic": "umino-mori",
+      "aliases": [
+        "うみの杜水族館",
+        "うみの杜"
+      ]
+    },
+    {
+      "name": "八木山ベニーランド",
+      "kind": "facility",
+      "topic": "benny-land",
+      "aliases": [
+        "ベニーランド"
+      ]
+    },
+    {
+      "name": "せんだいメディアテーク",
+      "kind": "facility",
+      "topic": "mediatheque",
+      "aliases": [
+        "メディアテーク"
+      ]
+    },
+    {
+      "name": "仙台市博物館",
+      "kind": "facility",
+      "topic": "city-museum",
+      "aliases": [
+        "仙台市博物館"
+      ]
+    },
+    {
+      "name": "宮城県美術館",
+      "kind": "facility",
+      "topic": "miyagi-art",
+      "aliases": [
+        "宮城県美術館"
+      ]
+    },
+    {
+      "name": "地底の森ミュージアム",
+      "kind": "facility",
+      "topic": "chitei-no-mori",
+      "aliases": [
+        "地底の森ミュージアム",
+        "富沢遺跡"
+      ]
+    },
+    {
+      "name": "仙台市天文台",
+      "kind": "facility",
+      "topic": "observatory",
+      "aliases": [
+        "仙台市天文台"
+      ]
+    },
+    {
+      "name": "仙台市科学館",
+      "kind": "facility",
+      "topic": "science-museum",
+      "aliases": [
+        "仙台市科学館",
+        "台原森林公園"
+      ]
+    },
+    {
+      "name": "仙台朝市",
+      "kind": "facility",
+      "topic": "asaichi",
+      "aliases": [
+        "仙台朝市"
+      ]
+    },
+    {
+      "name": "文化横丁",
+      "kind": "facility",
+      "topic": "bunka-yokocho",
+      "aliases": [
+        "文化横丁",
+        "壱弐参横丁",
+        "いろは横丁"
+      ]
+    },
+    {
+      "name": "国分町",
+      "kind": "facility",
+      "topic": "kokubuncho",
+      "aliases": [
+        "国分町"
+      ]
+    },
+    {
+      "name": "西公園",
+      "kind": "facility",
+      "topic": "nishi-park",
+      "aliases": [
+        "西公園"
+      ]
+    },
+    {
+      "name": "榴岡公園",
+      "kind": "facility",
+      "topic": "tsutsujigaoka",
+      "aliases": [
+        "榴岡公園",
+        "榴ヶ岡公園",
+        "榴岡"
+      ]
+    },
+    {
+      "name": "八木山動物公園",
+      "kind": "facility",
+      "topic": "yagiyama-zoo",
+      "aliases": [
+        "八木山動物公園",
+        "フジサキの杜"
+      ]
+    },
+    {
+      "name": "秋保大滝",
+      "kind": "facility",
+      "topic": "akiu-otaki",
+      "aliases": [
+        "秋保大滝"
+      ]
+    },
+    {
+      "name": "作並温泉",
+      "kind": "facility",
+      "topic": "sakunami-onsen",
+      "aliases": [
+        "作並温泉",
+        "作並"
+      ]
+    },
+    {
+      "name": "泉ヶ岳",
+      "kind": "facility",
+      "topic": "izumigatake",
+      "aliases": [
+        "泉ヶ岳",
+        "泉ケ岳"
+      ]
+    },
+    {
+      "name": "楽天モバイル 最強パーク宮城",
+      "kind": "facility",
+      "topic": "ballpark",
+      "aliases": [
+        "最強パーク宮城",
+        "モバイルパーク宮城",
+        "楽天モバイルパーク",
+        "宮城球場",
+        "楽天生命パーク"
+      ]
+    },
+    {
+      "name": "ユアテックスタジアム仙台",
+      "kind": "facility",
+      "topic": "yurtec-stadium",
+      "aliases": [
+        "ユアテックスタジアム",
+        "ユアスタ",
+        "七北田公園"
+      ]
+    },
+    {
+      "name": "ゼビオアリーナ仙台",
+      "kind": "facility",
+      "topic": "xebio-arena",
+      "aliases": [
+        "ゼビオアリーナ",
+        "仙台市アリーナ"
+      ]
+    },
+    {
+      "name": "広瀬川",
+      "kind": "facility",
+      "topic": "hirosegawa",
+      "aliases": [
+        "広瀬川",
+        "広瀬橋"
+      ]
+    },
+    {
+      "name": "牛たん通り",
+      "kind": "facility",
+      "topic": "gyutan",
+      "aliases": [
+        "牛たん通り"
+      ]
+    },
+    {
+      "name": "仙台駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.26035,
+      "lng": 140.88239,
+      "aliases": [
+        "仙台駅"
+      ]
+    },
+    {
+      "name": "泉中央駅",
+      "kind": "station",
+      "ward": "泉区",
+      "lat": 38.32321,
+      "lng": 140.88075,
+      "aliases": [
+        "泉中央駅"
+      ]
+    },
+    {
+      "name": "長町駅",
+      "kind": "station",
+      "ward": "太白区",
+      "lat": 38.22853,
+      "lng": 140.88489,
+      "aliases": [
+        "長町駅"
+      ]
+    },
+    {
+      "name": "長町南駅",
+      "kind": "station",
+      "ward": "太白区",
+      "lat": 38.22445,
+      "lng": 140.87624,
+      "aliases": [
+        "長町南駅"
+      ]
+    },
+    {
+      "name": "勾当台公園駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.26679,
+      "lng": 140.87117,
+      "aliases": [
+        "勾当台公園駅"
+      ]
+    },
+    {
+      "name": "青葉通一番町駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.2597,
+      "lng": 140.87192,
+      "aliases": [
+        "青葉通一番町駅"
+      ]
+    },
+    {
+      "name": "五橋駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.25182,
+      "lng": 140.88096,
+      "aliases": [
+        "五橋駅"
+      ]
+    },
+    {
+      "name": "北四番丁駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.27204,
+      "lng": 140.86913,
+      "aliases": [
+        "北四番丁駅"
+      ]
+    },
+    {
+      "name": "黒松駅",
+      "kind": "station",
+      "ward": "泉区",
+      "lat": 38.30311,
+      "lng": 140.88642,
+      "aliases": [
+        "黒松駅"
+      ]
+    },
+    {
+      "name": "荒井駅",
+      "kind": "station",
+      "ward": "若林区",
+      "lat": 38.24473,
+      "lng": 140.94852,
+      "aliases": [
+        "荒井駅"
+      ]
+    },
+    {
+      "name": "卸町駅",
+      "kind": "station",
+      "ward": "若林区",
+      "lat": 38.2516,
+      "lng": 140.92086,
+      "aliases": [
+        "卸町駅"
+      ]
+    },
+    {
+      "name": "薬師堂駅",
+      "kind": "station",
+      "ward": "若林区",
+      "lat": 38.24991,
+      "lng": 140.90504,
+      "aliases": [
+        "薬師堂駅"
+      ]
+    },
+    {
+      "name": "国際センター駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.2602,
+      "lng": 140.85624,
+      "aliases": [
+        "国際センター駅"
+      ]
+    },
+    {
+      "name": "青葉山駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.25526,
+      "lng": 140.83523,
+      "aliases": [
+        "青葉山駅"
+      ]
+    },
+    {
+      "name": "八木山動物公園駅",
+      "kind": "station",
+      "ward": "太白区",
+      "lat": 38.24339,
+      "lng": 140.84401,
+      "aliases": [
+        "八木山動物公園駅"
+      ]
+    },
+    {
+      "name": "宮城野原駅",
+      "kind": "station",
+      "ward": "宮城野区",
+      "lat": 38.26083,
+      "lng": 140.90482,
+      "aliases": [
+        "宮城野原駅"
+      ]
+    },
+    {
+      "name": "岩切駅",
+      "kind": "station",
+      "ward": "宮城野区",
+      "lat": 38.30097,
+      "lng": 140.95411,
+      "aliases": [
+        "岩切駅"
+      ]
+    },
+    {
+      "name": "愛子駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.27252,
+      "lng": 140.76168,
+      "aliases": [
+        "愛子駅"
+      ]
+    },
+    {
+      "name": "東照宮駅",
+      "kind": "station",
+      "ward": "青葉区",
+      "lat": 38.27735,
+      "lng": 140.88645,
+      "aliases": [
+        "東照宮駅"
+      ]
+    },
+    {
+      "name": "一番町",
+      "kind": "area",
+      "ward": "青葉区",
+      "lat": 38.2604,
+      "lng": 140.8725,
+      "aliases": [
+        "一番町",
+        "クリスロード",
+        "ハピナ名掛丁",
+        "サンモール一番町"
+      ]
+    },
+    {
+      "name": "あすと長町",
+      "kind": "area",
+      "ward": "太白区",
+      "lat": 38.229,
+      "lng": 140.886,
+      "aliases": [
+        "あすと長町",
+        "長町"
+      ]
+    },
+    {
+      "name": "泉中央",
+      "kind": "area",
+      "ward": "泉区",
+      "lat": 38.3234,
+      "lng": 140.881,
+      "aliases": [
+        "泉中央"
+      ]
+    },
+    {
+      "name": "秋保",
+      "kind": "area",
+      "ward": "太白区",
+      "lat": 38.22904,
+      "lng": 140.71241,
+      "aliases": [
+        "秋保"
+      ]
+    },
+    {
+      "name": "荒浜",
+      "kind": "area",
+      "ward": "若林区",
+      "lat": 38.22002,
+      "lng": 140.98075,
+      "aliases": [
+        "仙台市荒浜",
+        "若林区荒浜",
+        "荒浜地区",
+        "深沼海岸"
+      ]
+    },
+    {
+      "name": "仙台港",
+      "kind": "area",
+      "ward": "宮城野区",
+      "lat": 38.2694,
+      "lng": 141.005,
+      "aliases": [
+        "仙台港",
+        "仙台新港",
+        "中野栄"
+      ]
+    },
+    {
+      "name": "青葉山",
+      "kind": "area",
+      "ward": "青葉区",
+      "lat": 38.256,
+      "lng": 140.842,
+      "aliases": [
+        "青葉山"
+      ]
+    },
+    {
+      "name": "八木山",
+      "kind": "area",
+      "ward": "太白区",
+      "lat": 38.244,
+      "lng": 140.846,
+      "aliases": [
+        "八木山"
+      ]
+    },
+    {
+      "name": "富谷・泉パークタウン",
+      "kind": "area",
+      "ward": "泉区",
+      "lat": 38.349,
+      "lng": 140.853,
+      "aliases": [
+        "泉パークタウン",
+        "寺岡",
+        "紫山"
+      ]
+    },
+    {
+      "name": "青葉区",
+      "kind": "ward",
+      "ward": "青葉区",
+      "aliases": [
+        "仙台市青葉区",
+        "青葉区"
+      ]
+    },
+    {
+      "name": "宮城野区",
+      "kind": "ward",
+      "ward": "宮城野区",
+      "aliases": [
+        "仙台市宮城野区",
+        "宮城野区"
+      ]
+    },
+    {
+      "name": "若林区",
+      "kind": "ward",
+      "ward": "若林区",
+      "aliases": [
+        "仙台市若林区",
+        "若林区"
+      ]
+    },
+    {
+      "name": "太白区",
+      "kind": "ward",
+      "ward": "太白区",
+      "aliases": [
+        "仙台市太白区",
+        "太白区"
+      ]
+    },
+    {
+      "name": "泉区",
+      "kind": "ward",
+      "ward": "泉区",
+      "aliases": [
+        "仙台市泉区",
+        "泉区"
+      ]
+    }
+  ]
+}

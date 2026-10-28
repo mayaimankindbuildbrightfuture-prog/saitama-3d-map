@@ -1,4 +1,4 @@
-# さいたま市の最新ニュースとライブカメラの配信状況を定期的に調べて data/ を更新し、GitHub Pages に公開する。
+# さいたま市・仙台市の最新ニュースとライブカメラの配信状況を定期的に調べて data/ を更新し、GitHub Pages に公開する。
 # APIキーやシークレットは不要（リポジトリ標準の GITHUB_TOKEN だけを使う）。
 name: ニュース更新と公開
 
@@ -36,15 +36,21 @@ jobs:
       - name: ライブカメラの配信を確認
         run: python3 scripts/fetch_livecams.py
 
+      - name: 仙台市版のニュースを取得
+        run: python3 scripts/fetch_news.py --city sendai
+
+      - name: 仙台市版のライブカメラの配信を確認
+        run: python3 scripts/fetch_livecams.py --city sendai
+
       - name: 変更があればコミット
         run: |
-          if git diff --quiet -- data/news.json data/livecams.json; then
+          if git diff --quiet -- data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json; then
             echo "ニュース・ライブカメラに変更はありません"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json data/livecams.json
+          git add data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json
           git commit -m "ニュースを更新"
           git push
 
@@ -56,8 +62,9 @@ jobs:
       - name: 公開用ファイルをまとめる
         if: steps.pages.outcome == 'success'
         run: |
-          mkdir -p _site
-          cp -r index.html app.js style.css data _site/
+          mkdir -p _site/sendai
+          cp -r index.html city.js app.js style.css data _site/
+          cp -r sendai/index.html sendai/city.js sendai/data _site/sendai/
 
       - uses: actions/upload-pages-artifact@v3
         if: steps.pages.outcome == 'success'

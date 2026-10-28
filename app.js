@@ -431,14 +431,19 @@
     { id: 'tornado', label: '🌪 竜巻（竜巻発生確度）', element: 'trns', targets: ['targetTimes_N3.json'] },
   ];
 
-  // 気象庁の警報・注意報のコード（防災情報XMLのコード表と同じ）
+  // 気象庁の警報・注意報のコード。2026年5月下旬からの新しい防災気象情報では、大雨・土砂災害・高潮に
+  // 警戒レベル（２〜５）が付き、レベル４の「危険警報」が加わった（気象庁の警報・注意報のページのコード表と同じ）
   const WARNING_NAMES = {
-    '02': '暴風雪警報', '03': '大雨警報', '04': '洪水警報', '05': '暴風警報', '06': '大雪警報', '07': '波浪警報', '08': '高潮警報',
-    10: '大雨注意報', 12: '大雪注意報', 13: '風雪注意報', 14: '雷注意報', 15: '強風注意報', 16: '波浪注意報', 17: '融雪注意報',
-    18: '洪水注意報', 19: '高潮注意報', 20: '濃霧注意報', 21: '乾燥注意報', 22: 'なだれ注意報', 23: '低温注意報', 24: '霜注意報',
-    25: '着氷注意報', 26: '着雪注意報', 32: '暴風雪特別警報', 33: '大雨特別警報', 35: '暴風特別警報', 36: '大雪特別警報',
-    37: '波浪特別警報', 38: '高潮特別警報',
+    33: 'レベル５大雨特別警報', 43: 'レベル４大雨危険警報', '03': 'レベル３大雨警報', 10: 'レベル２大雨注意報',
+    39: 'レベル５土砂災害特別警報', 49: 'レベル４土砂災害危険警報', '09': 'レベル３土砂災害警報', 29: 'レベル２土砂災害注意報',
+    38: 'レベル５高潮特別警報', 48: 'レベル４高潮危険警報', '08': 'レベル３高潮警報', 19: 'レベル２高潮注意報',
+    35: '暴風特別警報', '05': '暴風警報', 15: '強風注意報', 32: '暴風雪特別警報', '02': '暴風雪警報', 13: '風雪注意報',
+    36: '大雪特別警報', '06': '大雪警報', 12: '大雪注意報', 37: '波浪特別警報', '07': '波浪警報', 16: '波浪注意報',
+    14: '雷注意報', 17: '融雪注意報', 20: '濃霧注意報', 21: '乾燥注意報', 22: 'なだれ注意報', 23: '低温注意報',
+    24: '霜注意報', 25: '着氷注意報', 26: '着雪注意報',
   };
+  // 発表中として扱わない状態
+  const WARNING_INACTIVE = ['解除', '発表警報・注意報はなし'];
 
   class WeatherControl {
     onAdd() {
@@ -612,7 +617,8 @@
       + '&timezone=Asia%2FTokyo&forecast_days=2&wind_speed_unit=ms';
     const [forecast, warning, meteo] = await Promise.allSettled([
       loadJSON(`${JMA}/forecast/data/forecast/${CITY.jma.office}.json?t=${Date.now()}`),
-      loadJSON(`${JMA}/warning/data/warning/${CITY.jma.office}.json?t=${Date.now()}`),
+      // 新しい防災気象情報（2026年5月下旬から）のデータ。以前の warning/data/warning/ は更新が止まっている
+      loadJSON(`${JMA}/warning/data/r8/${CITY.jma.office}.json?t=${Date.now()}`),
       loadJSON(om),
     ]);
     renderForecast(forecast.status === 'fulfilled' ? forecast.value : null);
@@ -637,17 +643,18 @@
       const popVals = series[1].timeDefines.map((pt, j) => [pt, pops.pops[j]])
         .filter(([pt]) => new Date(pt).toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' }) === dayKey)
         .map(([, v]) => v).filter((v) => v !== '');
-      // 気温は 0時の値が最低、9時の値が最高。昼の発表では今日の最低が無くなり、最高と同じ値が入る
-      const tempAt = (hour) => {
-        const j = series[2].timeDefines.findIndex((tt) => {
-          const d = new Date(tt);
-          return d.toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' }) === dayKey
-            && Number(d.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour: 'numeric', hour12: false }).replace(/\D/g, '')) === hour;
-        });
-        return j >= 0 && temps.temps[j] !== '' ? Number(temps.temps[j]) : null;
-      };
-      const tMin = tempAt(0);
-      const tMax = tempAt(9);
+      // 気温は 0時の値が最低、9時の値が最高。昼・夕方の発表では、今日の分は 9時→0時 の順に並び、
+      // この 0時の値は最低気温ではない（最高と同じ値などが入る）ので使わない
+      const indexAt = (hour) => series[2].timeDefines.findIndex((tt) => {
+        const d = new Date(tt);
+        return d.toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' }) === dayKey
+          && Number(d.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour: 'numeric', hour12: false }).replace(/\D/g, '')) === hour;
+      });
+      const valueAt = (j) => (j >= 0 && temps.temps[j] !== '' ? Number(temps.temps[j]) : null);
+      const iMin = indexAt(0);
+      const iMax = indexAt(9);
+      const tMin = iMax >= 0 && iMin > iMax ? null : valueAt(iMin);
+      const tMax = valueAt(iMax);
       const tempText = [tMin != null && tMin !== tMax ? `最低 ${tMin}℃` : '', tMax != null ? `最高 ${tMax}℃` : ''].filter(Boolean).join('／');
       return el('li', { className: 'wx-day' },
         el('span', { className: 'wx-day-label' }, label),
@@ -658,34 +665,41 @@
       el('p', { className: 'wx-note' }, `${formatDate(data[0].reportDatetime)} ${data[0].publishingOffice}発表（${CITY.jma.forecastAreaName}・気温は「${CITY.jma.tempPointName}」）`));
   }
 
+  // data: 気象庁の報（大雨、風、波などの種類ごと）の配列。どの報も、区域ごとに今発表中のものが書かれている
   function renderWarnings(data) {
     const box = $('#wx-warnings');
-    if (!data) {
+    if (!Array.isArray(data)) {
       box.replaceChildren(el('p', { className: 'wx-note' }, '警報・注意報を読み込めませんでした。'));
       return;
     }
     // 仙台市のように市が「東部」「西部」などに分かれて発表されることがあるので、区域ごとに集める
     const areas = CITY.jma.warningAreas;
-    const found = new Map();
-    data.areaTypes.forEach((at) => at.areas.forEach((a) => { if (areas.some((x) => x.code === a.code)) found.set(a.code, a); }));
-    const rows = areas.map((x) => ({
-      ...x, active: ((found.get(x.code) || {}).warnings || []).filter((w) => w.code && w.status !== '解除'),
-    })).filter((x) => x.active.length);
+    const rows = areas.map((x) => {
+      const codes = new Set();
+      data.forEach((report) => ((report.warning && report.warning.class20Items) || []).forEach((item) => {
+        if (item.areaCode !== x.code) return;
+        item.kinds.forEach((k) => { if (k.code && !WARNING_INACTIVE.includes(k.status)) codes.add(k.code); });
+      }));
+      return { ...x, codes: [...codes] };
+    }).filter((x) => x.codes.length);
+    const latest = data.map((r) => r.reportDatetime).filter(Boolean).sort().pop();
     if (!rows.length) {
-      box.replaceChildren(el('p', { className: 'wx-ok' }, `✅ ${CITY.name}に発表中の警報・注意報はありません`));
+      box.replaceChildren(el('p', { className: 'wx-ok' }, `✅ ${CITY.name}に発表中の警報・注意報はありません`),
+        el('p', { className: 'wx-note' }, `${formatDate(latest)} までの発表を確認。`));
       return;
     }
-    const chips = (active) => active.map((w) => {
-      const name = WARNING_NAMES[w.code] || WARNING_NAMES[Number(w.code)] || `コード${w.code}`;
-      const kind = name.includes('特別警報') ? 'special' : name.includes('警報') ? 'warning' : 'advisory';
+    const chips = (codes) => codes.map((code) => {
+      const name = WARNING_NAMES[code] || WARNING_NAMES[Number(code)] || `コード${code}`;
+      const kind = name.includes('特別警報') ? 'special' : name.includes('危険警報') ? 'danger'
+        : name.includes('警報') ? 'warning' : 'advisory';
       return el('li', { className: `wx-warning is-${kind}` }, name);
     });
     const lists = rows.flatMap((x) => [
       ...(areas.length > 1 ? [el('p', { className: 'wx-sub' }, x.name)] : []),
-      el('ul', { className: 'wx-warning-list' }, ...chips(x.active)),
+      el('ul', { className: 'wx-warning-list' }, ...chips(x.codes)),
     ]);
     box.replaceChildren(el('p', { className: 'wx-subtitle' }, `⚠️ ${CITY.name}に発表中`), ...lists,
-      el('p', { className: 'wx-note' }, `${formatDate(data.reportDatetime)} 発表。`,
+      el('p', { className: 'wx-note' }, `${formatDate(latest)} 発表。`,
         el('a', { href: `${JMA}/warning/#area_type=class20s&area_code=${rows[0].code}`, target: '_blank', rel: 'noopener' }, '気象庁で詳しく見る')));
   }
 
