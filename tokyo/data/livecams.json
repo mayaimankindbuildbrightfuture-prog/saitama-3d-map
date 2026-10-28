@@ -1,0 +1,1486 @@
+{
+  "_comment": "東京23区内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・links（配信元のページへのリンクの一覧）。lat/lng はおおよその位置（ウェザーニュースは区役所の位置）。youtube は scripts/fetch_livecams.py --city tokyo が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
+  "checkedAt": "2026-10-28T17:00+09:00",
+  "cameras": [
+    {
+      "id": "kasumigaseki-cam",
+      "type": "youtube",
+      "title": "霞が関",
+      "description": "官庁街・霞が関のライブカメラです。",
+      "ward": "千代田区",
+      "lat": 35.6735,
+      "lng": 139.7505,
+      "provider": "東京新聞チャンネル（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=0GVPhWWUStc",
+      "youtube": {
+        "channelId": "UCcipaSh5J0DwFRvoaAl0P3g",
+        "videoId": "0GVPhWWUStc",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "霞が関"
+        ]
+      }
+    },
+    {
+      "id": "akiba-chuo-cam",
+      "type": "youtube",
+      "title": "秋葉原 中央通り",
+      "description": "秋葉原の中央通りの交差点を映すライブカメラです。",
+      "ward": "千代田区",
+      "lat": 35.6993,
+      "lng": 139.7714,
+      "provider": "Cerevo live camera（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=4cA_-WAm-SE",
+      "youtube": {
+        "channelId": "UCrGS8VyrgCqYwaogH5bQpxQ",
+        "videoId": "4cA_-WAm-SE",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "akiba-north-cam",
+      "type": "youtube",
+      "title": "秋葉原駅北側",
+      "description": "秋葉原駅の北側を映すライブカメラです。",
+      "ward": "千代田区",
+      "lat": 35.7005,
+      "lng": 139.7735,
+      "provider": "North Akihabara Live Camera（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=pm65bK0rw4M",
+      "youtube": {
+        "channelId": "UCQZvctelm9hPKKkP0RpvFyQ",
+        "videoId": "pm65bK0rw4M",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "yurakucho-curve-cam",
+      "type": "youtube",
+      "title": "東京駅 有楽町カーブ（新幹線）",
+      "description": "東京駅と有楽町駅の間のカーブを走る新幹線などを映すトレインビューのライブカメラです。",
+      "ward": "千代田区",
+      "lat": 35.676,
+      "lng": 139.762,
+      "provider": "東京駅トレインビューライブカメラ（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=Y8ED9VzwfLY",
+      "youtube": {
+        "channelId": "UC6Ljvl0Kghy9Fhe6SXViTPw",
+        "videoId": "Y8ED9VzwfLY",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "tsukiji-cam",
+      "type": "youtube",
+      "title": "築地から望む湾岸・レインボーブリッジ",
+      "description": "築地から湾岸やレインボーブリッジのある風景を映すライブカメラです。",
+      "ward": "中央区",
+      "lat": 35.6635,
+      "lng": 139.7665,
+      "provider": "朝日新聞LIVE（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=bKVGdsMVuMA",
+      "youtube": {
+        "channelId": "UCaHr0a1x8zmQ1dxanCeuesA",
+        "videoId": "bKVGdsMVuMA",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "築地"
+        ]
+      }
+    },
+    {
+      "id": "shimbashi-cam",
+      "type": "youtube",
+      "title": "新橋駅方面",
+      "description": "新橋駅方面を映すライブカメラです。",
+      "ward": "港区",
+      "lat": 35.6662,
+      "lng": 139.7583,
+      "provider": "SBSnews6（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=Be7dhMuFlGY",
+      "youtube": {
+        "channelId": "UCOLVB0iYK8ahQ0mFn-lF-8g",
+        "videoId": "Be7dhMuFlGY",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "新橋"
+        ]
+      }
+    },
+    {
+      "id": "shiodome-cam",
+      "type": "youtube",
+      "title": "汐留から望む新橋・虎ノ門・東京タワー",
+      "description": "汐留から新橋・虎ノ門・東京タワー方面を映すライブカメラです。",
+      "ward": "港区",
+      "lat": 35.664,
+      "lng": 139.761,
+      "provider": "共同通信LiveCamera（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=VM18f-IIUTw",
+      "youtube": {
+        "channelId": "UCRZMs9s1P6o0b1nGibmtkJA",
+        "videoId": "VM18f-IIUTw",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "汐留"
+        ]
+      }
+    },
+    {
+      "id": "hamamatsucho-cam",
+      "type": "youtube",
+      "title": "浜松町駅",
+      "description": "浜松町駅を映すライブカメラです。",
+      "ward": "港区",
+      "lat": 35.6555,
+      "lng": 139.757,
+      "provider": "共同通信LiveCamera（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=W0V8-6WrgBY",
+      "youtube": {
+        "channelId": "UCRZMs9s1P6o0b1nGibmtkJA",
+        "videoId": "W0V8-6WrgBY",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "浜松町"
+        ]
+      }
+    },
+    {
+      "id": "tokyo-tower-cam",
+      "type": "youtube",
+      "title": "東京タワー",
+      "description": "東京タワー公式のライブカメラです。",
+      "ward": "港区",
+      "lat": 35.65845,
+      "lng": 139.74554,
+      "provider": "東京タワー公式チャンネル（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=nu6NE55_X7A",
+      "youtube": {
+        "channelId": "UCKyXyJMijwyBebgI9wmzFcw",
+        "videoId": "nu6NE55_X7A",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "odaiba-cam",
+      "type": "youtube",
+      "title": "お台場・レインボーブリッジ",
+      "description": "お台場からレインボーブリッジ方面を映すライブカメラです。",
+      "ward": "港区",
+      "lat": 35.63,
+      "lng": 139.775,
+      "provider": "ODAIBA TOKYO LIVE（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=hlbh4P0Mz8M",
+      "youtube": {
+        "channelId": "UCwr6GbnODegSEq-WGYIJs6g",
+        "videoId": "hlbh4P0Mz8M",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "gaienmae-cam",
+      "type": "youtube",
+      "title": "外苑前交差点",
+      "description": "青山通りの外苑前交差点の定点ライブカメラです。",
+      "ward": "港区",
+      "lat": 35.6703,
+      "lng": 139.718,
+      "provider": "いえろ〜ちゃんねる（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=_S6fKuBTeW0",
+      "youtube": {
+        "channelId": "UC9XF0EUJZUHSMXFQZ7rNYJQ",
+        "videoId": "_S6fKuBTeW0",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "kabukicho-cam",
+      "type": "youtube",
+      "title": "歌舞伎町（シネシティ広場周辺）",
+      "description": "新宿・歌舞伎町のシネシティ広場周辺を映すライブカメラです。",
+      "ward": "新宿区",
+      "lat": 35.695,
+      "lng": 139.7015,
+      "provider": "Kabukicho Live Camera（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=nZxeiBxcnx0",
+      "youtube": {
+        "channelId": "UChKERpE7Um0Uq1btm_a9g5A",
+        "videoId": "nZxeiBxcnx0",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "新宿・歌舞伎町"
+        ]
+      }
+    },
+    {
+      "id": "kuyakusho-cam",
+      "type": "youtube",
+      "title": "歌舞伎町 区役所交差点",
+      "description": "新宿区役所前の交差点を映すライブカメラです。",
+      "ward": "新宿区",
+      "lat": 35.6936,
+      "lng": 139.7038,
+      "provider": "テイケイ公式チャンネル（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=vuP9iwdyyFM",
+      "youtube": {
+        "channelId": "UCuv7xqb-jo3HEFMIVLTY_CA",
+        "videoId": "vuP9iwdyyFM",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "区役所交差点"
+        ]
+      }
+    },
+    {
+      "id": "omoide-yokocho-cam",
+      "type": "youtube",
+      "title": "新宿 思い出横丁",
+      "description": "新宿駅西口の飲食店街・思い出横丁のライブカメラです。",
+      "ward": "新宿区",
+      "lat": 35.693,
+      "lng": 139.6995,
+      "provider": "思い出横丁チャンネル（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=G5THMspEkWk",
+      "youtube": {
+        "channelId": "UCb21BmrBwzoZQjlCfnCoC0A",
+        "videoId": "G5THMspEkWk",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "takadanobaba-cam",
+      "type": "youtube",
+      "title": "高田馬場・神田川",
+      "description": "高田馬場付近の神田川を映すライブカメラです。",
+      "ward": "新宿区",
+      "lat": 35.712,
+      "lng": 139.704,
+      "provider": "ちんあなご（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=OqhMBZHnmA4",
+      "youtube": {
+        "channelId": "UC-iKt6xd8uD-8_kXRfPY7Jw",
+        "videoId": "OqhMBZHnmA4",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "高田馬場"
+        ]
+      }
+    },
+    {
+      "id": "bunkyo-civic-cam",
+      "type": "youtube",
+      "title": "文京シビックセンター",
+      "description": "文京シビックセンターから街並みを映すライブカメラです。配信元の設定で、他のサイトでの再生（埋め込み）が許可されていないため、YouTube で見てください。",
+      "ward": "文京区",
+      "lat": 35.708,
+      "lng": 139.7522,
+      "provider": "文京シビックセンター（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=B7qqNXSt12g",
+      "youtube": {
+        "channelId": "UCzCCQiQg1xZwOhsWwUsPIAg",
+        "videoId": "B7qqNXSt12g",
+        "live": true,
+        "embeddable": false,
+        "titleKeywords": [
+          "東側"
+        ]
+      }
+    },
+    {
+      "id": "asakusa-amisei-cam",
+      "type": "youtube",
+      "title": "浅草から望む隅田川・スカイツリー",
+      "description": "浅草から隅田川と東京スカイツリー、屋形船などを映すライブカメラです。",
+      "ward": "台東区",
+      "lat": 35.71,
+      "lng": 139.799,
+      "provider": "船宿あみ清（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=MwcMURMzJ7A",
+      "youtube": {
+        "channelId": "UCuS18SHV5Nhqi9OtreOBmnA",
+        "videoId": "MwcMURMzJ7A",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "隅田川"
+        ]
+      }
+    },
+    {
+      "id": "asakusa-agora-cam",
+      "type": "youtube",
+      "title": "浅草 隅田川",
+      "description": "浅草の隅田川を映すライブカメラです。",
+      "ward": "台東区",
+      "lat": 35.7125,
+      "lng": 139.8,
+      "provider": "株式会社アゴラ・ステーション（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=TjsZWmKhDK0",
+      "youtube": {
+        "channelId": "UC4cHvdMaM321ykqpUua2Qyg",
+        "videoId": "TjsZWmKhDK0",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "minowa-cam",
+      "type": "youtube",
+      "title": "三ノ輪駅前（大関横丁交差点）",
+      "description": "台東区の大関横丁交差点（三ノ輪駅前）を映すライブカメラです。",
+      "ward": "台東区",
+      "lat": 35.7295,
+      "lng": 139.791,
+      "provider": "三ノ輪駅前ライブカメラ（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=j-G9iGDtPyM",
+      "youtube": {
+        "channelId": "UC8HLYEGSvHBroUqZMcGaSHg",
+        "videoId": "j-G9iGDtPyM",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "ryogoku-cam",
+      "type": "youtube",
+      "title": "両国",
+      "description": "相撲の街・両国のライブカメラです。",
+      "ward": "墨田区",
+      "lat": 35.696,
+      "lng": 139.793,
+      "provider": "東京ライブカメラ（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=ITQrRCj8lOo",
+      "youtube": {
+        "channelId": "UCkAB51Lbgor6SW8aE4S3zuQ",
+        "videoId": "ITQrRCj8lOo",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "両国"
+        ]
+      }
+    },
+    {
+      "id": "ariake-cam",
+      "type": "youtube",
+      "title": "有明（東京ビッグサイト付近）",
+      "description": "有明の空と街を映すお天気カメラです。",
+      "ward": "江東区",
+      "lat": 35.634,
+      "lng": 139.79,
+      "provider": "テイケイ公式チャンネル（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=4T-ARSiV53g",
+      "youtube": {
+        "channelId": "UCuv7xqb-jo3HEFMIVLTY_CA",
+        "videoId": "4T-ARSiV53g",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "有明"
+        ]
+      }
+    },
+    {
+      "id": "toyosu-cam",
+      "type": "youtube",
+      "title": "豊洲から望む東京湾",
+      "description": "豊洲から東京湾の景色を映すライブカメラです。",
+      "ward": "江東区",
+      "lat": 35.655,
+      "lng": 139.796,
+      "provider": "TOKYO LIVE CAMERA（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=4ZiucC7cvw8",
+      "youtube": {
+        "channelId": "UC8W6RWFeN4cmx6C3tPNEdaQ",
+        "videoId": "4ZiucC7cvw8",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "haneda-t1-cam",
+      "type": "youtube",
+      "title": "羽田空港 第1ターミナル",
+      "description": "羽田空港の第1ターミナル付近を映すライブカメラです。",
+      "ward": "大田区",
+      "lat": 35.549,
+      "lng": 139.784,
+      "provider": "TBS NEWS DIG Powered by JNN（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=2f9NOSw-FqM",
+      "youtube": {
+        "channelId": "UC6AG81pAkf6Lbi_1VC5NmPA",
+        "videoId": "2f9NOSw-FqM",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "第1ターミナル"
+        ]
+      }
+    },
+    {
+      "id": "haneda-t2-cam",
+      "type": "youtube",
+      "title": "羽田空港 第2ターミナル",
+      "description": "羽田空港の第2ターミナル付近を映すライブカメラです。",
+      "ward": "大田区",
+      "lat": 35.551,
+      "lng": 139.789,
+      "provider": "TBS NEWS DIG Powered by JNN（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=dYpspgeXSaQ",
+      "youtube": {
+        "channelId": "UC6AG81pAkf6Lbi_1VC5NmPA",
+        "videoId": "dYpspgeXSaQ",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "第2ターミナル"
+        ]
+      }
+    },
+    {
+      "id": "honmonji-cam",
+      "type": "youtube",
+      "title": "池上本門寺",
+      "description": "日蓮宗大本山・池上本門寺の公式ライブカメラです。",
+      "ward": "大田区",
+      "lat": 35.578,
+      "lng": 139.706,
+      "provider": "日蓮宗大本山池上本門寺公式チャンネル（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=GjBvaIce014",
+      "youtube": {
+        "channelId": "UCwiHTAV8QufNM3738CqpEdw",
+        "videoId": "GjBvaIce014",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "kamata-cam",
+      "type": "youtube",
+      "title": "蒲田の街角",
+      "description": "蒲田の街角の定点ライブカメラです。",
+      "ward": "大田区",
+      "lat": 35.562,
+      "lng": 139.716,
+      "provider": "株式会社SBPS（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=x4gyqPBWZW8",
+      "youtube": {
+        "channelId": "UC-LPsTZpyxFdrYOsFB2VrsQ",
+        "videoId": "x4gyqPBWZW8",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "shibuya-cam",
+      "type": "youtube",
+      "title": "渋谷（セルリアンタワーから）",
+      "description": "渋谷のセルリアンタワーから街を見渡すライブカメラです。",
+      "ward": "渋谷区",
+      "lat": 35.6565,
+      "lng": 139.699,
+      "provider": "iTSCOM（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=f50R4vDlCmA",
+      "youtube": {
+        "channelId": "UCPPFGmTUyM4iDIgp2_zJi5g",
+        "videoId": "f50R4vDlCmA",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "渋谷"
+        ]
+      }
+    },
+    {
+      "id": "senkawa-cam",
+      "type": "youtube",
+      "title": "仙川 宮下橋（上祖師谷）",
+      "description": "東京都の河川の監視カメラで、仙川の宮下橋付近を映しています。",
+      "ward": "世田谷区",
+      "lat": 35.665,
+      "lng": 139.598,
+      "provider": "東京都水防チャンネル（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=TeqdSEQLTIk",
+      "youtube": {
+        "channelId": "UCaydvLwWthLMbfKLEQSY2UQ",
+        "videoId": "TeqdSEQLTIk",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "宮下橋"
+        ]
+      }
+    },
+    {
+      "id": "honancho-cam",
+      "type": "youtube",
+      "title": "方南町交差点",
+      "description": "杉並区の方南町交差点を映すライブカメラです。",
+      "ward": "杉並区",
+      "lat": 35.6835,
+      "lng": 139.656,
+      "provider": "方南FM（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=lrpZAKk-WDE",
+      "youtube": {
+        "channelId": "UCoSUmfd8PQST1-jUvMNsIgw",
+        "videoId": "lrpZAKk-WDE",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "akabane-cam",
+      "type": "youtube",
+      "title": "赤羽駅周辺（鉄道）",
+      "description": "赤羽駅周辺を走る列車を映す鉄道ライブカメラです。",
+      "ward": "北区",
+      "lat": 35.778,
+      "lng": 139.721,
+      "provider": "Tokyo Akabane Live Camera（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=d7VthBGkPvw",
+      "youtube": {
+        "channelId": "UCE5uxiZBrhwFPwzlSfmdWQA",
+        "videoId": "d7VthBGkPvw",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "nippori-cam",
+      "type": "youtube",
+      "title": "日暮里（鉄道）",
+      "description": "日暮里付近を走る列車を映す鉄道ライブカメラです。",
+      "ward": "荒川区",
+      "lat": 35.728,
+      "lng": 139.771,
+      "provider": "鉄道ファンの待合室（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=pOhgG8bTIkc",
+      "youtube": {
+        "channelId": "UCDyC7xeQxsihyZj8SoICLEw",
+        "videoId": "pOhgG8bTIkc",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "日暮里"
+        ]
+      }
+    },
+    {
+      "id": "misono-cam",
+      "type": "youtube",
+      "title": "三園 笹目通り",
+      "description": "板橋区三園の笹目通りを映すライブカメラです。",
+      "ward": "板橋区",
+      "lat": 35.793,
+      "lng": 139.651,
+      "provider": "東京都板橋区三園笹目通りライブカメラ（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=qB2u0egPILQ",
+      "youtube": {
+        "channelId": "UCQejnkADwqjZcWHO6s53TyQ",
+        "videoId": "qB2u0egPILQ",
+        "live": true,
+        "embeddable": true
+      }
+    },
+    {
+      "id": "shakujii-cam",
+      "type": "youtube",
+      "title": "石神井川 石神井取水口（貫井）",
+      "description": "東京都の河川の監視カメラで、練馬区貫井の石神井川を映しています。",
+      "ward": "練馬区",
+      "lat": 35.7395,
+      "lng": 139.6365,
+      "provider": "東京都水防チャンネル（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=9pepGHBXOxM",
+      "youtube": {
+        "channelId": "UCaydvLwWthLMbfKLEQSY2UQ",
+        "videoId": "9pepGHBXOxM",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "石神井取水口"
+        ]
+      }
+    },
+    {
+      "id": "kitasenju-cam",
+      "type": "youtube",
+      "title": "北千住駅",
+      "description": "足立区の北千住駅付近を映すライブカメラです。配信元の設定で、他のサイトでの再生（埋め込み）が許可されていないため、YouTube で見てください。",
+      "ward": "足立区",
+      "lat": 35.7495,
+      "lng": 139.805,
+      "provider": "足立区街中ライブ（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=6ZBrisjGTro",
+      "youtube": {
+        "channelId": "UC9fzK_WLWg0U6Y3EON9-nKw",
+        "videoId": "6ZBrisjGTro",
+        "live": true,
+        "embeddable": false
+      }
+    },
+    {
+      "id": "edogawa-skytree-cam",
+      "type": "youtube",
+      "title": "江戸川区から望む東京スカイツリー",
+      "description": "江戸川区から東京スカイツリーを望むライブカメラです（地図上の位置は区役所付近）。",
+      "ward": "江戸川区",
+      "lat": 35.70685,
+      "lng": 139.86844,
+      "provider": "株式会社エッチ・エス・ストロング（YouTube）",
+      "siteUrl": "https://www.youtube.com/watch?v=LHHXZdYmN_Y",
+      "youtube": {
+        "channelId": "UCSqjZfzC1g6fhMNx8F8rfng",
+        "videoId": "LHHXZdYmN_Y",
+        "live": true,
+        "embeddable": true,
+        "titleKeywords": [
+          "スカイツリー"
+        ]
+      }
+    },
+    {
+      "id": "weathernews-千代田区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（千代田区・2か所）",
+      "ward": "千代田区",
+      "lat": 35.69416,
+      "lng": 139.75356,
+      "description": "ウェザーニュースが公開している千代田区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "千代田区外神田",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907BFAF/"
+        },
+        {
+          "label": "千代田区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908BE50/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-中央区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（中央区・1か所）",
+      "ward": "中央区",
+      "lat": 35.6706,
+      "lng": 139.77198,
+      "description": "ウェザーニュースが公開している中央区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "東京都中央区湊",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906B8A1/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-港区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（港区・3か所）",
+      "ward": "港区",
+      "lat": 35.65804,
+      "lng": 139.75156,
+      "description": "ウェザーニュースが公開している港区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "港区港南",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906B8B7/"
+        },
+        {
+          "label": "港区南青山",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9089FF1/"
+        },
+        {
+          "label": "港区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/410004233/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-新宿区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（新宿区・3か所）",
+      "ward": "新宿区",
+      "lat": 35.69386,
+      "lng": 139.70345,
+      "description": "ウェザーニュースが公開している新宿区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "新宿区西新宿",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908B7B4/"
+        },
+        {
+          "label": "新宿区矢来町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906F7E6/"
+        },
+        {
+          "label": "東京都新宿区中落合",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906BB0A/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-文京区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（文京区・5か所）",
+      "ward": "文京区",
+      "lat": 35.70796,
+      "lng": 139.75227,
+      "description": "ウェザーニュースが公開している文京区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "文京区本駒込②(東南東正面)",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905D01D/"
+        },
+        {
+          "label": "東京都文京区大塚4",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908C930/"
+        },
+        {
+          "label": "文京区千駄木",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE901BA3F/"
+        },
+        {
+          "label": "文京区本駒込①(北東正面)",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90678D7/"
+        },
+        {
+          "label": "文京区大塚",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908C494/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-台東区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（台東区・2か所）",
+      "ward": "台東区",
+      "lat": 35.71263,
+      "lng": 139.77977,
+      "description": "ウェザーニュースが公開している台東区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "台東区寿",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907B1E4/"
+        },
+        {
+          "label": "台東区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CE74/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-墨田区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（墨田区・4か所）",
+      "ward": "墨田区",
+      "lat": 35.71071,
+      "lng": 139.80145,
+      "description": "ウェザーニュースが公開している墨田区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "墨田区東部エリア",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9064326/"
+        },
+        {
+          "label": "東京都墨田区本所",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068A58/"
+        },
+        {
+          "label": "墨田区太平",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907C7C3/"
+        },
+        {
+          "label": "東京都墨田区東向島",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CB91/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-江東区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（江東区・8か所）",
+      "ward": "江東区",
+      "lat": 35.67264,
+      "lng": 139.8173,
+      "description": "ウェザーニュースが公開している江東区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "東京都江東区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90860BE/"
+        },
+        {
+          "label": "江東区大島",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907E889/"
+        },
+        {
+          "label": "江東区東雲",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908AD68/"
+        },
+        {
+          "label": "江東区毛利",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908A374/"
+        },
+        {
+          "label": "江東区東陽町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9086751/"
+        },
+        {
+          "label": "江東区2（南方向）",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/410004231/"
+        },
+        {
+          "label": "東京都江東区大島",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908CC42/"
+        },
+        {
+          "label": "東京都江東区北砂",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068ABC/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-品川区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（品川区・7か所）",
+      "ward": "品川区",
+      "lat": 35.60921,
+      "lng": 139.7302,
+      "description": "ウェザーニュースが公開している品川区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "品川区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CDF3/"
+        },
+        {
+          "label": "品川区南品川",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907A3E3/"
+        },
+        {
+          "label": "東京都品川区荏原",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907E36C/"
+        },
+        {
+          "label": "品川区西中延",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9080DFC/"
+        },
+        {
+          "label": "品川区中延",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908AEDC/"
+        },
+        {
+          "label": "東京都品川区豊町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906803A/"
+        },
+        {
+          "label": "東京都品川区東品川",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068AFC/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-大田区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（大田区・6か所）",
+      "ward": "大田区",
+      "lat": 35.56139,
+      "lng": 139.71608,
+      "description": "ウェザーニュースが公開している大田区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "大田区蓮沼中学校南側付近",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907CA4D/"
+        },
+        {
+          "label": "大田区北嶺町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907C2CE/"
+        },
+        {
+          "label": "大田区池上",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068EC2/"
+        },
+        {
+          "label": "大田区大森東２",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906863D/"
+        },
+        {
+          "label": "大田区大森西",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906BCE3/"
+        },
+        {
+          "label": "大田区東矢口",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907DD51/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-世田谷区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（世田谷区・14か所）",
+      "ward": "世田谷区",
+      "lat": 35.64653,
+      "lng": 139.65325,
+      "description": "ウェザーニュースが公開している世田谷区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "世田谷区梅丘",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CC95/"
+        },
+        {
+          "label": "世田谷区宮坂",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907AF85/"
+        },
+        {
+          "label": "東京都世田谷区砧",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068840/"
+        },
+        {
+          "label": "世田谷区等々力",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9067E7E/"
+        },
+        {
+          "label": "東京都世田谷区弦巻",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907AD34/"
+        },
+        {
+          "label": "世田谷区新町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907C045/"
+        },
+        {
+          "label": "世田谷区船橋2丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CC94/"
+        },
+        {
+          "label": "世田谷区船橋",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068F05/"
+        },
+        {
+          "label": "世田谷区給田",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908A38C/"
+        },
+        {
+          "label": "世田谷区玉川",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068529/"
+        },
+        {
+          "label": "世田谷区用賀",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907BC07/"
+        },
+        {
+          "label": "世田谷区代沢",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908B26B/"
+        },
+        {
+          "label": "世田谷区上祖師谷",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906865B/"
+        },
+        {
+          "label": "世田谷区八幡山2",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907A547/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-渋谷区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（渋谷区・4か所）",
+      "ward": "渋谷区",
+      "lat": 35.66376,
+      "lng": 139.69781,
+      "description": "ウェザーニュースが公開している渋谷区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "渋谷区（東大裏）",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9089B4D/"
+        },
+        {
+          "label": "渋谷区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907C529/"
+        },
+        {
+          "label": "渋谷区鉢山町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907C2D3/"
+        },
+        {
+          "label": "渋谷区笹塚",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90867FD/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-中野区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（中野区・3か所）",
+      "ward": "中野区",
+      "lat": 35.70888,
+      "lng": 139.66292,
+      "description": "ウェザーニュースが公開している中野区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "中野区野方の空",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CF11/"
+        },
+        {
+          "label": "中野区野方 サンプラザ&都庁方面",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907E6C6/"
+        },
+        {
+          "label": "中野区中央",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908A243/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-杉並区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（杉並区・10か所）",
+      "ward": "杉並区",
+      "lat": 35.69962,
+      "lng": 139.63635,
+      "description": "ウェザーニュースが公開している杉並区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "杉並区桃井",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908D582/"
+        },
+        {
+          "label": "杉並区阿佐谷北",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907DE9B/"
+        },
+        {
+          "label": "東京都杉並区南荻窪",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908B356/"
+        },
+        {
+          "label": "東京都杉並区高井戸西",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907B1DF/"
+        },
+        {
+          "label": "杉並区桃井３丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9089F62/"
+        },
+        {
+          "label": "杉並区下高井戸",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907D9C9/"
+        },
+        {
+          "label": "杉並区本天沼",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907F21A/"
+        },
+        {
+          "label": "東京都杉並区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907F091/"
+        },
+        {
+          "label": "東京都杉並区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068E0A/"
+        },
+        {
+          "label": "杉並区上井草",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908C4FF/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-豊島区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（豊島区・3か所）",
+      "ward": "豊島区",
+      "lat": 35.72611,
+      "lng": 139.71672,
+      "description": "ウェザーニュースが公開している豊島区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "東京都豊島区上池袋",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90689B1/"
+        },
+        {
+          "label": "東京都豊島区雑司が谷",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908E2EB/"
+        },
+        {
+          "label": "豊島区南大塚",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90684FD/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-北区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（北区・3か所）",
+      "ward": "北区",
+      "lat": 35.75278,
+      "lng": 139.73368,
+      "description": "ウェザーニュースが公開している北区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "東京都北区 JR尾久車両センター付近",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906B878/"
+        },
+        {
+          "label": "東京都北区中十条",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068540/"
+        },
+        {
+          "label": "北区岩淵町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068730/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-荒川区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（荒川区・3か所）",
+      "ward": "荒川区",
+      "lat": 35.73704,
+      "lng": 139.78341,
+      "description": "ウェザーニュースが公開している荒川区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "東京都荒川区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CE0F/"
+        },
+        {
+          "label": "荒川区経王寺",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908D68B/"
+        },
+        {
+          "label": "東京都荒川区荒川",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908638C/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-板橋区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（板橋区・8か所）",
+      "ward": "板橋区",
+      "lat": 35.75098,
+      "lng": 139.7093,
+      "description": "ウェザーニュースが公開している板橋区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "板橋区西台4丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068648/"
+        },
+        {
+          "label": "板橋区加賀",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908A470/"
+        },
+        {
+          "label": "板橋区志村1丁目（マンション・南西）",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906F621/"
+        },
+        {
+          "label": "板橋区首都高志村PA北東",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906B7BD/"
+        },
+        {
+          "label": "東京都板橋区徳丸（イオン板橋上空）",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90679BB/"
+        },
+        {
+          "label": "東京都板橋区赤塚",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CE35/"
+        },
+        {
+          "label": "板橋区南常盤台",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906C60C/"
+        },
+        {
+          "label": "板橋区中板橋",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90868F8/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-練馬区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（練馬区・14か所）",
+      "ward": "練馬区",
+      "lat": 35.7358,
+      "lng": 139.65184,
+      "description": "ウェザーニュースが公開している練馬区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "練馬区富士見台の富士山方面 夕焼けカメラ",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068C73/"
+        },
+        {
+          "label": "練馬区上石神井南町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908AA15/"
+        },
+        {
+          "label": "練馬区 貫井 富士見台駅付近 南の空",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908E6D4/"
+        },
+        {
+          "label": "練馬区大泉町1丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907B06D/"
+        },
+        {
+          "label": "練馬区東大泉",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908A91D/"
+        },
+        {
+          "label": "練馬区桜台",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908BFFB/"
+        },
+        {
+          "label": "練馬区西大泉",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907AA89/"
+        },
+        {
+          "label": "練馬区大泉町5",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907E801/"
+        },
+        {
+          "label": "練馬区西大泉",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068ACD/"
+        },
+        {
+          "label": "練馬区南田中4",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9086284/"
+        },
+        {
+          "label": "練馬区豊玉北",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907B426/"
+        },
+        {
+          "label": "練馬区北町１丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90685C9/"
+        },
+        {
+          "label": "練馬区南田中",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908DCC0/"
+        },
+        {
+          "label": "練馬区平和台1丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068F3D/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-足立区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（足立区・13か所）",
+      "ward": "足立区",
+      "lat": 35.77487,
+      "lng": 139.80451,
+      "description": "ウェザーニュースが公開している足立区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "足立区谷中",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068701/"
+        },
+        {
+          "label": "足立区東和2丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908A46A/"
+        },
+        {
+          "label": "足立区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908AD48/"
+        },
+        {
+          "label": "足立区千住元町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9091245/"
+        },
+        {
+          "label": "足立区弘道",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907B99A/"
+        },
+        {
+          "label": "足立区大谷田",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907FB27/"
+        },
+        {
+          "label": "足立区竹の塚",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905D000/"
+        },
+        {
+          "label": "足立区西新井谷在家駅近郊",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908C4CE/"
+        },
+        {
+          "label": "足立区綾瀬1丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908E5CE/"
+        },
+        {
+          "label": "足立区千住",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068BB2/"
+        },
+        {
+          "label": "足立区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907DC52/"
+        },
+        {
+          "label": "足立区江北",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE9068C11/"
+        },
+        {
+          "label": "足立区新田",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906F1BA/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-葛飾区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（葛飾区・7か所）",
+      "ward": "葛飾区",
+      "lat": 35.74345,
+      "lng": 139.84724,
+      "description": "ウェザーニュースが公開している葛飾区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "東京都葛飾区柴又",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90683B4/"
+        },
+        {
+          "label": "葛飾区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906885F/"
+        },
+        {
+          "label": "葛飾区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE906F4F3/"
+        },
+        {
+          "label": "葛飾区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/410004223/"
+        },
+        {
+          "label": "葛飾区東水元",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908C13A/"
+        },
+        {
+          "label": "東京都葛飾区東立石",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908DC2F/"
+        },
+        {
+          "label": "葛飾区東金町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CC80/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-江戸川区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（江戸川区・9か所）",
+      "ward": "江戸川区",
+      "lat": 35.70685,
+      "lng": 139.86844,
+      "description": "ウェザーニュースが公開している江戸川区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニューズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/tokyo/",
+      "links": [
+        {
+          "label": "東京都江戸川区篠崎町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908A249/"
+        },
+        {
+          "label": "東京都江戸川区一之江",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907E1E5/"
+        },
+        {
+          "label": "江戸川区南小岩",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907B484/"
+        },
+        {
+          "label": "江戸川区西瑞江（水門）",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907C5CC/"
+        },
+        {
+          "label": "東京都江戸川区東小岩",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE907BAF2/"
+        },
+        {
+          "label": "江戸川区 東小松川",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE905CDC3/"
+        },
+        {
+          "label": "東京都江戸川区中葛西",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90688C6/"
+        },
+        {
+          "label": "東京都江戸川区大杉",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE90862AA/"
+        },
+        {
+          "label": "江戸川区東葛西",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/tokyo/7CDDE908CE1A/"
+        }
+      ]
+    }
+  ],
+  "officialLinks": [
+    {
+      "label": "東京都水防災総合情報システム（河川の監視カメラ）",
+      "url": "https://www.kasen-suibo.metro.tokyo.lg.jp/im/uryosuii/tsim0102g.html"
+    },
+    {
+      "label": "国土交通省 川の防災情報（荒川・多摩川などのカメラ）",
+      "url": "https://www.river.go.jp/"
+    },
+    {
+      "label": "カメ探（東京都のライブカメラ一覧）",
+      "url": "https://www.cametan.com/"
+    }
+  ]
+}

@@ -422,7 +422,7 @@
         el('a', { href: 'https://disaportal.gsi.go.jp/', target: '_blank', rel: 'noopener' }, 'ハザードマップポータルサイト'),
         ' の凡例をご覧ください。'));
     }
-    $('#hazard-source').innerHTML = `${HAZARD_ATTRIBUTION}。地図の色と<b>乗算</b>で重ねています。避難の判断には <a href="${CITY.cityUrl}" target="_blank" rel="noopener">${CITY.name}</a> の最新のハザードマップも確認してください。`;
+    $('#hazard-source').innerHTML = `${HAZARD_ATTRIBUTION}。地図の色と<b>乗算</b>で重ねています。避難の判断には <a href="${CITY.cityUrl}" target="_blank" rel="noopener">${CITY.cityLinkLabel || CITY.name}</a> の最新のハザードマップも確認してください。`;
   }
 
   // ---------- 天気（雨雲レーダー・天気予報・警報・洗濯指数・地震） ----------
@@ -703,9 +703,18 @@
         : name.includes('警報') ? 'warning' : 'advisory';
       return el('li', { className: `wx-warning is-${kind}` }, name);
     });
-    const lists = rows.flatMap((x) => [
-      ...(areas.length > 1 ? [el('p', { className: 'wx-sub' }, x.name)] : []),
-      el('ul', { className: 'wx-warning-list' }, ...chips(x.codes)),
+    // 東京23区のように区域が多いときは、同じ警報・注意報が出ている区域をまとめて表示する
+    const groups = [];
+    rows.forEach((x) => {
+      const key = [...x.codes].sort().join(',');
+      const g = groups.find((gr) => gr.key === key);
+      if (g) g.names.push(x.name);
+      else groups.push({ key, codes: x.codes, names: [x.name] });
+    });
+    const label = (names) => (areas.length > 2 && names.length === areas.length ? `${CITY.wardsText}すべて` : names.join('・'));
+    const lists = groups.flatMap((g) => [
+      ...(areas.length > 1 ? [el('p', { className: 'wx-sub' }, label(g.names))] : []),
+      el('ul', { className: 'wx-warning-list' }, ...chips(g.codes)),
     ]);
     box.replaceChildren(el('p', { className: 'wx-subtitle' }, `⚠️ ${CITY.name}に発表中`), ...lists,
       el('p', { className: 'wx-note' }, `${formatDate(latest)} 発表。`,
@@ -911,7 +920,7 @@
   }
 
   // 画面上で近いカメラ同士は重なって押せないため、まとめたボタン（📹 N）にする。押すとその範囲へ寄る
-  const CAM_CLUSTER_PX = 56;
+  const CAM_CLUSTER_PX = CITY.camClusterPx || 56; // カメラの多い市（東京23区）は city.js で広げる
 
   function updateCamMarkers() {
     if (!state.map) return;
@@ -1397,7 +1406,7 @@
   function renderTopicBody(body, topic) {
     body.append(
       el('h2', { className: 'detail-title', id: 'detail-title' }, topic.title),
-      el('p', { className: 'detail-ward' }, `📍 ${CITY.name}${topic.ward}`),
+      el('p', { className: 'detail-ward' }, `📍 ${CITY.addressPrefix || CITY.name}${topic.ward}`),
       el('p', { className: 'detail-quote' }, topic.bubble),
       el('p', { className: 'detail-desc' }, topic.description),
     );
@@ -1438,7 +1447,7 @@
   function renderNewsBody(body, topic) {
     const n = topic.news;
     const placeText = n.placeKind === 'city'
-      ? `📍 ${CITY.name}全体の記事（地図上は市役所付近に表示）`
+      ? `📍 ${CITY.name}全体の記事（地図上は${CITY.hallName || '市役所'}付近に表示）`
       : `📍 ${n.place}${n.ward && !n.place.endsWith(n.ward) ? `（${n.ward}）` : ''}付近`;
     body.append(
       el('h2', { className: 'detail-title news-title', id: 'detail-title' }, n.title),
@@ -1499,7 +1508,7 @@
       ? `地区名の「${n.matched}」のおおよその中心に表示（実際の発見地点ではありません）`
       : n.matched
       ? `記事中の「${n.matched}」から推定（実際の場所と異なる場合があります）`
-      : '地名が見つからないため、市全体の記事として表示');
+      : `地名が見つからないため、${CITY.name}全体の記事として表示`);
     body.append(dl);
 
     const nearby = nearest(topic, (t) => !t.news, 3);
@@ -1862,6 +1871,9 @@
     $('#news-refresh').addEventListener('click', refreshNews);
     $('#cam-close').addEventListener('click', closeCam);
     bindThemeSelect();
+    // ほかの地域（さいたま市・仙台市・東京23区）のマップへ移動する
+    const citySelect = $('#city-select');
+    if (citySelect) citySelect.addEventListener('change', () => { if (citySelect.value) location.href = citySelect.value; });
     $('#type-select').addEventListener('change', (e) => {
       state.typeFilter = e.target.value;
       // 選んだ分類のカテゴリが非表示なら表示に戻す

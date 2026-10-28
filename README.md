@@ -3,7 +3,7 @@
 埼玉県さいたま市（全10区）を **3Dマップ** で表示し、名所・歴史・文化・イベント・グルメ・自然・スポーツにゆかりのある場所に、**漫画の吹き出し** でトピックを表示するWebアプリです。さいたま市の **最新ニュース・オタク関連の情報・事件/防犯情報・ジャンル別のグルメ情報・スーパーの特売情報・地域の口コミ** も自動で取得し、記事に出てくる地名の場所に吹き出しで表示します。
 
 - ビルド不要の静的サイト（`index.html` + `city.js` + `app.js` + `style.css` + `data/topics.json`）
-- 同じ仕組みの **仙台市版** もあります（[`sendai/`](sendai/README.md)。公開URLは `…/saitama-3d-map/sendai/`）。ヘッダーの「🗺 仙台市版」「🗺 さいたま市版」で行き来できます。仙台市版には、クマ・イノシシなどの **害獣出没（🐻）** のカテゴリもあります
+- 同じ仕組みの **仙台市版**（[`sendai/`](sendai/README.md)）と **東京23区版**（[`tokyo/`](tokyo/README.md)）もあります。公開URLは `…/saitama-3d-map/sendai/`・`…/saitama-3d-map/tokyo/` です。ヘッダーの「🗺 ほかの地域」で行き来できます。仙台市版と東京23区版には、クマ・イノシシ・ハクビシンなどの **害獣出没** のカテゴリもあります
 - **APIキー不要・無料サービスのみ** で動作します
 
 ## 主な機能
@@ -63,7 +63,7 @@ python -m http.server 8000
 2. リポジトリの **Settings → Pages** を開きます。
 3. **Build and deployment** の **Source** を「**GitHub Actions**」にします。
 4. **Actions** タブで「ニュース更新と公開」を **Run workflow** で実行します（以後は `main` へのプッシュ時と3時間ごとに自動で実行されます）。
-5. 数分後に `https://<ユーザー名>.github.io/saitama-3d-map/` で公開されます（仙台市版は `…/saitama-3d-map/sendai/`）。
+5. 数分後に `https://<ユーザー名>.github.io/saitama-3d-map/` で公開されます（仙台市版は `…/saitama-3d-map/sendai/`、東京23区版は `…/saitama-3d-map/tokyo/`）。
 
 ビルド工程は無いので、ファイルをプッシュするだけで更新されます。Pages を使わない場合も、ワークフローは `data/news.json` の更新だけを行います。定期実行（schedule）はデフォルトブランチ（`main`）にワークフローがあるときだけ動きます。非公開リポジトリで GitHub Pages を使うには、有料プラン（GitHub Pro など）が必要な場合があります。
 
@@ -163,7 +163,7 @@ python3 -m unittest discover -s tests    # テスト（ネットワーク不要�
 
 ```
 index.html        画面の骨組み（MapLibre・Google Fonts を固定バージョン／URLで読み込み）
-city.js           市ごとの設定（初期視点・地図の範囲・気象庁のコード・警察のサイトなど）。仙台市版は sendai/city.js
+city.js           市ごとの設定（初期視点・地図の範囲・気象庁のコード・警察のサイトなど）。仙台市版は sendai/city.js、東京23区版は tokyo/city.js
 style.css         吹き出し・パネル・スマホ用下部シートなどのスタイル（さいたま市版・仙台市版で共通）
 app.js            地図の初期化、3D建物・地形、吹き出しマーカー、重なり回避、詳細表示、検索・フィルタ、ニュース表示（共通）
 data/topics.json  カテゴリ・区・トピックのデータ
@@ -174,8 +174,9 @@ scripts/fetch_livecams.py ライブカメラの YouTube チャンネルIDと今�
 scripts/fetch_bears.py    仙台市版：宮城県のクマ目撃等情報（Excel）と出没注意報等の発令状況を読む
 scripts/news_sources.json ニュースの取得元（RSS/Atom）
 scripts/places.json       位置推定に使う地名辞書
-tests/                    fetch_news.py・fetch_livecams.py・fetch_bears.py・仙台市版のデータのテスト
+tests/                    fetch_news.py・fetch_livecams.py・fetch_bears.py・仙台市版・東京23区版のデータのテスト
 sendai/                   仙台市版（index.html・city.js・data/・scripts/ の設定。詳しくは sendai/README.md）
+tokyo/                    東京23区版（index.html・city.js・data/・scripts/ の設定。詳しくは tokyo/README.md）
 .github/workflows/update-news.yml  定期取得と GitHub Pages への公開
 ```
 
