@@ -75,6 +75,23 @@
       <div id="detail-body" class="detail-body"></div>
     </aside>
 
+    <section id="hazard-panel" class="hazard-panel" aria-label="ハザードマップ" hidden>
+      <div class="hazard-head">
+        <p class="hazard-title">🌊 ハザードマップ</p>
+        <button type="button" id="hazard-close" class="close-btn" aria-label="ハザードマップを消す">✕</button>
+      </div>
+      <label class="hazard-row">
+        <span class="visually-hidden">表示する災害の種類</span>
+        <select id="hazard-select" class="tool-select"></select>
+      </label>
+      <label class="hazard-row hazard-strength">
+        <span>濃さ</span>
+        <input id="hazard-strength" type="range" min="20" max="100" value="100">
+      </label>
+      <ul id="hazard-legend" class="hazard-legend"></ul>
+      <p id="hazard-source" class="hazard-source"></p>
+    </section>
+
     <section id="cam-panel" class="cam-panel" aria-label="ライブカメラの映像" hidden>
       <div class="cam-head">
         <p class="cam-title"><span class="cam-live" id="cam-live" hidden>● LIVE</span><span id="cam-title"></span></p>

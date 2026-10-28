@@ -1,9 +1,10 @@
 {
-  "_comment": "さいたま市内のライブカメラ。lat/lng は映っている場所のおおよその位置。youtube.handle（@から始まるチャンネル名）か youtube.seedVideos（そのチャンネルの過去の配信の動画ID）から、scripts/fetch_livecams.py が channelId と今の配信（videoId・live）を調べて書き込む。",
-  "checkedAt": "2026-10-28T13:03+09:00",
+  "_comment": "さいたま市内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・image（定期更新の静止画を表示）・links（配信元のページへのリンクの一覧）・link（配信元へのリンクのみ）。lat/lng はおおよその位置（ウェザーニュースは区ごとの位置）。youtube は scripts/fetch_livecams.py が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
+  "checkedAt": "2026-10-28T13:33+09:00",
   "cameras": [
     {
       "id": "kitaurawa-yono-rail",
+      "type": "youtube",
       "title": "北浦和〜与野 鉄道ライブカメラ",
       "description": "JR北浦和駅と与野駅の間、東北本線と武蔵野線の分岐付近を見渡す鉄道ライブカメラです。京浜東北線・上野東京ライン・湘南新宿ラインなどの列車が映ります。",
       "ward": "浦和区",
@@ -14,45 +15,375 @@
       "youtube": {
         "handle": "@kadoritsu44",
         "channelId": "UCtf0x3AATj7_5_ZXojdcW7g",
-        "videoId": null,
-        "live": false
+        "videoId": "K8G9ck6niWw",
+        "live": true,
+        "embeddable": true
       }
     },
     {
-      "id": "omiya-yard-shintoshin-rail",
-      "title": "大宮操車場・さいたま新都心 鉄道ライブカメラ",
-      "description": "大宮操車場とさいたま新都心駅付近を映す鉄道ライブカメラです。京浜東北線・東北本線・東北貨物線などが見えます。配信は1日2回（おおむね2時〜13時55分、14時〜翌1時45分）に分かれ、配信ごとにURLが変わります。",
-      "ward": "大宮区・中央区",
-      "lat": 35.9,
-      "lng": 139.6285,
-      "provider": "くまくまくまチャンネル（YouTube）",
-      "siteUrl": "https://livecam.train-fan.com/",
+      "id": "yoshinocho-jc",
+      "type": "youtube",
+      "title": "国道17号新大宮バイパス 吉野町JC付近 お天気・交通カメラ",
+      "description": "新大宮バイパス（国道17号）の吉野町付近の天気と道路の様子を映すライブカメラです。",
+      "ward": "北区",
+      "lat": 35.934,
+      "lng": 139.6035,
+      "provider": "taka-n9k2o（YouTube）",
+      "siteUrl": "https://www.youtube.com/@taka-n9k2o/live",
       "youtube": {
-        "seedVideos": [
-          "azZxJE3Zt7A",
-          "WAEbmMuHkp8",
-          "VHM0LJY7w3o"
+        "handle": "@taka-n9k2o",
+        "channelId": "UCsFeKoB8eX-nWwWPtnQtuvQ",
+        "titleKeywords": [
+          "吉野町"
         ],
-        "channelId": "UCDyC7xeQxsihyZj8SoICLEw",
-        "videoId": null,
-        "live": false
+        "videoId": "GkAPFhnSzkg",
+        "live": true,
+        "embeddable": true
       }
     },
     {
-      "id": "omiya-daimoncho",
-      "title": "大宮駅東口・大門町中央通り お天気カメラ",
-      "description": "大宮駅東口の大門町中央通り付近を映すお天気カメラです。街の様子や天気の確認に使えます。",
+      "id": "r17-tajima",
+      "type": "image",
+      "title": "国道17号 田島地下道（桜区田島）",
+      "ward": "桜区",
+      "lat": 35.846,
+      "lng": 139.629,
+      "description": "新大宮バイパスの田島地下道の道路カメラです（上り線・下り線）。",
+      "provider": "国土交通省 関東地方整備局 大宮国道事務所",
+      "siteUrl": "https://www.ktr.mlit.go.jp/oomiya/oomiya_lc_17saitama1.html",
+      "images": [
+        {
+          "label": "上り線",
+          "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/79_C.jpg"
+        },
+        {
+          "label": "下り線",
+          "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/80_C.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r17-urawanishi",
+      "type": "image",
+      "title": "国道17号 浦和西地下道（中央区上峰・桜区栄和）",
+      "ward": "中央区・桜区",
+      "lat": 35.8655,
+      "lng": 139.6245,
+      "description": "新大宮バイパスと埼大通り（国道463号）が交わる浦和西地下道の道路カメラです（上り線・下り線）。",
+      "provider": "国土交通省 関東地方整備局 大宮国道事務所",
+      "siteUrl": "https://www.ktr.mlit.go.jp/oomiya/oomiya_lc_17saitama1.html",
+      "images": [
+        {
+          "label": "上り線",
+          "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/82_A.jpg"
+        },
+        {
+          "label": "下り線",
+          "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/81_A.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r17-uchiya",
+      "type": "image",
+      "title": "国道17号 内谷二丁目（南区内谷）",
+      "ward": "南区",
+      "lat": 35.8335,
+      "lng": 139.633,
+      "description": "新大宮バイパスの内谷二丁目付近（上り線）の道路カメラです。",
+      "provider": "国土交通省 関東地方整備局 大宮国道事務所",
+      "siteUrl": "https://www.ktr.mlit.go.jp/oomiya/oomiya_lc_17saitama1.html",
+      "images": [
+        {
+          "label": "上り線",
+          "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/76_A.jpg"
+        }
+      ]
+    },
+    {
+      "id": "r17-mitsuhashi",
+      "type": "image",
+      "title": "国道17号 三橋二丁目（大宮区三橋）",
       "ward": "大宮区",
-      "lat": 35.907,
-      "lng": 139.6268,
-      "provider": "FLAT（YouTube）",
-      "siteUrl": "https://www.youtube.com/@flat-sh/live",
-      "youtube": {
-        "handle": "@flat-sh",
-        "channelId": "UCPQli1LCTQAlkF_ieAJrr0A",
-        "videoId": null,
-        "live": false
-      }
+      "lat": 35.9035,
+      "lng": 139.609,
+      "description": "新大宮バイパスの三橋二丁目付近（上り線）の道路カメラです。",
+      "provider": "国土交通省 関東地方整備局 大宮国道事務所",
+      "siteUrl": "https://www.ktr.mlit.go.jp/oomiya/oomiya_lc_17saitama2.html",
+      "images": [
+        {
+          "label": "上り線",
+          "url": "https://www.ktr.mlit.go.jp/oomiya/livecamera/83_A.jpg"
+        }
+      ]
+    },
+    {
+      "id": "south-to-tokyo",
+      "type": "link",
+      "title": "さいたま市南部から東京方面",
+      "ward": "南区付近",
+      "lat": 35.844,
+      "lng": 139.65,
+      "description": "さいたま市南部から東京方面を望むライブ映像です。配信元の設定で、他のサイトでの再生（埋め込み）が許可されていないため、YouTube で見てください。",
+      "provider": "YouTube",
+      "siteUrl": "https://www.youtube.com/watch?v=x9oGQV3OCtg"
+    },
+    {
+      "id": "akigase-weir",
+      "type": "link",
+      "title": "荒川 秋ヶ瀬取水堰",
+      "ward": "桜区付近",
+      "lat": 35.847,
+      "lng": 139.5975,
+      "description": "荒川の秋ヶ瀬取水堰のライブカメラです。配信元のサイトで見てください。",
+      "provider": "水資源機構 利根導水総合事業所",
+      "siteUrl": "https://www.water.go.jp/kanto/tone/water/live/live-akigase.html"
+    },
+    {
+      "id": "weathernews-西区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（西区・2か所）",
+      "ward": "西区",
+      "lat": 35.92516,
+      "lng": 139.57979,
+      "description": "ウェザーニュースが公開している西区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "さいたま市西区大字西遊馬(南南西)",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907F20E/"
+        },
+        {
+          "label": "さいたま市西区大字西遊馬(北東)",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE9068A1F/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-北区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（北区・2か所）",
+      "ward": "北区",
+      "lat": 35.93148,
+      "lng": 139.62036,
+      "description": "ウェザーニュースが公開している北区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "さいたま市北区土呂町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907C78C/"
+        },
+        {
+          "label": "さいたま市北区宮原",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907B7AE/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-大宮区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（大宮区・3か所）",
+      "ward": "大宮区",
+      "lat": 35.90178,
+      "lng": 139.63064,
+      "description": "ウェザーニュースが公開している大宮区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "さいたま市大宮区桜木町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE9068765/"
+        },
+        {
+          "label": "大宮区櫛引町一丁目",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907BD35/"
+        },
+        {
+          "label": "さいたま市大宮区上小町",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE908B4EC/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-見沼区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（見沼区・2か所）",
+      "ward": "見沼区",
+      "lat": 35.93526,
+      "lng": 139.65443,
+      "description": "ウェザーニュースが公開している見沼区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "さいたま市見沼区見沼インター上空",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE90684F0/"
+        },
+        {
+          "label": "さいたま市見沼区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE90688B9/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-中央区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（中央区・4か所）",
+      "ward": "中央区",
+      "lat": 35.88393,
+      "lng": 139.62605,
+      "description": "ウェザーニュースが公開している中央区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "中央区鈴谷",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907A837/"
+        },
+        {
+          "label": "さいたま市中央区本町西",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE9067D2F/"
+        },
+        {
+          "label": "さいたま市（中央区）",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907DB22/"
+        },
+        {
+          "label": "さいたま市中央区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE908D4B1/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-桜区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（桜区・2か所）",
+      "ward": "桜区",
+      "lat": 35.85622,
+      "lng": 139.61033,
+      "description": "ウェザーニュースが公開している桜区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "さいたま市（桜区）",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907C9AF/"
+        },
+        {
+          "label": "さいたま市桜区西堀",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE908625B/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-浦和区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（浦和区・5か所）",
+      "ward": "浦和区",
+      "lat": 35.86163,
+      "lng": 139.6459,
+      "description": "ウェザーニュースが公開している浦和区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "さいたま市浦和区（浦和駅上空）",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE9061F04/"
+        },
+        {
+          "label": "浦和区神明",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE9089047/"
+        },
+        {
+          "label": "さいたま市浦和区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE908904D/"
+        },
+        {
+          "label": "さいたま市浦和区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE908696A/"
+        },
+        {
+          "label": "さいたま市浦和区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907B593/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-南区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（南区・1か所）",
+      "ward": "南区",
+      "lat": 35.84528,
+      "lng": 139.64539,
+      "description": "ウェザーニュースが公開している南区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "さいたま市南区内谷",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE9067836/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-緑区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（緑区・5か所）",
+      "ward": "緑区",
+      "lat": 35.87111,
+      "lng": 139.68412,
+      "description": "ウェザーニュースが公開している緑区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "緑区三室 見沼代用水 桜並木",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE906F1B0/"
+        },
+        {
+          "label": "さいたま市緑区",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907CFEB/"
+        },
+        {
+          "label": "さいたま市緑区宮本",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE906EFE2/"
+        },
+        {
+          "label": "さいたま市緑区中尾",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE90678B0/"
+        },
+        {
+          "label": "さいたま市緑区三室",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE905CFFC/"
+        }
+      ]
+    },
+    {
+      "id": "weathernews-岩槻区",
+      "type": "links",
+      "title": "ウェザーニュースのライブカメラ（岩槻区・3か所）",
+      "ward": "岩槻区",
+      "lat": 35.94943,
+      "lng": 139.69407,
+      "description": "ウェザーニュースが公開している岩槻区のライブカメラです。画像はウェザーニュースの利用規約により、このサイトには表示できないため、各カメラのページで見てください。",
+      "provider": "ウェザーニーズ（ウェザーニュース）",
+      "siteUrl": "https://weathernews.jp/onebox/livecam/kanto/saitama/",
+      "links": [
+        {
+          "label": "岩槻区南平野",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE9064263/"
+        },
+        {
+          "label": "さいたま市岩槻区西原",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE907B74A/"
+        },
+        {
+          "label": "岩槻区本宿",
+          "url": "https://weathernews.jp/onebox/livecam/kanto/saitama/7CDDE90686CD/"
+        }
+      ]
     }
   ],
   "officialLinks": [
@@ -67,6 +398,10 @@
     {
       "label": "国土交通省 川の防災情報（荒川などのカメラ）",
       "url": "https://www.river.go.jp/"
+    },
+    {
+      "label": "カメ探（さいたま市のライブカメラ一覧）",
+      "url": "https://www.cametan.com/city/11107.html"
     }
   ]
 }

@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""data/livecams.json のライブカメラについて、YouTube のチャンネルIDと今の配信を調べて書き込む。
+"""data/livecams.json の YouTube のライブカメラについて、今配信中の動画を調べて書き込む。
 
-YouTube のライブ配信は配信ごとに動画IDが変わるため、変わらない「チャンネルID」を調べておき、
-画面では「そのチャンネルで今配信中のライブ」（embed/live_stream?channel=…）を埋め込む。
-あわせて、その時点の配信の動画ID（videoId）と配信中かどうか（live）も記録する。
-APIキーは使わず、YouTube の公開ページのHTMLから読み取る。読み取れなかったカメラは前回の値を残す。
+YouTube のライブ配信は配信ごとに動画IDが変わるため、チャンネルの配信一覧（/streams）から
+「ライブ」の印が付いた動画を探し、その動画IDを videoId に、配信中なら live=true にする。
+同じチャンネルが別の場所のカメラも配信していることがあるため、titleKeywords を書いたカメラは
+その語を含むタイトルの配信だけを使う。さらに oEmbed で、ほかのサイトへの埋め込みが許可されているか
+（embeddable）も確かめる。APIキーは使わず、YouTube の公開ページから読み取る。
+読み取れなかったカメラは前回の値を残す。
 
     python3 scripts/fetch_livecams.py            # 調べて data/livecams.json を更新
     python3 scripts/fetch_livecams.py --dry-run  # 書き込まずに結果を表示
@@ -17,6 +19,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -35,7 +38,7 @@ CHANNEL_ID_PATTERNS = [
     re.compile(r'"channelId":"(UC[\w-]{22})"'),
     re.compile(r'youtube\.com/channel/(UC[\w-]{22})'),
 ]
-CANONICAL_VIDEO = re.compile(r'<link rel="canonical" href="https://www\.youtube\.com/watch\?v=([\w-]{11})"')
+INITIAL_DATA = re.compile(r"ytInitialData\s*=\s*(\{.*?\});\s*</script>", re.S)
 
 
 def fetch_text(url: str, timeout: float = 20.0) -> str:
@@ -52,16 +55,64 @@ def find_channel_id(html: str) -> str | None:
     return None
 
 
-def parse_live_page(html: str) -> tuple[str | None, bool]:
-    """チャンネルの /live ページから、今の配信の動画IDと配信中かどうかを読み取る。
+def parse_streams(html: str) -> list[dict]:
+    """チャンネルの配信一覧（/streams）のHTMLから、動画ID・タイトル・ライブ中かどうかを読み取る。
 
-    配信していないときは /live がチャンネルのトップを返し、canonical が動画を指さない。
+    YouTube の一覧は lockupViewModel という形で、サムネイルの印（thumbnailBadgeViewModel）が
+    ライブ中なら THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE になる。
     """
-    m = CANONICAL_VIDEO.search(html)
+    m = INITIAL_DATA.search(html)
     if not m:
-        return None, False
-    live = '"isLiveNow":true' in html or '"isLive":true' in html
-    return m.group(1), live
+        return []
+    videos = []
+
+    def badges_of(node, out):
+        if isinstance(node, dict):
+            if "thumbnailBadgeViewModel" in node:
+                out.append(node["thumbnailBadgeViewModel"].get("badgeStyle", ""))
+            for v in node.values():
+                badges_of(v, out)
+        elif isinstance(node, list):
+            for v in node:
+                badges_of(v, out)
+
+    def walk(node):
+        if isinstance(node, dict):
+            lockup = node.get("lockupViewModel")
+            if isinstance(lockup, dict) and lockup.get("contentId"):
+                badges = []
+                badges_of(lockup.get("contentImage", {}), badges)
+                title = (lockup.get("metadata", {}).get("lockupMetadataViewModel", {})
+                         .get("title", {}).get("content", ""))
+                videos.append({"videoId": lockup["contentId"], "title": title,
+                               "live": any(b.endswith("_LIVE") for b in badges)})
+            for v in node.values():
+                walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v)
+
+    walk(json.loads(m.group(1)))
+    return videos
+
+
+def pick_live(videos: list[dict], keywords: list[str]) -> dict | None:
+    for v in videos:
+        if v["live"] and (not keywords or any(k in v["title"] for k in keywords)):
+            return v
+    return None
+
+
+def is_embeddable(video_id: str, get=None) -> bool | None:
+    """oEmbed が 200 なら埋め込み可、401/403 なら不可。分からなければ None。"""
+    url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json"
+    try:
+        (get or fetch_text)(url)
+        return True
+    except urllib.error.HTTPError as err:
+        return False if err.code in (401, 403) else None
+    except Exception:
+        return None
 
 
 def resolve_channel(cam: dict, get=fetch_text) -> str | None:
@@ -83,7 +134,8 @@ def resolve_channel(cam: dict, get=fetch_text) -> str | None:
 
 def update_cameras(data: dict, get=fetch_text, now: datetime | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
-    for i, cam in enumerate(data["cameras"]):
+    cams = [c for c in data["cameras"] if c.get("type", "youtube") == "youtube"]
+    for i, cam in enumerate(cams):
         yt = cam.setdefault("youtube", {})
         try:
             if i:
@@ -93,10 +145,16 @@ def update_cameras(data: dict, get=fetch_text, now: datetime | None = None) -> d
                 print(f"[warn] {cam['title']}: チャンネルIDが見つかりません", file=sys.stderr)
                 continue
             yt["channelId"] = cid
-            video_id, live = parse_live_page(get(f"https://www.youtube.com/channel/{cid}/live"))
-            yt["videoId"] = video_id
-            yt["live"] = live
-            print(f"[info] {cam['title']}: channel={cid} video={video_id} live={live}", file=sys.stderr)
+            videos = parse_streams(get(f"https://www.youtube.com/channel/{cid}/streams"))
+            if not videos:
+                print(f"[warn] {cam['title']}: 配信一覧を読み取れませんでした", file=sys.stderr)
+                continue
+            live = pick_live(videos, yt.get("titleKeywords", []))
+            yt["videoId"] = live["videoId"] if live else None
+            yt["live"] = bool(live)
+            yt["embeddable"] = is_embeddable(live["videoId"], get) if live else None
+            print(f"[info] {cam['title']}: channel={cid} video={yt['videoId']} live={yt['live']} "
+                  f"embeddable={yt['embeddable']}", file=sys.stderr)
         except Exception as err:  # 1台の失敗で全体を止めない（前回の値を残す）
             print(f"[warn] {cam['title']}: {err}", file=sys.stderr)
     data["checkedAt"] = now.astimezone(JST).isoformat(timespec="minutes")
