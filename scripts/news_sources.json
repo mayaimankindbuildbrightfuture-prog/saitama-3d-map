@@ -1,26 +1,89 @@
 {
-  "_comment": "ニュースの取得元（RSS 2.0 / Atom）。APIキー不要のフィードを追加できる。filter=true のフィードは、さいたま市に関係する語を含む記事だけを残す。excludeSources は配信元名の一部、excludeWords は見出し・概要に含まれる語で、当てはまる記事を除く。duplicateSimilarity（見出し全体の類似度）と duplicateOverlap（短い方の見出しがもう片方に含まれる割合）は0〜1で、どちらかがこの値以上なら重複として除く。",
+  "_comment": [
+    "ニュースの取得元（RSS 2.0 / Atom）とカテゴリ分けの設定。APIキー不要。",
+    "sources: url（RSS/AtomのURL）または query（Googleニュースの検索語）を書く。category は検索の目的で、記事のカテゴリは categories のキーワードで最終的に決まる。filter=true のフィードは、さいたま市に関係する語か地名辞書の地名を含む記事だけを残す。",
+    "categories: 上から順にキーワードを調べ、最初に当てはまったカテゴリに入れる（どれにも当てはまらなければ news）。types は細かい分類で、上から順に最初に当てはまったもの。maxItems・maxAgeDays はカテゴリごとの最大件数・何日前までの記事を残すか。",
+    "excludeSources は配信元名の一部、excludeWords は見出し・概要に含まれる語で、当てはまる記事を除く。duplicateSimilarity（見出し全体の類似度）と duplicateOverlap（短い方の見出しがもう片方に含まれる割合）は0〜1で、どちらかがこの値以上なら重複として除く。"
+  ],
   "maxItems": 40,
   "maxAgeDays": 14,
   "duplicateSimilarity": 0.6,
   "duplicateOverlap": 0.7,
   "excludeSources": ["MOVIE WALKER PRESS", "tenki.jp", "健美家", "Unisba Media"],
-  "excludeWords": ["上映時間", "上映スケジュール", "の天気", "天気予報", "【朝版】", "【夕版】", "区分マンション", "利回り"],
-  "sources": [
-    {
-      "name": "Googleニュース「さいたま市」",
-      "url": "https://news.google.com/rss/search?q=%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E5%B8%82+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "filter": true
+  "excludeWords": ["上映時間", "上映スケジュール", "の天気", "天気予報", "【朝版】", "【夕版】", "区分マンション", "利回り", "レシピ"],
+  "categories": {
+    "crime": {
+      "label": "事件・防犯",
+      "maxItems": 30,
+      "maxAgeDays": 14,
+      "keywords": ["逮捕", "容疑", "書類送検", "送検", "詐欺", "窃盗", "盗難", "強盗", "空き巣", "ひったくり", "万引き", "不審者", "声かけ", "つきまとい", "傷害", "暴行", "殺人", "殺害", "盗撮", "痴漢", "わいせつ", "ひき逃げ", "飲酒運転", "酒気帯び", "無免許", "指名手配", "被害届", "埼玉県警", "警察署", "初公判", "判決"],
+      "types": [
+        { "id": "fraud", "label": "詐欺", "keywords": ["詐欺", "還付金", "なりすまし", "オレオレ", "架空請求"] },
+        { "id": "sexual", "label": "性犯罪・盗撮", "keywords": ["盗撮", "痴漢", "わいせつ", "性的"] },
+        { "id": "suspicious", "label": "不審者・声かけ", "keywords": ["不審者", "声かけ", "つきまとい", "露出"] },
+        { "id": "violent", "label": "暴力・凶悪事件", "keywords": ["殺人", "殺害", "強盗", "傷害", "暴行", "刺され", "刺し"] },
+        { "id": "theft", "label": "窃盗・盗難", "keywords": ["窃盗", "盗難", "盗み", "空き巣", "ひったくり", "万引き", "車上"] },
+        { "id": "traffic", "label": "交通犯罪", "keywords": ["ひき逃げ", "飲酒運転", "酒気帯び", "無免許", "あおり"] }
+      ],
+      "otherType": { "id": "other", "label": "その他の事件" }
     },
-    {
-      "name": "Googleニュース「大宮 さいたま」",
-      "url": "https://news.google.com/rss/search?q=%E5%A4%A7%E5%AE%AE+%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "filter": true
+    "otaku": {
+      "label": "オタク",
+      "maxItems": 30,
+      "maxAgeDays": 30,
+      "keywords": ["アニメ", "漫画", "マンガ", "まんが", "声優", "コスプレ", "同人", "VTuber", "Vチューバー", "ボカロ", "初音ミク", "コラボカフェ", "アニソン", "ラノベ", "ライトノベル", "特撮", "プリキュア", "ポケモン", "ガンダム", "鬼滅", "ラブライブ", "ホロライブ", "にじさんじ", "推し活", "痛車", "聖地巡礼", "原画展", "ポップアップストア", "POP UP STORE", "ゲーム大会", "eスポーツ", "コミケ", "アイドル"],
+      "types": [
+        { "id": "anime", "label": "アニメ・漫画", "keywords": ["アニメ", "漫画", "マンガ", "まんが", "原画展", "鬼滅", "ラブライブ", "プリキュア", "ガンダム", "ポケモン", "ラノベ", "ライトノベル", "特撮", "聖地巡礼"] },
+        { "id": "cafe", "label": "コラボカフェ・グッズ", "keywords": ["コラボカフェ", "ポップアップストア", "POP UP STORE", "グッズ"] },
+        { "id": "cosplay", "label": "コスプレ・同人", "keywords": ["コスプレ", "同人", "コミケ", "痛車"] },
+        { "id": "vtuber", "label": "VTuber・声優・アイドル", "keywords": ["VTuber", "Vチューバー", "ホロライブ", "にじさんじ", "声優", "アイドル", "アニソン", "ボカロ", "初音ミク"] },
+        { "id": "game", "label": "ゲーム・eスポーツ", "keywords": ["ゲーム大会", "eスポーツ"] }
+      ],
+      "otherType": { "id": "other", "label": "その他のオタク情報" }
     },
-    {
-      "name": "Googleニュース「浦和 さいたま」",
-      "url": "https://news.google.com/rss/search?q=%E6%B5%A6%E5%92%8C+%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "filter": true
+    "gourmet": {
+      "label": "グルメ情報",
+      "maxItems": 40,
+      "maxAgeDays": 30,
+      "keywords": ["ラーメン", "らーめん", "つけ麺", "寿司", "すし", "鮨", "蕎麦", "そば店", "手打ちそば", "うどん", "天ぷら", "和食", "定食", "うなぎ", "鰻", "中華", "餃子", "点心", "担々麺", "麻婆", "小籠包", "カレー", "スパイス料理", "インド料理", "ネパール料理", "食べ放題", "飲み放題", "ビュッフェ", "バイキング", "焼肉", "ステーキ", "ハンバーグ", "焼き鳥", "焼鳥", "イタリアン", "パスタ", "ピザ", "フレンチ", "洋食", "ナポリタン", "ハンバーガー", "カフェ", "スイーツ", "ケーキ", "パフェ", "かき氷", "クレープ", "ドーナツ", "パン屋", "ベーカリー", "居酒屋", "酒場", "グルメ", "ランチ", "飲食店", "レストラン", "テイクアウト", "キッチンカー"],
+      "types": [
+        { "id": "buffet", "label": "食べ放題", "icon": "🍽️", "keywords": ["食べ放題", "飲み放題", "ビュッフェ", "バイキング"] },
+        { "id": "curry", "label": "カレー", "icon": "🍛", "keywords": ["カレー", "スパイス料理", "インド料理", "ネパール料理"] },
+        { "id": "ramen", "label": "ラーメン", "icon": "🍜", "keywords": ["ラーメン", "らーめん", "つけ麺", "中華そば", "担々麺"] },
+        { "id": "chinese", "label": "中華", "icon": "🥟", "keywords": ["中華", "餃子", "点心", "麻婆", "小籠包"] },
+        { "id": "japanese", "label": "和食", "icon": "🍣", "keywords": ["寿司", "すし", "鮨", "蕎麦", "そば店", "手打ちそば", "うどん", "天ぷら", "和食", "定食", "うなぎ", "鰻", "割烹", "とんかつ", "おにぎり", "和菓子"] },
+        { "id": "meat", "label": "焼肉・肉料理", "icon": "🥩", "keywords": ["焼肉", "ステーキ", "ハンバーグ", "焼き鳥", "焼鳥", "ホルモン"] },
+        { "id": "western", "label": "洋食・イタリアン", "icon": "🍝", "keywords": ["イタリアン", "パスタ", "ピザ", "フレンチ", "洋食", "ナポリタン", "ビストロ", "ハンバーガー"] },
+        { "id": "cafe", "label": "カフェ・スイーツ", "icon": "🍰", "keywords": ["カフェ", "スイーツ", "ケーキ", "パフェ", "かき氷", "クレープ", "ドーナツ", "パン屋", "ベーカリー"] },
+        { "id": "izakaya", "label": "居酒屋・お酒", "icon": "🍺", "keywords": ["居酒屋", "酒場", "ビール", "日本酒", "ワイン"] }
+      ],
+      "otherType": { "id": "other", "label": "その他のグルメ", "icon": "🍴" }
+    },
+    "news": {
+      "label": "ニュース",
+      "maxItems": 40,
+      "maxAgeDays": 14
     }
+  },
+  "sources": [
+    { "name": "Googleニュース「さいたま市」", "category": "news", "query": "さいたま市 when:7d", "filter": true },
+    { "name": "Googleニュース「大宮 さいたま」", "category": "news", "query": "大宮 さいたま when:7d", "filter": true },
+    { "name": "Googleニュース「浦和 さいたま」", "category": "news", "query": "浦和 さいたま when:7d", "filter": true },
+
+    { "name": "Googleニュース「さいたま アニメ・声優・コスプレ」", "category": "otaku", "query": "さいたま (アニメ OR 声優 OR コスプレ OR コラボカフェ OR VTuber) when:30d", "filter": true },
+    { "name": "Googleニュース「大宮・浦和 アニメ・漫画・同人」", "category": "otaku", "query": "(大宮 OR 浦和) (アニメ OR 漫画 OR 同人 OR 原画展 OR ポップアップストア) when:30d", "filter": true },
+    { "name": "Googleニュース「さいたまスーパーアリーナ アニメ・アイドル」", "category": "otaku", "query": "さいたまスーパーアリーナ (アニメ OR 声優 OR アイドル OR アニソン OR VTuber) when:30d", "filter": true },
+
+    { "name": "Googleニュース「さいたま市 事件（警察発表）」", "category": "crime", "query": "さいたま市 (逮捕 OR 容疑 OR 詐欺 OR 不審者) when:7d", "filter": true },
+    { "name": "Googleニュース「さいたま市 埼玉県警」", "category": "crime", "query": "さいたま市 埼玉県警 when:7d", "filter": true },
+    { "name": "Googleニュース「さいたま市内の警察署」", "category": "crime", "query": "(浦和署 OR 浦和西署 OR 浦和東署 OR 大宮署 OR 大宮西署 OR 大宮東署 OR 岩槻署) when:14d", "filter": true },
+
+    { "name": "Googleニュース「さいたま市 ラーメン」", "category": "gourmet", "query": "さいたま市 (ラーメン OR つけ麺) when:30d", "filter": true },
+    { "name": "Googleニュース「さいたま市 和食」", "category": "gourmet", "query": "さいたま市 (寿司 OR うどん OR そば OR 和食 OR 天ぷら OR うなぎ) when:30d", "filter": true },
+    { "name": "Googleニュース「さいたま市 中華」", "category": "gourmet", "query": "さいたま市 (中華 OR 餃子 OR 町中華) when:30d", "filter": true },
+    { "name": "Googleニュース「さいたま市 カレー」", "category": "gourmet", "query": "さいたま市 カレー when:30d", "filter": true },
+    { "name": "Googleニュース「さいたま市 食べ放題」", "category": "gourmet", "query": "さいたま市 (食べ放題 OR ビュッフェ OR バイキング) when:30d", "filter": true },
+    { "name": "Googleニュース「さいたま市 焼肉・洋食・カフェ」", "category": "gourmet", "query": "さいたま市 (焼肉 OR イタリアン OR カフェ OR スイーツ) when:30d", "filter": true },
+    { "name": "Googleニュース「大宮・浦和 グルメ」", "category": "gourmet", "query": "(大宮 OR 浦和) (グルメ OR ランチ OR 飲食店) when:30d", "filter": true }
   ]
 }

@@ -11,7 +11,16 @@
   const NEWS_URL = 'data/news.json';
   const NEWS_REFRESH_MS = 15 * 60 * 1000; // 開いたままでも15分ごとに news.json を読み直す
   const NEWS_NEARBY_KM = 1.5;
-  const NEWS_CATEGORY = { label: 'ニュース', color: '#111111', icon: '📰' };
+  // data/news.json の記事のカテゴリ（scripts/news_sources.json の categories に対応）。
+  // 名所などのトピックのカテゴリ「gourmet」と区別するため、グルメ記事は foodnews として扱う
+  const FEED_CATEGORIES = {
+    news: { label: 'ニュース', color: '#111111', icon: '📰', tag: 'NEWS' },
+    otaku: { label: 'オタク', color: '#e84393', icon: '🎮', tag: 'OTAKU' },
+    crime: { label: '事件・防犯', color: '#2c3e50', icon: '🚨', tag: '事件・防犯' },
+    foodnews: { label: 'グルメ情報', color: '#e67e22', icon: '🍜', tag: 'GOURMET' },
+  };
+  const FEED_CATEGORY_OF = { news: 'news', otaku: 'otaku', crime: 'crime', gourmet: 'foodnews' };
+  const POLICE_URL = 'https://www.police.pref.saitama.lg.jp/';
 
   // 初期視点：さいたま市全域（10区）が見えるように斜め上から
   const INITIAL_VIEW = {
@@ -40,6 +49,7 @@
     activeCategories: new Set(),
     query: '',
     activeId: null,
+    typeFilter: '', // 「カテゴリ:分類」（例 foodnews:curry）。空ならすべて
     collisionFrame: 0,
     newsMeta: null, // { generatedAt, sources }
   };
@@ -55,7 +65,7 @@
   async function init() {
     const [data, style, news] = await Promise.all([loadJSON(DATA_URL), loadStyle(), loadNews()]);
     state.data = data;
-    data.categories.news = NEWS_CATEGORY;
+    Object.assign(data.categories, FEED_CATEGORIES);
     state.topics = data.topics.slice();
     state.topics.forEach((t) => state.byId.set(t.id, t));
     Object.keys(data.categories).forEach((c) => state.activeCategories.add(c));
@@ -228,6 +238,7 @@
     const el = document.createElement('div');
     el.className = topic.news ? 'topic-marker is-news' : 'topic-marker';
     el.dataset.id = topic.id;
+    el.dataset.category = topic.category;
     el.style.setProperty('--cat', cat.color);
 
     const inner = document.createElement('div');
@@ -238,7 +249,7 @@
     bubble.className = 'bubble';
     bubble.setAttribute('aria-label', `${topic.title}（${cat.label}）の詳細を見る`);
     bubble.innerHTML = `
-      <span class="bubble-icon" aria-hidden="true">${cat.icon}</span>
+      <span class="bubble-icon" aria-hidden="true">${(topic.news && topic.news.typeIcon) || cat.icon}</span>
       <span class="bubble-text">
         <span class="bubble-title"></span>
         <span class="bubble-line"></span>
@@ -246,7 +257,7 @@
     if (topic.news) {
       const tag = document.createElement('span');
       tag.className = 'news-tag';
-      tag.textContent = 'NEWS';
+      tag.textContent = cat.tag || 'NEWS';
       bubble.querySelector('.bubble-text').prepend(tag);
     }
     bubble.querySelector('.bubble-title').textContent = topic.title;
@@ -257,7 +268,7 @@
     dot.className = 'dot';
     dot.title = topic.title;
     dot.setAttribute('aria-label', `${topic.title}の詳細を見る`);
-    dot.textContent = cat.icon;
+    dot.textContent = (topic.news && topic.news.typeIcon) || cat.icon;
 
     const pin = document.createElement('span');
     pin.className = 'pin';
@@ -452,25 +463,35 @@
   function renderNewsBody(body, topic) {
     const n = topic.news;
     const placeText = n.placeKind === 'city'
-      ? '📍 さいたま市全体のニュース（地図上は市役所付近に表示）'
+      ? '📍 さいたま市全体の記事（地図上は市役所付近に表示）'
       : `📍 ${n.place}${n.ward && !n.place.endsWith(n.ward) ? `（${n.ward}）` : ''}付近`;
     body.append(
       el('h2', { className: 'detail-title news-title', id: 'detail-title' }, n.title),
       el('p', { className: 'detail-ward' }, placeText),
       el('p', { className: 'news-meta' }, `${n.source}｜${formatDate(n.published)}`),
     );
+    if (n.typeLabel) {
+      body.append(el('p', { className: 'type-badge' }, `${n.typeIcon || state.data.categories[topic.category].icon} ${n.typeLabel}`));
+    }
     if (n.summary) body.append(el('p', { className: 'detail-desc' }, n.summary));
+    if (topic.category === 'crime') {
+      const police = el('a', { href: POLICE_URL, target: '_blank', rel: 'noopener' }, '埼玉県警察の公式サイト');
+      body.append(el('p', { className: 'crime-note' },
+        '報道機関が伝えた警察発表などの情報です。地図の位置は記事中の地名からの推定で、事件の正確な発生場所ではありません。最新の正確な防犯情報は ',
+        police, '（犯罪情報官NEWS など）で確認してください。'));
+    }
 
     body.append(el('a', { className: 'news-link', href: n.url, target: '_blank', rel: 'noopener noreferrer' },
       '記事を読む（外部サイト）'));
 
     const dl = el('dl', { className: 'info-table' });
     const addRow = (k, v) => { if (v) dl.append(el('dt', {}, k), el('dd', {}, v)); };
+    addRow('分類', n.typeLabel ? `${state.data.categories[topic.category].label}／${n.typeLabel}` : state.data.categories[topic.category].label);
     addRow('配信元', n.source);
     addRow('配信日時', formatDate(n.published));
     addRow('位置の推定', n.matched
       ? `記事中の「${n.matched}」から推定（実際の場所と異なる場合があります）`
-      : '地名が見つからないため、市全体のニュースとして表示');
+      : '地名が見つからないため、市全体の記事として表示');
     body.append(dl);
 
     const nearby = nearest(topic, (t) => !t.news, 3);
@@ -640,9 +661,9 @@
       .filter((n) => Number.isFinite(n.lat) && Number.isFinite(n.lng) && n.title && n.url)
       .map((n) => ({
         id: n.id,
-        category: 'news',
+        category: FEED_CATEGORY_OF[n.category] || 'news',
         title: n.title,
-        bubble: `${n.source}・${formatRelative(n.published)}`,
+        bubble: `${n.typeLabel ? `${n.typeLabel}｜` : ''}${n.source}・${formatRelative(n.published)}`,
         description: n.summary,
         ward: n.ward || '',
         lat: n.lat,
@@ -662,7 +683,8 @@
     });
 
     state.newsMeta = { generatedAt: news.generatedAt, sources: news.sources || [] };
-    renderNewsStatus(entries.length);
+    renderNewsStatus(entries);
+    buildTypeSelect(entries);
     updateChipCounts();
     applyFilter();
 
@@ -674,7 +696,7 @@
     }
   }
 
-  function renderNewsStatus(count) {
+  function renderNewsStatus(entries) {
     const box = $('#news-status-text');
     if (!box) return;
     const meta = state.newsMeta;
@@ -682,14 +704,49 @@
       box.textContent = '📰 ニュースはまだ取得されていません（GitHub Actions で自動取得されます）';
       return;
     }
-    const names = meta.sources.map((s) => s.name).join('、');
-    box.textContent = `📰 ニュース ${count}件｜${formatDate(meta.generatedAt)} 更新${names ? `｜出典: ${names}` : ''}`;
+    const counts = Object.entries(FEED_CATEGORIES)
+      .map(([id, c]) => `${c.icon}${c.label} ${entries.filter((t) => t.category === id).length}件`)
+      .join('・');
+    const google = meta.sources.some((s) => /Google/.test(s.name));
+    box.textContent = `${counts}｜${formatDate(meta.generatedAt)} 更新${google ? '｜出典: Googleニュース検索' : ''}`;
+  }
+
+  // オタク・事件・グルメの細かい分類（ジャンル）で絞り込むセレクトボックス
+  function buildTypeSelect(entries) {
+    const select = $('#type-select');
+    if (!select) return;
+    const current = state.typeFilter;
+    select.replaceChildren(el('option', { value: '' }, '🍴 ジャンルで絞り込み…'));
+    Object.entries(FEED_CATEGORIES).forEach(([catId, cat]) => {
+      const types = new Map();
+      entries.filter((t) => t.category === catId && t.news.type).forEach((t) => {
+        const prev = types.get(t.news.type) || { label: t.news.typeLabel, icon: t.news.typeIcon, count: 0 };
+        prev.count += 1;
+        types.set(t.news.type, prev);
+      });
+      if (!types.size) return;
+      const group = el('optgroup', { label: `${cat.icon} ${cat.label}` });
+      types.forEach((v, id) => {
+        group.append(el('option', { value: `${catId}:${id}` }, `${v.icon ? `${v.icon} ` : ''}${v.label}（${v.count}件）`));
+      });
+      select.append(group);
+    });
+    // 再読み込み後も同じ絞り込みを保つ（その分類が無くなっていれば解除）
+    state.typeFilter = [...select.options].some((o) => o.value === current) ? current : '';
+    select.value = state.typeFilter;
+  }
+
+  function matchesType(t) {
+    if (!state.typeFilter) return true;
+    const [catId, typeId] = state.typeFilter.split(':');
+    return t.category === catId && t.news && t.news.type === typeId;
   }
 
   function matchesQuery(t, q) {
     if (!q) return true;
     const cat = state.data.categories[t.category];
-    const hay = [t.title, t.bubble, t.description, t.ward, t.era, t.access, cat.label].join(' ').toLowerCase();
+    const hay = [t.title, t.bubble, t.description, t.ward, t.era, t.access, cat.label, t.news && t.news.place]
+      .join(' ').toLowerCase();
     return q.split(/\s+/).every((w) => hay.includes(w));
   }
 
@@ -697,7 +754,7 @@
     const q = state.query.trim().toLowerCase();
     let shown = 0;
     state.topics.forEach((t) => {
-      const visible = state.activeCategories.has(t.category) && matchesQuery(t, q);
+      const visible = state.activeCategories.has(t.category) && matchesQuery(t, q) && matchesType(t);
       if (visible) shown += 1;
       const m = state.markers.get(t.id);
       if (m) m.el.classList.toggle('is-filtered', !visible);
@@ -748,6 +805,16 @@
     });
     window.addEventListener('hashchange', openFromHash);
     $('#news-refresh').addEventListener('click', refreshNews);
+    $('#type-select').addEventListener('change', (e) => {
+      state.typeFilter = e.target.value;
+      // 選んだ分類のカテゴリが非表示なら表示に戻す
+      const catId = state.typeFilter.split(':')[0];
+      if (catId && !state.activeCategories.has(catId)) {
+        state.activeCategories.add(catId);
+        syncChips();
+      }
+      applyFilter();
+    });
 
     // 操作ヒントは最初の操作後に消す
     const hint = $('#help-hint');
