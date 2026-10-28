@@ -166,7 +166,17 @@ body {
 }
 
 /* テーマに合わせて地図の色味を変える（吹き出しなどの要素には影響しない） */
-#map .maplibregl-canvas { filter: var(--map-filter); }
+#map > .maplibregl-canvas-container > .maplibregl-canvas { filter: var(--map-filter); }
+
+/* ハザードマップの重ね合わせ（乗算） */
+.hazard-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+.hazard-overlay[hidden] { display: none; }
+.hazard-overlay .maplibregl-canvas { pointer-events: none; }
 
 .help-hint {
   position: absolute;
@@ -729,6 +739,57 @@ body {
 
 .distance { margin-left: auto; font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
 
+/* ---------- ハザードマップのパネル ---------- */
+.hazard-ctrl button {
+  width: auto;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.hazard-ctrl button[aria-pressed="true"] { background: #bfe3ff; }
+
+.hazard-panel {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: min(360px, calc(100% - 24px));
+  padding: 8px 12px 10px;
+  background: var(--paper);
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-md);
+}
+.hazard-panel[hidden] { display: none; }
+.hazard-head { display: flex; align-items: center; justify-content: space-between; }
+.hazard-title { margin: 0; font-family: var(--comic); font-size: 1rem; }
+.hazard-head .close-btn { width: 28px; height: 28px; font-size: 13px; }
+.hazard-row { display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 0.8rem; }
+.hazard-row .tool-select { width: 100%; border-radius: 8px; }
+.hazard-strength input { flex: 1; }
+.hazard-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: 8px 0 4px;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+}
+.hazard-legend li { display: flex; align-items: center; gap: 4px; }
+.hazard-legend li.hazard-legend-note { display: block; }
+.hazard-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+}
+.hazard-source { margin: 4px 0 0; font-size: 0.7rem; line-height: 1.5; color: var(--muted); }
+.hazard-source a { color: var(--link); }
+
 /* ---------- ライブカメラ ---------- */
 .livecam-ctrl button {
   width: auto;
@@ -854,11 +915,22 @@ body {
   border: 0;
 }
 .cam-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   margin: 0;
   padding: 16px;
   color: #fff;
   font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: center;
 }
+.cam-empty p { margin: 0; }
+.cam-open-site { color: #111; background: #fff; border-color: #fff; }
 .cam-note {
   margin: 0;
   max-height: 4.6em;

@@ -68,6 +68,10 @@
     camMarkers: [], // [{ marker, el, cam }]
     camsVisible: false,
     activeCamId: null,
+    hazardVisible: false,
+    hazardLayer: 'flood_l2',
+    hazardMap: null,
+    hazardBox: null,
   };
 
   const $ = (sel) => document.querySelector(sel);
@@ -136,6 +140,7 @@
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
     map.addControl(new ResetViewControl(), 'top-right');
     map.addControl(new LiveCamControl(), 'top-right');
+    map.addControl(new HazardControl(), 'top-right');
     map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-right');
 
     map.on('load', () => {
@@ -243,6 +248,145 @@
     onRemove() {
       this._container.remove();
     }
+  }
+
+  // ---------- ハザードマップ（乗算で重ねる） ----------
+  // 国土交通省「重ねるハザードマップ」の公開タイル（APIキー不要）。さいたま市を流れる荒川・芝川・鴻沼川などの
+  // 浸水想定区域や、内水・土砂災害の区域が含まれる。
+  const HAZARD_TILE_BASE = 'https://disaportaldata.gsi.go.jp/raster/';
+  const HAZARD_ATTRIBUTION = 'ハザード: <a href="https://disaportal.gsi.go.jp/" target="_blank" rel="noopener">ハザードマップポータルサイト（国土交通省）</a>';
+  const FLOOD_DEPTH_LEGEND = [
+    ['#f7f5a9', '0.5m未満'], ['#ffd8c0', '0.5〜3m'], ['#ffb7b7', '3〜5m'],
+    ['#ff9191', '5〜10m'], ['#f285c9', '10〜20m'], ['#dc7adc', '20m以上'],
+  ];
+  const HAZARD_LAYERS = [
+    { id: 'flood_l2', label: '洪水 浸水の深さ（想定最大規模）', path: '01_flood_l2_shinsuishin_data', legend: FLOOD_DEPTH_LEGEND },
+    { id: 'flood_l1', label: '洪水 浸水の深さ（計画規模）', path: '01_flood_l1_shinsuishin_newlegend_data', legend: FLOOD_DEPTH_LEGEND },
+    // 以下は凡例の色をここに書かず、ハザードマップポータルの凡例を案内する
+    { id: 'keizoku', label: '洪水 浸水が続く時間（想定最大規模）', path: '01_flood_l2_keizoku_data' },
+    { id: 'kaokutoukai', label: '家屋倒壊等氾濫想定区域（氾濫流）', path: '01_flood_l2_kaokutoukai_hanran_data' },
+    { id: 'naisui', label: '内水（大雨で下水があふれる）浸水想定', path: '02_naisui_data' },
+    { id: 'dosha', label: '土砂災害警戒区域（急傾斜地の崩壊）', path: '05_kyukeishakeikaikuiki' },
+  ];
+
+  class HazardControl {
+    onAdd() {
+      this._container = document.createElement('div');
+      this._container.className = 'maplibregl-ctrl maplibregl-ctrl-group hazard-ctrl';
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.id = 'hazard-toggle';
+      btn.title = 'ハザードマップを重ねる';
+      btn.setAttribute('aria-label', 'ハザードマップを重ねる');
+      btn.setAttribute('aria-pressed', 'false');
+      btn.textContent = '🌊 ハザード';
+      btn.addEventListener('click', () => setHazardVisible(!state.hazardVisible));
+      this._container.appendChild(btn);
+      return this._container;
+    }
+    onRemove() {
+      this._container.remove();
+    }
+  }
+
+  function hazardTiles(layer) {
+    return [`${HAZARD_TILE_BASE}${layer.path}/{z}/{x}/{y}.png`];
+  }
+
+  // 本体の地図の上に、ハザードのタイルだけを描く透明な地図を重ね、CSS の mix-blend-mode: multiply（乗算）で合成する。
+  // 視点は本体の地図に合わせて動かし、地形の高さもそろえて傾けたときのずれを防ぐ。
+  function ensureHazardMap() {
+    if (state.hazardMap) return state.hazardMap;
+    const main = state.map;
+    const box = document.createElement('div');
+    box.className = 'hazard-overlay';
+    box.setAttribute('aria-hidden', 'true');
+    const canvasContainer = main.getCanvasContainer();
+    canvasContainer.insertBefore(box, main.getCanvas().nextSibling);
+    const layer = HAZARD_LAYERS.find((l) => l.id === state.hazardLayer) || HAZARD_LAYERS[0];
+    const overlay = new maplibregl.Map({
+      container: box,
+      style: {
+        version: 8,
+        sources: {
+          hazard: { type: 'raster', tiles: hazardTiles(layer), tileSize: 256, minzoom: 2, maxzoom: 17 },
+          'terrain-dem': { type: 'raster-dem', tiles: [DEM_TILES], encoding: 'terrarium', tileSize: 256, maxzoom: 14 },
+        },
+        layers: [{ id: 'hazard', type: 'raster', source: 'hazard', paint: { 'raster-opacity': 1, 'raster-resampling': 'nearest' } }],
+        terrain: main.getTerrain() ? { source: 'terrain-dem', exaggeration: main.getTerrain().exaggeration } : undefined,
+      },
+      interactive: false,
+      attributionControl: false,
+      maxPitch: 75,
+      center: main.getCenter(),
+      zoom: main.getZoom(),
+      bearing: main.getBearing(),
+      pitch: main.getPitch(),
+      fadeDuration: 0,
+    });
+    overlay.on('error', (e) => console.warn('hazard map error:', e && e.error ? e.error.message : e));
+    const sync = () => overlay.jumpTo({
+      center: main.getCenter(), zoom: main.getZoom(), bearing: main.getBearing(), pitch: main.getPitch(),
+    });
+    main.on('move', sync);
+    main.on('resize', () => { overlay.resize(); sync(); });
+    state.hazardMap = overlay;
+    state.hazardBox = box;
+    return overlay;
+  }
+
+  function setHazardVisible(visible) {
+    state.hazardVisible = visible;
+    const btn = $('#hazard-toggle');
+    if (btn) {
+      btn.setAttribute('aria-pressed', String(visible));
+      btn.title = visible ? 'ハザードマップを消す' : 'ハザードマップを重ねる';
+    }
+    if (visible) {
+      ensureHazardMap();
+      state.hazardBox.hidden = false;
+      state.hazardMap.resize();
+      renderHazardPanel();
+    } else if (state.hazardBox) {
+      state.hazardBox.hidden = true;
+    }
+    $('#hazard-panel').hidden = !visible;
+  }
+
+  function setHazardLayer(id) {
+    const layer = HAZARD_LAYERS.find((l) => l.id === id);
+    if (!layer) return;
+    state.hazardLayer = id;
+    const src = state.hazardMap && state.hazardMap.getSource('hazard');
+    if (src && src.setTiles) src.setTiles(hazardTiles(layer));
+    renderHazardPanel();
+  }
+
+  function renderHazardPanel() {
+    const layer = HAZARD_LAYERS.find((l) => l.id === state.hazardLayer) || HAZARD_LAYERS[0];
+    const select = $('#hazard-select');
+    if (!select.options.length) {
+      HAZARD_LAYERS.forEach((l) => select.append(el('option', { value: l.id }, l.label)));
+      select.addEventListener('change', () => setHazardLayer(select.value));
+      $('#hazard-strength').addEventListener('input', (e) => {
+        if (state.hazardBox) state.hazardBox.style.opacity = String(Number(e.target.value) / 100);
+      });
+      $('#hazard-close').addEventListener('click', () => setHazardVisible(false));
+    }
+    select.value = layer.id;
+    const legend = $('#hazard-legend');
+    if (layer.legend) {
+      legend.replaceChildren(...layer.legend.map(([color, label]) => {
+        const sw = el('span', { className: 'hazard-swatch' });
+        sw.style.background = color;
+        return el('li', {}, sw, label);
+      }));
+    } else {
+      legend.replaceChildren(el('li', { className: 'hazard-legend-note' }, '色の意味は ',
+        el('a', { href: 'https://disaportal.gsi.go.jp/', target: '_blank', rel: 'noopener' }, 'ハザードマップポータルサイト'),
+        ' の凡例をご覧ください。'));
+    }
+    $('#hazard-source').innerHTML = `${HAZARD_ATTRIBUTION}。地図の色と<b>乗算</b>で重ねています。避難の判断には <a href="https://www.city.saitama.lg.jp/" target="_blank" rel="noopener">さいたま市</a> の最新のハザードマップも確認してください。`;
   }
 
   // ---------- ライブカメラ ----------
@@ -371,7 +515,8 @@
 
   function camEmbedUrl(cam) {
     const yt = cam.youtube || {};
-    const params = 'autoplay=1&mute=1&playsinline=1';
+    // enablejsapi: 再生できないときのエラーを YouTube の IFrame Player API で受け取るため
+    const params = `autoplay=1&mute=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
     // 配信ごとに動画IDが変わるので、チャンネルの「今の配信」を埋め込むのを優先する
     if (yt.channelId) return `https://www.youtube.com/embed/live_stream?channel=${encodeURIComponent(yt.channelId)}&${params}`;
     if (yt.videoId) return `https://www.youtube.com/embed/${encodeURIComponent(yt.videoId)}?${params}`;
@@ -397,15 +542,18 @@
     box.replaceChildren();
     const src = camEmbedUrl(cam);
     if (src) {
-      box.append(el('iframe', {
+      const frame = el('iframe', {
+        id: 'cam-frame',
         src,
         title: `${cam.title}（ライブ映像）`,
         allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen',
         allowfullscreen: '',
         referrerpolicy: 'strict-origin-when-cross-origin',
-      }));
+      });
+      box.append(frame);
+      watchYouTubeErrors(frame, cam);
     } else {
-      box.append(el('p', { className: 'cam-empty' }, '映像を読み込めませんでした。「↗ 配信サイトへ」から見てください。'));
+      showCamError(cam, null);
     }
 
     const checked = state.livecams.checkedAt ? formatDate(state.livecams.checkedAt) : '';
@@ -427,6 +575,57 @@
     }
     $('#cam-panel').hidden = false;
     $('.app-main').classList.add('cam-open');
+  }
+
+  // ---- YouTube の再生エラー（「この動画は再生できません」など）を受け取って、分かりやすい案内に差し替える ----
+  let ytApiPromise = null;
+  function loadYouTubeApi() {
+    if (window.YT && window.YT.Player) return Promise.resolve(window.YT);
+    if (!ytApiPromise) {
+      ytApiPromise = new Promise((resolve, reject) => {
+        const prev = window.onYouTubeIframeAPIReady;
+        window.onYouTubeIframeAPIReady = () => {
+          if (typeof prev === 'function') prev();
+          resolve(window.YT);
+        };
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        tag.onerror = () => reject(new Error('YouTube IFrame API を読み込めませんでした'));
+        document.head.appendChild(tag);
+      });
+    }
+    return ytApiPromise;
+  }
+
+  function watchYouTubeErrors(frame, cam) {
+    loadYouTubeApi().then((YT) => {
+      if (!frame.isConnected) return; // もう別のカメラに切り替わった
+      // eslint-disable-next-line no-new
+      new YT.Player(frame, {
+        events: {
+          onError: (e) => {
+            if (frame.isConnected && state.activeCamId === cam.id) showCamError(cam, e.data);
+          },
+        },
+      });
+    }).catch((err) => console.warn(err.message));
+  }
+
+  // code: YouTube のエラー番号（101・150 は埋め込み不可、100 は見つからない／配信していない）
+  function showCamError(cam, code) {
+    const box = $('#cam-video');
+    let msg;
+    if (code === 101 || code === 150 || code === 152) {
+      msg = 'このカメラは、配信元の設定により、このサイトの中では再生できません。YouTube で直接見てください。';
+    } else if (code === 100) {
+      msg = '今は配信していないか、配信が見つかりませんでした。配信時間外の可能性があります。';
+    } else if (code == null) {
+      msg = '映像を読み込めませんでした。';
+    } else {
+      msg = `映像を再生できませんでした（エラー ${code}）。`;
+    }
+    const link = el('a', { className: 'cam-btn cam-open-site', href: cam.siteUrl, target: '_blank', rel: 'noopener' }, '▶ 配信サイトで見る');
+    box.replaceChildren(el('div', { className: 'cam-empty' }, el('p', {}, msg), link));
   }
 
   function closeCam() {
