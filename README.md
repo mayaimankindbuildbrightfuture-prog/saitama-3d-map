@@ -3,7 +3,7 @@
 埼玉県さいたま市（全10区）を **3Dマップ** で表示し、名所・歴史・文化・イベント・グルメ・自然・スポーツにゆかりのある場所に、**漫画の吹き出し** でトピックを表示するWebアプリです。さいたま市の **最新ニュース・オタク関連の情報・事件/防犯情報・ジャンル別のグルメ情報・スーパーの特売情報・地域の口コミ** も自動で取得し、記事に出てくる地名の場所に吹き出しで表示します。
 
 - ビルド不要の静的サイト（`index.html` + `city.js` + `app.js` + `style.css` + `data/topics.json`）
-- 同じ仕組みの **仙台市版** もあります（[`sendai/`](sendai/README.md)。公開URLは `…/saitama-3d-map/sendai/`）。ヘッダーの「🗺 仙台市版」「🗺 さいたま市版」で行き来できます
+- 同じ仕組みの **仙台市版** もあります（[`sendai/`](sendai/README.md)。公開URLは `…/saitama-3d-map/sendai/`）。ヘッダーの「🗺 仙台市版」「🗺 さいたま市版」で行き来できます。仙台市版には、クマ・イノシシなどの **害獣出没（🐻）** のカテゴリもあります
 - **APIキー不要・無料サービスのみ** で動作します
 
 ## 主な機能
@@ -171,9 +171,10 @@ data/news.json    最新ニュース（GitHub Actions が自動更新）
 data/livecams.json        ライブカメラの一覧と配信状況（GitHub Actions が自動更新）
 scripts/fetch_news.py     ニュースの取得と位置推定（Python 標準ライブラリのみ）
 scripts/fetch_livecams.py ライブカメラの YouTube チャンネルIDと今の配信を調べる
+scripts/fetch_bears.py    仙台市版：宮城県のクマ目撃等情報（Excel）と出没注意報等の発令状況を読む
 scripts/news_sources.json ニュースの取得元（RSS/Atom）
 scripts/places.json       位置推定に使う地名辞書
-tests/                    fetch_news.py・fetch_livecams.py・仙台市版のデータのテスト
+tests/                    fetch_news.py・fetch_livecams.py・fetch_bears.py・仙台市版のデータのテスト
 sendai/                   仙台市版（index.html・city.js・data/・scripts/ の設定。詳しくは sendai/README.md）
 .github/workflows/update-news.yml  定期取得と GitHub Pages への公開
 ```

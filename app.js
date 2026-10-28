@@ -28,6 +28,15 @@
   const FEED_CATEGORY_OF = {
     news: 'news', otaku: 'otaku', crime: 'crime', gourmet: 'foodnews', supermarket: 'supermarket', reviews: 'reviews',
   };
+  // city.js の feedCategories で、その市だけのカテゴリ（仙台市の「害獣出没」など）を after のカテゴリの後ろに加える
+  Object.entries(CITY.feedCategories || {}).forEach(([id, { after, ...cat }]) => {
+    const entries = Object.entries(FEED_CATEGORIES);
+    const at = entries.findIndex(([k]) => k === after);
+    entries.splice(at >= 0 ? at + 1 : entries.length, 0, [id, cat]);
+    Object.keys(FEED_CATEGORIES).forEach((k) => delete FEED_CATEGORIES[k]);
+    entries.forEach(([k, v]) => { FEED_CATEGORIES[k] = v; });
+    FEED_CATEGORY_OF[id] = id;
+  });
   // 起動時にオンにしておくカテゴリ（ほかはボタンでオンにする）
   const DEFAULT_CATEGORIES = ['news'];
   const FLYER_SITES = [
@@ -1446,6 +1455,23 @@
         '報道機関が伝えた警察発表などの情報です。地図の位置は記事中の地名からの推定で、事件の正確な発生場所ではありません。最新の正確な防犯情報は ',
         police, `${CITY.police.note || ''}で確認してください。`));
     }
+    if (topic.category === 'wildlife' && CITY.wildlife) {
+      const links = [];
+      CITY.wildlife.links.forEach((l, i) => {
+        if (i) links.push('・');
+        links.push(el('a', { href: l.url, target: '_blank', rel: 'noopener' }, l.label));
+      });
+      const note = n.official ? CITY.wildlife.officialNote : CITY.wildlife.note;
+      body.append(el('p', { className: 'crime-note' }, note, ' 最新の出没情報は ', ...links, ' で確認してください。'));
+      const alerts = activeBearAlerts();
+      if (alerts.length) {
+        body.append(el('p', { className: 'type-badge' }, `⚠️ 発令中：${alerts.map((a) => `${a.name}（${a.period}）`).join('・')}`));
+      }
+      if (n.official) {
+        const src = (state.newsMeta.extras || []).map((x) => x.source).find(Boolean);
+        if (src) body.append(el('p', { className: 'news-meta' }, `${src.label}${src.asOf ? `（${src.asOf}）` : ''}`));
+      }
+    }
     if (topic.category === 'supermarket') {
       const links = [];
       FLYER_SITES.forEach((f, i) => {
@@ -1462,14 +1488,16 @@
     }
 
     body.append(el('a', { className: 'news-link', href: n.url, target: '_blank', rel: 'noopener noreferrer' },
-      topic.category === 'reviews' ? '投稿を見る（外部サイト）' : '記事を読む（外部サイト）'));
+      topic.category === 'reviews' ? '投稿を見る（外部サイト）' : n.official ? '宮城県の公式サイトへ（外部サイト）' : '記事を読む（外部サイト）'));
 
     const dl = el('dl', { className: 'info-table' });
     const addRow = (k, v) => { if (v) dl.append(el('dt', {}, k), el('dd', {}, v)); };
     addRow('分類', n.typeLabel ? `${state.data.categories[topic.category].label}／${n.typeLabel}` : state.data.categories[topic.category].label);
     addRow('配信元', n.source);
     addRow('配信日時', formatDate(n.published));
-    addRow('位置の推定', n.matched
+    addRow('位置の推定', n.official
+      ? `地区名の「${n.matched}」のおおよその中心に表示（実際の発見地点ではありません）`
+      : n.matched
       ? `記事中の「${n.matched}」から推定（実際の場所と異なる場合があります）`
       : '地名が見つからないため、市全体の記事として表示');
     body.append(dl);
@@ -1628,12 +1656,32 @@
   // ---------- ニュース ----------
   // data/news.json は GitHub Actions（scripts/fetch_news.py）が定期的に更新する
   async function loadNews() {
+    let news;
     try {
-      return await loadJSON(`${NEWS_URL}?t=${Date.now()}`);
+      news = await loadJSON(`${NEWS_URL}?t=${Date.now()}`);
     } catch (err) {
       console.warn('ニュースを読み込めませんでした:', err);
       return null;
     }
+    // city.js の extraFeeds（仙台市版の「宮城県のクマ目撃等情報」など）の記事も、ニュースと同じように並べる
+    const extras = await Promise.all((CITY.extraFeeds || []).map((url) => loadJSON(`${url}?t=${Date.now()}`)
+      .catch((err) => { console.warn(`${url} を読み込めませんでした:`, err); return null; })));
+    news.extras = extras.filter(Boolean);
+    news.items = [...(news.items || []), ...news.extras.flatMap((x) => x.items || [])];
+    return news;
+  }
+
+  // 害獣出没（仙台市版）：宮城県のクマ出没注意報・警報が仙台市に出ていれば、起動時に一度だけ知らせる
+  function activeBearAlerts() {
+    return (state.newsMeta && state.newsMeta.extras || []).flatMap((x) => x.alerts || []).filter((a) => a.sendai);
+  }
+
+  function announceBearAlerts() {
+    if (state.bearAlertShown) return;
+    const alerts = activeBearAlerts();
+    if (!alerts.length) return;
+    state.bearAlertShown = true;
+    showToast(`🐻 宮城県の${alerts.map((a) => `${a.name}（${a.period}）`).join('・')}が${CITY.name}に発令中です。「🐻 害獣出没」で最近の目撃情報を見られます。`);
   }
 
   async function refreshNews() {
@@ -1684,7 +1732,8 @@
       ul.insertBefore(createListItem(t), firstTopic);
     });
 
-    state.newsMeta = { generatedAt: news.generatedAt, sources: news.sources || [] };
+    state.newsMeta = { generatedAt: news.generatedAt, sources: news.sources || [], extras: news.extras || [] };
+    announceBearAlerts();
     renderNewsStatus(entries);
     buildTypeSelect(entries);
     updateChipCounts();
@@ -1710,7 +1759,9 @@
       .map(([id, c]) => `${c.icon}${c.label} ${entries.filter((t) => t.category === id).length}件`)
       .join('・');
     const google = meta.sources.some((s) => /Google/.test(s.name));
-    box.textContent = `${counts}｜${formatDate(meta.generatedAt)} 更新${google ? '｜出典: Googleニュース検索' : ''}`;
+    const extraSources = (meta.extras || []).map((x) => x.source && x.source.label).filter(Boolean);
+    box.textContent = `${counts}｜${formatDate(meta.generatedAt)} 更新${google ? '｜出典: Googleニュース検索' : ''}`
+      + extraSources.map((l) => `｜${l}`).join('');
   }
 
   // オタク・事件・グルメの細かい分類（ジャンル）で絞り込むセレクトボックス

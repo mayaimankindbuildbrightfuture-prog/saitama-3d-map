@@ -42,15 +42,18 @@ jobs:
       - name: 仙台市版のライブカメラの配信を確認
         run: python3 scripts/fetch_livecams.py --city sendai
 
+      - name: 仙台市版のクマ目撃等情報（宮城県）を取得
+        run: python3 scripts/fetch_bears.py
+
       - name: 変更があればコミット
         run: |
-          if git diff --quiet -- data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json; then
+          if git diff --quiet -- data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json sendai/data/bears.json sendai/data/bear_places.json; then
             echo "ニュース・ライブカメラに変更はありません"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json
+          git add data/news.json data/livecams.json sendai/data/news.json sendai/data/livecams.json sendai/data/bears.json sendai/data/bear_places.json
           git commit -m "ニュースを更新"
           git push
 

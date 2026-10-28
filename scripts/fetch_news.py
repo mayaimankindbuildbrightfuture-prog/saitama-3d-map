@@ -336,12 +336,21 @@ def locate(text: str, places: list[dict]) -> dict | None:
     """本文中の地名のうち、最も具体的（同じ種類なら最も長い）ものを選ぶ。"""
     text = strip_place_ignore_words(text)
     best, best_key = None, None
+    areas = []
     for p in places:
         for alias in p["aliases"]:
             if alias in text:
                 key = (KIND_RANK.get(p["kind"], 0), len(alias))
                 if best_key is None or key > best_key:
                     best, best_key = {**p, "matched": alias}, key
+                if p["kind"] == "area":
+                    areas.append((len(alias), alias, p))
+    # 「青葉区上愛子」のように区名と地域名が両方あれば、区名の一部ではない地域名（上愛子）の方が具体的
+    if best and best["kind"] == "ward":
+        inner = [a for a in areas if a[1] not in best["matched"]]
+        if inner:
+            _, alias, p = max(inner, key=lambda a: a[0])
+            best = {**p, "matched": alias}
     return best
 
 
@@ -461,6 +470,9 @@ def classify_type(text: str, cat: dict) -> dict | None:
     types = cat.get("types") or []
     if not types:
         return None
+    # 「熊本」の「熊」などで分類を誤らないよう、カテゴリの ignoreWords を除いてから調べる
+    for w in cat.get("ignoreWords", []):
+        text = text.replace(w, "")
     for t in types:
         if any(k in text for k in t.get("keywords", [])):
             return t
