@@ -1,6 +1,6 @@
 {
   "_comment": "東京23区内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・links（配信元のページへのリンクの一覧）。lat/lng はおおよその位置（ウェザーニュースは区役所の位置）。youtube は scripts/fetch_livecams.py --city tokyo が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
-  "checkedAt": "2026-10-28T19:14+09:00",
+  "checkedAt": "2026-10-28T22:29+09:00",
   "cameras": [
     {
       "id": "kasumigaseki-cam",
