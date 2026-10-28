@@ -75,6 +75,18 @@
       <div id="detail-body" class="detail-body"></div>
     </aside>
 
+    <section id="cam-panel" class="cam-panel" aria-label="ライブカメラの映像" hidden>
+      <div class="cam-head">
+        <p class="cam-title"><span class="cam-live" id="cam-live" hidden>● LIVE</span><span id="cam-title"></span></p>
+        <div class="cam-actions">
+          <a id="cam-site" class="cam-btn" href="#" target="_blank" rel="noopener">↗ 配信サイトへ</a>
+          <button type="button" id="cam-close" class="cam-btn" aria-label="ライブカメラの映像を閉じる">✕ 閉じる</button>
+        </div>
+      </div>
+      <div class="cam-video" id="cam-video"></div>
+      <p class="cam-note" id="cam-note"></p>
+    </section>
+
     <div id="toast" class="toast" role="status" hidden></div>
     <p class="help-hint" id="help-hint">右ドラッグ（またはCtrl＋ドラッグ）で回転・傾き／ホイールで拡大縮小／吹き出しをクリックで詳細</p>
   </main>

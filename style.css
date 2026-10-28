@@ -729,6 +729,143 @@ body {
 
 .distance { margin-left: auto; font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
 
+/* ---------- ライブカメラ ---------- */
+.livecam-ctrl button { font-size: 16px; }
+.livecam-ctrl button[aria-pressed="true"] { background: var(--hl-strong); }
+
+.cam-marker {
+  cursor: pointer;
+  /* トピックの吹き出し（z-index 最大 100000）に隠れて押せなくならないよう、常に手前に出す */
+  z-index: 150000;
+}
+.cam-marker.active { z-index: 150001; }
+
+.cam-pin {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px 3px 4px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: #111;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.cam-pin-icon { font-size: 14px; }
+.cam-pin-label { max-width: 150px; overflow: hidden; text-overflow: ellipsis; }
+.zoom-far .cam-pin-label { display: none; }
+.zoom-far .cam-pin { padding: 3px 5px; }
+.cam-pin.is-live::after {
+  content: "LIVE";
+  margin-left: 2px;
+  padding: 0 4px;
+  font-size: 9px;
+  border-radius: 3px;
+  background: #e11d48;
+}
+.cam-marker.active .cam-pin,
+.cam-pin:hover { background: #e11d48; }
+
+/* 画面の左下 4分の1 に映像を出す */
+.cam-panel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border-top: var(--bw) var(--bs) var(--ink);
+  border-right: var(--bw) var(--bs) var(--ink);
+  border-radius: 0 var(--r-panel) 0 0;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.cam-panel[hidden] { display: none; }
+
+.cam-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px 6px 12px;
+}
+.cam-title {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  font-family: var(--comic);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cam-live {
+  margin-right: 6px;
+  padding: 0 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: #e11d48;
+  border-radius: 4px;
+}
+.cam-actions { display: flex; flex: none; gap: 6px; }
+.cam-btn {
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  background: var(--paper);
+  border: var(--bw-sm) var(--bs) var(--ink);
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+.cam-btn:hover { background: var(--hl); }
+
+.cam-video {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: #000;
+}
+.cam-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.cam-empty {
+  margin: 0;
+  padding: 16px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.cam-note {
+  margin: 0;
+  max-height: 4.6em;
+  overflow-y: auto;
+  padding: 6px 12px 8px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.cam-note a { color: var(--link); }
+
+/* 映像を出している間は、左の一覧パネルを上半分に縮め、操作ヒントを隠す */
+.cam-open .list-panel { bottom: calc(50% + 12px); }
+.cam-open .help-hint { display: none; }
+
 /* ---------- スマホ：下部シート ---------- */
 @media (max-width: 720px) {
   .app-header { padding: 6px 10px; gap: 6px 8px; }
@@ -771,6 +908,16 @@ body {
   }
 
   .help-hint { display: none; }
+
+  /* スマホでは4分の1では小さすぎるので、下部いっぱいに出す */
+  .cam-panel {
+    width: 100%;
+    height: 42%;
+    border-right: 0;
+    border-radius: var(--r-panel) var(--r-panel) 0 0;
+  }
+  .cam-open .list-panel { bottom: 42%; max-height: 50%; }
+  .cam-btn { padding: 4px 8px; font-size: 0.75rem; }
 }
 
 /* =====================================================================

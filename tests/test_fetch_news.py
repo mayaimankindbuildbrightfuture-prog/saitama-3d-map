@@ -122,6 +122,9 @@ class FetchNewsTest(unittest.TestCase):
             ("飲食店で強盗 男を逮捕 さいたま市", "crime", "violent"),  # グルメ語を含んでも事件を優先
             ("見沼区で不審者の声かけ", "crime", "suspicious"),
             ("さいたま市で秋のまつり", "news", ""),
+            ("大宮駅前に立ち飲み屋がオープン", "gourmet", "standing"),
+            ("浦和のせんべろ酒場が人気", "gourmet", "standing"),
+            ("さいたま市の老舗居酒屋が閉店", "gourmet", "izakaya"),
         ]
         for text, cat, typ in cases:
             got_cat, kind = fetch_news.classify(text, "news", categories)
