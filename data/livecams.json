@@ -1,6 +1,6 @@
 {
   "_comment": "さいたま市内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・image（定期更新の静止画を表示）・links（配信元のページへのリンクの一覧）・link（配信元へのリンクのみ）。lat/lng はおおよその位置（ウェザーニュースは区ごとの位置）。youtube は scripts/fetch_livecams.py が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
-  "checkedAt": "2026-10-30T01:18+09:00",
+  "checkedAt": "2026-10-30T07:54+09:00",
   "cameras": [
     {
       "id": "kitaurawa-yono-rail",

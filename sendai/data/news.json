@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T01:18+09:00",
+  "generatedAt": "2026-10-30T07:54+09:00",
   "sources": [
     {
       "name": "Googleニュース「仙台市」",
@@ -107,6 +107,11 @@
       "url": "https://news.google.com/rss/search?q=%E4%BB%99%E5%8F%B0+%28%E3%83%A8%E3%83%BC%E3%82%AF%E3%83%99%E3%83%8B%E3%83%9E%E3%83%AB+OR+%E3%82%A6%E3%82%B8%E3%82%A8%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC+OR+%E3%81%BF%E3%82%84%E3%81%8E%E7%94%9F%E5%8D%94+OR+%E3%83%AD%E3%83%94%E3%82%A2+OR+%E8%A5%BF%E5%8F%8B+OR+%E3%82%B6%E3%83%BB%E3%83%93%E3%83%83%E3%82%B0+OR+%E6%A5%AD%E5%8B%99%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%29+when%3A14d&hl=ja&gl=JP&ceid=JP%3Aja"
     },
     {
+      "name": "Mastodon #仙台（mstdn.jp）",
+      "category": "reviews",
+      "url": "https://mstdn.jp/tags/%E4%BB%99%E5%8F%B0.rss"
+    },
+    {
       "name": "Mastodon #仙台市（mstdn.jp）",
       "category": "reviews",
       "url": "https://mstdn.jp/tags/%E4%BB%99%E5%8F%B0%E5%B8%82.rss"
@@ -135,6 +140,11 @@
       "name": "Mastodon #国分町（mstdn.jp）",
       "category": "reviews",
       "url": "https://mstdn.jp/tags/%E5%9B%BD%E5%88%86%E7%94%BA.rss"
+    },
+    {
+      "name": "Mastodon #sendai（mstdn.jp）",
+      "category": "reviews",
+      "url": "https://mstdn.jp/tags/sendai.rss"
     },
     {
       "name": "Mastodon #仙台（fedibird.com）",
@@ -312,6 +322,11 @@
       "url": ""
     },
     {
+      "name": "Bluesky「太白区」",
+      "category": "reviews",
+      "url": ""
+    },
+    {
       "name": "Bluesky「仙台 泉区」",
       "category": "reviews",
       "url": ""
@@ -322,17 +337,17 @@
       "url": ""
     },
     {
-      "name": "Bluesky「長町」",
-      "category": "reviews",
-      "url": ""
-    },
-    {
       "name": "Bluesky「国分町」",
       "category": "reviews",
       "url": ""
     },
     {
       "name": "Bluesky「一番町 仙台」",
+      "category": "reviews",
+      "url": ""
+    },
+    {
+      "name": "Bluesky「秋保」",
       "category": "reviews",
       "url": ""
     },
@@ -353,13 +368,229 @@
       "summary": "",
       "source": "地域ニュースサイト号外NET",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TQ0lVUzBuakoxLWYxaUVNcHFSbHpfSkpDSWNRTi1XYVVKVU52QWhPdlJRS2ZqbWE3aU0tdzVEelpUX0UyVFdfaFZtclY0aEdDZXRUZU5GeWFNUHJ4bnpOLUZMeHBIZ0dkV2xsRThOM182QQ?oc=5",
-      "published": "2026-10-30T01:02+09:00",
+      "published": "2026-10-30T06:45+09:00",
       "place": "秋保大滝",
       "placeKind": "facility",
       "matched": "秋保大滝",
       "ward": "太白区",
       "lat": 38.27488,
       "lng": 140.60282
+    },
+    {
+      "id": "news-5fcf2c7590",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【泉区】仙台泉プレミアムアウトレットの『Clarks』が一時閉店。2026年11月6日移転オープン！",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9VTzl3bzZGaUc4UzktTmJ2YU9jb2dzQXlabjM5dVBnYTd2LWo2VENxclNrNnpsaEJ6cmlCc0FfemNxU3pyTEo0T1JTeTdlaS0xT3JhMlBnSEJsZEhYb0tUc2JR?oc=5",
+      "published": "2026-10-30T06:45+09:00",
+      "place": "泉区",
+      "placeKind": "ward",
+      "matched": "泉区",
+      "ward": "泉区",
+      "lat": 38.32627,
+      "lng": 140.88132
+    },
+    {
+      "id": "news-01b053a964",
+      "category": "otaku",
+      "type": "cosplay",
+      "typeLabel": "コスプレ・同人",
+      "typeIcon": "",
+      "title": "【青葉区】仙台三越のライオン像さん、2026年もハロウィンのコスプレ展開中！",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9iRVlXNHlTVnRobzMzeDZhQlE2cmdzLVFaVEQ4RGQteXpVcjlsSWhSQU1DRkVjMDFmeHYxUzVwdWwwMjF2R3Q4YmxVNXdGWmNBT2szdXFHXzNMeGE0VHBIU09R?oc=5",
+      "published": "2026-10-30T06:43+09:00",
+      "place": "青葉区",
+      "placeKind": "ward",
+      "matched": "青葉区",
+      "ward": "青葉区",
+      "lat": 38.26908,
+      "lng": 140.87045
+    },
+    {
+      "id": "news-a7d58c087f",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【宮城野区】2026年11月1日開催予定のペンギン来館イベントが中止に。鳥インフルの影響で。",
+      "summary": "",
+      "source": "au Webポータル",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9nNEZIQ1Jzb2FjbWZ1dzZidThCYnVLYjlfRGZLRlVSdTRuTVJXMVZ3R2tabm9BNlgtODhpWFB5eWF4MU85dVRHdmdxSjhSUlZlQlhtWlpZTHdzWExZNnJKVTlWNE9Qdjk4U241SUl3?oc=5",
+      "published": "2026-10-30T06:42+09:00",
+      "place": "宮城野区",
+      "placeKind": "ward",
+      "matched": "宮城野区",
+      "ward": "宮城野区",
+      "lat": 38.26619,
+      "lng": 140.90991
+    },
+    {
+      "id": "news-bea301c643",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "仙台市長の海外出張費、7カ国11回で総額6672万円 「高すぎる」の指摘を受け内訳と成果を公表 市長「心を痛めていた」",
+      "summary": "",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9IY1pjLWNMYVFNUDU5c1UtSk9LcFJtbkhQUDRLRHU3V1BiTTVGaGN1OE5RSXYwZEdZVWtmSDd1UEtIVVVCNWZBcmpMQWotM2lLSEZmUGt0UDFpQkM3MlFDd0RoeEpqanZxcDdYa2N4aGhhaGJ6R00zNG1MMmFQLUU?oc=5",
+      "published": "2026-10-30T06:03+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.2682,
+      "lng": 140.86946
+    },
+    {
+      "id": "news-91345f3cab",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "AIT、仙台事業所開設 | ロジスティクス",
+      "summary": "AIT、仙台事業所開設 | ロジスティクス | ニュース Daily Cargo電子版",
+      "source": "Daily Cargo電子版",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5LVHBzZmFXRldJRm1YX0ROVlA0X2JsX19qV2xva0RPRzFVRXMxZlJFc0R4THctS005akhTNWZSSnFtMWJ0QXAxM3BWeXBCYWFlRUx2TGtKTkFHOEJHM29CQ0N4Z2lzNEJ6U2c?oc=5",
+      "published": "2026-10-30T06:03+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.267868,
+      "lng": 140.869834
+    },
+    {
+      "id": "news-9ccf584098",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "仙台藩「慶長遣欧使節」の関係都市つなぐ 仙台で国際合唱祭 イタリア、スペイン、米国から参加",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1HTjJUSHdNeVVhUWw3Ulk2ZmpJM2Z4Mldhd1FVbkNVVHpHTlF6cXh5VGVKeEpYWDBFLWNJTE9MUmVTWFdCdjl4bEJwVjdwSjNWMFo4S0VFbEtSU3c?oc=5",
+      "published": "2026-10-30T06:00+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.268256,
+      "lng": 140.86868
+    },
+    {
+      "id": "news-4fa4bc7896",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "「日本一を目指したい」仙台大学が明治神宮大会出場を報告",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1nZnhKaDEwOHFOLTB4RUcxemJLdGo0S1NYU0QzT3hQWDJQR3NPV09uYlBrc3BtNWxEV0JYNkdMd1RMMjBiNFh5MEFjQVhoaVFoektfWndDT2hXUzQ?oc=5",
+      "published": "2026-10-30T05:00+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.268674,
+      "lng": 140.870221
+    },
+    {
+      "id": "news-fbb87c4426",
+      "category": "crime",
+      "type": "fraud",
+      "typeLabel": "詐欺",
+      "typeIcon": "",
+      "title": "特殊詐欺の被害防止アプリ普及へ仙台の「ララガーデン長町」でキャンペーン",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5Cd3R3YUdYNVRWQTc2LU52WGxXbzJRM1NoWUJBa0llb0RtSDBXWDU2ZnZ2NE1FNVZsczZqOE5vaExBNWhES2F5R3NUM3lUMEdFeDZLMW56YWkzN1k?oc=5",
+      "published": "2026-10-30T05:00+09:00",
+      "place": "あすと長町",
+      "placeKind": "area",
+      "matched": "長町",
+      "ward": "太白区",
+      "lat": 38.229,
+      "lng": 140.886
+    },
+    {
+      "id": "news-47e73bc7ff",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "仙台銀、創業融資3年で697件 女性起業家育成へ体制整備",
+      "summary": "",
+      "source": "ニッキンONLINE",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCdkVKQU1QTDZQb3pVUVJ0R0xKNUlIZzBhbUlnY2tBVnNwQ1QzY1Uxa19JckxFc3FPRmotR18wSVlQQy03NDQwUDYxRFlfUEgzUmJOQVd3?oc=5",
+      "published": "2026-10-30T04:50+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.267314,
+      "lng": 140.869267
+    },
+    {
+      "id": "news-8b7be8e808",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "仙台国分町の日本酒処参壱丸撰です！ 10月30日(金）18時より通常営業！ 翌営業日10月31日(土) お席ございます…",
+      "summary": "仙台国分町の日本酒処参壱丸撰です！ 10月30日(金）18時より通常営業！ 翌営業日10月31日(土) お席ございます！ ◎本日のご紹介日本酒～「福司 純米」北海道の銘酒。北海道産の酒米吟風仕込み。伝統の技と低温長期で醗酵。北海道の冬を感じるキレの良い１杯♪",
+      "source": "Bluesky「国分町」",
+      "url": "https://bsky.app/profile/bar3103.bsky.social/post/3myzycg7kgk2b",
+      "published": "2026-10-30T04:19+09:00",
+      "place": "国分町",
+      "placeKind": "facility",
+      "matched": "国分町",
+      "ward": "青葉区",
+      "lat": 38.26415,
+      "lng": 140.86865
+    },
+    {
+      "id": "news-2ec7819030",
+      "category": "otaku",
+      "type": "anime",
+      "typeLabel": "アニメ・漫画",
+      "typeIcon": "",
+      "title": "東北初開催「中華まん博覧会2026」三井アウトレットパーク 仙台港。2026年11月14日(土)～23日(月・祝)の10日間、全国から100種類を超えるご当地中華まんが集結。 片手で食べる「ご当地グルメ」がテーマの中華まん博覧会。冬のワンハンドグルメの王様「中華まん」が主役の",
+      "summary": "",
+      "source": "千葉テレビ放送株式会社",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5VVTVoLWZ4SjVNYVE3dXFHVkhQdDVNa3hZT0E3ZFY3cFNtVDY4NDFGNEthN2NrM3l2aEpiek9OQVJGNzdkd2wtQmpIRmRMc2RoSnVId3kzcjVoS3d4d1l3?oc=5",
+      "published": "2026-10-30T02:56+09:00",
+      "place": "仙台港",
+      "placeKind": "area",
+      "matched": "仙台港",
+      "ward": "宮城野区",
+      "lat": 38.2694,
+      "lng": 141.005
+    },
+    {
+      "id": "news-e61ab6d84a",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "【078】輪行で大崎へ！あの神社の本家へ行ってきたプラスα（第1回） 【078】輪行で大崎へ！あの神社の本家へ行ってき…",
+      "summary": "【078】輪行で大崎へ！あの神社の本家へ行ってきたプラスα（第1回） 【078】輪行で大崎へ！あの神社の本家へ行ってきたプラスα（第1回） 2026年8月にアップした この動画で最後に訪問している「大崎八幡宮」。 動画内 24:23 から話をしていますが、仙台市の大崎八幡宮は、元々大崎市田 [...]",
+      "source": "Bluesky「仙台市」",
+      "url": "https://bsky.app/profile/bikingjp.bsky.social/post/3myzozsvdyq26",
+      "published": "2026-10-30T01:34+09:00",
+      "place": "大崎八幡宮",
+      "placeKind": "facility",
+      "matched": "大崎八幡宮",
+      "ward": "青葉区",
+      "lat": 38.27164,
+      "lng": 140.84485
     },
     {
       "id": "news-b51ff46ab4",
@@ -448,8 +679,8 @@
       "placeKind": "facility",
       "matched": "仙台市役所",
       "ward": "青葉区",
-      "lat": 38.2682,
-      "lng": 140.86946
+      "lat": 38.269049,
+      "lng": 140.868796
     },
     {
       "id": "news-376ed7a855",
@@ -466,8 +697,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267868,
-      "lng": 140.869834
+      "lat": 38.267914,
+      "lng": 140.870769
+    },
+    {
+      "id": "news-5a4ab535d7",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "「病気というより個性」認知症の理解を深めるイベント開催（仙台）",
+      "summary": "「病気というより個性」認知症の理解を深めるイベント開催（仙台）（ミヤギテレビ） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAwSkx4Mm9KUmp4cG5nUVNoZkJJZWhrbFhzYkZMVDQyVlQtTzB6ZTBzeFJNc1RYb3N5UWIyaGUzc0ZBWjdHODM5NnJLeE5HS2tkQWtaV1ZzWlhCLXEyN09nUUdFQmNSWEpkd1ZjZm9mMk9KdDNPMVRIOTFYRTg4ZDA?oc=5",
+      "published": "2026-10-29T20:37+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.267651,
+      "lng": 140.86816
     },
     {
       "id": "news-33db2bb8ab",
@@ -488,22 +737,40 @@
       "lng": 140.882764
     },
     {
-      "id": "news-e859f7a0c6",
+      "id": "news-02027d8701",
       "category": "news",
       "type": "",
       "typeLabel": "",
       "typeIcon": "",
-      "title": "令和8年度こども・子育てシンポジウムを開催します！",
-      "summary": "令和8年度こども・子育てシンポジウムを開催します！（仙台こども財団） 仙台市公式ホームページ",
-      "source": "仙台市公式ホームページ",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQRXE4all4Q1Fpekc4NkJoNG1mdXZKXzcwN0ZVUDhzS1d5ZnhPRzROQTluSkxPRTdLRnhkSmo5ZEk2M1FUSUFDOFB6Rl9NU2FBSnZBclNRbG16ZjhGZk9PeTRmTlVnbWNHa0p2WWcyeXUyUHBhZVplX19US3FzVElMUjlsdnRZX0J0c0lkRDVPYk44VnJoMzY0RHpn?oc=5",
-      "published": "2026-10-29T19:58+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.268256,
-      "lng": 140.86868
+      "title": "砂の下まで丸見え！透明ビーズでチンアナゴ観察 チンアナゴの日に仙台うみの杜水族館",
+      "summary": "",
+      "source": "いこーよニュース",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE84MVJlWWZDWTNxUW9lMjlaZEtidkNmdHZkX0tZdzhld01rU2JnenU5azYtbzZkOTY5NFNfTm14UzFuUHZXa283dzN5SHo3aGRwZmc?oc=5",
+      "published": "2026-10-29T20:00+09:00",
+      "place": "仙台うみの杜水族館",
+      "placeKind": "facility",
+      "matched": "うみの杜水族館",
+      "ward": "宮城野区",
+      "lat": 38.27106,
+      "lng": 140.98047
+    },
+    {
+      "id": "news-5ed29e51d6",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "スマホで退避先を予約 帰宅困難者対策 JR仙台駅前で訓練 「10秒で完了」「多言語化に期待」",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1rZUlibE9LY2JKUnVqRFkxa05TYkRuNGlsYy1hQU02bWVnOS1IX1IzRmhhMVJiZXlaY1JUNFJnMVd1Q29VQXFNek9DQmVhVlFUQVdjei0yU2hFc0U?oc=5",
+      "published": "2026-10-29T19:43+09:00",
+      "place": "仙台駅",
+      "placeKind": "station",
+      "matched": "仙台駅",
+      "ward": "青葉区",
+      "lat": 38.260406,
+      "lng": 140.88161
     },
     {
       "id": "news-c4a7725064",
@@ -520,8 +787,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.268674,
-      "lng": 140.870221
+      "lat": 38.269396,
+      "lng": 140.869997
     },
     {
       "id": "news-8ed82f8d58",
@@ -538,8 +805,26 @@
       "placeKind": "facility",
       "matched": "国分町",
       "ward": "青葉区",
-      "lat": 38.26415,
-      "lng": 140.86865
+      "lat": 38.263818,
+      "lng": 140.869024
+    },
+    {
+      "id": "news-9698f27538",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "「チーム医療進めたい」東北医科薬科大学が来年度に看護学部を新設＜宮城・仙台市＞",
+      "summary": "「チーム医療進めたい」東北医科薬科大学が来年度に看護学部を新設＜宮城・仙台市＞（2026年10月29日掲載） 日テレNEWS NNN",
+      "source": "日テレNEWS NNN",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBST2E2Y19icDNFZWRNTWs3empybDN4cDRzUmdJT0liMTg5NGkyVGliMjJ6ekg1SlE1NDR5STI2SlpSM21EZXBnTnRpTG02SXdmQ0pfNmw0UkRHVDhRTWdMLXFoU0pTYXBhWVhrTTRLdFdiRDl1eW54OVZ6N08yMTg?oc=5",
+      "published": "2026-10-29T18:29+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.266952,
+      "lng": 140.870094
     },
     {
       "id": "news-03d5a8fce2",
@@ -556,34 +841,34 @@
       "placeKind": "facility",
       "matched": "うみの杜水族館",
       "ward": "宮城野区",
-      "lat": 38.27106,
-      "lng": 140.98047
+      "lat": 38.270728,
+      "lng": 140.980844
     },
     {
-      "id": "news-6ff8817397",
-      "category": "reviews",
-      "type": "shopping",
-      "typeLabel": "買い物",
-      "typeIcon": "🛍️",
-      "title": "#ザ・モール仙台長町 内の西友で買い物して来ました🛒",
-      "summary": "#ザ・モール仙台長町 内の西友で買い物して来ました🛒",
-      "source": "Bluesky「長町」",
-      "url": "https://bsky.app/profile/jozenji.bsky.social/post/3myywbxfdnc2t",
-      "published": "2026-10-29T18:11+09:00",
-      "place": "あすと長町",
-      "placeKind": "area",
-      "matched": "長町",
-      "ward": "太白区",
-      "lat": 38.229,
-      "lng": 140.886
+      "id": "news-d3987f9283",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "増収増益 植松商会（仙台市）＜中間決算東北（10月29日）＞",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5lQno3V2Q0VWN5bzNDbjY5V1JTWEhCSTZHVG5ReDFxZlB0ZlNrRFUyNklwYWgzMkhxNnNDczR1X1ZBZURtYXBsWU5wSl9HT3RjaGFRRlpLVm80dWs?oc=5",
+      "published": "2026-10-29T18:10+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.268803,
+      "lng": 140.867875
     },
     {
       "id": "news-49fc2b3bc2",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
       "typeIcon": "",
-      "title": "6年ぶり「土曜日のハロウィーン」宮城県警の仙台駅周辺の警戒体制が判明",
+      "title": "6年ぶり「土曜日のハロウィーン」仙台駅周辺の混雑見込みは?警察の警戒体制は?",
       "summary": "",
       "source": "河北新報オンライン",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nX0lTUXJiRDdLRkxaTGtNWkdsSkJ3cHBXZ2hHR2t6T0VLamtfejA4WkhnX3RpYVdrd3lMU3ZHcWVnSEdhZ1JqSlpESmVHRVRnSWpkLVl3MWVlUHM?oc=5",
@@ -592,8 +877,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.260406,
-      "lng": 140.88161
+      "lat": 38.260824,
+      "lng": 140.883151
     },
     {
       "id": "news-c0fe5d62ab",
@@ -610,8 +895,8 @@
       "placeKind": "ward",
       "matched": "青葉区",
       "ward": "青葉区",
-      "lat": 38.26908,
-      "lng": 140.87045
+      "lat": 38.268748,
+      "lng": 140.870824
     },
     {
       "id": "news-f354ba28bf",
@@ -628,8 +913,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267314,
-      "lng": 140.869267
+      "lat": 38.268647,
+      "lng": 140.871212
     },
     {
       "id": "news-b24361b78b",
@@ -646,8 +931,8 @@
       "placeKind": "ward",
       "matched": "仙台市宮城野区",
       "ward": "宮城野区",
-      "lat": 38.26619,
-      "lng": 140.90991
+      "lat": 38.265858,
+      "lng": 140.910284
     },
     {
       "id": "news-2154aea931",
@@ -664,8 +949,26 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.260824,
-      "lng": 140.883151
+      "lat": 38.259464,
+      "lng": 140.882197
+    },
+    {
+      "id": "news-ae421d029e",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【無料｜11/24・12/21仙台開催】これから１０年絶対に負けない経営の仕組み【ＮＢＣコンサルタンツ㈱】",
+      "summary": "",
+      "source": "仙台商工会議所",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE02V0NiVzk2S2ZKNUNqNU1mQnVPZ3h1dVBiT2FHVE9pSUN2eWs3WmRaSzBta2gwcHduUm43S0RveUZGTE5kd1o1WU9EeDN2bldkX2lQRzhKSXQwMmRIeXMtUU5DXzVObGtIc0E?oc=5",
+      "published": "2026-10-29T15:25+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.266851,
+      "lng": 140.868499
     },
     {
       "id": "news-705b2464eb",
@@ -682,8 +985,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269049,
-      "lng": 140.868796
+      "lat": 38.269785,
+      "lng": 140.869031
     },
     {
       "id": "news-0a34e23681",
@@ -700,8 +1003,44 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267914,
-      "lng": 140.870769
+      "lat": 38.267232,
+      "lng": 140.871154
+    },
+    {
+      "id": "news-82d74c844a",
+      "category": "reviews",
+      "type": "food",
+      "typeLabel": "グルメ・お店",
+      "typeIcon": "🍴",
+      "title": "せっかくなので秋保温泉のホテルに宿泊♨️ ここのホテルはお一人様用のビジホみたいな部屋があるので助かりました 夕食がバ…",
+      "summary": "せっかくなので秋保温泉のホテルに宿泊♨️ ここのホテルはお一人様用のビジホみたいな部屋があるので助かりました 夕食がバイキングでお酒呑み放題なのは最高でした🍶蔵王美味しかったです😋",
+      "source": "Bluesky「秋保」",
+      "url": "https://bsky.app/profile/cannary.bsky.social/post/3myylgnlz6k22",
+      "published": "2026-10-29T14:57+09:00",
+      "place": "秋保",
+      "placeKind": "area",
+      "matched": "秋保",
+      "ward": "太白区",
+      "lat": 38.22904,
+      "lng": 140.71241
+    },
+    {
+      "id": "news-0a1eeb1bc9",
+      "category": "reviews",
+      "type": "food",
+      "typeLabel": "グルメ・お店",
+      "typeIcon": "🍴",
+      "title": "先日はソニック×秋保温泉のコラボに行ってきました！ こけしと万華鏡作りも体験したので全部のカードをゲットです！ こけし…",
+      "summary": "先日はソニック×秋保温泉のコラボに行ってきました！ こけしと万華鏡作りも体験したので全部のカードをゲットです！ こけしはナックルズの絵柄で作ってみました👍 温泉も気持ちよかったし美味しいものをたくさん食べられて楽しかったです😋 #ソニかつ",
+      "source": "Bluesky「秋保」",
+      "url": "https://bsky.app/profile/cannary.bsky.social/post/3myyleohxlc22",
+      "published": "2026-10-29T14:55+09:00",
+      "place": "秋保",
+      "placeKind": "area",
+      "matched": "秋保",
+      "ward": "太白区",
+      "lat": 38.228708,
+      "lng": 140.712784
     },
     {
       "id": "news-de6e55564d",
@@ -718,8 +1057,8 @@
       "placeKind": "ward",
       "matched": "仙台市青葉区",
       "ward": "青葉区",
-      "lat": 38.268748,
-      "lng": 140.870824
+      "lat": 38.269136,
+      "lng": 140.86967
     },
     {
       "id": "news-235735c88d",
@@ -736,8 +1075,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267651,
-      "lng": 140.86816
+      "lat": 38.267976,
+      "lng": 140.867334
     },
     {
       "id": "news-5caea32b3a",
@@ -754,8 +1093,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269396,
-      "lng": 140.869997
+      "lat": 38.269576,
+      "lng": 140.870887
     },
     {
       "id": "news-290bf7430a",
@@ -772,8 +1111,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266952,
-      "lng": 140.870094
+      "lat": 38.266346,
+      "lng": 140.869554
+    },
+    {
+      "id": "news-fc2d5345f1",
+      "category": "supermarket",
+      "type": "opening",
+      "typeLabel": "新店・リニューアル",
+      "typeIcon": "🆕",
+      "title": "宮城県 仙台市＞「保険見直し本舗 イオンタウン仙台泉大沢店」が2026年10月30日 金曜日オープン",
+      "summary": "",
+      "source": "ニコニコニュース",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9NSWNMdUNjT184bldDc21EdkxMOUtYaURoVGctQmpFblZYXzNFLWRyRTFmaVBzc0djSWRpREhpWVdCWjlIN0pZYTRTVUJNbEdBUmNjRXI3X1BIMU85QWUzTjcyazRfQWJj?oc=5",
+      "published": "2026-10-29T14:21+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.269553,
+      "lng": 140.867803
     },
     {
       "id": "news-196d780a57",
@@ -808,8 +1165,8 @@
       "placeKind": "ward",
       "matched": "仙台市青葉区",
       "ward": "青葉区",
-      "lat": 38.269136,
-      "lng": 140.86967
+      "lat": 38.269554,
+      "lng": 140.871211
     },
     {
       "id": "news-1f5fc95b87",
@@ -826,8 +1183,62 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.268803,
-      "lng": 140.867875
+      "lat": 38.26811,
+      "lng": 140.87187
+    },
+    {
+      "id": "news-2dd86aa92c",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "放射冷却が強まり仙台など8か所で今季一番の冷え込み 朝日を背に幻想的な「気嵐」も",
+      "summary": "放射冷却が強まり仙台など8か所で今季一番の冷え込み 朝日を背に幻想的な「気嵐」も（tbc東北放送） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE96UVNtOURvazNXZzhYVjFlbEUydEtJaWlUQ280WU9TUk5OOThZZXNxaDFLYmRteE5sMWVKSGZ6SkFTUW0zSlF2OUJUU1R3UlRZRGVTQTdCMnVQY2JZc1YzNTlkdFFkWF9iNVh6dkhmbllZeTBpTkhNbzUwMlBjQzA?oc=5",
+      "published": "2026-10-29T12:18+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.26691,
+      "lng": 140.86756
+    },
+    {
+      "id": "news-195485b9d8",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "大地震で交通機関ストップを想定 仙台駅周辺で帰宅困難者対応訓練 スマホで滞在先を予約し移動",
+      "summary": "大地震で交通機関ストップを想定 仙台駅周辺で帰宅困難者対応訓練 スマホで滞在先を予約し移動（仙台放送） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBvRmkxcVNGYkpCajJyQVlaNG42TnlwUk5vTzNVSjR6YVF5bVF1M3BMbldRR1Rwc3RMWTRTd0hiV002SmNrbzlHX1o1aW5WRXR6NmhmSXZtaEllZFItc2lLMUp0S2R5dnZVdTR1VDcwWFBNSFo4YllPQkxKV0k4bTg?oc=5",
+      "published": "2026-10-29T12:12+09:00",
+      "place": "仙台駅",
+      "placeKind": "station",
+      "matched": "仙台駅",
+      "ward": "青葉区",
+      "lat": 38.261199,
+      "lng": 140.881726
+    },
+    {
+      "id": "news-e565d746e1",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "今シーズンは2025年より4日早く出荷「仙台いちご」出荷出発式で市場関係者に初物が振る舞われる",
+      "summary": "今シーズンは2025年より4日早く出荷「仙台いちご」出荷出発式で市場関係者に初物が振る舞われる（tbc東北放送） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBFU3NwZHJSWW1sSDhvWnFKVXROSk0xZWVZeWR6Y2ZjR0wwaldZVHMzYklkcW5wYjIyekdnalFtT3VvVExtRG9LV1BRV0tscnh6elpJUlh3dzBFV0FjdGNwQWljSzA3OTYyNXhvMHZUUUhDUGM1SFBPMlhWUHJMY1k?oc=5",
+      "published": "2026-10-29T12:09+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.270244,
+      "lng": 140.869798
     },
     {
       "id": "news-c9ac3444f6",
@@ -844,26 +1255,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.268647,
-      "lng": 140.871212
+      "lat": 38.266468,
+      "lng": 140.870943
     },
     {
-      "id": "news-46f15aced9",
+      "id": "news-9fe68cd876",
       "category": "news",
       "type": "",
       "typeLabel": "",
       "typeIcon": "",
       "title": "仙台いちごの出荷式 身が大きく品質が良い 仙台市中央卸売市場",
-      "summary": "仙台いちごの出荷式 身が大きく品質が良い 仙台市中央卸売市場（khb東日本放送） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBnQnh2ZTctOFFHN0NGZDd0TGl0MGZOWC1jMUR4ZjBMc0RaSGhLT0hWNDBEd2ZwTk43VFVrZl9JLU1nbW5WMUJYWjNhZXpyZlNZLVNCTDRZTHRSUXhReTd5S1NiNzVSZTB4anNveHZkMGtMOUpEWXdqSVVnWERWb2M?oc=5",
-      "published": "2026-10-29T11:48+09:00",
+      "summary": "",
+      "source": "khb東日本放送",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9GWGNDemVtakMxRkpJRXZmWF82MFhtcnFWRzNVWmxueHNKcHN1MGpwRC16S0V5TU1Ob0VuVExkcUtiaUJIalZUSkpKaXNxOG8?oc=5",
+      "published": "2026-10-29T11:50+09:00",
       "place": "市全体",
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266851,
-      "lng": 140.868499
+      "lat": 38.268674,
+      "lng": 140.86687
     },
     {
       "id": "news-1076bd70ba",
@@ -880,8 +1291,8 @@
       "placeKind": "ward",
       "matched": "青葉区",
       "ward": "青葉区",
-      "lat": 38.269554,
-      "lng": 140.871211
+      "lat": 38.268194,
+      "lng": 140.870257
     },
     {
       "id": "news-bd7a3e9538",
@@ -898,8 +1309,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269785,
-      "lng": 140.869031
+      "lat": 38.269296,
+      "lng": 140.871813
     },
     {
       "id": "news-737d1012b1",
@@ -916,8 +1327,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267232,
-      "lng": 140.871154
+      "lat": 38.266056,
+      "lng": 140.868619
+    },
+    {
+      "id": "news-0ef5689f4a",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "デザインの視点で遺物を見ると… 仙台・メディアテークで展示会",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1obmhmZ1lQZnlMZ2JfNDhtMUFiMWNtUmd5NmxCLVpkVmFhRmZ0NG5IYm1kTS0yUmVtZ1lIdzAzZ2w0cGU5UUVUTzBuZkh1M1U0YTVLN0lxR0NKRUE?oc=5",
+      "published": "2026-10-29T11:30+09:00",
+      "place": "せんだいメディアテーク",
+      "placeKind": "facility",
+      "matched": "メディアテーク",
+      "ward": "青葉区",
+      "lat": 38.26551,
+      "lng": 140.86555
     },
     {
       "id": "news-29011259e5",
@@ -934,8 +1363,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267976,
-      "lng": 140.867334
+      "lat": 38.270283,
+      "lng": 140.868276
     },
     {
       "id": "news-c1d8676210",
@@ -952,8 +1381,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269576,
-      "lng": 140.870887
+      "lat": 38.267297,
+      "lng": 140.872113
     },
     {
       "id": "news-bcf267c54a",
@@ -970,26 +1399,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266346,
-      "lng": 140.869554
+      "lat": 38.267394,
+      "lng": 140.866704
     },
     {
-      "id": "news-abd84a3fe5",
-      "category": "otaku",
-      "type": "anime",
-      "typeLabel": "アニメ・漫画",
+      "id": "news-07cbaa642a",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
       "typeIcon": "",
-      "title": "東北初開催「中華まん博覧会2026」 三井アウトレットパーク 仙台港。 2026年11月14日(土)～23日(月・祝)の10日間、 全国から100種類を超えるご当地中華まんが集結。",
-      "summary": "東北初開催「中華まん博覧会2026」 三井アウトレットパーク 仙台港。 2026年11月14日(土)～23日(月・祝)の10日間、 全国から100種類を超えるご当地中華まんが集結。 | 株式会社ご当地グルメ研究会 アットプレス",
-      "source": "アットプレス",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9Jb2xJX0RfVTdGZ0VFLWhqVDIxTnhYSmJUMExBZG9Qa3QxbElHTDM3clRvc3llYnZ6WUtTSHZ0XzhLaWE3WGE3QWpxWFRLZw?oc=5",
+      "title": "緑に囲まれたティータイム オムライスなど食事も充実＜仙台市宮城野区萩野町／スクランブル交茶店",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9RY01PNzY3X2hhVlI0WEgxcEQ3SzUtRExPWlhlTWNOdHpzUzByYnhxU2VIQTN5aThwOFlNNUlzQS1Vc0ZKUFVDb2p6eGJZVGZ5a1VwLXF4RzFMb1k?oc=5",
       "published": "2026-10-29T10:00+09:00",
-      "place": "仙台港",
-      "placeKind": "area",
-      "matched": "仙台港",
+      "place": "宮城野区",
+      "placeKind": "ward",
+      "matched": "仙台市宮城野区",
       "ward": "宮城野区",
-      "lat": 38.2694,
-      "lng": 141.005
+      "lat": 38.266246,
+      "lng": 140.90913
     },
     {
       "id": "news-b004cb9f65",
@@ -1006,8 +1435,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269553,
-      "lng": 140.867803
+      "lat": 38.270345,
+      "lng": 140.870846
     },
     {
       "id": "news-39983b68dc",
@@ -1024,8 +1453,8 @@
       "placeKind": "facility",
       "matched": "仙台市役所",
       "ward": "青葉区",
-      "lat": 38.26811,
-      "lng": 140.87187
+      "lat": 38.265817,
+      "lng": 140.870233
     },
     {
       "id": "news-506ca0225c",
@@ -1042,26 +1471,8 @@
       "placeKind": "facility",
       "matched": "仙台市役所",
       "ward": "青葉区",
-      "lat": 38.26691,
-      "lng": 140.86756
-    },
-    {
-      "id": "news-b0e9c1832e",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "麺屋徳川",
-      "summary": "麺屋徳川(国分町/ラーメン) ホットペッパーグルメ",
-      "source": "ホットペッパーグルメ",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9kZ3F6WmpQMzYtTHEzTE05dUJncnpnVWZFUEE0UUU4VTVvNTZ2eDVIYlV4c2Y0NE53RDlwOGE2V19Jc3h6bDVUZEtEanItYlRR?oc=5",
-      "published": "2026-10-29T07:50+09:00",
-      "place": "国分町",
-      "placeKind": "facility",
-      "matched": "国分町",
-      "ward": "青葉区",
-      "lat": 38.263818,
-      "lng": 140.869024
+      "lat": 38.269555,
+      "lng": 140.866868
     },
     {
       "id": "news-cff030e91d",
@@ -1114,8 +1525,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.259464,
-      "lng": 140.882197
+      "lat": 38.260064,
+      "lng": 140.883699
     },
     {
       "id": "news-24f863e364",
@@ -1132,8 +1543,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.261199,
-      "lng": 140.881726
+      "lat": 38.259801,
+      "lng": 140.88109
     },
     {
       "id": "news-f185bf6f81",
@@ -1150,8 +1561,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.270244,
-      "lng": 140.869798
+      "lat": 38.268631,
+      "lng": 140.872546
     },
     {
       "id": "news-6fcbb00cdf",
@@ -1186,8 +1597,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.260064,
-      "lng": 140.883699
+      "lat": 38.261546,
+      "lng": 140.882927
     },
     {
       "id": "news-48abad9ddc",
@@ -1204,8 +1615,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.259801,
-      "lng": 140.88109
+      "lat": 38.259102,
+      "lng": 140.883024
     },
     {
       "id": "news-b6ba1f4338",
@@ -1222,8 +1633,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.261546,
-      "lng": 140.882927
+      "lat": 38.260953,
+      "lng": 140.880805
     },
     {
       "id": "news-7fd5996085",
@@ -1240,8 +1651,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.259102,
-      "lng": 140.883024
+      "lat": 38.260797,
+      "lng": 140.884142
     },
     {
       "id": "news-fd44134777",
@@ -1258,8 +1669,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.260953,
-      "lng": 140.880805
+      "lat": 38.259001,
+      "lng": 140.881429
     },
     {
       "id": "news-63a009ef5a",
@@ -1276,8 +1687,8 @@
       "placeKind": "ward",
       "matched": "仙台市青葉区",
       "ward": "青葉区",
-      "lat": 38.268194,
-      "lng": 140.870257
+      "lat": 38.269929,
+      "lng": 140.869786
     },
     {
       "id": "news-1782a98039",
@@ -1294,8 +1705,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266468,
-      "lng": 140.870943
+      "lat": 38.266156,
+      "lng": 140.867513
     },
     {
       "id": "news-3f75f7724b",
@@ -1312,8 +1723,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.260797,
-      "lng": 140.884142
+      "lat": 38.261935,
+      "lng": 140.881961
     },
     {
       "id": "news-da327e646a",
@@ -1330,8 +1741,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.259001,
-      "lng": 140.881429
+      "lat": 38.259382,
+      "lng": 140.884084
     },
     {
       "id": "news-eba6561b3e",
@@ -1348,8 +1759,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.261935,
-      "lng": 140.881961
+      "lat": 38.260126,
+      "lng": 140.880264
     },
     {
       "id": "news-b09d7615ae",
@@ -1366,8 +1777,8 @@
       "placeKind": "facility",
       "matched": "仙台市役所",
       "ward": "青葉区",
-      "lat": 38.268674,
-      "lng": 140.86687
+      "lat": 38.270815,
+      "lng": 140.869193
     },
     {
       "id": "news-b99398cdf4",
@@ -1384,8 +1795,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.259382,
-      "lng": 140.884084
+      "lat": 38.261726,
+      "lng": 140.883817
     },
     {
       "id": "news-547059b973",
@@ -1402,8 +1813,8 @@
       "placeKind": "ward",
       "matched": "青葉区",
       "ward": "青葉区",
-      "lat": 38.269929,
-      "lng": 140.869786
+      "lat": 38.268794,
+      "lng": 140.871759
     },
     {
       "id": "news-9106e4a6c1",
@@ -1420,8 +1831,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.260126,
-      "lng": 140.880264
+      "lat": 38.258496,
+      "lng": 140.882484
     },
     {
       "id": "news-a82529daa9",
@@ -1438,8 +1849,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.261726,
-      "lng": 140.883817
+      "lat": 38.261703,
+      "lng": 140.880733
     },
     {
       "id": "news-96de1ee143",
@@ -1447,8 +1858,8 @@
       "type": "cafe",
       "typeLabel": "カフェ・スイーツ",
       "typeIcon": "🍰",
-      "title": "THE MOST COFFEE",
-      "summary": "THE MOST COFFEE(仙台駅/カフェ・スイーツ) ホットペッパーグルメ",
+      "title": "THE MOST COFFEE ザ モストコーヒー",
+      "summary": "THE MOST COFFEE ザ モストコーヒー(仙台駅/カフェ・スイーツ) ホットペッパーグルメ",
       "source": "ホットペッパーグルメ",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8xTERFc2lZODFUVEF6Y2R5T09uanJoUjdUMDJYa1RSS0IwNDRRY3FLdTJfb2QtUUlweXBxVlpYQ1A4UlB0LTFWU1NWclVsR1F4?oc=5",
       "published": "2026-10-29T07:04+09:00",
@@ -1456,8 +1867,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.258496,
-      "lng": 140.882484
+      "lat": 38.26026,
+      "lng": 140.8848
     },
     {
       "id": "news-196bff14bd",
@@ -1474,26 +1885,62 @@
       "placeKind": "ward",
       "matched": "宮城野区",
       "ward": "宮城野区",
-      "lat": 38.265858,
-      "lng": 140.910284
+      "lat": 38.266664,
+      "lng": 140.910671
     },
     {
-      "id": "news-9766af7e45",
+      "id": "news-f715bdeb9d",
       "category": "news",
       "type": "",
       "typeLabel": "",
       "typeIcon": "",
-      "title": "モンゴル伝統の美しい音色＜仙台市泉区／仙台銀行ホール イズミティ21 ロビーイベント 馬頭琴演奏会",
+      "title": "秋保地区で秋のライトアップ開始 磊々峡のせせらぎと幻想的な光の演出で情緒たっぷりの風景楽しむ〈仙台〉",
+      "summary": "秋保地区で秋のライトアップ開始 磊々峡のせせらぎと幻想的な光の演出で情緒たっぷりの風景楽しむ〈仙台〉（仙台放送） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1GMGk3eHlLM3hfRDFMLVUzTnBOWXZjY1hSR3VRd290aVFqNEtVOUFoOFdReEZxWC1Nd1hmZkZBQ2RkUXBfd2d5eGZVaXBZcS1VMThlVHVURUhxQXpfeTFWMVZwd2loYncycmV5ZHliMHFBdnFwcnBZM2gzdG5GWFk?oc=5",
+      "published": "2026-10-29T05:50+09:00",
+      "place": "秋保",
+      "placeKind": "area",
+      "matched": "秋保",
+      "ward": "太白区",
+      "lat": 38.229096,
+      "lng": 140.71163
+    },
+    {
+      "id": "news-c093c67f1e",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "園児がスパイダーマンなどに仮装 こども園でハロウィーンパーティー 商店街でお菓子もらい笑顔〈仙台市〉",
       "summary": "",
-      "source": "河北新報オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2Qy1vSk1FMkhPT2JmdlpkS1FCQkpjZkVlSzFrcmhqS0RRQzlHcFhuVW5xX1kzMWlMby1talhNdnhFclNHQVZpT2t1VjBvWWxXRGEyNTR0SXotZTg?oc=5",
-      "published": "2026-10-29T06:00+09:00",
-      "place": "泉区",
-      "placeKind": "ward",
-      "matched": "仙台市泉区",
-      "ward": "泉区",
-      "lat": 38.32627,
-      "lng": 140.88132
+      "source": "FNNプライムオンライン",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5yUkpDTTRGeV91T2Z1aVdLNzlFUmkxc0VuakVQd0hnVnNDcTdqVTZ2WTdkamFucExMYnVqMm1zcFRiU0N5T0pNSHgxMGtIQQ?oc=5",
+      "published": "2026-10-29T05:50+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.266392,
+      "lng": 140.871864
+    },
+    {
+      "id": "news-3148b38ef9",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "＜画像7 / 7＞【宮城・仙台】高級焼干しなどを使ったスープ＆煮干し入りの麺とニボニボづくし！",
+      "summary": "",
+      "source": "ウォーカープラス",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ndmhTclFfc0ZyblV1U2F4aVlUQjlHMDFyRHBNUUY3U2tnYk9haEl6WnJVYTJJdlBvUS1fS19EX1pJX2NEV2hqbmVvUHNDSVRVWHdHX1NLUU9LdVV6dXE3eE9zMWJDbXA1MWJqYlhjQlBiby1KeTFtdVphQQ?oc=5",
+      "published": "2026-10-29T05:09+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.268213,
+      "lng": 140.866139
     },
     {
       "id": "news-1743dee096",
@@ -1510,26 +1957,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269296,
-      "lng": 140.871813
+      "lat": 38.270039,
+      "lng": 140.871953
     },
     {
-      "id": "news-5ace091e5d",
+      "id": "news-bd672332d7",
       "category": "reviews",
       "type": "other",
       "typeLabel": "つぶやき",
       "typeIcon": "💬",
-      "title": "仙台国分町の日本酒処参壱丸撰です！ 10月29日(木）18時より通常営業！ 翌営業日10月30日(金) お席ございます…",
-      "summary": "仙台国分町の日本酒処参壱丸撰です！ 10月29日(木）18時より通常営業！ 翌営業日10月30日(金) お席ございます！ ◎本日のご紹介日本酒～「福司 純米」北海道の銘酒。北海道産の酒米吟風仕込み。伝統の技と低温長期で醗酵。北海道の冬を感じるキレの良い１杯♪",
-      "source": "Bluesky「国分町」",
-      "url": "https://bsky.app/profile/bar3103.bsky.social/post/3myxfxbq7tc2b",
-      "published": "2026-10-29T03:46+09:00",
-      "place": "国分町",
-      "placeKind": "facility",
-      "matched": "国分町",
-      "ward": "青葉区",
-      "lat": 38.264624,
-      "lng": 140.869411
+      "title": "太白区：建物の修正 by Zunyu",
+      "summary": "太白区：建物の修正 by Zunyu",
+      "source": "Bluesky「太白区」",
+      "url": "https://bsky.app/profile/osmjp-miyagi.bsky.social/post/3myxcfa335n25",
+      "published": "2026-10-29T02:42+09:00",
+      "place": "太白区",
+      "placeKind": "ward",
+      "matched": "太白区",
+      "ward": "太白区",
+      "lat": 38.22432,
+      "lng": 140.87715
     },
     {
       "id": "news-50ebdd998d",
@@ -1546,8 +1993,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266056,
-      "lng": 140.868619
+      "lat": 38.265438,
+      "lng": 140.869146
     },
     {
       "id": "news-355cbc19e0",
@@ -1564,44 +2011,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.270283,
-      "lng": 140.868276
-    },
-    {
-      "id": "news-3b9cb84cec",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "物販店による合同セレクトショップ「本町マーケット」 仙台・本町商店街の感謝祭「本町マニア」",
-      "summary": "",
-      "source": "仙台経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBVU2ppTGlUZVZQYWxJNFJBU1JlM0pIMVBCLVhhNGJzMjZJZkgtR3FXZGYxaU9WZjZQMzJoM1VrZnlqUnVUcFRTbmlBalB3ME1GVTBVRFhB?oc=5",
-      "published": "2026-10-28T22:08+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.267297,
-      "lng": 140.872113
-    },
-    {
-      "id": "news-72aa1cc9d0",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "10月31日(土)の夕方に泉中央駅発の列車が2本増便されるみたい。",
-      "summary": "",
-      "source": "au Webポータル",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5TbllQd2JES3BFUG13Tl9PNldWNHpxbTZrYkVHakI1LUFCaUFPTGF2Z0c5alpjdDVhVGltYnBRRjNQS2VYTG9ackpnR3F1dVpTYV9mak5HRnlGZ2FVd3RpVUlkMTRscm5ralJTZ1V3?oc=5",
-      "published": "2026-10-28T21:33+09:00",
-      "place": "泉中央駅",
-      "placeKind": "station",
-      "matched": "泉中央駅",
-      "ward": "泉区",
-      "lat": 38.32321,
-      "lng": 140.88075
+      "lat": 38.270438,
+      "lng": 140.86737
     },
     {
       "id": "news-062a8eefd3",
@@ -1636,44 +2047,8 @@
       "placeKind": "facility",
       "matched": "国分町",
       "ward": "青葉区",
-      "lat": 38.263264,
-      "lng": 140.868457
-    },
-    {
-      "id": "news-fd43212ccb",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "「支倉都市同盟」結成求め仙台市に親書 スペインの有志",
-      "summary": "",
-      "source": "河北新報オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9CLW9OVmZ2bmJnRHB4LXRSY1d2NlduY1k0dlhudkRYbnNFZGYwenFWTm13WVZUS09uMk5xcXRieW5YRGloNmUza05leWVBS1V5aVZwLUVrcEpZdm8?oc=5",
-      "published": "2026-10-28T19:38+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.267394,
-      "lng": 140.866704
-    },
-    {
-      "id": "news-9df494e630",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "大学生が太白区の中学校でサイバー防犯教室 中学生にＳＮＳトラブルのリスク伝える〈仙台市〉",
-      "summary": "大学生が太白区の中学校でサイバー防犯教室 中学生にＳＮＳトラブルのリスク伝える〈仙台市〉（仙台放送） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBHSUpPeUtwV2liV0xjNFRKdERlcFRuY2lPR295UmhwV0lXUEJtbXZnTmlsazQwMjZSVHNSTHFTeThTUzlYQXh4alVrWDgtQjN2VVotczJ4OFZRR0VtYXF1WlQwc2hZbDVXNjh0czJmZW1pbUZHalpjNnMxeUc5XzQ?oc=5",
-      "published": "2026-10-28T19:27+09:00",
-      "place": "太白区",
-      "placeKind": "ward",
-      "matched": "太白区",
-      "ward": "太白区",
-      "lat": 38.22432,
-      "lng": 140.87715
+      "lat": 38.264624,
+      "lng": 140.869411
     },
     {
       "id": "news-2805820e74",
@@ -1690,26 +2065,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.270345,
-      "lng": 140.870846
-    },
-    {
-      "id": "news-a80f7a00c6",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "芋煮会でにぎわう河川敷 ごみ集積所の設置をやめ仙台市が持ち帰りを呼び掛け",
-      "summary": "",
-      "source": "khb東日本放送",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE41bm0xV1h1SE5FeXJVZ0h5QzMyS09YZF93VzhZX2ZteWwzN2tBRWxDLUFrX2lFbEY3NGswUVNDSHIza1MzR2NUZzlKYV9IejA?oc=5",
-      "published": "2026-10-28T19:04+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.265817,
-      "lng": 140.870233
+      "lat": 38.267691,
+      "lng": 140.872904
     },
     {
       "id": "news-19e60458af",
@@ -1726,44 +2083,8 @@
       "placeKind": "facility",
       "matched": "国分町",
       "ward": "青葉区",
-      "lat": 38.264999,
-      "lng": 140.867986
-    },
-    {
-      "id": "news-b53487de76",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "親子二人三脚で変わらぬ味を守り新たな表現を模索 仙台・太白区で４０年続く洋菓子店",
-      "summary": "",
-      "source": "khb東日本放送",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9BTnl5VjdmdjRQRTRpU1B4XzlrTUpJemozVGtQZlR2M1ROWkVKYmF5SmVtWlVaNzNkZFpCTzdHLV9DSTQ1ZnpJTFR0aWJzQjg?oc=5",
-      "published": "2026-10-28T18:35+09:00",
-      "place": "太白区",
-      "placeKind": "ward",
-      "matched": "太白区",
-      "ward": "太白区",
-      "lat": 38.223988,
-      "lng": 140.877524
-    },
-    {
-      "id": "news-4da5eb0e7d",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "視覚障害者が対象 バス乗降の講習会 仙台・太白区",
-      "summary": "",
-      "source": "khb東日本放送",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5MVnRvYW5LR25JVXh3eXNwU0N3YW1YZVZhZEdSVlVUYXQ2am9Ya1BWQ25BMmtwOWFEZEZmNVNIaXNqbnMzZ0hhSFZyaTQwd2c?oc=5",
-      "published": "2026-10-28T18:15+09:00",
-      "place": "太白区",
-      "placeKind": "ward",
-      "matched": "太白区",
-      "ward": "太白区",
-      "lat": 38.224376,
-      "lng": 140.87637
+      "lat": 38.263264,
+      "lng": 140.868457
     },
     {
       "id": "news-6d163a3fd0",
@@ -1782,24 +2103,6 @@
       "ward": "青葉区",
       "lat": 38.256,
       "lng": 140.842
-    },
-    {
-      "id": "news-00b1cc149b",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "仙台みそフェス 深い魅力体験 「伊達芋煮」など35店",
-      "summary": "仙台みそフェス 深い魅力体験 「伊達芋煮」など35店（河北新報） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE11Xy1DRGJaaTRZTHptcU5zQU5ZYVNFSjVKUU1iVk92OXRpa3Ewc3dyRU94UElHUG1ZWlJycTFlZjlTMTJTcUNyNXRrTmFaem1XQ0Z3dlZTN0ZFWERHcmg4cWxkZUJCV1lLVUFjQlkxYmJjalpENEU4andsX2Q0M3M?oc=5",
-      "published": "2026-10-28T17:44+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.269555,
-      "lng": 140.866868
     },
     {
       "id": "news-25494ba9b2",
@@ -1834,26 +2137,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.268631,
-      "lng": 140.872546
-    },
-    {
-      "id": "news-d141a34b48",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "元日本兵の親などから暴力や虐待 家族が寄り添える会合 仙台・青葉区で開催",
-      "summary": "",
-      "source": "khb東日本放送",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9Xcy1zWmdVMTMxWlRQdUgyTkxlb2ctY0pfVnY0VzBYeUd2X1VYS0FfRDlQZkRzOFFkUFJ1TGgzaFdVOHVvZmdpLU5ldjlycHM?oc=5",
-      "published": "2026-10-28T16:40+09:00",
-      "place": "青葉区",
-      "placeKind": "ward",
-      "matched": "青葉区",
-      "ward": "青葉区",
-      "lat": 38.268794,
-      "lng": 140.871759
+      "lat": 38.266665,
+      "lng": 140.866461
     },
     {
       "id": "news-2059dc467c",
@@ -1870,8 +2155,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266156,
-      "lng": 140.867513
+      "lat": 38.271013,
+      "lng": 140.870408
     },
     {
       "id": "news-ce257752c7",
@@ -1892,42 +2177,6 @@
       "lng": 140.9027
     },
     {
-      "id": "news-3a80a4d0f2",
-      "category": "otaku",
-      "type": "anime",
-      "typeLabel": "アニメ・漫画",
-      "typeIcon": "",
-      "title": "コピック＆アイシーが各地域のイベント「仙台画材フェス」「ひめじ文具博」「アニメフクオカ」に出展します",
-      "summary": "",
-      "source": "ニコニコニュース",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NdlNMZy1kNVZqYzBmalVxQ09HUXQ4Y1RrbkxHWGxWVV8wUjNyZjM2YTFRLVV3eFd5QlRVQTIxX055YnQtOFUyQXlRNl80M3dJR0tTWQ?oc=5",
-      "published": "2026-10-28T13:45+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.270815,
-      "lng": 140.869193
-    },
-    {
-      "id": "news-2ebf42eb71",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "三井物産都市開発／仙台市で東北エリア3件目の物流施設用地を取得、2029年1月竣工へ",
-      "summary": "",
-      "source": "物流ニュースのLNEWS",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE13Q0IwR3BXSm8wRFM1V2g1NW1oNWZBTzNyWVdWT2FMVmw4Tm5QdGF6TndCT2t5dEpmLTI2elRIM1pPajB1aTNyazFESTkyQ09DX3VNWA?oc=5",
-      "published": "2026-10-28T13:31+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.266392,
-      "lng": 140.871864
-    },
-    {
       "id": "news-6275cf45f2",
       "category": "reviews",
       "type": "food",
@@ -1942,44 +2191,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.268213,
-      "lng": 140.866139
+      "lat": 38.265575,
+      "lng": 140.871118
     },
     {
-      "id": "news-0fd75e2ea2",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
+      "id": "news-374d702c19",
+      "category": "otaku",
+      "type": "anime",
+      "typeLabel": "アニメ・漫画",
       "typeIcon": "",
-      "title": "東北初のラッシー専門店が仙台市太白区にオープン 仙台イチゴや東北産牛乳を使用",
+      "title": "コピック＆アイシーが各地域のイベント「仙台画材フェス」「ひめじ文具博」「アニメフクオカ」に出展します",
       "summary": "",
-      "source": "Excite エキサイト",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA0VnF1dHdvRW5iVWhYYjdFaHl0UFJwcXBfTTd5dUxIaFNfaW9VdHJnZ2tHSVRTRlQ4SHoyRXQyYkhmY210Q1lwbmllU1U4TjRoZ0ZsS2tZTEdROU0yOWgwMHpLbEFGa0FYNzRjcmpxejNVUQ?oc=5",
-      "published": "2026-10-28T10:37+09:00",
-      "place": "太白区",
-      "placeKind": "ward",
-      "matched": "仙台市太白区",
-      "ward": "太白区",
-      "lat": 38.224794,
-      "lng": 140.877911
-    },
-    {
-      "id": "news-25225c66b2",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "仙台・おおまち商店街で自転車マナー啓発 - 三井住友海上などが協力、駐輪場案内や点検を実施",
-      "summary": "",
-      "source": "au Webポータル",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBpQXdLV1BZZHdNTjdTc0MweW94bkNmZDJ4UUJ3VWRZWG5JMlpNa0twNUM0QjBISUlPcGRsX0RlaFFHUnN4dDUybmNhT2R1M0htbkY1eWx4LWZ2VDFsUTdNNW56MDEwT1RIdWs1b3hR?oc=5",
-      "published": "2026-10-28T09:30+09:00",
+      "source": "PR TIMES",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Id0cyM0xSVHVWUFpaSW1GcWh0czJmaV9nZURHUnIxaWtrc3gybVE2d291RnRtZzNaVm5KTWkwcFhkQkx2SGVXdFdYNEZXanh1ejhHcFdjNmJoWHNGZ2VCLVM5UXBRUHhNbkE?oc=5",
+      "published": "2026-10-28T10:00+09:00",
       "place": "市全体",
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.270039,
-      "lng": 140.871953
+      "lat": 38.269237,
+      "lng": 140.866017
     },
     {
       "id": "news-6c47a60280",
@@ -2014,26 +2245,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.265438,
-      "lng": 140.869146
-    },
-    {
-      "id": "news-0a211dba95",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "画像4 / 23＞東北エリア最大「仙台空港」で食べる！買う！遊ぶ！飛行機に乗らなくても“おでかけスポット”としておすすめ 【日本全国「空港」ガイド Vol.4】",
-      "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBHdnZ2cVFkV2VmUG9KZU5jMW5ES0RLRVdHOFRCeXlOakV4aUpxdTJCektIWjZ2OGFndEM3VXFFVXVVYVFnU254Nl96WnlFVjFybkItc2hTaFcxNFBhMkExZ2JkWmJpZkp5d3JCWEZ3?oc=5",
-      "published": "2026-10-28T07:11+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.270438,
-      "lng": 140.86737
+      "lat": 38.269339,
+      "lng": 140.872899
     },
     {
       "id": "news-0673422280",
@@ -2054,42 +2267,6 @@
       "lng": 140.881694
     },
     {
-      "id": "news-b64b9529a7",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "画像6 / 6＞【宮城・仙台】長時間煮込んだ味わい深さに感動！味噌だれと豚骨スープのレボリューション",
-      "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBmQjkyMjhfdDVqa0d5VlI4N3FHY3ZUUWtjSk1BQnZFYkYwWWNoVUFLZWd5Wk9IakJ2bTRVSFRia2NyckllN0JQUW53cnVxMHkwX0xJNEg1cWlncEZnZHlDdjV3Vlc4ZU5fTzJOM1hDU0h0WVUxTUd6TlRrUQ?oc=5",
-      "published": "2026-10-28T06:57+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.267691,
-      "lng": 140.872904
-    },
-    {
-      "id": "news-247cfa20ea",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "松井酒造 MATSUI BEER MB をｶｼｭｯ(`･ω･´) >飲みごたえとキレを最高のバランスで両立 プラチナよ…",
-      "summary": "松井酒造 MATSUI BEER MB をｶｼｭｯ(`･ω･´) >飲みごたえとキレを最高のバランスで両立 プラチナよりは飲み応え強めキレはそこそこな印象 安定供給されるなら選択肢に入る奴 ザ・モール仙台長町 にて確保(´･ω･`) #BskyBeer #Craftbeer #クラフトビール #青空ビール部 #青空飲酒部",
-      "source": "Bluesky「長町」",
-      "url": "https://bsky.app/profile/dokkanonakanohito.bsky.social/post/3myv7a7vx722l",
-      "published": "2026-10-28T06:40+09:00",
-      "place": "あすと長町",
-      "placeKind": "area",
-      "matched": "長町",
-      "ward": "太白区",
-      "lat": 38.229056,
-      "lng": 140.88522
-    },
-    {
       "id": "news-48ecf0bd37",
       "category": "otaku",
       "type": "cosplay",
@@ -2104,8 +2281,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266665,
-      "lng": 140.866461
+      "lat": 38.265442,
+      "lng": 140.867853
+    },
+    {
+      "id": "news-db8df9032a",
+      "category": "crime",
+      "type": "other",
+      "typeLabel": "その他の事件",
+      "typeIcon": "",
+      "title": "「妊娠した」と嘘をつき、中絶費用として現金約７５万円をだまし取ったか ２０代の男女２人を逮捕〈仙台〉",
+      "summary": "「妊娠した」と嘘をつき、中絶費用として現金約７５万円をだまし取ったか ２０代の男女２人を逮捕〈仙台〉（仙台放送） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5Wc2ZWZW14aVVGLVFfYnhFeGtaZ0tScWhjdlFiUkxyemxaV1R5M0dYNzNFZHRudHNhaFItM01qWVdvT1duZjctRmlMN1hlUTZ1QndOQk02MV9ZcDRGUFM2akRERExMbWx3TTlDeGNQOTJBNnJWZ0RPejlLRXZMOEE?oc=5",
+      "published": "2026-10-28T05:50+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.271148,
+      "lng": 140.868341
     },
     {
       "id": "news-6040aa566e",
@@ -2122,26 +2317,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.271013,
-      "lng": 140.870408
-    },
-    {
-      "id": "news-4418b368ce",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "仙台市青葉区 賃貸中 RC造",
-      "summary": "",
-      "source": "www.rakumachi.jp",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxONlh5NFpoY2NUOUdoNFVNZGJrTDAzRzRiWk9GbHNTWXFSRmRwcWhpOVI4SnE2bGxuV18tLWJNNkhiRnVxZnBlV290VkxJX3dpX2tRR0pqLWhtMTBOS0FJNWlockJoWTJWWWxoVy1PcXlIbHRjemx2WHVpWnN5VFJIbGFLRm0?oc=5",
-      "published": "2026-10-28T04:00+09:00",
-      "place": "青葉区",
-      "placeKind": "ward",
-      "matched": "仙台市青葉区",
-      "ward": "青葉区",
-      "lat": 38.270276,
-      "lng": 140.870987
+      "lat": 38.266624,
+      "lng": 140.872769
     },
     {
       "id": "news-c8fbb9037c",
@@ -2158,8 +2335,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.261703,
-      "lng": 140.880733
+      "lat": 38.25906,
+      "lng": 140.88049
     },
     {
       "id": "news-152c041887",
@@ -2176,8 +2353,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.26026,
-      "lng": 140.8848
+      "lat": 38.262394,
+      "lng": 140.882728
     },
     {
       "id": "news-84739c7418",
@@ -2194,8 +2371,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.265575,
-      "lng": 140.871118
+      "lat": 38.267538,
+      "lng": 140.865672
     },
     {
       "id": "news-9c189ecb41",
@@ -2212,26 +2389,8 @@
       "placeKind": "facility",
       "matched": "市役所本庁舎",
       "ward": "青葉区",
-      "lat": 38.269237,
-      "lng": 140.866017
-    },
-    {
-      "id": "news-02eb5c4388",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "三井アウトレットパーク仙台港で「とうほくパンフェス」　水族館と初コラボも",
-      "summary": "三井アウトレットパーク仙台港で「とうほくパンフェス」 水族館と初コラボも ｄメニューニュース",
-      "source": "ｄメニューニュース",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1XaUkza29GT1NSM3VQcjFVQVBnb2JGNzR4U09XbUk2cmZwY2VFdDFfWlBBYlNjS3ZYRjNSX3JaNFZhNjZnbjVjUlJmQjd5Wi1pY1A2RHEzbm1VZjEyVUYzTzlXcENJVGZsclNoVXctNi1fTjNHOFBDUWw2MNIBgAFBVV95cUxPa1h3RkxwTmsyM1JfbzdTaEN3Ri12NTM5ZmlybzV0dE5tdUlEazhhTVJTMjRrNFJWdWtoSVBDY3VhWnVRTjYwbUIwMUNSV0xHbnhrRGMwbUowdms2NWVKNWtvVVRWT2JUbHFoNE1ZVE8xQnFwSXRWTGw3TV8ySUtsWg?oc=5",
-      "published": "2026-10-27T23:37+09:00",
-      "place": "仙台港",
-      "placeKind": "area",
-      "matched": "仙台港",
-      "ward": "宮城野区",
-      "lat": 38.269068,
-      "lng": 141.005374
+      "lat": 38.270794,
+      "lng": 140.871726
     },
     {
       "id": "news-08f2c67f2d",
@@ -2248,62 +2407,8 @@
       "placeKind": "area",
       "matched": "仙台港",
       "ward": "宮城野区",
-      "lat": 38.269456,
-      "lng": 141.00422
-    },
-    {
-      "id": "news-6eeddf5687",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "宮城県仙台市の商店街で、アーケードを撤去する計画が進んでいます",
-      "summary": "",
-      "source": "やさしい朝日新聞",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1BemNybktCM29nWjNNN3JjTU1tWmVhUFpTX3J5YS1QdXc5eXNBRHotZ3RLN1VBV0ltSTN2U3J1ekwwN01WdkQ1S0JUV1Y2Unc1WnZER3FQaXZESmhkekFSU2RwaHhna2M?oc=5",
-      "published": "2026-10-27T22:36+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.269339,
-      "lng": 140.872899
-    },
-    {
-      "id": "news-a1c8d3568f",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "第23回仙台市PTAフェスティバルを開催します",
-      "summary": "",
-      "source": "仙台市公式ホームページ",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZGJ4NnN0OWc0THZVU0tmenc2QTd4Tk1GYjBOMlM2OHBJNnc3V2ZpS0YwMXdJREpKTS1wc0F1ZFE1T3pkN09LbUY1NFlvNXI2UVpjZmJrcnBNWlpPdE5sR1lnN3BvLVIyRF9ON3c0cUE5dGNjODlEbGVjV3VOR2VfMmxJOFE5MWdsbjNOMGdlNlU2MWZxM2JacHhXMXphUFl2cW1XZEZLUjZ3UDc3SlpMeg?oc=5",
-      "published": "2026-10-27T22:31+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.265442,
-      "lng": 140.867853
-    },
-    {
-      "id": "news-e1257b6799",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【仙台ロイヤルパークホテル】お得に楽しむ！ブラックフライデーセール2026",
-      "summary": "",
-      "source": "ニコニコニュース",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBCa1R0ZldxeE1wS3pYdzFCaFY2c2JpbFozbzZGV05zRFJrZE5NYV9qUjc2eEJJcl9uMWl5NVBTSG5DSml3dHFQSW4wN0lGMDdzMW1PTw?oc=5",
-      "published": "2026-10-27T21:51+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.271148,
-      "lng": 140.868341
+      "lat": 38.269068,
+      "lng": 141.005374
     },
     {
       "id": "news-4d286df2c3",
@@ -2320,8 +2425,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.25906,
-      "lng": 140.88049
+      "lat": 38.258618,
+      "lng": 140.883873
     },
     {
       "id": "news-52706e6f56",
@@ -2338,8 +2443,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266624,
-      "lng": 140.872769
+      "lat": 38.265011,
+      "lng": 140.869949
     },
     {
       "id": "news-0e99bf0d01",
@@ -2356,44 +2461,8 @@
       "placeKind": "ward",
       "matched": "宮城野区",
       "ward": "宮城野区",
-      "lat": 38.266246,
-      "lng": 140.90913
-    },
-    {
-      "id": "news-ec7b60e95d",
-      "category": "crime",
-      "type": "suspicious",
-      "typeLabel": "不審者・声かけ",
-      "typeIcon": "",
-      "title": "「おじさんの家すぐそこだから送ってあげる」「いいところに連れて行ってあげる」小学生男女が同じ日に40代位の男から声かけられる 仙台・泉区",
-      "summary": "",
-      "source": "TBS NEWS DIG",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CRjRMNVhkbXdJdkhBd0RSVHkwZ25xUXpfTU1ZSmZBd1JHaWJLRUNDcmltQ1QtZndMZkVnbktmUGVkNHZWdEpVT3VnRWdnZjltMHlwdTFZMEVaWnpRU0U4?oc=5",
-      "published": "2026-10-27T21:07+09:00",
-      "place": "泉区",
-      "placeKind": "ward",
-      "matched": "泉区",
-      "ward": "泉区",
-      "lat": 38.326326,
-      "lng": 140.88054
-    },
-    {
-      "id": "news-21cddcf6f0",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【情報更新】「強靭化を図っていく」PHP欠陥問題で仙台市が8サービス停止継続＜宮城・仙台＞",
-      "summary": "【情報更新】「強靭化を図っていく」PHP欠陥問題で仙台市が8サービス停止継続＜宮城・仙台＞（ミヤギテレビ） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9wXzBuclMzZFlKd25Ha3d6bWk3TW52QVUzV3Z2N0ZDMExlRlNWNXZyRHVGOVhNYUl0djd3UEExX19YY0FKVnBPUkVYU3JDclN6eHBUU3lILTRhSlVhWEpITEh0SUpNUjVLSEd2SW5kZlVoQXBXX1RleXpUWFlvakU?oc=5",
-      "published": "2026-10-27T20:02+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.267538,
-      "lng": 140.865672
+      "lat": 38.265304,
+      "lng": 140.909717
     },
     {
       "id": "news-c149a832b9",
@@ -2410,8 +2479,8 @@
       "placeKind": "ward",
       "matched": "青葉区",
       "ward": "青葉区",
-      "lat": 38.267832,
-      "lng": 140.871084
+      "lat": 38.270276,
+      "lng": 140.870987
     },
     {
       "id": "news-44d9490e18",
@@ -2428,8 +2497,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.270794,
-      "lng": 140.871726
+      "lat": 38.270303,
+      "lng": 140.86642
     },
     {
       "id": "news-c21fd9085b",
@@ -2446,8 +2515,8 @@
       "placeKind": "ward",
       "matched": "仙台市泉区",
       "ward": "泉区",
-      "lat": 38.326744,
-      "lng": 140.882081
+      "lat": 38.326326,
+      "lng": 140.88054
     },
     {
       "id": "news-b73e7dadf7",
@@ -2464,8 +2533,8 @@
       "placeKind": "ward",
       "matched": "仙台市青葉区",
       "ward": "青葉区",
-      "lat": 38.269683,
-      "lng": 140.868865
+      "lat": 38.267832,
+      "lng": 140.871084
     },
     {
       "id": "news-da1d79417a",
@@ -2482,8 +2551,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.265011,
-      "lng": 140.869949
+      "lat": 38.26832,
+      "lng": 140.873487
     },
     {
       "id": "news-450aa69ae6",
@@ -2500,8 +2569,8 @@
       "placeKind": "facility",
       "matched": "国分町",
       "ward": "青葉区",
-      "lat": 38.263864,
-      "lng": 140.869959
+      "lat": 38.264999,
+      "lng": 140.867986
     },
     {
       "id": "news-8f155f30ae",
@@ -2518,8 +2587,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.270303,
-      "lng": 140.86642
+      "lat": 38.265878,
+      "lng": 140.866563
     },
     {
       "id": "news-5024292e53",
@@ -2536,26 +2605,8 @@
       "placeKind": "facility",
       "matched": "国分町",
       "ward": "青葉区",
-      "lat": 38.263601,
-      "lng": 140.86735
-    },
-    {
-      "id": "news-6351dead2b",
-      "category": "reviews",
-      "type": "nature",
-      "typeLabel": "公園・自然・季節",
-      "typeIcon": "🌳",
-      "title": "します。 京都はMIYAGENとして初めての関西出展です。以前住んでいた頃によく散歩していた下鴨神社なので、個人的にも…",
-      "summary": "します。 京都はMIYAGENとして初めての関西出展です。以前住んでいた頃によく散歩していた下鴨神社なので、個人的にも楽しみにしています。 両会場ともバックパックや小物類を持っていきます。お近くの方は立ち寄っていただければと思います。 —————————— 【NODOORS 2026】 10月31日（土）10:00〜17:00 宮城県仙台市 青葉山公園 仙臺緑彩館 【KYOTO HIKER'S GEAR PARTY 2026】 10月31日（土）10:00〜16:00 京都府京都市 下鴨神社 糺の森 —————————— (2/2)",
-      "source": "Bluesky「仙台市」",
-      "url": "https://bsky.app/profile/miyagen.bsky.social/post/3mytv2njqkj22",
-      "published": "2026-10-27T18:05+09:00",
-      "place": "青葉山",
-      "placeKind": "area",
-      "matched": "青葉山",
-      "ward": "青葉区",
-      "lat": 38.255668,
-      "lng": 140.842374
+      "lat": 38.263864,
+      "lng": 140.869959
     },
     {
       "id": "news-b1342658d8",
@@ -2572,8 +2623,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.26832,
-      "lng": 140.873487
+      "lat": 38.271533,
+      "lng": 140.869669
     },
     {
       "id": "news-004410ddd9",
@@ -2590,8 +2641,26 @@
       "placeKind": "ward",
       "matched": "青葉区",
       "ward": "青葉区",
-      "lat": 38.269527,
-      "lng": 140.872202
+      "lat": 38.269683,
+      "lng": 140.868865
+    },
+    {
+      "id": "news-e0108b7bc4",
+      "category": "crime",
+      "type": "other",
+      "typeLabel": "その他の事件",
+      "typeIcon": "",
+      "title": "仙台国際ホテルの架空工事で金融機関から６３６０万円だまし取った疑い デザイン会社の元社長が４回目の逮捕",
+      "summary": "",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1xQXhqUHNidzN2YWh3NXg1eS04ODJGR0NLZ1R5UzBxQmhNZzdOR3dPblUyOFVxT3FRLXZNZGJIZC1aeUd1ZjFaQjVMR18wbXVoUGdNMnNVUWd0bXdsMnhpX1MzMWRoQUVNOFlBcDBWdU52V1dKNDMxNldiY3lxQnc?oc=5",
+      "published": "2026-10-27T17:28+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.265604,
+      "lng": 140.872099
     },
     {
       "id": "news-aadca51ce5",
@@ -2608,26 +2677,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.265878,
-      "lng": 140.866563
-    },
-    {
-      "id": "news-50767e96f0",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "仙台国際ホテルの架空工事で金融機関から６３６０万円だまし取った疑い デザイン会社の元社長が４回目の逮捕",
-      "summary": "",
-      "source": "khb東日本放送",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54QmJDQnVLLVNwYTdLbGN1cnZzc0FUUWVDeHFvZFliajg1X2g1OG5meUdUa0NBTm1fQVVFcllvaVFua3RqZjhhb0hLNjRJanc?oc=5",
-      "published": "2026-10-27T15:55+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.271533,
-      "lng": 140.869669
+      "lat": 38.268669,
+      "lng": 140.865321
     },
     {
       "id": "news-934dcccf06",
@@ -2644,8 +2695,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.265604,
-      "lng": 140.872099
+      "lat": 38.270144,
+      "lng": 140.872931
+    },
+    {
+      "id": "news-8ea8d3e235",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "「おじさんの家すぐそこだから送ってあげる」「いいところに連れて行ってあげる」小学生男女が同じ日に40代位の男から声かけ…",
+      "summary": "「おじさんの家すぐそこだから送ってあげる」「いいところに連れて行ってあげる」小学生男女が同じ日に40代位の男から声かけられる 仙台・泉区(tbc東北放送) #Yahooニュース",
+      "source": "Bluesky「仙台 泉区」",
+      "url": "https://bsky.app/profile/tafrontsuper11.bsky.social/post/3mythyrchl22f",
+      "published": "2026-10-27T14:12+09:00",
+      "place": "泉区",
+      "placeKind": "ward",
+      "matched": "泉区",
+      "ward": "泉区",
+      "lat": 38.326744,
+      "lng": 140.882081
     },
     {
       "id": "news-987202c718",
@@ -2680,8 +2749,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.262394,
-      "lng": 140.882728
+      "lat": 38.260824,
+      "lng": 140.8798
     },
     {
       "id": "news-8d34c9d969",
@@ -2698,8 +2767,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.258618,
-      "lng": 140.883873
+      "lat": 38.261446,
+      "lng": 140.884743
     },
     {
       "id": "news-0a264c1fd8",
@@ -2720,6 +2789,24 @@
       "lng": 140.880656
     },
     {
+      "id": "news-2ca919bd82",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "【NO BAUM NO LIFE】4,212 #井ケ田製茶 さんの #アグリエの森 #秋保クラフトマンバウム 抹茶 #…",
+      "summary": "【NO BAUM NO LIFE】4,212 #井ケ田製茶 さんの #アグリエの森 #秋保クラフトマンバウム 抹茶 #バームクーヘン #バウムクーヘン #秋保ヴィレッジ 限定 #今日のバウム #バウムクーヘン好きとつながりたい",
+      "source": "Bluesky「秋保」",
+      "url": "https://bsky.app/profile/maskedbaum.bsky.social/post/3mysxjjjs7k2k",
+      "published": "2026-10-27T09:17+09:00",
+      "place": "秋保",
+      "placeKind": "area",
+      "matched": "秋保",
+      "ward": "太白区",
+      "lat": 38.229514,
+      "lng": 140.713171
+    },
+    {
       "id": "news-6f8bbdb50e",
       "category": "reviews",
       "type": "shopping",
@@ -2734,8 +2821,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.260824,
-      "lng": 140.8798
+      "lat": 38.258206,
+      "lng": 140.881549
     },
     {
       "id": "news-9069f9d851",
@@ -2752,8 +2839,8 @@
       "placeKind": "ward",
       "matched": "仙台市青葉区",
       "ward": "青葉区",
-      "lat": 38.267731,
-      "lng": 140.869489
+      "lat": 38.269527,
+      "lng": 140.872202
     },
     {
       "id": "news-c4f0e20e22",
@@ -2770,8 +2857,8 @@
       "placeKind": "ward",
       "matched": "仙台市青葉区",
       "ward": "青葉区",
-      "lat": 38.270665,
-      "lng": 140.870021
+      "lat": 38.267731,
+      "lng": 140.869489
     },
     {
       "id": "news-07f4a99c0a",
@@ -2781,7 +2868,7 @@
       "typeIcon": "🚃",
       "title": "🟢本日（2026/10/27） 宮城 仙台 戦争反対！憲法まもれ！ながまちペンライトアクション⑦ JR長町駅西口広場 …",
       "summary": "🟢本日（2026/10/27） 宮城 仙台 戦争反対！憲法まもれ！ながまちペンライトアクション⑦ JR長町駅西口広場 18:00〜19:00 主催：市民連合たいはく from 市民連合たいはく （@shimin_taihaku X/Twitter） 【 10月もペンライトアクション実施します✨️ ごいっしょに「戦争反対！憲法まもれ！」の声を上げましょう！ ※開始時刻がこれまでより30分早くなってま",
-      "source": "Mastodon #仙台（fedibird.com）",
+      "source": "Mastodon #仙台（mstdn.jp）",
       "url": "https://mastodon.social/@123456Moto/117509503432789619",
       "published": "2026-10-27T07:12+09:00",
       "place": "長町駅",
@@ -2828,24 +2915,6 @@
       "lng": 140.87172
     },
     {
-      "id": "news-4ee81c07fe",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "⬇１人席予約可能 10000円以下でせり鍋とちょっとした小料理とお酒を楽しみたいよ！→せりいち 15000円くらいでせ…",
-      "summary": "⬇１人席予約可能 10000円以下でせり鍋とちょっとした小料理とお酒を楽しみたいよ！→せりいち 15000円くらいでせり鍋はもちろん、刺身から焼き物まで宮城産の物をふんだんに扱ったコース料理が食べたいよ！→菜る海 ⬇要確認だが１人でもいける。 ネット予約は２名からしかないため電話で確認したほうが確実。せり鍋の情報と値段は逐一チェックする必要がある。 ┠漁亭 浜や あすと長町店 ┗せり草庵",
-      "source": "Bluesky「長町」",
-      "url": "https://bsky.app/profile/go10u.bsky.social/post/3myrwntvxl22m",
-      "published": "2026-10-26T23:29+09:00",
-      "place": "あすと長町",
-      "placeKind": "area",
-      "matched": "あすと長町",
-      "ward": "太白区",
-      "lat": 38.229474,
-      "lng": 140.886761
-    },
-    {
       "id": "news-caaf61cac3",
       "category": "gourmet",
       "type": "buffet",
@@ -2860,26 +2929,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.268669,
-      "lng": 140.865321
-    },
-    {
-      "id": "news-2b4e45df64",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "松井酒造 MATSUI BEER MB IPA をｶｼｭｯ(`･ω･´) >小麦由来の柔らかな口当たりと、ホップの豊か…",
-      "summary": "松井酒造 MATSUI BEER MB IPA をｶｼｭｯ(`･ω･´) >小麦由来の柔らかな口当たりと、ホップの豊かな香りを両立 モルトの旨味、甘味強めなIPA ABV5.0以上の飲み応えを感じる ザ・モール仙台長町 にて確保(´･ω･`) #BskyBeer #Craftbeer #クラフトビール #青空ビール部 #青空飲酒部",
-      "source": "Bluesky「長町」",
-      "url": "https://bsky.app/profile/dokkanonakanohito.bsky.social/post/3myrh2nfhbk2z",
-      "published": "2026-10-26T18:50+09:00",
-      "place": "あすと長町",
-      "placeKind": "area",
-      "matched": "長町",
-      "ward": "太白区",
-      "lat": 38.228114,
-      "lng": 140.885807
+      "lat": 38.264831,
+      "lng": 140.868507
     },
     {
       "id": "news-213b4e52e6",
@@ -2896,8 +2947,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.261446,
-      "lng": 140.884743
+      "lat": 38.262433,
+      "lng": 140.881206
     },
     {
       "id": "news-a651ceaad4",
@@ -2914,8 +2965,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.270144,
-      "lng": 140.872931
+      "lat": 38.271232,
+      "lng": 140.867346
     },
     {
       "id": "news-eadaeb46a0",
@@ -2932,8 +2983,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.264831,
-      "lng": 140.868507
+      "lat": 38.267116,
+      "lng": 140.873572
     },
     {
       "id": "news-3846f967b5",
@@ -2950,8 +3001,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.271232,
-      "lng": 140.867346
+      "lat": 38.266729,
+      "lng": 140.865495
     },
     {
       "id": "news-8949464760",
@@ -2986,26 +3037,26 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.258206,
-      "lng": 140.881549
+      "lat": 38.259447,
+      "lng": 140.885043
     },
     {
-      "id": "news-cdaf1a3e68",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "知人女性の遺体を千葉・市原市から仙台・青葉区の駐車場に運び遺棄した疑い 千葉・松戸市の男（２８）逮捕",
-      "summary": "知人女性の遺体を千葉・市原市から仙台・青葉区の駐車場に運び遺棄した疑い 千葉・松戸市の男（２８）逮捕（khb東日本放送） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5HdE5zYjFQVmE5SlRtQW1rMFFFN1BxdzBQN0dIXzdYMS1ZYnBRVGY0UVpyMWxpWlMxV1h0VG8tNWxMeVZNakFIWGJOcFZGaEx3OUlPaHBiRkVxYWYzUWthVWZtVkpYd28zM240eGN1bWE2bmYta1R1R0wycGtxMXc?oc=5",
-      "published": "2026-10-26T13:08+09:00",
-      "place": "青葉区",
-      "placeKind": "ward",
-      "matched": "青葉区",
+      "id": "news-b4f9b50983",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "愛子駅、秋保温泉郷の玄関口である ちなみに読み方は「あやし」だよ、「あいこ」じゃないよ",
+      "summary": "愛子駅、秋保温泉郷の玄関口である ちなみに読み方は「あやし」だよ、「あいこ」じゃないよ",
+      "source": "Bluesky「秋保」",
+      "url": "https://bsky.app/profile/rymusmay3.bsky.social/post/3myqtgkppgc2a",
+      "published": "2026-10-26T12:58+09:00",
+      "place": "愛子駅",
+      "placeKind": "station",
+      "matched": "愛子駅",
       "ward": "青葉区",
-      "lat": 38.268112,
-      "lng": 140.872144
+      "lat": 38.27252,
+      "lng": 140.76168
     },
     {
       "id": "news-9f1a9a26d3",
@@ -3022,8 +3073,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.262433,
-      "lng": 140.881206
+      "lat": 38.259544,
+      "lng": 140.879634
     },
     {
       "id": "news-e62207afb6",
@@ -3040,8 +3091,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267116,
-      "lng": 140.873572
+      "lat": 38.271488,
+      "lng": 140.871175
     },
     {
       "id": "news-c9573fb41d",
@@ -3058,8 +3109,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266729,
-      "lng": 140.865495
+      "lat": 38.264807,
+      "lng": 140.870939
     },
     {
       "id": "news-cf3a04b5df",
@@ -3076,8 +3127,8 @@
       "placeKind": "station",
       "matched": "泉中央駅",
       "ward": "泉区",
-      "lat": 38.322878,
-      "lng": 140.881124
+      "lat": 38.32321,
+      "lng": 140.88075
     },
     {
       "id": "news-45537a841d",
@@ -3094,8 +3145,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.259447,
-      "lng": 140.885043
+      "lat": 38.262495,
+      "lng": 140.883776
     },
     {
       "id": "news-a6123e6afa",
@@ -3112,8 +3163,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.259544,
-      "lng": 140.879634
+      "lat": 38.257967,
+      "lng": 140.883163
     },
     {
       "id": "news-bff3e7d3a8",
@@ -3130,8 +3181,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.262495,
-      "lng": 140.883776
+      "lat": 38.261705,
+      "lng": 140.879798
     },
     {
       "id": "news-113a671ded",
@@ -3148,80 +3199,44 @@
       "placeKind": "ward",
       "matched": "仙台市青葉区",
       "ward": "青葉区",
-      "lat": 38.268856,
-      "lng": 140.868324
+      "lat": 38.270665,
+      "lng": 140.870021
     },
     {
-      "id": "news-5007bf4a82",
-      "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "🟢本日（2026/10/26） 宮城 仙台 平和ビル前 スパイ防止法NO! アピール宣伝 12:00〜13:00 仙台…",
-      "summary": "🟢本日（2026/10/26） 宮城 仙台 平和ビル前 スパイ防止法NO! アピール宣伝 12:00〜13:00 仙台駅徒歩15分 主催：スパイ防止法NO!みやぎネット どなたでも参加できます 戦争反対スタンディング参加可 from 宮城県平和委員会 （@MYGpc9NOwar X/Twitter） 【 県平和委員会も事務局を務めるスパイ防止法NO!みやぎネットは、定期的に街頭宣伝をしています。始まった臨時国会で強行審議される可能性があります。みんなで声をあげて止めましょう‼️監視されるのは、一般国民です。決し […] [Original post on mastodon.social]",
-      "source": "Bluesky「仙台駅」",
-      "url": "https://bsky.app/profile/123456moto.mastodon.social.ap.brid.gy/post/3myq3og65mih2",
-      "published": "2026-10-26T05:53+09:00",
-      "place": "仙台駅",
-      "placeKind": "station",
-      "matched": "仙台駅",
-      "ward": "青葉区",
-      "lat": 38.257967,
-      "lng": 140.883163
+      "id": "news-b5a4f006f4",
+      "category": "otaku",
+      "type": "anime",
+      "typeLabel": "アニメ・漫画",
+      "typeIcon": "",
+      "title": "仙台で広がる推し活文化 メンバーカラーのクリームソーダ、聖地巡礼、誕生日会…＜マンデー経済＞",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9DemFELWJ2TmdlLUI1VWdQZXdCVERkdXdQTHgxSkJrdjdoTl9ZbjA4YWpJRW95eHlVLV81N09hWGN0UzBQeXJOUDFta3QyYzR3MWQ4WExBdmVucEk?oc=5",
+      "published": "2026-10-26T05:00+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.269903,
+      "lng": 140.86552
     },
     {
-      "id": "news-3d96913849",
+      "id": "news-35894e86a3",
       "category": "otaku",
       "type": "vtuber",
       "typeLabel": "VTuber・声優・アイドル",
       "typeIcon": "",
       "title": "「可愛い～あみあみ」元アイドルグループ30歳、ネコ耳“網タイツ”で仙台、ファン熱視線「結構筋肉あるんですね」「連チャンしてね！」「会いたかった」",
-      "summary": "「可愛い～あみあみ」元アイドルグループ30歳、ネコ耳“網タイツ”で仙台、ファン熱視線「結構筋肉あるんですね」「連チャンしてね！」「会いたかった」 (中日スポーツ) Yahoo!ニュース",
+      "summary": "「可愛い～あみあみ」元アイドルグループ30歳、ネコ耳“網タイツ”で仙台、ファン熱視線「結構筋肉あるんですね」「連チャンしてね！」「会いたかった」（中日スポーツ） Yahoo!ニュース",
       "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdXFsMVBIQ3ZSUmMyNUVIVy1rQWhKX05XSzZ0MXJ1bjZLaTRxTmpxbVo2b0x4RDJ3dFZmUU9jcVE4dzdRWjRDSkVTd29wS1JwX2t0U1dYajgtaWs3RUdOVlZRVDdCNEZ3czh1NHY2MkJxS0o1NTJXQXFuZEp0alFaMGppVjJkM2J0YWZiRGFR?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBiMVB5QUQ3UmlBazg2TGI1STVzcUplTWhyM0NXUXZLeXp6WFo2Mks2WktMTmRpVkQ2dkYtQXFkMU5yellCZ19QTGxQcHpuYTVLOUJaalZLYUlJUkV3bDJjanhBektSQTRKZFR0V1FIeDVCSmZhaWZ0Snhjc2d4LUE?oc=5",
       "published": "2026-10-26T04:50+09:00",
       "place": "市全体",
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.271488,
-      "lng": 140.871175
-    },
-    {
-      "id": "news-53fbb6166f",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "「R CLASS」 #三千櫻 #北海道 お酒は大人の愉しみ 日本酒はひとりでも仲間とでも楽しめます 仙台国分町の日本酒…",
-      "summary": "「R CLASS」 #三千櫻 #北海道 お酒は大人の愉しみ 日本酒はひとりでも仲間とでも楽しめます 仙台国分町の日本酒処参壱丸撰 全国各地の旨い日本酒との出合いがございます",
-      "source": "Bluesky「国分町」",
-      "url": "https://bsky.app/profile/bar3103.bsky.social/post/3mypvjwck2c22",
-      "published": "2026-10-26T04:03+09:00",
-      "place": "国分町",
-      "placeKind": "facility",
-      "matched": "国分町",
-      "ward": "青葉区",
-      "lat": 38.265346,
-      "lng": 140.869187
-    },
-    {
-      "id": "news-9ea6ecd3e4",
-      "category": "otaku",
-      "type": "vtuber",
-      "typeLabel": "VTuber・声優・アイドル",
-      "typeIcon": "",
-      "title": "画像2 / 3＞【連載「ポッター平井の激推しアイドル！」第22回】 仙台発のガールズユニットに恋をしよう！「Dorothy Little Happy」",
-      "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5OclBuX1NseUN0QVY1X2JqbmFGWlYweGRoLWN4OUlfYVdxZVdUdTN1MmlkMVJNaEl0NTdkWTFqdXJNRTgwVjdOdFd2YUhPM04xa0xsVmdORjFnRC1Va3kwWFVkdnZ0UEJF?oc=5",
-      "published": "2026-10-26T01:57+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.264807,
-      "lng": 140.870939
+      "lat": 38.269115,
+      "lng": 140.873813
     },
     {
       "id": "news-f86a38a2c7",
@@ -3238,26 +3253,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269903,
-      "lng": 140.86552
-    },
-    {
-      "id": "news-0cff076e7b",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "連日夜は 「こってり」祭り！仙台の濃厚ラーメン店「麺工房 きわみや」",
-      "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5NcldPMXhnV2NUcFhua19OTmM5UFR0a0dPd3J3MWtDOHBTTjRCWWdFQVNDcFh4WVZITllDb0I3dDJ4RC1RbWdfQnNhLUtIYm1uYUZ1adIBWkFVX3lxTE16TUJ4QTZia1pVclVZMlJZdjBRcFNiQW1hRG9tQ1hGeDNmajRJMXVHVjNZc1EyZnRpZG1jUTVPeW5IZlYtZ1RNNnlrS0JFVE9YQXRMeGQ3TkxGdw?oc=5",
-      "published": "2026-10-25T21:55+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.269115,
-      "lng": 140.873813
+      "lat": 38.265111,
+      "lng": 140.866992
     },
     {
       "id": "news-1aacc4bb46",
@@ -3274,8 +3271,8 @@
       "placeKind": "ward",
       "matched": "青葉区",
       "ward": "青葉区",
-      "lat": 38.270456,
-      "lng": 140.871877
+      "lat": 38.268112,
+      "lng": 140.872144
     },
     {
       "id": "news-037e9f1cb1",
@@ -3292,8 +3289,8 @@
       "placeKind": "area",
       "matched": "仙台港",
       "ward": "宮城野区",
-      "lat": 38.269874,
-      "lng": 141.005761
+      "lat": 38.269456,
+      "lng": 141.00422
     },
     {
       "id": "news-9713160c6b",
@@ -3310,8 +3307,8 @@
       "placeKind": "area",
       "matched": "仙台港",
       "ward": "宮城野区",
-      "lat": 38.268514,
-      "lng": 141.004807
+      "lat": 38.269874,
+      "lng": 141.005761
     },
     {
       "id": "news-61261f7205",
@@ -3328,24 +3325,6 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.265111,
-      "lng": 140.866992
-    },
-    {
-      "id": "news-0393f08c7d",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "知人女性宅の玄関先に血痕 千葉から仙台に遺体運び遺棄か 28歳男を逮捕（FNNプライムオンライン（フジテレビ系））",
-      "summary": "",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9oQmFLd2F5c0FCb2Z3amdtdHM2T0FwR0huczJBRC1SdWFIaEg0QW5oVjR3UzBTcUZGUm9RcVBPY0hnOFRnVEJ0bVpwVHlZOVM4dUlUUnpuSkJ0azBlMXozbHVna01qVjRJU1Q0VGE5eXIybmFSTVFvS3AxODhkdlk?oc=5",
-      "published": "2026-10-25T11:44+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
       "lat": 38.27186,
       "lng": 140.868708
     },
@@ -3357,7 +3336,7 @@
       "typeIcon": "💬",
       "title": "🟢本日（2026/10/25） 宮城 核兵器NО！アピール市民行進 in 仙台 東北大学北門 14:20 スタート f…",
       "summary": "🟢本日（2026/10/25） 宮城 核兵器NО！アピール市民行進 in 仙台 東北大学北門 14:20 スタート from 宮城革新懇@事務室メンバー（平和・民主・革新の日本をめざす宮城の会） （＠Kun270902 X/Twitter） 【 核兵器NО！アピール市民行進 in 仙台 10/25(日)14時20分東北大学北門スタート 宮城県議会・仙台市議会など東北各県で「非核三原則の堅持を求める",
-      "source": "Mastodon #仙台（fedibird.com）",
+      "source": "Mastodon #仙台（mstdn.jp）",
       "url": "https://mastodon.social/@123456Moto/117497962286455959",
       "published": "2026-10-25T06:17+09:00",
       "place": "市全体",
@@ -3418,8 +3397,44 @@
       "placeKind": "ward",
       "matched": "仙台市太白区",
       "ward": "太白区",
-      "lat": 38.223434,
-      "lng": 140.876957
+      "lat": 38.223988,
+      "lng": 140.877524
+    },
+    {
+      "id": "news-7437cb5c0c",
+      "category": "crime",
+      "type": "other",
+      "typeLabel": "その他の事件",
+      "typeIcon": "",
+      "title": "知人女性の遺体を千葉・市原市から仙台・青葉区の駐車場に運び遺棄した疑い 千葉・松戸市の男（２８）逮捕",
+      "summary": "",
+      "source": "khb東日本放送",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBDR2R1b2hpWTFyNmxPSjJIMEFHNXlHVjB4TmhvX1p2aDMzNXl4dkwxdi1QV18xdlpmYUFtbTJVSXlSOUpYR3QwZGd0cnFBYTQ?oc=5",
+      "published": "2026-10-24T18:14+09:00",
+      "place": "青葉区",
+      "placeKind": "ward",
+      "matched": "青葉区",
+      "ward": "青葉区",
+      "lat": 38.268856,
+      "lng": 140.868324
+    },
+    {
+      "id": "news-f7440c439f",
+      "category": "gourmet",
+      "type": "buffet",
+      "typeLabel": "食べ放題",
+      "typeIcon": "🍽️",
+      "title": "国分町の牛タン食べ放題に10月から新メニューが登場！その中身とは？",
+      "summary": "",
+      "source": "河北新報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE43X1ZRX2tUOUswNFU4b0RHX0ZsMXNvaHBJenRWUXlEdGJrU21KYlpGRTdQME0xSUhxNnMzaW0yQUE5Z25zTFJDLWdtbFpLZkkybEo3clhhOEhkLXN0M21sSXZR?oc=5",
+      "published": "2026-10-24T18:01+09:00",
+      "place": "国分町",
+      "placeKind": "facility",
+      "matched": "国分町",
+      "ward": "青葉区",
+      "lat": 38.263601,
+      "lng": 140.86735
     },
     {
       "id": "news-4e568eb91a",
@@ -3436,26 +3451,8 @@
       "placeKind": "ward",
       "matched": "宮城野区",
       "ward": "宮城野区",
-      "lat": 38.266664,
-      "lng": 140.910671
-    },
-    {
-      "id": "news-24da6f1ccf",
-      "category": "otaku",
-      "type": "vtuber",
-      "typeLabel": "VTuber・声優・アイドル",
-      "typeIcon": "",
-      "title": "ギミラブ！『turning point 』2026.10.24 東北アイドル初期衝動【前夜祭】デジタルアーツ仙台",
-      "summary": "",
-      "source": "YouTube",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5kMUFyN0U3am5PZWJkNTFJdE15TFBTQWpMaG9wOXR3Q044emhLM3diMFl4bGdrblY1akNjY19NQVJWMk9fdDVNam9NZGQxMVRBaWxhbnl0VFdXb05s?oc=5",
-      "published": "2026-10-24T15:18+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.264382,
-      "lng": 140.869415
+      "lat": 38.267039,
+      "lng": 140.909246
     },
     {
       "id": "news-113e515dd3",
@@ -3472,8 +3469,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.27106,
-      "lng": 140.866299
+      "lat": 38.264382,
+      "lng": 140.869415
     },
     {
       "id": "news-b1f30e9e2f",
@@ -3490,8 +3487,8 @@
       "placeKind": "station",
       "matched": "仙台駅",
       "ward": "青葉区",
-      "lat": 38.261705,
-      "lng": 140.879798
+      "lat": 38.260781,
+      "lng": 140.885476
     },
     {
       "id": "news-ea017901c3",
@@ -3508,8 +3505,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267825,
-      "lng": 140.874199
+      "lat": 38.27106,
+      "lng": 140.866299
     },
     {
       "id": "news-5b9893621e",
@@ -3526,26 +3523,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.265858,
-      "lng": 140.865628
-    },
-    {
-      "id": "news-e16b8fa32c",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "知人女性（30）の遺体を仙台市のコインパーキング車内に遺棄か 28歳の男逮捕 「連絡取れず車がない」女性の夫からの通報で発覚 千葉県警",
-      "summary": "",
-      "source": "TBS NEWS DIG",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9OTE1SeFFRMmFidjVncTJhNG1aOHhLNUFDZ3I5T0lrbkFKR3RXTUwydHFlWURpSjNoSUxrYjZoaTJmajQ5cVlUaTYyV1RmcGFZcE1PeDhvbw?oc=5",
-      "published": "2026-10-24T12:13+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.272056,
-      "lng": 140.870346
+      "lat": 38.267825,
+      "lng": 140.874199
     },
     {
       "id": "news-7f1322bc87",
@@ -3562,8 +3541,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.264848,
-      "lng": 140.872028
+      "lat": 38.265858,
+      "lng": 140.865628
     },
     {
       "id": "news-2f448f36db",
@@ -3580,8 +3559,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269268,
-      "lng": 140.864751
+      "lat": 38.272056,
+      "lng": 140.870346
     },
     {
       "id": "news-176a1f42d8",
@@ -3598,8 +3577,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.27001,
-      "lng": 140.873847
+      "lat": 38.264848,
+      "lng": 140.872028
     },
     {
       "id": "news-a6ce22ecf1",
@@ -3616,8 +3595,26 @@
       "placeKind": "facility",
       "matched": "うみの杜水族館",
       "ward": "宮城野区",
-      "lat": 38.270728,
-      "lng": 140.980844
+      "lat": 38.271116,
+      "lng": 140.97969
+    },
+    {
+      "id": "news-90b7b6db34",
+      "category": "gourmet",
+      "type": "other",
+      "typeLabel": "その他のグルメ",
+      "typeIcon": "🍴",
+      "title": "【予告】えのずのグルメ2話【仙台市】",
+      "summary": "",
+      "source": "YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4xblBlcjlsdVIyWENha1IxeEs4U2ZLUDRQSUw1a29rcU92T2NJMGJzazhRdTlyTWR6el9BQ0U0UkRzbndkd3pVRzFmdHF0czhlb194UU1EckxVMkxW?oc=5",
+      "published": "2026-10-23T22:17+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.269268,
+      "lng": 140.864751
     },
     {
       "id": "news-9359323ec5",
@@ -3634,8 +3631,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.264433,
-      "lng": 140.867718
+      "lat": 38.27001,
+      "lng": 140.873847
     },
     {
       "id": "news-6785c09670",
@@ -3652,8 +3649,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.271958,
-      "lng": 140.867603
+      "lat": 38.264433,
+      "lng": 140.867718
     },
     {
       "id": "news-e9dd14ece8",
@@ -3670,8 +3667,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266438,
-      "lng": 140.873979
+      "lat": 38.271958,
+      "lng": 140.867603
     },
     {
       "id": "news-0956319137",
@@ -3688,8 +3685,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.26701,
-      "lng": 140.864634
+      "lat": 38.266438,
+      "lng": 140.873979
     },
     {
       "id": "news-783ef94073",
@@ -3706,8 +3703,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.271749,
-      "lng": 140.872045
+      "lat": 38.26701,
+      "lng": 140.864634
     },
     {
       "id": "news-f783c91952",
@@ -3724,8 +3721,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.26414,
-      "lng": 140.870508
+      "lat": 38.271749,
+      "lng": 140.872045
     },
     {
       "id": "news-289d344d09",
@@ -3742,8 +3739,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.270632,
-      "lng": 140.865289
+      "lat": 38.26414,
+      "lng": 140.870508
     },
     {
       "id": "news-40f589edb8",
@@ -3760,8 +3757,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.2687,
-      "lng": 140.874586
+      "lat": 38.270632,
+      "lng": 140.865289
     },
     {
       "id": "news-e048b368c1",
@@ -3774,6 +3771,24 @@
       "source": "Mastodon #仙台（mastodon.social）",
       "url": "https://ol2ol.com/@vivizine/117474518988160113",
       "published": "2026-10-21T02:55+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.2687,
+      "lng": 140.874586
+    },
+    {
+      "id": "news-efab18f748",
+      "category": "crime",
+      "type": "other",
+      "typeLabel": "その他の事件",
+      "typeIcon": "",
+      "title": "無許可で運送事業を経営した疑いで男（７８）を逮捕　度重なる違反で事業許可の取消処分受ける〈仙台〉",
+      "summary": "無許可で運送事業を経営した疑いで男（７８）を逮捕 度重なる違反で事業許可の取消処分受ける〈仙台〉 ｄメニューニュース",
+      "source": "ｄメニューニュース",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5FRXdST183REdWZ1RLWWZac2JHcW1HV19HTVVnazR6aC02UHRFczRwcDBzZHBCQ0dHc1AycFJrVHZ1dHlhT1VRQnEzazFzWlo3RE9Sb1JoVGpxMUhrNUFBRGx5SFNONFdXcTlsams1UjlROXRu0gF0QVVfeXFMTkVFd1JPXzdER1ZnVEtZZlpzYkdxbUdXX0dNVWdrNHpoLTZQdEVzNHBwMHNkcEJDR0dzUDJwUmtUdnV0eWFPVVFCcTNrMXNaWjdET1JvUmhUanExSGs1QUFEbHlIU040V1dxOWxqazVSOVE5dG4?oc=5",
+      "published": "2026-10-20T16:46+09:00",
       "place": "市全体",
       "placeKind": "city",
       "matched": "",
@@ -3796,8 +3811,8 @@
       "placeKind": "ward",
       "matched": "太白区",
       "ward": "太白区",
-      "lat": 38.225169,
-      "lng": 140.876486
+      "lat": 38.224376,
+      "lng": 140.87637
     },
     {
       "id": "news-2ebf4b2531",
@@ -3816,6 +3831,24 @@
       "ward": "泉区",
       "lat": 38.325721,
       "lng": 140.88002
+    },
+    {
+      "id": "news-c7faec4b28",
+      "category": "crime",
+      "type": "other",
+      "typeLabel": "その他の事件",
+      "typeIcon": "",
+      "title": "無許可で貨物をトラック運送させた疑い 仙台・若林区の運送会社代表を逮捕",
+      "summary": "",
+      "source": "khb東日本放送",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaSUdTcURCUFMyRS1BRFY5bWZHU2ZNNXNYRXV2V09yVGJTUEpqc0xaN0o0VkdTcDVxaG50SUk2cEJ3RnlKMmFWcDhhTENZTVU?oc=5",
+      "published": "2026-10-20T16:00+09:00",
+      "place": "若林区",
+      "placeKind": "ward",
+      "matched": "若林区",
+      "ward": "若林区",
+      "lat": 38.243808,
+      "lng": 140.901194
     },
     {
       "id": "news-0f7d42657f",
@@ -3890,24 +3923,6 @@
       "lng": 140.864188
     },
     {
-      "id": "news-fc0a3a254c",
-      "category": "otaku",
-      "type": "cafe",
-      "typeLabel": "コラボカフェ・グッズ",
-      "typeIcon": "",
-      "title": "イオンモール仙台上杉で11月3日から始まるポップアップストアがめちゃくちゃ話題。",
-      "summary": "",
-      "source": "河北新報オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBrdy1USG0xUGs4ZkFnY3k0bDI1Y0pIRzY5Yk03bm1pSnp0RWpTZHFZVlNXZE9Yb0J1QzhqX2dHTDV2QzBoRmotNmNCdEdjd2ttcExxNktfVTBQRG9WeUUzY2hB?oc=5",
-      "published": "2026-10-19T13:58+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.270934,
-      "lng": 140.873568
-    },
-    {
       "id": "news-20d2b0c634",
       "category": "wildlife",
       "type": "bear",
@@ -3922,8 +3937,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.263905,
-      "lng": 140.868698
+      "lat": 38.270934,
+      "lng": 140.873568
     },
     {
       "id": "news-494d6dc776",
@@ -3940,8 +3955,8 @@
       "placeKind": "ward",
       "matched": "仙台市太白区",
       "ward": "太白区",
-      "lat": 38.224034,
-      "lng": 140.878459
+      "lat": 38.224794,
+      "lng": 140.877911
     },
     {
       "id": "news-08a3685aa0",
@@ -3976,26 +3991,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.271805,
-      "lng": 140.866437
-    },
-    {
-      "id": "news-2c810696fc",
-      "category": "otaku",
-      "type": "other",
-      "typeLabel": "その他のオタク情報",
-      "typeIcon": "",
-      "title": "仙台まで駆けつけた〝推し活ショット〟が話題になっている志田未",
-      "summary": "仙台まで駆けつけた〝推し活ショット〟が話題になっている志田未｜「えー！あの場にいたのー!?」｜写真｜【西スポWEB OTTO!】 西スポWEB OTTO!",
-      "source": "西スポWEB OTTO!",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcm8ydmJEamI2SUtFN1Z4a3EyTGVFc0xNczAxdGEtdC1aejM1N0kyQUxHTjM5NUJienhaSk9yelZFcHQ3SmtpZzVlWFBaVnY0YThaUzNoNFVLT0Q2cU1CS2tBTFdJX0ZKQ0FSQzdxUFNuYUJubkFSWkxPLUtWTHlBUnVLMGZkMlU?oc=5",
-      "published": "2026-10-17T16:56+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.267197,
-      "lng": 140.874712
+      "lat": 38.263905,
+      "lng": 140.868698
     },
     {
       "id": "news-1d42e4929c",
@@ -4012,8 +4009,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.266044,
-      "lng": 140.864729
+      "lat": 38.271805,
+      "lng": 140.866437
     },
     {
       "id": "news-7b85613d52",
@@ -4048,8 +4045,8 @@
       "placeKind": "area",
       "matched": "秋保",
       "ward": "太白区",
-      "lat": 38.22904,
-      "lng": 140.71241
+      "lat": 38.228154,
+      "lng": 140.712217
     },
     {
       "id": "news-a810bb01a9",
@@ -4066,8 +4063,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.272409,
-      "lng": 140.871166
+      "lat": 38.267197,
+      "lng": 140.874712
     },
     {
       "id": "news-cb0c97d996",
@@ -4084,8 +4081,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.264139,
-      "lng": 140.871711
+      "lat": 38.266044,
+      "lng": 140.864729
     },
     {
       "id": "news-445bf1b986",
@@ -4102,8 +4099,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269967,
-      "lng": 140.8644
+      "lat": 38.272409,
+      "lng": 140.871166
     },
     {
       "id": "news-0e65a78197",
@@ -4120,8 +4117,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.269683,
-      "lng": 140.874686
+      "lat": 38.264139,
+      "lng": 140.871711
     },
     {
       "id": "news-7dd924fd67",
@@ -4138,8 +4135,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.264217,
-      "lng": 140.866826
+      "lat": 38.269967,
+      "lng": 140.8644
     },
     {
       "id": "news-9e7920e459",
@@ -4156,26 +4153,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.272605,
-      "lng": 140.868086
-    },
-    {
-      "id": "news-eb5ecc0d81",
-      "category": "otaku",
-      "type": "anime",
-      "typeLabel": "アニメ・漫画",
-      "typeIcon": "",
-      "title": "「暁のヨナ大原画展」FINAL仙台開催、20周年記念展の集大成",
-      "summary": "",
-      "source": "Koubo",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE83MjlwbW9XbkdqLUJ2d1V2TW5SeUp4a2N0REZmRXc3WXhLOGdJVFpVb21Qa09UQXlQMmNwOTJtWjRfdTRXMlE?oc=5",
-      "published": "2026-10-08T16:00+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 38.265694,
-      "lng": 140.874156
+      "lat": 38.269683,
+      "lng": 140.874686
     },
     {
       "id": "news-30bc1ad830",
@@ -4192,8 +4171,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.267465,
-      "lng": 140.863888
+      "lat": 38.264217,
+      "lng": 140.866826
     },
     {
       "id": "news-cfb224fc23",
@@ -4210,8 +4189,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.271819,
-      "lng": 140.872975
+      "lat": 38.272605,
+      "lng": 140.868086
+    },
+    {
+      "id": "news-dbeb86ecb6",
+      "category": "otaku",
+      "type": "vtuber",
+      "typeLabel": "VTuber・声優・アイドル",
+      "typeIcon": "",
+      "title": "【連載「ポッター平井の激推しアイドル！」第22回】 仙台発のガールズユニットに恋をしよう！「Dorothy Little Happy」",
+      "summary": "",
+      "source": "ウォーカープラス",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1zbmJOYVZVeV9meUtRbnFWNzJuRUh5ek5tMS1raEYwZ0FONHJqUXNxMGZ1RTVURVJhYjJTZTRGT3VyTkk3ek9rRGwtS1BtdlZSTHV30gFYQVVfeXFMT1NMRWZraU0yaHpkNmpLNi11V0R1QmVfcjQ3ZktaaEE2SHAzQlg2Q3hMR1lvTTFZVWxfYW43UnNiNkJ2TF9INGJkOHFuTFJkVEFSeFp5cUZEUA?oc=5",
+      "published": "2026-10-02T16:00+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 38.265694,
+      "lng": 140.874156
     },
     {
       "id": "news-26917f20f5",
@@ -4228,8 +4225,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 38.263579,
-      "lng": 140.869877
+      "lat": 38.267465,
+      "lng": 140.863888
     }
   ]
 }
