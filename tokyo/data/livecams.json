@@ -1,6 +1,6 @@
 {
   "_comment": "東京23区内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・links（配信元のページへのリンクの一覧）。lat/lng はおおよその位置（ウェザーニュースは区役所の位置）。youtube は scripts/fetch_livecams.py --city tokyo が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
-  "checkedAt": "2026-10-30T15:08+09:00",
+  "checkedAt": "2026-10-30T22:20+09:00",
   "cameras": [
     {
       "id": "kasumigaseki-cam",
@@ -51,9 +51,9 @@
       "siteUrl": "https://www.youtube.com/watch?v=pm65bK0rw4M",
       "youtube": {
         "channelId": "UCQZvctelm9hPKKkP0RpvFyQ",
-        "videoId": null,
-        "live": false,
-        "embeddable": null
+        "videoId": "pFSwLWGmcU8",
+        "live": true,
+        "embeddable": true
       }
     },
     {
@@ -68,7 +68,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=Y8ED9VzwfLY",
       "youtube": {
         "channelId": "UC6Ljvl0Kghy9Fhe6SXViTPw",
-        "videoId": "Y8ED9VzwfLY",
+        "videoId": "9tpTCdMs3T8",
         "live": true,
         "embeddable": true
       }
@@ -592,7 +592,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=qB2u0egPILQ",
       "youtube": {
         "channelId": "UCQejnkADwqjZcWHO6s53TyQ",
-        "videoId": "CTJwWCbs_jU",
+        "videoId": "yhEnIqUdtwQ",
         "live": true,
         "embeddable": true
       }
@@ -629,7 +629,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=6ZBrisjGTro",
       "youtube": {
         "channelId": "UC9fzK_WLWg0U6Y3EON9-nKw",
-        "videoId": "maK3ELllA_g",
+        "videoId": "EwB78QMG2IQ",
         "live": true,
         "embeddable": false
       }
