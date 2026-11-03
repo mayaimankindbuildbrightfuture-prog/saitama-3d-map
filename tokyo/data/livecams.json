@@ -1,6 +1,6 @@
 {
   "_comment": "東京23区内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・links（配信元のページへのリンクの一覧）。lat/lng はおおよその位置（ウェザーニュースは区役所の位置）。youtube は scripts/fetch_livecams.py --city tokyo が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
-  "checkedAt": "2026-11-03T04:45+09:00",
+  "checkedAt": "2026-11-03T12:06+09:00",
   "cameras": [
     {
       "id": "kasumigaseki-cam",
@@ -51,9 +51,9 @@
       "siteUrl": "https://www.youtube.com/watch?v=pm65bK0rw4M",
       "youtube": {
         "channelId": "UCQZvctelm9hPKKkP0RpvFyQ",
-        "videoId": "DT4ui8l4fSs",
-        "live": true,
-        "embeddable": true
+        "videoId": null,
+        "live": false,
+        "embeddable": null
       }
     },
     {
@@ -216,7 +216,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=nZxeiBxcnx0",
       "youtube": {
         "channelId": "UChKERpE7Um0Uq1btm_a9g5A",
-        "videoId": "9WX9jBPD5aE",
+        "videoId": "R_5mw0dbu9c",
         "live": true,
         "embeddable": true,
         "titleKeywords": [
@@ -313,7 +313,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=MwcMURMzJ7A",
       "youtube": {
         "channelId": "UCuS18SHV5Nhqi9OtreOBmnA",
-        "videoId": "Yo_nC9rrqiI",
+        "videoId": "_7ZtpuJWqik",
         "live": true,
         "embeddable": true,
         "titleKeywords": [
@@ -555,7 +555,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=d7VthBGkPvw",
       "youtube": {
         "channelId": "UCE5uxiZBrhwFPwzlSfmdWQA",
-        "videoId": "lH14zijx3hQ",
+        "videoId": "ShP6Gn_oic4",
         "live": true,
         "embeddable": true
       }
@@ -592,7 +592,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=qB2u0egPILQ",
       "youtube": {
         "channelId": "UCQejnkADwqjZcWHO6s53TyQ",
-        "videoId": "n6AXVxuiyt8",
+        "videoId": "ae8JuWtjLH4",
         "live": true,
         "embeddable": true
       }
@@ -629,7 +629,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=6ZBrisjGTro",
       "youtube": {
         "channelId": "UC9fzK_WLWg0U6Y3EON9-nKw",
-        "videoId": "eMKlfadZAnY",
+        "videoId": "XSwH42zAAu8",
         "live": true,
         "embeddable": false
       }
