@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T02:53+09:00",
+  "generatedAt": "2026-11-08T07:05+09:00",
   "sources": [
     {
       "name": "Googleニュース「千代田区・中央区・港区・新宿区」",
@@ -332,12 +332,12 @@
       "url": ""
     },
     {
-      "name": "Bluesky「下北沢」",
+      "name": "Bluesky「高円寺」",
       "category": "reviews",
       "url": ""
     },
     {
-      "name": "Bluesky「高円寺」",
+      "name": "Bluesky「中目黒」",
       "category": "reviews",
       "url": ""
     },
@@ -374,40 +374,292 @@
   ],
   "items": [
     {
-      "id": "news-58621554a6",
+      "id": "news-292c65efc8",
+      "category": "gourmet",
+      "type": "japanese",
+      "typeLabel": "和食",
+      "typeIcon": "🍣",
+      "title": "「夫婦2人で18万円の寿司」新宿区議の投稿が炎上…「申し訳ないとは思っていない」本音と“清貧であるべき”政治家像への違和感",
+      "summary": "",
+      "source": "テレ朝NEWS",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9IRk9kZjZGa3kteVcxRG9fTlRkeGlCX29rYVBlYjVtNFA5SnhWQ2R4eE42VENBSVhndzJCQTNtSTIzUE9PMEl0VnNpa3JhS3lSMk1nZFYtMFFkakx0dHo1TDFDdW9ua3JRSThjcm1TMWwwdms?oc=5",
+      "published": "2026-11-08T07:00+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.69218,
+      "lng": 139.6997
+    },
+    {
+      "id": "news-da7a52541c",
       "category": "reviews",
       "type": "other",
       "typeLabel": "つぶやき",
       "typeIcon": "💬",
-      "title": "あー、高円寺に関しては15年前に古着屋さん渉猟して、その時はとてもリーズナブルなお値段だった。（一晩で24万円つかった…",
-      "summary": "あー、高円寺に関しては15年前に古着屋さん渉猟して、その時はとてもリーズナブルなお値段だった。（一晩で24万円つかったけど） 今は全然違う…。",
-      "source": "Bluesky「高円寺」",
-      "url": "https://bsky.app/profile/octpusmustpass.bsky.social/post/3mzqh6bewhc2f",
-      "published": "2026-11-08T02:44+09:00",
-      "place": "高円寺",
-      "placeKind": "facility",
-      "matched": "高円寺",
-      "ward": "杉並区",
-      "lat": 35.70534,
-      "lng": 139.65
+      "title": "一の酉でしたので今年も浅草鷲神社へ行って来ました ´▿` ｢良いお年を！｣の声を聞くと あぁ、今年ももうすぐ終わるんだ…",
+      "summary": "一の酉でしたので今年も浅草鷲神社へ行って来ました ´▿` ｢良いお年を！｣の声を聞くと あぁ、今年ももうすぐ終わるんだなぁと思います ´▿` #お酉さま #鷲神社 #浅草 #一の酉 #酉の市",
+      "source": "Bluesky「浅草」",
+      "url": "https://bsky.app/profile/wabisabi-kimono.bsky.social/post/3mzquxdrj4s2q",
+      "published": "2026-11-08T06:51+09:00",
+      "place": "浅草駅",
+      "placeKind": "station",
+      "matched": "浅草",
+      "ward": "台東区",
+      "lat": 35.71135,
+      "lng": 139.79833
     },
     {
-      "id": "news-6b536e58cc",
+      "id": "news-3e4e392379",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "全国紙が報道した練馬区の税務AI 滞納整理の成果と課題",
+      "summary": "",
+      "source": "岩瀬たけし",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBTM3A2V0FneVFDZGVDT3pSTEJ5dUlBTTBEcFpfUXcxWFZoQmxUWWRpdjFmV3RVZldJSzZHcDVqUkR1MVhlUUU0TUxUaThYYnExV2hQOUQyR2tlNWVmQjhIMWc1cVlBX1BuSVpfN0hnMkk?oc=5",
+      "published": "2026-11-08T06:45+09:00",
+      "place": "練馬区",
+      "placeKind": "ward",
+      "matched": "練馬区",
+      "ward": "練馬区",
+      "lat": 35.7358,
+      "lng": 139.65184
+    },
+    {
+      "id": "news-9a041ce453",
       "category": "reviews",
-      "type": "nature",
-      "typeLabel": "公園・自然・季節",
-      "typeIcon": "🌳",
-      "title": "これちょっと話が危なくなってきているが、神奈川方面には私はセンスのいい洗練されたものを探しに行くし、可愛いもの、かつ垢…",
-      "summary": "これちょっと話が危なくなってきているが、神奈川方面には私はセンスのいい洗練されたものを探しに行くし、可愛いもの、かつ垢抜けているというと大宮だし、ぶち抜け個性的ファッションの古着を欲しい時は宇都宮まで行く。宇都宮市っておしゃれで、服屋さんがたくさんあるから。高円寺もそうだけど、モノが高いのじゃ。",
-      "source": "Bluesky「高円寺」",
-      "url": "https://bsky.app/profile/octpusmustpass.bsky.social/post/3mzqgpuujys2f",
-      "published": "2026-11-08T02:36+09:00",
-      "place": "高円寺",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "#西武線全線乗車写真展覧会 西武池袋駅。ここから西武線スタート。",
+      "summary": "#西武線全線乗車写真展覧会 西武池袋駅。ここから西武線スタート。",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/n1000-blue-light.bsky.social/post/3mzqtvbjnyk2w",
+      "published": "2026-11-08T06:32+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.7302,
+      "lng": 139.71297
+    },
+    {
+      "id": "news-76c6d3bfed",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "#西武線全線乗車写真展覧会 渋谷で副都心線へ乗り換え池袋駅を目指す。",
+      "summary": "#西武線全線乗車写真展覧会 渋谷で副都心線へ乗り換え池袋駅を目指す。",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/n1000-blue-light.bsky.social/post/3mzqtub5axc2w",
+      "published": "2026-11-08T06:31+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.729868,
+      "lng": 139.713344
+    },
+    {
+      "id": "news-f1564c5212",
+      "category": "gourmet",
+      "type": "japanese",
+      "typeLabel": "和食",
+      "typeIcon": "🍣",
+      "title": "なぜ東京駅の寿司店に朝から客が集まるのか…ご飯おかわり自由、1078円の“特大豚汁定食”が駅弁より割安に感じるワケ",
+      "summary": "",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8zOVMxbGxzTWJaSXhZQkRQa2ZoZXJDLWVVbDRrSXdXX0JpYmplbGVEZEJqNzJHWWlSdTJkQ3dGWExSb3pjZ0dqZ2pCN2U0b2UwQVNOOUEyWk50OFpxVS10V05CODFWSEY2SEFhWERMYW5lUUJqMnFDdDVsVkN3a1E?oc=5",
+      "published": "2026-11-08T06:21+09:00",
+      "place": "東京駅",
       "placeKind": "facility",
-      "matched": "高円寺",
-      "ward": "杉並区",
-      "lat": 35.705008,
-      "lng": 139.650374
+      "matched": "東京駅",
+      "ward": "千代田区",
+      "lat": 35.68084,
+      "lng": 139.76448
+    },
+    {
+      "id": "news-6b5aaf61f2",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "浅草寺、しょくこまりたすけあい。",
+      "summary": "浅草寺、しょくこまりたすけあい。",
+      "source": "Bluesky「浅草」",
+      "url": "https://bsky.app/profile/is6be.bsky.social/post/3mzqt7k3m4c2n",
+      "published": "2026-11-08T06:20+09:00",
+      "place": "浅草寺",
+      "placeKind": "facility",
+      "matched": "浅草寺",
+      "ward": "台東区",
+      "lat": 35.7134,
+      "lng": 139.79553
+    },
+    {
+      "id": "news-5d8d0fd87e",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【板橋区初の大使館】上板橋に「トーゴ大使館」が誕生",
+      "summary": "",
+      "source": "いたばしTIMES",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE52Rmd4VWJjTFZETUd1YzJITGVudGtERWdVVHRNeGJhQmNwdmZGbXJDdmZJMlVCdHJpUF9JSGdwcjdkS29ZWVhrdHdaYVkyMF9hUldCLUU5VDJjVnJRODF2TThYNA?oc=5",
+      "published": "2026-11-08T06:11+09:00",
+      "place": "板橋区",
+      "placeKind": "ward",
+      "matched": "板橋区",
+      "ward": "板橋区",
+      "lat": 35.75098,
+      "lng": 139.7093
+    },
+    {
+      "id": "news-1bc0983e92",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "にとう泰明【新宿区・四谷】にこにこオータムフェスタに参加！子育てと防災を考える",
+      "summary": "",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE14RmdQRld0UWpCM0NzQ0xXb2VZUG5uVzRobVVZWHRWdV8zMXZwcVZIRGtvbDNVM2ZnSnpuQ1JhSFJlOENnTWswQ0pFUTZLZnJkWFdWVnJXVVdlVlVQdFM0?oc=5",
+      "published": "2026-11-08T06:11+09:00",
+      "place": "四ツ谷駅",
+      "placeKind": "station",
+      "matched": "四谷",
+      "ward": "新宿区",
+      "lat": 35.68621,
+      "lng": 139.72948
+    },
+    {
+      "id": "news-1b3fc05d15",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "新宿駅で男二人が駅員絡めて言い争ってて本当に意味ない街すぎる",
+      "summary": "新宿駅で男二人が駅員絡めて言い争ってて本当に意味ない街すぎる",
+      "source": "Bluesky「新宿駅」",
+      "url": "https://bsky.app/profile/pioruuuuuuuum.bsky.social/post/3mzqsfrsjpc2o",
+      "published": "2026-11-08T06:05+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿駅",
+      "ward": "新宿区",
+      "lat": 35.691848,
+      "lng": 139.700074
+    },
+    {
+      "id": "news-6bd0b262b7",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【新宿区】避難所となる学校体育館のトイレを急ぐ",
+      "summary": "",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9hQUxfZE1wcVRVa0hZWk1Hb0ZiN05iMWNOeUVPNUc2SFRwZ1o1RzFPZjN0eUlUSzVBNC1SUXlEM3MtUGgwek9lZDV1aERycmZuWkJLRGZZbWg3d2RKblE?oc=5",
+      "published": "2026-11-08T05:59+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.692236,
+      "lng": 139.69892
+    },
+    {
+      "id": "news-98d0fe5e01",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【新宿区】本庁舎建替えと学校修繕 暮らしの優先順位を問う",
+      "summary": "",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE91R2l2TGxhOGdLcnQwUUh4Tzh0Y042MW84MFhkZmctM1FiY0oyLTdUaXFBR3pqb09KUjltYmI0ZTE2MENQcEpEXzdrcnV2aEh2QmlWNDd6dVk1Tl83RHc?oc=5",
+      "published": "2026-11-08T05:59+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.692654,
+      "lng": 139.700461
+    },
+    {
+      "id": "news-0a204725ad",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "【山手線】池袋駅での信号関係点検の影響で、内回りの一部列車に運休が出ててぴえん🥺",
+      "summary": "【山手線】池袋駅での信号関係点検の影響で、内回りの一部列車に運休が出ててぴえん🥺",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/pien-tokyo.bsky.social/post/3mzqpbayrej26",
+      "published": "2026-11-08T05:09+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.730256,
+      "lng": 139.71219
+    },
+    {
+      "id": "news-2e7104ab0f",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "リョウマ（だよね？💦）描いて下さって 蒲田＜ドリフ かーい！\\(;´▽｀*)/ ありがとうー！めちゃめちゃ嬉しいですー…",
+      "summary": "リョウマ（だよね？💦）描いて下さって 蒲田＜ドリフ かーい！\\(;´▽｀*)/ ありがとうー！めちゃめちゃ嬉しいですー！ こおゆうの探せばあるのね～ こんなに階段短くて緩やかでしたっけ～ それで後転落ちできたのね～ 安全上 横向きゴロゴロゴローーッが 限界なん思うですけど 個人的にはタテヨコ回転で ガッ ゴッ ダーーーンッ！ て ピンポン玉みたく落ちてほしい～",
+      "source": "Bluesky「蒲田」",
+      "url": "https://bsky.app/profile/aa1108.bsky.social/post/3mzqlrase7k2i",
+      "published": "2026-11-08T04:06+09:00",
+      "place": "蒲田駅",
+      "placeKind": "station",
+      "matched": "蒲田",
+      "ward": "大田区",
+      "lat": 35.56269,
+      "lng": 139.71785
+    },
+    {
+      "id": "news-cc46b2b5f6",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "🌈11/08(土)🈵全枠完売🈵✨ ✅本日のご案内枠は【全枠完売】致しました🙇 ✅多数のご予約に感謝！ 🏛️赤羽ルーム🏛…",
+      "summary": "🌈11/08(土)🈵全枠完売🈵✨ ✅本日のご案内枠は【全枠完売】致しました🙇 ✅多数のご予約に感謝！ 🏛️赤羽ルーム🏛️✅全枠満了✨ 💒蕨ルーム💒✅全枠満了✨",
+      "source": "Bluesky「赤羽」",
+      "url": "https://bsky.app/profile/mabuistaff4.bsky.social/post/3mzqkno2tr224",
+      "published": "2026-11-08T03:46+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.78146,
+      "lng": 139.72007
+    },
+    {
+      "id": "news-97e18381d8",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "新宿区が来年、住宅地民泊禁止へ 既存施設も、影響約２千件",
+      "summary": "",
+      "source": "山陽新聞",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5EX1E4VlBxXzF5elNwV0htOGxwVGVRSDBhWEdPNk80Zkd3dzBYSTFiSlBFb0l4SUZwRzlpSFR1ZnhDQmpTQmxWNEZuUWxLaEdsa1NuWVhnTUZyTDA?oc=5",
+      "published": "2026-11-08T03:30+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.691294,
+      "lng": 139.699507
     },
     {
       "id": "news-a1ee93ade6",
@@ -424,8 +676,8 @@
       "placeKind": "station",
       "matched": "池袋駅",
       "ward": "豊島区",
-      "lat": 35.7302,
-      "lng": 139.71297
+      "lat": 35.730674,
+      "lng": 139.713731
     },
     {
       "id": "news-ef55793a00",
@@ -442,8 +694,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705396,
-      "lng": 139.64922
+      "lat": 35.70534,
+      "lng": 139.65
     },
     {
       "id": "news-51fd41b506",
@@ -478,8 +730,8 @@
       "placeKind": "station",
       "matched": "蒲田",
       "ward": "大田区",
-      "lat": 35.56269,
-      "lng": 139.71785
+      "lat": 35.562358,
+      "lng": 139.718224
     },
     {
       "id": "news-c68f7f12e1",
@@ -496,8 +748,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.7358,
-      "lng": 139.65184
+      "lat": 35.735468,
+      "lng": 139.652214
     },
     {
       "id": "news-e4f25609e6",
@@ -514,8 +766,26 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729868,
-      "lng": 139.713344
+      "lat": 35.729314,
+      "lng": 139.712777
+    },
+    {
+      "id": "news-c983aab847",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "中目黒にさもんっておでん屋があることを知って大興奮の真夜中。この冬のミッション🏃‍➡️🍢",
+      "summary": "中目黒にさもんっておでん屋があることを知って大興奮の真夜中。この冬のミッション🏃‍➡️🍢",
+      "source": "Bluesky「中目黒」",
+      "url": "https://bsky.app/profile/ykngtttt.bsky.social/post/3mzqcxwn3g22d",
+      "published": "2026-11-08T01:29+09:00",
+      "place": "中目黒駅",
+      "placeKind": "station",
+      "matched": "中目黒",
+      "ward": "目黒区",
+      "lat": 35.6439,
+      "lng": 139.6999
     },
     {
       "id": "news-abce43e161",
@@ -532,8 +802,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.78146,
-      "lng": 139.72007
+      "lat": 35.781128,
+      "lng": 139.720444
     },
     {
       "id": "news-fe8027dee6",
@@ -568,8 +838,8 @@
       "placeKind": "station",
       "matched": "蒲田",
       "ward": "大田区",
-      "lat": 35.562358,
-      "lng": 139.718224
+      "lat": 35.562746,
+      "lng": 139.71707
     },
     {
       "id": "news-d3ba76c204",
@@ -586,8 +856,8 @@
       "placeKind": "station",
       "matched": "池袋駅",
       "ward": "豊島区",
-      "lat": 35.730256,
-      "lng": 139.71219
+      "lat": 35.731049,
+      "lng": 139.712306
     },
     {
       "id": "news-8e0f2687d7",
@@ -604,8 +874,8 @@
       "placeKind": "station",
       "matched": "新宿駅",
       "ward": "新宿区",
-      "lat": 35.69218,
-      "lng": 139.6997
+      "lat": 35.693029,
+      "lng": 139.699036
     },
     {
       "id": "news-7b1274f0f0",
@@ -712,8 +982,8 @@
       "placeKind": "station",
       "matched": "蒲田",
       "ward": "大田区",
-      "lat": 35.562746,
-      "lng": 139.71707
+      "lat": 35.563164,
+      "lng": 139.718611
     },
     {
       "id": "news-ff635885cd",
@@ -730,8 +1000,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.781128,
-      "lng": 139.720444
+      "lat": 35.781516,
+      "lng": 139.71929
     },
     {
       "id": "news-be3c3c27b5",
@@ -748,26 +1018,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691848,
-      "lng": 139.700074
-    },
-    {
-      "id": "news-20d38b3643",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "11/6(金)影山ヒロノブwithおこめのーと下北沢440で初披露！ オムレツ / 影山ヒロノブ（アニメ『蒼き伝承 –…",
-      "summary": "11/6(金)影山ヒロノブwithおこめのーと下北沢440で初披露！ オムレツ / 影山ヒロノブ（アニメ『蒼き伝承 – Welsh & Shedar』エンディング・テーマ） youtu.be/p8eyR81MR6g?...",
-      "source": "Bluesky「下北沢」",
-      "url": "https://bsky.app/profile/30years3ounce.bsky.social/post/3mzq6eu7cnk2a",
-      "published": "2026-11-08T00:07+09:00",
-      "place": "下北沢駅",
-      "placeKind": "station",
-      "matched": "下北沢",
-      "ward": "世田谷区",
-      "lat": 35.66127,
-      "lng": 139.66692
+      "lat": 35.691894,
+      "lng": 139.701009
     },
     {
       "id": "news-4c8da14fc7",
@@ -874,8 +1126,8 @@
       "placeKind": "station",
       "matched": "新宿駅",
       "ward": "新宿区",
-      "lat": 35.692236,
-      "lng": 139.69892
+      "lat": 35.691631,
+      "lng": 139.6984
     },
     {
       "id": "news-77d6f1f6fd",
@@ -892,8 +1144,8 @@
       "placeKind": "station",
       "matched": "蒲田",
       "ward": "大田区",
-      "lat": 35.563164,
-      "lng": 139.718611
+      "lat": 35.561804,
+      "lng": 139.717657
     },
     {
       "id": "news-80250465ee",
@@ -928,8 +1180,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.735468,
-      "lng": 139.652214
+      "lat": 35.735856,
+      "lng": 139.65106
     },
     {
       "id": "news-dc06438298",
@@ -964,8 +1216,8 @@
       "placeKind": "station",
       "matched": "四谷",
       "ward": "新宿区",
-      "lat": 35.68621,
-      "lng": 139.72948
+      "lat": 35.685878,
+      "lng": 139.729854
     },
     {
       "id": "news-abc8ce19a2",
@@ -986,24 +1238,6 @@
       "lng": 139.7761
     },
     {
-      "id": "news-5f7f0c3bd3",
-      "category": "reviews",
-      "type": "nature",
-      "typeLabel": "公園・自然・季節",
-      "typeIcon": "🌳",
-      "title": "そういえば下北沢に花冷えっていうシーシャバーがあって、シーシャも雰囲気あるけどデザートとかドリンクがめちゃくちゃ「花冷…",
-      "summary": "そういえば下北沢に花冷えっていうシーシャバーがあって、シーシャも雰囲気あるけどデザートとかドリンクがめちゃくちゃ「花冷え」感あるんだよな",
-      "source": "Bluesky「下北沢」",
-      "url": "https://bsky.app/profile/32nptm32.bsky.social/post/3mzq4qcsyek2l",
-      "published": "2026-11-07T23:37+09:00",
-      "place": "下北沢駅",
-      "placeKind": "station",
-      "matched": "下北沢",
-      "ward": "世田谷区",
-      "lat": 35.660938,
-      "lng": 139.667294
-    },
-    {
       "id": "news-7d988d0648",
       "category": "news",
       "type": "",
@@ -1018,8 +1252,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.735856,
-      "lng": 139.65106
+      "lat": 35.736274,
+      "lng": 139.652601
     },
     {
       "id": "news-f4a51467eb",
@@ -1036,8 +1270,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705814,
-      "lng": 139.650761
+      "lat": 35.705008,
+      "lng": 139.650374
     },
     {
       "id": "news-64b0d510f0",
@@ -1054,8 +1288,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.71135,
-      "lng": 139.79833
+      "lat": 35.711018,
+      "lng": 139.798704
     },
     {
       "id": "news-5715fc942b",
@@ -1072,8 +1306,8 @@
       "placeKind": "station",
       "matched": "蒲田",
       "ward": "大田区",
-      "lat": 35.561804,
-      "lng": 139.717657
+      "lat": 35.563539,
+      "lng": 139.717186
     },
     {
       "id": "news-b7e4860e7b",
@@ -1090,8 +1324,26 @@
       "placeKind": "station",
       "matched": "蒲田",
       "ward": "大田区",
-      "lat": 35.563539,
-      "lng": 139.717186
+      "lat": 35.562404,
+      "lng": 139.719159
+    },
+    {
+      "id": "news-639d1c658b",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "にとう泰明【新宿区・伝統文化】花園神社の一の酉前夜祭に参拝⛩️",
+      "summary": "",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE92cU5JMUZhTTNjb0pNN2sybmdRSVoybDRGZXNjUUc1VUxOa2ctUG9YM1R4UTlmek9EdXJIb2xWZkZHR1E1UlR2OU5GT0VaamNlLTRoX2lRLVo0Y0ctTWJ3?oc=5",
+      "published": "2026-11-07T23:24+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.693376,
+      "lng": 139.700237
     },
     {
       "id": "news-ebb2f396b3",
@@ -1108,8 +1360,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711018,
-      "lng": 139.798704
+      "lat": 35.711406,
+      "lng": 139.79755
     },
     {
       "id": "news-bce955a7ac",
@@ -1144,26 +1396,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.781516,
-      "lng": 139.71929
-    },
-    {
-      "id": "news-639d1c658b",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "にとう泰明【新宿区・伝統文化】花園神社の一の酉前夜祭に参拝⛩️",
-      "summary": "",
-      "source": "選挙ドットコム",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE92cU5JMUZhTTNjb0pNN2sybmdRSVoybDRGZXNjUUc1VUxOa2ctUG9YM1R4UTlmek9EdXJIb2xWZkZHR1E1UlR2OU5GT0VaamNlLTRoX2lRLVo0Y0ctTWJ3?oc=5",
-      "published": "2026-11-07T23:03+09:00",
-      "place": "新宿駅",
-      "placeKind": "station",
-      "matched": "新宿",
-      "ward": "新宿区",
-      "lat": 35.692654,
-      "lng": 139.700461
+      "lat": 35.781934,
+      "lng": 139.720831
     },
     {
       "id": "news-59409550d6",
@@ -1216,8 +1450,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711406,
-      "lng": 139.79755
+      "lat": 35.711824,
+      "lng": 139.799091
     },
     {
       "id": "news-2e62f97eba",
@@ -1288,8 +1522,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.704454,
-      "lng": 139.649807
+      "lat": 35.705396,
+      "lng": 139.64922
     },
     {
       "id": "news-31959a1bdf",
@@ -1306,8 +1540,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711824,
-      "lng": 139.799091
+      "lat": 35.710464,
+      "lng": 139.798137
     },
     {
       "id": "news-df2d308743",
@@ -1324,8 +1558,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.706189,
-      "lng": 139.649336
+      "lat": 35.705814,
+      "lng": 139.650761
     },
     {
       "id": "news-cd0dc38831",
@@ -1342,8 +1576,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.710464,
-      "lng": 139.798137
+      "lat": 35.712199,
+      "lng": 139.797666
     },
     {
       "id": "news-d0f5b4153d",
@@ -1360,8 +1594,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.712199,
-      "lng": 139.797666
+      "lat": 35.711064,
+      "lng": 139.799639
     },
     {
       "id": "news-8e97c17cab",
@@ -1414,8 +1648,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711064,
-      "lng": 139.799639
+      "lat": 35.710801,
+      "lng": 139.79703
     },
     {
       "id": "news-c7244daa89",
@@ -1432,8 +1666,8 @@
       "placeKind": "station",
       "matched": "蒲田",
       "ward": "大田区",
-      "lat": 35.562404,
-      "lng": 139.719159
+      "lat": 35.562141,
+      "lng": 139.71655
     },
     {
       "id": "news-6a4b7d2b1b",
@@ -1454,96 +1688,6 @@
       "lng": 139.73777
     },
     {
-      "id": "news-6847100b69",
-      "category": "reviews",
-      "type": "event",
-      "typeLabel": "イベント・お出かけ",
-      "typeIcon": "🎪",
-      "title": "秋葉原でファミ通40周年イベントやってたので覗く いろんなゲームの記念イラストもあったけどほの暮しの絵も寄稿されてた …",
-      "summary": "秋葉原でファミ通40周年イベントやってたので覗く いろんなゲームの記念イラストもあったけどほの暮しの絵も寄稿されてた ファミ通とゲームの歴史みたいなコーナーはめっちゃ懐かしいゲームの話が年表のようになってて時間が経つのを忘れてしまった #ファミ通40周年フェス",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/wasatako.bsky.social/post/3mzpyxfng6s2j",
-      "published": "2026-11-07T22:30+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.698666,
-      "lng": 139.771914
-    },
-    {
-      "id": "news-36c13139dd",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "【地縛霊の浅草終演情報】 「Re 1st」7日目。「1st」初の土曜日は「一の酉」と重なり街も賑わう中、場内も各回とも…",
-      "summary": "【地縛霊の浅草終演情報】 「Re 1st」7日目。「1st」初の土曜日は「一の酉」と重なり街も賑わう中、場内も各回ともほぼ満席の賑わい。2回目フィナーレで「大入り」、4回目3景で「金屏風ダブル大入り」の披露があり、カーテンコールで南まゆさんの3か国語あいさつと「三本締め」で終演。 #浅草ロック座",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/st-kangekisya.bsky.social/post/3mzpywdgac22k",
-      "published": "2026-11-07T22:29+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.710801,
-      "lng": 139.79703
-    },
-    {
-      "id": "news-9e202e37dd",
-      "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "池袋から浅草の宿に向かう。浅草は案外山手線と接続が悪い。",
-      "summary": "池袋から浅草の宿に向かう。浅草は案外山手線と接続が悪い。",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/kzmanjyu.bsky.social/post/3mzpyvob5cc2m",
-      "published": "2026-11-07T22:29+09:00",
-      "place": "池袋駅",
-      "placeKind": "station",
-      "matched": "池袋",
-      "ward": "豊島区",
-      "lat": 35.730674,
-      "lng": 139.713731
-    },
-    {
-      "id": "news-331325d86c",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "ほんとに池袋と秋葉原と上野と両国、水道橋にしか行っていない、ちょっと渋谷も行ってる、なんか行かないところに行ってみたい…",
-      "summary": "ほんとに池袋と秋葉原と上野と両国、水道橋にしか行っていない、ちょっと渋谷も行ってる、なんか行かないところに行ってみたいよ〜〜",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/rqne198.bsky.social/post/3mzpymgfgis2t",
-      "published": "2026-11-07T22:24+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.700266,
-      "lng": 139.775467
-    },
-    {
-      "id": "news-1023d0c308",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "浅草 酉の市 浅草 鷲神社",
-      "summary": "浅草 酉の市 浅草 鷲神社",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/asakusacobbler.bsky.social/post/3mzpyaj3eok2g",
-      "published": "2026-11-07T22:17+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.712546,
-      "lng": 139.798867
-    },
-    {
       "id": "news-1e8dd1b347",
       "category": "news",
       "type": "",
@@ -1553,13 +1697,13 @@
       "summary": "",
       "source": "選挙ドットコム",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1hbjJxSWRiNWZRZGVobGE3clVZSUYtY3otTUVHdm9vX3d1NjJnRXprZi1DeHV4bGxMN1JJOXNZdjB6OEFfMXdfcEdXMGw2SG1kUmVqOFZsZ3JMNzFyLWUw?oc=5",
-      "published": "2026-11-07T22:07+09:00",
+      "published": "2026-11-07T22:14+09:00",
       "place": "新宿駅",
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691294,
-      "lng": 139.699507
+      "lat": 35.690932,
+      "lng": 139.700334
     },
     {
       "id": "news-eda75ed14d",
@@ -1684,8 +1828,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729314,
-      "lng": 139.712777
+      "lat": 35.729914,
+      "lng": 139.714279
     },
     {
       "id": "news-004bd42b3b",
@@ -1720,8 +1864,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.736274,
-      "lng": 139.652601
+      "lat": 35.734914,
+      "lng": 139.651647
     },
     {
       "id": "news-911d2d525a",
@@ -1774,8 +1918,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693029,
-      "lng": 139.699036
+      "lat": 35.692783,
+      "lng": 139.698115
     },
     {
       "id": "news-ecf40885a6",
@@ -1828,8 +1972,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691894,
-      "lng": 139.701009
+      "lat": 35.692627,
+      "lng": 139.701452
     },
     {
       "id": "news-fd3b3a721b",
@@ -1918,8 +2062,8 @@
       "placeKind": "station",
       "matched": "四谷",
       "ward": "新宿区",
-      "lat": 35.685878,
-      "lng": 139.729854
+      "lat": 35.686266,
+      "lng": 139.7287
     },
     {
       "id": "news-180fd45dec",
@@ -1940,15 +2084,15 @@
       "lng": 139.817674
     },
     {
-      "id": "news-a4ef8bf021",
+      "id": "news-e9e64331ba",
       "category": "news",
       "type": "",
       "typeLabel": "",
       "typeIcon": "",
       "title": "東京・台東区、民泊業者に初の業務改善命令 定期報告を提出せず",
-      "summary": "",
-      "source": "毎日新聞",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBuTEpUSlhzdFIyY2p6aUtRSjBnMnlFNHpfeGVnX1VBRWgtc3FxQ0dyNXpqcjdWZ3h4QTNmUmgySTM2UmVZSzM0M0ZKUnNwdWVrLVZtcVFBTmQ1UjlmRHQxTzlILWxfRk12?oc=5",
+      "summary": "東京・台東区、民泊業者に初の業務改善命令 定期報告を提出せず (毎日新聞) Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQV01zT2VfSUU4TmFBcG84MmNGZFZNVG9sb3Fsb0ZRV3d0RVV6WHB4b0lYVFFDNVNfeXN0WjF6bEJRM3ZvRzk5cE4wM0VQeGtzYWprWWo1ZkZqbFVjRlJTNmpBUlJXY3NDWlRXSEgtbGFmcFlVTFphNk9HYzJvVUNCSDU0cWNCd0ZTbUZJLU1n?oc=5",
       "published": "2026-11-07T15:49+09:00",
       "place": "台東区",
       "placeKind": "ward",
@@ -1990,8 +2134,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.710102,
-      "lng": 139.798964
+      "lat": 35.712546,
+      "lng": 139.798867
     },
     {
       "id": "news-642b846435",
@@ -2008,26 +2152,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.734914,
-      "lng": 139.651647
-    },
-    {
-      "id": "news-8ecc4f8da2",
-      "category": "gourmet",
-      "type": "japanese",
-      "typeLabel": "和食",
-      "typeIcon": "🍣",
-      "title": "握り寿司と小鉢が並ぶ冬のごちそう！大名古屋ビル Shops & Restaurants／築地青空三代目 青空コース",
-      "summary": "",
-      "source": "ライブドアニュース",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBvTTJ1MV9NWlQyMVQyVUFWMzJuR1gwaDQ2UmtMNUlMX3ZCMWhmNVpXWlBRX0pqa2Q2SWtjdWNqdktVbjg3WWN1QXF4bWlObk9wUEplcXZPUzVoazVIRkJR?oc=5",
-      "published": "2026-11-07T12:51+09:00",
-      "place": "築地",
-      "placeKind": "facility",
-      "matched": "築地",
-      "ward": "中央区",
-      "lat": 35.66539,
-      "lng": 139.77047
+      "lat": 35.736649,
+      "lng": 139.651176
     },
     {
       "id": "news-4b740d9b29",
@@ -2044,8 +2170,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.736649,
-      "lng": 139.651176
+      "lat": 35.735514,
+      "lng": 139.653149
     },
     {
       "id": "news-e1e66f2369",
@@ -2062,8 +2188,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691631,
-      "lng": 139.6984
+      "lat": 35.690831,
+      "lng": 139.698739
     },
     {
       "id": "news-ca8eb1482c",
@@ -2080,8 +2206,8 @@
       "placeKind": "ward",
       "matched": "板橋区",
       "ward": "板橋区",
-      "lat": 35.75098,
-      "lng": 139.7093
+      "lat": 35.750648,
+      "lng": 139.709674
     },
     {
       "id": "news-d0b1031b66",
@@ -2098,8 +2224,8 @@
       "placeKind": "ward",
       "matched": "板橋区",
       "ward": "板橋区",
-      "lat": 35.750648,
-      "lng": 139.709674
+      "lat": 35.751036,
+      "lng": 139.70852
     },
     {
       "id": "news-6c0bc5aa9c",
@@ -2156,42 +2282,6 @@
       "lng": 139.868814
     },
     {
-      "id": "news-991afb7e2d",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【写真・画像】東京スカイツリー Xmasイルミネーション 1枚目",
-      "summary": "",
-      "source": "ABEMA TIMES",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5OUFdpRjJhd2czZTZpOFhrNUh5MDQ3Z0JnSlBheWtoX3VacjVQLUlNek0yODNfakFjU2tYejlLVFB0ckFtQzZlQTVhZzA4bnNKUnhGWEVjN04xZw?oc=5",
-      "published": "2026-11-07T11:00+09:00",
-      "place": "東京スカイツリー",
-      "placeKind": "facility",
-      "matched": "スカイツリー",
-      "ward": "墨田区",
-      "lat": 35.709718,
-      "lng": 139.811084
-    },
-    {
-      "id": "news-735afe0ea6",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "（東京）葛飾区東新小岩４丁目で下半身露出　１１月７日",
-      "summary": "（東京）葛飾区東新小岩４丁目で下半身露出 １１月７日 ｄメニューニュース",
-      "source": "ｄメニューニュース",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOUJCeFpVWTlKTVhhNWJpM29oV2dyYkZQUFVoRjBGSE9vMzI2bldzN09Wd2pRbUJhUHI3MEd3aFJTV01nSUpiSUoyeUMtdWJTR0c0aldPaUE1MWxFQ3dGc3JCLTRGRnNPNklrYU1Zem42SDJFMmNvczlUSDFfbFk2Z1lPb2JCLUJtazdxRUdqZzgzNXhyYjRxV1loaErSAaIBQVVfeXFMTWMycWpkWTdaT1h2SVc5SE80d2V0dVJKa1NFQVRJVmlQazBUa0toNjVhNktPcmFndGhuSFVNd1c3ZkxaZU5WYmtzZVA5NkhGNk1tanNTa1QwY3I5dHUxZ0lqM3NNUmwxQWtqS0E2a3FYenVCSXhRc0p3Q1F0ZEc2QmowWWpEcWtna1FreS16N21TaktoNkpROTUzUklRejFVY0Rn?oc=5",
-      "published": "2026-11-07T10:55+09:00",
-      "place": "小岩駅",
-      "placeKind": "station",
-      "matched": "小岩",
-      "ward": "江戸川区",
-      "lat": 35.73268,
-      "lng": 139.88217
-    },
-    {
       "id": "news-b73fa9598b",
       "category": "news",
       "type": "",
@@ -2206,44 +2296,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693376,
-      "lng": 139.700237
-    },
-    {
-      "id": "news-1d50a833a7",
-      "category": "crime",
-      "type": "sexual",
-      "typeLabel": "性犯罪・盗撮",
-      "typeIcon": "",
-      "title": "（東京）葛飾区お花茶屋１丁目で痴漢　１１月６日",
-      "summary": "（東京）葛飾区お花茶屋１丁目で痴漢 １１月６日 ｄメニューニュース",
-      "source": "ｄメニューニュース",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcDJramtlVzF4LWY5aWhvMzVpdnJUOFZMbjlBNVJ1bnlwUlh3cEtBSFRnSl9xU25VMlBVVWNTOXRMS0s5UkQyLXc2WDRYYnRWWHluc3R3TFlqOHk3SEpmY3N5U0lwV2hrTm02aWdJQjFMVDE3SXRaanMzSnBYdTNWUmNLbklQemZNaEh5a29sTDh1THRQbzZ0Qm9iSkrSAaIBQVVfeXFMTlItWEJqQ3hJNnF1cWFFeTRmdFgtY0hCdUVqWUJGMkNOd3hsdWdLNjlkS3FxR2czbm9mdVZGTnZFM3pVRHN4YTJieGtkZW9FdUI3VlN5TEtEeWNoUUFCZHVHMmRNcXBKR1JONE15T2dTdTNoeXF3dkdkNTN6eElmQW1JUHV4cUd2aTFWeU5qUHhaRmxIV09xNmllZGIyMEt0RWdR?oc=5",
-      "published": "2026-11-07T10:35+09:00",
-      "place": "葛飾区",
-      "placeKind": "ward",
-      "matched": "葛飾区",
-      "ward": "葛飾区",
-      "lat": 35.74345,
-      "lng": 139.84724
-    },
-    {
-      "id": "news-f6f52c1de6",
-      "category": "crime",
-      "type": "sexual",
-      "typeLabel": "性犯罪・盗撮",
-      "typeIcon": "",
-      "title": "（東京）練馬区東大泉５丁目で痴漢　１１月６日",
-      "summary": "（東京）練馬区東大泉５丁目で痴漢 １１月６日 ｄメニューニュース",
-      "source": "ｄメニューニュース",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOWDFCaG9KanpIekEtOUNoT0NNaTZ3N1h1ODAwdV9qbWdOcGljRV9ZUzVZSWZ2YlZWbTFkX3JxMS1hRC1mUFI4VUlGb05XS3NrVjlySm5PcEhTeENkbmtMZzdXMVBTS1lGWGMzWUdtRnVIRHZURlJHZEluYTM0REU3dDhfRjhrNExoYy00OUZhc2t1Z2xxY19GVEwwd0nSAaIBQVVfeXFMTkdiUDQ2dDdsY2ktZUhBTTJuR1lXMnZ6RGptaWdybWVodjNSYnFtN09xQXB5RU95Q0UzemxybTJtT1VDdF9FNTd6TnFfbVZVU0pocHMwRHZKWnBEbUJ6ZlJTR3ZRdEk5U2xLaUVFanlvV2pIMnJUc2ZxYmpVLU1KQnZBajFZc1V3TkFiT0otaUFGYXVMUzgzZnROX1h0SGhfd2tB?oc=5",
-      "published": "2026-11-07T10:27+09:00",
-      "place": "練馬区",
-      "placeKind": "ward",
-      "matched": "練馬区",
-      "ward": "練馬区",
-      "lat": 35.735514,
-      "lng": 139.653149
+      "lat": 35.693765,
+      "lng": 139.699271
     },
     {
       "id": "news-0ef9352ebf",
@@ -2260,8 +2314,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690932,
-      "lng": 139.700334
+      "lat": 35.691212,
+      "lng": 139.701394
     },
     {
       "id": "news-f82c574923",
@@ -2296,8 +2350,8 @@
       "placeKind": "ward",
       "matched": "葛飾区",
       "ward": "葛飾区",
-      "lat": 35.743118,
-      "lng": 139.847614
+      "lat": 35.74345,
+      "lng": 139.84724
     },
     {
       "id": "news-f5cc39ae44",
@@ -2316,24 +2370,6 @@
       "ward": "荒川区",
       "lat": 35.72801,
       "lng": 139.77138
-    },
-    {
-      "id": "news-cb3defe8e1",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "住人十色：築47年のレトロマンションを1000万円でリノベ 捨てない・買わないを徹底 賢く再利用した家 東京都渋谷区",
-      "summary": "",
-      "source": "Mantan Web",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ZRWk0eEVaTG5UWV9wc1lRZnZFZUw4VVVxTnJRV3NEcmdMck52U2dUR3F3Wk9UT3JraWxBMW0xTVlHY2dIaW10dWwwWnhBV1UtMEtab2gtWmFSNmRvV1F5dE1ISl9xMzlRbWU4?oc=5",
-      "published": "2026-11-07T09:10+09:00",
-      "place": "渋谷駅",
-      "placeKind": "station",
-      "matched": "渋谷",
-      "ward": "渋谷区",
-      "lat": 35.65995,
-      "lng": 139.70246
     },
     {
       "id": "news-8da45377d5",
@@ -2368,62 +2404,8 @@
       "placeKind": "station",
       "matched": "中目黒",
       "ward": "目黒区",
-      "lat": 35.6439,
-      "lng": 139.6999
-    },
-    {
-      "id": "news-22fce846ca",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【墨田区】唐揚げの「やまだ商店」が大変身！リニューアルオープンの日も間近です。",
-      "summary": "",
-      "source": "号外NET 墨田区",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8ySjdmeFdqSlJtNFdCbERzWTdxbUVSSEt3SFdxSC1ZYmlIcTczdHk3ZElrcUR6NW95T0RyRmtFYWw1NU9VQU5uWThpRExHUElWUkNqNW82cVhEQQ?oc=5",
-      "published": "2026-11-07T08:01+09:00",
-      "place": "墨田区",
-      "placeKind": "ward",
-      "matched": "墨田区",
-      "ward": "墨田区",
-      "lat": 35.71071,
-      "lng": 139.80145
-    },
-    {
-      "id": "news-736d1b7379",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【杉並区】杉並区の秋の恒例イベント♪「すぎなみフェスタ2026」が11月7日(土)・8日(日)に開催されます！",
-      "summary": "",
-      "source": "号外NET 杉並区",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBoaEpJNzdXNUs4VUt5bGJhNWhjV1oxYi0xaU5DX2FMZVJxV0VDZGtQQlJBZUNhM3pZMnRiRmUtYUVjelc5QkVpSkU4b1V0QWc3U09YYUpYdFBVZnEzS1RmUnp5NndnYXpNckE?oc=5",
-      "published": "2026-11-07T07:44+09:00",
-      "place": "杉並区",
-      "placeKind": "ward",
-      "matched": "杉並区",
-      "ward": "杉並区",
-      "lat": 35.69962,
-      "lng": 139.63635
-    },
-    {
-      "id": "news-8172d6a041",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【新宿区基本構想】区民の声が骨子案に",
-      "summary": "【新宿区基本構想】区民の声が骨子案に｜子どもを「権利の主体」に 選挙ドットコム",
-      "source": "選挙ドットコム",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBqbWFCdDJiVVVtdUNtb3cxR29UTkpTTWJmVnFPRzFRV1NMbUZwNjFLMHZabkdNUjdxRmpnckFvVldvLXk5TG9sMmVsWDgwYTA4VWJ4TldyUXJrSHN4YkE?oc=5",
-      "published": "2026-11-07T07:42+09:00",
-      "place": "新宿駅",
-      "placeKind": "station",
-      "matched": "新宿",
-      "ward": "新宿区",
-      "lat": 35.692783,
-      "lng": 139.698115
+      "lat": 35.643568,
+      "lng": 139.700274
     },
     {
       "id": "news-451f0486ee",
@@ -2458,8 +2440,26 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.697036,
-      "lng": 139.774134
+      "lat": 35.698666,
+      "lng": 139.771914
+    },
+    {
+      "id": "news-6e59a30e55",
+      "category": "gourmet",
+      "type": "ramen",
+      "typeLabel": "ラーメン",
+      "typeIcon": "🍜",
+      "title": "画像35 / 37＞西武池袋線でおさえておきたいラーメン店5選！勢力拡大中の家系の一杯や超濃厚つけ麺、淡麗絶品な塩など、イチオシのラーメンを紹介",
+      "summary": "",
+      "source": "ウォーカープラス",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA5MXBLaU9uWk5uV1FnWjJnQWV4R0xzV3RSc1VGby01M1BpWjNndUo1RGxlSGp4dE5jR2FqYTA4RjVOSXhyWThfbDBuNG55dGxiRG42WU5TbnY5ajJQNjZsQmNWc3FLU0dXcFcwOGhkNVJtSkhFYm5RcUw4ODVBNzA?oc=5",
+      "published": "2026-11-07T07:11+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋",
+      "ward": "豊島区",
+      "lat": 35.729651,
+      "lng": 139.71167
     },
     {
       "id": "news-826a22a84c",
@@ -2476,8 +2476,26 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659618,
-      "lng": 139.702834
+      "lat": 35.65995,
+      "lng": 139.70246
+    },
+    {
+      "id": "news-552a670e68",
+      "category": "reviews",
+      "type": "shopping",
+      "typeLabel": "買い物",
+      "typeIcon": "🛍️",
+      "title": "第11世代Corei3搭載の富士通製中古ノートPCが税込22,800円！EPSON製が24,800円ほかアキバパレット…",
+      "summary": "第11世代Corei3搭載の富士通製中古ノートPCが税込22,800円！EPSON製が24,800円ほかアキバパレットタウン週末セール品全まとめ",
+      "source": "Mastodon #秋葉原（fedibird.com）",
+      "url": "https://fed.brid.gy/r/https://daily-gadget.net/akiba/123065/",
+      "published": "2026-11-07T07:00+09:00",
+      "place": "秋葉原",
+      "placeKind": "facility",
+      "matched": "アキバ",
+      "ward": "千代田区",
+      "lat": 35.700266,
+      "lng": 139.775467
     },
     {
       "id": "news-3f859bf71a",
@@ -2512,8 +2530,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660006,
-      "lng": 139.70168
+      "lat": 35.659618,
+      "lng": 139.702834
     },
     {
       "id": "news-54b7f6aaef",
@@ -2530,8 +2548,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700243,
-      "lng": 139.772383
+      "lat": 35.697036,
+      "lng": 139.774134
     },
     {
       "id": "news-38ee259e0e",
@@ -2566,8 +2584,8 @@
       "placeKind": "station",
       "matched": "渋谷駅",
       "ward": "渋谷区",
-      "lat": 35.660424,
-      "lng": 139.703221
+      "lat": 35.660006,
+      "lng": 139.70168
     },
     {
       "id": "news-a522588f51",
@@ -2584,8 +2602,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.692627,
-      "lng": 139.701452
+      "lat": 35.691956,
+      "lng": 139.697574
     },
     {
       "id": "news-4a3f1317c1",
@@ -2620,8 +2638,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690831,
-      "lng": 139.698739
+      "lat": 35.693556,
+      "lng": 139.701127
     },
     {
       "id": "news-946da76d36",
@@ -2638,8 +2656,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.731049,
-      "lng": 139.712306
+      "lat": 35.731396,
+      "lng": 139.713507
     },
     {
       "id": "news-b204415497",
@@ -2656,8 +2674,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.6988,
-      "lng": 139.77645
+      "lat": 35.700243,
+      "lng": 139.772383
     },
     {
       "id": "news-ed77b0b7bb",
@@ -2710,8 +2728,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659064,
-      "lng": 139.702267
+      "lat": 35.660424,
+      "lng": 139.703221
     },
     {
       "id": "news-3ea791b414",
@@ -2728,8 +2746,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729914,
-      "lng": 139.714279
+      "lat": 35.728952,
+      "lng": 139.713604
     },
     {
       "id": "news-44eab5462f",
@@ -2764,8 +2782,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.6976,
-      "lng": 139.77214
+      "lat": 35.6988,
+      "lng": 139.77645
     },
     {
       "id": "news-19d1cb7cf7",
@@ -2782,8 +2800,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660799,
-      "lng": 139.701796
+      "lat": 35.659064,
+      "lng": 139.702267
     },
     {
       "id": "news-ff56aab659",
@@ -2800,8 +2818,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659664,
-      "lng": 139.703769
+      "lat": 35.660799,
+      "lng": 139.701796
     },
     {
       "id": "news-cd060e494a",
@@ -2818,8 +2836,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659401,
-      "lng": 139.70116
+      "lat": 35.659664,
+      "lng": 139.703769
     },
     {
       "id": "news-784534fd8e",
@@ -2872,11 +2890,11 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700934,
-      "lng": 139.774378
+      "lat": 35.6976,
+      "lng": 139.77214
     },
     {
-      "id": "news-7d2784d587",
+      "id": "news-1b471e2c52",
       "category": "otaku",
       "type": "anime",
       "typeLabel": "アニメ・漫画",
@@ -2884,7 +2902,7 @@
       "title": "【東京都北区】『BEYOND_K』CIロゴアニメーションの募集を開始",
       "summary": "",
       "source": "アットプレス",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5OV3RnME1kQXk5Vk1zenFIaUp6RDZaWjJMWldfT1BtVEM0ZTR6djFteENQejFVSGZZUnZ6ejdUNDVMQkhDdy01U3JCeXRCZw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE13SG5ZNGJKMEtSMmt0TFNsY3F0TTZfUmYzdGtBRTZ3VzNNMDRXVW56WFRyWGtaa2VaaGhXU2JCek80Y0FwWVJVSm9vSG9xSXM?oc=5",
       "published": "2026-11-06T10:00+09:00",
       "place": "北区",
       "placeKind": "ward",
@@ -2908,8 +2926,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661146,
-      "lng": 139.702997
+      "lat": 35.659401,
+      "lng": 139.70116
     },
     {
       "id": "news-97099ae036",
@@ -2926,8 +2944,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705054,
-      "lng": 139.651309
+      "lat": 35.704454,
+      "lng": 139.649807
     },
     {
       "id": "news-773c44e22b",
@@ -2962,8 +2980,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658702,
-      "lng": 139.703094
+      "lat": 35.661146,
+      "lng": 139.702997
     },
     {
       "id": "news-b0da1069b9",
@@ -3020,24 +3038,6 @@
       "lng": 139.80373
     },
     {
-      "id": "news-9e77e22460",
-      "category": "crime",
-      "type": "other",
-      "typeLabel": "その他の事件",
-      "typeIcon": "",
-      "title": "短期滞在で来日の23歳中国籍の女逮捕 スポーツジムに侵入し現金とカギ盗んだ疑い 同様被害が十数件 東京・世田谷区",
-      "summary": "",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBXZ1FkbkdfdUNmcUdCOXlGY0JUNVFLSDlRT2lXLTZKYncxZDhidUlUUmg2MTJVejA1ZlF1c3J1LXYxblBkbzBMMXZCWk1SRURaVXhyR2ZPZVVmcFhERmtqRVVzNnJkZ2JPbU1YWW1mUGhXblhxb2I4Nm14eHhpMXc?oc=5",
-      "published": "2026-11-05T19:53+09:00",
-      "place": "世田谷区",
-      "placeKind": "ward",
-      "matched": "世田谷区",
-      "ward": "世田谷区",
-      "lat": 35.64653,
-      "lng": 139.65325
-    },
-    {
       "id": "news-2a5f9ae950",
       "category": "crime",
       "type": "other",
@@ -3052,8 +3052,8 @@
       "placeKind": "ward",
       "matched": "世田谷区",
       "ward": "世田谷区",
-      "lat": 35.646198,
-      "lng": 139.653624
+      "lat": 35.64653,
+      "lng": 139.65325
     },
     {
       "id": "news-33eaa9b815",
@@ -3088,8 +3088,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693765,
-      "lng": 139.699271
+      "lat": 35.690326,
+      "lng": 139.699794
     },
     {
       "id": "news-1bf84c8687",
@@ -3106,26 +3106,26 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729651,
-      "lng": 139.71167
+      "lat": 35.730803,
+      "lng": 139.711385
     },
     {
-      "id": "news-21cb1184cf",
+      "id": "news-7984c7e1dc",
       "category": "gourmet",
-      "type": "meat",
-      "typeLabel": "焼肉・肉料理",
-      "typeIcon": "🥩",
-      "title": "渋沢栄一ゆかりの地・ 東京都北区西ケ原で味わう！「論語と算盤」の世界観を再現した創作ハンバーグ丼が誕生",
+      "type": "ramen",
+      "typeLabel": "ラーメン",
+      "typeIcon": "🍜",
+      "title": "【楽園タウン池袋】人気ラーメン店「むかん」に新メニュー登場！牡蠣の濃厚な旨みとたまり醤油の深いコクが織りなす「牡蠣醤油ラーメン」10月16日(金)より絶賛販売中！",
       "summary": "",
-      "source": "STRAIGHT PRESS",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9SdGI2X1I4aG9wVV80QzBjUmpJa01aeUk3Wm5FOXZDdUY2eWVQSlp5akJ0YUVoNTh4OEdXdVdfbVYyLV84YWFYQ2V6NnpXMkU5NHg0?oc=5",
-      "published": "2026-11-05T16:07+09:00",
-      "place": "北区",
-      "placeKind": "ward",
-      "matched": "東京都北区",
-      "ward": "北区",
-      "lat": 35.752448,
-      "lng": 139.734054
+      "source": "山陽新聞",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBpc0hRX0ZMQTVmZGJyeXA0MGhudGFSM2ZOZ1VmbDY4Y3ZZRTFTTkRENHhkOHJQRWlKMW0yWHhRdk5nYmlyRTVUUlZnaW5FS3NyYlRKSGhWUUhwQWtJcEVvalJCYWQ3S2xRNERUbXVaeXQ?oc=5",
+      "published": "2026-11-05T16:11+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋",
+      "ward": "豊島区",
+      "lat": 35.730647,
+      "lng": 139.714722
     },
     {
       "id": "news-4946d4f09e",
@@ -3142,26 +3142,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.731396,
-      "lng": 139.713507
-    },
-    {
-      "id": "news-62eaed14fa",
-      "category": "crime",
-      "type": "theft",
-      "typeLabel": "窃盗・盗難",
-      "typeIcon": "",
-      "title": "会社事務所から金の延べ棒8540万円相当窃盗か “トクリュウ”男4人逮捕 東京・台東区",
-      "summary": "",
-      "source": "日テレNEWS NNN",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5xSno3SzlScFpaY1NNb2ROQUZ0MGUzMmx6Z0xxaWxlbXd2b2JOS1RUbmtlTFg1WHl4bnZ3emhuRUcxV2ZFZ2tTRkZUdXphVWUtNU1XU3ZZUnZwOEtONHNoR2d0bXQ5bDZJdTlET3YzYTR1SDJiUHdsRzJDUGw?oc=5",
-      "published": "2026-11-05T14:39+09:00",
-      "place": "台東区",
-      "placeKind": "ward",
-      "matched": "台東区",
-      "ward": "台東区",
-      "lat": 35.713104,
-      "lng": 139.780531
+      "lat": 35.728851,
+      "lng": 139.712009
     },
     {
       "id": "news-5ba4f34004",
@@ -3182,24 +3164,6 @@
       "lng": 139.805271
     },
     {
-      "id": "news-984bd560ba",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "【楽園タウン池袋】人気ラーメン店「むかん」に新メニュー登場！牡蠣の濃厚な旨みとたまり醤油の深いコクが織りなす「牡蠣醤油ラーメン」10月16日(金)より絶賛販売中！",
-      "summary": "【楽園タウン池袋】人気ラーメン店「むかん」に新メニュー登場！牡蠣の濃厚な旨みとたまり醤油の深いコクが織りなす「牡蠣醤油ラーメン」10月16日(金)より絶賛販売中！ | 株式会社浜友Ｅ.Ｆ.のプレスリリース PR TIMES",
-      "source": "PR TIMES",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE11bE5NSVByQkdnVll1VnpXOFR3YU95bjV3WVRYaDJSWkxwNWpiS3RUWktyWU5vc1U0Qkp3M3FVWDk1RzZUNTlzUF9wWWx5RGVPbWRnYTM4YWJmVC0yblpraklWUHRLS2FZRFE?oc=5",
-      "published": "2026-11-05T14:00+09:00",
-      "place": "池袋駅",
-      "placeKind": "station",
-      "matched": "池袋",
-      "ward": "豊島区",
-      "lat": 35.728952,
-      "lng": 139.713604
-    },
-    {
       "id": "news-2dc3f09db3",
       "category": "crime",
       "type": "other",
@@ -3214,8 +3178,8 @@
       "placeKind": "ward",
       "matched": "台東区",
       "ward": "台東区",
-      "lat": 35.711744,
-      "lng": 139.779577
+      "lat": 35.713104,
+      "lng": 139.780531
     },
     {
       "id": "news-d6dd33600c",
@@ -3232,8 +3196,8 @@
       "placeKind": "ward",
       "matched": "台東区",
       "ward": "台東区",
-      "lat": 35.713479,
-      "lng": 139.779106
+      "lat": 35.711744,
+      "lng": 139.779577
     },
     {
       "id": "news-c5e4f6ffa9",
@@ -3268,8 +3232,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.730803,
-      "lng": 139.711385
+      "lat": 35.731785,
+      "lng": 139.712541
     },
     {
       "id": "news-369eb81498",
@@ -3286,8 +3250,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.730647,
-      "lng": 139.714722
+      "lat": 35.729232,
+      "lng": 139.714664
     },
     {
       "id": "news-b9d0db5ecb",
@@ -3322,8 +3286,8 @@
       "placeKind": "facility",
       "matched": "築地",
       "ward": "中央区",
-      "lat": 35.665058,
-      "lng": 139.770844
+      "lat": 35.66539,
+      "lng": 139.77047
     },
     {
       "id": "news-c33d715e24",
@@ -3340,8 +3304,8 @@
       "placeKind": "facility",
       "matched": "築地",
       "ward": "中央区",
-      "lat": 35.665446,
-      "lng": 139.76969
+      "lat": 35.665058,
+      "lng": 139.770844
     },
     {
       "id": "news-51b0962519",
@@ -3376,44 +3340,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.704791,
-      "lng": 139.6487
-    },
-    {
-      "id": "news-6e59a30e55",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "画像35 / 37＞西武池袋線でおさえておきたいラーメン店5選！勢力拡大中の家系の一杯や超濃厚つけ麺、淡麗絶品な塩など、イチオシのラーメンを紹介",
-      "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA5MXBLaU9uWk5uV1FnWjJnQWV4R0xzV3RSc1VGby01M1BpWjNndUo1RGxlSGp4dE5jR2FqYTA4RjVOSXhyWThfbDBuNG55dGxiRG42WU5TbnY5ajJQNjZsQmNWc3FLU0dXcFcwOGhkNVJtSkhFYm5RcUw4ODVBNzA?oc=5",
-      "published": "2026-11-04T21:05+09:00",
-      "place": "池袋駅",
-      "placeKind": "station",
-      "matched": "池袋",
-      "ward": "豊島区",
-      "lat": 35.728851,
-      "lng": 139.712009
-    },
-    {
-      "id": "news-7e0b02db12",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "韓国で広がる「ラーメンコンビニ」、浅草に 袋麺を自分で煮込む無人店",
-      "summary": "",
-      "source": "浅草経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9iUjVYN2VfS2p6VUJPRHRwTnpKLTkwOTdEeXFyX3BlX2FuRWFTZk81QUw3TjRGeTRVMjY5eHlmQldveEQtdWRIOERmODZhUnFKRGdj?oc=5",
-      "published": "2026-11-04T19:08+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.711953,
-      "lng": 139.796745
+      "lat": 35.706189,
+      "lng": 139.649336
     },
     {
       "id": "news-1ed810364d",
@@ -3430,8 +3358,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711797,
-      "lng": 139.800082
+      "lat": 35.710102,
+      "lng": 139.798964
     },
     {
       "id": "news-f6ee448a6a",
@@ -3484,8 +3412,8 @@
       "placeKind": "ward",
       "matched": "世田谷区",
       "ward": "世田谷区",
-      "lat": 35.646586,
-      "lng": 139.65247
+      "lat": 35.646198,
+      "lng": 139.653624
     },
     {
       "id": "news-a837bac48d",
@@ -3538,8 +3466,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.731785,
-      "lng": 139.712541
+      "lat": 35.729976,
+      "lng": 139.710844
     },
     {
       "id": "news-aff78b91cf",
@@ -3574,8 +3502,8 @@
       "placeKind": "ward",
       "matched": "世田谷区",
       "ward": "世田谷区",
-      "lat": 35.647004,
-      "lng": 139.654011
+      "lat": 35.646586,
+      "lng": 139.65247
     },
     {
       "id": "news-1942d30077",
@@ -3592,8 +3520,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729232,
-      "lng": 139.714664
+      "lat": 35.731576,
+      "lng": 139.714397
     },
     {
       "id": "news-272a4190e2",
@@ -3610,8 +3538,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.781934,
-      "lng": 139.720831
+      "lat": 35.780574,
+      "lng": 139.719877
     },
     {
       "id": "news-b423417495",
@@ -3628,8 +3556,8 @@
       "placeKind": "station",
       "matched": "新宿駅",
       "ward": "新宿区",
-      "lat": 35.691212,
-      "lng": 139.701394
+      "lat": 35.693533,
+      "lng": 139.698043
     },
     {
       "id": "news-a199e6661d",
@@ -3646,8 +3574,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691956,
-      "lng": 139.697574
+      "lat": 35.69209,
+      "lng": 139.70211
     },
     {
       "id": "news-7d1e0a8e4d",
@@ -3682,8 +3610,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.780574,
-      "lng": 139.719877
+      "lat": 35.782309,
+      "lng": 139.719406
     },
     {
       "id": "news-a01b973e8b",
@@ -3700,8 +3628,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.710001,
-      "lng": 139.797369
+      "lat": 35.711953,
+      "lng": 139.796745
     },
     {
       "id": "news-3d580d7102",
@@ -3718,8 +3646,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.697158,
-      "lng": 139.775523
+      "lat": 35.700934,
+      "lng": 139.774378
     },
     {
       "id": "news-e9b5bfa9b5",
@@ -3754,8 +3682,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693556,
-      "lng": 139.701127
+      "lat": 35.69089,
+      "lng": 139.6978
     },
     {
       "id": "news-f61df16e11",
@@ -3790,8 +3718,8 @@
       "placeKind": "ward",
       "matched": "板橋区",
       "ward": "板橋区",
-      "lat": 35.751036,
-      "lng": 139.70852
+      "lat": 35.751454,
+      "lng": 139.710061
     },
     {
       "id": "news-7149a1717a",
@@ -3808,8 +3736,8 @@
       "placeKind": "ward",
       "matched": "板橋区",
       "ward": "板橋区",
-      "lat": 35.751454,
-      "lng": 139.710061
+      "lat": 35.750094,
+      "lng": 139.709107
     },
     {
       "id": "news-30cc60100a",
@@ -3844,8 +3772,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729976,
-      "lng": 139.710844
+      "lat": 35.728346,
+      "lng": 139.713064
     },
     {
       "id": "news-973a038093",
@@ -3862,8 +3790,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.731576,
-      "lng": 139.714397
+      "lat": 35.731553,
+      "lng": 139.711313
     },
     {
       "id": "news-77ddcd665b",
@@ -3880,8 +3808,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.728346,
-      "lng": 139.713064
+      "lat": 35.73011,
+      "lng": 139.71538
     },
     {
       "id": "news-b4dad03c73",
@@ -3902,6 +3830,24 @@
       "lng": 139.730574
     },
     {
+      "id": "news-b648d18c73",
+      "category": "crime",
+      "type": "suspicious",
+      "typeLabel": "不審者・声かけ",
+      "typeIcon": "",
+      "title": "（東京）江東区東砂６丁目で声かけ　１１月１日",
+      "summary": "（東京）江東区東砂６丁目で声かけ １１月１日 ｄメニューニュース",
+      "source": "ｄメニューニュース",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNXlLcjZHZFNJbUxrRGZXc0lzTEhSdW1ncFZxWHJfMDdnRDJvTXBidEtKOHlKNkY4ZEMzNUVZRmNBb3NsRlpEX3VsWlFndG9TUm9maFNBdjNvYm5Xb1hsRDU5cFFXWllKV0RQc194LThLR1VXRGY0YWZ3QTJHNzE2Z3BOenpZYndZU2lLVmRXV3NGZm9BSUZnTkplX2LSAaIBQVVfeXFMTTBFMGc4Y2N1QVVwaU5hZHp6Vkhta3dmLVB5RnFWd0U4ZXFla0lQcm92LWpYeFBZaFh6TFpHOHlvdTI0cEhUSGxyb3RiSFpkUWZTNEtPbDBUYkVyUUZFWjJzUWJPLVByYmpHZlRHQlBOWEV6UWEzWWhzTU9xMFUxNVlITUhFVUMtLUllZlcybUdQeVo4UXFnNmtIVTZ6ZXlXWkJ3?oc=5",
+      "published": "2026-11-02T10:47+09:00",
+      "place": "江東区",
+      "placeKind": "ward",
+      "matched": "江東区",
+      "ward": "江東区",
+      "lat": 35.672696,
+      "lng": 139.81652
+    },
+    {
       "id": "news-bac8208408",
       "category": "gourmet",
       "type": "japanese",
@@ -3920,6 +3866,24 @@
       "lng": 139.764376
     },
     {
+      "id": "news-17b8bda851",
+      "category": "crime",
+      "type": "sexual",
+      "typeLabel": "性犯罪・盗撮",
+      "typeIcon": "",
+      "title": "（東京）江東区豊洲４丁目周辺で盗撮の疑い　１０月３１日",
+      "summary": "（東京）江東区豊洲４丁目周辺で盗撮の疑い １０月３１日 ｄメニューニュース",
+      "source": "ｄメニューニュース",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSWdTSEtjcEJzMjlKTlU2NEJhTm14UmJFV3FNaTc1RUhGOHhLWlVUMDNnUzlFWTBRMk5tWHRBaWpwVjJKMnJ5WktoWnh5ZDlvbUhVVXl6bkJfNlBpTDQ3WG40cmZ2eGI3dnpwZGFoa3Blall0VGVvQmRYR2xpR3VyR1F5VEdLVTFkMmhRcy1NZHFkcV9Ba01iWlByYm_SAaIBQVVfeXFMTS1ELVE4b3R6UmJqbXcxUTVGa0VkX3ZVb2xXVmpqcVV3Mm5jeTd6UlFHOWxxVGhpeTJOZVBQS2FJUmo3UGhCRXJ4X19uSVJUdjZfSDk0SW0zYjM3U3M1Vkd4dHJLOVV6aE1ZTkI0MGJQWmkyM25OTnRKMUdjX0lISTdQYkRwZDBOQ3duMXFpTWV0OU5zb19IV0FsaU5halNRd09R?oc=5",
+      "published": "2026-11-01T21:11+09:00",
+      "place": "豊洲",
+      "placeKind": "area",
+      "matched": "豊洲",
+      "ward": "江東区",
+      "lat": 35.65014,
+      "lng": 139.79312
+    },
+    {
       "id": "news-296debe650",
       "category": "gourmet",
       "type": "ramen",
@@ -3934,8 +3898,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690326,
-      "lng": 139.699794
+      "lat": 35.694224,
+      "lng": 139.700038
     },
     {
       "id": "news-3d80c70879",
@@ -3952,8 +3916,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.699364,
-      "lng": 139.77145
+      "lat": 35.697158,
+      "lng": 139.775523
     },
     {
       "id": "news-e9b085ad4c",
@@ -3988,8 +3952,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660553,
-      "lng": 139.700875
+      "lat": 35.658702,
+      "lng": 139.703094
     },
     {
       "id": "news-d0ac3dfc1b",
@@ -4006,8 +3970,8 @@
       "placeKind": "station",
       "matched": "下北沢",
       "ward": "世田谷区",
-      "lat": 35.661326,
-      "lng": 139.66614
+      "lat": 35.66127,
+      "lng": 139.66692
     },
     {
       "id": "news-9b0117da30",
@@ -4024,8 +3988,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660397,
-      "lng": 139.704212
+      "lat": 35.660553,
+      "lng": 139.700875
     },
     {
       "id": "news-c9ab35da62",
@@ -4060,26 +4024,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658601,
-      "lng": 139.701499
-    },
-    {
-      "id": "news-30d426ab24",
-      "category": "otaku",
-      "type": "anime",
-      "typeLabel": "アニメ・漫画",
-      "typeIcon": "",
-      "title": "新宿アニソンスコープ＞「うた☆プリ」アニメ15周年記念 ST☆RISHの新シングルが首位 「バンドリ！」Ave Mujicaのミニアルバムも上位に",
-      "summary": "新宿アニソンスコープ＞「うた☆プリ」アニメ15周年記念 ST☆RISHの新シングルが首位 「バンドリ！」Ave Mujicaのミニアルバムも上位に（MANTANWEB） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUVhpeFpiUFRsM0ZpM25PTFFIRmgzQ3ZTYlp6VjRJb21zXzZDTy1xelJhWEZMb0Z5MUlhYlZIWHhLOFZKVjR0ell3RDB0LWlTdXhjZTZqWkwxR1V2ZEF4MlVubTFLY0t2MEhJbmZUbG4wbFpSSnBMWEpwQlg3RlNDeFVtSUZQSHk3?oc=5",
-      "published": "2026-10-31T20:21+09:00",
-      "place": "新宿駅",
-      "placeKind": "station",
-      "matched": "新宿",
-      "ward": "新宿区",
-      "lat": 35.693533,
-      "lng": 139.698043
+      "lat": 35.660397,
+      "lng": 139.704212
     },
     {
       "id": "news-76a15a2ebf",
@@ -4100,6 +4046,24 @@
       "lng": 139.706101
     },
     {
+      "id": "news-7e975179b5",
+      "category": "otaku",
+      "type": "anime",
+      "typeLabel": "アニメ・漫画",
+      "typeIcon": "",
+      "title": "新宿アニソンスコープ：「うた☆プリ」アニメ15周年記念 ST☆RISHの新シングルが首位 「バンドリ！」Ave Mujicaのミニアルバムも上位に",
+      "summary": "",
+      "source": "Mantan Web",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1fcFRXUUIzUGk5Vld0UmoyajMwMFdDUzRhX0pRaV9pU21yWXo1eGlLdFF1cUlLREVpenNoVkVOcWhObjhKYk1rUnd3WjhJNGhPX1ZUdUNuN3ljRGVDcGI3NzR1QTY2SHdpbWVn?oc=5",
+      "published": "2026-10-31T20:01+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.690448,
+      "lng": 139.701183
+    },
+    {
       "id": "news-0d49bbd0fc",
       "category": "gourmet",
       "type": "ramen",
@@ -4114,8 +4078,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.731553,
-      "lng": 139.711313
+      "lat": 35.72891,
+      "lng": 139.71107
     },
     {
       "id": "news-fed85446ee",
@@ -4132,44 +4096,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661535,
-      "lng": 139.702031
-    },
-    {
-      "id": "news-3fb02aec24",
-      "category": "reviews",
-      "type": "shopping",
-      "typeLabel": "買い物",
-      "typeIcon": "🛍️",
-      "title": "第11世代Corei5搭載のNEC製中古ノートPCが税込26,180円！Panasonic製が38,500円ほかアキバ…",
-      "summary": "第11世代Corei5搭載のNEC製中古ノートPCが税込26,180円！Panasonic製が38,500円ほかアキバパレットタウン週末セール品全まとめ",
-      "source": "Mastodon #秋葉原（fedibird.com）",
-      "url": "https://fed.brid.gy/r/https://daily-gadget.net/akiba/122538/",
-      "published": "2026-10-30T20:00+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "アキバ",
-      "ward": "千代田区",
-      "lat": 35.699986,
-      "lng": 139.776393
-    },
-    {
-      "id": "news-fbd22a8c37",
-      "category": "gourmet",
-      "type": "izakaya",
-      "typeLabel": "居酒屋",
-      "typeIcon": "🏮",
-      "title": "ビストロTOMO ビストロトモ 新橋(居酒屋)の写真",
-      "summary": "",
-      "source": "ホットペッパーグルメ",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1kNDY4RHp0b3I5eWNReTlLRzVDYzAybWtydUlZM09EZ0NCbDRsTDZvNlp1V0lDZC1LaEdCMFd5aEZGcFBXYXBxV1NSRUxpQkdObzkzNzIyWWoxR3J5NlVVVXprRGxwZw?oc=5",
-      "published": "2026-10-30T17:48+09:00",
-      "place": "新橋駅",
-      "placeKind": "station",
-      "matched": "新橋",
-      "ward": "港区",
-      "lat": 35.666494,
-      "lng": 139.760891
+      "lat": 35.658601,
+      "lng": 139.701499
     },
     {
       "id": "news-bba0845d00",
@@ -4186,8 +4114,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.696746,
-      "lng": 139.773199
+      "lat": 35.699364,
+      "lng": 139.77145
     },
     {
       "id": "news-ddc7b0d429",
@@ -4204,8 +4132,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.73011,
-      "lng": 139.71538
+      "lat": 35.732244,
+      "lng": 139.713308
     },
     {
       "id": "news-4c380138ea",
@@ -4258,8 +4186,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.69209,
-      "lng": 139.70211
+      "lat": 35.692654,
+      "lng": 139.69711
     },
     {
       "id": "news-06dc0598e1",
@@ -4294,8 +4222,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.782309,
-      "lng": 139.719406
+      "lat": 35.781174,
+      "lng": 139.721379
     },
     {
       "id": "news-f1063708a7",
@@ -4312,8 +4240,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700973,
-      "lng": 139.772856
+      "lat": 35.699986,
+      "lng": 139.776393
     },
     {
       "id": "news-8c5f19804b",
@@ -4330,8 +4258,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658982,
-      "lng": 139.704154
+      "lat": 35.661535,
+      "lng": 139.702031
     },
     {
       "id": "news-73cf24424f",
@@ -4348,8 +4276,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659726,
-      "lng": 139.700334
+      "lat": 35.658982,
+      "lng": 139.704154
     },
     {
       "id": "news-474295bfc9",
@@ -4384,8 +4312,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661326,
-      "lng": 139.703887
+      "lat": 35.659726,
+      "lng": 139.700334
     },
     {
       "id": "news-b05b9c7837",
@@ -4402,8 +4330,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.72891,
-      "lng": 139.71107
+      "lat": 35.728468,
+      "lng": 139.714453
     },
     {
       "id": "news-842ff34012",
@@ -4420,8 +4348,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.697987,
-      "lng": 139.776693
+      "lat": 35.696746,
+      "lng": 139.773199
     },
     {
       "id": "news-eb8b82de05",
@@ -4438,8 +4366,44 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.698084,
-      "lng": 139.771284
+      "lat": 35.700973,
+      "lng": 139.772856
+    },
+    {
+      "id": "news-92837108af",
+      "category": "gourmet",
+      "type": "curry",
+      "typeLabel": "カレー",
+      "typeIcon": "🍛",
+      "title": "【東京・銀座】本格スパイシー印度カレー＆冷やしたぬきそば『よもだそば 銀座店』でハイコスパセット",
+      "summary": "",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeDhnbHRBR21jUHNKcXV4TkZnV2pHSWRLVXdkNXR2bGdKMWJ0bVRkVFFweWpIQ2NvUFRtVzRYenFqUktQLTc2anl3RmczRzVJRWtsMUF1YjhxUUoyRGJSa203S29XV3k1ekFGbWNNTHNSb0FHVXlTdnZjeF82YmR2cUNtaW5BOUND?oc=5",
+      "published": "2026-10-29T16:00+09:00",
+      "place": "銀座",
+      "placeKind": "facility",
+      "matched": "銀座",
+      "ward": "中央区",
+      "lat": 35.670671,
+      "lng": 139.76374
+    },
+    {
+      "id": "news-239305f6ab",
+      "category": "gourmet",
+      "type": "izakaya",
+      "typeLabel": "居酒屋",
+      "typeIcon": "🏮",
+      "title": "鉄板酒場 鐵一 赤羽店(居酒屋)の写真",
+      "summary": "",
+      "source": "ホットペッパーグルメ",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE44YUYybGpwaGNYX1dLQ2xMRFJ5UTFFdTVUa0Q5M3o4M1FZZTNnS29KUFhsRThGaXFCRFY3ZVM2UEVxMmJzSmVfa0Zyajc5RE5NQmdmUUNMVmRBdmpmT2YtTkNDci1KQQ?oc=5",
+      "published": "2026-10-28T18:16+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.780911,
+      "lng": 139.71877
     },
     {
       "id": "news-ccf9bb2181",
@@ -4474,8 +4438,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.706536,
-      "lng": 139.650537
+      "lat": 35.705054,
+      "lng": 139.651309
     },
     {
       "id": "news-788feaa51f",
@@ -4492,8 +4456,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.69089,
-      "lng": 139.6978
+      "lat": 35.693276,
+      "lng": 139.702053
     },
     {
       "id": "news-e77a6435a7",
@@ -4510,8 +4474,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658096,
-      "lng": 139.702554
+      "lat": 35.661326,
+      "lng": 139.703887
     },
     {
       "id": "news-357eb8d79c",
@@ -4546,8 +4510,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661303,
-      "lng": 139.700803
+      "lat": 35.658096,
+      "lng": 139.702554
     },
     {
       "id": "news-63bbec006a",
@@ -4564,8 +4528,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.65986,
-      "lng": 139.70487
+      "lat": 35.661303,
+      "lng": 139.700803
     },
     {
       "id": "news-57441df20f",
@@ -4582,8 +4546,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.712935,
-      "lng": 139.797901
+      "lat": 35.711797,
+      "lng": 139.800082
     },
     {
       "id": "news-c6d37f927f",
@@ -4600,8 +4564,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.65866,
-      "lng": 139.70056
+      "lat": 35.65986,
+      "lng": 139.70487
     },
     {
       "id": "news-cb453566b7",
@@ -4618,8 +4582,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.704092,
-      "lng": 139.650634
+      "lat": 35.704791,
+      "lng": 139.6487
     },
     {
       "id": "news-043f7d089a",
@@ -4636,8 +4600,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.732244,
-      "lng": 139.713308
+      "lat": 35.730674,
+      "lng": 139.71038
     },
     {
       "id": "news-dadf8ab8ba",
@@ -4654,8 +4618,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.701035,
-      "lng": 139.775426
+      "lat": 35.697987,
+      "lng": 139.776693
     },
     {
       "id": "news-41de8f2e1d",
@@ -4672,44 +4636,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.696507,
-      "lng": 139.774813
-    },
-    {
-      "id": "news-4dd83cf434",
-      "category": "reviews",
-      "type": "event",
-      "typeLabel": "イベント・お出かけ",
-      "typeIcon": "🎪",
-      "title": "# アイドル # ライブ # 秋葉原 # P .A.R.M.S # 生誕祭 # 汐田愛梨",
-      "summary": "# アイドル # ライブ # 秋葉原 # P .A.R.M.S # 生誕祭 # 汐田愛梨",
-      "source": "Mastodon #秋葉原（fedibird.com）",
-      "url": "https://mstdn.jp/@ojsn_nnn/117500114880059534",
-      "published": "2026-10-25T15:24+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.700245,
-      "lng": 139.771448
-    },
-    {
-      "id": "news-9c233015ed",
-      "category": "reviews",
-      "type": "shopping",
-      "typeLabel": "買い物",
-      "typeIcon": "🛍️",
-      "title": "第11世代Corei3搭載のFujistu製中古ノートPCが税込17,800円！Lenovo製が64,800円ほかアキ…",
-      "summary": "第11世代Corei3搭載のFujistu製中古ノートPCが税込17,800円！Lenovo製が64,800円ほかアキバパレットタウン週末セール品全まとめ",
-      "source": "Mastodon #秋葉原（mastodon.social）",
-      "url": "https://fed.brid.gy/r/https://daily-gadget.net/akiba/122274/",
-      "published": "2026-10-23T19:00+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "アキバ",
-      "ward": "千代田区",
-      "lat": 35.699321,
-      "lng": 139.777126
+      "lat": 35.698084,
+      "lng": 139.771284
     },
     {
       "id": "news-72cde19a95",
@@ -4726,8 +4654,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.696846,
-      "lng": 139.772093
+      "lat": 35.701035,
+      "lng": 139.775426
     },
     {
       "id": "news-0a66225609",
@@ -4744,8 +4672,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.694224,
-      "lng": 139.700038
+      "lat": 35.690036,
+      "lng": 139.698859
     },
     {
       "id": "news-cf52dd6abb",
@@ -4762,8 +4690,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690448,
-      "lng": 139.701183
+      "lat": 35.694263,
+      "lng": 139.698516
     },
     {
       "id": "news-7e02507877",
@@ -4780,8 +4708,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.728468,
-      "lng": 139.714453
+      "lat": 35.731296,
+      "lng": 139.715323
     },
     {
       "id": "news-300cb7448f",
@@ -4798,8 +4726,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.701505,
-      "lng": 139.773773
+      "lat": 35.696507,
+      "lng": 139.774813
     },
     {
       "id": "news-3c35b9b23a",
@@ -4816,8 +4744,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661994,
-      "lng": 139.702798
+      "lat": 35.65866,
+      "lng": 139.70056
     },
     {
       "id": "news-2887666e42",
@@ -4834,8 +4762,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.730674,
-      "lng": 139.71038
+      "lat": 35.728056,
+      "lng": 139.712129
     },
     {
       "id": "news-a0af197529",
@@ -4852,8 +4780,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658218,
-      "lng": 139.703943
+      "lat": 35.661994,
+      "lng": 139.702798
     },
     {
       "id": "news-97ee0f1cab",
@@ -4870,8 +4798,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705943,
-      "lng": 139.648415
+      "lat": 35.706536,
+      "lng": 139.650537
     },
     {
       "id": "news-887a9e983d",
@@ -4888,8 +4816,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.710382,
-      "lng": 139.800024
+      "lat": 35.710001,
+      "lng": 139.797369
     },
     {
       "id": "news-40da805e24",
@@ -4906,8 +4834,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.692654,
-      "lng": 139.69711
+      "lat": 35.691277,
+      "lng": 139.702353
     },
     {
       "id": "news-1e7d1b503d",
@@ -4924,8 +4852,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660424,
-      "lng": 139.69987
+      "lat": 35.658218,
+      "lng": 139.703943
     },
     {
       "id": "news-21012a234d",
@@ -4960,8 +4888,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711126,
-      "lng": 139.796204
+      "lat": 35.712935,
+      "lng": 139.797901
     },
     {
       "id": "news-5043251a1b",
@@ -4978,8 +4906,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.697082,
-      "lng": 139.776444
+      "lat": 35.700245,
+      "lng": 139.771448
     },
     {
       "id": "news-f1c4ffb1db",
@@ -4996,8 +4924,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693276,
-      "lng": 139.702053
+      "lat": 35.691374,
+      "lng": 139.696944
     },
     {
       "id": "news-184a053e7b",
@@ -5014,8 +4942,8 @@
       "placeKind": "facility",
       "matched": "浅草寺",
       "ward": "台東区",
-      "lat": 35.7134,
-      "lng": 139.79553
+      "lat": 35.713068,
+      "lng": 139.795904
     },
     {
       "id": "news-4e0be6e7b0",
@@ -5032,8 +4960,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705787,
-      "lng": 139.651752
+      "lat": 35.704092,
+      "lng": 139.650634
     },
     {
       "id": "news-65be347eca",
@@ -5050,8 +4978,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.703991,
-      "lng": 139.649039
+      "lat": 35.705943,
+      "lng": 139.648415
     }
   ]
 }
