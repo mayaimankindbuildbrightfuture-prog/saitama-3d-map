@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T15:43+09:00",
+  "generatedAt": "2026-11-12T02:15+09:00",
   "sources": [
     {
       "name": "Googleニュース「さいたま市」",
@@ -387,12 +387,12 @@
       "url": ""
     },
     {
-      "name": "Bluesky「岩槻」",
+      "name": "Bluesky「与野」",
       "category": "reviews",
       "url": ""
     },
     {
-      "name": "Bluesky「与野」",
+      "name": "Bluesky「さいたま新都心」",
       "category": "reviews",
       "url": ""
     },
@@ -419,6 +419,330 @@
   ],
   "items": [
     {
+      "id": "news-cf23c1afb1",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "埼玉の不動産会社おすすめ5選【売買】さいたま市・本庄市はどこに頼む？",
+      "summary": "",
+      "source": "新日本保険新聞社",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8xLUZKQUxhYk1heE9MY2xTTXREMUI1VFBqczRjeWYwLTVCT3pNUWNjMWhGQ18xSDE2N3FwMFNWZ0MwVm5LYTdRcmpQWWVsSGh4ZVVqS0dpbHphVzdrYTdYaDhaNC1JQUI4LVVBaW8wLWx4YXM?oc=5",
+      "published": "2026-11-11T22:58+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.8617,
+      "lng": 139.6455
+    },
+    {
+      "id": "news-c295a726b9",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "一昨日のお昼頃東浦和駅周辺で見かけたバス さいたま東営業所所属 3579 浦04系統 3515 浦04-2系統 910…",
+      "summary": "一昨日のお昼頃東浦和駅周辺で見かけたバス さいたま東営業所所属 3579 浦04系統 3515 浦04-2系統 9108 浦09系統 鳩ケ谷営業所所属 3574 蕨02系統 計4台、全てLV290で9108のみQ尺で、比較的若年式の車両が多かったです。",
+      "source": "Bluesky「浦和駅」",
+      "url": "https://bsky.app/profile/t-saitama.bsky.social/post/3n223qllf622p",
+      "published": "2026-11-11T22:46+09:00",
+      "place": "浦和駅",
+      "placeKind": "station",
+      "matched": "浦和駅",
+      "ward": "",
+      "lat": 35.8587,
+      "lng": 139.6571
+    },
+    {
+      "id": "news-72b49af4e2",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "第22回「さいたま市民活動 夢マルシェ」のチラシ",
+      "summary": "",
+      "source": "浦和経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9OQmptUnE2U2hzVXRJd0Q0ak9mZWt3d2RYRHBmdTBSTWFPVElQMUpvbmlYYUdQM3ZYbVNZSnZKSkJ4MVFiZi16eUo1MjNaYjdkeFQw?oc=5",
+      "published": "2026-11-11T21:40+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.861368,
+      "lng": 139.645874
+    },
+    {
+      "id": "news-643f63ea0f",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "J1浦和、埼玉スタジアム25年間でワーストの観客動員数 コロナ禍の制限除く…「1万4人」で辛くも大台キープ",
+      "summary": "",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBJR0F6LTNNd1NLbHNMYjh0ZWxsWUJZdWFfMUpyb1FvY25BdmRkUmV4YVN6UGVHOFlvbWJ2dzRyUlViMEIxbF9XUEQ3ZFAxODktSkM1bVJxdFVGdTcwMUlmMHRWZ0JSUFlZbmJ5RUg4b2p3a1pmXzdGZERoWFJXcTQ?oc=5",
+      "published": "2026-11-11T21:18+09:00",
+      "place": "埼玉スタジアム2002",
+      "placeKind": "facility",
+      "matched": "埼玉スタジアム",
+      "ward": "緑区",
+      "lat": 35.903,
+      "lng": 139.7176
+    },
+    {
+      "id": "news-3ab5ec8ce8",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "浦和駅東口で市民活動団体マルシェ 継続5年、地域の「きっかけづくり」に",
+      "summary": "浦和駅東口で市民活動団体マルシェ 継続5年、地域の「きっかけづくり」に（みんなの経済新聞ネットワーク） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0zdzkzajFZU0NBV1k3M1c5VjVuOHlzRGRNQ3BKMGlJdzEyemRMaWpJX3FCRTEyN0hKc1Q5S2RBQ3FBZkhSTFBrdkl3cFdkZjZSM1BJeUtFd3BwSXBWOEM4ZUVVdUVOQ0w5bWtGUmJVRDlsMEkwbVVWYWMxUTBjSVE?oc=5",
+      "published": "2026-11-11T20:58+09:00",
+      "place": "浦和駅",
+      "placeKind": "station",
+      "matched": "浦和駅",
+      "ward": "",
+      "lat": 35.858368,
+      "lng": 139.657474
+    },
+    {
+      "id": "news-15fac99fe1",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "北与野の書店で展示企画 絵本の原画や私物持ち寄りで「平成の部屋」再現も",
+      "summary": "",
+      "source": "大宮経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1Pa1Q2QUlfWVBOWk5LUnh1LU91LS1uV19ZYzA4VDNGbWl1QU9aVzhueFdfOUFJSzIyX3ZVWVlKblVRbmFicVNsXzJkYlF6bU5E?oc=5",
+      "published": "2026-11-11T20:57+09:00",
+      "place": "北与野駅",
+      "placeKind": "station",
+      "matched": "北与野",
+      "ward": "",
+      "lat": 35.893,
+      "lng": 139.6264
+    },
+    {
+      "id": "news-fc42c57a62",
+      "category": "reviews",
+      "type": "nature",
+      "typeLabel": "公園・自然・季節",
+      "typeIcon": "🌳",
+      "title": "花博の自治体の屋外の庭43件は、南と北に分かれます。36件は南エリアの日本ゾーン「自治体の庭②」、残る7件は北エリアの…",
+      "summary": "花博の自治体の屋外の庭43件は、南と北に分かれます。36件は南エリアの日本ゾーン「自治体の庭②」、残る7件は北エリアのキッズビレッジ「自治体の庭①」で、埼玉県・千葉県・東京都・さいたま市・千葉市・川崎市・相模原市です。協会が10月9日に更新した花・緑出展の一覧で、屋外の場所がビレッジ・ゾーンとブロックの名前で引けるようになりました。",
+      "source": "Bluesky「さいたま市」",
+      "url": "https://bsky.app/profile/trip-jp.com/post/3mzzu4gmjm22r",
+      "published": "2026-11-11T20:30+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.861756,
+      "lng": 139.64472
+    },
+    {
+      "id": "news-2ce1eb007a",
+      "category": "gourmet",
+      "type": "other",
+      "typeLabel": "その他のグルメ",
+      "typeIcon": "🍴",
+      "title": "テレ東 アド街、大宮「鉄道博物館」に出没！運転シミュレーターや車内で駅弁ランチも 11月14日放送",
+      "summary": "",
+      "source": "千葉テレビ放送株式会社",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE94dWI5ODkwb3k5ckhHa2tkUnI4S2VKUDVuRm03UDl1bUVGc080QjJrRjRLY3c5UjFIUkM0UlNmZ1RyYVc2S3k2cnB2a3NLQXhhTzdzZEdSN05RSGRUM1dr?oc=5",
+      "published": "2026-11-11T19:41+09:00",
+      "place": "鉄道博物館",
+      "placeKind": "facility",
+      "matched": "鉄道博物館",
+      "ward": "大宮区",
+      "lat": 35.9214,
+      "lng": 139.6177
+    },
+    {
+      "id": "news-9b9196fae8",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "チャイルドシートの対象基準見直しに向けた有識者検討会の初会合であいさつする警察庁の日下真一交通局長（中央）＝11日午後、さいたま市の関東管区警察局",
+      "summary": "",
+      "source": "西日本新聞me",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE90NUF2NnRLb3B6ck9SM2g3VXdWV3pQcWpoek9SdzAyNXhObTVsM2xlU3FQeXpxN1c5eVdJR2Z1bFhCNEhpQUNYMERZVXJ6M281cGFuMk1zOA?oc=5",
+      "published": "2026-11-11T19:29+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.862174,
+      "lng": 139.646261
+    },
+    {
+      "id": "news-3dd21557c7",
+      "category": "reviews",
+      "type": "nature",
+      "typeLabel": "公園・自然・季節",
+      "typeIcon": "🌳",
+      "title": "一日お疲れ様でした さ、寒い…🥶 いきなり5℃を切った本日の朝 見沼に行こうにもしばらく電気ストーブの前から離れられま…",
+      "summary": "一日お疲れ様でした さ、寒い…🥶 いきなり5℃を切った本日の朝 見沼に行こうにもしばらく電気ストーブの前から離れられませんでした いつもよりやや遅めの探鳥でしたが、鳥たちも朝の寒さでしばらく動けなかったのか、特にカラ類の混軍は普段より多く見かけました 普段は鳥を驚かさないよう、慎重に静かに動くことを心掛けていますが、4枚目の写真を撮るときはその縛りを振り解き、逃げ飛ばそうとしてしまいました 農家の方が丹精込めて作ったお米のつまみ食いはダメだぞ💢😡",
+      "source": "Bluesky「見沼」",
+      "url": "https://bsky.app/profile/tyougenbou.bsky.social/post/3mzzn6lvzcs2x",
+      "published": "2026-11-11T18:26+09:00",
+      "place": "見沼",
+      "placeKind": "area",
+      "matched": "見沼",
+      "ward": "",
+      "lat": 35.928,
+      "lng": 139.66
+    },
+    {
+      "id": "news-c6862f5cca",
+      "category": "gourmet",
+      "type": "izakaya",
+      "typeLabel": "居酒屋",
+      "typeIcon": "🏮",
+      "title": "肉居酒屋HAL 南浦和店(居酒屋)の写真",
+      "summary": "",
+      "source": "ホットペッパーグルメ",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9IX0NsLVBQOHlxdVk3VDRXbjA2ZzJFRjQ3NzVPZmZfZGx3T3FQWFpjQTRWR0JGeHdycHdBN2FHQ0hIbmxKV3hkQWd6LVFnNGhfb2dySXBSQXpOOVVSaktOejZSS3gwdw?oc=5",
+      "published": "2026-11-11T17:53+09:00",
+      "place": "南浦和駅",
+      "placeKind": "station",
+      "matched": "南浦和",
+      "ward": "",
+      "lat": 35.8475,
+      "lng": 139.669
+    },
+    {
+      "id": "news-a2aae61bb9",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "さいたま市浦和区 双恵幼稚園にて「WILD POWER PROJECT」バスケットボールクリニックを開催 〜園児約100名が参加！バスケットボールの楽しさを体感〜",
+      "summary": "",
+      "source": "PR TIMES",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1NNHIwajdQM0dnWGxsbHBZaVZxdG1qWTJZQ3hBTW1PRkFXUzd4YzlPY0ZOMmxiandtdzBPNjJKZVZMMlNhczhIMDdaMnphMFpVZzBlYkEzbXhKa3Bxd0NxcDFHZUhfZkY2SlE?oc=5",
+      "published": "2026-11-11T17:40+09:00",
+      "place": "浦和区",
+      "placeKind": "ward",
+      "matched": "浦和区",
+      "ward": "浦和区",
+      "lat": 35.862,
+      "lng": 139.65
+    },
+    {
+      "id": "news-d607c92e0e",
+      "category": "reviews",
+      "type": "nature",
+      "typeLabel": "公園・自然・季節",
+      "typeIcon": "🌳",
+      "title": "【体験レポ】進化した大宮・武蔵一宮氷川神社のプロジェクションマッピング「時結びの杜」の新演出がすご過ぎた！",
+      "summary": "【体験レポ】進化した大宮・武蔵一宮氷川神社のプロジェクションマッピング「時結びの杜」の新演出がすご過ぎた！ #つなぐ旅東日本cp #さいたま市",
+      "source": "Bluesky「さいたま市」",
+      "url": "https://bsky.app/profile/moview.jp/post/3mzzjej6uws2q",
+      "published": "2026-11-11T17:17+09:00",
+      "place": "氷川神社",
+      "placeKind": "facility",
+      "matched": "氷川神社",
+      "ward": "大宮区",
+      "lat": 35.9163,
+      "lng": 139.6298
+    },
+    {
+      "id": "news-5a12d7d5a0",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【大宮リトルシニア】２つの専用グラウンドで暇なく練習＆試合／26-27関東連盟メンバーズ",
+      "summary": "",
+      "source": "日刊スポーツ",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBtSlNVa011WjhKUU1HU1VkSWNXdVNPSkNXTWktT1JzUjhSRURzYkx6ZFNMbjlza3pidVdGQkRyVEUwRGl3OWM2b3Q0UGlTTkZBNzdPS1JuWDFxLVBiRXRFMW1LU0FBeWF4TUx1d2Fpd08?oc=5",
+      "published": "2026-11-11T17:16+09:00",
+      "place": "大宮",
+      "placeKind": "area",
+      "matched": "大宮",
+      "ward": "",
+      "lat": 35.9064,
+      "lng": 139.6237
+    },
+    {
+      "id": "news-2dddc19a8c",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "2026年11月10日 さいたま市緑区 下野田の住宅侵入事件 案件屋を逮捕",
+      "summary": "2026年11月10日 さいたま市緑区 下野田の住宅侵入事件 案件屋を逮捕",
+      "source": "Bluesky「さいたま市」",
+      "url": "https://bsky.app/profile/brownabl.bsky.social/post/3mzzhtbxrls26",
+      "published": "2026-11-11T16:50+09:00",
+      "place": "緑区",
+      "placeKind": "ward",
+      "matched": "さいたま市緑区",
+      "ward": "緑区",
+      "lat": 35.878,
+      "lng": 139.69
+    },
+    {
+      "id": "news-1436d911b8",
+      "category": "reviews",
+      "type": "nature",
+      "typeLabel": "公園・自然・季節",
+      "typeIcon": "🌳",
+      "title": "10代4人をトクリュウの実行役に勧誘か 「リクルーター」の28歳男を窃盗容疑で逮捕 大阪府警捜査3課は5日、窃盗などの…",
+      "summary": "10代4人をトクリュウの実行役に勧誘か 「リクルーター」の28歳男を窃盗容疑で逮捕 大阪府警捜査3課は5日、窃盗などの疑いで、さいたま市見沼区蓮沼のアルバイト、村野圭亮（けいすけ）容疑者（28）を逮捕した。",
+      "source": "Bluesky「さいたま市」",
+      "url": "https://bsky.app/profile/brownabl.bsky.social/post/3mzzhk7wlkc2n",
+      "published": "2026-11-11T16:45+09:00",
+      "place": "見沼区",
+      "placeKind": "ward",
+      "matched": "見沼区",
+      "ward": "見沼区",
+      "lat": 35.927668,
+      "lng": 139.660374
+    },
+    {
+      "id": "news-eede49f87d",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "参加者一人一人にさいたま市教育委員会の竹居秀子教育長より修了証が授与された",
+      "summary": "",
+      "source": "浦和経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBnLXYxWGlaVUxEaldWS0QyLXhQSnR3NEwzMlR1RzZTZlBqZnFaMTdCQkU4WnI2UVdlcTlfSkNscEwwYTlOUzlBY3pqZ2E2Y2JsQzJz?oc=5",
+      "published": "2026-11-11T16:45+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.860814,
+      "lng": 139.645307
+    },
+    {
+      "id": "news-9e476b12d7",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "三菱重工浦和レッズレディース",
+      "summary": "三菱重工浦和レッズレディース | URAWA RED DIAMONDS LADIES urawa-reds.co.jp",
+      "source": "urawa-reds.co.jp",
+      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxNcTd3RTZuXzZpYXNrSDhNaHJTdEdxNHRJeW1kNWNrSnVTUGp6NkI0dlRMUVp1Vm5iZ2t3MUE4T2tnQjZFUEVLWnpHTlhHX0JZY3FpQXd1cXM2M0g0Yl9MM3RsMkVpQTZ2LXNjZ2VJb0F2SDZqRy1nLTF5cTUzekJEMkxUUzJoWmU3bFFyUGtvNUI2UHF2VHRDSzM1QU5QX3dTdnowTUdMcHhEa0t5ejlzWUhqMm5Nb3JQbEM2ZEtiZE9mZ3VCUUd3UUpzR1hlVTJ2NEl4RndEM0JkQlNpcXA1ZGpUck1OQy1GQks5MVpUbDJOdV94OVo1Y1VxcWJhN3c0ZG43OGx3SkRsZmtiNGd3cWt3VGZKeXI5ZjJCM0YyUllPWUlCTVVUVFdUOHlRMmg2NTA1YXBOR1Q1cmM2eDRXZnlNTWphN0NvNzVWSUFSOUJJTEV1bnRGRWhhbG81c052R3ZhTnc4aHhVbmVkcWJWUlRzZ3NOTC1QUlNvdHhWb1pmd1NwY2x3NWNwVQ?oc=5",
+      "published": "2026-11-11T15:18+09:00",
+      "place": "浦和",
+      "placeKind": "area",
+      "matched": "浦和",
+      "ward": "",
+      "lat": 35.858756,
+      "lng": 139.65632
+    },
+    {
       "id": "news-263f121235",
       "category": "reviews",
       "type": "nature",
@@ -437,6 +761,24 @@
       "lng": 139.679
     },
     {
+      "id": "news-514bb3f26b",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "「さいたま市北区少年少女&親子サッカー教室」実施レポート",
+      "summary": "",
+      "source": "大宮アルディージャ",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBrendqVzEyTXN4emdxVnVUZTVXUlhMaTUyb0wxZnFoZkZNNVBBZ1dmRjlCY2t5dTZzdkJtWGVPNm5kb1d3S2ZodE53UVotZGh3U3V1NFVHdWU0dw?oc=5",
+      "published": "2026-11-11T15:00+09:00",
+      "place": "北区",
+      "placeKind": "ward",
+      "matched": "さいたま市北区",
+      "ward": "北区",
+      "lat": 35.927,
+      "lng": 139.621
+    },
+    {
       "id": "news-295257f883",
       "category": "news",
       "type": "",
@@ -451,8 +793,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.8617,
-      "lng": 139.6455
+      "lat": 35.862549,
+      "lng": 139.644836
     },
     {
       "id": "news-4b70c6fb54",
@@ -469,8 +811,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.9064,
-      "lng": 139.6237
+      "lat": 35.906068,
+      "lng": 139.624074
     },
     {
       "id": "news-c0083e8b13",
@@ -487,8 +829,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.906068,
-      "lng": 139.624074
+      "lat": 35.906456,
+      "lng": 139.62292
     },
     {
       "id": "news-7df1421f8c",
@@ -505,8 +847,26 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.8587,
-      "lng": 139.6571
+      "lat": 35.859174,
+      "lng": 139.657861
+    },
+    {
+      "id": "news-388b63c709",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "武蔵浦和 一棟マンション",
+      "summary": "",
+      "source": "www.rakumachi.jp",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQMm5HNDQ5U3k2eXZxQ0JzZkdsT0VDWmlhbkNmSDVHRVRWSklDQVp0MVVUWGFSZWx5VVVRZ1hKaFR6T1BSUmJEa1doWGVLWXFLRDEyQTNrcVVaYndYMGJKdFdGdUNnV3lETTNjbTVYd1RXUlhCaWI5YWFUd0JpSEJKZWJPMTg?oc=5",
+      "published": "2026-11-11T13:15+09:00",
+      "place": "武蔵浦和駅",
+      "placeKind": "station",
+      "matched": "武蔵浦和",
+      "ward": "",
+      "lat": 35.8456,
+      "lng": 139.6475
     },
     {
       "id": "news-448bf1306c",
@@ -523,8 +883,8 @@
       "placeKind": "station",
       "matched": "大宮駅",
       "ward": "",
-      "lat": 35.906456,
-      "lng": 139.62292
+      "lat": 35.906874,
+      "lng": 139.624461
     },
     {
       "id": "news-9759141639",
@@ -541,8 +901,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.858368,
-      "lng": 139.657474
+      "lat": 35.857814,
+      "lng": 139.656907
     },
     {
       "id": "news-568403218c",
@@ -577,8 +937,8 @@
       "placeKind": "station",
       "matched": "大宮駅",
       "ward": "",
-      "lat": 35.906874,
-      "lng": 139.624461
+      "lat": 35.905514,
+      "lng": 139.623507
     },
     {
       "id": "news-3720f42a84",
@@ -631,8 +991,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.905514,
-      "lng": 139.623507
+      "lat": 35.907249,
+      "lng": 139.623036
     },
     {
       "id": "news-5f00b7edbf",
@@ -649,8 +1009,8 @@
       "placeKind": "ward",
       "matched": "見沼区",
       "ward": "見沼区",
-      "lat": 35.928,
-      "lng": 139.66
+      "lat": 35.928056,
+      "lng": 139.65922
     },
     {
       "id": "news-a37303b991",
@@ -667,26 +1027,8 @@
       "placeKind": "station",
       "matched": "大宮駅",
       "ward": "",
-      "lat": 35.907249,
-      "lng": 139.623036
-    },
-    {
-      "id": "news-2cee2314e4",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "東京都が独自の取組で0〜2歳児の第1子の保育料を0円に。他の地域ではいくらかかるか、さいたま市・千葉市を例にシミュレーション",
-      "summary": "東京都が独自の取組で0〜2歳児の第1子の保育料を0円に。他の地域ではいくらかかるか、さいたま市・千葉市を例にシミュレーション（LIMO） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1pQ25sV1hvazJsZ3pKbE90bjJUTWxLQjNsNGY3NmVsQ3ZFd01icUl1MjVZV0xKMjJzRGpXYlBRTzlxeHM2TEJ2ZDFrS1ItT2tmYmdHNlhKMFFSc2V4VHdPZTRTTlU0NXlxQ2k0OVdyWnBGU1dVX09MR3pEQm1xRW8?oc=5",
-      "published": "2026-11-11T05:20+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 35.861368,
-      "lng": 139.645874
+      "lat": 35.906114,
+      "lng": 139.625009
     },
     {
       "id": "news-180e83957d",
@@ -703,8 +1045,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861756,
-      "lng": 139.64472
+      "lat": 35.861414,
+      "lng": 139.646809
     },
     {
       "id": "news-4f9ae452bd",
@@ -721,47 +1063,11 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862174,
-      "lng": 139.646261
+      "lat": 35.861151,
+      "lng": 139.6442
     },
     {
-      "id": "news-1cd74213c8",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "三菱重工浦和レッズレディース",
-      "summary": "三菱重工浦和レッズレディース | URAWA RED DIAMONDS LADIES urawa-reds.co.jp",
-      "source": "urawa-reds.co.jp",
-      "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxPazZQWDFNS094eWtwUkF5YW9QaEtzR1BWOWx5MTRoTTA4enZpVWQ2OE9WVGRGb2pjQXFzS2tQaTNIWEV2UWl4bl9BVnVJTl9RQmxpN00yelVIY3gyR3Fmd2pEbHlIdkxDSmZJWmRYUFFVWHgzb1QtaHdpanVKZE1BZHdQTnp1S0puWm1FUGFqS1hvNVV0SGhfY2huUDhRc3JvNUVCVWVSTXlGMmRsMFJHa01UN3hDbjlFb0sxYW9PSnRUV0NhLWo5M1BqelN0OHNwN1lCYVBOckJ2d05pQThNWTlmV2pYdzRWRll0ckE0OUJrRy1Dbzc1aFJaZnRJREtWZGZJcklYM211YVZDR09xeUF2RkZvLUVpRzJJMGJyczBjM0p5TVBwaVNDcFU4RlpJSl9QZUlyQWlyYkU0UkNpNjFxZzhfSk9IeEpF?oc=5",
-      "published": "2026-11-11T03:36+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.858756,
-      "lng": 139.65632
-    },
-    {
-      "id": "news-83c25426e4",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "岩槻の🏩で全裸ダンエボ❓",
-      "summary": "岩槻の🏩で全裸ダンエボ❓",
-      "source": "Bluesky「岩槻」",
-      "url": "https://bsky.app/profile/sn723.bsky.social/post/3mzxl4mohrs2k",
-      "published": "2026-11-10T22:43+09:00",
-      "place": "岩槻",
-      "placeKind": "area",
-      "matched": "岩槻",
-      "ward": "",
-      "lat": 35.9502,
-      "lng": 139.6936
-    },
-    {
-      "id": "news-63f3091fb4",
+      "id": "news-c9133c9a09",
       "category": "crime",
       "type": "sexual",
       "typeLabel": "性犯罪・盗撮",
@@ -769,7 +1075,7 @@
       "title": "（埼玉）さいたま市南区別所２丁目で盗撮　１１月１０日",
       "summary": "（埼玉）さいたま市南区別所２丁目で盗撮 １１月１０日 ｄメニューニュース",
       "source": "ｄメニューニュース",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaEZWa19HejdOUlkyV05aTXZIMC1kRTdUU3RiNlptd3hvRHh5VEtZaV95UkdSdUFWRFk2UkowQjNJWlVBMlNtRlZfSnJVZ3cxeFZhamdxdUNZNHpKSTlOemtEMGNUdjVzaFhUOGZZVXhWT2Y4cHB3WG15aFhiRjhkd01XQWtZdzRDZ2hZYUduUmpoYjBGWC1ndWU0Z1NWWXdvT2J5UkVIeXZBTmRoU3Nr0gGiAUFVX3lxTE1yMGp5S2dFSGJvcEdRNDNaQmxDWUh4R25CYXZHcmtDeUpVQ0NibktfUWx6NjRYT3BWRVpzUzZpUVZWSUpNQkdHSzhKcFhVaEx1R21zQ013UUhnMDQwUjBFbFh1WnN1UmVNSUZiV3VEclJTY1pBa053U1oycFBOb0hfeHRVOXJSWDFabjdfZ3ZyQnFIaDZBWE5aOG1YOUJQUVAxZw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcjBqeUtnRUhib3BHUTQzWkJsQ1lIeEduQmF2R3JrQ3lKVUNDYm5LX1FsejY0WE9wVkVac1M2aVFWVklKTUJHR0s4SnBYVWhMdUdtc0NNd1FIZzA0MFIwRWxYdVpzdVJlTUlGYld1RHJSU2NaQWtOd1NaMnBQTm9IX3h0VTlyUlgxWm43X2d2ckJxSGg2QVhOWjhtWDlCUFFQMWfSAaIBQVVfeXFMTXIwanlLZ0VIYm9wR1E0M1pCbENZSHhHbkJhdkdya0N5SlVDQ2JuS19RbHo2NFhPcFZFWnNTNmlRVlZJSk1CR0dLOEpwWFVoTHVHbXNDTXdRSGcwNDBSMEVsWHVac3VSZU1JRmJXdURyUlNjWkFrTndTWjJwUE5vSF94dFU5clJYMVpuN19ndnJCcUhoNkFYTlo4bVg5QlBRUDFn?oc=5",
       "published": "2026-11-10T22:39+09:00",
       "place": "南区",
       "placeKind": "ward",
@@ -793,8 +1099,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.859174,
-      "lng": 139.657861
+      "lat": 35.859549,
+      "lng": 139.656436
     },
     {
       "id": "news-42c8f4d896",
@@ -811,8 +1117,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860814,
-      "lng": 139.645307
+      "lat": 35.862896,
+      "lng": 139.646037
     },
     {
       "id": "news-b41abf9ad3",
@@ -829,8 +1135,8 @@
       "placeKind": "station",
       "matched": "大宮駅",
       "ward": "",
-      "lat": 35.906114,
-      "lng": 139.625009
+      "lat": 35.905851,
+      "lng": 139.6224
     },
     {
       "id": "news-9e373bb36d",
@@ -847,8 +1153,8 @@
       "placeKind": "station",
       "matched": "大宮駅",
       "ward": "",
-      "lat": 35.905851,
-      "lng": 139.6224
+      "lat": 35.907596,
+      "lng": 139.624237
     },
     {
       "id": "news-e7d3683779",
@@ -883,8 +1189,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862549,
-      "lng": 139.644836
+      "lat": 35.860452,
+      "lng": 139.646134
     },
     {
       "id": "news-91b111df19",
@@ -901,8 +1207,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861414,
-      "lng": 139.646809
+      "lat": 35.862303,
+      "lng": 139.643915
     },
     {
       "id": "news-968aeb2bd1",
@@ -919,8 +1225,8 @@
       "placeKind": "station",
       "matched": "大宮駅",
       "ward": "",
-      "lat": 35.907596,
-      "lng": 139.624237
+      "lat": 35.905152,
+      "lng": 139.624334
     },
     {
       "id": "news-f88596ab65",
@@ -937,8 +1243,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861151,
-      "lng": 139.6442
+      "lat": 35.862147,
+      "lng": 139.647252
     },
     {
       "id": "news-0d84db30fc",
@@ -955,8 +1261,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.905152,
-      "lng": 139.624334
+      "lat": 35.907003,
+      "lng": 139.622115
     },
     {
       "id": "news-c7342b3839",
@@ -973,8 +1279,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862896,
-      "lng": 139.646037
+      "lat": 35.860351,
+      "lng": 139.644539
+    },
+    {
+      "id": "news-03f1b5865e",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "ちゃんこーのまち「さいたましんとしん」※但し、イケメンに限る ぶっこしゃ！大江康介様「すべてとうきょうにあります。こな…",
+      "summary": "ちゃんこーのまち「さいたましんとしん」※但し、イケメンに限る ぶっこしゃ！大江康介様「すべてとうきょうにあります。こなくていいです。とおいから✋お釈迦様は4月8日生まれ。元彼女のミニーマウスと同じ誕生日。大江康介様」",
+      "source": "Bluesky「さいたま新都心」",
+      "url": "https://bsky.app/profile/mochino1.bsky.social/post/3mzx2ofkusk25",
+      "published": "2026-11-10T17:49+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.863285,
+      "lng": 139.645071
     },
     {
       "id": "news-12c5345349",
@@ -991,8 +1315,8 @@
       "placeKind": "station",
       "matched": "大宮駅",
       "ward": "",
-      "lat": 35.907003,
-      "lng": 139.622115
+      "lat": 35.906847,
+      "lng": 139.625452
     },
     {
       "id": "news-7f66e0e8bf",
@@ -1009,8 +1333,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860452,
-      "lng": 139.646134
+      "lat": 35.860732,
+      "lng": 139.647194
     },
     {
       "id": "news-d2eb29a999",
@@ -1031,16 +1355,16 @@
       "lng": 139.610374
     },
     {
-      "id": "news-78e226b1db",
+      "id": "news-2990aeea2a",
       "category": "gourmet",
       "type": "curry",
       "typeLabel": "カレー",
       "typeIcon": "🍛",
       "title": "ワークスペース「いいオフィス北浦和 by エール」OPEN！ カフェやソファルーム、ハンドドリップコーヒーや本格カレーでひと息",
       "summary": "",
-      "source": "STRAIGHT PRESS",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5zV2xFMWE5XzY5RVJSZ1luMkJZYl9ER184ZjVmNC1qQ2tCdnNfNHFMSFo0Y21fSjlrN3UydzFmM0tDWDJiWHRnaUVXaTBnM2xyQ2Zz?oc=5",
-      "published": "2026-11-10T13:58+09:00",
+      "source": "ガジェット通信",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFA5c0ZmZlBnTHVONjRaYVBKMDctR0N0QkRFeDExOGd6bVFReGtqTXhnOEx6QkZfMEtFbmZkOGJTNHROSmlZblQwX0Zaaw?oc=5",
+      "published": "2026-11-10T13:30+09:00",
       "place": "北浦和駅",
       "placeKind": "station",
       "matched": "北浦和",
@@ -1063,8 +1387,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862303,
-      "lng": 139.643915
+      "lat": 35.861476,
+      "lng": 139.643374
     },
     {
       "id": "news-6e06733d56",
@@ -1081,8 +1405,8 @@
       "placeKind": "facility",
       "matched": "氷川神社",
       "ward": "大宮区",
-      "lat": 35.9163,
-      "lng": 139.6298
+      "lat": 35.915968,
+      "lng": 139.630174
     },
     {
       "id": "news-181e217ee9",
@@ -1099,8 +1423,8 @@
       "placeKind": "facility",
       "matched": "氷川神社",
       "ward": "大宮区",
-      "lat": 35.915968,
-      "lng": 139.630174
+      "lat": 35.916356,
+      "lng": 139.62902
     },
     {
       "id": "news-49286f45ad",
@@ -1117,8 +1441,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.857814,
-      "lng": 139.656907
+      "lat": 35.858414,
+      "lng": 139.658409
     },
     {
       "id": "news-0227b6c3c5",
@@ -1135,8 +1459,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.906847,
-      "lng": 139.625452
+      "lat": 35.905051,
+      "lng": 139.622739
     },
     {
       "id": "news-d699968f50",
@@ -1153,8 +1477,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862147,
-      "lng": 139.647252
+      "lat": 35.863076,
+      "lng": 139.646927
     },
     {
       "id": "news-c1efa4be9e",
@@ -1171,26 +1495,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860351,
-      "lng": 139.644539
-    },
-    {
-      "id": "news-a148727ea3",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【ロイヤルパインズホテル浦和】懐かしさと温もりに包まれる、特別なクリスマス「Golden Memory Christmas 2026― 時を紡ぐ、華やかな記憶 ―」",
-      "summary": "",
-      "source": "PR TIMES",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE85SGtmUmhiR0RvMDYxcGlMbUkzXzB1bGhEbHBYcTBmMVRCYWdRYmZJemo5eWpNOUdWNUlhMUNJUXVYT1hUVkxBUnpSb3hXVTR2Y0cyWHRKZW9hOUJiX0k3VVc2SDI1aDM4d1E?oc=5",
-      "published": "2026-11-10T10:00+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.859549,
-      "lng": 139.656436
+      "lat": 35.859846,
+      "lng": 139.645594
     },
     {
       "id": "news-5c53b7467a",
@@ -1207,8 +1513,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863285,
-      "lng": 139.645071
+      "lat": 35.863053,
+      "lng": 139.643843
     },
     {
       "id": "news-5d0664dce9",
@@ -1225,8 +1531,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860732,
-      "lng": 139.647194
+      "lat": 35.86161,
+      "lng": 139.64791
     },
     {
       "id": "news-7d6ac370fa",
@@ -1261,26 +1567,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861476,
-      "lng": 139.643374
-    },
-    {
-      "id": "news-545f7bb659",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "岩槻に川崎の元祖ニュータンタンで働いていた人が独立してやってるラーメン屋があると 休みの日に行ってみる！",
-      "summary": "岩槻に川崎の元祖ニュータンタンで働いていた人が独立してやってるラーメン屋があると 休みの日に行ってみる！",
-      "source": "Bluesky「岩槻」",
-      "url": "https://bsky.app/profile/taka-immortality.bsky.social/post/3mzvyvt33u22l",
-      "published": "2026-11-10T07:45+09:00",
-      "place": "岩槻",
-      "placeKind": "area",
-      "matched": "岩槻",
-      "ward": "",
-      "lat": 35.949868,
-      "lng": 139.693974
+      "lat": 35.86041,
+      "lng": 139.6436
     },
     {
       "id": "news-8b87ef2b64",
@@ -1297,8 +1585,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863076,
-      "lng": 139.646927
+      "lat": 35.863744,
+      "lng": 139.645838
     },
     {
       "id": "news-30cb6a4315",
@@ -1315,8 +1603,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859846,
-      "lng": 139.645594
+      "lat": 35.859968,
+      "lng": 139.646983
     },
     {
       "id": "news-aa070bdcc7",
@@ -1333,26 +1621,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863053,
-      "lng": 139.643843
-    },
-    {
-      "id": "news-03b6ef261b",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "大宮「0歳からの・はじめてのオーケストラ」ニューイヤースペシャルコンサート",
-      "summary": "",
-      "source": "stib.jp",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9aekF5TlloTV94YVo3TklCdEJYXzJOMzhmUGh5WHItWmROTHpfUm1rdk1QaERlUDI0SGNkQVVuUDFjUjlXemhsUXFENG02UjFYZHpNRnZUem5hX1dNZmNUTw?oc=5",
-      "published": "2026-11-10T05:16+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.905051,
-      "lng": 139.622739
+      "lat": 35.862174,
+      "lng": 139.64291
     },
     {
       "id": "news-392d0bf8a3",
@@ -1369,26 +1639,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.86161,
-      "lng": 139.64791
-    },
-    {
-      "id": "news-a1b4f8d2d9",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【さいたま市見沼区】11月14日(土) 9:00～15:00、「第24回見沼区ふれあいフェア」が堀崎公園・堀崎中央公園・見沼区役所にて開催されます！",
-      "summary": "",
-      "source": "地域ニュースサイト号外NET",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9jdEJtX3g1NjhFU1JhYzdieF9KdHdzYmVkTDh1LWFfUmNfNlZ6dzA2S0FZekEzdmllLUF4ZEhVOW5IRlFJa2w1YzIxN2tqTFlHT2JTYjFUaXYzejk5d0VjSjRNc09LMTdpVzJaSFEtTnI1MWNOMUh5dzF6SXA0cUk?oc=5",
-      "published": "2026-11-10T03:47+09:00",
-      "place": "見沼区",
-      "placeKind": "ward",
-      "matched": "見沼区",
-      "ward": "見沼区",
-      "lat": 35.927668,
-      "lng": 139.660374
+      "lat": 35.862796,
+      "lng": 139.647853
     },
     {
       "id": "news-667ae2ef1c",
@@ -1423,8 +1675,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.86041,
-      "lng": 139.6436
+      "lat": 35.859556,
+      "lng": 139.644659
     },
     {
       "id": "news-07def2b880",
@@ -1459,8 +1711,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863744,
-      "lng": 139.645838
+      "lat": 35.863783,
+      "lng": 139.644316
     },
     {
       "id": "news-8aa5ef4b7a",
@@ -1477,8 +1729,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859968,
-      "lng": 139.646983
+      "lat": 35.860797,
+      "lng": 139.648153
     },
     {
       "id": "news-6b81813b58",
@@ -1495,8 +1747,8 @@
       "placeKind": "station",
       "matched": "南浦和",
       "ward": "",
-      "lat": 35.8475,
-      "lng": 139.669
+      "lat": 35.847168,
+      "lng": 139.669374
     },
     {
       "id": "news-3353155b64",
@@ -1513,8 +1765,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.858414,
-      "lng": 139.658409
+      "lat": 35.858151,
+      "lng": 139.6558
     },
     {
       "id": "news-b8a344afbe",
@@ -1535,24 +1787,6 @@
       "lng": 139.623271
     },
     {
-      "id": "news-4bf0c8f836",
-      "category": "gourmet",
-      "type": "other",
-      "typeLabel": "その他のグルメ",
-      "typeIcon": "🍴",
-      "title": "会場のさいたま市日進公民館。当日はレスキューキッチンカーを設置",
-      "summary": "",
-      "source": "大宮経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5hQk5ZOXdVa0FSQ3c1MTRlTFZGZXpuOGF6ZmFlT2xSWjlRalBFVHZZWFAzbWJMbWM2aGl2OGpVbUZSa01oU1hEUldhemZOa1BDb3ZZ?oc=5",
-      "published": "2026-11-09T20:53+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 35.862174,
-      "lng": 139.64291
-    },
-    {
       "id": "news-ced209d98a",
       "category": "news",
       "type": "",
@@ -1567,26 +1801,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862796,
-      "lng": 139.647853
-    },
-    {
-      "id": "news-0901f3d258",
-      "category": "reviews",
-      "type": "kids",
-      "typeLabel": "子育て・学校",
-      "typeIcon": "🧒",
-      "title": "こどもたちがマインクラフト・3D都市モデルなど3Dコンテンツを体験！マイクラYouTuber「きおきお」さんも登壇！ …",
-      "summary": "こどもたちがマインクラフト・3D都市モデルなど3Dコンテンツを体験！マイクラYouTuber「きおきお」さんも登壇！ : – ASCII STARTUP 「さいたま市マイクラ・3D体験会」レポート 2026.11.09 16:00 文● 近藤克己 編集●ASCII STARTUP 撮影●曽根田元 提供: SAITAMA Minecraft [...]",
-      "source": "Bluesky「さいたま市」",
-      "url": "https://bsky.app/profile/playing-games.bsky.social/post/3mzuoybvr3n2a",
-      "published": "2026-11-09T19:15+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 35.859556,
-      "lng": 139.644659
+      "lat": 35.860894,
+      "lng": 139.642744
     },
     {
       "id": "news-0a3590a476",
@@ -1603,8 +1819,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.858151,
-      "lng": 139.6558
+      "lat": 35.859896,
+      "lng": 139.657637
     },
     {
       "id": "news-8e91a79e13",
@@ -1639,8 +1855,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.859896,
-      "lng": 139.657637
+      "lat": 35.857452,
+      "lng": 139.657734
     },
     {
       "id": "news-e254cfe038",
@@ -1661,24 +1877,6 @@
       "lng": 139.645874
     },
     {
-      "id": "news-05a56ef22b",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【さいたま市】11/22(日)「第33回さいたま太鼓エキスパート2026」RaiBoC Hallで開催",
-      "summary": "",
-      "source": "Infoseek",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5jaVF6alNWOEMxNWRvUWhzVndEWndhUmlfcWR0RGhVWlBJNUJuVU9mblo3Zmo3YTBXYzNzYkp0Rmd2dUg2T294MFZGZ190SXRhWVZEQllHckdJT19EcEljalZsVWRhRFZIR3pFZGRTVElWdw?oc=5",
-      "published": "2026-11-09T16:15+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 35.863783,
-      "lng": 139.644316
-    },
-    {
       "id": "news-258ced5ac2",
       "category": "reviews",
       "type": "transport",
@@ -1695,6 +1893,24 @@
       "ward": "",
       "lat": 35.906176,
       "lng": 139.621574
+    },
+    {
+      "id": "news-307665177b",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【さいたま市】11/22(日)「第33回さいたま太鼓エキスパート2026」RaiBoC Hallで開催",
+      "summary": "",
+      "source": "PR TIMES",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE05TUc0SHkwM0tucG1OazFxUVRGV1BjRTRGN0hRMnRGQlp3TmFocjZWM2xkOVluNkotRHRUeS1aMGZZS3lLMjVWVmxENEhFR3VvRTlaMFhfN2FNcG9GRGZWaktnQkpaVElpUVE?oc=5",
+      "published": "2026-11-09T14:00+09:00",
+      "place": "市全体",
+      "placeKind": "city",
+      "matched": "",
+      "ward": "",
+      "lat": 35.863845,
+      "lng": 139.646886
     },
     {
       "id": "news-b0a1226a78",
@@ -1769,24 +1985,6 @@
       "lng": 139.62611
     },
     {
-      "id": "news-ee9fadc8cb",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "＜画像16 / 20＞乃木坂46がチーム埼玉を結成!?春の浦和で集会！",
-      "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5idWFCQ1NyNVQ4NXAtVzlQQi1SZ1RBcl9rdnBtelk2aF9zTkNnRWRNQWFRb0VtOFpfTldHQWhZTzJvdjdjRXZzV09PeWNYRmRJMHlsd2RBQXNHQzU0MkItYzdzN2M0Uk9r?oc=5",
-      "published": "2026-11-09T07:20+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.857452,
-      "lng": 139.657734
-    },
-    {
       "id": "news-1189188012",
       "category": "gourmet",
       "type": "other",
@@ -1803,42 +2001,6 @@
       "ward": "",
       "lat": 35.859303,
       "lng": 139.655515
-    },
-    {
-      "id": "news-f27ca99c26",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【さいたま市浦和区】旬の野菜や新米も。「県庁朝市」が11月15日に開催されます",
-      "summary": "",
-      "source": "地域ニュースサイト号外NET",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1jVjJfYlEyWWpOZDY2ZHBiWDhYT2NCQXBTUlNvU250aVI2RDFaRVJ1MWhwSWtVYzYtVnFsRmZ6eUdrbDl4eGpRSjFxZE92UEt4RXdyZ3VhUXNpVU9xTW9mX3A1NzVMeWZ2b3djUTlPQ2x4SUtiVHM2Y3J3?oc=5",
-      "published": "2026-11-08T23:45+09:00",
-      "place": "浦和区",
-      "placeKind": "ward",
-      "matched": "浦和区",
-      "ward": "浦和区",
-      "lat": 35.862,
-      "lng": 139.65
-    },
-    {
-      "id": "news-359829ffde",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "浦和のＧＫ西川周が最多出場 Ｊリーグ",
-      "summary": "",
-      "source": "台北経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1PYURXTFI5WU9rRHFiSHJacUF0VkU5WXhicDJLbWllZTI3X3ZNenFrUEY4TDlBNk5YMHh1U3RSOVNqSzdGckxFLXlzN1ZMdDJRdHFB?oc=5",
-      "published": "2026-11-08T23:08+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.859147,
-      "lng": 139.658852
     },
     {
       "id": "news-cea1b4bef7",
@@ -1891,8 +2053,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.857351,
-      "lng": 139.656139
+      "lat": 35.859147,
+      "lng": 139.658852
     },
     {
       "id": "news-39255a85e2",
@@ -1909,8 +2071,8 @@
       "placeKind": "station",
       "matched": "南浦和",
       "ward": "",
-      "lat": 35.847168,
-      "lng": 139.669374
+      "lat": 35.847556,
+      "lng": 139.66822
     },
     {
       "id": "news-3e6636c1fb",
@@ -1945,8 +2107,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860797,
-      "lng": 139.648153
+      "lat": 35.859317,
+      "lng": 139.646273
     },
     {
       "id": "news-6dac4096f5",
@@ -1981,19 +2143,19 @@
       "placeKind": "ward",
       "matched": "見沼区",
       "ward": "見沼区",
-      "lat": 35.928056,
-      "lng": 139.65922
+      "lat": 35.928474,
+      "lng": 139.660761
     },
     {
-      "id": "news-0111bfb02d",
+      "id": "news-42fe983aa6",
       "category": "gourmet",
       "type": "japanese",
       "typeLabel": "和食",
       "typeIcon": "🍣",
       "title": "資さんうどん、JR大宮駅に自動販売機 名物の「肉ごぼ天うどん」「ごぼ天うどん」を販売 一部店舗などでは自販機を展開…駅構内には今回が初 ターミナル駅に設置した狙いは",
-      "summary": "",
-      "source": "千葉テレビ放送株式会社",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1KbXVPRm84YzVOT2tZS1kxT1ZGWHQzZGNveUFEenhwbXZDZ0RQYkhKaVBPRkpfTjQ0MHlNdU03Ny1DTGVwVjhLZFlwUE1XOXl5WVF4ZEZkM3FYZ3p3T1R3?oc=5",
+      "summary": "資さんうどん、JR大宮駅に自動販売機 名物の「肉ごぼ天うどん」「ごぼ天うどん」を販売 一部店舗などでは自販機を展開…駅構内には今回が初 ターミナル駅に設置した狙いは（埼玉新聞） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE83dmZ1ZGVsaEZMb1ZrS2lrQmx6RkFZMjlBWjVUMklOVnJuX3dMQlJHZUVveGZjakQ5X2xtd0xOMnEzazItdHBCb2RnODBIalRoVnBuVURTSmlOYnBzM0luZ2xqMmFXT2h0U2Vjd2ttLXVCbUhTQmR5X0FfbXBFeTQ?oc=5",
       "published": "2026-11-08T15:20+09:00",
       "place": "大宮駅",
       "placeKind": "station",
@@ -2017,26 +2179,8 @@
       "placeKind": "ward",
       "matched": "さいたま市緑区",
       "ward": "緑区",
-      "lat": 35.878,
-      "lng": 139.69
-    },
-    {
-      "id": "news-fffbf8bd6a",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "大迫力…大宮・氷川神社のプロジェクションマッピング、好評で今年も実施 街の昔と未来を結ぶ物語、ライトアップやスモークなどで表現 23日まで 今年のみどころは",
-      "summary": "",
-      "source": "埼玉新聞",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iRnNhcVFSVFNPeDBmeFBEZFVESE1ZZnVxWW5JeF93TEFNRjdjN1pBVVUwdi1kUUVZSFZKc1BSeHNVc205ZzlXRlZOaUxjZFhMNFdFTG8zaw?oc=5",
-      "published": "2026-11-08T13:33+09:00",
-      "place": "氷川神社",
-      "placeKind": "facility",
-      "matched": "氷川神社",
-      "ward": "大宮区",
-      "lat": 35.916356,
-      "lng": 139.62902
+      "lat": 35.877668,
+      "lng": 139.690374
     },
     {
       "id": "news-0dc6e4530f",
@@ -2093,24 +2237,6 @@
       "lng": 139.626374
     },
     {
-      "id": "news-12a4844654",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "南浦和駅東口に“エニタイムフィットネス”が新オープンしたみたい。",
-      "summary": "",
-      "source": "川口マガジン",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9nak5kR1FGcmIxTk1ETVBoTUY4d19NT0x1dFBLQ2E0cW9BX0otRWtwV0lHNHZIY1FHN01sWnZwam93eWRuR0syR2RZYUdNQnVNRjN5TDZFNXVXQQ?oc=5",
-      "published": "2026-11-08T10:48+09:00",
-      "place": "浦和駅",
-      "placeKind": "station",
-      "matched": "浦和駅",
-      "ward": "",
-      "lat": 35.860285,
-      "lng": 139.656671
-    },
-    {
       "id": "news-beeb97d88f",
       "category": "reviews",
       "type": "transport",
@@ -2127,6 +2253,24 @@
       "ward": "",
       "lat": 35.908483,
       "lng": 139.622516
+    },
+    {
+      "id": "news-b0f914bea2",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "四谷三丁目駅すぐの消防博物館は、1階にヘリコプター、5階に江戸の火消のジオラマがあります。さいたま新都心の造幣さいたま…",
+      "summary": "四谷三丁目駅すぐの消防博物館は、1階にヘリコプター、5階に江戸の火消のジオラマがあります。さいたま新都心の造幣さいたま博物館は水曜休館、市ヶ谷のJICA地球ひろばは第1・第3日曜が休み。6館とも入館は無料ですが、休みの曜日は館ごとに違います。JICA地球ひろば1階の体験ゾーンは、予約なしで入れます。 #ミュージアム #東京",
+      "source": "Bluesky「さいたま新都心」",
+      "url": "https://bsky.app/profile/trip-jp.com/post/3mzr2ixzpic2t",
+      "published": "2026-11-08T08:30+09:00",
+      "place": "さいたま新都心",
+      "placeKind": "area",
+      "matched": "さいたま新都心",
+      "ward": "中央区・大宮区",
+      "lat": 35.893,
+      "lng": 139.6345
     },
     {
       "id": "news-2ef2c1b44a",
@@ -2147,42 +2291,6 @@
       "lng": 139.626353
     },
     {
-      "id": "news-a201d45df0",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "2026年度 さいたま市南部地区秋季大会Ｂチームの部 (埼玉) 優勝は浦和大谷口SSS！",
-      "summary": "",
-      "source": "Green Card ニュース",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE85NURuTTJDVmt6SS1RRFBhcmczN3hJVXUyS2hOaWlLYncxT2I4a2Y0N0tScEhwc2RZalNkSzBPXzU0bmFyWnAyVGxPNjdjd2VaMGZEeXYza3Q0UQ?oc=5",
-      "published": "2026-11-08T07:00+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.857732,
-      "lng": 139.658794
-    },
-    {
-      "id": "news-9ba686a0ba",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "浦和カルエに「日高屋」12月17日オープン！",
-      "summary": "",
-      "source": "浦和シティネット",
-      "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTFA3SUNxQXlnWVpIcGdTU3FBeXIzdE0wdHRHUEQwQU5qdzFLN01tcEJ4N2FlYVR0YW41d3lfU0c2d2Y?oc=5",
-      "published": "2026-11-08T05:37+09:00",
-      "place": "浦和",
-      "placeKind": "area",
-      "matched": "浦和",
-      "ward": "",
-      "lat": 35.858476,
-      "lng": 139.654974
-    },
-    {
       "id": "news-4478896f85",
       "category": "reviews",
       "type": "other",
@@ -2199,24 +2307,6 @@
       "ward": "",
       "lat": 35.884056,
       "lng": 139.62522
-    },
-    {
-      "id": "news-3471ed896e",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "武州鉄道の存続により、東京メトロ南北線～埼玉高速鉄道は乗り入れで岩槻どころか蓮田まで到達!? やべぇ、ワクワクしてきた…",
-      "summary": "武州鉄道の存続により、東京メトロ南北線～埼玉高速鉄道は乗り入れで岩槻どころか蓮田まで到達!? やべぇ、ワクワクしてきた（未成線開業ifでないのがポイント高い）",
-      "source": "Bluesky「岩槻」",
-      "url": "https://bsky.app/profile/kawada0zo.bsky.social/post/3mzpygwe7sk22",
-      "published": "2026-11-07T22:21+09:00",
-      "place": "岩槻",
-      "placeKind": "area",
-      "matched": "岩槻",
-      "ward": "",
-      "lat": 35.950256,
-      "lng": 139.69282
     },
     {
       "id": "news-ba4669f120",
@@ -2269,8 +2359,8 @@
       "placeKind": "facility",
       "matched": "鉄道博物館",
       "ward": "大宮区",
-      "lat": 35.9214,
-      "lng": 139.6177
+      "lat": 35.921068,
+      "lng": 139.618074
     },
     {
       "id": "news-26aaa25e4b",
@@ -2309,6 +2399,24 @@
       "lng": 139.621108
     },
     {
+      "id": "news-2533f13bfd",
+      "category": "reviews",
+      "type": "shopping",
+      "typeLabel": "買い物",
+      "typeIcon": "🛍️",
+      "title": "モールに入ってるにしてはでかい方、という程度だけどさいたま新都心の紀伊國屋は良いですよ。文庫も豊富だし文芸の並びが心地…",
+      "summary": "モールに入ってるにしてはでかい方、という程度だけどさいたま新都心の紀伊國屋は良いですよ。文庫も豊富だし文芸の並びが心地よい。平たくて見通しのいい並びも奥までいろんなジャンルが詰まってるのも。",
+      "source": "Bluesky「さいたま新都心」",
+      "url": "https://bsky.app/profile/minchin-oniku.bsky.social/post/3mzp4d3rhkk2b",
+      "published": "2026-11-07T13:57+09:00",
+      "place": "さいたま新都心",
+      "placeKind": "area",
+      "matched": "さいたま新都心",
+      "ward": "中央区・大宮区",
+      "lat": 35.892668,
+      "lng": 139.634874
+    },
+    {
       "id": "news-1619f7006f",
       "category": "reviews",
       "type": "other",
@@ -2345,6 +2453,24 @@
       "lng": 139.626786
     },
     {
+      "id": "news-91b90074e8",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "ヘブンズロックさいたま新都心は客席（最前のバー）とステージとの間隔が少なくて撮影されるの大変そうだったんですよね。そん…",
+      "summary": "ヘブンズロックさいたま新都心は客席（最前のバー）とステージとの間隔が少なくて撮影されるの大変そうだったんですよね。そんな中とても素敵な写真を撮られていてありがとうございますとおつかれさまですの気持ち。",
+      "source": "Bluesky「さいたま新都心」",
+      "url": "https://bsky.app/profile/mi110.bsky.social/post/3mzoyb547us2t",
+      "published": "2026-11-07T12:45+09:00",
+      "place": "さいたま新都心",
+      "placeKind": "area",
+      "matched": "さいたま新都心",
+      "ward": "中央区・大宮区",
+      "lat": 35.893056,
+      "lng": 139.63372
+    },
+    {
       "id": "news-82d52b22e2",
       "category": "crime",
       "type": "theft",
@@ -2359,8 +2485,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.860894,
-      "lng": 139.642744
+      "lat": 35.863055,
+      "lng": 139.642908
     },
     {
       "id": "news-8584d8d81c",
@@ -2377,44 +2503,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863845,
-      "lng": 139.646886
-    },
-    {
-      "id": "news-7d4339fbe4",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "でも、地図で見ると岩槻微妙かなｗ",
-      "summary": "でも、地図で見ると岩槻微妙かなｗ",
-      "source": "Bluesky「岩槻」",
-      "url": "https://bsky.app/profile/danielkmym.bsky.social/post/3mzotjzc6tc2o",
-      "published": "2026-11-07T11:20+09:00",
-      "place": "岩槻",
-      "placeKind": "area",
-      "matched": "岩槻",
-      "ward": "",
-      "lat": 35.950674,
-      "lng": 139.694361
-    },
-    {
-      "id": "news-9c6b11bbc2",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "んーーーー 今更だけど大宮だったら傷を軽くできた可能性あったっぽい というか東大宮からタクって大宮、そっからアーパク乗…",
-      "summary": "んーーーー 今更だけど大宮だったら傷を軽くできた可能性あったっぽい というか東大宮からタクって大宮、そっからアーパク乗ったら岩槻まではいけたくさい そんな正常な判断力、あんな時に持ち合わせてないけど、次があったら考えよう",
-      "source": "Bluesky「岩槻」",
-      "url": "https://bsky.app/profile/danielkmym.bsky.social/post/3mzothdmekc2o",
-      "published": "2026-11-07T11:19+09:00",
-      "place": "東大宮駅",
-      "placeKind": "station",
-      "matched": "東大宮",
-      "ward": "",
-      "lat": 35.9447,
-      "lng": 139.6385
+      "lat": 35.862131,
+      "lng": 139.648586
     },
     {
       "id": "news-cba8104d21",
@@ -2431,8 +2521,8 @@
       "placeKind": "station",
       "matched": "南浦和",
       "ward": "",
-      "lat": 35.847556,
-      "lng": 139.66822
+      "lat": 35.847974,
+      "lng": 139.669761
     },
     {
       "id": "news-e4a77f0225",
@@ -2449,44 +2539,26 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859317,
-      "lng": 139.646273
+      "lat": 35.859656,
+      "lng": 139.643553
     },
     {
-      "id": "news-fdd878e85b",
+      "id": "news-ed443f2993",
       "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "🟢本日（2026/11/07） 埼玉 さいたま市 北区 『北区菜の花の会』の学習会 見沼グリーンセンター （JR字都宮…",
-      "summary": "🟢本日（2026/11/07） 埼玉 さいたま市 北区 『北区菜の花の会』の学習会 見沼グリーンセンター （JR字都宮線土呂駅東口より徒歩10分） お話 崎浜空音 さん 午後2時開会 （1時半開場） from みしお （@suzumetsugumi X/Twitter）さん 【 今年の3月25日、雨の国会前のデモでスピーチされた崎浜空音さんにお話を伺う学習会のご案内です。 さいたまの民よ来たれ！ さいたま民じゃない方もぜひ！見沼グリーンセンターへ！#SOFA 】 ↑",
-      "source": "Bluesky「見沼」",
-      "url": "https://bsky.app/profile/123456moto.mastodon.social.ap.brid.gy/post/3mzoaoha5yqc2",
-      "published": "2026-11-07T05:43+09:00",
-      "place": "見沼",
-      "placeKind": "area",
-      "matched": "見沼",
-      "ward": "",
-      "lat": 35.928474,
-      "lng": 139.660761
-    },
-    {
-      "id": "news-b16b225c37",
-      "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "与野はさいたま新都心に歩いてレイトショー見に行けたし浦和も大宮も近かったけど埼玉方面からの京浜東北湘南新宿乗り換えはほ…",
-      "summary": "与野はさいたま新都心に歩いてレイトショー見に行けたし浦和も大宮も近かったけど埼玉方面からの京浜東北湘南新宿乗り換えはほんまにカス",
-      "source": "Bluesky「浦和 さいたま」",
-      "url": "https://bsky.app/profile/fufuch.bsky.social/post/3mznhv7p7uk2m",
-      "published": "2026-11-06T22:19+09:00",
+      "type": "nature",
+      "typeLabel": "公園・自然・季節",
+      "typeIcon": "🌳",
+      "title": "しまむらの本社は現在さいたま新都心、ヤオコーは川越です。",
+      "summary": "しまむらの本社は現在さいたま新都心、ヤオコーは川越です。",
+      "source": "Bluesky「さいたま新都心」",
+      "url": "https://bsky.app/profile/sktm.bsky.social/post/3mzoil67mkk2f",
+      "published": "2026-11-07T08:04+09:00",
       "place": "さいたま新都心",
       "placeKind": "area",
       "matched": "さいたま新都心",
       "ward": "中央区・大宮区",
-      "lat": 35.893,
-      "lng": 139.6345
+      "lat": 35.893474,
+      "lng": 139.635261
     },
     {
       "id": "news-64904e94d2",
@@ -2507,60 +2579,6 @@
       "lng": 139.6334
     },
     {
-      "id": "news-fb29154d26",
-      "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "実技の会場は 千葉駅東口 京急川崎駅東口 大宮駅西口 池袋駅東口 らしい。",
-      "summary": "実技の会場は 千葉駅東口 京急川崎駅東口 大宮駅西口 池袋駅東口 らしい。",
-      "source": "Bluesky「大宮駅」",
-      "url": "https://bsky.app/profile/8echu.bsky.social/post/3mzn22rl7x22u",
-      "published": "2026-11-06T18:12+09:00",
-      "place": "大宮駅",
-      "placeKind": "station",
-      "matched": "大宮駅",
-      "ward": "",
-      "lat": 35.904356,
-      "lng": 139.621753
-    },
-    {
-      "id": "news-1ceae0e7e2",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "オウム教祖三女・松本麗華さん、加害者家族の支援訴え 浦和区で映画上映「差別しないでほしい」（埼玉新聞）",
-      "summary": "オウム教祖三女・松本麗華さん、加害者家族の支援訴え 浦和区で映画上映「差別しないでほしい」（埼玉新聞）",
-      "source": "Bluesky「浦和 さいたま」",
-      "url": "https://bsky.app/profile/awesomebay.bsky.social/post/3mzmt2dglds2q",
-      "published": "2026-11-06T16:06+09:00",
-      "place": "浦和区",
-      "placeKind": "ward",
-      "matched": "浦和区",
-      "ward": "浦和区",
-      "lat": 35.861668,
-      "lng": 139.650374
-    },
-    {
-      "id": "news-31dcc8954f",
-      "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "10月20日に起きた現象です。どういう訳か武蔵浦和駅4番線に快速が来るという珍現象がありました。この日は朝に通勤快速が…",
-      "summary": "10月20日に起きた現象です。どういう訳か武蔵浦和駅4番線に快速が来るという珍現象がありました。この日は朝に通勤快速が大宮折り返しになるほどのダイヤ乱れがあ… #ヤフー知恵袋",
-      "source": "Bluesky「浦和駅」",
-      "url": "https://bsky.app/profile/bblqhiegsf41695.bsky.social/post/3mzmratwfzk24",
-      "published": "2026-11-06T15:34+09:00",
-      "place": "武蔵浦和駅",
-      "placeKind": "station",
-      "matched": "武蔵浦和",
-      "ward": "",
-      "lat": 35.8456,
-      "lng": 139.6475
-    },
-    {
       "id": "news-db6b4cf401",
       "category": "crime",
       "type": "other",
@@ -2575,8 +2593,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.860076,
-      "lng": 139.658527
+      "lat": 35.857351,
+      "lng": 139.656139
     },
     {
       "id": "news-479bab8f13",
@@ -2593,8 +2611,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.856846,
-      "lng": 139.657194
+      "lat": 35.860285,
+      "lng": 139.656671
     },
     {
       "id": "news-62ee8b1c27",
@@ -2611,8 +2629,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.909015,
-      "lng": 139.623433
+      "lat": 35.904356,
+      "lng": 139.621753
     },
     {
       "id": "news-8a4543d309",
@@ -2633,24 +2651,6 @@
       "lng": 139.646261
     },
     {
-      "id": "news-a6631fd36e",
-      "category": "gourmet",
-      "type": "japanese",
-      "typeLabel": "和食",
-      "typeIcon": "🍣",
-      "title": "魚沼から大宮まで賞味期限1日の寿司が2時間で届く！ 「はこビュン」から脱炭素まで、「東日本連携・創生フォーラム」が示す次の一手",
-      "summary": "",
-      "source": "ASCII.jp",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5rdmVJVG1RTzJIcFp5eG1ncFFNb2VJSGVsWWVMMVp2SlA0bS1BcXNuNHNaZmRsRi1HNXMxOUxOOTNQdUNxeldnWDNnM0JZQ1k0cFNMMQ?oc=5",
-      "published": "2026-11-05T12:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.904592,
-      "lng": 139.626104
-    },
-    {
       "id": "news-a8455ab402",
       "category": "crime",
       "type": "other",
@@ -2665,8 +2665,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863055,
-      "lng": 139.642908
+      "lat": 35.864315,
+      "lng": 139.645233
     },
     {
       "id": "news-ac34231b54",
@@ -2683,26 +2683,8 @@
       "placeKind": "station",
       "matched": "浦和駅",
       "ward": "",
-      "lat": 35.860053,
-      "lng": 139.655443
-    },
-    {
-      "id": "news-2d8b3d9141",
-      "category": "gourmet",
-      "type": "other",
-      "typeLabel": "その他のグルメ",
-      "typeIcon": "🍴",
-      "title": "11月8日（日）ＷＥリーグ大宮戦・Ｊリーグ水戸戦 フクアリ ちば推しグルメ情報",
-      "summary": "",
-      "source": "ジェフユナイテッド市原・千葉 公式ウェブサイト",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1EUHRIeUVwdldLS2RqSjNxUWFuNDJLMG5pSXBULVRkODd2c0VoTnhaY1lSWW1IY3g2Y0g2cmdoZDRpM2ZHXzAtZ0ZyWXEzemlKckE?oc=5",
-      "published": "2026-11-04T17:50+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.906413,
-      "lng": 139.620379
+      "lat": 35.857732,
+      "lng": 139.658794
     },
     {
       "id": "news-4e6e3db9c4",
@@ -2719,8 +2701,26 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.908239,
-      "lng": 139.626193
+      "lat": 35.909015,
+      "lng": 139.623433
+    },
+    {
+      "id": "news-2d8b3d9141",
+      "category": "gourmet",
+      "type": "other",
+      "typeLabel": "その他のグルメ",
+      "typeIcon": "🍴",
+      "title": "11月8日（日）ＷＥリーグ大宮戦・Ｊリーグ水戸戦 フクアリ ちば推しグルメ情報",
+      "summary": "",
+      "source": "ジェフユナイテッド市原・千葉 公式ウェブサイト",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1EUHRIeUVwdldLS2RqSjNxUWFuNDJLMG5pSXBULVRkODd2c0VoTnhaY1lSWW1IY3g2Y0g2cmdoZDRpM2ZHXzAtZ0ZyWXEzemlKckE?oc=5",
+      "published": "2026-11-04T11:03+09:00",
+      "place": "大宮",
+      "placeKind": "area",
+      "matched": "大宮",
+      "ward": "",
+      "lat": 35.904592,
+      "lng": 139.626104
     },
     {
       "id": "news-77add9951d",
@@ -2755,8 +2755,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.903638,
-      "lng": 139.623386
+      "lat": 35.906413,
+      "lng": 139.620379
     },
     {
       "id": "news-a4bdf288f2",
@@ -2791,8 +2791,26 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.85861,
-      "lng": 139.65951
+      "lat": 35.858476,
+      "lng": 139.654974
+    },
+    {
+      "id": "news-d4b01eb5c6",
+      "category": "gourmet",
+      "type": "izakaya",
+      "typeLabel": "居酒屋",
+      "typeIcon": "🏮",
+      "title": "「オピナンさんの2026年11月の投稿」",
+      "summary": "「オピナンさんの2026年11月の投稿」 | マショマショ&マショチキン 大宮店(居酒屋)の口コミ ホットペッパーグルメ",
+      "source": "ホットペッパーグルメ",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQV1ZIYlFiVWppR1Itd3gzVHZKcU9oSDJMd0pCajFwdXg0RkY4T0hCcnVIdDFjZTVYUUdiVGl2dFhtQXJFeE95aFpCY0lfU3JvZkx5cnJxVmFzYTN4WFpaaFJTNnpGblU3THRmQU5HQzlNNzh3N1pTbTF1WmdnbWZoUUVVVGxLcDVtd0U0?oc=5",
+      "published": "2026-11-01T16:00+09:00",
+      "place": "大宮",
+      "placeKind": "area",
+      "matched": "大宮",
+      "ward": "",
+      "lat": 35.908239,
+      "lng": 139.626193
     },
     {
       "id": "news-cc6791859b",
@@ -2845,8 +2863,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.862131,
-      "lng": 139.648586
+      "lat": 35.859892,
+      "lng": 139.647904
     },
     {
       "id": "news-df332d16bc",
@@ -2881,8 +2899,8 @@
       "placeKind": "station",
       "matched": "東大宮",
       "ward": "",
-      "lat": 35.944368,
-      "lng": 139.638874
+      "lat": 35.9447,
+      "lng": 139.6385
     },
     {
       "id": "news-0ab31f1349",
@@ -2899,8 +2917,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.908638,
-      "lng": 139.62161
+      "lat": 35.903638,
+      "lng": 139.623386
     },
     {
       "id": "news-6487e9c095",
@@ -2917,44 +2935,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.905891,
-      "lng": 139.627144
-    },
-    {
-      "id": "news-ddf15462bf",
-      "category": "otaku",
-      "type": "cafe",
-      "typeLabel": "コラボカフェ・グッズ",
-      "typeIcon": "",
-      "title": "伊藤潤二のポップアップストア残叫がハンズ大宮店で10月20日より開催へ",
-      "summary": "",
-      "source": "Dellows News",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE10dlpXMkRFZ29pRmh1b3pCT3dhSHJNSjJ6Q0ZVUEE1ZTktNXNobW9RMnRNNXg0TnNhVkJlZE1DT3ZOMWxNOVJvcHBmRlFXVC1WU2NnVjZ4ZTM0a0ctQ2c?oc=5",
-      "published": "2026-10-28T23:04+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
-      "ward": "",
-      "lat": 35.904865,
-      "lng": 139.620701
-    },
-    {
-      "id": "news-1f76473ad5",
-      "category": "gourmet",
-      "type": "izakaya",
-      "typeLabel": "居酒屋",
-      "typeIcon": "🏮",
-      "title": "北浦和の「大正浪漫酒場 夜想亭」 レトロ風店内で和洋折衷メニュー",
-      "summary": "北浦和の「大正浪漫酒場 夜想亭」 レトロ風店内で和洋折衷メニュー (みんなの経済新聞ネットワーク) Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVEVKdGZxOHcxLXBGTlcxUFhiaGVLZkJzOHFNbGloSGFzLWktQjBfX3A3akQxRXAzN0hZS19GRndzY1NlRjRXbExUX3ozVklPdTJ1V3YtcE1zTFBXam9obVJRejJBMk1FZ2tZdEp5U1d0cE1PSzdxcnZ3aDRheDNSUFZnWFhTVFdKaHRON3BB?oc=5",
-      "published": "2026-10-28T16:38+09:00",
-      "place": "北浦和駅",
-      "placeKind": "station",
-      "matched": "北浦和",
-      "ward": "",
-      "lat": 35.872649,
-      "lng": 139.644836
+      "lat": 35.908638,
+      "lng": 139.62161
     },
     {
       "id": "news-63ba5ab99f",
@@ -2971,8 +2953,8 @@
       "placeKind": "ward",
       "matched": "さいたま市緑区",
       "ward": "緑区",
-      "lat": 35.877668,
-      "lng": 139.690374
+      "lat": 35.878056,
+      "lng": 139.68922
     },
     {
       "id": "news-3433880dd4",
@@ -2989,8 +2971,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.85741,
-      "lng": 139.6552
+      "lat": 35.860076,
+      "lng": 139.658527
     },
     {
       "id": "news-04163c9171",
@@ -3007,26 +2989,26 @@
       "placeKind": "station",
       "matched": "大宮駅",
       "ward": "",
-      "lat": 35.909213,
-      "lng": 139.624648
+      "lat": 35.905891,
+      "lng": 139.627144
     },
     {
-      "id": "news-7e1a8734df",
+      "id": "news-ddf7ba93fc",
       "category": "gourmet",
       "type": "izakaya",
       "typeLabel": "居酒屋",
       "typeIcon": "🏮",
-      "title": "「ぴろぴろこさんの2026年10月の投稿」",
-      "summary": "「ぴろぴろこさんの2026年10月の投稿」 | ディップガーデン 大宮店(居酒屋)の口コミ ホットペッパーグルメ",
-      "source": "ホットペッパーグルメ",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMDJNTjVyUF9UcFd6NGxZM2hNMnlmTmJ5d1ZtbkF2aFM1U29GeU4tV2oycVQ1YjdoZndKWTgzRU9Lbmk4Q1BheGFEaEV4QXhfZDFYbHAyYTF6cWVKb1Rkem95VGdJcmlXTUFxaDk0MkJES0hsRjdNcllXT1NRZXZCLUFSQmJfUHpSUmxn?oc=5",
+      "title": "北浦和の「大正浪漫酒場 夜想亭」 レトロ風店内で和洋折衷メニュー",
+      "summary": "",
+      "source": "浦和経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1mUWhRWVRSVTBmdk1rakkzTjVsYzdQeXhieVd3SG9oNG1LM0pZYXU2QWIyRzFQeVVPNzM0Z3RNNG5DVWxzSFhYZTdZSXJTTlpJ?oc=5",
       "published": "2026-10-28T16:00+09:00",
-      "place": "大宮",
-      "placeKind": "area",
-      "matched": "大宮",
+      "place": "北浦和駅",
+      "placeKind": "station",
+      "matched": "北浦和",
       "ward": "",
-      "lat": 35.903775,
-      "lng": 139.625358
+      "lat": 35.872649,
+      "lng": 139.644836
     },
     {
       "id": "news-fba947fba8",
@@ -3043,8 +3025,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.907437,
-      "lng": 139.620257
+      "lat": 35.904865,
+      "lng": 139.620701
     },
     {
       "id": "news-3f951652ea",
@@ -3061,8 +3043,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.907539,
-      "lng": 139.627139
+      "lat": 35.909213,
+      "lng": 139.624648
     },
     {
       "id": "news-c8d4d22e2d",
@@ -3079,8 +3061,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859656,
-      "lng": 139.643553
+      "lat": 35.861713,
+      "lng": 139.642179
     },
     {
       "id": "news-9e0753c0b2",
@@ -3133,8 +3115,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.864315,
-      "lng": 139.645233
+      "lat": 35.863539,
+      "lng": 139.647993
     },
     {
       "id": "news-3d68e689da",
@@ -3151,8 +3133,8 @@
       "placeKind": "ward",
       "matched": "浦和区",
       "ward": "浦和区",
-      "lat": 35.862056,
-      "lng": 139.64922
+      "lat": 35.861668,
+      "lng": 139.650374
     },
     {
       "id": "news-41d01811c2",
@@ -3169,8 +3151,8 @@
       "placeKind": "station",
       "matched": "東大宮",
       "ward": "",
-      "lat": 35.944756,
-      "lng": 139.63772
+      "lat": 35.944368,
+      "lng": 139.638874
     },
     {
       "id": "news-43530fe63f",
@@ -3205,8 +3187,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.859892,
-      "lng": 139.647904
+      "lat": 35.858938,
+      "lng": 139.645186
     },
     {
       "id": "news-e18e9c604d",
@@ -3241,8 +3223,8 @@
       "placeKind": "facility",
       "matched": "鉄道博物館",
       "ward": "大宮区",
-      "lat": 35.921068,
-      "lng": 139.618074
+      "lat": 35.921456,
+      "lng": 139.61692
     },
     {
       "id": "news-9b677d7385",
@@ -3259,8 +3241,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.903642,
-      "lng": 139.622093
+      "lat": 35.903775,
+      "lng": 139.625358
     },
     {
       "id": "news-54e5dcc0d4",
@@ -3277,8 +3259,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.861713,
-      "lng": 139.642179
+      "lat": 35.863938,
+      "lng": 139.64341
     },
     {
       "id": "news-a0aa10a8ab",
@@ -3295,8 +3277,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.909348,
-      "lng": 139.622581
+      "lat": 35.907437,
+      "lng": 139.620257
     },
     {
       "id": "news-31d700bfa9",
@@ -3313,8 +3295,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.860744,
-      "lng": 139.657438
+      "lat": 35.856846,
+      "lng": 139.657194
     },
     {
       "id": "news-18b8316e94",
@@ -3349,8 +3331,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.904824,
-      "lng": 139.627009
+      "lat": 35.907539,
+      "lng": 139.627139
     },
     {
       "id": "news-7291b60174",
@@ -3367,8 +3349,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.905738,
-      "lng": 139.619912
+      "lat": 35.903642,
+      "lng": 139.622093
     },
     {
       "id": "news-01b7f6cb2a",
@@ -3385,8 +3367,8 @@
       "placeKind": "area",
       "matched": "さいたま新都心",
       "ward": "中央区・大宮区",
-      "lat": 35.892668,
-      "lng": 139.634874
+      "lat": 35.892114,
+      "lng": 139.634307
     },
     {
       "id": "news-370d017468",
@@ -3421,8 +3403,8 @@
       "placeKind": "area",
       "matched": "浦和",
       "ward": "",
-      "lat": 35.856968,
-      "lng": 139.658583
+      "lat": 35.860053,
+      "lng": 139.655443
     },
     {
       "id": "news-31228f2260",
@@ -3439,8 +3421,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.908994,
-      "lng": 139.625966
+      "lat": 35.909348,
+      "lng": 139.622581
     },
     {
       "id": "news-e1437e9c12",
@@ -3457,8 +3439,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.863539,
-      "lng": 139.647993
+      "lat": 35.861191,
+      "lng": 139.648944
     },
     {
       "id": "news-e8088e55cc",
@@ -3475,8 +3457,8 @@
       "placeKind": "station",
       "matched": "北与野",
       "ward": "",
-      "lat": 35.893,
-      "lng": 139.6264
+      "lat": 35.892668,
+      "lng": 139.626774
     },
     {
       "id": "news-ffeb7fe8f8",
@@ -3493,8 +3475,8 @@
       "placeKind": "city",
       "matched": "",
       "ward": "",
-      "lat": 35.858938,
-      "lng": 139.645186
+      "lat": 35.860165,
+      "lng": 139.642501
     },
     {
       "id": "news-de5916c616",
@@ -3511,8 +3493,8 @@
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.903211,
-      "lng": 139.624189
+      "lat": 35.904824,
+      "lng": 139.627009
     },
     {
       "id": "news-176dbdbcb8",
@@ -3529,44 +3511,26 @@
       "placeKind": "station",
       "matched": "南浦和",
       "ward": "",
-      "lat": 35.847974,
-      "lng": 139.669761
+      "lat": 35.846614,
+      "lng": 139.668807
     },
     {
-      "id": "news-b48ce0df5d",
+      "id": "news-733bed19b5",
       "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "【埼玉・大宮】“汁なしスタミナラーメン”には自家製ラー油がおすすめ",
+      "type": "japanese",
+      "typeLabel": "和食",
+      "typeIcon": "🍣",
+      "title": "【開店】「寿司・しゃぶしゃぶ ゆず庵 大宮本郷店」9月16日（水）オープン！",
       "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE01eUVkZFhkUVB4bVM0SFFvMVJBa0lmVVlhZ2tHakVuaE0xV1hXN1NTVkh5XzROcEsydU5Na09tYmpJNHg0UVdFX1Q2bXVhUTlRWDdhUtIBWkFVX3lxTFBlaGJ1U1FQUEtFSWVyMTNieF9USmlCYW1YcUhDSXo5T3QwczV6QWpyMG41TzNFdHdUVHdhR2V6QVBKdDZ6b2VYYS0xODFNNks4QTFhRklMaUZsZw?oc=5",
+      "source": "au Webポータル",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA0aWJPTWI0VlJ5bm84bE1oMTY1R1JIVUZ2d3FFYlJEMGloRmNXcVZjX1BEc3l2TW5UOW5ZY1luZzJFNDd0dVlyMF9UVEprMkJ1cUxsNjAzajI1V3JIWnRyWDNMNklpOVoyU0R5T3B3?oc=5",
       "published": "2026-10-14T16:00+09:00",
       "place": "大宮",
       "placeKind": "area",
       "matched": "大宮",
       "ward": "",
-      "lat": 35.908503,
-      "lng": 139.62066
-    },
-    {
-      "id": "news-fcc5704a72",
-      "category": "reviews",
-      "type": "nature",
-      "typeLabel": "公園・自然・季節",
-      "typeIcon": "🌳",
-      "title": "秋桜咲く （Nikon Z8+NIKKOR Z 100-400mm f/4.5-5.6 VR S）",
-      "summary": "秋桜咲く （Nikon Z8+NIKKOR Z 100-400mm f/4.5-5.6 VR S） #misskey写真部 #misskey散歩部 #misskeyおさんぽ部 #埼玉 #さいたま #コスモス #東武野田線 #東武アーバンパークライン",
-      "source": "Misskey #さいたま（misskey.io）",
-      "url": "https://misskey.io/notes/as8q51fpr7j100cu",
-      "published": "2026-10-12T20:19+09:00",
-      "place": "市全体",
-      "placeKind": "city",
-      "matched": "",
-      "ward": "",
-      "lat": 35.863938,
-      "lng": 139.64341
+      "lat": 35.905738,
+      "lng": 139.619912
     }
   ]
 }
