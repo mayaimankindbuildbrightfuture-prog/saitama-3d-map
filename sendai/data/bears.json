@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-12T09:56+09:00",
+  "generatedAt": "2026-11-12T20:34+09:00",
   "source": {
     "label": "出典：宮城県「令和8年度クマ目撃等情報」",
-    "asOf": "令和8年11月11日9時時点",
+    "asOf": "令和8年11月12日9時時点",
     "url": "https://www.pref.miyagi.jp/"
   },
   "alerts": [
@@ -20,6 +20,44 @@
     }
   ],
   "items": [
+    {
+      "id": "bear-2026-1433",
+      "category": "wildlife",
+      "type": "bear-official",
+      "typeLabel": "クマ（宮城県の目撃等情報）",
+      "typeIcon": "🐾",
+      "official": true,
+      "title": "泉区 根白石でクマ目撃（１頭）",
+      "summary": "11月11日 13:30ごろ、泉区根白石字行木沢東1-8でクマの目撃（１頭）。市街地判定: 住居集合地域等。",
+      "source": "宮城県「令和8年度クマ目撃等情報」",
+      "url": "https://www.pref.miyagi.jp/",
+      "published": "2026-11-11T13:30+09:00",
+      "place": "根白石",
+      "placeKind": "area",
+      "matched": "根白石",
+      "ward": "泉区",
+      "lat": 38.35342,
+      "lng": 140.80857
+    },
+    {
+      "id": "bear-2026-1432",
+      "category": "wildlife",
+      "type": "bear-official",
+      "typeLabel": "クマ（宮城県の目撃等情報）",
+      "typeIcon": "🐾",
+      "official": true,
+      "title": "青葉区 芋沢でクマ目撃（１頭）",
+      "summary": "11月9日 15:00ごろ、青葉区芋沢字寺下東２６－１でクマの目撃（１頭）。市街地判定: 住居集合地域等以外。",
+      "source": "宮城県「令和8年度クマ目撃等情報」",
+      "url": "https://www.pref.miyagi.jp/",
+      "published": "2026-11-09T15:00+09:00",
+      "place": "芋沢",
+      "placeKind": "area",
+      "matched": "芋沢",
+      "ward": "青葉区",
+      "lat": 38.2979,
+      "lng": 140.77186
+    },
     {
       "id": "bear-2026-1407",
       "category": "wildlife",
