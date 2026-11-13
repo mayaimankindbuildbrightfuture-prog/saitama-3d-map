@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T20:19+09:00",
+  "generatedAt": "2026-11-14T04:56+09:00",
   "source": {
     "label": "出典：宮城県「令和8年度クマ目撃等情報」",
     "asOf": "令和8年11月13日9時時点",
@@ -10,12 +10,6 @@
       "name": "クマ出没注意報",
       "area": "富谷市",
       "period": "令和8年11月6日(金曜日)から同年11月20日(金曜日)まで",
-      "sendai": false
-    },
-    {
-      "name": "クマ出没注意報",
-      "area": "大和町",
-      "period": "令和8年10月31日(土曜日)から同年11月13日(金曜日)まで",
       "sendai": false
     }
   ],
@@ -133,63 +127,6 @@
       "ward": "泉区",
       "lat": 38.34005,
       "lng": 140.81839
-    },
-    {
-      "id": "bear-2026-1376",
-      "category": "wildlife",
-      "type": "bear-official",
-      "typeLabel": "クマ（宮城県の目撃等情報）",
-      "typeIcon": "🐾",
-      "official": true,
-      "title": "太白区 秋保町長袋でクマ目撃（１頭）",
-      "summary": "10月15日 19:30ごろ、太白区秋保町長袋字門前地内でクマの目撃（１頭）。市街地判定: 住居集合地域等。",
-      "source": "宮城県「令和8年度クマ目撃等情報」",
-      "url": "https://www.pref.miyagi.jp/",
-      "published": "2026-10-15T19:30+09:00",
-      "place": "秋保町長袋",
-      "placeKind": "area",
-      "matched": "秋保町長袋",
-      "ward": "太白区",
-      "lat": 38.2633,
-      "lng": 140.66742
-    },
-    {
-      "id": "bear-2026-1374",
-      "category": "wildlife",
-      "type": "bear-official",
-      "typeLabel": "クマ（宮城県の目撃等情報）",
-      "typeIcon": "🐾",
-      "official": true,
-      "title": "泉区 大沢三丁目でクマ目撃（１頭）",
-      "summary": "10月15日 16:45ごろ、泉区大沢3丁目でクマの目撃（１頭）。市街地判定: 住居集合地域等。",
-      "source": "宮城県「令和8年度クマ目撃等情報」",
-      "url": "https://www.pref.miyagi.jp/",
-      "published": "2026-10-15T16:45+09:00",
-      "place": "大沢三丁目",
-      "placeKind": "area",
-      "matched": "大沢三丁目",
-      "ward": "泉区",
-      "lat": 38.35603,
-      "lng": 140.87506
-    },
-    {
-      "id": "bear-2026-1381",
-      "category": "wildlife",
-      "type": "bear-official",
-      "typeLabel": "クマ（宮城県の目撃等情報）",
-      "typeIcon": "🐾",
-      "official": true,
-      "title": "青葉区 郷六葛岡でクマ目撃（１頭）",
-      "summary": "10月15日 09:20ごろ、青葉区郷六葛岡でクマの目撃（１頭）。市街地判定: 住居集合地域等。",
-      "source": "宮城県「令和8年度クマ目撃等情報」",
-      "url": "https://www.pref.miyagi.jp/",
-      "published": "2026-10-15T09:20+09:00",
-      "place": "郷六葛岡",
-      "placeKind": "area",
-      "matched": "郷六葛岡",
-      "ward": "青葉区",
-      "lat": 38.26681,
-      "lng": 140.81879
     }
   ]
 }
