@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T01:32+09:00",
+  "generatedAt": "2026-11-16T08:03+09:00",
   "sources": [
     {
       "name": "Googleニュース「千代田区・中央区・港区・新宿区」",
@@ -332,7 +332,7 @@
       "url": ""
     },
     {
-      "name": "Bluesky「下北沢」",
+      "name": "Bluesky「高円寺」",
       "category": "reviews",
       "url": ""
     },
@@ -357,11 +357,6 @@
       "url": ""
     },
     {
-      "name": "Bluesky「錦糸町」",
-      "category": "reviews",
-      "url": ""
-    },
-    {
       "name": "Bluesky「世田谷区」",
       "category": "reviews",
       "url": ""
@@ -374,22 +369,814 @@
   ],
   "items": [
     {
-      "id": "news-52035751eb",
+      "id": "news-4afed0ab51",
+      "category": "reviews",
+      "type": "event",
+      "typeLabel": "イベント・お出かけ",
+      "typeIcon": "🎪",
+      "title": "えへへ 良かったです😾これから浅草でまつり♨️コラボありますしね…！楽しみにしてきましょ！",
+      "summary": "えへへ 良かったです😾これから浅草でまつり♨️コラボありますしね…！楽しみにしてきましょ！",
+      "source": "Bluesky「浅草」",
+      "url": "https://bsky.app/profile/nntkyh.bsky.social/post/3n2f477jqsk2o",
+      "published": "2026-11-16T07:54+09:00",
+      "place": "浅草駅",
+      "placeKind": "station",
+      "matched": "浅草",
+      "ward": "台東区",
+      "lat": 35.71135,
+      "lng": 139.79833
+    },
+    {
+      "id": "news-a47f7462d2",
       "category": "reviews",
       "type": "other",
       "typeLabel": "つぶやき",
       "typeIcon": "💬",
-      "title": "明日東京で暇すぎるから聖地巡礼でもするか。そうだ、練馬区、行こう。",
-      "summary": "明日東京で暇すぎるから聖地巡礼でもするか。そうだ、練馬区、行こう。",
-      "source": "Bluesky「練馬区」",
-      "url": "https://bsky.app/profile/shirase23.bsky.social/post/3n2egnicgdc23",
-      "published": "2026-11-16T01:28+09:00",
+      "title": "おはようございます！ 早朝チョコザップいきながら、浅草石フリマにむけての神頼みをしてきました！",
+      "summary": "おはようございます！ 早朝チョコザップいきながら、浅草石フリマにむけての神頼みをしてきました！",
+      "source": "Bluesky「浅草」",
+      "url": "https://bsky.app/profile/konohnano.bsky.social/post/3n2f43zp7ek2s",
+      "published": "2026-11-16T07:52+09:00",
+      "place": "浅草駅",
+      "placeKind": "station",
+      "matched": "浅草",
+      "ward": "台東区",
+      "lat": 35.711018,
+      "lng": 139.798704
+    },
+    {
+      "id": "news-06b8ac98e9",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "icon of Akihabara. #streetphotography #ストリートスナップ #Akihabara…",
+      "summary": "icon of Akihabara. #streetphotography #ストリートスナップ #Akihabara #秋葉原 #Ricoh_GR @bskyphotos.bsky.social",
+      "source": "Bluesky「秋葉原」",
+      "url": "https://bsky.app/profile/ganriki.bsky.social/post/3n2f3qcfit22l",
+      "published": "2026-11-16T07:45+09:00",
+      "place": "秋葉原",
+      "placeKind": "facility",
+      "matched": "秋葉原",
+      "ward": "千代田区",
+      "lat": 35.69889,
+      "lng": 139.77404
+    },
+    {
+      "id": "news-f2ff542715",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【杉並区】新高円寺に肉料理が自慢のビストロ「肉魂 Soul＆Meat（ソウルミート）」がオープンしていました！",
+      "summary": "",
+      "source": "号外NET 杉並区",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBSV090SU1fQzlQemJka0ZFaEZzZnhTdjVhT0pwZ1dhNTM3bl9KaWtETG1PSHgzSVVjRUdOdTlhMm9pSGFhM3BSQlZxM2FBLU55cXBuVmVYdURVem52aUVv?oc=5",
+      "published": "2026-11-16T07:44+09:00",
+      "place": "高円寺",
+      "placeKind": "facility",
+      "matched": "高円寺",
+      "ward": "杉並区",
+      "lat": 35.70534,
+      "lng": 139.65
+    },
+    {
+      "id": "news-65156445f3",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【新宿区】家庭ごみ有料化より進めるべきごみ減量",
+      "summary": "",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE45Y1VHU2QwcTNzUl85WmNLNjVteDlCRmptQUxwbEgwcGVpSzBZWm9XWFMzOFBuemhoclRjb3RFbXd3N2dlWS1jR2lIQktoRXh0MV8zUGZYbDZYdFNrLUE?oc=5",
+      "published": "2026-11-16T07:42+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.69218,
+      "lng": 139.6997
+    },
+    {
+      "id": "news-d11394d2d7",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【公式ライン登録お願い】大田区の皆様全国の皆様",
+      "summary": "",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5FWnJMLTc4ZUlUcENFMW1OVDMyZEZZZmVKY243ckdpLVlGazlfcEF4TEZmS29kZnhtWkNwYWVoOWhqSUVhclRZa3MzTTR2TURzMGVLUElYSnl4cUVzNEk0?oc=5",
+      "published": "2026-11-16T07:42+09:00",
+      "place": "大田区",
+      "placeKind": "ward",
+      "matched": "大田区",
+      "ward": "大田区",
+      "lat": 35.56139,
+      "lng": 139.71608
+    },
+    {
+      "id": "news-1162c6f1b0",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【世田谷区】砧公園の中には子ども達が遊べる遊具が充実しています。",
+      "summary": "",
+      "source": "号外NET 世田谷区",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBiUnhYNExYUUZiY0xmWjZBTHRMN2poTUs5T042MVQtRXlETUV0MjRFWWlKQVo5c3BNcHVxVjJoTDJkd09CM0JyWjRwb3JmeFQ3YTVjY3pXQkhIcHVUVkV5Tg?oc=5",
+      "published": "2026-11-16T07:35+09:00",
+      "place": "世田谷区",
+      "placeKind": "ward",
+      "matched": "世田谷区",
+      "ward": "世田谷区",
+      "lat": 35.64653,
+      "lng": 139.65325
+    },
+    {
+      "id": "news-5e8ba3abd8",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "昨日の即売会終わってから浅草でスナップ2時間くらいしてたけど楽しすぎた",
+      "summary": "昨日の即売会終わってから浅草でスナップ2時間くらいしてたけど楽しすぎた",
+      "source": "Bluesky「浅草」",
+      "url": "https://bsky.app/profile/bekkou2.bsky.social/post/3n2f2zayges2s",
+      "published": "2026-11-16T07:33+09:00",
+      "place": "浅草駅",
+      "placeKind": "station",
+      "matched": "浅草",
+      "ward": "台東区",
+      "lat": 35.711406,
+      "lng": 139.79755
+    },
+    {
+      "id": "news-79d5ccf9aa",
+      "category": "reviews",
+      "type": "food",
+      "typeLabel": "グルメ・お店",
+      "typeIcon": "🍴",
+      "title": "東京に住んでいた頃、私は東急ハンズまで歩いて行ける所に住んでいた。よく行ったな。見たこともない素材や道具が並んでいて楽…",
+      "summary": "東京に住んでいた頃、私は東急ハンズまで歩いて行ける所に住んでいた。よく行ったな。見たこともない素材や道具が並んでいて楽しかったよ。しかしここ5年のハンズは、どちらかとインバウンド向けの店になっていて面白味は失っていた。東急百貨店も西武もなくなって渋谷は昔の面影はなし。渋谷駅は相変わらずダンジョン。",
+      "source": "Bluesky「渋谷駅」",
+      "url": "https://bsky.app/profile/lotuscat.bsky.social/post/3n2f2mfg46k2l",
+      "published": "2026-11-16T07:25+09:00",
+      "place": "渋谷駅",
+      "placeKind": "station",
+      "matched": "渋谷駅",
+      "ward": "渋谷区",
+      "lat": 35.65995,
+      "lng": 139.70246
+    },
+    {
+      "id": "news-717f4cadf7",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "さいとう渉【練馬区】江古田に防音賃貸マンションが増える",
+      "summary": "",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9ELVlQbzZWbUZkZ1JRRE9FQWxNb3lfZVhYYkFPQkRIdzJod1BXSnpaM09fR2VKclFnQ254V3lfNFg3VEY2Wk1yMF9ROFQ4ZTA4NWNQMk5ENjFMaDJvSHFV?oc=5",
+      "published": "2026-11-16T07:07+09:00",
       "place": "練馬区",
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
       "lat": 35.7358,
       "lng": 139.65184
+    },
+    {
+      "id": "news-77db6eaf28",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "バックルームに新宿駅の階層作ろうぜ",
+      "summary": "バックルームに新宿駅の階層作ろうぜ",
+      "source": "Bluesky「新宿駅」",
+      "url": "https://bsky.app/profile/mitetarimosuru.bsky.social/post/3n2ezhgtp5k2u",
+      "published": "2026-11-16T07:05+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿駅",
+      "ward": "新宿区",
+      "lat": 35.691848,
+      "lng": 139.700074
+    },
+    {
+      "id": "news-eee212f2ce",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "無人の東京駅の地下に家財を持ち込んで住みたい。新宿駅でもいいよ。",
+      "summary": "無人の東京駅の地下に家財を持ち込んで住みたい。新宿駅でもいいよ。",
+      "source": "Bluesky「新宿駅」",
+      "url": "https://bsky.app/profile/mitetarimosuru.bsky.social/post/3n2ezdexnyc2u",
+      "published": "2026-11-16T07:02+09:00",
+      "place": "東京駅",
+      "placeKind": "facility",
+      "matched": "東京駅",
+      "ward": "千代田区",
+      "lat": 35.68084,
+      "lng": 139.76448
+    },
+    {
+      "id": "news-945181021c",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "「国保逃れ」の後始末、世田谷区の料率なら2年分で約82万円。払うのは使った人だけなのかな。",
+      "summary": "「国保逃れ」の後始末、世田谷区の料率なら2年分で約82万円。払うのは使った人だけなのかな。",
+      "source": "Bluesky「世田谷区」",
+      "url": "https://bsky.app/profile/metanoia0202.bsky.social/post/3n2ez6sxe4v2x",
+      "published": "2026-11-16T07:00+09:00",
+      "place": "世田谷区",
+      "placeKind": "ward",
+      "matched": "世田谷区",
+      "ward": "世田谷区",
+      "lat": 35.646198,
+      "lng": 139.653624
+    },
+    {
+      "id": "news-4c553dabaa",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "秋葉原のJR構内にモンギルの広告がデカデカとされてた",
+      "summary": "秋葉原のJR構内にモンギルの広告がデカデカとされてた",
+      "source": "Bluesky「秋葉原」",
+      "url": "https://bsky.app/profile/suirenkey.bsky.social/post/3n2eyk7cb422u",
+      "published": "2026-11-16T06:48+09:00",
+      "place": "秋葉原",
+      "placeKind": "facility",
+      "matched": "秋葉原",
+      "ward": "千代田区",
+      "lat": 35.698558,
+      "lng": 139.774414
+    },
+    {
+      "id": "news-e2086dc02d",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "「知名度が今ひとつ」西武新宿線の逆襲、池袋線との「格差解消」なるか イメージ向上狙い沿線自治体と鉄道がスクラム(東洋経…",
+      "summary": "「知名度が今ひとつ」西武新宿線の逆襲、池袋線との「格差解消」なるか イメージ向上狙い沿線自治体と鉄道がスクラム(東洋経済オンライン) #Yahooニュース 渡部さんが語ってる・・・",
+      "source": "Bluesky「練馬区」",
+      "url": "https://bsky.app/profile/kisuminatsuki.bsky.social/post/3n2ex26f75s2i",
+      "published": "2026-11-16T06:21+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋",
+      "ward": "豊島区",
+      "lat": 35.7302,
+      "lng": 139.71297
+    },
+    {
+      "id": "news-6636aec5c2",
+      "category": "reviews",
+      "type": "nature",
+      "typeLabel": "公園・自然・季節",
+      "typeIcon": "🌳",
+      "title": "何度も見返したくなる魅力の女優３選 何度も見返したくなる魅力の女優３選 今回は、1人目の真飛聖さんは、神奈川県川崎市出…",
+      "summary": "何度も見返したくなる魅力の女優３選 何度も見返したくなる魅力の女優３選 今回は、1人目の真飛聖さんは、神奈川県川崎市出身の女性です。2人目の観月ありささんは、東京都練馬区出身の女性です。3人目は、東京都杉並区出身の女性です。 制作者のひとこと：ドラマや舞台 [...]",
+      "source": "Bluesky「練馬区」",
+      "url": "https://bsky.app/profile/j-entertainment.bsky.social/post/3n2ewoykyf32h",
+      "published": "2026-11-16T06:15+09:00",
+      "place": "杉並区",
+      "placeKind": "ward",
+      "matched": "東京都杉並区",
+      "ward": "杉並区",
+      "lat": 35.69962,
+      "lng": 139.63635
+    },
+    {
+      "id": "news-e358a4c08e",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "😸江戸名所道戯盡（えどめいしょどうげづくし）😸 ＜十四＞芝赤羽はしの雪中",
+      "summary": "😸江戸名所道戯盡（えどめいしょどうげづくし）😸 ＜十四＞芝赤羽はしの雪中",
+      "source": "Bluesky「赤羽」",
+      "url": "https://bsky.app/profile/mako-nya.bsky.social/post/3n2ev2ukh422q",
+      "published": "2026-11-16T05:46+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.78146,
+      "lng": 139.72007
+    },
+    {
+      "id": "news-cb3c657c32",
+      "category": "otaku",
+      "type": "anime",
+      "typeLabel": "アニメ・漫画",
+      "typeIcon": "",
+      "title": "ウエストランド、杉並区公式アニメキャラクター「なみすけ」応援団長に",
+      "summary": "",
+      "source": "山陽新聞",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5lclpGR2lLUjdNWkJKSDFwbkt5S1BfLUVfWFVWQzFJb0RxaURkelR0c0gzTlhQM3dDSmFyWFpsUWtETFQ1R0lHZkN2N0VfdkF3blNObHJDSVlBdjFSUVQ2ci1CYXRTaGEwdmtTaEFLUQ?oc=5",
+      "published": "2026-11-16T05:26+09:00",
+      "place": "杉並区",
+      "placeKind": "ward",
+      "matched": "杉並区",
+      "ward": "杉並区",
+      "lat": 35.699288,
+      "lng": 139.636724
+    },
+    {
+      "id": "news-f217ff0309",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "とうらぶ界隈そんな事になってるの…＞RP 刀剣男士はほぼ実戦で投入された戦刀なんだが… その悲哀をゲームで見て知ってい…",
+      "summary": "とうらぶ界隈そんな事になってるの…＞RP 刀剣男士はほぼ実戦で投入された戦刀なんだが… その悲哀をゲームで見て知っているのに政治も反戦もコンテンツに持ち込むなって、意味が分からんよ GHQに召集された赤羽刀の中にどれだけの名刀があったか 多くは折られ捨てられ米国に強奪されてんの知らないとか…無いよね？ ただでさえ日本軍が金物徴収して数多くの刀が溶かされて兵器に転用された事実も知らないとか？ 日本刀を愛するなら反戦は当たり前なんだけども とうらぶはただのゲームコンテンツで自分達が楽しめればモデルになった実物はどうなっても良い界隈って事か",
+      "source": "Bluesky「赤羽」",
+      "url": "https://bsky.app/profile/minorikoubou.bsky.social/post/3n2etlu5bjk2r",
+      "published": "2026-11-16T05:20+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.781128,
+      "lng": 139.720444
+    },
+    {
+      "id": "news-77d948e981",
+      "category": "reviews",
+      "type": "event",
+      "typeLabel": "イベント・お出かけ",
+      "typeIcon": "🎪",
+      "title": "調べてみたら秋葉原の会議場で何回かイベントやってる人がいるみたいだからそこだと開きやすそうかな…",
+      "summary": "調べてみたら秋葉原の会議場で何回かイベントやってる人がいるみたいだからそこだと開きやすそうかな…",
+      "source": "Bluesky「秋葉原」",
+      "url": "https://bsky.app/profile/mzzmz.bsky.social/post/3n2esoaintc2e",
+      "published": "2026-11-16T05:03+09:00",
+      "place": "秋葉原",
+      "placeKind": "facility",
+      "matched": "秋葉原",
+      "ward": "千代田区",
+      "lat": 35.698946,
+      "lng": 139.77326
+    },
+    {
+      "id": "news-c9edc29302",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "「Ｔｏｋｙｏ とことこ散歩」宇野千代もいた文化の街 個性豊かな淡島、下北沢",
+      "summary": "",
+      "source": "埼玉新聞",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA1RktoMjV2SHZNalpOU3h3T1BTd3J5NUtnbHZfZG80cl9NMVVMYXZOVmx2U29qeXd5d0NKd3NoUU4wakU0WHplXzZXT1FEV05fWVVGVGRXZw?oc=5",
+      "published": "2026-11-16T05:00+09:00",
+      "place": "下北沢駅",
+      "placeKind": "station",
+      "matched": "下北沢",
+      "ward": "世田谷区",
+      "lat": 35.66127,
+      "lng": 139.66692
+    },
+    {
+      "id": "news-217b836d11",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "「高齢おひとり様」地域で供養、江戸川区に合祀墓 東京が急ぐ終活支援",
+      "summary": "",
+      "source": "日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5LbThJaG54M0RlalRYQXA2SjNMTlgzbkNaZUd6eUJUY1F3ZWZNYklLN3drV0dJQUxuUEItLXlUWmxxVDJVbHdxOWRyUDJ5aG9tY1lWY2FxTzVLVm1aS2lsMkhjZlVHeU8xM2gzRA?oc=5",
+      "published": "2026-11-16T05:00+09:00",
+      "place": "江戸川区",
+      "placeKind": "ward",
+      "matched": "江戸川区",
+      "ward": "江戸川区",
+      "lat": 35.70685,
+      "lng": 139.86844
+    },
+    {
+      "id": "news-1c1911ebca",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "2026/11/15 第19回秋葉原おそうじ志隊 | SharpFlip sharpflip.jp?p=9132",
+      "summary": "2026/11/15 第19回秋葉原おそうじ志隊 | SharpFlip sharpflip.jp?p=9132",
+      "source": "Bluesky「秋葉原」",
+      "url": "https://bsky.app/profile/sharpflip.bsky.social/post/3n2esfz65fc2h",
+      "published": "2026-11-16T04:59+09:00",
+      "place": "秋葉原",
+      "placeKind": "facility",
+      "matched": "秋葉原",
+      "ward": "千代田区",
+      "lat": 35.699364,
+      "lng": 139.774801
+    },
+    {
+      "id": "news-637a448408",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "今日は、昼間に散歩に出かけたいのに下痢でなかなか出かけられなかった。 昔、新宿駅東口のデモに行こうとして駅に着いたとた…",
+      "summary": "今日は、昼間に散歩に出かけたいのに下痢でなかなか出かけられなかった。 昔、新宿駅東口のデモに行こうとして駅に着いたとたん便意に見舞われ、近くのトイレに駆け込んだらスピーチの声が聞こえてきて「いいスピーチだなぁ……早くここを出てじっくり聴きたいなぁ……」と思いながら、なかなか便が途切れなかったことを思い出すなどした。",
+      "source": "Bluesky「新宿駅」",
+      "url": "https://bsky.app/profile/r88088595.bsky.social/post/3n2esa2jhpk2w",
+      "published": "2026-11-16T04:55+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿駅",
+      "ward": "新宿区",
+      "lat": 35.692236,
+      "lng": 139.69892
+    },
+    {
+      "id": "news-1f3da4b7e3",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "PLTらと大田区 旧羽田旭小活用/第1期施設が竣工/地域の交流・防災拠点",
+      "summary": "",
+      "source": "建設通信新聞Digital",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5KbW9tQ1N1ZS1Jb0RPLXNJTl9kM0c3ck1LSnZtSEdEX29iM3FwUG02NUpCdmhhNlc5MktEc1ZXeGtTV1pXRm5KTFVHTmt4cU9u?oc=5",
+      "published": "2026-11-16T04:55+09:00",
+      "place": "羽田空港",
+      "placeKind": "facility",
+      "matched": "羽田",
+      "ward": "大田区",
+      "lat": 35.54569,
+      "lng": 139.7761
+    },
+    {
+      "id": "news-68c9dca6da",
+      "category": "reviews",
+      "type": "nature",
+      "typeLabel": "公園・自然・季節",
+      "typeIcon": "🌳",
+      "title": "デモ開始の集合場所が14時30分の赤羽公園になりました。デモの解散場所も赤羽公園です。",
+      "summary": "デモ開始の集合場所が14時30分の赤羽公園になりました。デモの解散場所も赤羽公園です。",
+      "source": "Bluesky「赤羽」",
+      "url": "https://bsky.app/profile/caredemo10.bsky.social/post/3n2eryfsczs2v",
+      "published": "2026-11-16T04:51+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.781516,
+      "lng": 139.71929
+    },
+    {
+      "id": "news-e959c27b86",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "第5回目のケアデモをやります。 ケアデモin赤羽 2026年秋 2026年11月21日13:00- スタンディング@赤…",
+      "summary": "第5回目のケアデモをやります。 ケアデモin赤羽 2026年秋 2026年11月21日13:00- スタンディング@赤羽駅北東口広場 14:30- デモ出発 @赤羽公園発→ぐるっと赤羽の街を周って、赤羽公園でデモ解散。 ケアの危機に声を上げよう！。 #介護 #ケアデモ #ケア #ヘイトスピーチを許さない",
+      "source": "Bluesky「赤羽」",
+      "url": "https://bsky.app/profile/caredemo10.bsky.social/post/3n2erw5irtc2v",
+      "published": "2026-11-16T04:50+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.781934,
+      "lng": 139.720831
+    },
+    {
+      "id": "news-2d2aa37322",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "‎退勤しました💐 ‎本日は雨の中来てくださった沢山のお兄さんありがとうございました🤍 ‎綺麗だねとか可愛いねって言われ…",
+      "summary": "‎退勤しました💐 ‎本日は雨の中来てくださった沢山のお兄さんありがとうございました🤍 ‎綺麗だねとか可愛いねって言われると否定しつつ内心すごいうれしいから喜んでます…🙈︎💕笑 ‎次はちょっと間が空いて20(金)21時から初の高円寺出勤です(՞ ܸ. .ܸ ՞)\"では、おやすみなさい😪💤",
+      "source": "Bluesky「高円寺」",
+      "url": "https://bsky.app/profile/reina2929.bsky.social/post/3n2ere4atc22e",
+      "published": "2026-11-16T04:40+09:00",
+      "place": "高円寺",
+      "placeKind": "facility",
+      "matched": "高円寺",
+      "ward": "杉並区",
+      "lat": 35.705008,
+      "lng": 139.650374
+    },
+    {
+      "id": "news-79019a9956",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "🌙11/16(月)〜11/22(日)の出勤予定🌙 📝事前予約📝承ります🇹🇭 📱当日予約📱は11:00より受付しておりま…",
+      "summary": "🌙11/16(月)〜11/22(日)の出勤予定🌙 📝事前予約📝承ります🇹🇭 📱当日予約📱は11:00より受付しております🙇‍♀️ 🇹🇭当日の出勤予定の変更がある場合はﾂｲｰﾄにて告知させて頂きますのでご確認くださいませ🇹🇭 #赤羽 #タイマッサージ",
+      "source": "Bluesky「赤羽」",
+      "url": "https://bsky.app/profile/555wararee.bsky.social/post/3n2epttqxss25",
+      "published": "2026-11-16T04:13+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.780574,
+      "lng": 139.719877
+    },
+    {
+      "id": "news-6961547a82",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "🌈11/15(日)🈵全枠完売🈵✨ ✅本日のご案内枠は【全枠完売】致しました🙇 ✅多数のご予約に感謝！ 🏛️赤羽ルーム🏛…",
+      "summary": "🌈11/15(日)🈵全枠完売🈵✨ ✅本日のご案内枠は【全枠完売】致しました🙇 ✅多数のご予約に感謝！ 🏛️赤羽ルーム🏛️✅全枠満了✨ 💒蕨ルーム💒✅全枠満了✨",
+      "source": "Bluesky「赤羽」",
+      "url": "https://bsky.app/profile/mabuistaff4.bsky.social/post/3n2eou4gkhc2n",
+      "published": "2026-11-16T03:55+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.782309,
+      "lng": 139.719406
+    },
+    {
+      "id": "news-4f4aae0623",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "池袋駅、デシサイなどがBL広告まみれでキショ過ぎるのだけどどうにかならんのあれ…",
+      "summary": "池袋駅、デシサイなどがBL広告まみれでキショ過ぎるのだけどどうにかならんのあれ…",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/onecosoba.bsky.social/post/3n2eni3bgxk2y",
+      "published": "2026-11-16T03:30+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.729868,
+      "lng": 139.713344
+    },
+    {
+      "id": "news-adbba38dd7",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "【中野区】医療的ケア児支援ガイドブック公開",
+      "summary": "【中野区】医療的ケア児支援ガイドブック公開｜相談先・制度・災害対策はどこを見る？ 選挙ドットコム",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBUUDVaRlVjR3BhVWtTWDFJZU1WeWlaMzExdTNJS29FTmdNa1pBcXJobEpTUVdYVkVJYXltZWljcmZ2SmR5a2xQSmhMa3I5OGpQY1JCVVZrSlliZ2tRckE?oc=5",
+      "published": "2026-11-16T03:00+09:00",
+      "place": "中野区",
+      "placeKind": "ward",
+      "matched": "中野区",
+      "ward": "中野区",
+      "lat": 35.70888,
+      "lng": 139.66292
+    },
+    {
+      "id": "news-9c5c369085",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "渋谷駅の出口番号を15からB6へ修正（公式新旧対照表で旧15はヒカリエ側＝B5であり当該位置ではない。当該ノードはスク…",
+      "summary": "渋谷駅の出口番号を15からB6へ修正（公式新旧対照表で旧15はヒカリエ側＝B5であり当該位置ではない。当該ノードはスクランブルスクエアB1Fと東口地下広場を結ぶB6接続点の位置にあり、2019年の改番後に旧番号のまま登録されていたもの） by exit_walker",
+      "source": "Bluesky「渋谷駅」",
+      "url": "https://bsky.app/profile/osmjp-tokyo.bsky.social/post/3n2elj5qxtz2g",
+      "published": "2026-11-16T02:55+09:00",
+      "place": "渋谷駅",
+      "placeKind": "station",
+      "matched": "渋谷駅",
+      "ward": "渋谷区",
+      "lat": 35.659618,
+      "lng": 139.702834
+    },
+    {
+      "id": "news-18cda02ff6",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "池袋駅30番出入口を新規作成（豊島区公式図で30・31は同一階段を共有し30が北側。31番ノードと同じ階段構造物の北端…",
+      "summary": "池袋駅30番出入口を新規作成（豊島区公式図で30・31は同一階段を共有し30が北側。31番ノードと同じ階段構造物の北端に配置。駅探で30番＝LABI池袋方面） by exit_walker",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/osmjp-tokyo.bsky.social/post/3n2elgxnmit2h",
+      "published": "2026-11-16T02:54+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.730256,
+      "lng": 139.71219
+    },
+    {
+      "id": "news-a471d3254b",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "池袋駅18番出入口を新規作成（豊島区公式「池袋駅地下空間案内図」で東武ホープセンター北ブロック北東角の階段と同定。駅探…",
+      "summary": "池袋駅18番出入口を新規作成（豊島区公式「池袋駅地下空間案内図」で東武ホープセンター北ブロック北東角の階段と同定。駅探で18番＝西口広場方面） by exit_walker",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/osmjp-tokyo.bsky.social/post/3n2el6qwwdf2x",
+      "published": "2026-11-16T02:49+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.730674,
+      "lng": 139.713731
+    },
+    {
+      "id": "news-4937186299",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "池袋駅14番出入口に番号を付与（豊島区公式「池袋駅地下空間案内図」で15・14のペア階段と同定。当該ノードは15番ノー…",
+      "summary": "池袋駅14番出入口に番号を付与（豊島区公式「池袋駅地下空間案内図」で15・14のペア階段と同定。当該ノードは15番ノードの18.4m真南・同一経度線上） by exit_walker",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/osmjp-tokyo.bsky.social/post/3n2el5xuj3s2h",
+      "published": "2026-11-16T02:49+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.729314,
+      "lng": 139.712777
+    },
+    {
+      "id": "news-a89d6c6fc3",
+      "category": "reviews",
+      "type": "food",
+      "typeLabel": "グルメ・お店",
+      "typeIcon": "🍴",
+      "title": "学生時代に大変世話になった水道橋の「ポプラ」が無くなって悲しいなと思い、他のポプラ行ってみるかと調べたら、もうあんまり…",
+      "summary": "学生時代に大変世話になった水道橋の「ポプラ」が無くなって悲しいなと思い、他のポプラ行ってみるかと調べたら、もうあんまり残ってないのね。 浅草通りのお店はまだあるのかしらと調べたら、もう10数年前に無くなってるようで驚いた。何年か前に寄った気がしてたけど、それもう10数年前のことなのか。永寿病院近くのポプラも、佐竹商店街入口近くのポプラも、みんなもうなくなっていた。",
+      "source": "Bluesky「浅草」",
+      "url": "https://bsky.app/profile/luigiy.bsky.social/post/3n2ekhqfues2x",
+      "published": "2026-11-16T02:36+09:00",
+      "place": "水道橋駅",
+      "placeKind": "station",
+      "matched": "水道橋",
+      "ward": "千代田区",
+      "lat": 35.70213,
+      "lng": 139.75221
+    },
+    {
+      "id": "news-1548c9a2ed",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "リアルと非現実の境目が自然に溶け合う Prime Originalドラマ『地雷グリコ』 のVFXはどう設計されたのか …",
+      "summary": "リアルと非現実の境目が自然に溶け合う Prime Originalドラマ『地雷グリコ』 のVFXはどう設計されたのか 関 和亮&赤羽智史（THE SEVEN） 🔻12月号の内容はこちら 青崎有吾の9冠ミステリ『 #地雷グリコ 』が実写ドラマ化され、11月13日よりPrime Videoで世界独占配信されている。本作では誰もが知るゲームを監督の関 和亮さんとTHE SEVENのVFXプロデューサー・赤羽智史さんに聞いた。 #VFX #映像制作",
+      "source": "Bluesky「赤羽」",
+      "url": "https://bsky.app/profile/videosalon.bsky.social/post/3n2ejt2yzxk2b",
+      "published": "2026-11-16T02:24+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.781174,
+      "lng": 139.721379
+    },
+    {
+      "id": "news-2efb34bd9a",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "本日16日(月) ファムファタール池袋 皆様をお迎えいたしますのは 🌹凛子 19時 🌹Aoi 19時 ✅平日営業 19…",
+      "summary": "本日16日(月) ファムファタール池袋 皆様をお迎えいたしますのは 🌹凛子 19時 🌹Aoi 19時 ✅平日営業 19時Open〜23時半 ✅土日営業 17時Open～23時 #ファムファタール池袋 #池袋駅西口徒歩３０秒のＳＭバー #池袋駅西口交番真裏富士そば２階",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/femme-shift.bsky.social/post/3n2ejagzeyk2u",
+      "published": "2026-11-16T02:14+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.731049,
+      "lng": 139.712306
+    },
+    {
+      "id": "news-431ef2b0bb",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "池袋駅38番出入口を新規作成（駅探の現行出口一覧で38番＝東口・サンシャインシティ方面を確認） by exit_wal…",
+      "summary": "池袋駅38番出入口を新規作成（駅探の現行出口一覧で38番＝東口・サンシャインシティ方面を確認） by exit_walker",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/osmjp-tokyo.bsky.social/post/3n2eiskk74j2g",
+      "published": "2026-11-16T02:06+09:00",
+      "place": "サンシャインシティ",
+      "placeKind": "facility",
+      "matched": "サンシャインシティ",
+      "ward": "豊島区",
+      "lat": 35.72885,
+      "lng": 139.71955
+    },
+    {
+      "id": "news-cf4c237bc3",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "池袋駅20c出入口を新規作成（JR池袋駅構内図と駅探で20c＝西口（北）方面を確認。西口北側の階段で20aの西側） b…",
+      "summary": "池袋駅20c出入口を新規作成（JR池袋駅構内図と駅探で20c＝西口（北）方面を確認。西口北側の階段で20aの西側） by exit_walker",
+      "source": "Bluesky「池袋駅」",
+      "url": "https://bsky.app/profile/osmjp-tokyo.bsky.social/post/3n2eis3nmcj2y",
+      "published": "2026-11-16T02:06+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋駅",
+      "ward": "豊島区",
+      "lat": 35.729914,
+      "lng": 139.714279
+    },
+    {
+      "id": "news-61c314a727",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "🟥最短状況🟥 🟡蒲田𝓡𝓸𝓸𝓶 鎌田れい⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 椿るり⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 七瀬るい⚜️🈵…",
+      "summary": "🟥最短状況🟥 🟡蒲田𝓡𝓸𝓸𝓶 鎌田れい⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 椿るり⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 七瀬るい⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 南ゆうな⚜️2:00〜🈳 🟡蒲田𝓡𝓸𝓸𝓶 石森うか⚜️2:15〜🈳 🟡藤沢𝓡𝓸𝓸𝓶 朝比奈めい⚜️🈵完売🈵",
+      "source": "Bluesky「蒲田」",
+      "url": "https://bsky.app/profile/pepe1201pepe.bsky.social/post/3n2eihcacec2g",
+      "published": "2026-11-16T02:00+09:00",
+      "place": "蒲田駅",
+      "placeKind": "station",
+      "matched": "蒲田",
+      "ward": "大田区",
+      "lat": 35.56269,
+      "lng": 139.71785
+    },
+    {
+      "id": "news-6273f34e11",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "渋谷駅A2出入口を新規作成（東急公式構内図にA2＝SHIBUYA109エレベーター直結口（10:00〜21:00）を明…",
+      "summary": "渋谷駅A2出入口を新規作成（東急公式構内図にA2＝SHIBUYA109エレベーター直結口（10:00〜21:00）を明記。109の1階入口付近に作成） by exit_walker",
+      "source": "Bluesky「渋谷駅」",
+      "url": "https://bsky.app/profile/osmjp-tokyo.bsky.social/post/3n2ei45f2sx2h",
+      "published": "2026-11-16T01:54+09:00",
+      "place": "渋谷駅",
+      "placeKind": "station",
+      "matched": "渋谷駅",
+      "ward": "渋谷区",
+      "lat": 35.660006,
+      "lng": 139.70168
+    },
+    {
+      "id": "news-8764b722ec",
+      "category": "reviews",
+      "type": "transport",
+      "typeLabel": "交通・道路",
+      "typeIcon": "🚃",
+      "title": "8【アクセシビリティ】手話なし／UDトークなし／筆談あり／車椅子アクセス可能（JR品川駅から現場までは地続きで、都営浅…",
+      "summary": "8【アクセシビリティ】手話なし／UDトークなし／筆談あり／車椅子アクセス可能（JR品川駅から現場までは地続きで、都営浅草線からもエレベーターがあるので移動できます！） 9【グラウンドルール】 ①ジェンダー、国籍、人種、その他属性による差別は禁止です。差別をしているつもりはなくても、差別に繋がるような価値観や言葉の使い方に気をつけましょう。 ②この行動は、大手ゼネコンによる辺野古の新基地建設工事請負に対する抗議であり、そして、「大和人」による、琉球弧の島々への加害をやめるための行動のひとつです。ポジショナリティ、すなわち自分自身の立ち位置を意識した言動を心がけましょう。",
+      "source": "Bluesky「浅草」",
+      "url": "https://bsky.app/profile/rentai-calender.bsky.social/post/3n2ei3l2iss25",
+      "published": "2026-11-16T01:54+09:00",
+      "place": "品川駅",
+      "placeKind": "station",
+      "matched": "品川駅",
+      "ward": "港区",
+      "lat": 35.62748,
+      "lng": 139.73777
+    },
+    {
+      "id": "news-a4fafa15d3",
+      "category": "supermarket",
+      "type": "opening",
+      "typeLabel": "新店・リニューアル",
+      "typeIcon": "🆕",
+      "title": "ロピアグループ、京王百貨店に韓国グッズ店の旗艦店出店－リアコ京王百貨店新宿店、2026年11月26日開店",
+      "summary": "",
+      "source": "都市商業研究所",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9JaElwUThRQTQ0WEh2V3k5bXNFNi10SnFpSWRGOXZaRnJ0cklHWVkyTVdnRUNFTUFBbWNZMms0WU5lX3IzYVE?oc=5",
+      "published": "2026-11-16T01:41+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.692654,
+      "lng": 139.700461
     },
     {
       "id": "news-271450cef6",
@@ -406,26 +1193,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.65995,
-      "lng": 139.70246
-    },
-    {
-      "id": "news-c2c0671021",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "明後日、明々後日と天気が崩れそうなので、明日のうちにもう一度読書シッティングをしようと思います。 できたら、13時〜1…",
-      "summary": "明後日、明々後日と天気が崩れそうなので、明日のうちにもう一度読書シッティングをしようと思います。 できたら、13時〜15時くらいに下北沢線路街のベンチで。 ちょっと疲れがたまっているので、もしかすると急遽予定変更するかもしれません。できるなら明日またここでポストします。 1人でも多くの人に、19日行動のことを知ってほしくて。",
-      "source": "Bluesky「下北沢」",
-      "url": "https://bsky.app/profile/rosy223.bsky.social/post/3n2efygbo522p",
-      "published": "2026-11-16T01:16+09:00",
-      "place": "下北沢駅",
-      "placeKind": "station",
-      "matched": "下北沢",
-      "ward": "世田谷区",
-      "lat": 35.66127,
-      "lng": 139.66692
+      "lat": 35.660424,
+      "lng": 139.703221
     },
     {
       "id": "news-a5389b15dd",
@@ -442,8 +1211,8 @@
       "placeKind": "station",
       "matched": "渋谷駅",
       "ward": "渋谷区",
-      "lat": 35.659618,
-      "lng": 139.702834
+      "lat": 35.659064,
+      "lng": 139.702267
     },
     {
       "id": "news-2909527e6c",
@@ -460,8 +1229,8 @@
       "placeKind": "facility",
       "matched": "サンシャインシティ",
       "ward": "豊島区",
-      "lat": 35.72885,
-      "lng": 139.71955
+      "lat": 35.728518,
+      "lng": 139.719924
     },
     {
       "id": "news-88596beded",
@@ -478,8 +1247,8 @@
       "placeKind": "station",
       "matched": "池袋駅",
       "ward": "豊島区",
-      "lat": 35.7302,
-      "lng": 139.71297
+      "lat": 35.729651,
+      "lng": 139.71167
     },
     {
       "id": "news-240e1dcd5b",
@@ -514,8 +1283,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.78146,
-      "lng": 139.72007
+      "lat": 35.780911,
+      "lng": 139.71877
     },
     {
       "id": "news-b68b2a587b",
@@ -532,8 +1301,8 @@
       "placeKind": "station",
       "matched": "新宿駅",
       "ward": "新宿区",
-      "lat": 35.69218,
-      "lng": 139.6997
+      "lat": 35.691294,
+      "lng": 139.699507
     },
     {
       "id": "news-f87739a858",
@@ -550,8 +1319,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.781128,
-      "lng": 139.720444
+      "lat": 35.782656,
+      "lng": 139.720607
     },
     {
       "id": "news-12b1b441d1",
@@ -586,8 +1355,26 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.781516,
-      "lng": 139.71929
+      "lat": 35.780212,
+      "lng": 139.720704
+    },
+    {
+      "id": "news-3c8ec11413",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "吉祥寺や高円寺、下北にも長い髪の毛のひょろりとしただるそうに歩く楽器を背負った人が大量にいて ステレオタイプのバンドマ…",
+      "summary": "吉祥寺や高円寺、下北にも長い髪の毛のひょろりとしただるそうに歩く楽器を背負った人が大量にいて ステレオタイプのバンドマンだ！ と思ったりした。そのあとステレオタイプの意味調べてちょっと使い方違ったなあと思ったりした",
+      "source": "Bluesky「高円寺」",
+      "url": "https://bsky.app/profile/mezase-7974.bsky.social/post/3n2eennbjrs2y",
+      "published": "2026-11-16T00:52+09:00",
+      "place": "高円寺",
+      "placeKind": "facility",
+      "matched": "高円寺",
+      "ward": "杉並区",
+      "lat": 35.705396,
+      "lng": 139.64922
     },
     {
       "id": "news-812880c942",
@@ -604,8 +1391,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.71135,
-      "lng": 139.79833
+      "lat": 35.711824,
+      "lng": 139.799091
     },
     {
       "id": "news-b82352e62a",
@@ -622,8 +1409,8 @@
       "placeKind": "station",
       "matched": "池袋駅",
       "ward": "豊島区",
-      "lat": 35.729868,
-      "lng": 139.713344
+      "lat": 35.731396,
+      "lng": 139.713507
     },
     {
       "id": "news-7feb4de5e7",
@@ -640,8 +1427,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.69889,
-      "lng": 139.77404
+      "lat": 35.698004,
+      "lng": 139.773847
     },
     {
       "id": "news-87b2aaab6f",
@@ -680,24 +1467,6 @@
       "lng": 139.80361
     },
     {
-      "id": "news-ca18173420",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "🟥最短状況🟥 🟡蒲田𝓡𝓸𝓸𝓶 鎌田れい⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 椿るり⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 七瀬るい⚜️2…",
-      "summary": "🟥最短状況🟥 🟡蒲田𝓡𝓸𝓸𝓶 鎌田れい⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 椿るり⚜️🈵完売🈵 🟡蒲田𝓡𝓸𝓸𝓶 七瀬るい⚜️24:30〜🈳 🟡蒲田𝓡𝓸𝓸𝓶 南ゆうな⚜️24:15〜🈳 🟡蒲田𝓡𝓸𝓸𝓶 石森うか⚜️1:00〜🈳 🟡藤沢𝓡𝓸𝓸𝓶 朝比奈めい⚜️🈵完売🈵",
-      "source": "Bluesky「蒲田」",
-      "url": "https://bsky.app/profile/pepe1201pepe.bsky.social/post/3n2ecnanwfk2g",
-      "published": "2026-11-16T00:16+09:00",
-      "place": "蒲田駅",
-      "placeKind": "station",
-      "matched": "蒲田",
-      "ward": "大田区",
-      "lat": 35.56269,
-      "lng": 139.71785
-    },
-    {
       "id": "news-79dd1becb6",
       "category": "reviews",
       "type": "event",
@@ -730,8 +1499,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.698558,
-      "lng": 139.774414
+      "lat": 35.699739,
+      "lng": 139.773376
     },
     {
       "id": "news-9abf11702f",
@@ -748,8 +1517,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.781934,
-      "lng": 139.720831
+      "lat": 35.782063,
+      "lng": 139.718485
     },
     {
       "id": "news-0ce8a0176e",
@@ -766,8 +1535,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711018,
-      "lng": 139.798704
+      "lat": 35.710464,
+      "lng": 139.798137
     },
     {
       "id": "news-eb02862b5c",
@@ -784,8 +1553,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711406,
-      "lng": 139.79755
+      "lat": 35.712199,
+      "lng": 139.797666
     },
     {
       "id": "news-868ba6af9b",
@@ -820,8 +1589,26 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711824,
-      "lng": 139.799091
+      "lat": 35.711064,
+      "lng": 139.799639
+    },
+    {
+      "id": "news-9780e12fa6",
+      "category": "reviews",
+      "type": "other",
+      "typeLabel": "つぶやき",
+      "typeIcon": "💬",
+      "title": "「腰ガクガクしてるね」 「イ⚪ところ見ててあげる」 言葉攻めがえぐいって、こういうことか…。 吉祥寺・高円寺のアリー、…",
+      "summary": "「腰ガクガクしてるね」 「イ⚪ところ見ててあげる」 言葉攻めがえぐいって、こういうことか…。 吉祥寺・高円寺のアリー、水野なみさん。落ち着いたお姉様の雰囲気に引き込まれて、最後は言葉責めでけちょんけちょんにされた話。 言葉責めが好きな人、どれくらいいますか？",
+      "source": "Bluesky「高円寺」",
+      "url": "https://bsky.app/profile/haizinshinshi.bsky.social/post/3n2eawi6ghc2u",
+      "published": "2026-11-15T23:46+09:00",
+      "place": "高円寺",
+      "placeKind": "facility",
+      "matched": "高円寺",
+      "ward": "杉並区",
+      "lat": 35.705814,
+      "lng": 139.650761
     },
     {
       "id": "news-6da2407a7e",
@@ -838,8 +1625,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.698946,
-      "lng": 139.77326
+      "lat": 35.698604,
+      "lng": 139.775349
     },
     {
       "id": "news-9846db9749",
@@ -856,8 +1643,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660006,
-      "lng": 139.70168
+      "lat": 35.660799,
+      "lng": 139.701796
     },
     {
       "id": "news-a8e6a2e313",
@@ -874,8 +1661,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.699364,
-      "lng": 139.774801
+      "lat": 35.698341,
+      "lng": 139.77274
     },
     {
       "id": "news-4a78e6cbe5",
@@ -896,24 +1683,6 @@
       "lng": 139.71707
     },
     {
-      "id": "news-03e8af9ad4",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "ずっと行ってみたかった夢の島植物園に行ってきた〜！ 家の観葉植物すぐ枯れさせてしまうから、これだけの量の植物園育てるの…",
-      "summary": "ずっと行ってみたかった夢の島植物園に行ってきた〜！ 家の観葉植物すぐ枯れさせてしまうから、これだけの量の植物園育てるの凄すぎぃ〜都内と思えない程の南国感素晴らしかった👏🌱 そして初錦糸町⤴︎レトロなお店が沢山あって楽しかったヮ!!また行きたいわね!!",
-      "source": "Bluesky「錦糸町」",
-      "url": "https://bsky.app/profile/hikaru0905zoe.bsky.social/post/3n2eap34dl22c",
-      "published": "2026-11-15T23:42+09:00",
-      "place": "錦糸町駅",
-      "placeKind": "station",
-      "matched": "錦糸町",
-      "ward": "墨田区",
-      "lat": 35.69675,
-      "lng": 139.81396
-    },
-    {
       "id": "news-a41c632f4b",
       "category": "reviews",
       "type": "nature",
@@ -928,206 +1697,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.710464,
-      "lng": 139.798137
-    },
-    {
-      "id": "news-d40291b777",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "こんばんは〜🌙 先週事前予約🈵 ありがとうございます！感謝いっぱい！ 1人目ベテラン職人さん お仕事話たくさん話してく…",
-      "summary": "こんばんは〜🌙 先週事前予約🈵 ありがとうございます！感謝いっぱい！ 1人目ベテラン職人さん お仕事話たくさん話してくれた👏 時間があっという間に過ぎちゃったよ。 別荘契約うまくいきますように♪ 2人目SEさん 眼力疲労に効く薬処方してもらえるの知ってます？ お客さんから教えてもらっちゃった♪ わたしもPCワークするからケアしないと👏 これまた時間があっという間にきた！ マッサージしながら、 盛り上がりながら、 あちこち癒されたりして、 そしたら楽しい時間はすぐだよね〜☘️ ⭐️来週予定⭐️〜如月うみか〜 11/16 17-22 錦糸町 11/21 16-23 錦糸町 🫶🫶🫶🫶🫶",
-      "source": "Bluesky「錦糸町」",
-      "url": "https://bsky.app/profile/momose-36.bsky.social/post/3n2eafxw5wk2m",
-      "published": "2026-11-15T23:36+09:00",
-      "place": "錦糸町駅",
-      "placeKind": "station",
-      "matched": "錦糸町",
-      "ward": "墨田区",
-      "lat": 35.696418,
-      "lng": 139.814334
-    },
-    {
-      "id": "news-11ad5637ff",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "と言うわけで今週の更新が出来ました。今週の秋葉原だとやっぱりロケットの閉店かねえ。あとスマートごみ箱とか ／ 夜を往け…",
-      "summary": "と言うわけで今週の更新が出来ました。今週の秋葉原だとやっぱりロケットの閉店かねえ。あとスマートごみ箱とか ／ 夜を往けakihabara p 2026.11.14 akhp.jp#1114p",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/ta-i7.bsky.social/post/3n2eaf5shqk2a",
-      "published": "2026-11-15T23:36+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.698004,
-      "lng": 139.773847
-    },
-    {
-      "id": "news-6c72fd2963",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "絶対的なもの(権力や圧力に)従って良い子にしている自分たちは良い人間だ！って信じてそうな感じもあってかなりオ...です…",
-      "summary": "絶対的なもの(権力や圧力に)従って良い子にしている自分たちは良い人間だ！って信じてそうな感じもあってかなりオ...ですね....反戦活動を秋葉原のカルト勧誘と同一視している人たちもかなり多かったのでなんかとんでもねえなと思いました",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/ukiukikanipaty.bsky.social/post/3n2eaakmiyk2v",
-      "published": "2026-11-15T23:33+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.699739,
-      "lng": 139.773376
-    },
-    {
-      "id": "news-82c1154a22",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "浅草にヤツメウナギ食える店あるんだ おもしろ",
-      "summary": "浅草にヤツメウナギ食える店あるんだ おもしろ",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/opagi.bsky.social/post/3n2ea6insys2s",
-      "published": "2026-11-15T23:32+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.712199,
-      "lng": 139.797666
-    },
-    {
-      "id": "news-abcdda0831",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "浅草Guilty Girlで今日も横転 黄色またはオレンジすぎる！！！！！",
-      "summary": "浅草Guilty Girlで今日も横転 黄色またはオレンジすぎる！！！！！",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/kameyamaworld.bsky.social/post/3n2e7lqto4c2d",
-      "published": "2026-11-15T23:22+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.711064,
-      "lng": 139.799639
-    },
-    {
-      "id": "news-946a53b459",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "昼サッチー、夕方V-1、夜ミネルヴァ。中野→新宿→下北沢でそんな距離のある移動はしてないがつかれましたことよ。",
-      "summary": "昼サッチー、夕方V-1、夜ミネルヴァ。中野→新宿→下北沢でそんな距離のある移動はしてないがつかれましたことよ。",
-      "source": "Bluesky「下北沢」",
-      "url": "https://bsky.app/profile/detarameteki.bsky.social/post/3n2e7jw7hzk2i",
-      "published": "2026-11-15T23:21+09:00",
-      "place": "下北沢駅",
-      "placeKind": "station",
-      "matched": "下北沢",
-      "ward": "世田谷区",
-      "lat": 35.660938,
-      "lng": 139.667294
-    },
-    {
-      "id": "news-f38a56d46a",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "でも秋葉原のいい飲食店いっぱい知ってるのはかなりかっこいい 鰐肉食える店こんど旦那と行こう",
-      "summary": "でも秋葉原のいい飲食店いっぱい知ってるのはかなりかっこいい 鰐肉食える店こんど旦那と行こう",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/tatsu0replay.bsky.social/post/3n2e7hu77as2i",
-      "published": "2026-11-15T23:20+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.698604,
-      "lng": 139.775349
-    },
-    {
-      "id": "news-02906178c0",
-      "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "ライブの後は、「そばいち」さんで〜🍀 ねぎとろ小丼とせいろセットを",
-      "summary": "ライブの後は、「そばいち」さんで〜🍀 ねぎとろ小丼とせいろセットを #新宿区 #新宿駅 #そばいち #ねぎとろ丼 #ねぎとろ #せいろ #蕎麦 #そば #soba",
-      "source": "Bluesky「新宿駅」",
-      "url": "https://bsky.app/profile/amatake0215.bsky.social/post/3n2e7d4yr6c2d",
-      "published": "2026-11-15T23:17+09:00",
-      "place": "新宿駅",
-      "placeKind": "station",
-      "matched": "新宿駅",
-      "ward": "新宿区",
-      "lat": 35.691848,
-      "lng": 139.700074
-    },
-    {
-      "id": "news-6d7e2bffdd",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "さつマイモと浅草はよくやったわ",
-      "summary": "さつマイモと浅草はよくやったわ",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/aqoursmarin.bsky.social/post/3n2e74q3bdc2l",
-      "published": "2026-11-15T23:13+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
       "lat": 35.710801,
       "lng": 139.79703
-    },
-    {
-      "id": "news-2ae05838e7",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "じんだいより先に行っちゃったから聖地巡礼と行っていいかオザキフラワーパークと佐野さんが訪れた浅草のお店は行ってきてるん…",
-      "summary": "じんだいより先に行っちゃったから聖地巡礼と行っていいかオザキフラワーパークと佐野さんが訪れた浅草のお店は行ってきてるんだよね またオザキフラワーパークに行くか…",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/yousyazero.bsky.social/post/3n2e6zaueks25",
-      "published": "2026-11-15T23:11+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.712546,
-      "lng": 139.798867
-    },
-    {
-      "id": "news-443b78b155",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "昨日秋葉原で見た青眼の究極竜のフィギュアが凄かったなと",
-      "summary": "昨日秋葉原で見た青眼の究極竜のフィギュアが凄かったなと",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/minea-akituki.bsky.social/post/3n2e6vuduh227",
-      "published": "2026-11-15T23:10+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.698341,
-      "lng": 139.77274
     },
     {
       "id": "news-70f63ee5fa",
@@ -1139,7 +1710,7 @@
       "summary": "",
       "source": "選挙ドットコム",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE81S0JDNnc4U0NNbUxSM1BRY1RqYzd3eDlFalZkcFN3WGIwSHV3RHJtSUEzRlVUSXpELUxzSUt6aUVIYWpObzZCcjhuYkxtYUg0cXRCUHNkX2NKb3hkTjFj?oc=5",
-      "published": "2026-11-15T23:03+09:00",
+      "published": "2026-11-15T23:02+09:00",
       "place": "中野駅",
       "placeKind": "station",
       "matched": "中野駅",
@@ -1148,382 +1719,40 @@
       "lng": 139.66576
     },
     {
-      "id": "news-5d6db65622",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "どんなときもずっとを秋葉原のゲーマーズに買いに行った日のことも覚えている。",
-      "summary": "どんなときもずっとを秋葉原のゲーマーズに買いに行った日のことも覚えている。",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/aqoursmarin.bsky.social/post/3n2e6ijk6kc2l",
-      "published": "2026-11-15T23:02+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.700086,
-      "lng": 139.774577
-    },
-    {
-      "id": "news-01e1ef570e",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "／ 海賊コンセプトカフェ🍽️ グランドパイレーツ🏴‍☠️ 新しい海賊の仲間（アルバイト）を大募集中✨ ＼ 詳細はプロフ…",
-      "summary": "／ 海賊コンセプトカフェ🍽️ グランドパイレーツ🏴‍☠️ 新しい海賊の仲間（アルバイト）を大募集中✨ ＼ 詳細はプロフィールのリンクをCheck✅ ご応募、お待ちしております💕 #秋葉原 #アルバイト #メイドカフェ #コンカフェ #面接",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/grand-pirates.com/post/3n2e6fwziqk2z",
-      "published": "2026-11-15T23:01+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.697642,
-      "lng": 139.774674
-    },
-    {
-      "id": "news-6d6b519110",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "KINSHICHO, Tokyo 2610034⃣ 2026年10月3日の錦糸町",
-      "summary": "KINSHICHO, Tokyo 2610034⃣ 2026年10月3日の錦糸町 #MONOCHROME #tokyo #kinshicho",
-      "source": "Bluesky「錦糸町」",
-      "url": "https://bsky.app/profile/ogiyoshisan0352.bsky.social/post/3n2e52scg722f",
-      "published": "2026-11-15T22:37+09:00",
-      "place": "錦糸町駅",
+      "id": "news-803963a6bb",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "「港区の二の舞いは」東京で苦戦の自民、新宿区長選に募らせた危機感 [東京都]",
+      "summary": "",
+      "source": "朝日新聞",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5qcWRKb25xODh1dlZRUEFmWTg0cTdIdVlzam5KdGJsZEQ5d2NzUXMwZjdYUEVUYXJQTTVQUlZGRFE2RURJaG0wcEU3UUZjbUdvODA3VmVCOEl1Mnlnd2VpSWJBSEdCTWM?oc=5",
+      "published": "2026-11-15T22:27+09:00",
+      "place": "新宿駅",
       "placeKind": "station",
-      "matched": "錦糸町",
-      "ward": "墨田区",
-      "lat": 35.696806,
-      "lng": 139.81318
-    },
-    {
-      "id": "news-7a67d65e4a",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "『舎鈴 ビーンズ #赤羽 エキナカきた店』〝素ラーメン〟先週の夜勤明け。店名が随分長くなったね。デフォの麺がやや硬めな…",
-      "summary": "『舎鈴 ビーンズ #赤羽 エキナカきた店』〝素ラーメン〟先週の夜勤明け。店名が随分長くなったね。デフォの麺がやや硬めなので、直ぐに食べ始めず、やや時間を置いて食べ始めてみた。やわらかくなった麺もなかなか良い、ね。 #ラーメン #つけ麺 #でん同士美食部 #はらへりん堂 #青空ごはん部",
-      "source": "Bluesky「赤羽」",
-      "url": "https://bsky.app/profile/ninjasyoku.bsky.social/post/3n2e4rd3qts22",
-      "published": "2026-11-15T22:31+09:00",
-      "place": "赤羽",
-      "placeKind": "facility",
-      "matched": "赤羽",
-      "ward": "北区",
-      "lat": 35.780574,
-      "lng": 139.719877
-    },
-    {
-      "id": "news-e08cd8dd16",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "アナデンアプリ版のケリュケール体操もやらせてもらったけど、面白過ぎて笑った、あれフルボイスなら電車で出来ない ガリアー…",
-      "summary": "アナデンアプリ版のケリュケール体操もやらせてもらったけど、面白過ぎて笑った、あれフルボイスなら電車で出来ない ガリアードも魔獣王も入るんだーーやるしかないじゃーーん！とか、 コラボカフェのメニューがゲーム内で見られる料理で普通に美味しそうだしデザインも可愛いとか、 グッズのチョイスが程よく男女ファンに優しいバランス(種類少ないとはいえ選ばれるキャラバランスがよくて格好良いも可愛いもデフォルメも揃ってる)で良いとか… 北千住、とても行きたいですね。 公式オフ会があるのもびっくりしたなぁ…",
-      "source": "Bluesky「北千住」",
-      "url": "https://bsky.app/profile/fire-rodan2222.bsky.social/post/3n2e4q2g3jk2t",
-      "published": "2026-11-15T22:30+09:00",
-      "place": "北千住駅",
-      "placeKind": "station",
-      "matched": "北千住",
-      "ward": "足立区",
-      "lat": 35.750734,
-      "lng": 139.805151
-    },
-    {
-      "id": "news-c2ec133960",
-      "category": "reviews",
-      "type": "shopping",
-      "typeLabel": "買い物",
-      "typeIcon": "🛍️",
-      "title": "その後はリニューアルした東京駅のホロ公式ショップへ行ったり秋葉原でのんびり買い物などこの前と同じことをしてました笑 時…",
-      "summary": "その後はリニューアルした東京駅のホロ公式ショップへ行ったり秋葉原でのんびり買い物などこの前と同じことをしてました笑 時間に追われることもなく満足した1日だったわね✌",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/simenawa-78gp00.bsky.social/post/3n2e4pybqys2b",
-      "published": "2026-11-15T22:30+09:00",
-      "place": "東京駅",
-      "placeKind": "facility",
-      "matched": "東京駅",
-      "ward": "千代田区",
-      "lat": 35.68084,
-      "lng": 139.76448
-    },
-    {
-      "id": "news-7deaeaa656",
-      "category": "reviews",
-      "type": "transport",
-      "typeLabel": "交通・道路",
-      "typeIcon": "🚃",
-      "title": "上野駅、今夜の最終は山手線 池袋方面 00:47発です。 山手線 池袋方面 00:47 常磐線快速 松戸方面 00:3…",
-      "summary": "上野駅、今夜の最終は山手線 池袋方面 00:47発です。 山手線 池袋方面 00:47 常磐線快速 松戸方面 00:33 京浜東北線・根岸線 南浦和方面 00:30 日比谷線 北千住方面 00:22 銀座線 浅草方面 00:19 高崎線 籠原方面 23:46 #上野駅 #終電 #鉄道 #東京",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/tokyoglance.com/post/3n2e4oq2qbx2t",
-      "published": "2026-11-15T22:30+09:00",
-      "place": "北千住駅",
-      "placeKind": "station",
-      "matched": "北千住",
-      "ward": "足立区",
-      "lat": 35.749374,
-      "lng": 139.804197
-    },
-    {
-      "id": "news-003f76569e",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "お茶の水、秋葉原の空間は綺麗だよね。間が上手い。前者は外来に沿って、少少寄せた方がいい！",
-      "summary": "お茶の水、秋葉原の空間は綺麗だよね。間が上手い。前者は外来に沿って、少少寄せた方がいい！",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/rmgc95.bsky.social/post/3n2e4nnzmuk2t",
-      "published": "2026-11-15T22:29+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.699493,
-      "lng": 139.772455
-    },
-    {
-      "id": "news-79a72bedae",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "今日たまたまふぉろわと話してる中でXの冬眠させられたフォロワー多いからTL寂しいよな って言ってた流れからブルスカ見に…",
-      "summary": "今日たまたまふぉろわと話してる中でXの冬眠させられたフォロワー多いからTL寂しいよな って言ってた流れからブルスカ見に来たけどこっちじゃ皆元気やないの って思いました まる そしてこれは今日下北沢で食べたカレーの皿",
-      "source": "Bluesky「下北沢」",
-      "url": "https://bsky.app/profile/nora-wanko.bsky.social/post/3n2e4mjvcw22i",
-      "published": "2026-11-15T22:29+09:00",
-      "place": "下北沢駅",
-      "placeKind": "station",
-      "matched": "下北沢",
-      "ward": "世田谷区",
-      "lat": 35.661326,
-      "lng": 139.66614
-    },
-    {
-      "id": "news-08c7a07fe4",
-      "category": "reviews",
-      "type": "nature",
-      "typeLabel": "公園・自然・季節",
-      "typeIcon": "🌳",
-      "title": "今日行きつけの美容室に行ったんだけど、担当の美容師さんと映画の話をして、先週観たゴジラ-0.0の話になって。 その時に…",
-      "summary": "今日行きつけの美容室に行ったんだけど、担当の美容師さんと映画の話をして、先週観たゴジラ-0.0の話になって。 その時にシンゴジとマイゴジの違いとかを説明していたせいか(オタク降臨して軽く早口)、帰宅して思わずアマプラでシン・ゴジラを見返した。 ザッピング的に見返したんだけど(蒲田くん→鎌倉上陸→多摩川越え→内閣総辞職ビームなどの見せ場中心に)、そういやこの映画で高橋一生を初めて知ったんだなと思い出した。 巨災対メンバー、その中でも高橋一生が初登場した空気ブロッカーなオタクくん演技に「あ、この映画面白いかも」となったのを思い出す。それまで会議シーンばかりだったからちょっと忍耐必須で😅",
-      "source": "Bluesky「蒲田」",
-      "url": "https://bsky.app/profile/bridd.bsky.social/post/3n2e4fonh422z",
-      "published": "2026-11-15T22:25+09:00",
-      "place": "蒲田駅",
-      "placeKind": "station",
-      "matched": "蒲田",
-      "ward": "大田区",
-      "lat": 35.563164,
-      "lng": 139.718611
-    },
-    {
-      "id": "news-ac8a15369a",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "…石が欲しい… 週末浅草石フリマか…",
-      "summary": "…石が欲しい… 週末浅草石フリマか…",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/kietehosii.bsky.social/post/3n2e4chn5ns2q",
-      "published": "2026-11-15T22:23+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.710102,
-      "lng": 139.798964
-    },
-    {
-      "id": "news-023d81cd2a",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "🇹🇭🌙🇹🇭ご案内状況🇹🇭🌙🇹🇭 🌠🙆🏻‍♀️25:00まで営業中🙆🏻‍♀️🌠 Xアカウント制限中の為、こちらでお知らせ…",
-      "summary": "🇹🇭🌙🇹🇭ご案内状況🇹🇭🌙🇹🇭 🌠🙆🏻‍♀️25:00まで営業中🙆🏻‍♀️🌠 Xアカウント制限中の為、こちらでお知らせ致します。 🌈ユナ🌈 22:45〜🈳 🌈ケイ🌈 22:35〜🈳 🌈ハナ🌈 🈵ご予約満了🈵 🌠ご都合宜しい方、赤羽でお待ちしております😊🌠 #フォロー宜しくお願い致します😊",
-      "source": "Bluesky「赤羽」",
-      "url": "https://bsky.app/profile/555wararee.bsky.social/post/3n2e3y4ee3225",
-      "published": "2026-11-15T22:17+09:00",
-      "place": "赤羽",
-      "placeKind": "facility",
-      "matched": "赤羽",
-      "ward": "北区",
-      "lat": 35.782309,
-      "lng": 139.719406
-    },
-    {
-      "id": "news-ff37ca5c94",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "もしかして、私が先月に秋葉原のアニメイトで見かけた星ぬいの重、買っとくべきだったか……泣 コナンカードを箱で買うから泣…",
-      "summary": "もしかして、私が先月に秋葉原のアニメイトで見かけた星ぬいの重、買っとくべきだったか……泣 コナンカードを箱で買うから泣く泣く諦めたんだよなぁ",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/sora-sky917.bsky.social/post/3n2e3uh3s2223",
-      "published": "2026-11-15T22:15+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.699337,
-      "lng": 139.775792
-    },
-    {
-      "id": "news-75dbf99c48",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "母の友人は規模のデカいお店屋さんゴッコが楽しいらしい。 「娘が売りに行ってるのよ」て母が話したら「わたしも行ってみたい…",
-      "summary": "母の友人は規模のデカいお店屋さんゴッコが楽しいらしい。 「娘が売りに行ってるのよ」て母が話したら「わたしも行ってみたいわぁ」って、社交辞令だよなぁ。と思ってたんですけど、売り子やってみたら楽しかったらしい。 それにしても、母の友人はタフである。 何年か前の5月、売り子を終えてから、浅草の三社祭に行ける位には、タフだ。",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/wankomaru.bsky.social/post/3n2e3qpvcks2i",
-      "published": "2026-11-15T22:13+09:00",
-      "place": "浅草神社",
-      "placeKind": "facility",
-      "matched": "三社祭",
-      "ward": "台東区",
-      "lat": 35.71481,
-      "lng": 139.7975
-    },
-    {
-      "id": "news-8a3ab85340",
-      "category": "reviews",
-      "type": "nature",
-      "typeLabel": "公園・自然・季節",
-      "typeIcon": "🌳",
-      "title": "鳥フェス千葉、終了しました。 ご来訪くださいました皆様、スタッフの皆様、ありがとうございましたー！！ 次回の直参イベン…",
-      "summary": "鳥フェス千葉、終了しました。 ご来訪くださいました皆様、スタッフの皆様、ありがとうございましたー！！ 次回の直参イベントは来年1月開催の鳥フェス浅草です。 ということで、今年のイベント参加はこれにて終了。 ちょっと息抜きをしつつ、寒くなったらまた行こうと思っていた鳥見散歩にも行きたい、あれこれ試作もしたいし服も作りたいな〜。 放置気味の通販関係も整えたい…😶 #鳥フェス千葉 #鳥フェス千葉2026",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/nobi-xxnobi.bsky.social/post/3n2e2ykcuxk2k",
-      "published": "2026-11-15T21:59+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.711953,
-      "lng": 139.796745
-    },
-    {
-      "id": "news-cee44d8ce7",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "土地の利権というと90年代くらいで終わったような話のようにも思えるが、今でも大概の大きな街の繁華街の土地の利権はかなり…",
-      "summary": "土地の利権というと90年代くらいで終わったような話のようにも思えるが、今でも大概の大きな街の繁華街の土地の利権はかなり複雑なところが多いと思う。歌舞伎町のあたりとか六本木とか新橋とか銀座とか浅草とか錦糸町とか中野とか池袋とか渋谷とか吉祥寺とか、と思いつくところを書いただけでこんなになってしまった。",
-      "source": "Bluesky「浅草」",
-      "url": "https://bsky.app/profile/wanderherris.bsky.social/post/3n2e2vu3l4c2e",
-      "published": "2026-11-15T21:58+09:00",
-      "place": "歌舞伎町",
-      "placeKind": "facility",
-      "matched": "歌舞伎町",
+      "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.69454,
-      "lng": 139.70271
+      "lat": 35.693029,
+      "lng": 139.699036
     },
     {
-      "id": "news-976a7f3c0c",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "ガラクタロードから赤羽橋ファンクとベーシスト笹本安詞を知って捗ってる ありがとうアイマスハロプロ掛け持ちオタク",
-      "summary": "ガラクタロードから赤羽橋ファンクとベーシスト笹本安詞を知って捗ってる ありがとうアイマスハロプロ掛け持ちオタク",
-      "source": "Bluesky「赤羽」",
-      "url": "https://bsky.app/profile/rashi-lassi.bsky.social/post/3n2e2jifdpc25",
-      "published": "2026-11-15T21:51+09:00",
-      "place": "赤羽",
-      "placeKind": "facility",
-      "matched": "赤羽",
-      "ward": "北区",
-      "lat": 35.781174,
-      "lng": 139.721379
-    },
-    {
-      "id": "news-d4458dd2f5",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "下北沢で5kでレザージャケット買えてイキスギイクイク",
-      "summary": "下北沢で5kでレザージャケット買えてイキスギイクイク",
-      "source": "Bluesky「下北沢」",
-      "url": "https://bsky.app/profile/motoradesu.bsky.social/post/3n2e2io77fc2e",
-      "published": "2026-11-15T21:51+09:00",
-      "place": "下北沢駅",
-      "placeKind": "station",
-      "matched": "下北沢",
-      "ward": "世田谷区",
-      "lat": 35.661744,
-      "lng": 139.667681
-    },
-    {
-      "id": "news-4bf78481a8",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "蒲田ルーム出勤してます！ この後は雨降らないみたいなのでぜひ夜更かししにきてください🎶🎶🎶🎶",
-      "summary": "蒲田ルーム出勤してます！ この後は雨降らないみたいなのでぜひ夜更かししにきてください🎶🎶🎶🎶",
-      "source": "Bluesky「蒲田」",
-      "url": "https://bsky.app/profile/nodorhea.bsky.social/post/3n2e2i7rjxc22",
-      "published": "2026-11-15T21:50+09:00",
-      "place": "蒲田駅",
-      "placeKind": "station",
-      "matched": "蒲田",
-      "ward": "大田区",
-      "lat": 35.561804,
-      "lng": 139.717657
-    },
-    {
-      "id": "news-45ca83741a",
-      "category": "reviews",
-      "type": "food",
-      "typeLabel": "グルメ・お店",
-      "typeIcon": "🍴",
-      "title": "最寄駅には本屋が無いので大都会北千住まで行ったのに何も買う気が起きず明日のパンだけ買って帰った。 また5日間労働か…",
-      "summary": "最寄駅には本屋が無いので大都会北千住まで行ったのに何も買う気が起きず明日のパンだけ買って帰った。 また5日間労働か…",
-      "source": "Bluesky「北千住」",
-      "url": "https://bsky.app/profile/inym.bsky.social/post/3n2e2i43ohs2p",
-      "published": "2026-11-15T21:50+09:00",
-      "place": "北千住駅",
-      "placeKind": "station",
-      "matched": "北千住",
-      "ward": "足立区",
-      "lat": 35.751109,
-      "lng": 139.803726
-    },
-    {
-      "id": "news-c8c7fb6467",
-      "category": "reviews",
-      "type": "other",
-      "typeLabel": "つぶやき",
-      "typeIcon": "💬",
-      "title": "秋葉原おそうじ志隊に参加してきた。吸殻たくさんあったなー😅久しぶりのボランティア活動だった。",
-      "summary": "秋葉原おそうじ志隊に参加してきた。吸殻たくさんあったなー😅久しぶりのボランティア活動だった。",
-      "source": "Bluesky「秋葉原」",
-      "url": "https://bsky.app/profile/salainen6paikka.bsky.social/post/3n2e2bwezds2u",
-      "published": "2026-11-15T21:47+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.697541,
-      "lng": 139.773079
+      "id": "news-36d724eb08",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "さいとう渉【練馬区】みさわ宏明事務所開所式、山口花都政報告会に参加しました！",
+      "summary": "",
+      "source": "選挙ドットコム",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB3V2F2UjQxS3hfUXpTUFdzZVVqZ1VCbXFjS3lHVkVmMWk5aWludlV3NUJyNUs1djNmdWItZTRtWXFMSHRmbVBDaDlmZndrM1BERy16UFdGdmdQaGV3M0p3?oc=5",
+      "published": "2026-11-15T22:07+09:00",
+      "place": "練馬区",
+      "placeKind": "ward",
+      "matched": "練馬区",
+      "ward": "練馬区",
+      "lat": 35.735856,
+      "lng": 139.65106
     },
     {
       "id": "news-c49aedb8ba",
@@ -1558,8 +1787,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660424,
-      "lng": 139.703221
+      "lat": 35.659664,
+      "lng": 139.703769
     },
     {
       "id": "news-fde9a6ae27",
@@ -1576,8 +1805,26 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.735856,
-      "lng": 139.65106
+      "lat": 35.736274,
+      "lng": 139.652601
+    },
+    {
+      "id": "news-e7cd307e9a",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "「ハンズ渋谷店」が閉店、４８年の歴史に幕…「みんなに愛されたお店でした」",
+      "summary": "",
+      "source": "au Webポータル",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9PNUJIbkNhYUJDTDJrdGw0LWx1dzFhdTlBMElJU1BrcUpKNkZRTGVFeFhNZUdtNlA2b0NDN0hQUWJCQVZRSk9nWXl1Q01VcVVVZkYtVW5Oa092czJidDFUQS15blpTTWxWZ016Q2J3?oc=5",
+      "published": "2026-11-15T20:15+09:00",
+      "place": "渋谷駅",
+      "placeKind": "station",
+      "matched": "渋谷",
+      "ward": "渋谷区",
+      "lat": 35.659401,
+      "lng": 139.70116
     },
     {
       "id": "news-591962bff3",
@@ -1630,8 +1877,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.70534,
-      "lng": 139.65
+      "lat": 35.704454,
+      "lng": 139.649807
     },
     {
       "id": "news-73c9ba1e90",
@@ -1650,24 +1897,6 @@
       "ward": "目黒区",
       "lat": 35.64141,
       "lng": 139.69827
-    },
-    {
-      "id": "news-08f484391a",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "＜画像1 / 5＞日本橋の高級寿司店が銀座で「ラーメン始めました！」",
-      "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAybzBSLWdaSjRCVDZfcklYTkl0ZnlVaUdLT2lmRnBZMlBjV3J4ZEZuTnNYTzM3WUlBczRmRDJXQWYxMEpFYWNITlFYWWJiU01SY1kyWE1hZEs4VlhCd2I3VGZfbm9rS2xuMlhUUkdHZlROSndXVFNlT1J3MA?oc=5",
-      "published": "2026-11-15T18:47+09:00",
-      "place": "日本橋",
-      "placeKind": "facility",
-      "matched": "日本橋",
-      "ward": "中央区",
-      "lat": 35.68407,
-      "lng": 139.7745
     },
     {
       "id": "news-6d90509e8b",
@@ -1702,8 +1931,8 @@
       "placeKind": "ward",
       "matched": "江戸川区",
       "ward": "江戸川区",
-      "lat": 35.70685,
-      "lng": 139.86844
+      "lat": 35.706518,
+      "lng": 139.868814
     },
     {
       "id": "news-0211ef7c2a",
@@ -1756,8 +1985,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.736274,
-      "lng": 139.652601
+      "lat": 35.734914,
+      "lng": 139.651647
     },
     {
       "id": "news-f9fde417c9",
@@ -1778,22 +2007,40 @@
       "lng": 139.75156
     },
     {
-      "id": "news-70c99b6481",
-      "category": "gourmet",
-      "type": "cafe",
-      "typeLabel": "カフェ・スイーツ",
-      "typeIcon": "🍰",
-      "title": "【練馬区・新桜台】Violettiさんの積読カフェ📕新桜台の量り売りのお店、Violetti（...",
+      "id": "news-c729153e93",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "赤羽の荒川土手で、音楽とBBQの融合「リバーサイドフェス」が開催されるみたい！",
+      "summary": "",
+      "source": "赤羽マガジン",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9YNGtPRXFLSHFxT0g5NktuZ3hQZjZ3cVpvQ0l5Rk1jMXU2MnAwUzM2NjZGVGFWN09hQkxyQjZhdnNaYWJyTzlES2p3cDh0Q1dqdGw1djNR?oc=5",
+      "published": "2026-11-15T15:34+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.781907,
+      "lng": 139.721822
+    },
+    {
+      "id": "news-7f1c82b92a",
+      "category": "news",
+      "type": "",
+      "typeLabel": "",
+      "typeIcon": "",
+      "title": "かなくぼ🌷です ＼新宿区ここ・からまつり11.8報告／",
       "summary": "",
       "source": "選挙ドットコム",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SX1ZsaDVZRGlURU5fUG1FTlFsVzg3ZHpDSVFyQWgzbTNNYnJEQWJqbGphR1hYVDB0Sjh3RUs0cXdmWGFCNVJYQ2NVY3IyeVEyd1dfYVpTSjhpcDJ6VmRr?oc=5",
-      "published": "2026-11-15T15:13+09:00",
-      "place": "練馬区",
-      "placeKind": "ward",
-      "matched": "練馬区",
-      "ward": "練馬区",
-      "lat": 35.734914,
-      "lng": 139.651647
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBwZzZQbS15R2VWdkZkT3F4cnZoTEZha2lZelI4d3VnaHBMNjl6WGplREl3YkNtRUllMkxDMTdJa3Bfb1ZCaXFmU1dzbGwwTm9FY0V0Nlg2by1nQkNBWTF3?oc=5",
+      "published": "2026-11-15T15:19+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.691894,
+      "lng": 139.701009
     },
     {
       "id": "news-da0907b332",
@@ -1810,8 +2057,8 @@
       "placeKind": "ward",
       "matched": "大田区",
       "ward": "大田区",
-      "lat": 35.56139,
-      "lng": 139.71608
+      "lat": 35.561058,
+      "lng": 139.716454
     },
     {
       "id": "news-a912ea8c83",
@@ -1828,8 +2075,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.780911,
-      "lng": 139.71877
+      "lat": 35.780111,
+      "lng": 139.719109
     },
     {
       "id": "news-18819b60cd",
@@ -1846,8 +2093,8 @@
       "placeKind": "station",
       "matched": "蒲田",
       "ward": "大田区",
-      "lat": 35.563539,
-      "lng": 139.717186
+      "lat": 35.563164,
+      "lng": 139.718611
     },
     {
       "id": "news-f28456cfc5",
@@ -1864,8 +2111,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.692236,
-      "lng": 139.69892
+      "lat": 35.691631,
+      "lng": 139.6984
     },
     {
       "id": "news-4b920d043d",
@@ -1954,8 +2201,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705008,
-      "lng": 139.650374
+      "lat": 35.706189,
+      "lng": 139.649336
     },
     {
       "id": "news-b44653af34",
@@ -1972,8 +2219,8 @@
       "placeKind": "ward",
       "matched": "江戸川区",
       "ward": "江戸川区",
-      "lat": 35.706518,
-      "lng": 139.868814
+      "lat": 35.706906,
+      "lng": 139.86766
     },
     {
       "id": "news-3602f990b4",
@@ -1990,8 +2237,8 @@
       "placeKind": "ward",
       "matched": "中野区",
       "ward": "中野区",
-      "lat": 35.70888,
-      "lng": 139.66292
+      "lat": 35.708548,
+      "lng": 139.663294
     },
     {
       "id": "news-e1626f3147",
@@ -2062,8 +2309,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.692654,
-      "lng": 139.700461
+      "lat": 35.693376,
+      "lng": 139.700237
     },
     {
       "id": "news-b1cba67fe0",
@@ -2080,8 +2327,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705396,
-      "lng": 139.64922
+      "lat": 35.705054,
+      "lng": 139.651309
     },
     {
       "id": "news-3c41562801",
@@ -2152,8 +2399,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700475,
-      "lng": 139.773611
+      "lat": 35.700086,
+      "lng": 139.774577
     },
     {
       "id": "news-3b9232203c",
@@ -2174,240 +2421,6 @@
       "lng": 139.80451
     },
     {
-      "id": "news-86bc98dc73",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【いつまでも、自分らしく暮らせる台東区へ。",
-      "summary": "",
-      "source": "選挙ドットコム",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBOWnVIUWpFbXNKZnJIY1RCOEliejBnckRGSFhJYTdoNFRBejZmai13SzQ0cGhBQ21pcVI1c3M5NmxXdnRmYkx3SDlGUTRsN2lIMl95MkRmUndTUkFoTU9Z?oc=5",
-      "published": "2026-11-15T09:54+09:00",
-      "place": "台東区",
-      "placeKind": "ward",
-      "matched": "台東区",
-      "ward": "台東区",
-      "lat": 35.71263,
-      "lng": 139.77977
-    },
-    {
-      "id": "news-1b2489c9ab",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【練馬区】光が丘美術館！世界に12台しかないピアノの音色も🎶先日、曼荼羅美術館にお邪魔したのを...",
-      "summary": "",
-      "source": "選挙ドットコム",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9XWmpXRUs4QkFCckpqaUV6dGg5UHVLT3JNSXl4ZktlRzN1WElZVW1xNE9MRkd6WXZSMWFWbi1lR196YU1meEsxNFprQlNKVHROd29RaDllRkZLVi1ZaDdZ?oc=5",
-      "published": "2026-11-15T09:54+09:00",
-      "place": "練馬区",
-      "placeKind": "ward",
-      "matched": "練馬区",
-      "ward": "練馬区",
-      "lat": 35.736649,
-      "lng": 139.651176
-    },
-    {
-      "id": "news-24ec3fccc4",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "理学療法士が「外出の処方箋」を出す。世田谷区の採択事業「お出かけ処方箋」、ふるさと納税型クラウドファンディングを11月15日に開始",
-      "summary": "理学療法士が「外出の処方箋」を出す。世田谷区の採択事業「お出かけ処方箋」、ふるさと納税型クラウドファンディングを11月15日に開始 | リモネック株式会社のプレスリリース PR TIMES",
-      "source": "PR TIMES",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5DRHRwcmZ6Sm92Yjk0cE9zVXRkeE12VWRGTGN4SjFuZUJsdkZzVURmemU4M1pYWC1NZ1BKbnFqejJxUTR5a3BsVkxVbDZYdDJETVJsQ19VRm8tQ0R5VjdZNG1pX0NLdmtTbEE?oc=5",
-      "published": "2026-11-15T08:52+09:00",
-      "place": "世田谷区",
-      "placeKind": "ward",
-      "matched": "世田谷区",
-      "ward": "世田谷区",
-      "lat": 35.64653,
-      "lng": 139.65325
-    },
-    {
-      "id": "news-d77a7e31eb",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "リモネック、世田谷区で神経難病者の外出支援CFを開始 11月26日には無料講座も",
-      "summary": "",
-      "source": "Dellows News",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE56bjJza2lMUXU5aUk1UWRGbDFMU0VVVGU2R1AxOVg1YWJDb3dybGUwWGlkc1NNeXBJTHdSazBSeDZLbHJYbll3?oc=5",
-      "published": "2026-11-15T08:52+09:00",
-      "place": "世田谷区",
-      "placeKind": "ward",
-      "matched": "世田谷区",
-      "ward": "世田谷区",
-      "lat": 35.646198,
-      "lng": 139.653624
-    },
-    {
-      "id": "news-e40e6d23f5",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【目黒区】「第32回和酒フェスin中目黒」を取材。「和酒フェスAIコンシェルジュ」でおススメされたお酒を飲み比べ",
-      "summary": "",
-      "source": "号外NET 目黒区",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5yVzIzeXJoNTlfbC1RYWJaUlFESDFvYmtWcENNZFQ3Rlc3MWUyQ1ZxWE1fNm1Ob0ppR3dBQV9xQjJEQld6Qy1qQ3FWMnlNckRsTGhQVU5SMjJiVEZiU1hfMW5QaG1haG5NV19V?oc=5",
-      "published": "2026-11-15T08:11+09:00",
-      "place": "中目黒駅",
-      "placeKind": "station",
-      "matched": "中目黒",
-      "ward": "目黒区",
-      "lat": 35.6439,
-      "lng": 139.6999
-    },
-    {
-      "id": "news-3e19c50e49",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "さいとう渉【練馬区】11/15(日)は国民民主党イベント目白押しです！",
-      "summary": "",
-      "source": "選挙ドットコム",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5Nd3pSNE04MlBWc1FLa3MxS0hqZHpRQ3BNcHRDaW5uNjA0em52YkFnemhkb0NXbDF2SzRMbWJPUXoyUU1uN1ItZnpNdzhmSnNhQmdkWHFyb29TVktORmMw?oc=5",
-      "published": "2026-11-15T08:04+09:00",
-      "place": "練馬区",
-      "placeKind": "ward",
-      "matched": "練馬区",
-      "ward": "練馬区",
-      "lat": 35.735514,
-      "lng": 139.653149
-    },
-    {
-      "id": "news-06a776f618",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【墨田区】赤からが錦糸町に戻ってきます！11月18日北口エリアにOPEN予定です。",
-      "summary": "",
-      "source": "号外NET 墨田区",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tdjhOTU5XVkUxVFQ3TTB1X19pVkZlS2xfQldmekJVSGU1ajVVVzF1RlNqVWJyUTNPR0NyaXBJTFZaangwNUxWSFZ3U1FNT0R2a3B2N1VKdTZPcnF0R044WVp5OWRlZw?oc=5",
-      "published": "2026-11-15T08:01+09:00",
-      "place": "錦糸町駅",
-      "placeKind": "station",
-      "matched": "錦糸町",
-      "ward": "墨田区",
-      "lat": 35.697224,
-      "lng": 139.814721
-    },
-    {
-      "id": "news-29612e78b6",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【杉並区】代田橋の沖縄タウンにある手作りどら焼きのお店「いすゞ(いすず）」で限定商品を購入してみました！",
-      "summary": "",
-      "source": "号外NET 杉並区",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE52U19pM2hlTzluajU2WHpCUDFQLWI0bGxhdXFxV3c2bDNXUDZaZmlMcHR2azlxaGxoNGNUODZMWmdNMWxKSEpLUkZOQkJBQTdvS0p3dU9ZYjVyMl9rU054dUh2MHVxNzNz?oc=5",
-      "published": "2026-11-15T07:44+09:00",
-      "place": "杉並区",
-      "placeKind": "ward",
-      "matched": "杉並区",
-      "ward": "杉並区",
-      "lat": 35.69962,
-      "lng": 139.63635
-    },
-    {
-      "id": "news-4cade553ea",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【大田区】子ども専門矯正歯科ABC Dentalが子ども向けサイトをリニューアルしました。",
-      "summary": "",
-      "source": "号外NET 大田区",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1Mdl9SbnJ3RUhCTFduRWtvN05LcmVFR0Q1ckw3WWplWkRSdHRJdzRXZnJjNl9YWXg4ZXhUSmI1XzNzYkwxM0F6X0doeU8wRExjRHByS2FJOA?oc=5",
-      "published": "2026-11-15T07:40+09:00",
-      "place": "大田区",
-      "placeKind": "ward",
-      "matched": "大田区",
-      "ward": "大田区",
-      "lat": 35.561058,
-      "lng": 139.716454
-    },
-    {
-      "id": "news-6f4fcaefd6",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "【世田谷区】全国で話題の参加型コンサート「0歳からのはじめてのオーケストラ」が三軒茶屋で開催されます。",
-      "summary": "",
-      "source": "号外NET 世田谷区",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBuajJ5cXRjQmlSYnhTSVliSjR4Z1JkSWlUUHpfLS1tZ0stbm1WZTJUQ2YxRmRvSDgxckFCOHdZSjNWSFRPb1lKRmxFRTN5TzZrMzJ1WUItUGh5eXdZUXhj?oc=5",
-      "published": "2026-11-15T07:35+09:00",
-      "place": "三軒茶屋駅",
-      "placeKind": "station",
-      "matched": "三軒茶屋",
-      "ward": "世田谷区",
-      "lat": 35.64373,
-      "lng": 139.67196
-    },
-    {
-      "id": "news-ca93c63144",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "託児サービスや外国人相談窓口など、生涯学習センターを一新 台東区",
-      "summary": "",
-      "source": "東京新聞",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9FVWpleVFVcVVDNVk5SU41NkVKYXp5X0RBNGdweEV4OGdHdDcxcUstN1E1SVNHYlo4Tjl1YUc3R0ZWc3hDdEZFWHZwZUFZQkRsYXVn?oc=5",
-      "published": "2026-11-15T07:11+09:00",
-      "place": "台東区",
-      "placeKind": "ward",
-      "matched": "台東区",
-      "ward": "台東区",
-      "lat": 35.712298,
-      "lng": 139.780144
-    },
-    {
-      "id": "news-c982789c0e",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "2026-005「品川区福祉オンブズマン制度(素案)」に対する意見募集",
-      "summary": "2026-005「品川区福祉オンブズマン制度(素案)」に対する意見募集｜品川区公式ウェブサイト www.city.shinagawa.tokyo.jp",
-      "source": "www.city.shinagawa.tokyo.jp",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOb1lpck5UNGNlMmxRZDRzSlN6LTRjbllnSzZ1UzZCTGxackxwWWpyb2JwVnk4WUpXWkNiWE95eElOdHBaSGMyRDR5cFEtNzFROEl6cVBMUk14aDFZUVRySHA5OGFUdUQwUnpPWnY1T0JoQ2d0VVpONlBCbDlXcmhLZjhsNEgzS3k1U0JmLXVRekRsRjF1SE91RTRVU0o?oc=5",
-      "published": "2026-11-15T07:05+09:00",
-      "place": "品川区",
-      "placeKind": "ward",
-      "matched": "品川区",
-      "ward": "品川区",
-      "lat": 35.608878,
-      "lng": 139.730574
-    },
-    {
-      "id": "news-6ced503e70",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "墨田区で「かづのデイ」 キラキラ橘商店街 物産展や観光ＰＲ 武蔵野大の社会実験 きっかけに昨年協定",
-      "summary": "",
-      "source": "株式会社 北鹿新聞社",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9xTlFUc1YtekJtcWsyTUZOdkdPQ2dIQ0dfQVZJaWE1dnRyWmZBVzhWT3FqcXlsdjg4dFg2aThyVlV1OGVMem8ySXdCTDZpWldETW5vV1VqWVh0eUlrSjJtRUoyQUxOd0YwSndGZ19pXzJwSzZs?oc=5",
-      "published": "2026-11-15T06:01+09:00",
-      "place": "墨田区",
-      "placeKind": "ward",
-      "matched": "墨田区",
-      "ward": "墨田区",
-      "lat": 35.71071,
-      "lng": 139.80145
-    },
-    {
       "id": "news-68ecefbbef",
       "category": "gourmet",
       "type": "ramen",
@@ -2422,8 +2435,8 @@
       "placeKind": "station",
       "matched": "渋谷駅",
       "ward": "渋谷区",
-      "lat": 35.659064,
-      "lng": 139.702267
+      "lat": 35.661146,
+      "lng": 139.702997
     },
     {
       "id": "news-7b9692d888",
@@ -2444,42 +2457,6 @@
       "lng": 139.760504
     },
     {
-      "id": "news-198a03c132",
-      "category": "news",
-      "type": "",
-      "typeLabel": "",
-      "typeIcon": "",
-      "title": "西浅草・台東区生涯学習センターの改修完了 外国人相談窓口や展示スペースも",
-      "summary": "西浅草・台東区生涯学習センターの改修完了 外国人相談窓口や展示スペースも（みんなの経済新聞ネットワーク） Yahoo!ニュース",
-      "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBsMnFMUHcwMllzNXR0Z3ZUTl94bVNIcEtJaFRKcHhQVGZrdjAtS2R2Y09nZXpvR2VyY0xaZm5xT0ljOUk2QWtHVFM1M0pld3VwZHR2NHhtTnU5Znh3WmxndGxybS1JUW9DQ0FUNlNoM3ZWOHFxZGlvd1Z4emRwX1k?oc=5",
-      "published": "2026-11-15T02:18+09:00",
-      "place": "浅草駅",
-      "placeKind": "station",
-      "matched": "浅草",
-      "ward": "台東区",
-      "lat": 35.711797,
-      "lng": 139.800082
-    },
-    {
-      "id": "news-eb659256c2",
-      "category": "otaku",
-      "type": "cafe",
-      "typeLabel": "コラボカフェ・グッズ",
-      "typeIcon": "",
-      "title": "「pillings（ピリングス）」、渋谷PARCOでポップアップストアを開催 物語をまとう限定ハンドニットも登場",
-      "summary": "",
-      "source": "宮田理江",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBBV1gyR3VYM1NPMlVwVS1UQjBLTmtOaU5ZWGFUd2JkU1lmZ2NEWVhNUG1FV1oxd0lSbEtDUjh0WnZqaW9fc2x3Rw?oc=5",
-      "published": "2026-11-15T00:10+09:00",
-      "place": "渋谷駅",
-      "placeKind": "station",
-      "matched": "渋谷",
-      "ward": "渋谷区",
-      "lat": 35.660799,
-      "lng": 139.701796
-    },
-    {
       "id": "news-0224dc1058",
       "category": "gourmet",
       "type": "standing",
@@ -2498,24 +2475,6 @@
       "lng": 139.75935
     },
     {
-      "id": "news-d27581ac7b",
-      "category": "otaku",
-      "type": "anime",
-      "typeLabel": "アニメ・漫画",
-      "typeIcon": "",
-      "title": "『Gacha Capsule Shop Simulator – Akihabara』フェーズ3公開！ 実在の秋葉原電気街を再現、手描きアニメトレーラーも",
-      "summary": "",
-      "source": "AppBank",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5LMDFiTEo0Q1FmWUZ0MmJJUVgxV0ZDdzA5THlzR2ZhZHVQV0p6dnRMNUVBampMaFZuc3hYN0pOcDR5N1N2ekg2TVBEWWsyQURYbUZPTHRXanNvYkhybW9FbA?oc=5",
-      "published": "2026-11-14T23:47+09:00",
-      "place": "秋葉原",
-      "placeKind": "facility",
-      "matched": "秋葉原",
-      "ward": "千代田区",
-      "lat": 35.697922,
-      "lng": 139.775734
-    },
-    {
       "id": "news-c44d78fc6e",
       "category": "reviews",
       "type": "food",
@@ -2530,8 +2489,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691294,
-      "lng": 139.699507
+      "lat": 35.690932,
+      "lng": 139.700334
     },
     {
       "id": "news-cc489ce4b6",
@@ -2548,8 +2507,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693029,
-      "lng": 139.699036
+      "lat": 35.692783,
+      "lng": 139.698115
     },
     {
       "id": "news-2ca26364f6",
@@ -2566,8 +2525,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659664,
-      "lng": 139.703769
+      "lat": 35.658702,
+      "lng": 139.703094
     },
     {
       "id": "news-c3a45d119d",
@@ -2584,8 +2543,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691894,
-      "lng": 139.701009
+      "lat": 35.692627,
+      "lng": 139.701452
     },
     {
       "id": "news-54b7f6aaef",
@@ -2602,8 +2561,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.698666,
-      "lng": 139.771914
+      "lat": 35.697642,
+      "lng": 139.774674
     },
     {
       "id": "news-883860f740",
@@ -2656,8 +2615,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691631,
-      "lng": 139.6984
+      "lat": 35.690831,
+      "lng": 139.698739
     },
     {
       "id": "news-1af8c7892e",
@@ -2674,8 +2633,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693376,
-      "lng": 139.700237
+      "lat": 35.693765,
+      "lng": 139.699271
     },
     {
       "id": "news-08621cad38",
@@ -2710,8 +2669,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690932,
-      "lng": 139.700334
+      "lat": 35.691212,
+      "lng": 139.701394
     },
     {
       "id": "news-0297a41abb",
@@ -2746,8 +2705,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.692783,
-      "lng": 139.698115
+      "lat": 35.691956,
+      "lng": 139.697574
     },
     {
       "id": "news-50fca94850",
@@ -2764,8 +2723,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.710001,
-      "lng": 139.797369
+      "lat": 35.712546,
+      "lng": 139.798867
     },
     {
       "id": "news-36fc06f290",
@@ -2800,8 +2759,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700266,
-      "lng": 139.775467
+      "lat": 35.699493,
+      "lng": 139.772455
     },
     {
       "id": "news-8ead71950a",
@@ -2836,8 +2795,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.735251,
-      "lng": 139.65054
+      "lat": 35.736649,
+      "lng": 139.651176
     },
     {
       "id": "news-6cdf4237c0",
@@ -2854,8 +2813,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659401,
-      "lng": 139.70116
+      "lat": 35.660553,
+      "lng": 139.700875
     },
     {
       "id": "news-f0edbae120",
@@ -2872,26 +2831,8 @@
       "placeKind": "facility",
       "matched": "サンシャイン60",
       "ward": "豊島区",
-      "lat": 35.728518,
-      "lng": 139.719924
-    },
-    {
-      "id": "news-8b927f10dd",
-      "category": "gourmet",
-      "type": "cafe",
-      "typeLabel": "カフェ・スイーツ",
-      "typeIcon": "🍰",
-      "title": "【西新宿】朝7時より営業！NY発祥のベーカリーカフェ『THE CITY BAKERY 新宿』が11月28日ニューオープン！",
-      "summary": "",
-      "source": "au Webポータル",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9ITjQtbXBEenBxTnRzUW1VYnZfb3RIeVFwdVFoS185YXlLUFp3c2l3YWJtT3lQSjFjTlJsNkZMRy1NNVdTb2ZXeUotaEl3X21XZ29ISE9sNjRpX0p5ZVZySjBqNGJ5YXJvbHhqamJn?oc=5",
-      "published": "2026-11-13T19:15+09:00",
-      "place": "新宿駅",
-      "placeKind": "station",
-      "matched": "新宿",
-      "ward": "新宿区",
-      "lat": 35.692627,
-      "lng": 139.701452
+      "lat": 35.728906,
+      "lng": 139.71877
     },
     {
       "id": "news-cddfe8388c",
@@ -2908,8 +2849,8 @@
       "placeKind": "facility",
       "matched": "アキバ",
       "ward": "千代田区",
-      "lat": 35.697036,
-      "lng": 139.774134
+      "lat": 35.699337,
+      "lng": 139.775792
     },
     {
       "id": "news-02e2b3bba9",
@@ -2926,8 +2867,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700243,
-      "lng": 139.772383
+      "lat": 35.697541,
+      "lng": 139.773079
     },
     {
       "id": "news-cfb9955651",
@@ -2944,8 +2885,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.6988,
-      "lng": 139.77645
+      "lat": 35.700475,
+      "lng": 139.773611
     },
     {
       "id": "news-2e14358e40",
@@ -2957,13 +2898,13 @@
       "summary": "",
       "source": "コラボカフェ",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQ3FkLUdJbWZwVGJtT1hZcWlSQk1WamEtZnZOZ1Rrc2hnLWhEMHRRNUxNOG1JSFRaN1E3WGhMMFY3bFNBQzZJSXZsY0RkQWU5aFg0X0pkMFNsYjIwc3RXdHB2NE9yR3BMYk9tNklqRklHRC1KdFlYdWRMOGRYeTdRS3hicmg0VWtaS3N6dG9TakdpZw?oc=5",
-      "published": "2026-11-13T17:52+09:00",
+      "published": "2026-11-13T17:53+09:00",
       "place": "新宿駅",
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690831,
-      "lng": 139.698739
+      "lat": 35.693556,
+      "lng": 139.701127
     },
     {
       "id": "news-70ff0b6221",
@@ -2980,8 +2921,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.730256,
-      "lng": 139.71219
+      "lat": 35.728952,
+      "lng": 139.713604
     },
     {
       "id": "news-1c945ab0ba",
@@ -3016,8 +2957,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.730674,
-      "lng": 139.713731
+      "lat": 35.730803,
+      "lng": 139.711385
     },
     {
       "id": "news-c0291f2d62",
@@ -3038,22 +2979,58 @@
       "lng": 139.882544
     },
     {
-      "id": "news-7f2bede06a",
+      "id": "news-8b62f8a02e",
       "category": "crime",
       "type": "suspicious",
       "typeLabel": "不審者・声かけ",
       "typeIcon": "",
       "title": "「100人くらいに声かけた」 JR池袋駅前の路上でスカウト容疑 21歳男逮捕",
-      "summary": "「100人くらいに声かけた」 JR池袋駅前の路上でスカウト容疑 21歳男逮捕（産経新聞） Yahoo!ニュース",
+      "summary": "「100人くらいに声かけた」 JR池袋駅前の路上でスカウト容疑 21歳男逮捕 (産経新聞) Yahoo!ニュース",
       "source": "Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1uWVRIaWloYmtsM2xROHFSTjFyeXc3c21SdzhDOHg1OFZMY1p3RnlRU0FENFdHd0FrX1dvVS1EQW9HTnlhaGtfdzJGZHJBRGRRa2haV3Q3TE1rWDJkRTYtSFpxRWp1NmNaUV9zbjl2UUFrM2dWVE9aX21Bdmt5LW8?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaW5SN05PSXM1YmxsOWwwVzNqQ0JJbENGUDl6cFVydGNlbHFSdFRnRjBmdnpuUHVkaHFPLUdYa2tCakphbFUzM00xTmJzbXMzNWZMRHRRbWxHVzFjLTN2eTF5djk3V1dCYnVwNWhybUdqYTItU2l0dldnMTZ4OHBoWk5GSldVU3h3RkVld2xn?oc=5",
       "published": "2026-11-13T15:38+09:00",
       "place": "池袋駅",
       "placeKind": "station",
       "matched": "池袋駅",
       "ward": "豊島区",
-      "lat": 35.729314,
-      "lng": 139.712777
+      "lat": 35.730647,
+      "lng": 139.714722
+    },
+    {
+      "id": "news-bd7a5d6f8b",
+      "category": "gourmet",
+      "type": "japanese",
+      "typeLabel": "和食",
+      "typeIcon": "🍣",
+      "title": "【夫婦で18万の高級寿司が炎上】渡辺やすし新宿区議が税金疑惑を一蹴「最後は投票箱で決まる」",
+      "summary": "",
+      "source": "ｄメニューニュース",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTlc3cndpLVc0SnRiYmZ5ZVEyUGVYZjhoT2FkdlluX21NMnhiM2RzcWFJNkNVb2ZxR1N1QnRVOEY5Qml1RW8zRmJqT001b005dHNsc2V3amxJQjRjLS1mdm5NajdyZTJaTFJ5Ni1RZlRpY1F3UUctUFQxODB0NTJNadIBhgFBVV95cUxOTE5EQ3l2VEhyVGlEQUVKYWgxaG1zekR5a09aRlVCMzBVdEtkemRfRzlRcndQbTRZOVB0UGRFMHJHOW9sc1c1dlBTNlZHVExlN2V2TV9zczROZFNuWHEtOXE3NVB2S1lqSHI1VHI5VW5sdW9WUG9TQ1BrZGg3dUZTOHJLdm5Ydw?oc=5",
+      "published": "2026-11-13T15:35+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.690326,
+      "lng": 139.699794
+    },
+    {
+      "id": "news-a22dee1fc8",
+      "category": "gourmet",
+      "type": "japanese",
+      "typeLabel": "和食",
+      "typeIcon": "🍣",
+      "title": "赤羽の「禅味 寿」で『鴨汁せいろ』。冷たい蕎麦に温かいつゆ。カモ欲を満たしてくれる逸品。",
+      "summary": "",
+      "source": "赤羽マガジン",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0wWXA0MjBIX1RFOXJCV2Vrc0hvUlZaT0x1aDh5NmFieXI4WWFJcFlCRDZqZ1NhUElYRjU3cl85NVpqWEc4MG1RNDdFWWZ3UEdBR1BXX0h3?oc=5",
+      "published": "2026-11-13T14:16+09:00",
+      "place": "赤羽",
+      "placeKind": "facility",
+      "matched": "赤羽",
+      "ward": "北区",
+      "lat": 35.783045,
+      "lng": 139.719641
     },
     {
       "id": "news-a03d57e09e",
@@ -3070,8 +3047,8 @@
       "placeKind": "facility",
       "matched": "羽田空港",
       "ward": "大田区",
-      "lat": 35.54569,
-      "lng": 139.7761
+      "lat": 35.545358,
+      "lng": 139.776474
     },
     {
       "id": "news-74767a09ce",
@@ -3088,8 +3065,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661146,
-      "lng": 139.702997
+      "lat": 35.660397,
+      "lng": 139.704212
     },
     {
       "id": "news-87fe36aeb0",
@@ -3128,24 +3105,6 @@
       "lng": 139.764847
     },
     {
-      "id": "news-2fed6fe51e",
-      "category": "gourmet",
-      "type": "cafe",
-      "typeLabel": "カフェ・スイーツ",
-      "typeIcon": "🍰",
-      "title": "六本木ヒルズ展望台 東京シティビュー「天空のクリスマス 2026」を本日11月13日より開催！東京の絶景とクリスマス限定メニューを楽しめるカフェスタンドがオープン！",
-      "summary": "",
-      "source": "PR TIMES",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBZbERjZGxHUHU4SXRRVjZHMmVzajR5X09nazFCLUo0YzJnTThjOFZuZmU5ZHVLTnRZRzdQZDZETHdmLWxDd2hMRmI5Sm0xa1ByeUNqYnFSbk5ZeTFTaEYzQTk0NmxRdzZ5YUE?oc=5",
-      "published": "2026-11-13T11:03+09:00",
-      "place": "六本木ヒルズ",
-      "placeKind": "facility",
-      "matched": "六本木ヒルズ",
-      "ward": "港区",
-      "lat": 35.6602,
-      "lng": 139.72983
-    },
-    {
       "id": "news-4299045064",
       "category": "otaku",
       "type": "cafe",
@@ -3160,8 +3119,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.6976,
-      "lng": 139.77214
+      "lat": 35.697922,
+      "lng": 139.775734
     },
     {
       "id": "news-6230250ec8",
@@ -3178,62 +3137,8 @@
       "placeKind": "station",
       "matched": "新宿駅",
       "ward": "新宿区",
-      "lat": 35.693765,
-      "lng": 139.699271
-    },
-    {
-      "id": "news-6a902f3c1f",
-      "category": "supermarket",
-      "type": "opening",
-      "typeLabel": "新店・リニューアル",
-      "typeIcon": "🆕",
-      "title": "【江東区】お買い物がさらに便利に！ 南砂町駅前「クレストプライムシティ南砂」1階に「マルエツ プチ」が開店予定",
-      "summary": "",
-      "source": "号外NET 江東区",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9OWjJYc29ENkE3amlmRkp5REJFQk91SnJLNjdGVldZLXNGVmxYQ2VkYzhRYXdPM29xaXktNWsxck1vdnJfTVgzaGNpTDdOT2pqSl90QkxuX1hDZEl6c3VwekF5ZnZQMUt6VWRTVk5n?oc=5",
-      "published": "2026-11-12T21:49+09:00",
-      "place": "江東区",
-      "placeKind": "ward",
-      "matched": "江東区",
-      "ward": "江東区",
-      "lat": 35.67264,
-      "lng": 139.8173
-    },
-    {
-      "id": "news-c11e9783c2",
-      "category": "otaku",
-      "type": "cafe",
-      "typeLabel": "コラボカフェ・グッズ",
-      "typeIcon": "",
-      "title": "家庭教師ヒットマンREBORN! ポップアップストア in 池袋 11月12日より開催!",
-      "summary": "",
-      "source": "コラボカフェ",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeEt6NDFoYlI5ZXdmMk11SWRlUVI2WERZY2kyRVI5Tlktdm02dFBfRElrSmN6U3d5VndmQmhvN1U0Rjl5ZWtjd25WYWJxYzBDODVibjA1TXdjLXdyNFVzRnhNR20xNVVOOGJVRkJkT2J0T2pGa0FxYXpzbzhWaEJwTVcxLVN5dV9UZnl5MHNZWXNfN29iTjV6emJnbw?oc=5",
-      "published": "2026-11-12T18:50+09:00",
-      "place": "池袋駅",
-      "placeKind": "station",
-      "matched": "池袋",
-      "ward": "豊島区",
-      "lat": 35.731049,
-      "lng": 139.712306
-    },
-    {
-      "id": "news-11450cbd32",
-      "category": "crime",
-      "type": "violent",
-      "typeLabel": "暴力・凶悪事件",
-      "typeIcon": "",
-      "title": "タクシー運転手を階段から突き落とし… 強盗傷害の疑いで逮捕の55歳の男 先月から相次ぐひったくりや無賃乗車にも関与か　東京・北区",
-      "summary": "タクシー運転手を階段から突き落とし… 強盗傷害の疑いで逮捕の55歳の男 先月から相次ぐひったくりや無賃乗車にも関与か 東京・北区 ｄメニューニュース",
-      "source": "ｄメニューニュース",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBDa2d3ZkJ5YzVSNGIwQnBVdXNuaDR1LVdHOE9ESU8xVkpYenk1SUhRempiQTB2cUFMTlBzQXRmaDZWTkNrR2dFYUNTWjhtLVZSTUpoS2s0dHhsNThoTzlWTDY1OEJ4UHQxNE9ZbEZMTdIBdEFVX3lxTFBMUVlTUmU3ZmxiTVVHQzdNZ2RGWm15ODd6MFlyMW5acjVYd2lzMkJuc1JoZ1FyM2ducjkxWVgwMkc5c1ZkUmgwNGxWVVNjbUk5ZlU1dDhUbjBBeGxyVzVIdUNWM1VwaE5pSEdFdHJrNTUtNFVw?oc=5",
-      "published": "2026-11-12T18:38+09:00",
-      "place": "北区",
-      "placeKind": "ward",
-      "matched": "東京・北区",
-      "ward": "北区",
-      "lat": 35.75278,
-      "lng": 139.73368
+      "lat": 35.693533,
+      "lng": 139.698043
     },
     {
       "id": "news-5772792904",
@@ -3250,8 +3155,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691212,
-      "lng": 139.701394
+      "lat": 35.69209,
+      "lng": 139.70211
     },
     {
       "id": "news-dd85cd42be",
@@ -3268,8 +3173,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658702,
-      "lng": 139.703094
+      "lat": 35.658601,
+      "lng": 139.701499
     },
     {
       "id": "news-deb19d2766",
@@ -3286,8 +3191,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700934,
-      "lng": 139.774378
+      "lat": 35.698666,
+      "lng": 139.771914
     },
     {
       "id": "news-c4da51a258",
@@ -3304,8 +3209,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691956,
-      "lng": 139.697574
+      "lat": 35.69089,
+      "lng": 139.6978
     },
     {
       "id": "news-ee78cd3921",
@@ -3322,8 +3227,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693556,
-      "lng": 139.701127
+      "lat": 35.694224,
+      "lng": 139.700038
     },
     {
       "id": "news-27e71a9c59",
@@ -3340,8 +3245,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729914,
-      "lng": 139.714279
+      "lat": 35.728851,
+      "lng": 139.712009
     },
     {
       "id": "news-840e3dafa9",
@@ -3358,8 +3263,8 @@
       "placeKind": "ward",
       "matched": "江戸川区",
       "ward": "江戸川区",
-      "lat": 35.706906,
-      "lng": 139.86766
+      "lat": 35.707324,
+      "lng": 139.869201
     },
     {
       "id": "news-08e52fbc42",
@@ -3376,8 +3281,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690326,
-      "lng": 139.699794
+      "lat": 35.690448,
+      "lng": 139.701183
     },
     {
       "id": "news-f36100b525",
@@ -3394,8 +3299,8 @@
       "placeKind": "facility",
       "matched": "歌舞伎町",
       "ward": "新宿区",
-      "lat": 35.694208,
-      "lng": 139.703084
+      "lat": 35.69454,
+      "lng": 139.70271
     },
     {
       "id": "news-0235e6fc94",
@@ -3412,8 +3317,8 @@
       "placeKind": "facility",
       "matched": "日本橋",
       "ward": "中央区",
-      "lat": 35.683738,
-      "lng": 139.774874
+      "lat": 35.68407,
+      "lng": 139.7745
     },
     {
       "id": "news-76fdda781f",
@@ -3430,8 +3335,26 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693533,
-      "lng": 139.698043
+      "lat": 35.692654,
+      "lng": 139.69711
+    },
+    {
+      "id": "news-4424623275",
+      "category": "gourmet",
+      "type": "buffet",
+      "typeLabel": "食べ放題",
+      "typeIcon": "🍽️",
+      "title": "ビュッフェ・フレンチ・会席で祝う期間限定のクリスマス！東武ホテルレバント東京 スーパーダイニング ヴェルデュール / スカイツリー(R)ビューレストラン 簾 クリスマスメニュー",
+      "summary": "",
+      "source": "Dtimes",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9hbWROeFVMM3VBbVp3NHJTdDBRem84dURUbjJtMGkwQVBhN2JicWxubUE1Yi1lelNzQlhnaVZOWnJzc1YxdVE?oc=5",
+      "published": "2026-11-12T09:06+09:00",
+      "place": "東京スカイツリー",
+      "placeKind": "facility",
+      "matched": "スカイツリー",
+      "ward": "墨田区",
+      "lat": 35.71005,
+      "lng": 139.81071
     },
     {
       "id": "news-267e704cd4",
@@ -3448,26 +3371,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705814,
-      "lng": 139.650761
-    },
-    {
-      "id": "news-9061852667",
-      "category": "crime",
-      "type": "sexual",
-      "typeLabel": "性犯罪・盗撮",
-      "typeIcon": "",
-      "title": "（東京）足立区千住２丁目で痴漢　１１月１１日",
-      "summary": "（東京）足立区千住２丁目で痴漢 １１月１１日 ｄメニューニュース",
-      "source": "ｄメニューニュース",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNW1EQWJ1RXYtM3Jfc3JnczE4czRJRnNZa3c4MUE1TE1IVXVxVHR2QzJ6cmN6c0J3eEZEMUxLR2FvVFBpRWdYQXZlZDVXMi1LcFh4RUl3ZVptWV9iaWdYZ1lsY2NqRkNnNmJBaVZ2V1hLMjFWb2xUSXR5QndDN214SzNlWDNmQjNRV19kZFhDbTdtYzdiam1uTHlQci3SAaIBQVVfeXFMTTFyalV5bUdjRDRVX19TR2t4OVlBcmtVNFIwQlJWdzJPZ1EzWG1tRVRjU05NVnNVZkNDUDU4T0pIUVhKbGlBQUw0clE3QkVqZ3pHUUlEQ0Z2ZDY5WmxKb0Y2NHE5Qno2bWJhSGYwZEQyN2RhUWJzS3UtR2JvUHdLd19HSUc5ZVlPbG05NjdlQWFYcHpJeU1aUElETVVNYUNLamtR?oc=5",
-      "published": "2026-11-11T23:07+09:00",
-      "place": "足立区",
-      "placeKind": "ward",
-      "matched": "足立区",
-      "ward": "足立区",
-      "lat": 35.774926,
-      "lng": 139.80373
+      "lat": 35.704791,
+      "lng": 139.6487
     },
     {
       "id": "news-7a87afdf55",
@@ -3484,8 +3389,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729651,
-      "lng": 139.71167
+      "lat": 35.731785,
+      "lng": 139.712541
     },
     {
       "id": "news-a46b2213d4",
@@ -3556,8 +3461,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.69209,
-      "lng": 139.70211
+      "lat": 35.693276,
+      "lng": 139.702053
     },
     {
       "id": "news-3d8178f30c",
@@ -3574,8 +3479,8 @@
       "placeKind": "station",
       "matched": "池袋駅",
       "ward": "豊島区",
-      "lat": 35.731396,
-      "lng": 139.713507
+      "lat": 35.729232,
+      "lng": 139.714664
     },
     {
       "id": "news-c97ec60a59",
@@ -3596,24 +3501,6 @@
       "lng": 139.764376
     },
     {
-      "id": "news-74fbb3995e",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "【新宿地域に4店舗】「喜多方ラーメン坂内」で冬の看板商品『濃厚ごま味噌ラーメン』が11月17日より発売開始！",
-      "summary": "",
-      "source": "千葉テレビ放送株式会社",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9qbVRhaGhPVFgwTm1FTnY2akk5YnJ5NGJzLTEzNkp1MEpMTExfdEJaSUFVUGpvV0YtS0RGNUZCcjQyOWhFSVhFVnZIakIwX0k2YVh3NGUzTEhEYkU4cC1J?oc=5",
-      "published": "2026-11-11T14:45+09:00",
-      "place": "新宿駅",
-      "placeKind": "station",
-      "matched": "新宿",
-      "ward": "新宿区",
-      "lat": 35.69089,
-      "lng": 139.6978
-    },
-    {
       "id": "news-ce097234b2",
       "category": "otaku",
       "type": "cafe",
@@ -3628,8 +3515,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.694224,
-      "lng": 139.700038
+      "lat": 35.690036,
+      "lng": 139.698859
     },
     {
       "id": "news-76a5f85253",
@@ -3646,8 +3533,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.728952,
-      "lng": 139.713604
+      "lat": 35.729976,
+      "lng": 139.710844
     },
     {
       "id": "news-0c4e53b6b3",
@@ -3664,8 +3551,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.697158,
-      "lng": 139.775523
+      "lat": 35.700266,
+      "lng": 139.775467
     },
     {
       "id": "news-8549f51ad0",
@@ -3682,8 +3569,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660553,
-      "lng": 139.700875
+      "lat": 35.661535,
+      "lng": 139.702031
     },
     {
       "id": "news-71d8fca028",
@@ -3700,8 +3587,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.712935,
-      "lng": 139.797901
+      "lat": 35.710102,
+      "lng": 139.798964
     },
     {
       "id": "news-4481145510",
@@ -3718,8 +3605,8 @@
       "placeKind": "facility",
       "matched": "赤羽",
       "ward": "北区",
-      "lat": 35.782656,
-      "lng": 139.720607
+      "lat": 35.780492,
+      "lng": 139.721764
     },
     {
       "id": "news-e6eba62b3f",
@@ -3736,8 +3623,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.699364,
-      "lng": 139.77145
+      "lat": 35.697036,
+      "lng": 139.774134
     },
     {
       "id": "news-072d34c35a",
@@ -3758,6 +3645,24 @@
       "lng": 139.716841
     },
     {
+      "id": "news-08f484391a",
+      "category": "gourmet",
+      "type": "ramen",
+      "typeLabel": "ラーメン",
+      "typeIcon": "🍜",
+      "title": "＜画像1 / 5＞日本橋の高級寿司店が銀座で「ラーメン始めました！」",
+      "summary": "",
+      "source": "ウォーカープラス",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFAybzBSLWdaSjRCVDZfcklYTkl0ZnlVaUdLT2lmRnBZMlBjV3J4ZEZuTnNYTzM3WUlBczRmRDJXQWYxMEpFYWNITlFYWWJiU01SY1kyWE1hZEs4VlhCd2I3VGZfbm9rS2xuMlhUUkdHZlROSndXVFNlT1J3MA?oc=5",
+      "published": "2026-11-10T16:37+09:00",
+      "place": "日本橋",
+      "placeKind": "facility",
+      "matched": "日本橋",
+      "ward": "中央区",
+      "lat": 35.683738,
+      "lng": 139.774874
+    },
+    {
       "id": "news-ddc1e30d51",
       "category": "crime",
       "type": "other",
@@ -3772,8 +3677,8 @@
       "placeKind": "ward",
       "matched": "台東区",
       "ward": "台東区",
-      "lat": 35.712686,
-      "lng": 139.77899
+      "lat": 35.71263,
+      "lng": 139.77977
     },
     {
       "id": "news-eff3511bc6",
@@ -3808,8 +3713,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690448,
-      "lng": 139.701183
+      "lat": 35.694263,
+      "lng": 139.698516
     },
     {
       "id": "news-0c14d102e7",
@@ -3826,8 +3731,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.699986,
-      "lng": 139.776393
+      "lat": 35.700243,
+      "lng": 139.772383
     },
     {
       "id": "news-087f56bcfd",
@@ -3844,8 +3749,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660397,
-      "lng": 139.704212
+      "lat": 35.658982,
+      "lng": 139.704154
     },
     {
       "id": "news-9d0ce73a11",
@@ -3862,8 +3767,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.704454,
-      "lng": 139.649807
+      "lat": 35.706536,
+      "lng": 139.650537
     },
     {
       "id": "news-ca7a7edbb1",
@@ -3880,8 +3785,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.736996,
-      "lng": 139.652377
+      "lat": 35.735514,
+      "lng": 139.653149
     },
     {
       "id": "news-e2f7649092",
@@ -3898,8 +3803,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658601,
-      "lng": 139.701499
+      "lat": 35.659726,
+      "lng": 139.700334
     },
     {
       "id": "news-41b4cb30ea",
@@ -3916,8 +3821,8 @@
       "placeKind": "station",
       "matched": "新宿駅",
       "ward": "新宿区",
-      "lat": 35.692654,
-      "lng": 139.69711
+      "lat": 35.691277,
+      "lng": 139.702353
     },
     {
       "id": "news-7d350f8f5a",
@@ -3934,8 +3839,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.693276,
-      "lng": 139.702053
+      "lat": 35.691374,
+      "lng": 139.696944
     },
     {
       "id": "news-526f0090ca",
@@ -3970,8 +3875,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661535,
-      "lng": 139.702031
+      "lat": 35.661326,
+      "lng": 139.703887
     },
     {
       "id": "news-8257091cf8",
@@ -4006,8 +3911,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.696746,
-      "lng": 139.773199
+      "lat": 35.6988,
+      "lng": 139.77645
     },
     {
       "id": "news-273bb4d230",
@@ -4060,8 +3965,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.690036,
-      "lng": 139.698859
+      "lat": 35.694325,
+      "lng": 139.701086
     },
     {
       "id": "news-769f226e02",
@@ -4096,26 +4001,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.694263,
-      "lng": 139.698516
-    },
-    {
-      "id": "news-3d9b16a357",
-      "category": "gourmet",
-      "type": "curry",
-      "typeLabel": "カレー",
-      "typeIcon": "🍛",
-      "title": "銀座デリーの極辛カレーを再現したカップ焼そば新発売",
-      "summary": "",
-      "source": "ウォーカープラス",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE51R3k3ZThlMEtIbGF3VF9acE44V1Jhbi1CX1Q5UlE0cWNydkQzMTV6dWV6N1o5ckttaTYwalhRU0xvZnQ5d19XSXduWGZMNWloZVlJ0gFYQVVfeXFMTUxZVUJ2SHowMVdfTDY4MUY3ei1EMWt0WGlZSEtPaHREUXZQUFNZOUVYQUJQWWNZbHZwUWs3N0tCRThVeDVVYWFWU1pSZk53YTd1WEtRU3ZCQw?oc=5",
-      "published": "2026-11-09T07:09+09:00",
-      "place": "銀座",
-      "placeKind": "facility",
-      "matched": "銀座",
-      "ward": "中央区",
-      "lat": 35.670934,
-      "lng": 139.766349
+      "lat": 35.689797,
+      "lng": 139.700473
     },
     {
       "id": "news-f7aad330b8",
@@ -4132,8 +4019,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691277,
-      "lng": 139.702353
+      "lat": 35.693535,
+      "lng": 139.697108
     },
     {
       "id": "news-3ea5c2b6ce",
@@ -4150,8 +4037,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.730803,
-      "lng": 139.711385
+      "lat": 35.731576,
+      "lng": 139.714397
     },
     {
       "id": "news-592329a691",
@@ -4168,8 +4055,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658982,
-      "lng": 139.704154
+      "lat": 35.658096,
+      "lng": 139.702554
     },
     {
       "id": "news-6dbacf2392",
@@ -4204,8 +4091,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.730647,
-      "lng": 139.714722
+      "lat": 35.728346,
+      "lng": 139.713064
     },
     {
       "id": "news-feba442198",
@@ -4240,8 +4127,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659726,
-      "lng": 139.700334
+      "lat": 35.661303,
+      "lng": 139.700803
     },
     {
       "id": "news-961dc00e41",
@@ -4258,8 +4145,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.710382,
-      "lng": 139.800024
+      "lat": 35.711953,
+      "lng": 139.796745
     },
     {
       "id": "news-2538f7f66b",
@@ -4276,8 +4163,26 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700973,
-      "lng": 139.772856
+      "lat": 35.6976,
+      "lng": 139.77214
+    },
+    {
+      "id": "news-a522588f51",
+      "category": "otaku",
+      "type": "vtuber",
+      "typeLabel": "VTuber・声優・アイドル",
+      "typeIcon": "",
+      "title": "4人組アイドルSepiacode 新宿の二郎系ラーメン店電撃訪問 連日ライブもエナジーチャージ",
+      "summary": "4人組アイドルSepiacode 新宿の二郎系ラーメン店電撃訪問 連日ライブもエナジーチャージ（スポニチアネックス） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5iVzVhVFhTUGViWkZDaEk3WFB3cmYwN2ZDNjJDSENVaHRiajZtMlhBQTdHeXdxcUVDVmkyQUViLWJScXdkcnJILXppdGxuN0xENWlraHBMRmZFMmRGSzA3cTJONFNLcUxxUWJLSVR3UkNVNWpTcnZ5cDdlckdBTlk?oc=5",
+      "published": "2026-11-06T23:19+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.692611,
+      "lng": 139.702786
     },
     {
       "id": "news-b204415497",
@@ -4294,8 +4199,26 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.697987,
-      "lng": 139.776693
+      "lat": 35.700934,
+      "lng": 139.774378
+    },
+    {
+      "id": "news-9efa55ed97",
+      "category": "otaku",
+      "type": "cafe",
+      "typeLabel": "コラボカフェ・グッズ",
+      "typeIcon": "",
+      "title": "コンテンツの新たな魅力発信ショップ「TOPPA!!! BASE AKIBA」で第2弾「EXPO2025オフィシャルポップアップストア エキュート秋葉原店」をオープン",
+      "summary": "",
+      "source": "凸版印刷",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1QRzBOLUhiS2tleGRuV3BJZVVSbHBSMm02Q1Y5VkJQQjZTdmFqNDlRZndRbXFQdm90R1ZPdEgtQ1h2NDF4WWY4a2V0TVJCWU52MGY1ellXRDdjTVhmZ2dfUmxSaWVWTzg3UlVacUhIUHpmMzlpUGU4THFKYTE?oc=5",
+      "published": "2026-11-06T17:00+09:00",
+      "place": "秋葉原",
+      "placeKind": "facility",
+      "matched": "秋葉原",
+      "ward": "千代田区",
+      "lat": 35.697158,
+      "lng": 139.775523
     },
     {
       "id": "news-fe71eacbdb",
@@ -4312,8 +4235,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.728851,
-      "lng": 139.712009
+      "lat": 35.731553,
+      "lng": 139.711313
     },
     {
       "id": "news-fad51e4bd1",
@@ -4330,8 +4253,8 @@
       "placeKind": "ward",
       "matched": "練馬区",
       "ward": "練馬区",
-      "lat": 35.734552,
-      "lng": 139.652474
+      "lat": 35.735251,
+      "lng": 139.65054
     },
     {
       "id": "news-ff56aab659",
@@ -4348,8 +4271,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661326,
-      "lng": 139.703887
+      "lat": 35.65986,
+      "lng": 139.70487
     },
     {
       "id": "news-1b20e557c2",
@@ -4366,8 +4289,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658096,
-      "lng": 139.702554
+      "lat": 35.65866,
+      "lng": 139.70056
     },
     {
       "id": "news-97099ae036",
@@ -4384,8 +4307,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.706189,
-      "lng": 139.649336
+      "lat": 35.704092,
+      "lng": 139.650634
     },
     {
       "id": "news-4946d4f09e",
@@ -4402,8 +4325,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.731785,
-      "lng": 139.712541
+      "lat": 35.73011,
+      "lng": 139.71538
     },
     {
       "id": "news-369eb81498",
@@ -4420,8 +4343,26 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.729232,
-      "lng": 139.714664
+      "lat": 35.72891,
+      "lng": 139.71107
+    },
+    {
+      "id": "news-984bd560ba",
+      "category": "gourmet",
+      "type": "ramen",
+      "typeLabel": "ラーメン",
+      "typeIcon": "🍜",
+      "title": "【楽園タウン池袋】人気ラーメン店「むかん」に新メニュー登場！牡蠣の濃厚な旨みとたまり醤油の深いコクが織りなす「牡蠣醤油ラーメン」10月16日(金)より絶賛販売中！",
+      "summary": "【楽園タウン池袋】人気ラーメン店「むかん」に新メニュー登場！牡蠣の濃厚な旨みとたまり醤油の深いコクが織りなす「牡蠣醤油ラーメン」10月16日(金)より絶賛販売中！ | 株式会社浜友Ｅ.Ｆ.のプレスリリース PR TIMES",
+      "source": "PR TIMES",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE11bE5NSVByQkdnVll1VnpXOFR3YU95bjV3WVRYaDJSWkxwNWpiS3RUWktyWU5vc1U0Qkp3M3FVWDk1RzZUNTlzUF9wWWx5RGVPbWRnYTM4YWJmVC0yblpraklWUHRLS2FZRFE?oc=5",
+      "published": "2026-11-05T17:00+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋",
+      "ward": "豊島区",
+      "lat": 35.732244,
+      "lng": 139.713308
     },
     {
       "id": "news-b7f41ce75a",
@@ -4478,24 +4419,6 @@
       "lng": 139.70024
     },
     {
-      "id": "news-984bd560ba",
-      "category": "gourmet",
-      "type": "ramen",
-      "typeLabel": "ラーメン",
-      "typeIcon": "🍜",
-      "title": "【楽園タウン池袋】人気ラーメン店「むかん」に新メニュー登場！牡蠣の濃厚な旨みとたまり醤油の深いコクが織りなす「牡蠣醤油ラーメン」10月16日(金)より絶賛販売中！",
-      "summary": "【楽園タウン池袋】人気ラーメン店「むかん」に新メニュー登場！牡蠣の濃厚な旨みとたまり醤油の深いコクが織りなす「牡蠣醤油ラーメン」10月16日(金)より絶賛販売中！ | 株式会社浜友Ｅ.Ｆ.のプレスリリース PR TIMES",
-      "source": "PR TIMES",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE11bE5NSVByQkdnVll1VnpXOFR3YU95bjV3WVRYaDJSWkxwNWpiS3RUWktyWU5vc1U0Qkp3M3FVWDk1RzZUNTlzUF9wWWx5RGVPbWRnYTM4YWJmVC0yblpraklWUHRLS2FZRFE?oc=5",
-      "published": "2026-11-05T14:00+09:00",
-      "place": "池袋駅",
-      "placeKind": "station",
-      "matched": "池袋",
-      "ward": "豊島区",
-      "lat": 35.729976,
-      "lng": 139.710844
-    },
-    {
       "id": "news-29b7e67a59",
       "category": "gourmet",
       "type": "izakaya",
@@ -4528,8 +4451,44 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.705054,
-      "lng": 139.651309
+      "lat": 35.705943,
+      "lng": 139.648415
+    },
+    {
+      "id": "news-f6a0c24a95",
+      "category": "gourmet",
+      "type": "ramen",
+      "typeLabel": "ラーメン",
+      "typeIcon": "🍜",
+      "title": "「ばんからラーメン」が1杯500円！ 池袋2店舗で土曜限定「ばんから大感謝祭」を実施",
+      "summary": "「ばんからラーメン」が1杯500円！ 池袋2店舗で土曜限定「ばんから大感謝祭」を実施（グルメ Watch） Yahoo!ニュース",
+      "source": "Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE55VU5oWUNOQm1TYU80aldfNDQyU0tETm1GeDR3bF9GcjlVQTRmanVHajVZdTR5LVlROVFsTnpaS29oZDZ6SnpSMVpiMk1oVXlGRlpWcE1NeVFVS1ktaTZhODNJcFhZYjU2SXNvN2FabW5DczkwOE9naF9jM1VxeHM?oc=5",
+      "published": "2026-11-04T17:00+09:00",
+      "place": "池袋駅",
+      "placeKind": "station",
+      "matched": "池袋",
+      "ward": "豊島区",
+      "lat": 35.728468,
+      "lng": 139.714453
+    },
+    {
+      "id": "news-a199e6661d",
+      "category": "gourmet",
+      "type": "ramen",
+      "typeLabel": "ラーメン",
+      "typeIcon": "🍜",
+      "title": "濃厚豚骨魚介つけ麺のパイオニア「つじ田」が新宿エリア初出店！「つじ田 東新宿店」2026年11月15日（日）グランドオープン！",
+      "summary": "",
+      "source": "PR TIMES",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB1Nl9TTUlNWHl0VTcyOXRMc0tnSVloSFF5ODcxZG1ITXllTlZSM3pjQ3ZWXzdBVjgydW0yeF9SNDJLZ0E0UnJnOWFQWkprMDRMN21Hb1VXTkhOcXc0ZWFDTkRHRXlMMWpXUHc?oc=5",
+      "published": "2026-11-04T17:00+09:00",
+      "place": "新宿駅",
+      "placeKind": "station",
+      "matched": "新宿",
+      "ward": "新宿区",
+      "lat": 35.690136,
+      "lng": 139.697753
     },
     {
       "id": "news-a01b973e8b",
@@ -4546,8 +4505,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.711126,
-      "lng": 139.796204
+      "lat": 35.711797,
+      "lng": 139.800082
     },
     {
       "id": "news-3d580d7102",
@@ -4564,8 +4523,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.698084,
-      "lng": 139.771284
+      "lat": 35.699364,
+      "lng": 139.77145
     },
     {
       "id": "news-dc5533bc5b",
@@ -4582,8 +4541,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661303,
-      "lng": 139.700803
+      "lat": 35.661994,
+      "lng": 139.702798
     },
     {
       "id": "news-8182bb2b38",
@@ -4600,8 +4559,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.65986,
-      "lng": 139.70487
+      "lat": 35.658218,
+      "lng": 139.703943
     },
     {
       "id": "news-fed85446ee",
@@ -4618,8 +4577,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.65866,
-      "lng": 139.70056
+      "lat": 35.660424,
+      "lng": 139.69987
     },
     {
       "id": "news-3fb02aec24",
@@ -4636,8 +4595,8 @@
       "placeKind": "facility",
       "matched": "アキバ",
       "ward": "千代田区",
-      "lat": 35.701035,
-      "lng": 139.775426
+      "lat": 35.699986,
+      "lng": 139.776393
     },
     {
       "id": "news-bba0845d00",
@@ -4654,8 +4613,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.696507,
-      "lng": 139.774813
+      "lat": 35.696746,
+      "lng": 139.773199
     },
     {
       "id": "news-73cf24424f",
@@ -4672,8 +4631,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661994,
-      "lng": 139.702798
+      "lat": 35.661046,
+      "lng": 139.704813
     },
     {
       "id": "news-13489fad5f",
@@ -4690,8 +4649,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.658218,
-      "lng": 139.703943
+      "lat": 35.657806,
+      "lng": 139.701619
     },
     {
       "id": "news-8c9477d2ae",
@@ -4708,8 +4667,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.704791,
-      "lng": 139.6487
+      "lat": 35.705787,
+      "lng": 139.651752
     },
     {
       "id": "news-e77a6435a7",
@@ -4726,8 +4685,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.660424,
-      "lng": 139.69987
+      "lat": 35.662033,
+      "lng": 139.701276
     },
     {
       "id": "news-f092854648",
@@ -4744,8 +4703,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.661046,
-      "lng": 139.704813
+      "lat": 35.659047,
+      "lng": 139.705113
     },
     {
       "id": "news-63bbec006a",
@@ -4762,8 +4721,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.657806,
-      "lng": 139.701619
+      "lat": 35.659144,
+      "lng": 139.699704
     },
     {
       "id": "news-57441df20f",
@@ -4780,8 +4739,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.712726,
-      "lng": 139.799757
+      "lat": 35.710001,
+      "lng": 139.797369
     },
     {
       "id": "news-c6d37f927f",
@@ -4798,8 +4757,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.662033,
-      "lng": 139.701276
+      "lat": 35.662095,
+      "lng": 139.703846
     },
     {
       "id": "news-cb453566b7",
@@ -4816,8 +4775,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.706536,
-      "lng": 139.650537
+      "lat": 35.703991,
+      "lng": 139.649039
     },
     {
       "id": "news-043f7d089a",
@@ -4834,8 +4793,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.731576,
-      "lng": 139.714397
+      "lat": 35.730674,
+      "lng": 139.71038
     },
     {
       "id": "news-dadf8ab8ba",
@@ -4852,8 +4811,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.700245,
-      "lng": 139.771448
+      "lat": 35.700973,
+      "lng": 139.772856
     },
     {
       "id": "news-7e02507877",
@@ -4870,8 +4829,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.728346,
-      "lng": 139.713064
+      "lat": 35.731296,
+      "lng": 139.715323
     },
     {
       "id": "news-300cb7448f",
@@ -4888,8 +4847,8 @@
       "placeKind": "facility",
       "matched": "秋葉原",
       "ward": "千代田区",
-      "lat": 35.699321,
-      "lng": 139.777126
+      "lat": 35.697987,
+      "lng": 139.776693
     },
     {
       "id": "news-3c35b9b23a",
@@ -4906,8 +4865,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659047,
-      "lng": 139.705113
+      "lat": 35.657567,
+      "lng": 139.703233
     },
     {
       "id": "news-2887666e42",
@@ -4924,8 +4883,8 @@
       "placeKind": "station",
       "matched": "池袋",
       "ward": "豊島区",
-      "lat": 35.731553,
-      "lng": 139.711313
+      "lat": 35.728056,
+      "lng": 139.712129
     },
     {
       "id": "news-a0af197529",
@@ -4942,8 +4901,8 @@
       "placeKind": "station",
       "matched": "渋谷",
       "ward": "渋谷区",
-      "lat": 35.659144,
-      "lng": 139.699704
+      "lat": 35.661305,
+      "lng": 139.699868
     },
     {
       "id": "news-97ee0f1cab",
@@ -4960,8 +4919,8 @@
       "placeKind": "facility",
       "matched": "高円寺",
       "ward": "杉並区",
-      "lat": 35.704092,
-      "lng": 139.650634
+      "lat": 35.706925,
+      "lng": 139.649571
     },
     {
       "id": "news-887a9e983d",
@@ -4978,8 +4937,8 @@
       "placeKind": "station",
       "matched": "浅草",
       "ward": "台東区",
-      "lat": 35.709496,
-      "lng": 139.798424
+      "lat": 35.712935,
+      "lng": 139.797901
     },
     {
       "id": "news-6ee15ad777",
@@ -4996,8 +4955,8 @@
       "placeKind": "station",
       "matched": "新宿",
       "ward": "新宿区",
-      "lat": 35.691374,
-      "lng": 139.696944
+      "lat": 35.694795,
+      "lng": 139.699433
     }
   ]
 }
