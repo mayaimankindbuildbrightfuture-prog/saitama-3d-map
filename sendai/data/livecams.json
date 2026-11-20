@@ -1,6 +1,6 @@
 {
   "_comment": "仙台市内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・image（定期更新の静止画を表示）・links（配信元のページへのリンクの一覧）・link（配信元へのリンクのみ）。lat/lng はおおよその位置（ウェザーニュースは区役所の位置）。youtube は scripts/fetch_livecams.py --city sendai が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
-  "checkedAt": "2026-11-20T20:58+09:00",
+  "checkedAt": "2026-11-21T05:36+09:00",
   "cameras": [
     {
       "id": "sendai-castle-cam",
@@ -99,7 +99,7 @@
       "youtube": {
         "handle": "@Buncho-c5y",
         "channelId": "UC1rO0sBICCYQXCaFbl9-R5w",
-        "videoId": "unayVdHDpJM",
+        "videoId": "_2pt1nX3R3I",
         "live": true,
         "embeddable": true
       }
@@ -252,9 +252,9 @@
       "siteUrl": "https://www.youtube.com/watch?v=nsEDK2JqX1Y",
       "youtube": {
         "channelId": "UCEdByZI_TwNNxo2PDcvVvKQ",
-        "videoId": "23Bnz-FmlsQ",
-        "live": true,
-        "embeddable": false
+        "videoId": null,
+        "live": false,
+        "embeddable": null
       }
     },
     {
