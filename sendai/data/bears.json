@@ -1,12 +1,50 @@
 {
-  "generatedAt": "2026-11-27T10:53+09:00",
+  "generatedAt": "2026-11-27T21:51+09:00",
   "source": {
     "label": "出典：宮城県「令和8年度クマ目撃等情報」",
-    "asOf": "令和8年11月25日9時時点",
+    "asOf": "令和8年11月27日9時時点",
     "url": "https://www.pref.miyagi.jp/"
   },
   "alerts": [],
   "items": [
+    {
+      "id": "bear-2026-1466",
+      "category": "wildlife",
+      "type": "bear-official",
+      "typeLabel": "クマ（宮城県の目撃等情報）",
+      "typeIcon": "🐾",
+      "official": true,
+      "title": "泉区 紫山一丁目でクマ目撃（１頭）",
+      "summary": "11月26日 10:00ごろ、泉区紫山1丁目でクマの目撃（１頭）。市街地判定: 住居集合地域等。",
+      "source": "宮城県「令和8年度クマ目撃等情報」",
+      "url": "https://www.pref.miyagi.jp/",
+      "published": "2026-11-26T10:00+09:00",
+      "place": "紫山一丁目",
+      "placeKind": "area",
+      "matched": "紫山一丁目",
+      "ward": "泉区",
+      "lat": 38.34864,
+      "lng": 140.83156
+    },
+    {
+      "id": "bear-2026-1458",
+      "category": "wildlife",
+      "type": "bear-official",
+      "typeLabel": "クマ（宮城県の目撃等情報）",
+      "typeIcon": "🐾",
+      "official": true,
+      "title": "青葉区 大倉でクマ目撃（１頭）",
+      "summary": "11月25日 14:00ごろ、青葉区大倉字高畑でクマの目撃（１頭）。市街地判定: 住居集合地域等以外。",
+      "source": "宮城県「令和8年度クマ目撃等情報」",
+      "url": "https://www.pref.miyagi.jp/",
+      "published": "2026-11-25T14:00+09:00",
+      "place": "大倉",
+      "placeKind": "area",
+      "matched": "大倉",
+      "ward": "青葉区",
+      "lat": 38.3636,
+      "lng": 140.6747
+    },
     {
       "id": "bear-2026-1451",
       "category": "wildlife",
