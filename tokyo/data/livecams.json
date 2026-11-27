@@ -1,6 +1,6 @@
 {
   "_comment": "東京23区内のライブカメラ。type: youtube（YouTubeのライブを埋め込む）・links（配信元のページへのリンクの一覧）。lat/lng はおおよその位置（ウェザーニュースは区役所の位置）。youtube は scripts/fetch_livecams.py --city tokyo が配信中の動画（videoId・live・embeddable）を調べて書き込む。titleKeywords を書くと、その語を含むタイトルの配信だけを使う。",
-  "checkedAt": "2026-11-27T21:54+09:00",
+  "checkedAt": "2026-11-28T08:40+09:00",
   "cameras": [
     {
       "id": "kasumigaseki-cam",
@@ -68,9 +68,9 @@
       "siteUrl": "https://www.youtube.com/watch?v=Y8ED9VzwfLY",
       "youtube": {
         "channelId": "UC6Ljvl0Kghy9Fhe6SXViTPw",
-        "videoId": "7brruAgq5Hw",
-        "live": true,
-        "embeddable": true
+        "videoId": null,
+        "live": false,
+        "embeddable": null
       }
     },
     {
@@ -216,7 +216,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=nZxeiBxcnx0",
       "youtube": {
         "channelId": "UChKERpE7Um0Uq1btm_a9g5A",
-        "videoId": "j5uRN-3jP7k",
+        "videoId": "9Cxza7_g3cA",
         "live": true,
         "embeddable": true,
         "titleKeywords": [
@@ -313,7 +313,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=MwcMURMzJ7A",
       "youtube": {
         "channelId": "UCuS18SHV5Nhqi9OtreOBmnA",
-        "videoId": "VdJrc4vvYlE",
+        "videoId": "9ZG7Yqzzr9E",
         "live": true,
         "embeddable": true,
         "titleKeywords": [
@@ -555,7 +555,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=d7VthBGkPvw",
       "youtube": {
         "channelId": "UCE5uxiZBrhwFPwzlSfmdWQA",
-        "videoId": "pt2swSfwhLs",
+        "videoId": "uINrGycNI2s",
         "live": true,
         "embeddable": true
       }
@@ -572,7 +572,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=pOhgG8bTIkc",
       "youtube": {
         "channelId": "UCDyC7xeQxsihyZj8SoICLEw",
-        "videoId": "3jgejzD2Pvs",
+        "videoId": "HOL7ZpBZEXE",
         "live": true,
         "embeddable": true,
         "titleKeywords": [
@@ -592,7 +592,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=qB2u0egPILQ",
       "youtube": {
         "channelId": "UCQejnkADwqjZcWHO6s53TyQ",
-        "videoId": "QbE394HMBa4",
+        "videoId": "deeNhSKmF6o",
         "live": true,
         "embeddable": true
       }
@@ -629,7 +629,7 @@
       "siteUrl": "https://www.youtube.com/watch?v=6ZBrisjGTro",
       "youtube": {
         "channelId": "UC9fzK_WLWg0U6Y3EON9-nKw",
-        "videoId": "XlGLUY58lMU",
+        "videoId": "EKl9zoOH8QU",
         "live": true,
         "embeddable": false
       }
